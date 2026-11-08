@@ -124,6 +124,18 @@ powershell -ExecutionPolicy Bypass -File 开发工具/跑在线用例.ps1
 
 需要先在 18684 起服务端。在线门按条目使用隔离夹具，不会写日常存档。
 
+## 参与贡献
+
+- 先读 [`CONTRIBUTING.md`](CONTRIBUTING.md)：可提交的内容、禁止事项、环境与自检步骤
+- 提交前运行公开仓最小门（不需要素材）：
+
+```bash
+bash 测试/公开仓最小门.sh
+```
+
+- PR / Issue 按 `.gitee/` 下的模板填写；行为改动请附 AS3、服务端或真值出处
+- 维护者的评审、回灌和发布流程见 [`docs/维护者手册.md`](docs/维护者手册.md)
+
 ## 数据来源
 
 - `数据/` 由 `开发工具/导出*.py` / `*.mjs` 从 `服务端/runtime/www/act_web_nya_208_isolated/dat/GameData.dat` 导出。
