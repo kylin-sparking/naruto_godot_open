@@ -141,8 +141,8 @@ func _表腿() -> void:
 	_判("表里视口常数 == 143×124（SmallMapWindow.as:55-61）",
 			int(((全.get("视口", {}) as Dictionary).get("宽", 0))) == 143
 			and int(((全.get("视口", {}) as Dictionary).get("高", 0))) == 124)
-	_判("表里钉的是 2.2.3优化版（元件库路径含 2.2.3优化版）",
-			String((全.get("真值", {}) as Dictionary).get("元件库路径", "")).contains("2.2.3优化版"))
+	_判("表里钉的是 2.2.3优化版（元件库标注含 2.2.3优化版）",
+			String((全.get("真值", {}) as Dictionary).get("元件库", "")).contains("2.2.3优化版"))
 	_判("表里记了元件库 md5（换 SWF 要能查）",
 			String((全.get("真值", {}) as Dictionary).get("元件库md5", "")).length() == 32)
 
