@@ -7,14 +7,21 @@ rem 所有路径相对本脚本（%~dp0 = 工程根）。
 set "PROJECT=%~dp0"
 if "%PROJECT:~-1%"=="\" set "PROJECT=%PROJECT:~0,-1%"
 
-rem Godot：优先环境变量 NARUTO_GODOT，其次 PATH 中的 godot。
-set "GODOT=%NARUTO_GODOT%"
+rem Godot：优先 本机配置.ini 的 Godot=，其次环境变量 NARUTO_GODOT，最后 PATH 中的 godot。
+set "GODOT="
+if exist "%PROJECT%\本机配置.ini" (
+    for /f "usebackq tokens=1,* delims==" %%A in ("%PROJECT%\本机配置.ini") do (
+        if /i "%%A"=="Godot" set "GODOT=%%~B"
+    )
+)
+if not defined GODOT set "GODOT=%NARUTO_GODOT%"
 if not defined GODOT set "GODOT=godot"
 if not exist "%GODOT%" (
     where "%GODOT%" >nul 2>&1
     if errorlevel 1 (
         echo [错误] 找不到 Godot。
-        echo        请设置环境变量 NARUTO_GODOT 指向 Godot_v4.7.x_console.exe，
+        echo        复制 本机配置.example.ini 为 本机配置.ini，把 Godot= 改成你的路径；
+        echo        或设置环境变量 NARUTO_GODOT 指向 Godot_v4.7.x_console.exe；
         echo        或把 godot 加入 PATH。
         pause
         exit /b 2

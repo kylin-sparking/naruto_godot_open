@@ -38,14 +38,17 @@
 
 ## 提交前自检
 
-设置 Godot 路径（二选一）：
+设置 Godot 路径（三选一）：
 
-```bash
-# 方式一：环境变量
+```text
+方式一（推荐）：复制 本机配置.example.ini 为 本机配置.ini，填写 Godot=
+                （本机配置.ini 不进仓库）
+
+方式二：环境变量
 export NARUTO_GODOT=/path/to/Godot_v4.7.x-stable_mono_win64_console
 # Windows Git Bash 也可以写 D:/software/.../Godot_v4.7.1-stable_mono_win64_console.exe
 
-# 方式二：把 godot 加进 PATH
+方式三：把 godot 加进 PATH
 ```
 
 然后运行公开仓最小门：

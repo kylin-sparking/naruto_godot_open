@@ -75,6 +75,8 @@
 
 ### 3. 导入并启动
 
+先告诉项目 Godot 在哪：复制 `本机配置.example.ini` 为 `本机配置.ini`，把 `Godot=` 改成自己的可执行文件路径。`本机配置.ini` 已被 `.gitignore` 排除，不会进仓库；也可以改用环境变量 `NARUTO_GODOT`。
+
 ```bash
 Godot --headless --path . --import
 Godot --path .
@@ -90,7 +92,7 @@ python 服务端/runtime/tools/fake_flash_server.py
 
 默认监听 **18684**（Flash TCP）；网页入口 `http://127.0.0.1:18680/gm/index.html` 为 GM 控制台，详见 [`服务端/README.md`](服务端/README.md)。
 
-Windows 下也可以直接双击 `启动游戏.bat`：它会先启动夹具服务端，再启动 Godot。该脚本要求 `运行时/python` 已就位；Godot 优先用环境变量 `NARUTO_GODOT`，否则用 PATH 里的 `godot`。
+Windows 下也可以直接双击 `启动游戏.bat`：它会先启动夹具服务端，再启动 Godot。该脚本要求 `运行时/python` 已就位；Godot 路径依次读 `本机配置.ini` 的 `Godot=`、环境变量 `NARUTO_GODOT`、PATH 里的 `godot`。
 
 ## 目录结构
 

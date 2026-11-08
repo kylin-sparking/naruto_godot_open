@@ -8,17 +8,26 @@
 #   4. 本次改动不写本机绝对路径、不引用内部资料
 #   5. 本次改动没有控制字符
 #
-# 用法：
+# 用法（优先读项目根目录的 本机配置.ini；也可以设环境变量）：
+#   复制 本机配置.example.ini 为 本机配置.ini，填写 Godot=
 #   export NARUTO_GODOT=/path/to/Godot_v4.7.x-stable_mono_win64_console
 #   bash 测试/公开仓最小门.sh
 #
 # 没有素材时界面/地图相关门会按已知限制失败，这是预期行为；完整门由维护者
-# 在补齐素材的私有开发环境里跑。
+# 在补齐素材的完整开发环境里跑。
 #
 # 注意：bash 变量和函数名只能用 ASCII；中文只放在注释和输出文字里。
 set -u
 
 root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+
+# Godot 路径：本机配置.ini 的 Godot= > 环境变量 NARUTO_GODOT > PATH。
+if [ -z "${NARUTO_GODOT:-}" ] && [ -f "$root/本机配置.ini" ]; then
+    config_value="$(sed -n 's/^[[:space:]]*[Gg][Oo][Dd][Oo][Tt][[:space:]]*=[[:space:]]*//p' "$root/本机配置.ini" | head -n 1 | tr -d '\r')"
+    config_value="${config_value%\"}"
+    config_value="${config_value#\"}"
+    [ -n "$config_value" ] && NARUTO_GODOT="$config_value"
+fi
 G="${NARUTO_GODOT:-godot}"
 
 # Git Bash 里 NARUTO_GODOT 常写成 D:\...；转成 D:/... 才能被 exec 认。
@@ -28,7 +37,8 @@ esac
 
 if ! command -v "$G" >/dev/null 2>&1 && [ ! -f "$G" ]; then
     echo "!! 找不到 Godot：$G"
-    echo "   请设置 NARUTO_GODOT 指向 Godot 4.7.x console 版，或把 godot 加入 PATH。"
+    echo "   请复制 本机配置.example.ini 为 本机配置.ini 并填写 Godot=，"
+    echo "   或设置 NARUTO_GODOT 指向 Godot 4.7.x console 版，或把 godot 加入 PATH。"
     exit 2
 fi
 
