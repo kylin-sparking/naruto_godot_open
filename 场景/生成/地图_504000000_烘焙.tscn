@@ -1,0 +1,357 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://脚本/地图/地图根节点.gd" id="1_q6ye6"]
+[ext_resource type="Script" path="res://脚本/地图/地图块.gd" id="2_1ug6a"]
+[ext_resource type="Script" path="res://脚本/地图/静态绘制批次.gd" id="3_ij5i6"]
+[ext_resource type="Texture2D" path="res://素材/地图/血之羁绊_402000000/地图块/Tile_senlin1_bsc_2.png" id="4_3yqpf"]
+[ext_resource type="Texture2D" path="res://素材/地图/血之羁绊_402000000/地图块/Tile_senlin1_bsc_3.png" id="5_8h7fd"]
+[ext_resource type="Texture2D" path="res://素材/地图/血之羁绊_402000000/地图块/Tile_senlin1_bsc_4.png" id="6_lsuoc"]
+[ext_resource type="Texture2D" path="res://素材/地图/血之羁绊_402000000/地图块/Tile_senlin1_bsc_1.png" id="7_rjq37"]
+[ext_resource type="Texture2D" path="res://素材/地图/血之羁绊_402000000/地图块/Tile_senlin1_enH0_1.png" id="8_7dqhj"]
+[ext_resource type="Texture2D" path="res://素材/地图/血之羁绊_402000000/地图块/Tile_senlin1_enH0_2.png" id="9_yjo6b"]
+[ext_resource type="Texture2D" path="res://素材/地图/血之羁绊_402000000/地图块/Tile_senlin1_slLU_0.png" id="10_56tmm"]
+[ext_resource type="Texture2D" path="res://素材/地图/血之羁绊_402000000/地图块/Tile_senlin1_enH0_3.png" id="11_wwltb"]
+[ext_resource type="Texture2D" path="res://素材/地图/血之羁绊_402000000/地图块/Tile_senlin1_enH0_0.png" id="12_lf806"]
+[ext_resource type="Texture2D" path="res://素材/地图/血之羁绊_402000000/地图块/Tile_senlin1_slRU_0.png" id="13_nea40"]
+[ext_resource type="Texture2D" path="res://素材/地图/血之羁绊_402000000/地图块/Tile_senlin1_bsc_0.png" id="14_m21mp"]
+[ext_resource type="Script" path="res://脚本/地图/地图物件.gd" id="15_x7k54"]
+[ext_resource type="Texture2D" path="res://素材/地图/Nya修炼场/地图物件/Obj_acc_senlin1_artificiality_8/Obj_acc_senlin1_artificiality_8_0.png" id="16_opf6x"]
+[ext_resource type="Texture2D" path="res://素材/地图/血之羁绊_402000000/地图物件/Obj_acc_senlin1_nature_24/Obj_acc_senlin1_nature_24_0.png" id="17_rng1i"]
+[ext_resource type="Texture2D" path="res://素材/地图/血之羁绊_402000000/地图物件/Obj_acc_senlin1_nature_15/Obj_acc_senlin1_nature_15_0.png" id="18_1kw7t"]
+[ext_resource type="Texture2D" path="res://素材/地图/血之羁绊_402000000/地图物件/Obj_acc_senlin1_nature_6/Obj_acc_senlin1_nature_6_0.png" id="19_tw6r6"]
+[ext_resource type="Texture2D" path="res://素材/地图/血之羁绊_402000000/地图物件/Obj_acc_senlin1_nature_1/Obj_acc_senlin1_nature_1_0.png" id="20_h7j6l"]
+[ext_resource type="Texture2D" path="res://素材/地图/Nya修炼场/地图物件/Obj_acc_senlin1_nature_13/Obj_acc_senlin1_nature_13_0.png" id="21_advuy"]
+[ext_resource type="Texture2D" path="res://素材/地图/血之羁绊_402000000/地图物件/Obj_acc_senlin1_nature_28/Obj_acc_senlin1_nature_28_0.png" id="22_uppfi"]
+[ext_resource type="Texture2D" path="res://素材/地图/血之羁绊_402000000/地图物件/Obj_acc_senlin1_nature_14/Obj_acc_senlin1_nature_14_0.png" id="23_qwwdd"]
+[ext_resource type="Texture2D" path="res://素材/地图/血之羁绊_402000000/地图物件/Obj_acc_senlin1_nature_23/Obj_acc_senlin1_nature_23_0.png" id="24_h1nvy"]
+[ext_resource type="Texture2D" path="res://素材/地图/血之羁绊_402000000/地图物件/Obj_acc_senlin1_nature_0/Obj_acc_senlin1_nature_0_0.png" id="25_p2uon"]
+[ext_resource type="Texture2D" path="res://素材/地图/血之羁绊_402000000/地图物件/Obj_acc_senlin1_nature_16/Obj_acc_senlin1_nature_16_0.png" id="26_iitxi"]
+[ext_resource type="Texture2D" path="res://素材/地图/血之羁绊_402000000/地图物件/Obj_acc_senlin1_nature_5/Obj_acc_senlin1_nature_5_0.png" id="27_usxg4"]
+[ext_resource type="Texture2D" path="res://素材/地图/Nya修炼场/地图物件/Obj_acc_senlin1_nature_4/Obj_acc_senlin1_nature_4_0.png" id="28_ejx5w"]
+[ext_resource type="Texture2D" path="res://素材/地图/Nya修炼场/地图物件/Obj_acc_senlin1_artificiality_5/Obj_acc_senlin1_artificiality_5_0.png" id="29_15yq5"]
+[ext_resource type="Texture2D" path="res://素材/地图/Nya修炼场/地图物件/Obj_acc_senlin1_artificiality_2/Obj_acc_senlin1_artificiality_2_0.png" id="30_ntn6f"]
+[ext_resource type="Texture2D" path="res://素材/地图/血之羁绊_402000000/地图物件/Obj_acc_senlin1_nature_22/Obj_acc_senlin1_nature_22_0.png" id="31_f6ntj"]
+[ext_resource type="Texture2D" path="res://素材/地图/Nya修炼场/地图物件/Obj_acc_senlin1_artificiality_7/Obj_acc_senlin1_artificiality_7_0.png" id="32_jx455"]
+[ext_resource type="Texture2D" path="res://素材/地图/血之羁绊_402000000/地图物件/Obj_acc_senlin1_nature_17/Obj_acc_senlin1_nature_17_0.png" id="33_y1ny5"]
+[ext_resource type="Script" path="res://脚本/地图/地表.gd" id="34_poo58"]
+[ext_resource type="Script" path="res://脚本/地图/攀爬物.gd" id="35_1itbs"]
+[ext_resource type="Script" path="res://脚本/地图/地图实体.gd" id="36_1e6e7"]
+[ext_resource type="Script" path="res://脚本/地图/传送门.gd" id="37_k2ruq"]
+[ext_resource type="Script" path="res://脚本/角色/玩家.gd" id="38_86mff"]
+[ext_resource type="Script" path="res://脚本/地图/世界相机.gd" id="39_3o4uv"]
+[ext_resource type="PackedScene" path="res://场景/界面/头像面板.tscn" id="40_1ltmp"]
+[ext_resource type="Script" path="res://脚本/界面/头像面板.gd" id="41_uep0x"]
+[ext_resource type="PackedScene" path="res://场景/界面/小地图面板.tscn" id="42_e5vk1"]
+[ext_resource type="Script" path="res://脚本/界面/小地图面板.gd" id="43_hkpch"]
+[ext_resource type="PackedScene" path="res://场景/界面/聊天面板.tscn" id="44_acxo2"]
+[ext_resource type="Script" path="res://脚本/界面/聊天面板.gd" id="45_ptihi"]
+[ext_resource type="PackedScene" path="res://场景/界面/技能面板.tscn" id="46_0da2w"]
+[ext_resource type="Script" path="res://脚本/界面/技能面板.gd" id="47_k23py"]
+[ext_resource type="PackedScene" path="res://场景/界面/窗口管理.tscn" id="48_r5m6h"]
+[ext_resource type="Script" path="res://脚本/界面/窗口管理.gd" id="49_0schp"]
+[ext_resource type="PackedScene" path="res://场景/界面/组件/系统消息.tscn" id="50_w36pk"]
+[ext_resource type="Script" path="res://脚本/界面/系统消息.gd" id="51_65xxi"]
+[ext_resource type="Script" path="res://脚本/调试/性能探针.gd" id="52_u5myy"]
+[ext_resource type="Script" path="res://脚本/地图/平铺背景.gd" id="53_2hx5v"]
+[ext_resource type="Texture2D" path="res://素材/地图/终结谷浅滩/背景/Back_zhongjiezhigu_back_0.png" id="54_t6g4b"]
+[ext_resource type="Texture2D" path="res://素材/地图/终结谷浅滩/背景/Back_zhongjiezhigu_back_3.png" id="55_8wtch"]
+[ext_resource type="Texture2D" path="res://素材/地图/终结谷浅滩/背景/Back_zhongjiezhigu_back_2.png" id="56_7vrp3"]
+[ext_resource type="Texture2D" path="res://素材/地图/终结谷浅滩/背景/Back_zhongjiezhigu_back_1.png" id="57_684qr"]
+
+[node name="地图_504000000_烘焙" type="Node2D" unique_id=554028339]
+script = ExtResource("1_q6ye6")
+map_id = "504000000"
+metadata/bake_hash = "825336e07db0a53bc992299125b83639b3946bcf686e287925bf01c241da53b6"
+metadata/bake_version = "10"
+metadata/baked_info = {
+"VRBottom": 1188.0,
+"VRLeft": 29.0,
+"VRRight": 1962.0,
+"VRTop": 0.0,
+"bgm": "3",
+"cloud": 0.0,
+"fieldLimit": 0.0,
+"forcedReturn": 999999999.0,
+"hideMinimap": 0.0,
+"mapMark": "None",
+"mobRate": 1.5,
+"reqLevel": 1.0,
+"returnMap": 100000000.0,
+"town": 0.0,
+"version": 10.0
+}
+metadata/baked_content_left = -197.0
+metadata/baked_content_right = 6015.0
+
+[node name="TileRoot" type="Node2D" parent="." unique_id=1673553523]
+script = ExtResource("2_1ug6a")
+
+[node name="TileBatch_192_0_0" type="Node2D" parent="TileRoot" unique_id=1528158311]
+z_index = 192
+z_as_relative = false
+script = ExtResource("3_ij5i6")
+textures = Array[Texture2D]([ExtResource("4_3yqpf"), ExtResource("4_3yqpf"), ExtResource("5_8h7fd"), ExtResource("6_lsuoc"), ExtResource("7_rjq37"), ExtResource("7_rjq37"), ExtResource("7_rjq37"), ExtResource("5_8h7fd"), ExtResource("8_7dqhj"), ExtResource("9_yjo6b"), ExtResource("10_56tmm"), ExtResource("7_rjq37"), ExtResource("7_rjq37"), ExtResource("6_lsuoc"), ExtResource("5_8h7fd"), ExtResource("11_wwltb"), ExtResource("10_56tmm"), ExtResource("6_lsuoc"), ExtResource("12_lf806"), ExtResource("7_rjq37"), ExtResource("8_7dqhj"), ExtResource("5_8h7fd"), ExtResource("13_nea40")])
+positions = PackedVector2Array(30, 1008, 156, 1008, 282, 1008, 408, 1008, 534, 1008, 660, 1008, 786, 1008, 912, 1008, 30, 961, 156, 961, 282, 902, 408, 948, 534, 948, 660, 948, 786, 948, 408, 901, 534, 842, 660, 888, 660, 841, 786, 888, 786, 841, 912, 948, 912, 842)
+flipped = PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="TileBatch_192_0_1" type="Node2D" parent="TileRoot" unique_id=697243800]
+z_index = 192
+z_as_relative = false
+script = ExtResource("3_ij5i6")
+textures = Array[Texture2D]([ExtResource("7_rjq37"), ExtResource("7_rjq37"), ExtResource("4_3yqpf"), ExtResource("6_lsuoc"), ExtResource("7_rjq37"), ExtResource("5_8h7fd"), ExtResource("14_m21mp"), ExtResource("7_rjq37"), ExtResource("5_8h7fd"), ExtResource("14_m21mp"), ExtResource("7_rjq37"), ExtResource("14_m21mp"), ExtResource("14_m21mp"), ExtResource("5_8h7fd"), ExtResource("14_m21mp"), ExtResource("7_rjq37")])
+positions = PackedVector2Array(30, 1128, 156, 1128, 282, 1128, 408, 1128, 534, 1128, 660, 1128, 786, 1128, 912, 1128, 30, 1068, 156, 1068, 282, 1068, 408, 1068, 534, 1068, 660, 1068, 786, 1068, 912, 1068)
+flipped = PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="TileBatch_192_1_0" type="Node2D" parent="TileRoot" unique_id=1381572033]
+z_index = 192
+z_as_relative = false
+script = ExtResource("3_ij5i6")
+textures = Array[Texture2D]([ExtResource("7_rjq37"), ExtResource("14_m21mp"), ExtResource("4_3yqpf"), ExtResource("6_lsuoc"), ExtResource("4_3yqpf"), ExtResource("5_8h7fd"), ExtResource("5_8h7fd"), ExtResource("6_lsuoc"), ExtResource("14_m21mp"), ExtResource("7_rjq37"), ExtResource("8_7dqhj"), ExtResource("11_wwltb"), ExtResource("12_lf806"), ExtResource("13_nea40"), ExtResource("11_wwltb"), ExtResource("8_7dqhj"), ExtResource("11_wwltb"), ExtResource("8_7dqhj"), ExtResource("6_lsuoc")])
+positions = PackedVector2Array(1038, 1008, 1164, 1008, 1416, 1008, 1542, 1008, 1668, 1008, 1794, 1008, 1920, 1008, 1038, 948, 1164, 948, 1290, 948, 1038, 901, 1164, 901, 1290, 901, 1416, 902, 1542, 961, 1668, 961, 1794, 961, 1920, 961, 1290, 1008)
+flipped = PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="TileBatch_192_1_1" type="Node2D" parent="TileRoot" unique_id=32059345]
+z_index = 192
+z_as_relative = false
+script = ExtResource("3_ij5i6")
+textures = Array[Texture2D]([ExtResource("4_3yqpf"), ExtResource("5_8h7fd"), ExtResource("7_rjq37"), ExtResource("14_m21mp"), ExtResource("5_8h7fd"), ExtResource("7_rjq37"), ExtResource("5_8h7fd"), ExtResource("4_3yqpf"), ExtResource("4_3yqpf"), ExtResource("14_m21mp"), ExtResource("14_m21mp"), ExtResource("4_3yqpf"), ExtResource("14_m21mp"), ExtResource("5_8h7fd"), ExtResource("14_m21mp"), ExtResource("5_8h7fd")])
+positions = PackedVector2Array(1038, 1128, 1164, 1128, 1290, 1128, 1416, 1128, 1542, 1128, 1668, 1128, 1794, 1128, 1920, 1128, 1038, 1068, 1164, 1068, 1290, 1068, 1416, 1068, 1542, 1068, 1668, 1068, 1794, 1068, 1920, 1068)
+flipped = PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="ObjectRoot" type="Node2D" parent="." unique_id=38492297]
+script = ExtResource("15_x7k54")
+
+[node name="ObjectBatch_64_0_0" type="Node2D" parent="ObjectRoot" unique_id=272482334]
+z_index = 64
+z_as_relative = false
+script = ExtResource("3_ij5i6")
+textures = Array[Texture2D]([ExtResource("16_opf6x"), ExtResource("17_rng1i"), ExtResource("18_1kw7t"), ExtResource("19_tw6r6"), ExtResource("20_h7j6l"), ExtResource("21_advuy"), ExtResource("22_uppfi"), ExtResource("23_qwwdd"), ExtResource("24_h1nvy"), ExtResource("20_h7j6l"), ExtResource("25_p2uon"), ExtResource("26_iitxi"), ExtResource("27_usxg4"), ExtResource("28_ejx5w"), ExtResource("29_15yq5"), ExtResource("30_ntn6f"), ExtResource("26_iitxi"), ExtResource("26_iitxi")])
+positions = PackedVector2Array(916, 720, 282, 192, 702, 643, 702, 723, 477, 802, 828, 734, 429, 610, 636, 567, 7, 236, 7, 833, 26, 867, 282, 848, 388, 826, 228, 881, 644, 705, 884, 584, 884, 508, 258, 592)
+flipped = PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="ObjectBatch_64_1_0" type="Node2D" parent="ObjectRoot" unique_id=320055547]
+z_index = 64
+z_as_relative = false
+script = ExtResource("3_ij5i6")
+textures = Array[Texture2D]([ExtResource("30_ntn6f"), ExtResource("31_f6ntj"), ExtResource("21_advuy"), ExtResource("16_opf6x"), ExtResource("16_opf6x"), ExtResource("32_jx455"), ExtResource("33_y1ny5"), ExtResource("23_qwwdd"), ExtResource("28_ejx5w")])
+positions = PackedVector2Array(1695, 706, 1421, 534, 1589, 860, 1071, 720, 1226, 721, 1080, 599, 1323, 738, 1444, 831, 1526, 882)
+flipped = PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="Footholds" type="Node2D" parent="." unique_id=498617073]
+script = ExtResource("34_poo58")
+metadata/baked_segments = [{
+"id": "1",
+"layer": 0,
+"next": "2",
+"prev": "0",
+"x1": 30.0,
+"x2": 282.0,
+"y1": 976.0,
+"y2": 976.0
+}, {
+"id": "2",
+"layer": 0,
+"next": "3",
+"prev": "1",
+"x1": 282.0,
+"x2": 408.0,
+"y1": 976.0,
+"y2": 916.0
+}, {
+"id": "3",
+"layer": 0,
+"next": "4",
+"prev": "2",
+"x1": 408.0,
+"x2": 534.0,
+"y1": 916.0,
+"y2": 916.0
+}, {
+"id": "4",
+"layer": 0,
+"next": "5",
+"prev": "3",
+"x1": 534.0,
+"x2": 660.0,
+"y1": 916.0,
+"y2": 856.0
+}, {
+"id": "5",
+"layer": 0,
+"next": "6",
+"prev": "4",
+"x1": 660.0,
+"x2": 912.0,
+"y1": 856.0,
+"y2": 856.0
+}, {
+"id": "6",
+"layer": 0,
+"next": "7",
+"prev": "5",
+"x1": 912.0,
+"x2": 1038.0,
+"y1": 856.0,
+"y2": 916.0
+}, {
+"id": "7",
+"layer": 0,
+"next": "8",
+"prev": "6",
+"x1": 1038.0,
+"x2": 1416.0,
+"y1": 916.0,
+"y2": 916.0
+}, {
+"id": "8",
+"layer": 0,
+"next": "9",
+"prev": "7",
+"x1": 1416.0,
+"x2": 1542.0,
+"y1": 916.0,
+"y2": 976.0
+}, {
+"id": "9",
+"layer": 0,
+"next": "0",
+"prev": "8",
+"x1": 1542.0,
+"x2": 1962.0,
+"y1": 976.0,
+"y2": 976.0
+}]
+metadata/baked_map_bounds = Rect2(29, 0, 1933, 1188)
+metadata/baked_spawn_point = Vector2(1479, 866)
+
+[node name="LadderRoot" type="Node2D" parent="." unique_id=1543267660]
+script = ExtResource("35_1itbs")
+metadata/baked_ladders = []
+
+[node name="LifeRoot" type="Node2D" parent="." unique_id=1947311183]
+script = ExtResource("36_1e6e7")
+
+[node name="PortalRoot" type="Node2D" parent="." unique_id=536016571]
+script = ExtResource("37_k2ruq")
+metadata/baked_portals = [{
+"index": 0,
+"pn": "sp1",
+"pt": 0.0,
+"tm": 999999999.0,
+"tn": "",
+"x": 179.0,
+"y": 973.0
+}, {
+"index": 1,
+"pn": "sp2",
+"pt": 0.0,
+"tm": 999999999.0,
+"tn": "",
+"x": 1802.0,
+"y": 973.0
+}]
+
+[node name="Player" type="Node2D" parent="." unique_id=629174346]
+script = ExtResource("38_86mff")
+
+[node name="WorldCamera" type="Camera2D" parent="." unique_id=1242646719]
+script = ExtResource("39_3o4uv")
+
+[node name="头像面板" type="CanvasLayer" parent="." unique_id=472671984 instance=ExtResource("40_1ltmp")]
+layer = 300
+script = ExtResource("41_uep0x")
+
+[node name="小地图面板" type="CanvasLayer" parent="." unique_id=1438626966 groups=["game_hud"] instance=ExtResource("42_e5vk1")]
+layer = 20
+script = ExtResource("43_hkpch")
+
+[node name="聊天面板" type="CanvasLayer" parent="." unique_id=2010358536 groups=["chat_panel"] instance=ExtResource("44_acxo2")]
+layer = 100
+script = ExtResource("45_ptihi")
+
+[node name="技能面板" type="CanvasLayer" parent="." unique_id=1620846581 instance=ExtResource("46_0da2w")]
+layer = 100
+script = ExtResource("47_k23py")
+
+[node name="窗口管理" type="CanvasLayer" parent="." unique_id=352756067 instance=ExtResource("48_r5m6h")]
+layer = 110
+script = ExtResource("49_0schp")
+
+[node name="系统消息" type="CanvasLayer" parent="." unique_id=1610473557 instance=ExtResource("50_w36pk")]
+layer = 110
+script = ExtResource("51_65xxi")
+
+[node name="PerformanceProbe" type="Node" parent="." unique_id=2080693227]
+script = ExtResource("52_u5myy")
+
+[node name="Sky" type="ColorRect" parent="." unique_id=1884823280]
+z_index = -1000
+z_as_relative = false
+offset_left = -20000.0
+offset_top = -20000.0
+offset_right = 20000.0
+offset_bottom = 20000.0
+mouse_filter = 2
+color = Color(0.2, 0.4, 0.8, 1)
+
+[node name="BakedBackgrounds" type="Node2D" parent="." unique_id=2077794395]
+
+[node name="Back0" type="Node2D" parent="BakedBackgrounds" unique_id=2016017555]
+z_index = -100
+z_as_relative = false
+script = ExtResource("53_2hx5v")
+texture = ExtResource("54_t6g4b")
+repeat_type = 3
+cell_size = Vector2(256, 256)
+tile_radius = Vector2i(2, 1)
+metadata/bg_kind = "纯色底块"
+metadata/no = 0
+metadata/bg_order = 0
+metadata/start_x = -1024.0
+metadata/start_y = -1280.0
+metadata/rx = 0.0
+metadata/ry = 0.0
+
+[node name="Back3" type="Node2D" parent="BakedBackgrounds" unique_id=1842122501]
+z_index = -99
+z_as_relative = false
+script = ExtResource("53_2hx5v")
+texture = ExtResource("55_8wtch")
+repeat_type = 1
+cell_size = Vector2(1240, 1200)
+metadata/bg_kind = "天空"
+metadata/no = 3
+metadata/bg_order = 1
+metadata/start_x = -1240.0
+metadata/start_y = -599.0
+metadata/rx = 0.0
+metadata/ry = 0.0
+
+[node name="Back2" type="Node2D" parent="BakedBackgrounds" unique_id=108999409]
+z_index = -98
+z_as_relative = false
+script = ExtResource("53_2hx5v")
+texture = ExtResource("56_7vrp3")
+repeat_type = 1
+cell_size = Vector2(1200, 800)
+metadata/bg_kind = "后景"
+metadata/no = 2
+metadata/bg_order = 2
+metadata/start_x = -1200.0
+metadata/start_y = -400.0
+metadata/rx = -10.0
+metadata/ry = 0.0
+
+[node name="Back1" type="Node2D" parent="BakedBackgrounds" unique_id=877384673]
+z_index = -97
+z_as_relative = false
+script = ExtResource("53_2hx5v")
+texture = ExtResource("57_684qr")
+cell_size = Vector2(1199, 800)
+metadata/bg_kind = "后景"
+metadata/no = 1
+metadata/bg_order = 3
+metadata/start_x = 0.0
+metadata/start_y = -400.0
+metadata/rx = -10.0
+metadata/ry = 0.0

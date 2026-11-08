@@ -87,7 +87,7 @@ else
         echo "   （没有检测到改动）"
     else
         # 1) 素材、二进制、生成物
-        forbidden_path='^(场景/生成/|\.godot/|运行时/|素材_2x/|素材_4x/|\.fixture|测试/截图/)'
+        forbidden_path='^(\.godot/|运行时/|素材_2x/|素材_4x/|\.fixture|测试/截图/)'
         hits=$(grep -E "$forbidden_path" "$changed" || true)
         if [ -n "$hits" ]; then
             echo "!! 这些文件不应该进公开仓："

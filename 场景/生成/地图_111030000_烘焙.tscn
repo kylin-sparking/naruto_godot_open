@@ -1,0 +1,1090 @@
+[gd_scene format=4]
+
+[ext_resource type="Script" path="res://脚本/地图/地图根节点.gd" id="1_1k63n"]
+[ext_resource type="Script" path="res://脚本/地图/地图块.gd" id="2_hnhpq"]
+[ext_resource type="Script" path="res://脚本/地图/静态绘制批次.gd" id="3_agi5c"]
+[ext_resource type="Texture2D" path="res://素材/地图/雷之国/地图块/Tile_leizhiguo_slRD_1.png" id="4_37dnf"]
+[ext_resource type="Texture2D" path="res://素材/地图/雷之国/地图块/Tile_leizhiguo_slRD_0.png" id="5_8ocpa"]
+[ext_resource type="Texture2D" path="res://素材/地图/雷之国/地图块/Tile_leizhiguo_slLD_0.png" id="6_ase2v"]
+[ext_resource type="Texture2D" path="res://素材/地图/雷之国/地图块/Tile_leizhiguo_slLD_1.png" id="7_5sq67"]
+[ext_resource type="Texture2D" path="res://素材/地图/雷之国/地图块/Tile_leizhiguo_bsc_4.png" id="8_p8gsg"]
+[ext_resource type="Texture2D" path="res://素材/地图/雷之国/地图块/Tile_leizhiguo_bsc_0.png" id="9_kotba"]
+[ext_resource type="Texture2D" path="res://素材/地图/雷之国/地图块/Tile_leizhiguo_enV0_0.png" id="10_mvf1d"]
+[ext_resource type="Texture2D" path="res://素材/地图/雷之国/地图块/Tile_leizhiguo_enV1_1.png" id="11_wei2t"]
+[ext_resource type="Texture2D" path="res://素材/地图/雷之国/地图块/Tile_leizhiguo_bsc_3.png" id="12_fjddl"]
+[ext_resource type="Texture2D" path="res://素材/地图/雷之国/地图块/Tile_leizhiguo_bsc_2.png" id="13_qgrfc"]
+[ext_resource type="Texture2D" path="res://素材/地图/雷之国/地图块/Tile_leizhiguo_bsc_1.png" id="14_7og8x"]
+[ext_resource type="Texture2D" path="res://素材/地图/雷之国/地图块/Tile_leizhiguo_enH0_3.png" id="15_luq6o"]
+[ext_resource type="Texture2D" path="res://素材/地图/雷之国/地图块/Tile_leizhiguo_enH0_0.png" id="16_p5mpv"]
+[ext_resource type="Texture2D" path="res://素材/地图/雷之国/地图块/Tile_leizhiguo_enV0_1.png" id="17_07iyr"]
+[ext_resource type="Texture2D" path="res://素材/地图/雷之国/地图块/Tile_leizhiguo_slRU_0.png" id="18_wfu0o"]
+[ext_resource type="Texture2D" path="res://素材/地图/雷之国/地图块/Tile_leizhiguo_enV1_0.png" id="19_ajrna"]
+[ext_resource type="Texture2D" path="res://素材/地图/雷之国/地图块/Tile_leizhiguo_enH0_2.png" id="20_ik8jq"]
+[ext_resource type="Texture2D" path="res://素材/地图/雷之国/地图块/Tile_leizhiguo_edU_0.png" id="21_2e0ay"]
+[ext_resource type="Texture2D" path="res://素材/地图/雷之国/地图块/Tile_leizhiguo_enH0_1.png" id="22_ru4b8"]
+[ext_resource type="Texture2D" path="res://素材/地图/雷之国/地图块/Tile_leizhiguo_edU_1.png" id="23_ntxo4"]
+[ext_resource type="Texture2D" path="res://素材/地图/雷之国/地图块/Tile_leizhiguo_edD_0.png" id="24_erupu"]
+[ext_resource type="Texture2D" path="res://素材/地图/雷之国/地图块/Tile_leizhiguo_enH1_3.png" id="25_1o1nj"]
+[ext_resource type="Texture2D" path="res://素材/地图/雷之国/地图块/Tile_leizhiguo_enH1_0.png" id="26_wjaob"]
+[ext_resource type="Texture2D" path="res://素材/地图/雷之国/地图块/Tile_leizhiguo_slLU_0.png" id="27_fbs3j"]
+[ext_resource type="Texture2D" path="res://素材/地图/雷之国/地图块/Tile_leizhiguo_edD_1.png" id="28_m3xci"]
+[ext_resource type="Texture2D" path="res://素材/地图/雷之国/地图块/Tile_leizhiguo_enH1_1.png" id="29_8xrpk"]
+[ext_resource type="Texture2D" path="res://素材/地图/雷之国/地图块/Tile_leizhiguo_enH1_2.png" id="30_3xs8k"]
+[ext_resource type="Script" path="res://脚本/地图/地图物件.gd" id="31_5ydcg"]
+[ext_resource type="Texture2D" path="res://素材/地图/雷之国/地图物件/Obj_acc_shuizhiguo_nature_16/Obj_acc_shuizhiguo_nature_16_0.png" id="32_56q1x"]
+[ext_resource type="Texture2D" path="res://素材/地图/雷之国/地图物件/Obj_acc_shuizhiguo_nature_16/Obj_acc_shuizhiguo_nature_16_1.png" id="33_yss7d"]
+[ext_resource type="Texture2D" path="res://素材/地图/雷之国/地图物件/Obj_acc_shuizhiguo_nature_16/Obj_acc_shuizhiguo_nature_16_2.png" id="34_7ila4"]
+[ext_resource type="Texture2D" path="res://素材/地图/雷之国/地图物件/Obj_acc_shuizhiguo_nature_16/Obj_acc_shuizhiguo_nature_16_3.png" id="35_5u5mw"]
+[ext_resource type="Texture2D" path="res://素材/地图/雷之国/地图物件/Obj_acc_shuizhiguo_nature_16/Obj_acc_shuizhiguo_nature_16_4.png" id="36_cc4i7"]
+[ext_resource type="Texture2D" path="res://素材/地图/雷之国/地图物件/Obj_acc_shuizhiguo_nature_16/Obj_acc_shuizhiguo_nature_16_5.png" id="37_ovqeo"]
+[ext_resource type="Texture2D" path="res://素材/地图/雷之国/地图物件/Obj_acc_shuizhiguo_nature_16/Obj_acc_shuizhiguo_nature_16_6.png" id="38_nq1pb"]
+[ext_resource type="Texture2D" path="res://素材/地图/雷之国/地图物件/Obj_connect_ladder_3_0/Obj_connect_ladder_3_0_0.png" id="39_07gvo"]
+[ext_resource type="Texture2D" path="res://素材/地图/雷之国/地图物件/Obj_connect_ladder_3_2/Obj_connect_ladder_3_2_0.png" id="40_tq8qh"]
+[ext_resource type="Texture2D" path="res://素材/地图/雷之国/地图物件/Obj_connect_ladder_3_1/Obj_connect_ladder_3_1_0.png" id="41_45k4t"]
+[ext_resource type="Texture2D" path="res://素材/地图/雷之国/地图物件/Obj_connect_ladder_3_3/Obj_connect_ladder_3_3_0.png" id="42_knoj7"]
+[ext_resource type="Texture2D" path="res://素材/地图/温泉圣地/地图物件/Obj_acc_leizhiguo_artificiality_18/Obj_acc_leizhiguo_artificiality_18_0.png" id="43_b0i1i"]
+[ext_resource type="Texture2D" path="res://素材/地图/温泉圣地/地图物件/Obj_acc_leizhiguo_artificiality_17/Obj_acc_leizhiguo_artificiality_17_0.png" id="44_3lckl"]
+[ext_resource type="Texture2D" path="res://素材/地图/温泉圣地/地图物件/Obj_acc_leizhiguo_artificiality_16/Obj_acc_leizhiguo_artificiality_16_0.png" id="45_p6wgd"]
+[ext_resource type="Texture2D" path="res://素材/地图/温泉圣地/地图物件/Obj_acc_leizhiguo_artificiality_5/Obj_acc_leizhiguo_artificiality_5_0.png" id="46_0ri25"]
+[ext_resource type="Texture2D" path="res://素材/地图/温泉圣地/地图物件/Obj_acc_leizhiguo_artificiality_6/Obj_acc_leizhiguo_artificiality_6_0.png" id="47_57yad"]
+[ext_resource type="Texture2D" path="res://素材/地图/温泉圣地/地图物件/Obj_acc_leizhiguo_artificiality_0/Obj_acc_leizhiguo_artificiality_0_0.png" id="48_6sky8"]
+[ext_resource type="Texture2D" path="res://素材/地图/雷之国/地图物件/Obj_acc_leizhiguo_nature_22/Obj_acc_leizhiguo_nature_22_0.png" id="49_l7517"]
+[ext_resource type="Texture2D" path="res://素材/地图/温泉圣地/地图物件/Obj_acc_leizhiguo_artificiality_3/Obj_acc_leizhiguo_artificiality_3_0.png" id="50_hj05p"]
+[ext_resource type="Texture2D" path="res://素材/地图/雷之国/地图物件/Obj_acc_leizhiguo_artificiality_7/Obj_acc_leizhiguo_artificiality_7_0.png" id="51_qgylw"]
+[ext_resource type="Texture2D" path="res://素材/地图/雷之国/地图物件/Obj_acc_leizhiguo_artificiality_4/Obj_acc_leizhiguo_artificiality_4_0.png" id="52_m5g6x"]
+[ext_resource type="Texture2D" path="res://素材/地图/中央山脉/地图物件/Obj_acc_leizhiguo_nature_24/Obj_acc_leizhiguo_nature_24_0.png" id="53_xdsx4"]
+[ext_resource type="Texture2D" path="res://素材/地图/中央山脉/地图物件/Obj_acc_leizhiguo_nature_15/Obj_acc_leizhiguo_nature_15_0.png" id="54_e4qyo"]
+[ext_resource type="Texture2D" path="res://素材/地图/雷之国/地图物件/Obj_acc_leizhiguo_nature_3/Obj_acc_leizhiguo_nature_3_0.png" id="55_8w71g"]
+[ext_resource type="Texture2D" path="res://素材/地图/温泉圣地/地图物件/Obj_acc_leizhiguo_nature_20/Obj_acc_leizhiguo_nature_20_0.png" id="56_b2663"]
+[ext_resource type="Texture2D" path="res://素材/地图/雷之国/地图物件/Obj_acc_leizhiguo_nature_23/Obj_acc_leizhiguo_nature_23_0.png" id="57_7n7o3"]
+[ext_resource type="Texture2D" path="res://素材/地图/中央山脉/地图物件/Obj_acc_leizhiguo_nature_19/Obj_acc_leizhiguo_nature_19_0.png" id="58_kxkwc"]
+[ext_resource type="Script" path="res://脚本/地图/地表.gd" id="59_uujog"]
+[ext_resource type="Script" path="res://脚本/地图/攀爬物.gd" id="60_hhy34"]
+[ext_resource type="Script" path="res://脚本/地图/地图实体.gd" id="61_i4rws"]
+[ext_resource type="Script" path="res://脚本/地图/传送门.gd" id="62_xs3pi"]
+[ext_resource type="Script" path="res://脚本/角色/玩家.gd" id="63_4xqu6"]
+[ext_resource type="Script" path="res://脚本/地图/世界相机.gd" id="64_0ya7y"]
+[ext_resource type="PackedScene" path="res://场景/界面/头像面板.tscn" id="65_c7puq"]
+[ext_resource type="Script" path="res://脚本/界面/头像面板.gd" id="66_vdjyr"]
+[ext_resource type="PackedScene" path="res://场景/界面/小地图面板.tscn" id="67_soq8t"]
+[ext_resource type="Script" path="res://脚本/界面/小地图面板.gd" id="68_r208d"]
+[ext_resource type="PackedScene" path="res://场景/界面/聊天面板.tscn" id="69_qkfym"]
+[ext_resource type="Script" path="res://脚本/界面/聊天面板.gd" id="70_hseqs"]
+[ext_resource type="PackedScene" path="res://场景/界面/技能面板.tscn" id="71_bqrrm"]
+[ext_resource type="Script" path="res://脚本/界面/技能面板.gd" id="72_46hx0"]
+[ext_resource type="PackedScene" path="res://场景/界面/窗口管理.tscn" id="73_2lngp"]
+[ext_resource type="Script" path="res://脚本/界面/窗口管理.gd" id="74_o67tq"]
+[ext_resource type="PackedScene" path="res://场景/界面/组件/系统消息.tscn" id="75_r5ei8"]
+[ext_resource type="Script" path="res://脚本/界面/系统消息.gd" id="76_2mf8d"]
+[ext_resource type="Script" path="res://脚本/调试/性能探针.gd" id="77_2ffmr"]
+[ext_resource type="Script" path="res://脚本/地图/平铺背景.gd" id="78_ql1gj"]
+[ext_resource type="Texture2D" path="res://素材/地图/雷之国/背景/Back_leizhiguo_back_0.png" id="79_lvdqa"]
+[ext_resource type="Texture2D" path="res://素材/地图/雷之国/背景/Back_leizhiguo_back_3.png" id="80_5cfs4"]
+[ext_resource type="Texture2D" path="res://素材/地图/雷之国/背景/Back_leizhiguo_back_1.png" id="81_745yl"]
+[ext_resource type="Texture2D" path="res://素材/地图/雷之国/背景/Back_leizhiguo_back_2.png" id="82_up4nk"]
+[ext_resource type="Texture2D" path="res://素材/地图/雷之国/背景/Back_leizhiguo_back_4.png" id="83_w2epp"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8rb2l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("32_56q1x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_yss7d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_7ila4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_5u5mw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_cc4i7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_ovqeo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_nq1pb")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="地图_111030000_烘焙" type="Node2D" unique_id=554028339]
+script = ExtResource("1_1k63n")
+map_id = "111030000"
+metadata/bake_hash = "83957e7166b073a584993b5930f565db59248fe08aa2eb3015cf84207a94a354"
+metadata/bake_version = "10"
+metadata/baked_info = {
+"VRBottom": 1269.0,
+"VRLeft": 30.0,
+"VRRight": 2753.0,
+"VRTop": 0.0,
+"bgm": "2",
+"cloud": 0.0,
+"fieldLimit": 0.0,
+"forcedReturn": 999999999.0,
+"hideMinimap": 0.0,
+"mapMark": "None",
+"mobRate": 1.5,
+"reqLevel": 70.0,
+"returnMap": 100000000.0,
+"town": 0.0,
+"version": 10.0
+}
+metadata/baked_content_left = -197.0
+metadata/baked_content_right = 5319.0
+
+[node name="TileRoot" type="Node2D" parent="." unique_id=1673553523]
+script = ExtResource("2_hnhpq")
+
+[node name="TileBatch_189_0_0" type="Node2D" parent="TileRoot" unique_id=1723328978]
+z_index = 189
+z_as_relative = false
+script = ExtResource("3_agi5c")
+textures = Array[Texture2D]([ExtResource("4_37dnf"), ExtResource("5_8ocpa"), ExtResource("6_ase2v"), ExtResource("6_ase2v"), ExtResource("7_5sq67"), ExtResource("7_5sq67")])
+positions = PackedVector2Array(645, 633, 239, 476, 762, 26, 843, 63, 924, 100, 644, 476)
+flipped = PackedByteArray("AAAAAAAA")
+
+[node name="TileBatch_189_1_0" type="Node2D" parent="TileRoot" unique_id=860941286]
+z_index = 189
+z_as_relative = false
+script = ExtResource("3_agi5c")
+textures = Array[Texture2D]([ExtResource("7_5sq67"), ExtResource("6_ase2v"), ExtResource("7_5sq67"), ExtResource("6_ase2v"), ExtResource("6_ase2v"), ExtResource("6_ase2v"), ExtResource("6_ase2v"), ExtResource("7_5sq67"), ExtResource("7_5sq67")])
+positions = PackedVector2Array(1046, 382, 1127, 419, 1289, 493, 1208, 456, 1587, 279, 1768, 825, 1687, 788, 1606, 751, 1131, 633)
+flipped = PackedByteArray("AAAAAAAAAAAA")
+
+[node name="TileBatch_189_2_0" type="Node2D" parent="TileRoot" unique_id=694824094]
+z_index = 189
+z_as_relative = false
+script = ExtResource("3_agi5c")
+textures = Array[Texture2D]([ExtResource("5_8ocpa"), ExtResource("4_37dnf"), ExtResource("6_ase2v"), ExtResource("7_5sq67")])
+positions = PackedVector2Array(2057, 444, 2325, 222, 2082, 185, 2099, 567)
+flipped = PackedByteArray("AAAAAA==")
+
+[node name="TileBatch_192_0_-1" type="Node2D" parent="TileRoot" unique_id=925190067]
+z_index = 192
+z_as_relative = false
+script = ExtResource("3_agi5c")
+textures = Array[Texture2D]([ExtResource("8_p8gsg"), ExtResource("9_kotba"), ExtResource("10_mvf1d"), ExtResource("11_wei2t"), ExtResource("8_p8gsg"), ExtResource("12_fjddl")])
+positions = PackedVector2Array(762, -11, 681, -11, 655, -11, 1005, -11, 924, -11, 843, -11)
+flipped = PackedByteArray("AAAAAAAA")
+
+[node name="TileBatch_192_0_0" type="Node2D" parent="TileRoot" unique_id=1085578363]
+z_index = 192
+z_as_relative = false
+script = ExtResource("3_agi5c")
+textures = Array[Texture2D]([ExtResource("13_qgrfc"), ExtResource("14_7og8x"), ExtResource("9_kotba"), ExtResource("9_kotba"), ExtResource("13_qgrfc"), ExtResource("12_fjddl"), ExtResource("8_p8gsg"), ExtResource("14_7og8x"), ExtResource("8_p8gsg"), ExtResource("12_fjddl"), ExtResource("12_fjddl"), ExtResource("15_luq6o"), ExtResource("16_p5mpv"), ExtResource("10_mvf1d"), ExtResource("17_07iyr"), ExtResource("9_kotba"), ExtResource("13_qgrfc"), ExtResource("14_7og8x"), ExtResource("9_kotba"), ExtResource("8_p8gsg"), ExtResource("14_7og8x"), ExtResource("9_kotba"), ExtResource("13_qgrfc"), ExtResource("12_fjddl"), ExtResource("9_kotba"), ExtResource("14_7og8x"), ExtResource("14_7og8x"), ExtResource("8_p8gsg"), ExtResource("12_fjddl"), ExtResource("13_qgrfc"), ExtResource("18_wfu0o"), ExtResource("18_wfu0o"), ExtResource("18_wfu0o"), ExtResource("19_ajrna"), ExtResource("11_wei2t"), ExtResource("13_qgrfc"), ExtResource("14_7og8x"), ExtResource("13_qgrfc"), ExtResource("14_7og8x"), ExtResource("20_ik8jq"), ExtResource("10_mvf1d"), ExtResource("11_wei2t"), ExtResource("16_p5mpv"), ExtResource("11_wei2t"), ExtResource("11_wei2t"), ExtResource("11_wei2t"), ExtResource("11_wei2t"), ExtResource("10_mvf1d"), ExtResource("17_07iyr"), ExtResource("17_07iyr"), ExtResource("17_07iyr"), ExtResource("9_kotba"), ExtResource("8_p8gsg"), ExtResource("12_fjddl"), ExtResource("16_p5mpv"), ExtResource("21_2e0ay"), ExtResource("22_ru4b8"), ExtResource("9_kotba"), ExtResource("11_wei2t"), ExtResource("11_wei2t"), ExtResource("23_ntxo4"), ExtResource("24_erupu"), ExtResource("20_ik8jq"), ExtResource("25_1o1nj"), ExtResource("26_wjaob"), ExtResource("10_mvf1d"), ExtResource("27_fbs3j"), ExtResource("10_mvf1d"), ExtResource("17_07iyr"), ExtResource("17_07iyr"), ExtResource("10_mvf1d"), ExtResource("10_mvf1d"), ExtResource("17_07iyr"), ExtResource("10_mvf1d"), ExtResource("17_07iyr"), ExtResource("17_07iyr"), ExtResource("10_mvf1d"), ExtResource("17_07iyr"), ExtResource("10_mvf1d"), ExtResource("21_2e0ay"), ExtResource("28_m3xci"), ExtResource("26_wjaob"), ExtResource("15_luq6o"), ExtResource("29_8xrpk"), ExtResource("10_mvf1d"), ExtResource("30_3xs8k"), ExtResource("10_mvf1d"), ExtResource("17_07iyr"), ExtResource("19_ajrna"), ExtResource("18_wfu0o"), ExtResource("15_luq6o"), ExtResource("30_3xs8k"), ExtResource("22_ru4b8"), ExtResource("14_7og8x"), ExtResource("30_3xs8k"), ExtResource("11_wei2t"), ExtResource("10_mvf1d"), ExtResource("22_ru4b8"), ExtResource("25_1o1nj"), ExtResource("19_ajrna"), ExtResource("17_07iyr"), ExtResource("16_p5mpv"), ExtResource("12_fjddl"), ExtResource("29_8xrpk"), ExtResource("15_luq6o"), ExtResource("25_1o1nj"), ExtResource("19_ajrna"), ExtResource("17_07iyr"), ExtResource("22_ru4b8"), ExtResource("13_qgrfc"), ExtResource("29_8xrpk"), ExtResource("21_2e0ay"), ExtResource("19_ajrna"), ExtResource("28_m3xci"), ExtResource("15_luq6o"), ExtResource("19_ajrna"), ExtResource("19_ajrna"), ExtResource("11_wei2t"), ExtResource("10_mvf1d"), ExtResource("10_mvf1d"), ExtResource("10_mvf1d"), ExtResource("21_2e0ay"), ExtResource("19_ajrna"), ExtResource("11_wei2t"), ExtResource("11_wei2t"), ExtResource("11_wei2t"), ExtResource("11_wei2t"), ExtResource("19_ajrna"), ExtResource("19_ajrna"), ExtResource("17_07iyr"), ExtResource("17_07iyr"), ExtResource("10_mvf1d"), ExtResource("17_07iyr"), ExtResource("10_mvf1d"), ExtResource("10_mvf1d"), ExtResource("10_mvf1d"), ExtResource("21_2e0ay"), ExtResource("20_ik8jq"), ExtResource("20_ik8jq"), ExtResource("16_p5mpv"), ExtResource("22_ru4b8"), ExtResource("16_p5mpv"), ExtResource("29_8xrpk"), ExtResource("25_1o1nj"), ExtResource("30_3xs8k"), ExtResource("25_1o1nj"), ExtResource("10_mvf1d"), ExtResource("24_erupu"), ExtResource("11_wei2t"), ExtResource("17_07iyr"), ExtResource("28_m3xci"), ExtResource("23_ntxo4"), ExtResource("15_luq6o"), ExtResource("27_fbs3j"), ExtResource("13_qgrfc"), ExtResource("13_qgrfc"), ExtResource("25_1o1nj"), ExtResource("26_wjaob"), ExtResource("29_8xrpk"), ExtResource("29_8xrpk"), ExtResource("11_wei2t"), ExtResource("11_wei2t"), ExtResource("17_07iyr"), ExtResource("17_07iyr"), ExtResource("16_p5mpv"), ExtResource("22_ru4b8"), ExtResource("19_ajrna"), ExtResource("17_07iyr"), ExtResource("17_07iyr"), ExtResource("19_ajrna"), ExtResource("17_07iyr"), ExtResource("17_07iyr"), ExtResource("10_mvf1d"), ExtResource("19_ajrna"), ExtResource("11_wei2t"), ExtResource("19_ajrna"), ExtResource("29_8xrpk"), ExtResource("24_erupu"), ExtResource("19_ajrna"), ExtResource("11_wei2t"), ExtResource("19_ajrna"), ExtResource("12_fjddl"), ExtResource("13_qgrfc"), ExtResource("14_7og8x"), ExtResource("11_wei2t"), ExtResource("28_m3xci"), ExtResource("18_wfu0o"), ExtResource("9_kotba"), ExtResource("18_wfu0o"), ExtResource("22_ru4b8")])
+positions = PackedVector2Array(30, 913, 30, 876, 30, 839, 30, 802, 111, 839, 192, 876, 111, 802, 192, 839, 111, 876, 111, 913, 192, 913, 30, 773, 111, 773, 213, 772, 214, 735, 30, 987, 30, 950, 273, 913, 354, 950, 435, 987, 273, 876, 354, 913, 435, 950, 354, 987, 111, 950, 111, 987, 192, 987, 192, 950, 273, 950, 273, 987, 273, 810, 354, 847, 435, 884, 239, 772, 239, 735, 597, 987, 516, 950, 597, 950, 516, 987, 516, 921, 619, 892, 645, 892, 597, 921, 645, 855, 645, 818, 645, 781, 645, 744, 619, 855, 620, 818, 620, 781, 620, 744, 759, 987, 678, 987, 678, 950, 678, 921, 812, 921, 759, 921, 759, 950, 840, 950, 840, 987, 904, 900, 908, 929, 932, 900, 932, 929, 1013, 929, 1020, 863, 1013, 863, 1020, 826, 1021, 789, 1021, 752, 1020, 678, 1019, 641, 1020, 604, 1019, 567, 1020, 493, 1020, 530, 1020, 456, 1020, 419, 1020, 382, 1018, 353, 967, 333, 992, 333, 969, 604, 969, 633, 1020, 715, 911, 296, 966, 296, 980, 248, 1005, 248, 911, 230, 888, 604, 888, 633, 830, 230, 830, 259, 830, 296, 1005, 211, 979, 211, 807, 604, 807, 633, 1005, 174, 980, 174, 749, 230, 749, 259, 749, 296, 726, 604, 726, 633, 1005, 137, 980, 137, 668, 230, 668, 259, 668, 296, 697, 447, 725, 476, 701, 513, 644, 447, 645, 707, 645, 670, 645, 633, 619, 707, 619, 670, 619, 633, 617, 604, 239, 698, 239, 661, 239, 624, 239, 587, 239, 550, 239, 513, 239, 476, 214, 698, 214, 661, 213, 624, 214, 587, 213, 550, 213, 513, 213, 476, 211, 447, 239, 447, 320, 447, 401, 447, 482, 447, 563, 447, 320, 476, 401, 476, 482, 476, 563, 513, 537, 476, 538, 513, 344, 259, 319, 259, 320, 296, 316, 267, 344, 267, 425, 230, 506, 259, 587, 259, 344, 296, 425, 296, 506, 296, 587, 296, 344, 185, 344, 222, 319, 185, 319, 222, 506, 230, 587, 230, 344, 148, 319, 148, 319, 111, 344, 111, 319, 0, 319, 37, 318, 74, 344, 0, 344, 37, 344, 74, 681, 26, 656, 26, 1005, 100, 1005, 63, 1005, 26, 924, 63, 924, 26, 843, 26, 644, 476, 620, 513, 992, 267, 563, 476, 192, 773, 645, 604)
+flipped = PackedByteArray("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==")
+
+[node name="TileBatch_192_0_1" type="Node2D" parent="TileRoot" unique_id=78167596]
+z_index = 192
+z_as_relative = false
+script = ExtResource("3_agi5c")
+textures = Array[Texture2D]([ExtResource("8_p8gsg"), ExtResource("13_qgrfc"), ExtResource("14_7og8x"), ExtResource("8_p8gsg"), ExtResource("9_kotba"), ExtResource("8_p8gsg"), ExtResource("9_kotba"), ExtResource("8_p8gsg"), ExtResource("13_qgrfc"), ExtResource("8_p8gsg"), ExtResource("13_qgrfc"), ExtResource("8_p8gsg"), ExtResource("9_kotba"), ExtResource("12_fjddl"), ExtResource("9_kotba"), ExtResource("12_fjddl"), ExtResource("9_kotba"), ExtResource("13_qgrfc"), ExtResource("14_7og8x"), ExtResource("9_kotba"), ExtResource("11_wei2t"), ExtResource("19_ajrna")])
+positions = PackedVector2Array(30, 1061, 111, 1061, 192, 1061, 273, 1061, 354, 1061, 435, 1061, 30, 1024, 435, 1024, 354, 1024, 111, 1024, 192, 1024, 273, 1024, 516, 1061, 597, 1061, 516, 1024, 597, 1024, 678, 1061, 759, 1061, 678, 1024, 759, 1024, 840, 1024, 840, 1061)
+flipped = PackedByteArray("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==")
+
+[node name="TileBatch_192_1_0" type="Node2D" parent="TileRoot" unique_id=1032168618]
+z_index = 192
+z_as_relative = false
+script = ExtResource("3_agi5c")
+textures = Array[Texture2D]([ExtResource("11_wei2t"), ExtResource("19_ajrna"), ExtResource("19_ajrna"), ExtResource("11_wei2t"), ExtResource("12_fjddl"), ExtResource("29_8xrpk"), ExtResource("23_ntxo4"), ExtResource("24_erupu"), ExtResource("19_ajrna"), ExtResource("18_wfu0o"), ExtResource("22_ru4b8"), ExtResource("14_7og8x"), ExtResource("25_1o1nj"), ExtResource("20_ik8jq"), ExtResource("8_p8gsg"), ExtResource("29_8xrpk"), ExtResource("20_ik8jq"), ExtResource("9_kotba"), ExtResource("29_8xrpk"), ExtResource("18_wfu0o"), ExtResource("15_luq6o"), ExtResource("25_1o1nj"), ExtResource("25_1o1nj"), ExtResource("30_3xs8k"), ExtResource("15_luq6o"), ExtResource("25_1o1nj"), ExtResource("10_mvf1d"), ExtResource("24_erupu"), ExtResource("11_wei2t"), ExtResource("19_ajrna"), ExtResource("11_wei2t"), ExtResource("19_ajrna"), ExtResource("10_mvf1d"), ExtResource("10_mvf1d"), ExtResource("17_07iyr"), ExtResource("17_07iyr"), ExtResource("24_erupu"), ExtResource("28_m3xci"), ExtResource("16_p5mpv"), ExtResource("30_3xs8k"), ExtResource("18_wfu0o"), ExtResource("18_wfu0o"), ExtResource("29_8xrpk"), ExtResource("16_p5mpv"), ExtResource("22_ru4b8"), ExtResource("26_wjaob"), ExtResource("17_07iyr"), ExtResource("28_m3xci"), ExtResource("15_luq6o"), ExtResource("26_wjaob"), ExtResource("28_m3xci"), ExtResource("21_2e0ay"), ExtResource("16_p5mpv"), ExtResource("25_1o1nj"), ExtResource("11_wei2t"), ExtResource("19_ajrna"), ExtResource("19_ajrna"), ExtResource("30_3xs8k"), ExtResource("19_ajrna"), ExtResource("10_mvf1d"), ExtResource("17_07iyr"), ExtResource("10_mvf1d"), ExtResource("17_07iyr"), ExtResource("21_2e0ay"), ExtResource("11_wei2t"), ExtResource("15_luq6o"), ExtResource("25_1o1nj"), ExtResource("19_ajrna"), ExtResource("17_07iyr"), ExtResource("18_wfu0o"), ExtResource("29_8xrpk"), ExtResource("11_wei2t"), ExtResource("10_mvf1d"), ExtResource("20_ik8jq"), ExtResource("15_luq6o"), ExtResource("29_8xrpk"), ExtResource("11_wei2t"), ExtResource("17_07iyr"), ExtResource("28_m3xci"), ExtResource("25_1o1nj"), ExtResource("18_wfu0o"), ExtResource("23_ntxo4"), ExtResource("28_m3xci"), ExtResource("17_07iyr"), ExtResource("30_3xs8k"), ExtResource("22_ru4b8"), ExtResource("18_wfu0o"), ExtResource("26_wjaob"), ExtResource("13_qgrfc"), ExtResource("22_ru4b8"), ExtResource("9_kotba"), ExtResource("18_wfu0o"), ExtResource("26_wjaob"), ExtResource("11_wei2t"), ExtResource("10_mvf1d"), ExtResource("18_wfu0o"), ExtResource("13_qgrfc"), ExtResource("18_wfu0o"), ExtResource("20_ik8jq"), ExtResource("29_8xrpk"), ExtResource("11_wei2t"), ExtResource("10_mvf1d"), ExtResource("19_ajrna"), ExtResource("10_mvf1d"), ExtResource("19_ajrna"), ExtResource("19_ajrna"), ExtResource("19_ajrna"), ExtResource("19_ajrna"), ExtResource("11_wei2t"), ExtResource("11_wei2t"), ExtResource("19_ajrna"), ExtResource("19_ajrna"), ExtResource("11_wei2t"), ExtResource("23_ntxo4"), ExtResource("16_p5mpv"), ExtResource("24_erupu"), ExtResource("26_wjaob"), ExtResource("11_wei2t"), ExtResource("19_ajrna"), ExtResource("19_ajrna"), ExtResource("10_mvf1d"), ExtResource("17_07iyr"), ExtResource("21_2e0ay"), ExtResource("16_p5mpv"), ExtResource("30_3xs8k"), ExtResource("10_mvf1d"), ExtResource("19_ajrna"), ExtResource("11_wei2t"), ExtResource("17_07iyr"), ExtResource("20_ik8jq"), ExtResource("23_ntxo4"), ExtResource("27_fbs3j"), ExtResource("16_p5mpv"), ExtResource("30_3xs8k"), ExtResource("11_wei2t"), ExtResource("28_m3xci"), ExtResource("20_ik8jq"), ExtResource("20_ik8jq"), ExtResource("27_fbs3j")])
+positions = PackedVector2Array(1046, 863, 1046, 826, 1046, 789, 1046, 752, 1094, 892, 1093, 929, 1147, 863, 1151, 929, 1175, 892, 1768, 759, 1848, 796, 1848, 825, 1848, 862, 1929, 796, 1929, 825, 1929, 862, 2010, 796, 2010, 825, 2010, 862, 1937, 501, 2018, 538, 2018, 567, 1937, 567, 1976, 481, 1856, 501, 1856, 530, 1911, 530, 1912, 567, 1976, 333, 1976, 370, 1976, 407, 1976, 444, 1950, 333, 1950, 370, 1951, 407, 1951, 444, 1952, 481, 1887, 316, 1775, 501, 1775, 530, 1687, 722, 1694, 464, 1694, 530, 1606, 722, 1613, 464, 1613, 493, 1669, 493, 1669, 530, 1532, 464, 1532, 493, 1501, 751, 1497, 722, 1451, 464, 1451, 493, 1976, 222, 1976, 259, 1976, 296, 1830, 316, 1976, 185, 1950, 185, 1951, 222, 1950, 259, 1951, 296, 1883, 250, 1911, 279, 1749, 287, 1749, 316, 1976, 148, 1951, 148, 1668, 250, 1668, 316, 1976, 111, 1950, 111, 1587, 250, 1506, 250, 1506, 279, 1976, 74, 1951, 74, 1431, 707, 1374, 707, 1374, 641, 1427, 678, 1350, 707, 1349, 670, 1293, 670, 1293, 641, 1212, 604, 1212, 670, 1208, 419, 1131, 604, 1289, 456, 1289, 390, 1370, 493, 1425, 427, 1399, 427, 1370, 427, 1127, 382, 1208, 353, 1127, 353, 1050, 633, 1425, 353, 1399, 353, 1425, 390, 1399, 390, 1046, 678, 1045, 641, 1045, 604, 1045, 567, 1045, 530, 1045, 493, 1045, 456, 1045, 419, 1045, 382, 1126, 304, 1073, 304, 1130, 333, 1073, 333, 1046, 715, 1425, 316, 1425, 279, 1399, 316, 1400, 279, 1397, 250, 1425, 250, 1425, 279, 1950, 0, 1976, 0, 1976, 37, 1951, 37, 1050, 604, 1948, 452, 1976, 415, 1525, 722, 1525, 751, 1370, 493, 1346, 530, 1094, 863, 1046, 353, 1830, 250)
+flipped = PackedByteArray("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==")
+
+[node name="TileBatch_192_2_0" type="Node2D" parent="TileRoot" unique_id=1484464830]
+z_index = 192
+z_as_relative = false
+script = ExtResource("3_agi5c")
+textures = Array[Texture2D]([ExtResource("25_1o1nj"), ExtResource("11_wei2t"), ExtResource("28_m3xci"), ExtResource("17_07iyr"), ExtResource("26_wjaob"), ExtResource("11_wei2t"), ExtResource("11_wei2t"), ExtResource("10_mvf1d"), ExtResource("19_ajrna"), ExtResource("17_07iyr"), ExtResource("11_wei2t"), ExtResource("17_07iyr"), ExtResource("20_ik8jq"), ExtResource("26_wjaob"), ExtResource("20_ik8jq"), ExtResource("26_wjaob"), ExtResource("30_3xs8k"), ExtResource("10_mvf1d"), ExtResource("17_07iyr"), ExtResource("10_mvf1d"), ExtResource("17_07iyr"), ExtResource("10_mvf1d"), ExtResource("17_07iyr"), ExtResource("17_07iyr"), ExtResource("23_ntxo4"), ExtResource("17_07iyr"), ExtResource("13_qgrfc"), ExtResource("8_p8gsg"), ExtResource("14_7og8x"), ExtResource("9_kotba"), ExtResource("9_kotba"), ExtResource("13_qgrfc"), ExtResource("22_ru4b8"), ExtResource("12_fjddl"), ExtResource("12_fjddl"), ExtResource("9_kotba"), ExtResource("14_7og8x"), ExtResource("12_fjddl"), ExtResource("8_p8gsg"), ExtResource("15_luq6o"), ExtResource("12_fjddl"), ExtResource("12_fjddl"), ExtResource("12_fjddl"), ExtResource("13_qgrfc"), ExtResource("13_qgrfc"), ExtResource("13_qgrfc"), ExtResource("8_p8gsg"), ExtResource("13_qgrfc"), ExtResource("13_qgrfc"), ExtResource("14_7og8x"), ExtResource("15_luq6o"), ExtResource("21_2e0ay"), ExtResource("28_m3xci"), ExtResource("19_ajrna"), ExtResource("10_mvf1d"), ExtResource("16_p5mpv"), ExtResource("30_3xs8k"), ExtResource("23_ntxo4"), ExtResource("19_ajrna"), ExtResource("19_ajrna"), ExtResource("19_ajrna"), ExtResource("10_mvf1d"), ExtResource("17_07iyr"), ExtResource("11_wei2t"), ExtResource("24_erupu"), ExtResource("27_fbs3j"), ExtResource("19_ajrna"), ExtResource("17_07iyr"), ExtResource("28_m3xci"), ExtResource("19_ajrna"), ExtResource("10_mvf1d"), ExtResource("11_wei2t"), ExtResource("11_wei2t"), ExtResource("19_ajrna"), ExtResource("10_mvf1d"), ExtResource("11_wei2t"), ExtResource("17_07iyr"), ExtResource("17_07iyr"), ExtResource("17_07iyr"), ExtResource("19_ajrna"), ExtResource("10_mvf1d"), ExtResource("10_mvf1d"), ExtResource("24_erupu"), ExtResource("11_wei2t"), ExtResource("10_mvf1d"), ExtResource("11_wei2t"), ExtResource("17_07iyr"), ExtResource("12_fjddl"), ExtResource("26_wjaob"), ExtResource("8_p8gsg"), ExtResource("30_3xs8k"), ExtResource("8_p8gsg"), ExtResource("28_m3xci"), ExtResource("11_wei2t"), ExtResource("11_wei2t"), ExtResource("17_07iyr"), ExtResource("21_2e0ay"), ExtResource("16_p5mpv"), ExtResource("19_ajrna"), ExtResource("17_07iyr"), ExtResource("16_p5mpv"), ExtResource("20_ik8jq"), ExtResource("23_ntxo4"), ExtResource("19_ajrna"), ExtResource("10_mvf1d"), ExtResource("11_wei2t"), ExtResource("17_07iyr"), ExtResource("11_wei2t"), ExtResource("10_mvf1d"), ExtResource("19_ajrna"), ExtResource("10_mvf1d"), ExtResource("17_07iyr"), ExtResource("11_wei2t"), ExtResource("11_wei2t"), ExtResource("10_mvf1d"), ExtResource("19_ajrna"), ExtResource("10_mvf1d"), ExtResource("19_ajrna"), ExtResource("17_07iyr"), ExtResource("15_luq6o"), ExtResource("29_8xrpk"), ExtResource("20_ik8jq"), ExtResource("13_qgrfc"), ExtResource("21_2e0ay"), ExtResource("14_7og8x"), ExtResource("27_fbs3j"), ExtResource("30_3xs8k"), ExtResource("19_ajrna"), ExtResource("28_m3xci"), ExtResource("16_p5mpv"), ExtResource("25_1o1nj"), ExtResource("24_erupu"), ExtResource("15_luq6o"), ExtResource("20_ik8jq"), ExtResource("16_p5mpv"), ExtResource("16_p5mpv")])
+positions = PackedVector2Array(2091, 825, 2091, 825, 2067, 862, 2155, 789, 2172, 825, 2180, 789, 2180, 752, 2155, 752, 2180, 715, 2155, 715, 2180, 678, 2155, 678, 2253, 796, 2253, 825, 2334, 796, 2334, 825, 2415, 825, 2484, 990, 2485, 916, 2485, 953, 2485, 879, 2485, 842, 2485, 768, 2485, 731, 2482, 702, 2485, 805, 2510, 990, 2510, 953, 2510, 916, 2510, 879, 2510, 768, 2510, 731, 2510, 702, 2591, 990, 2591, 953, 2591, 916, 2591, 879, 2591, 842, 2591, 731, 2591, 702, 2510, 842, 2591, 805, 2591, 768, 2672, 990, 2672, 953, 2672, 916, 2672, 879, 2672, 842, 2672, 805, 2672, 731, 2672, 702, 2272, 378, 2276, 407, 2180, 604, 2154, 604, 2057, 415, 2138, 444, 2152, 538, 2180, 567, 2224, 333, 2224, 370, 2198, 333, 2199, 370, 2219, 407, 2195, 444, 2138, 378, 2180, 641, 2155, 641, 2058, 333, 2224, 296, 2198, 296, 2082, 259, 2082, 296, 2224, 259, 2198, 259, 2082, 222, 2057, 296, 2057, 259, 2057, 222, 2224, 222, 2198, 222, 2299, 222, 2300, 259, 2082, 185, 2056, 185, 2224, 185, 2199, 185, 2163, 185, 2163, 222, 2244, 185, 2244, 222, 2325, 185, 2382, 222, 2406, 185, 2082, 148, 2057, 148, 2054, 156, 2082, 156, 2224, 148, 2199, 148, 2163, 156, 2244, 156, 2378, 156, 2082, 111, 2056, 111, 2224, 111, 2199, 111, 2082, 74, 2056, 74, 2224, 74, 2198, 74, 2057, 0, 2082, 0, 2082, 37, 2056, 37, 2224, 0, 2198, 0, 2224, 37, 2199, 37, 2219, 377, 2219, 406, 2415, 796, 2672, 768, 2630, 758, 2510, 805, 2496, 758, 2496, 824, 2577, 787, 2553, 824, 2577, 758, 2577, 787, 2634, 787, 2172, 796, 2091, 796, 2325, 156, 2099, 538)
+flipped = PackedByteArray("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==")
+
+[node name="TileBatch_192_2_1" type="Node2D" parent="TileRoot" unique_id=2013849960]
+z_index = 192
+z_as_relative = false
+script = ExtResource("3_agi5c")
+textures = Array[Texture2D]([ExtResource("10_mvf1d"), ExtResource("10_mvf1d"), ExtResource("9_kotba"), ExtResource("14_7og8x"), ExtResource("9_kotba"), ExtResource("12_fjddl"), ExtResource("14_7og8x"), ExtResource("12_fjddl")])
+positions = PackedVector2Array(2484, 1027, 2484, 1064, 2510, 1027, 2591, 1064, 2672, 1064, 2672, 1027, 2510, 1064, 2591, 1027)
+flipped = PackedByteArray("AAAAAAAAAAA=")
+
+[node name="TileBatch_704_0_1" type="Node2D" parent="TileRoot" unique_id=260281585]
+z_index = 704
+z_as_relative = false
+script = ExtResource("3_agi5c")
+textures = Array[Texture2D]([ExtResource("14_7og8x"), ExtResource("14_7og8x"), ExtResource("8_p8gsg"), ExtResource("9_kotba"), ExtResource("9_kotba"), ExtResource("12_fjddl"), ExtResource("12_fjddl"), ExtResource("14_7og8x"), ExtResource("12_fjddl"), ExtResource("8_p8gsg"), ExtResource("14_7og8x"), ExtResource("14_7og8x"), ExtResource("8_p8gsg"), ExtResource("9_kotba"), ExtResource("9_kotba"), ExtResource("12_fjddl"), ExtResource("12_fjddl"), ExtResource("14_7og8x"), ExtResource("12_fjddl"), ExtResource("8_p8gsg"), ExtResource("14_7og8x"), ExtResource("14_7og8x"), ExtResource("14_7og8x"), ExtResource("14_7og8x"), ExtResource("13_qgrfc"), ExtResource("13_qgrfc"), ExtResource("15_luq6o"), ExtResource("8_p8gsg"), ExtResource("8_p8gsg"), ExtResource("9_kotba"), ExtResource("14_7og8x"), ExtResource("9_kotba"), ExtResource("12_fjddl"), ExtResource("8_p8gsg"), ExtResource("13_qgrfc"), ExtResource("8_p8gsg"), ExtResource("13_qgrfc"), ExtResource("12_fjddl"), ExtResource("14_7og8x"), ExtResource("8_p8gsg"), ExtResource("9_kotba"), ExtResource("12_fjddl"), ExtResource("9_kotba"), ExtResource("9_kotba"), ExtResource("8_p8gsg"), ExtResource("22_ru4b8"), ExtResource("22_ru4b8"), ExtResource("16_p5mpv"), ExtResource("20_ik8jq"), ExtResource("22_ru4b8"), ExtResource("16_p5mpv"), ExtResource("16_p5mpv"), ExtResource("15_luq6o"), ExtResource("12_fjddl"), ExtResource("12_fjddl"), ExtResource("14_7og8x"), ExtResource("8_p8gsg"), ExtResource("22_ru4b8"), ExtResource("16_p5mpv"), ExtResource("9_kotba"), ExtResource("14_7og8x"), ExtResource("20_ik8jq"), ExtResource("9_kotba"), ExtResource("9_kotba"), ExtResource("15_luq6o")])
+positions = PackedVector2Array(30, 1195, 111, 1195, 192, 1195, 273, 1195, 354, 1195, 435, 1195, 516, 1195, 597, 1195, 678, 1195, 759, 1195, 30, 1232, 111, 1232, 192, 1232, 273, 1232, 354, 1232, 435, 1232, 516, 1232, 597, 1232, 678, 1232, 759, 1232, 840, 1195, 840, 1232, 921, 1195, 921, 1232, 1002, 1158, 1002, 1121, 1002, 1092, 1002, 1195, 1002, 1232, 30, 1158, 30, 1121, 111, 1158, 111, 1121, 192, 1158, 192, 1121, 273, 1158, 273, 1121, 354, 1158, 354, 1121, 435, 1158, 435, 1121, 516, 1121, 516, 1158, 597, 1158, 597, 1121, 597, 1092, 516, 1092, 435, 1092, 354, 1092, 273, 1092, 192, 1092, 111, 1092, 30, 1092, 678, 1158, 678, 1121, 759, 1158, 759, 1121, 759, 1092, 678, 1092, 840, 1158, 840, 1121, 840, 1092, 921, 1158, 921, 1121, 921, 1092)
+flipped = PackedByteArray("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=")
+
+[node name="TileBatch_704_1_1" type="Node2D" parent="TileRoot" unique_id=1896223622]
+z_index = 704
+z_as_relative = false
+script = ExtResource("3_agi5c")
+textures = Array[Texture2D]([ExtResource("8_p8gsg"), ExtResource("8_p8gsg"), ExtResource("16_p5mpv"), ExtResource("8_p8gsg"), ExtResource("8_p8gsg"), ExtResource("12_fjddl"), ExtResource("15_luq6o"), ExtResource("14_7og8x"), ExtResource("16_p5mpv"), ExtResource("8_p8gsg"), ExtResource("9_kotba"), ExtResource("12_fjddl"), ExtResource("14_7og8x"), ExtResource("8_p8gsg"), ExtResource("9_kotba"), ExtResource("12_fjddl"), ExtResource("20_ik8jq"), ExtResource("9_kotba"), ExtResource("14_7og8x"), ExtResource("9_kotba"), ExtResource("14_7og8x"), ExtResource("8_p8gsg"), ExtResource("14_7og8x"), ExtResource("9_kotba"), ExtResource("22_ru4b8"), ExtResource("9_kotba"), ExtResource("13_qgrfc"), ExtResource("9_kotba"), ExtResource("12_fjddl"), ExtResource("20_ik8jq"), ExtResource("14_7og8x"), ExtResource("8_p8gsg"), ExtResource("12_fjddl"), ExtResource("13_qgrfc"), ExtResource("14_7og8x"), ExtResource("8_p8gsg"), ExtResource("9_kotba"), ExtResource("12_fjddl"), ExtResource("20_ik8jq"), ExtResource("22_ru4b8"), ExtResource("8_p8gsg"), ExtResource("13_qgrfc"), ExtResource("8_p8gsg"), ExtResource("12_fjddl"), ExtResource("22_ru4b8"), ExtResource("12_fjddl"), ExtResource("9_kotba"), ExtResource("12_fjddl"), ExtResource("8_p8gsg"), ExtResource("22_ru4b8"), ExtResource("9_kotba"), ExtResource("14_7og8x"), ExtResource("9_kotba"), ExtResource("8_p8gsg"), ExtResource("22_ru4b8"), ExtResource("14_7og8x"), ExtResource("14_7og8x"), ExtResource("14_7og8x"), ExtResource("13_qgrfc"), ExtResource("15_luq6o")])
+positions = PackedVector2Array(1083, 1158, 1083, 1121, 1083, 1092, 1083, 1195, 1083, 1232, 1164, 1121, 1164, 1092, 1245, 1121, 1245, 1092, 1164, 1158, 1164, 1195, 1245, 1158, 1245, 1195, 1326, 1158, 1326, 1195, 1326, 1121, 1326, 1092, 1164, 1232, 1245, 1232, 1326, 1232, 1407, 1232, 1407, 1158, 1407, 1195, 1407, 1121, 1407, 1092, 1488, 1232, 1488, 1158, 1488, 1195, 1488, 1121, 1488, 1092, 1569, 1232, 1650, 1232, 1569, 1158, 1650, 1158, 1569, 1195, 1650, 1195, 1569, 1121, 1650, 1121, 1569, 1092, 1650, 1092, 1731, 1232, 1731, 1158, 1731, 1195, 1731, 1121, 1731, 1092, 1812, 1232, 1812, 1158, 1812, 1195, 1812, 1121, 1812, 1092, 1893, 1232, 1893, 1158, 1893, 1195, 1893, 1121, 1893, 1092, 1974, 1232, 1974, 1158, 1974, 1195, 1974, 1121, 1974, 1092)
+flipped = PackedByteArray("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
+
+[node name="TileBatch_704_2_1" type="Node2D" parent="TileRoot" unique_id=704242951]
+z_index = 704
+z_as_relative = false
+script = ExtResource("3_agi5c")
+textures = Array[Texture2D]([ExtResource("8_p8gsg"), ExtResource("8_p8gsg"), ExtResource("8_p8gsg"), ExtResource("9_kotba"), ExtResource("20_ik8jq"), ExtResource("14_7og8x"), ExtResource("14_7og8x"), ExtResource("13_qgrfc"), ExtResource("13_qgrfc"), ExtResource("9_kotba"), ExtResource("14_7og8x"), ExtResource("12_fjddl"), ExtResource("13_qgrfc"), ExtResource("9_kotba"), ExtResource("14_7og8x"), ExtResource("9_kotba"), ExtResource("14_7og8x"), ExtResource("12_fjddl"), ExtResource("13_qgrfc"), ExtResource("9_kotba"), ExtResource("14_7og8x"), ExtResource("22_ru4b8"), ExtResource("13_qgrfc"), ExtResource("9_kotba"), ExtResource("14_7og8x"), ExtResource("20_ik8jq"), ExtResource("9_kotba"), ExtResource("9_kotba"), ExtResource("15_luq6o"), ExtResource("13_qgrfc"), ExtResource("8_p8gsg"), ExtResource("16_p5mpv"), ExtResource("8_p8gsg"), ExtResource("22_ru4b8"), ExtResource("8_p8gsg"), ExtResource("13_qgrfc"), ExtResource("22_ru4b8"), ExtResource("9_kotba"), ExtResource("8_p8gsg"), ExtResource("13_qgrfc"), ExtResource("9_kotba"), ExtResource("22_ru4b8"), ExtResource("14_7og8x"), ExtResource("13_qgrfc"), ExtResource("20_ik8jq")])
+positions = PackedVector2Array(2055, 1158, 2055, 1195, 2055, 1232, 2055, 1121, 2055, 1092, 2136, 1195, 2136, 1232, 2217, 1195, 2217, 1232, 2298, 1195, 2379, 1195, 2460, 1195, 2541, 1195, 2622, 1195, 2703, 1195, 2298, 1232, 2379, 1232, 2460, 1232, 2541, 1232, 2622, 1232, 2703, 1232, 2703, 1092, 2703, 1121, 2541, 1158, 2541, 1121, 2541, 1092, 2622, 1158, 2622, 1121, 2622, 1092, 2703, 1158, 2460, 1121, 2460, 1092, 2460, 1158, 2379, 1092, 2379, 1121, 2379, 1158, 2298, 1092, 2298, 1121, 2298, 1158, 2217, 1158, 2217, 1121, 2217, 1092, 2136, 1158, 2136, 1121, 2136, 1092)
+flipped = PackedByteArray("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
+
+[node name="ObjectRoot" type="Node2D" parent="." unique_id=38492297]
+script = ExtResource("31_5ydcg")
+
+[node name="Obj_acc_shuizhiguo_nature_16" type="AnimatedSprite2D" parent="ObjectRoot" unique_id=1118962151]
+z_index = 3648
+position = Vector2(25, 1)
+sprite_frames = SubResource("SpriteFrames_8rb2l")
+centered = false
+
+[node name="ObjectBatch_3136_0_0" type="Node2D" parent="ObjectRoot" unique_id=1081642730]
+z_index = 3136
+z_as_relative = false
+script = ExtResource("3_agi5c")
+textures = Array[Texture2D]([ExtResource("39_07gvo"), ExtResource("40_tq8qh"), ExtResource("40_tq8qh"), ExtResource("39_07gvo"), ExtResource("40_tq8qh"), ExtResource("40_tq8qh"), ExtResource("40_tq8qh"), ExtResource("40_tq8qh"), ExtResource("40_tq8qh"), ExtResource("40_tq8qh"), ExtResource("41_45k4t"), ExtResource("42_knoj7")])
+positions = PackedVector2Array(517, 933, 523, 954, 523, 998, 772, 241, 778, 262, 778, 306, 778, 350, 778, 394, 778, 438, 778, 482, 778, 526, 778, 552)
+flipped = PackedByteArray("AAAAAAAAAAAAAAAA")
+
+[node name="ObjectBatch_3136_0_1" type="Node2D" parent="ObjectRoot" unique_id=1779360432]
+z_index = 3136
+z_as_relative = false
+script = ExtResource("3_agi5c")
+textures = Array[Texture2D]([ExtResource("42_knoj7")])
+positions = PackedVector2Array(523, 1042)
+flipped = PackedByteArray("AA==")
+
+[node name="ObjectBatch_3136_1_0" type="Node2D" parent="ObjectRoot" unique_id=1298144547]
+z_index = 3136
+z_as_relative = false
+script = ExtResource("3_agi5c")
+textures = Array[Texture2D]([ExtResource("39_07gvo"), ExtResource("40_tq8qh"), ExtResource("40_tq8qh"), ExtResource("40_tq8qh"), ExtResource("40_tq8qh"), ExtResource("42_knoj7"), ExtResource("39_07gvo"), ExtResource("40_tq8qh"), ExtResource("40_tq8qh"), ExtResource("40_tq8qh"), ExtResource("40_tq8qh"), ExtResource("42_knoj7")])
+positions = PackedVector2Array(1132, 615, 1138, 636, 1138, 680, 1138, 724, 1138, 768, 1138, 812, 1621, 475, 1627, 496, 1627, 540, 1627, 584, 1627, 628, 1627, 672)
+flipped = PackedByteArray("AAAAAAAAAAAAAAAA")
+
+[node name="ObjectBatch_3136_2_0" type="Node2D" parent="ObjectRoot" unique_id=1963451013]
+z_index = 3136
+z_as_relative = false
+script = ExtResource("3_agi5c")
+textures = Array[Texture2D]([ExtResource("39_07gvo"), ExtResource("40_tq8qh"), ExtResource("40_tq8qh"), ExtResource("40_tq8qh"), ExtResource("42_knoj7"), ExtResource("39_07gvo"), ExtResource("40_tq8qh"), ExtResource("40_tq8qh"), ExtResource("40_tq8qh"), ExtResource("40_tq8qh"), ExtResource("40_tq8qh"), ExtResource("40_tq8qh"), ExtResource("40_tq8qh")])
+positions = PackedVector2Array(2276, 168, 2282, 189, 2282, 233, 2282, 277, 2282, 321, 2697, 714, 2703, 735, 2703, 779, 2703, 823, 2703, 867, 2703, 911, 2703, 955, 2703, 999)
+flipped = PackedByteArray("AAAAAAAAAAAAAAAAAA==")
+
+[node name="ObjectBatch_3136_2_1" type="Node2D" parent="ObjectRoot" unique_id=2034389370]
+z_index = 3136
+z_as_relative = false
+script = ExtResource("3_agi5c")
+textures = Array[Texture2D]([ExtResource("42_knoj7")])
+positions = PackedVector2Array(2703, 1043)
+flipped = PackedByteArray("AA==")
+
+[node name="ObjectBatch_576_0_0" type="Node2D" parent="ObjectRoot" unique_id=1750493205]
+z_index = 576
+z_as_relative = false
+script = ExtResource("3_agi5c")
+textures = Array[Texture2D]([ExtResource("43_b0i1i"), ExtResource("44_3lckl"), ExtResource("45_p6wgd"), ExtResource("44_3lckl"), ExtResource("45_p6wgd"), ExtResource("46_0ri25"), ExtResource("47_57yad")])
+positions = PackedVector2Array(673, 895, 549, 895, 842, 947, 868, 895, 307, 933, 32, 827, 9, 1008)
+flipped = PackedByteArray("AAAAAAAAAA==")
+
+[node name="ObjectBatch_576_1_0" type="Node2D" parent="ObjectRoot" unique_id=1110819862]
+z_index = 576
+z_as_relative = false
+script = ExtResource("3_agi5c")
+textures = Array[Texture2D]([ExtResource("45_p6wgd"), ExtResource("43_b0i1i"), ExtResource("45_p6wgd"), ExtResource("44_3lckl"), ExtResource("48_6sky8"), ExtResource("47_57yad"), ExtResource("45_p6wgd"), ExtResource("44_3lckl")])
+positions = PackedVector2Array(1045, 939, 1651, 889, 1602, 939, 1699, 901, 1079, 724, 1875, 997, 1944, 922, 1990, 901)
+flipped = PackedByteArray("AAAAAAAAAAA=")
+
+[node name="ObjectBatch_576_2_0" type="Node2D" parent="ObjectRoot" unique_id=430413024]
+z_index = 576
+z_as_relative = false
+script = ExtResource("3_agi5c")
+textures = Array[Texture2D]([ExtResource("43_b0i1i"), ExtResource("44_3lckl"), ExtResource("45_p6wgd")])
+positions = PackedVector2Array(2133, 823, 2361, 895, 2542, 933)
+flipped = PackedByteArray("AAAA")
+
+[node name="ObjectBatch_64_-1_0" type="Node2D" parent="ObjectRoot" unique_id=285845416]
+z_index = 64
+z_as_relative = false
+script = ExtResource("3_agi5c")
+textures = Array[Texture2D]([ExtResource("49_l7517")])
+positions = PackedVector2Array(-32, 618)
+flipped = PackedByteArray("AA==")
+
+[node name="ObjectBatch_64_0_0" type="Node2D" parent="ObjectRoot" unique_id=1918343501]
+z_index = 64
+z_as_relative = false
+script = ExtResource("3_agi5c")
+textures = Array[Texture2D]([ExtResource("50_hj05p"), ExtResource("51_qgylw"), ExtResource("52_m5g6x"), ExtResource("47_57yad"), ExtResource("45_p6wgd"), ExtResource("53_xdsx4"), ExtResource("54_e4qyo"), ExtResource("47_57yad")])
+positions = PackedVector2Array(671, 368, 839, 368, 425, 326, 564, 345, 622, 294, 588, 54, 695, 145, 548, 819)
+flipped = PackedByteArray("AAAAAAAAAAA=")
+
+[node name="ObjectBatch_64_1_0" type="Node2D" parent="ObjectRoot" unique_id=1150999468]
+z_index = 64
+z_as_relative = false
+script = ExtResource("3_agi5c")
+textures = Array[Texture2D]([ExtResource("50_hj05p"), ExtResource("47_57yad"), ExtResource("54_e4qyo"), ExtResource("55_8w71g"), ExtResource("56_b2663"), ExtResource("44_3lckl"), ExtResource("57_7n7o3"), ExtResource("58_kxkwc"), ExtResource("45_p6wgd")])
+positions = PackedVector2Array(1476, 33, 1776, 191, 1432, 161, 1602, 168, 1768, 592, 1980, 592, 1699, 347, 1859, 418, 1132, 451)
+flipped = PackedByteArray("AAAAAAAAAAAA")
+
+[node name="ObjectBatch_64_2_-1" type="Node2D" parent="ObjectRoot" unique_id=1859280311]
+z_index = 64
+z_as_relative = false
+script = ExtResource("3_agi5c")
+textures = Array[Texture2D]([ExtResource("44_3lckl")])
+positions = PackedVector2Array(2112, -35)
+flipped = PackedByteArray("AA==")
+
+[node name="ObjectBatch_64_2_0" type="Node2D" parent="ObjectRoot" unique_id=1886786086]
+z_index = 64
+z_as_relative = false
+script = ExtResource("3_agi5c")
+textures = Array[Texture2D]([ExtResource("51_qgylw"), ExtResource("45_p6wgd"), ExtResource("50_hj05p")])
+positions = PackedVector2Array(2614, 560, 2303, 3, 2180, 557)
+flipped = PackedByteArray("AAAA")
+
+[node name="Footholds" type="Node2D" parent="." unique_id=498617073]
+script = ExtResource("59_uujog")
+metadata/baked_segments = [{
+"id": "2",
+"layer": 0,
+"next": "3",
+"prev": "0",
+"x1": 302.0,
+"x2": 302.0,
+"y1": 288.0,
+"y2": 277.0
+}, {
+"id": "3",
+"layer": 0,
+"next": "4",
+"prev": "2",
+"x1": 302.0,
+"x2": 426.0,
+"y1": 277.0,
+"y2": 277.0
+}, {
+"id": "4",
+"layer": 0,
+"next": "5",
+"prev": "3",
+"x1": 426.0,
+"x2": 507.0,
+"y1": 277.0,
+"y2": 240.0
+}, {
+"id": "5",
+"layer": 0,
+"next": "6",
+"prev": "4",
+"x1": 507.0,
+"x2": 912.0,
+"y1": 240.0,
+"y2": 240.0
+}, {
+"id": "6",
+"layer": 0,
+"next": "7",
+"prev": "5",
+"x1": 912.0,
+"x2": 1074.0,
+"y1": 240.0,
+"y2": 314.0
+}, {
+"id": "7",
+"layer": 0,
+"next": "8",
+"prev": "6",
+"x1": 1074.0,
+"x2": 1200.0,
+"y1": 314.0,
+"y2": 314.0
+}, {
+"id": "8",
+"layer": 0,
+"next": "0",
+"prev": "7",
+"x1": 1200.0,
+"x2": 1200.0,
+"y1": 314.0,
+"y2": 326.0
+}, {
+"id": "9",
+"layer": 0,
+"next": "10",
+"prev": "0",
+"x1": 1383.0,
+"x2": 1383.0,
+"y1": 271.0,
+"y2": 260.0
+}, {
+"id": "10",
+"layer": 0,
+"next": "11",
+"prev": "9",
+"x1": 1383.0,
+"x2": 1669.0,
+"y1": 260.0,
+"y2": 260.0
+}, {
+"id": "11",
+"layer": 0,
+"next": "12",
+"prev": "10",
+"x1": 1669.0,
+"x2": 1749.0,
+"y1": 260.0,
+"y2": 297.0
+}, {
+"id": "12",
+"layer": 0,
+"next": "13",
+"prev": "11",
+"x1": 1749.0,
+"x2": 1830.0,
+"y1": 297.0,
+"y2": 297.0
+}, {
+"id": "13",
+"layer": 0,
+"next": "61",
+"prev": "12",
+"x1": 1830.0,
+"x2": 1912.0,
+"y1": 297.0,
+"y2": 260.0
+}, {
+"id": "14",
+"layer": 0,
+"next": "15",
+"prev": "0",
+"x1": 1934.0,
+"x2": 1934.0,
+"y1": 473.0,
+"y2": 462.0
+}, {
+"id": "15",
+"layer": 0,
+"next": "16",
+"prev": "14",
+"x1": 1934.0,
+"x2": 1977.0,
+"y1": 462.0,
+"y2": 462.0
+}, {
+"id": "16",
+"layer": 0,
+"next": "17",
+"prev": "15",
+"x1": 1977.0,
+"x2": 2058.0,
+"y1": 462.0,
+"y2": 425.0
+}, {
+"id": "17",
+"layer": 0,
+"next": "18",
+"prev": "16",
+"x1": 2058.0,
+"x2": 2139.0,
+"y1": 425.0,
+"y2": 425.0
+}, {
+"id": "18",
+"layer": 0,
+"next": "19",
+"prev": "17",
+"x1": 2139.0,
+"x2": 2219.0,
+"y1": 425.0,
+"y2": 388.0
+}, {
+"id": "19",
+"layer": 0,
+"next": "20",
+"prev": "18",
+"x1": 2219.0,
+"x2": 2346.0,
+"y1": 388.0,
+"y2": 388.0
+}, {
+"id": "20",
+"layer": 0,
+"next": "0",
+"prev": "19",
+"x1": 2346.0,
+"x2": 2346.0,
+"y1": 388.0,
+"y2": 400.0
+}, {
+"id": "21",
+"layer": 0,
+"next": "22",
+"prev": "0",
+"x1": 2040.0,
+"x2": 2040.0,
+"y1": 177.0,
+"y2": 166.0
+}, {
+"id": "22",
+"layer": 0,
+"next": "23",
+"prev": "21",
+"x1": 2040.0,
+"x2": 2452.0,
+"y1": 166.0,
+"y2": 166.0
+}, {
+"id": "23",
+"layer": 0,
+"next": "0",
+"prev": "22",
+"x1": 2452.0,
+"x2": 2452.0,
+"y1": 166.0,
+"y2": 178.0
+}, {
+"id": "24",
+"layer": 0,
+"next": "25",
+"prev": "0",
+"x1": 197.0,
+"x2": 197.0,
+"y1": 468.0,
+"y2": 457.0
+}, {
+"id": "25",
+"layer": 0,
+"next": "26",
+"prev": "24",
+"x1": 197.0,
+"x2": 770.0,
+"y1": 457.0,
+"y2": 457.0
+}, {
+"id": "26",
+"layer": 0,
+"next": "0",
+"prev": "25",
+"x1": 770.0,
+"x2": 770.0,
+"y1": 457.0,
+"y2": 470.0
+}, {
+"id": "27",
+"layer": 0,
+"next": "28",
+"prev": "0",
+"x1": 1004.0,
+"x2": 1004.0,
+"y1": 374.0,
+"y2": 363.0
+}, {
+"id": "28",
+"layer": 0,
+"next": "29",
+"prev": "27",
+"x1": 1004.0,
+"x2": 1209.0,
+"y1": 363.0,
+"y2": 363.0
+}, {
+"id": "29",
+"layer": 0,
+"next": "30",
+"prev": "28",
+"x1": 1209.0,
+"x2": 1452.0,
+"y1": 363.0,
+"y2": 474.0
+}, {
+"id": "30",
+"layer": 0,
+"next": "31",
+"prev": "29",
+"x1": 1452.0,
+"x2": 1695.0,
+"y1": 474.0,
+"y2": 474.0
+}, {
+"id": "31",
+"layer": 0,
+"next": "32",
+"prev": "30",
+"x1": 1695.0,
+"x2": 1775.0,
+"y1": 474.0,
+"y2": 511.0
+}, {
+"id": "32",
+"layer": 0,
+"next": "33",
+"prev": "31",
+"x1": 1775.0,
+"x2": 1938.0,
+"y1": 511.0,
+"y2": 511.0
+}, {
+"id": "33",
+"layer": 0,
+"next": "34",
+"prev": "32",
+"x1": 1938.0,
+"x2": 2018.0,
+"y1": 511.0,
+"y2": 548.0
+}, {
+"id": "34",
+"layer": 0,
+"next": "35",
+"prev": "33",
+"x1": 2018.0,
+"x2": 2226.0,
+"y1": 548.0,
+"y2": 548.0
+}, {
+"id": "35",
+"layer": 0,
+"next": "0",
+"prev": "34",
+"x1": 2226.0,
+"x2": 2226.0,
+"y1": 548.0,
+"y2": 560.0
+}, {
+"id": "36",
+"layer": 0,
+"next": "37",
+"prev": "0",
+"x1": 2468.0,
+"x2": 2468.0,
+"y1": 723.0,
+"y2": 713.0
+}, {
+"id": "37",
+"layer": 0,
+"next": "0",
+"prev": "36",
+"x1": 2468.0,
+"x2": 2750.0,
+"y1": 713.0,
+"y2": 713.0
+}, {
+"id": "38",
+"layer": 0,
+"next": "39",
+"prev": "0",
+"x1": 1483.0,
+"x2": 1483.0,
+"y1": 743.0,
+"y2": 732.0
+}, {
+"id": "39",
+"layer": 0,
+"next": "40",
+"prev": "38",
+"x1": 1483.0,
+"x2": 1688.0,
+"y1": 732.0,
+"y2": 732.0
+}, {
+"id": "40",
+"layer": 0,
+"next": "41",
+"prev": "39",
+"x1": 1688.0,
+"x2": 1849.0,
+"y1": 732.0,
+"y2": 806.0
+}, {
+"id": "41",
+"layer": 0,
+"next": "42",
+"prev": "40",
+"x1": 1849.0,
+"x2": 2497.0,
+"y1": 806.0,
+"y2": 806.0
+}, {
+"id": "42",
+"layer": 0,
+"next": "43",
+"prev": "41",
+"x1": 2497.0,
+"x2": 2578.0,
+"y1": 806.0,
+"y2": 769.0
+}, {
+"id": "43",
+"layer": 0,
+"next": "44",
+"prev": "42",
+"x1": 2578.0,
+"x2": 2703.0,
+"y1": 769.0,
+"y2": 769.0
+}, {
+"id": "44",
+"layer": 0,
+"next": "0",
+"prev": "43",
+"x1": 2703.0,
+"x2": 2703.0,
+"y1": 769.0,
+"y2": 781.0
+}, {
+"id": "45",
+"layer": 0,
+"next": "46",
+"prev": "0",
+"x1": 890.0,
+"x2": 890.0,
+"y1": 921.0,
+"y2": 910.0
+}, {
+"id": "46",
+"layer": 0,
+"next": "47",
+"prev": "45",
+"x1": 890.0,
+"x2": 1014.0,
+"y1": 910.0,
+"y2": 910.0
+}, {
+"id": "47",
+"layer": 0,
+"next": "48",
+"prev": "46",
+"x1": 1014.0,
+"x2": 1095.0,
+"y1": 910.0,
+"y2": 873.0
+}, {
+"id": "48",
+"layer": 0,
+"next": "49",
+"prev": "47",
+"x1": 1095.0,
+"x2": 1221.0,
+"y1": 873.0,
+"y2": 873.0
+}, {
+"id": "49",
+"layer": 0,
+"next": "0",
+"prev": "48",
+"x1": 1221.0,
+"x2": 1221.0,
+"y1": 873.0,
+"y2": 885.0
+}, {
+"id": "50",
+"layer": 0,
+"next": "51",
+"prev": "0",
+"x1": 33.0,
+"x2": 193.0,
+"y1": 783.0,
+"y2": 783.0
+}, {
+"id": "51",
+"layer": 0,
+"next": "52",
+"prev": "50",
+"x1": 193.0,
+"x2": 516.0,
+"y1": 783.0,
+"y2": 931.0
+}, {
+"id": "52",
+"layer": 0,
+"next": "53",
+"prev": "51",
+"x1": 516.0,
+"x2": 886.0,
+"y1": 931.0,
+"y2": 931.0
+}, {
+"id": "53",
+"layer": 0,
+"next": "0",
+"prev": "52",
+"x1": 886.0,
+"x2": 886.0,
+"y1": 931.0,
+"y2": 943.0
+}, {
+"id": "54",
+"layer": 0,
+"next": "55",
+"prev": "0",
+"x1": 603.0,
+"x2": 603.0,
+"y1": 625.0,
+"y2": 614.0
+}, {
+"id": "55",
+"layer": 0,
+"next": "56",
+"prev": "54",
+"x1": 603.0,
+"x2": 1213.0,
+"y1": 614.0,
+"y2": 614.0
+}, {
+"id": "56",
+"layer": 0,
+"next": "57",
+"prev": "55",
+"x1": 1213.0,
+"x2": 1293.0,
+"y1": 614.0,
+"y2": 651.0
+}, {
+"id": "57",
+"layer": 0,
+"next": "58",
+"prev": "56",
+"x1": 1293.0,
+"x2": 1375.0,
+"y1": 651.0,
+"y2": 651.0
+}, {
+"id": "58",
+"layer": 0,
+"next": "59",
+"prev": "57",
+"x1": 1375.0,
+"x2": 1455.0,
+"y1": 651.0,
+"y2": 688.0
+}, {
+"id": "59",
+"layer": 0,
+"next": "60",
+"prev": "58",
+"x1": 1455.0,
+"x2": 1500.0,
+"y1": 688.0,
+"y2": 688.0
+}, {
+"id": "60",
+"layer": 0,
+"next": "0",
+"prev": "59",
+"x1": 1500.0,
+"x2": 1500.0,
+"y1": 688.0,
+"y2": 701.0
+}, {
+"id": "61",
+"layer": 0,
+"next": "62",
+"prev": "13",
+"x1": 1912.0,
+"x2": 1957.0,
+"y1": 260.0,
+"y2": 260.0
+}, {
+"id": "62",
+"layer": 0,
+"next": "0",
+"prev": "61",
+"x1": 1957.0,
+"x2": 1957.0,
+"y1": 260.0,
+"y2": 272.0
+}, {
+"id": "1",
+"layer": 1,
+"next": "0",
+"prev": "0",
+"x1": 30.0,
+"x2": 2753.0,
+"y1": 1103.0,
+"y2": 1103.0
+}]
+metadata/baked_map_bounds = Rect2(30, 0, 2723, 1269)
+metadata/baked_spawn_point = Vector2(1391.5, 1023)
+
+[node name="LadderRoot" type="Node2D" parent="." unique_id=1543267660]
+script = ExtResource("60_hhy34")
+metadata/baked_ladders = [{
+"is_ladder": true,
+"page": 6,
+"x": 545.0,
+"y1": 933.0,
+"y2": 1049.0
+}, {
+"is_ladder": true,
+"page": 6,
+"x": 1160.0,
+"y1": 615.0,
+"y2": 820.0
+}, {
+"is_ladder": true,
+"page": 6,
+"x": 1649.0,
+"y1": 475.0,
+"y2": 679.0
+}, {
+"is_ladder": true,
+"page": 6,
+"x": 2304.0,
+"y1": 168.0,
+"y2": 332.0
+}, {
+"is_ladder": true,
+"page": 6,
+"x": 2725.0,
+"y1": 714.0,
+"y2": 1048.0
+}, {
+"is_ladder": true,
+"page": 6,
+"x": 800.0,
+"y1": 241.0,
+"y2": 561.0
+}]
+
+[node name="LifeRoot" type="Node2D" parent="." unique_id=1947311183]
+script = ExtResource("61_i4rws")
+
+[node name="PortalRoot" type="Node2D" parent="." unique_id=536016571]
+script = ExtResource("62_xs3pi")
+metadata/baked_portals = [{
+"index": 0,
+"pn": "west00",
+"pt": 2.0,
+"tm": 111010000.0,
+"tn": "west02",
+"x": 1401.0,
+"y": 1100.0
+}]
+
+[node name="Player" type="Node2D" parent="." unique_id=629174346]
+script = ExtResource("63_4xqu6")
+
+[node name="WorldCamera" type="Camera2D" parent="." unique_id=1242646719]
+script = ExtResource("64_0ya7y")
+
+[node name="头像面板" type="CanvasLayer" parent="." unique_id=745354001 instance=ExtResource("65_c7puq")]
+layer = 300
+script = ExtResource("66_vdjyr")
+
+[node name="小地图面板" type="CanvasLayer" parent="." unique_id=314602448 groups=["game_hud"] instance=ExtResource("67_soq8t")]
+layer = 20
+script = ExtResource("68_r208d")
+
+[node name="聊天面板" type="CanvasLayer" parent="." unique_id=1473584103 groups=["chat_panel"] instance=ExtResource("69_qkfym")]
+layer = 100
+script = ExtResource("70_hseqs")
+
+[node name="技能面板" type="CanvasLayer" parent="." unique_id=1275737661 instance=ExtResource("71_bqrrm")]
+layer = 100
+script = ExtResource("72_46hx0")
+
+[node name="窗口管理" type="CanvasLayer" parent="." unique_id=842891741 instance=ExtResource("73_2lngp")]
+layer = 110
+script = ExtResource("74_o67tq")
+
+[node name="系统消息" type="CanvasLayer" parent="." unique_id=2047267207 instance=ExtResource("75_r5ei8")]
+layer = 110
+script = ExtResource("76_2mf8d")
+
+[node name="PerformanceProbe" type="Node" parent="." unique_id=48763232]
+script = ExtResource("77_2ffmr")
+
+[node name="Sky" type="ColorRect" parent="." unique_id=1308689298]
+z_index = -1000
+z_as_relative = false
+offset_left = -20000.0
+offset_top = -20000.0
+offset_right = 20000.0
+offset_bottom = 20000.0
+mouse_filter = 2
+color = Color(0.2, 0.4, 0.8, 1)
+
+[node name="BakedBackgrounds" type="Node2D" parent="." unique_id=1695968652]
+
+[node name="Back0" type="Node2D" parent="BakedBackgrounds" unique_id=1029160030]
+z_index = -100
+z_as_relative = false
+script = ExtResource("78_ql1gj")
+texture = ExtResource("79_lvdqa")
+repeat_type = 3
+cell_size = Vector2(256, 256)
+tile_radius = Vector2i(2, 1)
+metadata/bg_kind = "纯色底块"
+metadata/no = 0
+metadata/bg_order = 0
+metadata/start_x = -1024.0
+metadata/start_y = -1280.0
+metadata/rx = 0.0
+metadata/ry = 0.0
+
+[node name="Back3" type="Node2D" parent="BakedBackgrounds" unique_id=253331749]
+z_index = -99
+z_as_relative = false
+script = ExtResource("78_ql1gj")
+texture = ExtResource("80_5cfs4")
+repeat_type = 1
+cell_size = Vector2(1000, 1330)
+metadata/bg_kind = "天空"
+metadata/no = 3
+metadata/bg_order = 1
+metadata/start_x = -1000.0
+metadata/start_y = -665.0
+metadata/rx = 0.0
+metadata/ry = 0.0
+
+[node name="Back1" type="Node2D" parent="BakedBackgrounds" unique_id=962951015]
+z_index = -98
+z_as_relative = false
+script = ExtResource("78_ql1gj")
+texture = ExtResource("81_745yl")
+repeat_type = 1
+cell_size = Vector2(1400, 1330)
+metadata/bg_kind = "后景"
+metadata/no = 1
+metadata/bg_order = 2
+metadata/start_x = -1400.0
+metadata/start_y = -665.0
+metadata/rx = 0.0
+metadata/ry = 0.0
+
+[node name="Back2" type="Node2D" parent="BakedBackgrounds" unique_id=40216597]
+z_index = -97
+z_as_relative = false
+script = ExtResource("78_ql1gj")
+texture = ExtResource("82_up4nk")
+repeat_type = 1
+cell_size = Vector2(1400, 1330)
+metadata/bg_kind = "后景"
+metadata/no = 2
+metadata/bg_order = 3
+metadata/start_x = -1400.0
+metadata/start_y = -665.0
+metadata/rx = 0.0
+metadata/ry = 0.0
+
+[node name="Back4" type="Node2D" parent="BakedBackgrounds" unique_id=844272873]
+z_index = -96
+z_as_relative = false
+script = ExtResource("78_ql1gj")
+texture = ExtResource("83_w2epp")
+cell_size = Vector2(1400, 1330)
+metadata/bg_kind = "后景"
+metadata/no = 4
+metadata/bg_order = 4
+metadata/start_x = 0.0
+metadata/start_y = -665.0
+metadata/rx = 0.0
+metadata/ry = 0.0
