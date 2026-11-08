@@ -1,0 +1,52 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/护送/前往钮.png" id="t1"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/护送/前往钮_悬停.png" id="t2"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/护送/前往钮_按下.png" id="t3"]
+
+[sub_resource type="StyleBoxTexture" id="sb1_n"]
+texture = ExtResource("t1")
+
+[sub_resource type="StyleBoxTexture" id="sb1_h"]
+texture = ExtResource("t2")
+
+[sub_resource type="StyleBoxTexture" id="sb1_p"]
+texture = ExtResource("t3")
+
+[node name="原版护送提示内容" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 300
+offset_bottom = 141.0
+
+[node name="提示文" type="RichTextLabel" parent="."]
+text = "双倍护送活动已开启，每日[color=#00ff00]20:00-20:30[/color]护送将获得双倍奖励，赶快前往[color=#00ff00]木叶-油女志乃[/color]接取护送任务吧！"
+scroll_active = false
+bbcode_enabled = true
+autowrap_mode = 3
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 6
+horizontal_alignment = 1
+layout_mode = 0
+offset_left = 16.0
+offset_top = 21.0
+offset_right = 296.0
+offset_bottom = 93.0
+
+[node name="前往钮" type="Button" parent="."]
+theme_override_styles/normal = SubResource("sb1_n")
+theme_override_styles/hover = SubResource("sb1_h")
+theme_override_styles/pressed = SubResource("sb1_p")
+text = "前往护送"
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+layout_mode = 0
+offset_left = 119.5
+offset_top = 109.0
+offset_right = 180.5
+offset_bottom = 131.0

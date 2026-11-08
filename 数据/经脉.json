@@ -1,0 +1,6921 @@
+{
+ "0": {
+  "mai": {
+   "0": {
+    "value": 154,
+    "attr": "maxhp",
+    "desc": "开门居西北干宫，五行属金，干宫门为开门，喻万物开始之意",
+    "pts": {
+     "0": {
+      "value": 12,
+      "zq": 500,
+      "attr": "maxhp",
+      "prob": 100,
+      "name": "头维"
+     },
+     "1": {
+      "value": 18,
+      "zq": 500,
+      "attr": "maxhp",
+      "prob": 100,
+      "name": "发际"
+     },
+     "2": {
+      "value": 14,
+      "zq": 500,
+      "attr": "maxmp",
+      "prob": 100,
+      "name": "阴白"
+     },
+     "3": {
+      "value": 22,
+      "zq": 500,
+      "attr": "maxhp",
+      "prob": 80,
+      "name": "印堂"
+     },
+     "4": {
+      "value": 26,
+      "zq": 500,
+      "attr": "maxhp",
+      "prob": 70,
+      "name": "攒竹"
+     },
+     "5": {
+      "value": 29,
+      "zq": 500,
+      "attr": "maxhp",
+      "prob": 60,
+      "name": "鱼腰"
+     },
+     "6": {
+      "value": 26,
+      "zq": 500,
+      "attr": "maxmp",
+      "prob": 60,
+      "name": "外明"
+     },
+     "7": {
+      "value": 36,
+      "zq": 500,
+      "attr": "maxhp",
+      "prob": 50,
+      "name": "晴明"
+     },
+     "8": {
+      "value": 39,
+      "zq": 500,
+      "attr": "maxhp",
+      "prob": 50,
+      "name": "丝竹"
+     },
+     "9": {
+      "value": 42,
+      "zq": 500,
+      "attr": "maxhp",
+      "prob": 50,
+      "name": "瞳子髎"
+     },
+     "10": {
+      "value": 46,
+      "zq": 500,
+      "attr": "maxhp",
+      "prob": 50,
+      "name": "承泣"
+     },
+     "11": {
+      "value": 36,
+      "zq": 500,
+      "attr": "maxmp",
+      "prob": 50,
+      "name": "球后"
+     },
+     "12": {
+      "value": 50,
+      "zq": 500,
+      "attr": "maxhp",
+      "prob": 30,
+      "name": "四白"
+     },
+     "13": {
+      "value": 54,
+      "zq": 500,
+      "attr": "maxhp",
+      "prob": 30,
+      "name": "迎香"
+     },
+     "14": {
+      "value": 58,
+      "zq": 500,
+      "attr": "maxhp",
+      "prob": 30,
+      "name": "人中"
+     },
+     "15": {
+      "value": 62,
+      "zq": 500,
+      "attr": "maxhp",
+      "prob": 30,
+      "name": "地仓"
+     },
+     "16": {
+      "value": 47,
+      "zq": 500,
+      "attr": "maxmp",
+      "prob": 20,
+      "name": "承浆"
+     },
+     "17": {
+      "value": 67,
+      "zq": 500,
+      "attr": "maxhp",
+      "prob": 20,
+      "name": "前顶"
+     },
+     "18": {
+      "value": 71,
+      "zq": 500,
+      "attr": "maxhp",
+      "prob": 20,
+      "name": "通天"
+     },
+     "19": {
+      "value": 74,
+      "zq": 500,
+      "attr": "maxhp",
+      "prob": 20,
+      "name": "上星"
+     },
+     "20": {
+      "value": 77,
+      "zq": 500,
+      "attr": "maxhp",
+      "prob": 10,
+      "name": "神庭"
+     },
+     "21": {
+      "value": 54,
+      "zq": 500,
+      "attr": "maxmp",
+      "prob": 10,
+      "name": "承光"
+     },
+     "22": {
+      "value": 83,
+      "zq": 500,
+      "attr": "maxhp",
+      "prob": 10,
+      "name": "当阳"
+     },
+     "23": {
+      "value": 88,
+      "zq": 500,
+      "attr": "maxhp",
+      "prob": 10,
+      "name": "五处"
+     }
+    },
+    "name": "开门"
+   },
+   "1": {
+    "value": 128,
+    "attr": "maxhp",
+    "desc": "休门居北方坎宫，五行属水，坎宫门为休门，乃修养生息之地",
+    "pts": {
+     "0": {
+      "value": 8,
+      "zq": 500,
+      "attr": "maxhp",
+      "prob": 100,
+      "name": "曲差"
+     },
+     "1": {
+      "value": 6,
+      "zq": 500,
+      "attr": "maxmp",
+      "prob": 100,
+      "name": "眉冲"
+     },
+     "2": {
+      "value": 11,
+      "zq": 500,
+      "attr": "maxhp",
+      "prob": 100,
+      "name": "素髎"
+     },
+     "3": {
+      "value": 18,
+      "zq": 500,
+      "attr": "maxhp",
+      "prob": 80,
+      "name": "兑端"
+     },
+     "4": {
+      "value": 11,
+      "zq": 500,
+      "attr": "maxmp",
+      "prob": 70,
+      "name": "龈交"
+     },
+     "5": {
+      "value": 22,
+      "zq": 500,
+      "attr": "maxhp",
+      "prob": 70,
+      "name": "上迎香"
+     },
+     "6": {
+      "value": 29,
+      "zq": 500,
+      "attr": "maxhp",
+      "prob": 60,
+      "name": "百会"
+     },
+     "7": {
+      "value": 33,
+      "zq": 500,
+      "attr": "maxhp",
+      "prob": 60,
+      "name": "后顶"
+     },
+     "8": {
+      "value": 22,
+      "zq": 500,
+      "attr": "maxmp",
+      "prob": 50,
+      "name": "风府"
+     },
+     "9": {
+      "value": 36,
+      "zq": 500,
+      "attr": "maxhp",
+      "prob": 50,
+      "name": "风池"
+     },
+     "10": {
+      "value": 42,
+      "zq": 500,
+      "attr": "maxhp",
+      "prob": 50,
+      "name": "天柱"
+     },
+     "11": {
+      "value": 44,
+      "zq": 500,
+      "attr": "maxhp",
+      "prob": 30,
+      "name": "哑门"
+     },
+     "12": {
+      "value": 49,
+      "zq": 500,
+      "attr": "maxhp",
+      "prob": 30,
+      "name": "太阳"
+     },
+     "13": {
+      "value": 30,
+      "zq": 500,
+      "attr": "maxmp",
+      "prob": 30,
+      "name": "下关"
+     },
+     "14": {
+      "value": 54,
+      "zq": 500,
+      "attr": "maxhp",
+      "prob": 20,
+      "name": "客主人"
+     },
+     "15": {
+      "value": 57,
+      "zq": 500,
+      "attr": "maxhp",
+      "prob": 20,
+      "name": "耳门"
+     },
+     "16": {
+      "value": 61,
+      "zq": 500,
+      "attr": "maxhp",
+      "prob": 20,
+      "name": "听宫"
+     },
+     "17": {
+      "value": 65,
+      "zq": 500,
+      "attr": "maxhp",
+      "prob": 10,
+      "name": "翳风"
+     },
+     "18": {
+      "value": 67,
+      "zq": 500,
+      "attr": "maxhp",
+      "prob": 10,
+      "name": "颊车"
+     },
+     "19": {
+      "value": 36,
+      "zq": 500,
+      "attr": "maxmp",
+      "prob": 10,
+      "name": "大迎"
+     },
+     "20": {
+      "value": 70,
+      "zq": 500,
+      "attr": "maxhp",
+      "prob": 10,
+      "name": "人迎"
+     }
+    },
+    "name": "休门"
+   },
+   "2": {
+    "value": 38,
+    "attr": "def",
+    "desc": "生门居北方艮宫，五行属土，艮宫门为生门，为万物复苏之始",
+    "pts": {
+     "0": {
+      "value": 2,
+      "zq": 500,
+      "attr": "def",
+      "prob": 100,
+      "name": "天突"
+     },
+     "1": {
+      "value": 5,
+      "zq": 500,
+      "attr": "def",
+      "prob": 100,
+      "name": "璇玑"
+     },
+     "2": {
+      "value": 6,
+      "zq": 500,
+      "attr": "def",
+      "prob": 100,
+      "name": "华盖"
+     },
+     "3": {
+      "value": 7,
+      "zq": 500,
+      "attr": "def",
+      "prob": 80,
+      "name": "紫宫"
+     },
+     "4": {
+      "value": 9,
+      "zq": 500,
+      "attr": "def",
+      "prob": 80,
+      "name": "玉堂"
+     },
+     "5": {
+      "value": 10,
+      "zq": 500,
+      "attr": "def",
+      "prob": 70,
+      "name": "膻中"
+     },
+     "6": {
+      "value": 12,
+      "zq": 500,
+      "attr": "def",
+      "prob": 60,
+      "name": "俞府"
+     },
+     "7": {
+      "value": 14,
+      "zq": 500,
+      "attr": "def",
+      "prob": 60,
+      "name": "或中"
+     },
+     "8": {
+      "value": 14,
+      "zq": 500,
+      "attr": "def",
+      "prob": 60,
+      "name": "神藏"
+     },
+     "9": {
+      "value": 16,
+      "zq": 500,
+      "attr": "def",
+      "prob": 50,
+      "name": "灵墟"
+     },
+     "10": {
+      "value": 17,
+      "zq": 500,
+      "attr": "def",
+      "prob": 50,
+      "name": "神封"
+     },
+     "11": {
+      "value": 18,
+      "zq": 500,
+      "attr": "def",
+      "prob": 50,
+      "name": "缺盆"
+     },
+     "12": {
+      "value": 19,
+      "zq": 500,
+      "attr": "def",
+      "prob": 50,
+      "name": "气户"
+     },
+     "13": {
+      "value": 21,
+      "zq": 500,
+      "attr": "def",
+      "prob": 30,
+      "name": "库房"
+     },
+     "14": {
+      "value": 22,
+      "zq": 500,
+      "attr": "def",
+      "prob": 30,
+      "name": "屋翳"
+     },
+     "15": {
+      "value": 23,
+      "zq": 500,
+      "attr": "def",
+      "prob": 30,
+      "name": "赝窗"
+     },
+     "16": {
+      "value": 25,
+      "zq": 500,
+      "attr": "def",
+      "prob": 30,
+      "name": "天池"
+     },
+     "17": {
+      "value": 26,
+      "zq": 500,
+      "attr": "def",
+      "prob": 20,
+      "name": "云门"
+     },
+     "18": {
+      "value": 27,
+      "zq": 500,
+      "attr": "def",
+      "prob": 20,
+      "name": "中府"
+     },
+     "19": {
+      "value": 29,
+      "zq": 500,
+      "attr": "def",
+      "prob": 20,
+      "name": "周荣"
+     },
+     "20": {
+      "value": 30,
+      "zq": 500,
+      "attr": "def",
+      "prob": 20,
+      "name": "胸乡"
+     },
+     "21": {
+      "value": 31,
+      "zq": 500,
+      "attr": "def",
+      "prob": 10,
+      "name": "天溪"
+     },
+     "22": {
+      "value": 32,
+      "zq": 500,
+      "attr": "def",
+      "prob": 10,
+      "name": "大椎"
+     },
+     "23": {
+      "value": 34,
+      "zq": 500,
+      "attr": "def",
+      "prob": 10,
+      "name": "陶道"
+     },
+     "24": {
+      "value": 35,
+      "zq": 500,
+      "attr": "def",
+      "prob": 10,
+      "name": "身柱"
+     }
+    },
+    "name": "生门"
+   },
+   "3": {
+    "value": 38,
+    "attr": "atk",
+    "desc": "伤门居东方震宫，五行属木，震宫门为伤门，属凶门动则易伤",
+    "pts": {
+     "0": {
+      "value": 1,
+      "zq": 500,
+      "attr": "atk",
+      "prob": 100,
+      "name": "神道"
+     },
+     "1": {
+      "value": 2,
+      "zq": 500,
+      "attr": "atk",
+      "prob": 100,
+      "name": "灵台"
+     },
+     "2": {
+      "value": 5,
+      "zq": 500,
+      "attr": "atk",
+      "prob": 80,
+      "name": "至阳"
+     },
+     "3": {
+      "value": 6,
+      "zq": 500,
+      "attr": "atk",
+      "prob": 80,
+      "name": "大杼"
+     },
+     "4": {
+      "value": 7,
+      "zq": 500,
+      "attr": "atk",
+      "prob": 70,
+      "name": "肺俞"
+     },
+     "5": {
+      "value": 9,
+      "zq": 500,
+      "attr": "atk",
+      "prob": 70,
+      "name": "风门"
+     },
+     "6": {
+      "value": 10,
+      "zq": 500,
+      "attr": "atk",
+      "prob": 60,
+      "name": "中庭"
+     },
+     "7": {
+      "value": 12,
+      "zq": 500,
+      "attr": "atk",
+      "prob": 60,
+      "name": "鸠尾"
+     },
+     "8": {
+      "value": 14,
+      "zq": 500,
+      "attr": "atk",
+      "prob": 60,
+      "name": "巨阙"
+     },
+     "9": {
+      "value": 14,
+      "zq": 500,
+      "attr": "atk",
+      "prob": 50,
+      "name": "上脘"
+     },
+     "10": {
+      "value": 16,
+      "zq": 500,
+      "attr": "atk",
+      "prob": 50,
+      "name": "中脘"
+     },
+     "11": {
+      "value": 17,
+      "zq": 500,
+      "attr": "atk",
+      "prob": 50,
+      "name": "幽门"
+     },
+     "12": {
+      "value": 18,
+      "zq": 500,
+      "attr": "atk",
+      "prob": 50,
+      "name": "腹通谷"
+     },
+     "13": {
+      "value": 19,
+      "zq": 500,
+      "attr": "atk",
+      "prob": 30,
+      "name": "阴都"
+     },
+     "14": {
+      "value": 21,
+      "zq": 500,
+      "attr": "atk",
+      "prob": 30,
+      "name": "承满"
+     },
+     "15": {
+      "value": 22,
+      "zq": 500,
+      "attr": "atk",
+      "prob": 30,
+      "name": "梁门"
+     },
+     "16": {
+      "value": 23,
+      "zq": 500,
+      "attr": "atk",
+      "prob": 30,
+      "name": "关门"
+     },
+     "17": {
+      "value": 25,
+      "zq": 500,
+      "attr": "atk",
+      "prob": 30,
+      "name": "腹哀"
+     },
+     "18": {
+      "value": 26,
+      "zq": 500,
+      "attr": "atk",
+      "prob": 20,
+      "name": "筋缩"
+     },
+     "19": {
+      "value": 27,
+      "zq": 500,
+      "attr": "atk",
+      "prob": 20,
+      "name": "中枢"
+     },
+     "20": {
+      "value": 29,
+      "zq": 500,
+      "attr": "atk",
+      "prob": 20,
+      "name": "脊中"
+     },
+     "21": {
+      "value": 30,
+      "zq": 500,
+      "attr": "atk",
+      "prob": 20,
+      "name": "悬枢"
+     },
+     "22": {
+      "value": 31,
+      "zq": 500,
+      "attr": "atk",
+      "prob": 10,
+      "name": "肝俞"
+     },
+     "23": {
+      "value": 32,
+      "zq": 500,
+      "attr": "atk",
+      "prob": 10,
+      "name": "胆俞"
+     },
+     "24": {
+      "value": 34,
+      "zq": 500,
+      "attr": "atk",
+      "prob": 10,
+      "name": "脾俞"
+     },
+     "25": {
+      "value": 35,
+      "zq": 500,
+      "attr": "atk",
+      "prob": 10,
+      "name": "胃俞"
+     }
+    },
+    "name": "伤门"
+   },
+   "4": {
+    "value": 38,
+    "attr": "avd",
+    "desc": "杜门居东南巽宫，五行属木，巽宫门为杜门，已藏形避难之方",
+    "pts": {
+     "0": {
+      "value": 2,
+      "zq": 500,
+      "attr": "avd",
+      "prob": 100,
+      "name": "建里"
+     },
+     "1": {
+      "value": 2,
+      "zq": 500,
+      "attr": "bsk",
+      "prob": 100,
+      "name": "下脘"
+     },
+     "2": {
+      "value": 6,
+      "zq": 500,
+      "attr": "avd",
+      "prob": 80,
+      "name": "水分"
+     },
+     "3": {
+      "value": 3,
+      "zq": 500,
+      "attr": "bsk",
+      "prob": 80,
+      "name": "神阙"
+     },
+     "4": {
+      "value": 7,
+      "zq": 500,
+      "attr": "avd",
+      "prob": 70,
+      "name": "石关"
+     },
+     "5": {
+      "value": 5,
+      "zq": 500,
+      "attr": "bsk",
+      "prob": 60,
+      "name": "商曲"
+     },
+     "6": {
+      "value": 10,
+      "zq": 500,
+      "attr": "avd",
+      "prob": 50,
+      "name": "盲俞"
+     },
+     "7": {
+      "value": 6,
+      "zq": 500,
+      "attr": "bsk",
+      "prob": 50,
+      "name": "太乙"
+     },
+     "8": {
+      "value": 15,
+      "zq": 500,
+      "attr": "avd",
+      "prob": 50,
+      "name": "滑肉门"
+     },
+     "9": {
+      "value": 6,
+      "zq": 500,
+      "attr": "bsk",
+      "prob": 50,
+      "name": "天枢"
+     },
+     "10": {
+      "value": 18,
+      "zq": 500,
+      "attr": "avd",
+      "prob": 30,
+      "name": "大横"
+     },
+     "11": {
+      "value": 7,
+      "zq": 500,
+      "attr": "bsk",
+      "prob": 30,
+      "name": "阴交"
+     },
+     "12": {
+      "value": 19,
+      "zq": 500,
+      "attr": "avd",
+      "prob": 30,
+      "name": "中注"
+     },
+     "13": {
+      "value": 8,
+      "zq": 500,
+      "attr": "bsk",
+      "prob": 20,
+      "name": "命门"
+     },
+     "14": {
+      "value": 22,
+      "zq": 500,
+      "attr": "avd",
+      "prob": 20,
+      "name": "腰阳关"
+     },
+     "15": {
+      "value": 9,
+      "zq": 500,
+      "attr": "bsk",
+      "prob": 20,
+      "name": "三焦俞"
+     },
+     "16": {
+      "value": 25,
+      "zq": 500,
+      "attr": "avd",
+      "prob": 20,
+      "name": "肾俞"
+     },
+     "17": {
+      "value": 28,
+      "zq": 500,
+      "attr": "avd",
+      "prob": 10,
+      "name": "气海俞"
+     },
+     "18": {
+      "value": 11,
+      "zq": 500,
+      "attr": "bsk",
+      "prob": 10,
+      "name": "胃仓"
+     },
+     "19": {
+      "value": 31,
+      "zq": 500,
+      "attr": "avd",
+      "prob": 10,
+      "name": "盲门"
+     },
+     "20": {
+      "value": 34,
+      "zq": 500,
+      "attr": "avd",
+      "prob": 10,
+      "name": "志室"
+     }
+    },
+    "name": "杜门"
+   },
+   "5": {
+    "value": 38,
+    "attr": "atk",
+    "desc": "景门居南方离宫，五行属火，离宫门为景门，当日升中天之时",
+    "pts": {
+     "0": {
+      "value": 10,
+      "zq": 500,
+      "attr": "atk",
+      "prob": 100,
+      "name": "外陵"
+     },
+     "1": {
+      "value": 12,
+      "zq": 500,
+      "attr": "atk",
+      "prob": 100,
+      "name": "腹结"
+     },
+     "2": {
+      "value": 13,
+      "zq": 500,
+      "attr": "atk",
+      "prob": 80,
+      "name": "气海"
+     },
+     "3": {
+      "value": 14,
+      "zq": 500,
+      "attr": "atk",
+      "prob": 70,
+      "name": "石门"
+     },
+     "4": {
+      "value": 14,
+      "zq": 500,
+      "attr": "atk",
+      "prob": 60,
+      "name": "四满"
+     },
+     "5": {
+      "value": 17,
+      "zq": 500,
+      "attr": "atk",
+      "prob": 50,
+      "name": "大巨"
+     },
+     "6": {
+      "value": 18,
+      "zq": 500,
+      "attr": "atk",
+      "prob": 50,
+      "name": "关元"
+     },
+     "7": {
+      "value": 19,
+      "zq": 500,
+      "attr": "atk",
+      "prob": 50,
+      "name": "气穴"
+     },
+     "8": {
+      "value": 20,
+      "zq": 500,
+      "attr": "atk",
+      "prob": 50,
+      "name": "水道"
+     },
+     "9": {
+      "value": 21,
+      "zq": 500,
+      "attr": "atk",
+      "prob": 30,
+      "name": "中极"
+     },
+     "10": {
+      "value": 22,
+      "zq": 500,
+      "attr": "atk",
+      "prob": 30,
+      "name": "大赫"
+     },
+     "11": {
+      "value": 23,
+      "zq": 500,
+      "attr": "atk",
+      "prob": 30,
+      "name": "归来"
+     },
+     "12": {
+      "value": 25,
+      "zq": 500,
+      "attr": "atk",
+      "prob": 20,
+      "name": "府舍"
+     },
+     "13": {
+      "value": 26,
+      "zq": 500,
+      "attr": "atk",
+      "prob": 20,
+      "name": "曲骨"
+     },
+     "14": {
+      "value": 27,
+      "zq": 500,
+      "attr": "atk",
+      "prob": 20,
+      "name": "横骨"
+     },
+     "15": {
+      "value": 29,
+      "zq": 500,
+      "attr": "atk",
+      "prob": 20,
+      "name": "气冲"
+     },
+     "16": {
+      "value": 30,
+      "zq": 500,
+      "attr": "atk",
+      "prob": 20,
+      "name": "冲门"
+     },
+     "17": {
+      "value": 31,
+      "zq": 500,
+      "attr": "atk",
+      "prob": 10,
+      "name": "会阴"
+     },
+     "18": {
+      "value": 34,
+      "zq": 500,
+      "attr": "atk",
+      "prob": 10,
+      "name": "阴廉"
+     },
+     "19": {
+      "value": 36,
+      "zq": 500,
+      "attr": "atk",
+      "prob": 10,
+      "name": "急脉"
+     },
+     "20": {
+      "value": 38,
+      "zq": 500,
+      "attr": "atk",
+      "prob": 10,
+      "name": "髀关"
+     }
+    },
+    "name": "景门"
+   },
+   "6": {
+    "value": 51,
+    "attr": "maxmp",
+    "desc": "惊门居西方兑宫，五行属金，兑宫门为惊门，行寒气肃杀之应",
+    "pts": {
+     "0": {
+      "value": 10,
+      "zq": 500,
+      "attr": "maxmp",
+      "prob": 100,
+      "name": "上髎"
+     },
+     "1": {
+      "value": 14,
+      "zq": 500,
+      "attr": "maxhp",
+      "prob": 100,
+      "name": "次髎"
+     },
+     "2": {
+      "value": 18,
+      "zq": 500,
+      "attr": "maxmp",
+      "prob": 80,
+      "name": "中髎"
+     },
+     "3": {
+      "value": 18,
+      "zq": 500,
+      "attr": "maxhp",
+      "prob": 80,
+      "name": "下髎"
+     },
+     "4": {
+      "value": 23,
+      "zq": 500,
+      "attr": "maxhp",
+      "prob": 80,
+      "name": "腰俞"
+     },
+     "5": {
+      "value": 28,
+      "zq": 500,
+      "attr": "maxmp",
+      "prob": 50,
+      "name": "长强"
+     },
+     "6": {
+      "value": 28,
+      "zq": 500,
+      "attr": "maxhp",
+      "prob": 50,
+      "name": "会阳"
+     },
+     "7": {
+      "value": 33,
+      "zq": 500,
+      "attr": "maxhp",
+      "prob": 50,
+      "name": "居髎"
+     },
+     "8": {
+      "value": 36,
+      "zq": 500,
+      "attr": "maxmp",
+      "prob": 30,
+      "name": "环跳"
+     },
+     "9": {
+      "value": 39,
+      "zq": 500,
+      "attr": "maxhp",
+      "prob": 30,
+      "name": "髀关"
+     },
+     "10": {
+      "value": 46,
+      "zq": 500,
+      "attr": "maxhp",
+      "prob": 30,
+      "name": "箕门"
+     },
+     "11": {
+      "value": 43,
+      "zq": 500,
+      "attr": "maxmp",
+      "prob": 20,
+      "name": "血海"
+     },
+     "12": {
+      "value": 52,
+      "zq": 500,
+      "attr": "maxhp",
+      "prob": 20,
+      "name": "阴包"
+     },
+     "13": {
+      "value": 50,
+      "zq": 500,
+      "attr": "maxmp",
+      "prob": 20,
+      "name": "曲泉"
+     },
+     "14": {
+      "value": 57,
+      "zq": 500,
+      "attr": "maxhp",
+      "prob": 10,
+      "name": "阴谷"
+     },
+     "15": {
+      "value": 56,
+      "zq": 500,
+      "attr": "maxmp",
+      "prob": 10,
+      "name": "阴陵泉"
+     },
+     "16": {
+      "value": 66,
+      "zq": 500,
+      "attr": "maxhp",
+      "prob": 10,
+      "name": "膝关"
+     }
+    },
+    "name": "惊门"
+   },
+   "7": {
+    "value": 13,
+    "attr": "bsk",
+    "desc": "死门居中西南坤宫，五行属土，坤宫门为死门，主刑戮征战之宜",
+    "pts": {
+     "0": {
+      "value": 2,
+      "zq": 500,
+      "attr": "bsk",
+      "prob": 100,
+      "name": "厥阴俞"
+     },
+     "1": {
+      "value": 2,
+      "zq": 500,
+      "attr": "bsk",
+      "prob": 100,
+      "name": "心俞"
+     },
+     "2": {
+      "value": 5,
+      "zq": 500,
+      "attr": "avd",
+      "prob": 100,
+      "name": "督俞"
+     },
+     "3": {
+      "value": 2,
+      "zq": 500,
+      "attr": "bsk",
+      "prob": 80,
+      "name": "膈俞"
+     },
+     "4": {
+      "value": 3,
+      "zq": 500,
+      "attr": "bsk",
+      "prob": 80,
+      "name": "附分"
+     },
+     "5": {
+      "value": 10,
+      "zq": 500,
+      "attr": "avd",
+      "prob": 70,
+      "name": "魄户"
+     },
+     "6": {
+      "value": 3,
+      "zq": 500,
+      "attr": "bsk",
+      "prob": 60,
+      "name": "膏盲"
+     },
+     "7": {
+      "value": 4,
+      "zq": 500,
+      "attr": "bsk",
+      "prob": 60,
+      "name": "神堂"
+     },
+     "8": {
+      "value": 15,
+      "zq": 500,
+      "attr": "avd",
+      "prob": 50,
+      "name": "膈关"
+     },
+     "9": {
+      "value": 5,
+      "zq": 500,
+      "attr": "bsk",
+      "prob": 50,
+      "name": "肩中俞"
+     },
+     "10": {
+      "value": 6,
+      "zq": 500,
+      "attr": "bsk",
+      "prob": 50,
+      "name": "肩外俞"
+     },
+     "11": {
+      "value": 17,
+      "zq": 500,
+      "attr": "avd",
+      "prob": 50,
+      "name": "肩井"
+     },
+     "12": {
+      "value": 6,
+      "zq": 500,
+      "attr": "bsk",
+      "prob": 30,
+      "name": "天髎"
+     },
+     "13": {
+      "value": 7,
+      "zq": 500,
+      "attr": "bsk",
+      "prob": 30,
+      "name": "曲垣"
+     },
+     "14": {
+      "value": 20,
+      "zq": 500,
+      "attr": "avd",
+      "prob": 30,
+      "name": "乘风"
+     },
+     "15": {
+      "value": 8,
+      "zq": 500,
+      "attr": "bsk",
+      "prob": 30,
+      "name": "天宗"
+     },
+     "16": {
+      "value": 9,
+      "zq": 500,
+      "attr": "bsk",
+      "prob": 30,
+      "name": "臑俞"
+     },
+     "17": {
+      "value": 24,
+      "zq": 500,
+      "attr": "avd",
+      "prob": 20,
+      "name": "肩贞"
+     },
+     "18": {
+      "value": 10,
+      "zq": 500,
+      "attr": "bsk",
+      "prob": 20,
+      "name": "步廊"
+     },
+     "19": {
+      "value": 10,
+      "zq": 500,
+      "attr": "bsk",
+      "prob": 20,
+      "name": "食窦"
+     },
+     "20": {
+      "value": 27,
+      "zq": 500,
+      "attr": "avd",
+      "prob": 20,
+      "name": "期门"
+     },
+     "21": {
+      "value": 11,
+      "zq": 500,
+      "attr": "bsk",
+      "prob": 20,
+      "name": "日月"
+     },
+     "22": {
+      "value": 12,
+      "zq": 500,
+      "attr": "bsk",
+      "prob": 10,
+      "name": "不容"
+     },
+     "23": {
+      "value": 30,
+      "zq": 500,
+      "attr": "avd",
+      "prob": 10,
+      "name": "魂门"
+     },
+     "24": {
+      "value": 13,
+      "zq": 500,
+      "attr": "bsk",
+      "prob": 10,
+      "name": "阳纲"
+     },
+     "25": {
+      "value": 33,
+      "zq": 500,
+      "attr": "avd",
+      "prob": 10,
+      "name": "意舍"
+     }
+    },
+    "name": "死门"
+   }
+  },
+  "name": "八门"
+ },
+ "1": {
+  "mai": {
+   "0": {
+    "value": 192,
+    "attr": "maxhp",
+    "desc": "开门居西北干宫，五行属金，干宫门为开门，喻万物开始之意",
+    "pts": {
+     "0": {
+      "value": 15,
+      "zq": 1500,
+      "attr": "maxhp",
+      "prob": 100,
+      "name": "头维"
+     },
+     "1": {
+      "value": 22,
+      "zq": 1500,
+      "attr": "maxhp",
+      "prob": 100,
+      "name": "发际"
+     },
+     "2": {
+      "value": 17,
+      "zq": 1500,
+      "attr": "maxmp",
+      "prob": 100,
+      "name": "阴白"
+     },
+     "3": {
+      "value": 28,
+      "zq": 1500,
+      "attr": "maxhp",
+      "prob": 80,
+      "name": "印堂"
+     },
+     "4": {
+      "value": 33,
+      "zq": 1500,
+      "attr": "maxhp",
+      "prob": 70,
+      "name": "攒竹"
+     },
+     "5": {
+      "value": 36,
+      "zq": 1500,
+      "attr": "maxhp",
+      "prob": 60,
+      "name": "鱼腰"
+     },
+     "6": {
+      "value": 32,
+      "zq": 1500,
+      "attr": "maxmp",
+      "prob": 60,
+      "name": "外明"
+     },
+     "7": {
+      "value": 45,
+      "zq": 1500,
+      "attr": "maxhp",
+      "prob": 50,
+      "name": "晴明"
+     },
+     "8": {
+      "value": 49,
+      "zq": 1500,
+      "attr": "maxhp",
+      "prob": 50,
+      "name": "丝竹"
+     },
+     "9": {
+      "value": 52,
+      "zq": 1500,
+      "attr": "maxhp",
+      "prob": 50,
+      "name": "瞳子髎"
+     },
+     "10": {
+      "value": 57,
+      "zq": 1500,
+      "attr": "maxhp",
+      "prob": 50,
+      "name": "承泣"
+     },
+     "11": {
+      "value": 45,
+      "zq": 1500,
+      "attr": "maxmp",
+      "prob": 50,
+      "name": "球后"
+     },
+     "12": {
+      "value": 63,
+      "zq": 1500,
+      "attr": "maxhp",
+      "prob": 30,
+      "name": "四白"
+     },
+     "13": {
+      "value": 68,
+      "zq": 1500,
+      "attr": "maxhp",
+      "prob": 30,
+      "name": "迎香"
+     },
+     "14": {
+      "value": 73,
+      "zq": 1500,
+      "attr": "maxhp",
+      "prob": 30,
+      "name": "人中"
+     },
+     "15": {
+      "value": 78,
+      "zq": 1500,
+      "attr": "maxhp",
+      "prob": 30,
+      "name": "地仓"
+     },
+     "16": {
+      "value": 59,
+      "zq": 1500,
+      "attr": "maxmp",
+      "prob": 20,
+      "name": "承浆"
+     },
+     "17": {
+      "value": 84,
+      "zq": 1500,
+      "attr": "maxhp",
+      "prob": 20,
+      "name": "前顶"
+     },
+     "18": {
+      "value": 89,
+      "zq": 1500,
+      "attr": "maxhp",
+      "prob": 20,
+      "name": "通天"
+     },
+     "19": {
+      "value": 92,
+      "zq": 1500,
+      "attr": "maxhp",
+      "prob": 20,
+      "name": "上星"
+     },
+     "20": {
+      "value": 94,
+      "zq": 1500,
+      "attr": "maxhp",
+      "prob": 10,
+      "name": "神庭"
+     },
+     "21": {
+      "value": 67,
+      "zq": 1500,
+      "attr": "maxmp",
+      "prob": 10,
+      "name": "承光"
+     },
+     "22": {
+      "value": 104,
+      "zq": 1500,
+      "attr": "maxhp",
+      "prob": 10,
+      "name": "当阳"
+     },
+     "23": {
+      "value": 110,
+      "zq": 1500,
+      "attr": "maxhp",
+      "prob": 10,
+      "name": "五处"
+     }
+    },
+    "name": "开门"
+   },
+   "1": {
+    "value": 160,
+    "attr": "maxhp",
+    "desc": "休门居北方坎宫，五行属水，坎宫门为休门，乃修养生息之地",
+    "pts": {
+     "0": {
+      "value": 10,
+      "zq": 1500,
+      "attr": "maxhp",
+      "prob": 100,
+      "name": "曲差"
+     },
+     "1": {
+      "value": 8,
+      "zq": 1500,
+      "attr": "maxmp",
+      "prob": 100,
+      "name": "眉冲"
+     },
+     "2": {
+      "value": 14,
+      "zq": 1500,
+      "attr": "maxhp",
+      "prob": 100,
+      "name": "素髎"
+     },
+     "3": {
+      "value": 23,
+      "zq": 1500,
+      "attr": "maxhp",
+      "prob": 80,
+      "name": "兑端"
+     },
+     "4": {
+      "value": 14,
+      "zq": 1500,
+      "attr": "maxmp",
+      "prob": 70,
+      "name": "龈交"
+     },
+     "5": {
+      "value": 28,
+      "zq": 1500,
+      "attr": "maxhp",
+      "prob": 70,
+      "name": "上迎香"
+     },
+     "6": {
+      "value": 36,
+      "zq": 1500,
+      "attr": "maxhp",
+      "prob": 60,
+      "name": "百会"
+     },
+     "7": {
+      "value": 41,
+      "zq": 1500,
+      "attr": "maxhp",
+      "prob": 60,
+      "name": "后顶"
+     },
+     "8": {
+      "value": 27,
+      "zq": 1500,
+      "attr": "maxmp",
+      "prob": 50,
+      "name": "风府"
+     },
+     "9": {
+      "value": 45,
+      "zq": 1500,
+      "attr": "maxhp",
+      "prob": 50,
+      "name": "风池"
+     },
+     "10": {
+      "value": 52,
+      "zq": 1500,
+      "attr": "maxhp",
+      "prob": 50,
+      "name": "天柱"
+     },
+     "11": {
+      "value": 55,
+      "zq": 1500,
+      "attr": "maxhp",
+      "prob": 30,
+      "name": "哑门"
+     },
+     "12": {
+      "value": 61,
+      "zq": 1500,
+      "attr": "maxhp",
+      "prob": 30,
+      "name": "太阳"
+     },
+     "13": {
+      "value": 38,
+      "zq": 1500,
+      "attr": "maxmp",
+      "prob": 30,
+      "name": "下关"
+     },
+     "14": {
+      "value": 68,
+      "zq": 1500,
+      "attr": "maxhp",
+      "prob": 20,
+      "name": "客主人"
+     },
+     "15": {
+      "value": 71,
+      "zq": 1500,
+      "attr": "maxhp",
+      "prob": 20,
+      "name": "耳门"
+     },
+     "16": {
+      "value": 76,
+      "zq": 1500,
+      "attr": "maxhp",
+      "prob": 20,
+      "name": "听宫"
+     },
+     "17": {
+      "value": 81,
+      "zq": 1500,
+      "attr": "maxhp",
+      "prob": 10,
+      "name": "翳风"
+     },
+     "18": {
+      "value": 84,
+      "zq": 1500,
+      "attr": "maxhp",
+      "prob": 10,
+      "name": "颊车"
+     },
+     "19": {
+      "value": 45,
+      "zq": 1500,
+      "attr": "maxmp",
+      "prob": 10,
+      "name": "大迎"
+     },
+     "20": {
+      "value": 87,
+      "zq": 1500,
+      "attr": "maxhp",
+      "prob": 10,
+      "name": "人迎"
+     }
+    },
+    "name": "休门"
+   },
+   "2": {
+    "value": 48,
+    "attr": "def",
+    "desc": "生门居北方艮宫，五行属土，艮宫门为生门，为万物复苏之始",
+    "pts": {
+     "0": {
+      "value": 3,
+      "zq": 1500,
+      "attr": "def",
+      "prob": 100,
+      "name": "天突"
+     },
+     "1": {
+      "value": 6,
+      "zq": 1500,
+      "attr": "def",
+      "prob": 100,
+      "name": "璇玑"
+     },
+     "2": {
+      "value": 7,
+      "zq": 1500,
+      "attr": "def",
+      "prob": 100,
+      "name": "华盖"
+     },
+     "3": {
+      "value": 9,
+      "zq": 1500,
+      "attr": "def",
+      "prob": 80,
+      "name": "紫宫"
+     },
+     "4": {
+      "value": 11,
+      "zq": 1500,
+      "attr": "def",
+      "prob": 80,
+      "name": "玉堂"
+     },
+     "5": {
+      "value": 13,
+      "zq": 1500,
+      "attr": "def",
+      "prob": 70,
+      "name": "膻中"
+     },
+     "6": {
+      "value": 15,
+      "zq": 1500,
+      "attr": "def",
+      "prob": 60,
+      "name": "俞府"
+     },
+     "7": {
+      "value": 17,
+      "zq": 1500,
+      "attr": "def",
+      "prob": 60,
+      "name": "或中"
+     },
+     "8": {
+      "value": 18,
+      "zq": 1500,
+      "attr": "def",
+      "prob": 60,
+      "name": "神藏"
+     },
+     "9": {
+      "value": 20,
+      "zq": 1500,
+      "attr": "def",
+      "prob": 50,
+      "name": "灵墟"
+     },
+     "10": {
+      "value": 21,
+      "zq": 1500,
+      "attr": "def",
+      "prob": 50,
+      "name": "神封"
+     },
+     "11": {
+      "value": 23,
+      "zq": 1500,
+      "attr": "def",
+      "prob": 50,
+      "name": "缺盆"
+     },
+     "12": {
+      "value": 24,
+      "zq": 1500,
+      "attr": "def",
+      "prob": 50,
+      "name": "气户"
+     },
+     "13": {
+      "value": 26,
+      "zq": 1500,
+      "attr": "def",
+      "prob": 30,
+      "name": "库房"
+     },
+     "14": {
+      "value": 28,
+      "zq": 1500,
+      "attr": "def",
+      "prob": 30,
+      "name": "屋翳"
+     },
+     "15": {
+      "value": 29,
+      "zq": 1500,
+      "attr": "def",
+      "prob": 30,
+      "name": "赝窗"
+     },
+     "16": {
+      "value": 31,
+      "zq": 1500,
+      "attr": "def",
+      "prob": 30,
+      "name": "天池"
+     },
+     "17": {
+      "value": 32,
+      "zq": 1500,
+      "attr": "def",
+      "prob": 20,
+      "name": "云门"
+     },
+     "18": {
+      "value": 34,
+      "zq": 1500,
+      "attr": "def",
+      "prob": 20,
+      "name": "中府"
+     },
+     "19": {
+      "value": 36,
+      "zq": 1500,
+      "attr": "def",
+      "prob": 20,
+      "name": "周荣"
+     },
+     "20": {
+      "value": 37,
+      "zq": 1500,
+      "attr": "def",
+      "prob": 20,
+      "name": "胸乡"
+     },
+     "21": {
+      "value": 39,
+      "zq": 1500,
+      "attr": "def",
+      "prob": 10,
+      "name": "天溪"
+     },
+     "22": {
+      "value": 40,
+      "zq": 1500,
+      "attr": "def",
+      "prob": 10,
+      "name": "大椎"
+     },
+     "23": {
+      "value": 42,
+      "zq": 1500,
+      "attr": "def",
+      "prob": 10,
+      "name": "陶道"
+     },
+     "24": {
+      "value": 44,
+      "zq": 1500,
+      "attr": "def",
+      "prob": 10,
+      "name": "身柱"
+     }
+    },
+    "name": "生门"
+   },
+   "3": {
+    "value": 48,
+    "attr": "atk",
+    "desc": "伤门居东方震宫，五行属木，震宫门为伤门，属凶门动则易伤",
+    "pts": {
+     "0": {
+      "value": 1,
+      "zq": 1500,
+      "attr": "atk",
+      "prob": 100,
+      "name": "神道"
+     },
+     "1": {
+      "value": 2,
+      "zq": 1500,
+      "attr": "atk",
+      "prob": 100,
+      "name": "灵台"
+     },
+     "2": {
+      "value": 6,
+      "zq": 1500,
+      "attr": "atk",
+      "prob": 80,
+      "name": "至阳"
+     },
+     "3": {
+      "value": 7,
+      "zq": 1500,
+      "attr": "atk",
+      "prob": 80,
+      "name": "大杼"
+     },
+     "4": {
+      "value": 9,
+      "zq": 1500,
+      "attr": "atk",
+      "prob": 70,
+      "name": "肺俞"
+     },
+     "5": {
+      "value": 11,
+      "zq": 1500,
+      "attr": "atk",
+      "prob": 70,
+      "name": "风门"
+     },
+     "6": {
+      "value": 13,
+      "zq": 1500,
+      "attr": "atk",
+      "prob": 60,
+      "name": "中庭"
+     },
+     "7": {
+      "value": 15,
+      "zq": 1500,
+      "attr": "atk",
+      "prob": 60,
+      "name": "鸠尾"
+     },
+     "8": {
+      "value": 17,
+      "zq": 1500,
+      "attr": "atk",
+      "prob": 60,
+      "name": "巨阙"
+     },
+     "9": {
+      "value": 18,
+      "zq": 1500,
+      "attr": "atk",
+      "prob": 50,
+      "name": "上脘"
+     },
+     "10": {
+      "value": 20,
+      "zq": 1500,
+      "attr": "atk",
+      "prob": 50,
+      "name": "中脘"
+     },
+     "11": {
+      "value": 21,
+      "zq": 1500,
+      "attr": "atk",
+      "prob": 50,
+      "name": "幽门"
+     },
+     "12": {
+      "value": 23,
+      "zq": 1500,
+      "attr": "atk",
+      "prob": 50,
+      "name": "腹通谷"
+     },
+     "13": {
+      "value": 24,
+      "zq": 1500,
+      "attr": "atk",
+      "prob": 30,
+      "name": "阴都"
+     },
+     "14": {
+      "value": 26,
+      "zq": 1500,
+      "attr": "atk",
+      "prob": 30,
+      "name": "承满"
+     },
+     "15": {
+      "value": 28,
+      "zq": 1500,
+      "attr": "atk",
+      "prob": 30,
+      "name": "梁门"
+     },
+     "16": {
+      "value": 29,
+      "zq": 1500,
+      "attr": "atk",
+      "prob": 30,
+      "name": "关门"
+     },
+     "17": {
+      "value": 31,
+      "zq": 1500,
+      "attr": "atk",
+      "prob": 30,
+      "name": "腹哀"
+     },
+     "18": {
+      "value": 32,
+      "zq": 1500,
+      "attr": "atk",
+      "prob": 20,
+      "name": "筋缩"
+     },
+     "19": {
+      "value": 34,
+      "zq": 1500,
+      "attr": "atk",
+      "prob": 20,
+      "name": "中枢"
+     },
+     "20": {
+      "value": 36,
+      "zq": 1500,
+      "attr": "atk",
+      "prob": 20,
+      "name": "脊中"
+     },
+     "21": {
+      "value": 37,
+      "zq": 1500,
+      "attr": "atk",
+      "prob": 20,
+      "name": "悬枢"
+     },
+     "22": {
+      "value": 39,
+      "zq": 1500,
+      "attr": "atk",
+      "prob": 10,
+      "name": "肝俞"
+     },
+     "23": {
+      "value": 40,
+      "zq": 1500,
+      "attr": "atk",
+      "prob": 10,
+      "name": "胆俞"
+     },
+     "24": {
+      "value": 42,
+      "zq": 1500,
+      "attr": "atk",
+      "prob": 10,
+      "name": "脾俞"
+     },
+     "25": {
+      "value": 44,
+      "zq": 1500,
+      "attr": "atk",
+      "prob": 10,
+      "name": "胃俞"
+     }
+    },
+    "name": "伤门"
+   },
+   "4": {
+    "value": 48,
+    "attr": "avd",
+    "desc": "杜门居东南巽宫，五行属木，巽宫门为杜门，已藏形避难之方",
+    "pts": {
+     "0": {
+      "value": 3,
+      "zq": 1500,
+      "attr": "avd",
+      "prob": 100,
+      "name": "建里"
+     },
+     "1": {
+      "value": 3,
+      "zq": 1500,
+      "attr": "bsk",
+      "prob": 100,
+      "name": "下脘"
+     },
+     "2": {
+      "value": 7,
+      "zq": 1500,
+      "attr": "avd",
+      "prob": 80,
+      "name": "水分"
+     },
+     "3": {
+      "value": 4,
+      "zq": 1500,
+      "attr": "bsk",
+      "prob": 80,
+      "name": "神阙"
+     },
+     "4": {
+      "value": 9,
+      "zq": 1500,
+      "attr": "avd",
+      "prob": 70,
+      "name": "石关"
+     },
+     "5": {
+      "value": 6,
+      "zq": 1500,
+      "attr": "bsk",
+      "prob": 60,
+      "name": "商曲"
+     },
+     "6": {
+      "value": 12,
+      "zq": 1500,
+      "attr": "avd",
+      "prob": 50,
+      "name": "盲俞"
+     },
+     "7": {
+      "value": 7,
+      "zq": 1500,
+      "attr": "bsk",
+      "prob": 50,
+      "name": "太乙"
+     },
+     "8": {
+      "value": 19,
+      "zq": 1500,
+      "attr": "avd",
+      "prob": 50,
+      "name": "滑肉门"
+     },
+     "9": {
+      "value": 8,
+      "zq": 1500,
+      "attr": "bsk",
+      "prob": 50,
+      "name": "天枢"
+     },
+     "10": {
+      "value": 23,
+      "zq": 1500,
+      "attr": "avd",
+      "prob": 30,
+      "name": "大横"
+     },
+     "11": {
+      "value": 9,
+      "zq": 1500,
+      "attr": "bsk",
+      "prob": 30,
+      "name": "阴交"
+     },
+     "12": {
+      "value": 24,
+      "zq": 1500,
+      "attr": "avd",
+      "prob": 30,
+      "name": "中注"
+     },
+     "13": {
+      "value": 10,
+      "zq": 1500,
+      "attr": "bsk",
+      "prob": 20,
+      "name": "命门"
+     },
+     "14": {
+      "value": 27,
+      "zq": 1500,
+      "attr": "avd",
+      "prob": 20,
+      "name": "腰阳关"
+     },
+     "15": {
+      "value": 11,
+      "zq": 1500,
+      "attr": "bsk",
+      "prob": 20,
+      "name": "三焦俞"
+     },
+     "16": {
+      "value": 31,
+      "zq": 1500,
+      "attr": "avd",
+      "prob": 20,
+      "name": "肾俞"
+     },
+     "17": {
+      "value": 35,
+      "zq": 1500,
+      "attr": "avd",
+      "prob": 10,
+      "name": "气海俞"
+     },
+     "18": {
+      "value": 14,
+      "zq": 1500,
+      "attr": "bsk",
+      "prob": 10,
+      "name": "胃仓"
+     },
+     "19": {
+      "value": 39,
+      "zq": 1500,
+      "attr": "avd",
+      "prob": 10,
+      "name": "盲门"
+     },
+     "20": {
+      "value": 42,
+      "zq": 1500,
+      "attr": "avd",
+      "prob": 10,
+      "name": "志室"
+     }
+    },
+    "name": "杜门"
+   },
+   "5": {
+    "value": 48,
+    "attr": "atk",
+    "desc": "景门居南方离宫，五行属火，离宫门为景门，当日升中天之时",
+    "pts": {
+     "0": {
+      "value": 13,
+      "zq": 1500,
+      "attr": "atk",
+      "prob": 100,
+      "name": "外陵"
+     },
+     "1": {
+      "value": 15,
+      "zq": 1500,
+      "attr": "atk",
+      "prob": 100,
+      "name": "腹结"
+     },
+     "2": {
+      "value": 16,
+      "zq": 1500,
+      "attr": "atk",
+      "prob": 80,
+      "name": "气海"
+     },
+     "3": {
+      "value": 17,
+      "zq": 1500,
+      "attr": "atk",
+      "prob": 70,
+      "name": "石门"
+     },
+     "4": {
+      "value": 18,
+      "zq": 1500,
+      "attr": "atk",
+      "prob": 60,
+      "name": "四满"
+     },
+     "5": {
+      "value": 21,
+      "zq": 1500,
+      "attr": "atk",
+      "prob": 50,
+      "name": "大巨"
+     },
+     "6": {
+      "value": 22,
+      "zq": 1500,
+      "attr": "atk",
+      "prob": 50,
+      "name": "关元"
+     },
+     "7": {
+      "value": 24,
+      "zq": 1500,
+      "attr": "atk",
+      "prob": 50,
+      "name": "气穴"
+     },
+     "8": {
+      "value": 25,
+      "zq": 1500,
+      "attr": "atk",
+      "prob": 50,
+      "name": "水道"
+     },
+     "9": {
+      "value": 26,
+      "zq": 1500,
+      "attr": "atk",
+      "prob": 30,
+      "name": "中极"
+     },
+     "10": {
+      "value": 28,
+      "zq": 1500,
+      "attr": "atk",
+      "prob": 30,
+      "name": "大赫"
+     },
+     "11": {
+      "value": 29,
+      "zq": 1500,
+      "attr": "atk",
+      "prob": 30,
+      "name": "归来"
+     },
+     "12": {
+      "value": 31,
+      "zq": 1500,
+      "attr": "atk",
+      "prob": 20,
+      "name": "府舍"
+     },
+     "13": {
+      "value": 32,
+      "zq": 1500,
+      "attr": "atk",
+      "prob": 20,
+      "name": "曲骨"
+     },
+     "14": {
+      "value": 34,
+      "zq": 1500,
+      "attr": "atk",
+      "prob": 20,
+      "name": "横骨"
+     },
+     "15": {
+      "value": 36,
+      "zq": 1500,
+      "attr": "atk",
+      "prob": 20,
+      "name": "气冲"
+     },
+     "16": {
+      "value": 37,
+      "zq": 1500,
+      "attr": "atk",
+      "prob": 20,
+      "name": "冲门"
+     },
+     "17": {
+      "value": 39,
+      "zq": 1500,
+      "attr": "atk",
+      "prob": 10,
+      "name": "会阴"
+     },
+     "18": {
+      "value": 42,
+      "zq": 1500,
+      "attr": "atk",
+      "prob": 10,
+      "name": "阴廉"
+     },
+     "19": {
+      "value": 45,
+      "zq": 1500,
+      "attr": "atk",
+      "prob": 10,
+      "name": "急脉"
+     },
+     "20": {
+      "value": 48,
+      "zq": 1500,
+      "attr": "atk",
+      "prob": 10,
+      "name": "髀关"
+     }
+    },
+    "name": "景门"
+   },
+   "6": {
+    "value": 64,
+    "attr": "maxmp",
+    "desc": "惊门居西方兑宫，五行属金，兑宫门为惊门，行寒气肃杀之应",
+    "pts": {
+     "0": {
+      "value": 12,
+      "zq": 1500,
+      "attr": "maxmp",
+      "prob": 100,
+      "name": "上髎"
+     },
+     "1": {
+      "value": 17,
+      "zq": 1500,
+      "attr": "maxhp",
+      "prob": 100,
+      "name": "次髎"
+     },
+     "2": {
+      "value": 23,
+      "zq": 1500,
+      "attr": "maxmp",
+      "prob": 80,
+      "name": "中髎"
+     },
+     "3": {
+      "value": 23,
+      "zq": 1500,
+      "attr": "maxhp",
+      "prob": 80,
+      "name": "下髎"
+     },
+     "4": {
+      "value": 29,
+      "zq": 1500,
+      "attr": "maxhp",
+      "prob": 80,
+      "name": "腰俞"
+     },
+     "5": {
+      "value": 35,
+      "zq": 1500,
+      "attr": "maxmp",
+      "prob": 50,
+      "name": "长强"
+     },
+     "6": {
+      "value": 35,
+      "zq": 1500,
+      "attr": "maxhp",
+      "prob": 50,
+      "name": "会阳"
+     },
+     "7": {
+      "value": 41,
+      "zq": 1500,
+      "attr": "maxhp",
+      "prob": 50,
+      "name": "居髎"
+     },
+     "8": {
+      "value": 45,
+      "zq": 1500,
+      "attr": "maxmp",
+      "prob": 30,
+      "name": "环跳"
+     },
+     "9": {
+      "value": 49,
+      "zq": 1500,
+      "attr": "maxhp",
+      "prob": 30,
+      "name": "髀关"
+     },
+     "10": {
+      "value": 58,
+      "zq": 1500,
+      "attr": "maxhp",
+      "prob": 30,
+      "name": "箕门"
+     },
+     "11": {
+      "value": 54,
+      "zq": 1500,
+      "attr": "maxmp",
+      "prob": 20,
+      "name": "血海"
+     },
+     "12": {
+      "value": 65,
+      "zq": 1500,
+      "attr": "maxhp",
+      "prob": 20,
+      "name": "阴包"
+     },
+     "13": {
+      "value": 62,
+      "zq": 1500,
+      "attr": "maxmp",
+      "prob": 20,
+      "name": "曲泉"
+     },
+     "14": {
+      "value": 71,
+      "zq": 1500,
+      "attr": "maxhp",
+      "prob": 10,
+      "name": "阴谷"
+     },
+     "15": {
+      "value": 70,
+      "zq": 1500,
+      "attr": "maxmp",
+      "prob": 10,
+      "name": "阴陵泉"
+     },
+     "16": {
+      "value": 83,
+      "zq": 1500,
+      "attr": "maxhp",
+      "prob": 10,
+      "name": "膝关"
+     }
+    },
+    "name": "惊门"
+   },
+   "7": {
+    "value": 16,
+    "attr": "bsk",
+    "desc": "死门居中西南坤宫，五行属土，坤宫门为死门，主刑戮征战之宜",
+    "pts": {
+     "0": {
+      "value": 2,
+      "zq": 1500,
+      "attr": "bsk",
+      "prob": 100,
+      "name": "厥阴俞"
+     },
+     "1": {
+      "value": 3,
+      "zq": 1500,
+      "attr": "bsk",
+      "prob": 100,
+      "name": "心俞"
+     },
+     "2": {
+      "value": 6,
+      "zq": 1500,
+      "attr": "avd",
+      "prob": 100,
+      "name": "督俞"
+     },
+     "3": {
+      "value": 3,
+      "zq": 1500,
+      "attr": "bsk",
+      "prob": 80,
+      "name": "膈俞"
+     },
+     "4": {
+      "value": 4,
+      "zq": 1500,
+      "attr": "bsk",
+      "prob": 80,
+      "name": "附分"
+     },
+     "5": {
+      "value": 13,
+      "zq": 1500,
+      "attr": "avd",
+      "prob": 70,
+      "name": "魄户"
+     },
+     "6": {
+      "value": 4,
+      "zq": 1500,
+      "attr": "bsk",
+      "prob": 60,
+      "name": "膏盲"
+     },
+     "7": {
+      "value": 5,
+      "zq": 1500,
+      "attr": "bsk",
+      "prob": 60,
+      "name": "神堂"
+     },
+     "8": {
+      "value": 19,
+      "zq": 1500,
+      "attr": "avd",
+      "prob": 50,
+      "name": "膈关"
+     },
+     "9": {
+      "value": 6,
+      "zq": 1500,
+      "attr": "bsk",
+      "prob": 50,
+      "name": "肩中俞"
+     },
+     "10": {
+      "value": 7,
+      "zq": 1500,
+      "attr": "bsk",
+      "prob": 50,
+      "name": "肩外俞"
+     },
+     "11": {
+      "value": 21,
+      "zq": 1500,
+      "attr": "avd",
+      "prob": 50,
+      "name": "肩井"
+     },
+     "12": {
+      "value": 8,
+      "zq": 1500,
+      "attr": "bsk",
+      "prob": 30,
+      "name": "天髎"
+     },
+     "13": {
+      "value": 9,
+      "zq": 1500,
+      "attr": "bsk",
+      "prob": 30,
+      "name": "曲垣"
+     },
+     "14": {
+      "value": 25,
+      "zq": 1500,
+      "attr": "avd",
+      "prob": 30,
+      "name": "乘风"
+     },
+     "15": {
+      "value": 10,
+      "zq": 1500,
+      "attr": "bsk",
+      "prob": 30,
+      "name": "天宗"
+     },
+     "16": {
+      "value": 11,
+      "zq": 1500,
+      "attr": "bsk",
+      "prob": 30,
+      "name": "臑俞"
+     },
+     "17": {
+      "value": 30,
+      "zq": 1500,
+      "attr": "avd",
+      "prob": 20,
+      "name": "肩贞"
+     },
+     "18": {
+      "value": 12,
+      "zq": 1500,
+      "attr": "bsk",
+      "prob": 20,
+      "name": "步廊"
+     },
+     "19": {
+      "value": 13,
+      "zq": 1500,
+      "attr": "bsk",
+      "prob": 20,
+      "name": "食窦"
+     },
+     "20": {
+      "value": 34,
+      "zq": 1500,
+      "attr": "avd",
+      "prob": 20,
+      "name": "期门"
+     },
+     "21": {
+      "value": 14,
+      "zq": 1500,
+      "attr": "bsk",
+      "prob": 20,
+      "name": "日月"
+     },
+     "22": {
+      "value": 15,
+      "zq": 1500,
+      "attr": "bsk",
+      "prob": 10,
+      "name": "不容"
+     },
+     "23": {
+      "value": 37,
+      "zq": 1500,
+      "attr": "avd",
+      "prob": 10,
+      "name": "魂门"
+     },
+     "24": {
+      "value": 16,
+      "zq": 1500,
+      "attr": "bsk",
+      "prob": 10,
+      "name": "阳纲"
+     },
+     "25": {
+      "value": 41,
+      "zq": 1500,
+      "attr": "avd",
+      "prob": 10,
+      "name": "意舍"
+     }
+    },
+    "name": "死门"
+   }
+  },
+  "name": "里八门"
+ },
+ "2": {
+  "mai": {
+   "0": {
+    "value": 230,
+    "attr": "maxhp",
+    "desc": "开门居西北干宫，五行属金，干宫门为开门，喻万物开始之意",
+    "pts": {
+     "0": {
+      "value": 18,
+      "zq": 3000,
+      "attr": "maxhp",
+      "prob": 100,
+      "name": "头维"
+     },
+     "1": {
+      "value": 26,
+      "zq": 3000,
+      "attr": "maxhp",
+      "prob": 100,
+      "name": "发际"
+     },
+     "2": {
+      "value": 20,
+      "zq": 3000,
+      "attr": "maxmp",
+      "prob": 100,
+      "name": "阴白"
+     },
+     "3": {
+      "value": 34,
+      "zq": 3000,
+      "attr": "maxhp",
+      "prob": 80,
+      "name": "印堂"
+     },
+     "4": {
+      "value": 40,
+      "zq": 3000,
+      "attr": "maxhp",
+      "prob": 70,
+      "name": "攒竹"
+     },
+     "5": {
+      "value": 43,
+      "zq": 3000,
+      "attr": "maxhp",
+      "prob": 60,
+      "name": "鱼腰"
+     },
+     "6": {
+      "value": 38,
+      "zq": 3000,
+      "attr": "maxmp",
+      "prob": 60,
+      "name": "外明"
+     },
+     "7": {
+      "value": 54,
+      "zq": 3000,
+      "attr": "maxhp",
+      "prob": 50,
+      "name": "晴明"
+     },
+     "8": {
+      "value": 59,
+      "zq": 3000,
+      "attr": "maxhp",
+      "prob": 50,
+      "name": "丝竹"
+     },
+     "9": {
+      "value": 62,
+      "zq": 3000,
+      "attr": "maxhp",
+      "prob": 50,
+      "name": "瞳子髎"
+     },
+     "10": {
+      "value": 68,
+      "zq": 3000,
+      "attr": "maxhp",
+      "prob": 50,
+      "name": "承泣"
+     },
+     "11": {
+      "value": 54,
+      "zq": 3000,
+      "attr": "maxmp",
+      "prob": 50,
+      "name": "球后"
+     },
+     "12": {
+      "value": 76,
+      "zq": 3000,
+      "attr": "maxhp",
+      "prob": 30,
+      "name": "四白"
+     },
+     "13": {
+      "value": 82,
+      "zq": 3000,
+      "attr": "maxhp",
+      "prob": 30,
+      "name": "迎香"
+     },
+     "14": {
+      "value": 88,
+      "zq": 3000,
+      "attr": "maxhp",
+      "prob": 30,
+      "name": "人中"
+     },
+     "15": {
+      "value": 94,
+      "zq": 3000,
+      "attr": "maxhp",
+      "prob": 30,
+      "name": "地仓"
+     },
+     "16": {
+      "value": 71,
+      "zq": 3000,
+      "attr": "maxmp",
+      "prob": 20,
+      "name": "承浆"
+     },
+     "17": {
+      "value": 101,
+      "zq": 3000,
+      "attr": "maxhp",
+      "prob": 20,
+      "name": "前顶"
+     },
+     "18": {
+      "value": 107,
+      "zq": 3000,
+      "attr": "maxhp",
+      "prob": 20,
+      "name": "通天"
+     },
+     "19": {
+      "value": 110,
+      "zq": 3000,
+      "attr": "maxhp",
+      "prob": 20,
+      "name": "上星"
+     },
+     "20": {
+      "value": 115,
+      "zq": 3000,
+      "attr": "maxhp",
+      "prob": 10,
+      "name": "神庭"
+     },
+     "21": {
+      "value": 80,
+      "zq": 3000,
+      "attr": "maxmp",
+      "prob": 10,
+      "name": "承光"
+     },
+     "22": {
+      "value": 125,
+      "zq": 3000,
+      "attr": "maxhp",
+      "prob": 10,
+      "name": "当阳"
+     },
+     "23": {
+      "value": 132,
+      "zq": 3000,
+      "attr": "maxhp",
+      "prob": 10,
+      "name": "五处"
+     }
+    },
+    "name": "开门"
+   },
+   "1": {
+    "value": 192,
+    "attr": "maxhp",
+    "desc": "休门居北方坎宫，五行属水，坎宫门为休门，乃修养生息之地",
+    "pts": {
+     "0": {
+      "value": 12,
+      "zq": 3000,
+      "attr": "maxhp",
+      "prob": 100,
+      "name": "曲差"
+     },
+     "1": {
+      "value": 10,
+      "zq": 3000,
+      "attr": "maxmp",
+      "prob": 100,
+      "name": "眉冲"
+     },
+     "2": {
+      "value": 17,
+      "zq": 3000,
+      "attr": "maxhp",
+      "prob": 100,
+      "name": "素髎"
+     },
+     "3": {
+      "value": 28,
+      "zq": 3000,
+      "attr": "maxhp",
+      "prob": 80,
+      "name": "兑端"
+     },
+     "4": {
+      "value": 17,
+      "zq": 3000,
+      "attr": "maxmp",
+      "prob": 70,
+      "name": "龈交"
+     },
+     "5": {
+      "value": 34,
+      "zq": 3000,
+      "attr": "maxhp",
+      "prob": 70,
+      "name": "上迎香"
+     },
+     "6": {
+      "value": 43,
+      "zq": 3000,
+      "attr": "maxhp",
+      "prob": 60,
+      "name": "百会"
+     },
+     "7": {
+      "value": 49,
+      "zq": 3000,
+      "attr": "maxhp",
+      "prob": 60,
+      "name": "后顶"
+     },
+     "8": {
+      "value": 32,
+      "zq": 3000,
+      "attr": "maxmp",
+      "prob": 50,
+      "name": "风府"
+     },
+     "9": {
+      "value": 54,
+      "zq": 3000,
+      "attr": "maxhp",
+      "prob": 50,
+      "name": "风池"
+     },
+     "10": {
+      "value": 62,
+      "zq": 3000,
+      "attr": "maxhp",
+      "prob": 50,
+      "name": "天柱"
+     },
+     "11": {
+      "value": 66,
+      "zq": 3000,
+      "attr": "maxhp",
+      "prob": 30,
+      "name": "哑门"
+     },
+     "12": {
+      "value": 73,
+      "zq": 3000,
+      "attr": "maxhp",
+      "prob": 30,
+      "name": "太阳"
+     },
+     "13": {
+      "value": 46,
+      "zq": 3000,
+      "attr": "maxmp",
+      "prob": 30,
+      "name": "下关"
+     },
+     "14": {
+      "value": 82,
+      "zq": 3000,
+      "attr": "maxhp",
+      "prob": 20,
+      "name": "客主人"
+     },
+     "15": {
+      "value": 85,
+      "zq": 3000,
+      "attr": "maxhp",
+      "prob": 20,
+      "name": "耳门"
+     },
+     "16": {
+      "value": 91,
+      "zq": 3000,
+      "attr": "maxhp",
+      "prob": 20,
+      "name": "听宫"
+     },
+     "17": {
+      "value": 97,
+      "zq": 3000,
+      "attr": "maxhp",
+      "prob": 10,
+      "name": "翳风"
+     },
+     "18": {
+      "value": 101,
+      "zq": 3000,
+      "attr": "maxhp",
+      "prob": 10,
+      "name": "颊车"
+     },
+     "19": {
+      "value": 54,
+      "zq": 3000,
+      "attr": "maxmp",
+      "prob": 10,
+      "name": "大迎"
+     },
+     "20": {
+      "value": 104,
+      "zq": 3000,
+      "attr": "maxhp",
+      "prob": 10,
+      "name": "人迎"
+     }
+    },
+    "name": "休门"
+   },
+   "2": {
+    "value": 58,
+    "attr": "def",
+    "desc": "生门居北方艮宫，五行属土，艮宫门为生门，为万物复苏之始",
+    "pts": {
+     "0": {
+      "value": 4,
+      "zq": 3000,
+      "attr": "def",
+      "prob": 100,
+      "name": "天突"
+     },
+     "1": {
+      "value": 7,
+      "zq": 3000,
+      "attr": "def",
+      "prob": 100,
+      "name": "璇玑"
+     },
+     "2": {
+      "value": 8,
+      "zq": 3000,
+      "attr": "def",
+      "prob": 100,
+      "name": "华盖"
+     },
+     "3": {
+      "value": 11,
+      "zq": 3000,
+      "attr": "def",
+      "prob": 80,
+      "name": "紫宫"
+     },
+     "4": {
+      "value": 13,
+      "zq": 3000,
+      "attr": "def",
+      "prob": 80,
+      "name": "玉堂"
+     },
+     "5": {
+      "value": 16,
+      "zq": 3000,
+      "attr": "def",
+      "prob": 70,
+      "name": "膻中"
+     },
+     "6": {
+      "value": 18,
+      "zq": 3000,
+      "attr": "def",
+      "prob": 60,
+      "name": "俞府"
+     },
+     "7": {
+      "value": 20,
+      "zq": 3000,
+      "attr": "def",
+      "prob": 60,
+      "name": "或中"
+     },
+     "8": {
+      "value": 22,
+      "zq": 3000,
+      "attr": "def",
+      "prob": 60,
+      "name": "神藏"
+     },
+     "9": {
+      "value": 24,
+      "zq": 3000,
+      "attr": "def",
+      "prob": 50,
+      "name": "灵墟"
+     },
+     "10": {
+      "value": 25,
+      "zq": 3000,
+      "attr": "def",
+      "prob": 50,
+      "name": "神封"
+     },
+     "11": {
+      "value": 28,
+      "zq": 3000,
+      "attr": "def",
+      "prob": 50,
+      "name": "缺盆"
+     },
+     "12": {
+      "value": 29,
+      "zq": 3000,
+      "attr": "def",
+      "prob": 50,
+      "name": "气户"
+     },
+     "13": {
+      "value": 31,
+      "zq": 3000,
+      "attr": "def",
+      "prob": 30,
+      "name": "库房"
+     },
+     "14": {
+      "value": 34,
+      "zq": 3000,
+      "attr": "def",
+      "prob": 30,
+      "name": "屋翳"
+     },
+     "15": {
+      "value": 35,
+      "zq": 3000,
+      "attr": "def",
+      "prob": 30,
+      "name": "赝窗"
+     },
+     "16": {
+      "value": 37,
+      "zq": 3000,
+      "attr": "def",
+      "prob": 30,
+      "name": "天池"
+     },
+     "17": {
+      "value": 38,
+      "zq": 3000,
+      "attr": "def",
+      "prob": 20,
+      "name": "云门"
+     },
+     "18": {
+      "value": 41,
+      "zq": 3000,
+      "attr": "def",
+      "prob": 20,
+      "name": "中府"
+     },
+     "19": {
+      "value": 43,
+      "zq": 3000,
+      "attr": "def",
+      "prob": 20,
+      "name": "周荣"
+     },
+     "20": {
+      "value": 44,
+      "zq": 3000,
+      "attr": "def",
+      "prob": 20,
+      "name": "胸乡"
+     },
+     "21": {
+      "value": 47,
+      "zq": 3000,
+      "attr": "def",
+      "prob": 10,
+      "name": "天溪"
+     },
+     "22": {
+      "value": 48,
+      "zq": 3000,
+      "attr": "def",
+      "prob": 10,
+      "name": "大椎"
+     },
+     "23": {
+      "value": 50,
+      "zq": 3000,
+      "attr": "def",
+      "prob": 10,
+      "name": "陶道"
+     },
+     "24": {
+      "value": 53,
+      "zq": 3000,
+      "attr": "def",
+      "prob": 10,
+      "name": "身柱"
+     }
+    },
+    "name": "生门"
+   },
+   "3": {
+    "value": 58,
+    "attr": "atk",
+    "desc": "伤门居东方震宫，五行属木，震宫门为伤门，属凶门动则易伤",
+    "pts": {
+     "0": {
+      "value": 1,
+      "zq": 3000,
+      "attr": "atk",
+      "prob": 100,
+      "name": "神道"
+     },
+     "1": {
+      "value": 2,
+      "zq": 3000,
+      "attr": "atk",
+      "prob": 100,
+      "name": "灵台"
+     },
+     "2": {
+      "value": 7,
+      "zq": 3000,
+      "attr": "atk",
+      "prob": 80,
+      "name": "至阳"
+     },
+     "3": {
+      "value": 8,
+      "zq": 3000,
+      "attr": "atk",
+      "prob": 80,
+      "name": "大杼"
+     },
+     "4": {
+      "value": 11,
+      "zq": 3000,
+      "attr": "atk",
+      "prob": 70,
+      "name": "肺俞"
+     },
+     "5": {
+      "value": 13,
+      "zq": 3000,
+      "attr": "atk",
+      "prob": 70,
+      "name": "风门"
+     },
+     "6": {
+      "value": 16,
+      "zq": 3000,
+      "attr": "atk",
+      "prob": 60,
+      "name": "中庭"
+     },
+     "7": {
+      "value": 18,
+      "zq": 3000,
+      "attr": "atk",
+      "prob": 60,
+      "name": "鸠尾"
+     },
+     "8": {
+      "value": 20,
+      "zq": 3000,
+      "attr": "atk",
+      "prob": 60,
+      "name": "巨阙"
+     },
+     "9": {
+      "value": 22,
+      "zq": 3000,
+      "attr": "atk",
+      "prob": 50,
+      "name": "上脘"
+     },
+     "10": {
+      "value": 24,
+      "zq": 3000,
+      "attr": "atk",
+      "prob": 50,
+      "name": "中脘"
+     },
+     "11": {
+      "value": 25,
+      "zq": 3000,
+      "attr": "atk",
+      "prob": 50,
+      "name": "幽门"
+     },
+     "12": {
+      "value": 28,
+      "zq": 3000,
+      "attr": "atk",
+      "prob": 50,
+      "name": "腹通谷"
+     },
+     "13": {
+      "value": 29,
+      "zq": 3000,
+      "attr": "atk",
+      "prob": 30,
+      "name": "阴都"
+     },
+     "14": {
+      "value": 31,
+      "zq": 3000,
+      "attr": "atk",
+      "prob": 30,
+      "name": "承满"
+     },
+     "15": {
+      "value": 34,
+      "zq": 3000,
+      "attr": "atk",
+      "prob": 30,
+      "name": "梁门"
+     },
+     "16": {
+      "value": 35,
+      "zq": 3000,
+      "attr": "atk",
+      "prob": 30,
+      "name": "关门"
+     },
+     "17": {
+      "value": 37,
+      "zq": 3000,
+      "attr": "atk",
+      "prob": 30,
+      "name": "腹哀"
+     },
+     "18": {
+      "value": 38,
+      "zq": 3000,
+      "attr": "atk",
+      "prob": 20,
+      "name": "筋缩"
+     },
+     "19": {
+      "value": 41,
+      "zq": 3000,
+      "attr": "atk",
+      "prob": 20,
+      "name": "中枢"
+     },
+     "20": {
+      "value": 43,
+      "zq": 3000,
+      "attr": "atk",
+      "prob": 20,
+      "name": "脊中"
+     },
+     "21": {
+      "value": 44,
+      "zq": 3000,
+      "attr": "atk",
+      "prob": 20,
+      "name": "悬枢"
+     },
+     "22": {
+      "value": 47,
+      "zq": 3000,
+      "attr": "atk",
+      "prob": 10,
+      "name": "肝俞"
+     },
+     "23": {
+      "value": 48,
+      "zq": 3000,
+      "attr": "atk",
+      "prob": 10,
+      "name": "胆俞"
+     },
+     "24": {
+      "value": 50,
+      "zq": 3000,
+      "attr": "atk",
+      "prob": 10,
+      "name": "脾俞"
+     },
+     "25": {
+      "value": 53,
+      "zq": 3000,
+      "attr": "atk",
+      "prob": 10,
+      "name": "胃俞"
+     }
+    },
+    "name": "伤门"
+   },
+   "4": {
+    "value": 58,
+    "attr": "avd",
+    "desc": "杜门居东南巽宫，五行属木，巽宫门为杜门，已藏形避难之方",
+    "pts": {
+     "0": {
+      "value": 4,
+      "zq": 3000,
+      "attr": "avd",
+      "prob": 100,
+      "name": "建里"
+     },
+     "1": {
+      "value": 4,
+      "zq": 3000,
+      "attr": "bsk",
+      "prob": 100,
+      "name": "下脘"
+     },
+     "2": {
+      "value": 8,
+      "zq": 3000,
+      "attr": "avd",
+      "prob": 80,
+      "name": "水分"
+     },
+     "3": {
+      "value": 5,
+      "zq": 3000,
+      "attr": "bsk",
+      "prob": 80,
+      "name": "神阙"
+     },
+     "4": {
+      "value": 11,
+      "zq": 3000,
+      "attr": "avd",
+      "prob": 70,
+      "name": "石关"
+     },
+     "5": {
+      "value": 7,
+      "zq": 3000,
+      "attr": "bsk",
+      "prob": 60,
+      "name": "商曲"
+     },
+     "6": {
+      "value": 14,
+      "zq": 3000,
+      "attr": "avd",
+      "prob": 50,
+      "name": "盲俞"
+     },
+     "7": {
+      "value": 8,
+      "zq": 3000,
+      "attr": "bsk",
+      "prob": 50,
+      "name": "太乙"
+     },
+     "8": {
+      "value": 23,
+      "zq": 3000,
+      "attr": "avd",
+      "prob": 50,
+      "name": "滑肉门"
+     },
+     "9": {
+      "value": 10,
+      "zq": 3000,
+      "attr": "bsk",
+      "prob": 50,
+      "name": "天枢"
+     },
+     "10": {
+      "value": 28,
+      "zq": 3000,
+      "attr": "avd",
+      "prob": 30,
+      "name": "大横"
+     },
+     "11": {
+      "value": 11,
+      "zq": 3000,
+      "attr": "bsk",
+      "prob": 30,
+      "name": "阴交"
+     },
+     "12": {
+      "value": 29,
+      "zq": 3000,
+      "attr": "avd",
+      "prob": 30,
+      "name": "中注"
+     },
+     "13": {
+      "value": 12,
+      "zq": 3000,
+      "attr": "bsk",
+      "prob": 20,
+      "name": "命门"
+     },
+     "14": {
+      "value": 32,
+      "zq": 3000,
+      "attr": "avd",
+      "prob": 20,
+      "name": "腰阳关"
+     },
+     "15": {
+      "value": 13,
+      "zq": 3000,
+      "attr": "bsk",
+      "prob": 20,
+      "name": "三焦俞"
+     },
+     "16": {
+      "value": 37,
+      "zq": 3000,
+      "attr": "avd",
+      "prob": 20,
+      "name": "肾俞"
+     },
+     "17": {
+      "value": 42,
+      "zq": 3000,
+      "attr": "avd",
+      "prob": 10,
+      "name": "气海俞"
+     },
+     "18": {
+      "value": 17,
+      "zq": 3000,
+      "attr": "bsk",
+      "prob": 10,
+      "name": "胃仓"
+     },
+     "19": {
+      "value": 47,
+      "zq": 3000,
+      "attr": "avd",
+      "prob": 10,
+      "name": "盲门"
+     },
+     "20": {
+      "value": 50,
+      "zq": 3000,
+      "attr": "avd",
+      "prob": 10,
+      "name": "志室"
+     }
+    },
+    "name": "杜门"
+   },
+   "5": {
+    "value": 58,
+    "attr": "atk",
+    "desc": "景门居南方离宫，五行属火，离宫门为景门，当日升中天之时",
+    "pts": {
+     "0": {
+      "value": 16,
+      "zq": 3000,
+      "attr": "atk",
+      "prob": 100,
+      "name": "外陵"
+     },
+     "1": {
+      "value": 18,
+      "zq": 3000,
+      "attr": "atk",
+      "prob": 100,
+      "name": "腹结"
+     },
+     "2": {
+      "value": 19,
+      "zq": 3000,
+      "attr": "atk",
+      "prob": 80,
+      "name": "气海"
+     },
+     "3": {
+      "value": 20,
+      "zq": 3000,
+      "attr": "atk",
+      "prob": 70,
+      "name": "石门"
+     },
+     "4": {
+      "value": 22,
+      "zq": 3000,
+      "attr": "atk",
+      "prob": 60,
+      "name": "四满"
+     },
+     "5": {
+      "value": 25,
+      "zq": 3000,
+      "attr": "atk",
+      "prob": 50,
+      "name": "大巨"
+     },
+     "6": {
+      "value": 26,
+      "zq": 3000,
+      "attr": "atk",
+      "prob": 50,
+      "name": "关元"
+     },
+     "7": {
+      "value": 29,
+      "zq": 3000,
+      "attr": "atk",
+      "prob": 50,
+      "name": "气穴"
+     },
+     "8": {
+      "value": 30,
+      "zq": 3000,
+      "attr": "atk",
+      "prob": 50,
+      "name": "水道"
+     },
+     "9": {
+      "value": 31,
+      "zq": 3000,
+      "attr": "atk",
+      "prob": 30,
+      "name": "中极"
+     },
+     "10": {
+      "value": 34,
+      "zq": 3000,
+      "attr": "atk",
+      "prob": 30,
+      "name": "大赫"
+     },
+     "11": {
+      "value": 35,
+      "zq": 3000,
+      "attr": "atk",
+      "prob": 30,
+      "name": "归来"
+     },
+     "12": {
+      "value": 37,
+      "zq": 3000,
+      "attr": "atk",
+      "prob": 20,
+      "name": "府舍"
+     },
+     "13": {
+      "value": 38,
+      "zq": 3000,
+      "attr": "atk",
+      "prob": 20,
+      "name": "曲骨"
+     },
+     "14": {
+      "value": 41,
+      "zq": 3000,
+      "attr": "atk",
+      "prob": 20,
+      "name": "横骨"
+     },
+     "15": {
+      "value": 43,
+      "zq": 3000,
+      "attr": "atk",
+      "prob": 20,
+      "name": "气冲"
+     },
+     "16": {
+      "value": 44,
+      "zq": 3000,
+      "attr": "atk",
+      "prob": 20,
+      "name": "冲门"
+     },
+     "17": {
+      "value": 47,
+      "zq": 3000,
+      "attr": "atk",
+      "prob": 10,
+      "name": "会阴"
+     },
+     "18": {
+      "value": 50,
+      "zq": 3000,
+      "attr": "atk",
+      "prob": 10,
+      "name": "阴廉"
+     },
+     "19": {
+      "value": 54,
+      "zq": 3000,
+      "attr": "atk",
+      "prob": 10,
+      "name": "急脉"
+     },
+     "20": {
+      "value": 58,
+      "zq": 3000,
+      "attr": "atk",
+      "prob": 10,
+      "name": "髀关"
+     }
+    },
+    "name": "景门"
+   },
+   "6": {
+    "value": 76,
+    "attr": "maxmp",
+    "desc": "惊门居西方兑宫，五行属金，兑宫门为惊门，行寒气肃杀之应",
+    "pts": {
+     "0": {
+      "value": 14,
+      "zq": 3000,
+      "attr": "maxmp",
+      "prob": 100,
+      "name": "上髎"
+     },
+     "1": {
+      "value": 20,
+      "zq": 3000,
+      "attr": "maxhp",
+      "prob": 100,
+      "name": "次髎"
+     },
+     "2": {
+      "value": 27,
+      "zq": 3000,
+      "attr": "maxmp",
+      "prob": 80,
+      "name": "中髎"
+     },
+     "3": {
+      "value": 27,
+      "zq": 3000,
+      "attr": "maxhp",
+      "prob": 80,
+      "name": "下髎"
+     },
+     "4": {
+      "value": 34,
+      "zq": 3000,
+      "attr": "maxhp",
+      "prob": 80,
+      "name": "腰俞"
+     },
+     "5": {
+      "value": 42,
+      "zq": 3000,
+      "attr": "maxmp",
+      "prob": 50,
+      "name": "长强"
+     },
+     "6": {
+      "value": 42,
+      "zq": 3000,
+      "attr": "maxhp",
+      "prob": 50,
+      "name": "会阳"
+     },
+     "7": {
+      "value": 49,
+      "zq": 3000,
+      "attr": "maxhp",
+      "prob": 50,
+      "name": "居髎"
+     },
+     "8": {
+      "value": 54,
+      "zq": 3000,
+      "attr": "maxmp",
+      "prob": 30,
+      "name": "环跳"
+     },
+     "9": {
+      "value": 58,
+      "zq": 3000,
+      "attr": "maxhp",
+      "prob": 30,
+      "name": "髀关"
+     },
+     "10": {
+      "value": 69,
+      "zq": 3000,
+      "attr": "maxhp",
+      "prob": 30,
+      "name": "箕门"
+     },
+     "11": {
+      "value": 64,
+      "zq": 3000,
+      "attr": "maxmp",
+      "prob": 20,
+      "name": "血海"
+     },
+     "12": {
+      "value": 78,
+      "zq": 3000,
+      "attr": "maxhp",
+      "prob": 20,
+      "name": "阴包"
+     },
+     "13": {
+      "value": 74,
+      "zq": 3000,
+      "attr": "maxmp",
+      "prob": 20,
+      "name": "曲泉"
+     },
+     "14": {
+      "value": 85,
+      "zq": 3000,
+      "attr": "maxhp",
+      "prob": 10,
+      "name": "阴谷"
+     },
+     "15": {
+      "value": 84,
+      "zq": 3000,
+      "attr": "maxmp",
+      "prob": 10,
+      "name": "阴陵泉"
+     },
+     "16": {
+      "value": 99,
+      "zq": 3000,
+      "attr": "maxhp",
+      "prob": 10,
+      "name": "膝关"
+     }
+    },
+    "name": "惊门"
+   },
+   "7": {
+    "value": 19,
+    "attr": "bsk",
+    "desc": "死门居中西南坤宫，五行属土，坤宫门为死门，主刑戮征战之宜",
+    "pts": {
+     "0": {
+      "value": 2,
+      "zq": 3000,
+      "attr": "bsk",
+      "prob": 100,
+      "name": "厥阴俞"
+     },
+     "1": {
+      "value": 3,
+      "zq": 3000,
+      "attr": "bsk",
+      "prob": 100,
+      "name": "心俞"
+     },
+     "2": {
+      "value": 7,
+      "zq": 3000,
+      "attr": "avd",
+      "prob": 100,
+      "name": "督俞"
+     },
+     "3": {
+      "value": 3,
+      "zq": 3000,
+      "attr": "bsk",
+      "prob": 80,
+      "name": "膈俞"
+     },
+     "4": {
+      "value": 4,
+      "zq": 3000,
+      "attr": "bsk",
+      "prob": 80,
+      "name": "附分"
+     },
+     "5": {
+      "value": 15,
+      "zq": 3000,
+      "attr": "avd",
+      "prob": 70,
+      "name": "魄户"
+     },
+     "6": {
+      "value": 4,
+      "zq": 3000,
+      "attr": "bsk",
+      "prob": 60,
+      "name": "膏盲"
+     },
+     "7": {
+      "value": 6,
+      "zq": 3000,
+      "attr": "bsk",
+      "prob": 60,
+      "name": "神堂"
+     },
+     "8": {
+      "value": 22,
+      "zq": 3000,
+      "attr": "avd",
+      "prob": 50,
+      "name": "膈关"
+     },
+     "9": {
+      "value": 7,
+      "zq": 3000,
+      "attr": "bsk",
+      "prob": 50,
+      "name": "肩中俞"
+     },
+     "10": {
+      "value": 8,
+      "zq": 3000,
+      "attr": "bsk",
+      "prob": 50,
+      "name": "肩外俞"
+     },
+     "11": {
+      "value": 25,
+      "zq": 3000,
+      "attr": "avd",
+      "prob": 50,
+      "name": "肩井"
+     },
+     "12": {
+      "value": 9,
+      "zq": 3000,
+      "attr": "bsk",
+      "prob": 30,
+      "name": "天髎"
+     },
+     "13": {
+      "value": 10,
+      "zq": 3000,
+      "attr": "bsk",
+      "prob": 30,
+      "name": "曲垣"
+     },
+     "14": {
+      "value": 30,
+      "zq": 3000,
+      "attr": "avd",
+      "prob": 30,
+      "name": "乘风"
+     },
+     "15": {
+      "value": 12,
+      "zq": 3000,
+      "attr": "bsk",
+      "prob": 30,
+      "name": "天宗"
+     },
+     "16": {
+      "value": 13,
+      "zq": 3000,
+      "attr": "bsk",
+      "prob": 30,
+      "name": "臑俞"
+     },
+     "17": {
+      "value": 36,
+      "zq": 3000,
+      "attr": "avd",
+      "prob": 20,
+      "name": "肩贞"
+     },
+     "18": {
+      "value": 14,
+      "zq": 3000,
+      "attr": "bsk",
+      "prob": 20,
+      "name": "步廊"
+     },
+     "19": {
+      "value": 15,
+      "zq": 3000,
+      "attr": "bsk",
+      "prob": 20,
+      "name": "食窦"
+     },
+     "20": {
+      "value": 40,
+      "zq": 3000,
+      "attr": "avd",
+      "prob": 20,
+      "name": "期门"
+     },
+     "21": {
+      "value": 16,
+      "zq": 3000,
+      "attr": "bsk",
+      "prob": 20,
+      "name": "日月"
+     },
+     "22": {
+      "value": 18,
+      "zq": 3000,
+      "attr": "bsk",
+      "prob": 10,
+      "name": "不容"
+     },
+     "23": {
+      "value": 44,
+      "zq": 3000,
+      "attr": "avd",
+      "prob": 10,
+      "name": "魂门"
+     },
+     "24": {
+      "value": 19,
+      "zq": 3000,
+      "attr": "bsk",
+      "prob": 10,
+      "name": "阳纲"
+     },
+     "25": {
+      "value": 49,
+      "zq": 3000,
+      "attr": "avd",
+      "prob": 10,
+      "name": "意舍"
+     }
+    },
+    "name": "死门"
+   }
+  },
+  "name": "魂八门"
+ },
+ "3": {
+  "mai": {
+   "0": {
+    "value": 276,
+    "attr": "maxhp",
+    "desc": "开门居西北干宫，五行属金，干宫门为开门，喻万物开始之意",
+    "pts": {
+     "0": {
+      "value": 22,
+      "zq": 10000,
+      "attr": "maxhp",
+      "prob": 100,
+      "name": "头维"
+     },
+     "1": {
+      "value": 31,
+      "zq": 10000,
+      "attr": "maxhp",
+      "prob": 100,
+      "name": "发际"
+     },
+     "2": {
+      "value": 24,
+      "zq": 10000,
+      "attr": "maxmp",
+      "prob": 100,
+      "name": "阴白"
+     },
+     "3": {
+      "value": 41,
+      "zq": 10000,
+      "attr": "maxhp",
+      "prob": 80,
+      "name": "印堂"
+     },
+     "4": {
+      "value": 48,
+      "zq": 10000,
+      "attr": "maxhp",
+      "prob": 70,
+      "name": "攒竹"
+     },
+     "5": {
+      "value": 52,
+      "zq": 10000,
+      "attr": "maxhp",
+      "prob": 60,
+      "name": "鱼腰"
+     },
+     "6": {
+      "value": 46,
+      "zq": 10000,
+      "attr": "maxmp",
+      "prob": 60,
+      "name": "外明"
+     },
+     "7": {
+      "value": 65,
+      "zq": 10000,
+      "attr": "maxhp",
+      "prob": 50,
+      "name": "晴明"
+     },
+     "8": {
+      "value": 71,
+      "zq": 10000,
+      "attr": "maxhp",
+      "prob": 50,
+      "name": "丝竹"
+     },
+     "9": {
+      "value": 74,
+      "zq": 10000,
+      "attr": "maxhp",
+      "prob": 50,
+      "name": "瞳子髎"
+     },
+     "10": {
+      "value": 82,
+      "zq": 10000,
+      "attr": "maxhp",
+      "prob": 50,
+      "name": "承泣"
+     },
+     "11": {
+      "value": 65,
+      "zq": 10000,
+      "attr": "maxmp",
+      "prob": 50,
+      "name": "球后"
+     },
+     "12": {
+      "value": 91,
+      "zq": 10000,
+      "attr": "maxhp",
+      "prob": 30,
+      "name": "四白"
+     },
+     "13": {
+      "value": 98,
+      "zq": 10000,
+      "attr": "maxhp",
+      "prob": 30,
+      "name": "迎香"
+     },
+     "14": {
+      "value": 106,
+      "zq": 10000,
+      "attr": "maxhp",
+      "prob": 30,
+      "name": "人中"
+     },
+     "15": {
+      "value": 113,
+      "zq": 10000,
+      "attr": "maxhp",
+      "prob": 30,
+      "name": "地仓"
+     },
+     "16": {
+      "value": 85,
+      "zq": 10000,
+      "attr": "maxmp",
+      "prob": 20,
+      "name": "承浆"
+     },
+     "17": {
+      "value": 121,
+      "zq": 10000,
+      "attr": "maxhp",
+      "prob": 20,
+      "name": "前顶"
+     },
+     "18": {
+      "value": 128,
+      "zq": 10000,
+      "attr": "maxhp",
+      "prob": 20,
+      "name": "通天"
+     },
+     "19": {
+      "value": 132,
+      "zq": 10000,
+      "attr": "maxhp",
+      "prob": 20,
+      "name": "上星"
+     },
+     "20": {
+      "value": 138,
+      "zq": 10000,
+      "attr": "maxhp",
+      "prob": 10,
+      "name": "神庭"
+     },
+     "21": {
+      "value": 96,
+      "zq": 10000,
+      "attr": "maxmp",
+      "prob": 10,
+      "name": "承光"
+     },
+     "22": {
+      "value": 150,
+      "zq": 10000,
+      "attr": "maxhp",
+      "prob": 10,
+      "name": "当阳"
+     },
+     "23": {
+      "value": 158,
+      "zq": 10000,
+      "attr": "maxhp",
+      "prob": 10,
+      "name": "五处"
+     }
+    },
+    "name": "开门"
+   },
+   "1": {
+    "value": 230,
+    "attr": "maxhp",
+    "desc": "休门居北方坎宫，五行属水，坎宫门为休门，乃修养生息之地",
+    "pts": {
+     "0": {
+      "value": 14,
+      "zq": 10000,
+      "attr": "maxhp",
+      "prob": 100,
+      "name": "曲差"
+     },
+     "1": {
+      "value": 12,
+      "zq": 10000,
+      "attr": "maxmp",
+      "prob": 100,
+      "name": "眉冲"
+     },
+     "2": {
+      "value": 20,
+      "zq": 10000,
+      "attr": "maxhp",
+      "prob": 100,
+      "name": "素髎"
+     },
+     "3": {
+      "value": 34,
+      "zq": 10000,
+      "attr": "maxhp",
+      "prob": 80,
+      "name": "兑端"
+     },
+     "4": {
+      "value": 20,
+      "zq": 10000,
+      "attr": "maxmp",
+      "prob": 70,
+      "name": "龈交"
+     },
+     "5": {
+      "value": 41,
+      "zq": 10000,
+      "attr": "maxhp",
+      "prob": 70,
+      "name": "上迎香"
+     },
+     "6": {
+      "value": 52,
+      "zq": 10000,
+      "attr": "maxhp",
+      "prob": 60,
+      "name": "百会"
+     },
+     "7": {
+      "value": 59,
+      "zq": 10000,
+      "attr": "maxhp",
+      "prob": 60,
+      "name": "后顶"
+     },
+     "8": {
+      "value": 38,
+      "zq": 10000,
+      "attr": "maxmp",
+      "prob": 50,
+      "name": "风府"
+     },
+     "9": {
+      "value": 65,
+      "zq": 10000,
+      "attr": "maxhp",
+      "prob": 50,
+      "name": "风池"
+     },
+     "10": {
+      "value": 74,
+      "zq": 10000,
+      "attr": "maxhp",
+      "prob": 50,
+      "name": "天柱"
+     },
+     "11": {
+      "value": 79,
+      "zq": 10000,
+      "attr": "maxhp",
+      "prob": 30,
+      "name": "哑门"
+     },
+     "12": {
+      "value": 88,
+      "zq": 10000,
+      "attr": "maxhp",
+      "prob": 30,
+      "name": "太阳"
+     },
+     "13": {
+      "value": 55,
+      "zq": 10000,
+      "attr": "maxmp",
+      "prob": 30,
+      "name": "下关"
+     },
+     "14": {
+      "value": 98,
+      "zq": 10000,
+      "attr": "maxhp",
+      "prob": 20,
+      "name": "客主人"
+     },
+     "15": {
+      "value": 102,
+      "zq": 10000,
+      "attr": "maxhp",
+      "prob": 20,
+      "name": "耳门"
+     },
+     "16": {
+      "value": 109,
+      "zq": 10000,
+      "attr": "maxhp",
+      "prob": 20,
+      "name": "听宫"
+     },
+     "17": {
+      "value": 116,
+      "zq": 10000,
+      "attr": "maxhp",
+      "prob": 10,
+      "name": "翳风"
+     },
+     "18": {
+      "value": 121,
+      "zq": 10000,
+      "attr": "maxhp",
+      "prob": 10,
+      "name": "颊车"
+     },
+     "19": {
+      "value": 65,
+      "zq": 10000,
+      "attr": "maxmp",
+      "prob": 10,
+      "name": "大迎"
+     },
+     "20": {
+      "value": 125,
+      "zq": 10000,
+      "attr": "maxhp",
+      "prob": 10,
+      "name": "人迎"
+     }
+    },
+    "name": "休门"
+   },
+   "2": {
+    "value": 70,
+    "attr": "def",
+    "desc": "生门居北方艮宫，五行属土，艮宫门为生门，为万物复苏之始",
+    "pts": {
+     "0": {
+      "value": 5,
+      "zq": 10000,
+      "attr": "def",
+      "prob": 100,
+      "name": "天突"
+     },
+     "1": {
+      "value": 8,
+      "zq": 10000,
+      "attr": "def",
+      "prob": 100,
+      "name": "璇玑"
+     },
+     "2": {
+      "value": 10,
+      "zq": 10000,
+      "attr": "def",
+      "prob": 100,
+      "name": "华盖"
+     },
+     "3": {
+      "value": 13,
+      "zq": 10000,
+      "attr": "def",
+      "prob": 80,
+      "name": "紫宫"
+     },
+     "4": {
+      "value": 16,
+      "zq": 10000,
+      "attr": "def",
+      "prob": 80,
+      "name": "玉堂"
+     },
+     "5": {
+      "value": 19,
+      "zq": 10000,
+      "attr": "def",
+      "prob": 70,
+      "name": "膻中"
+     },
+     "6": {
+      "value": 22,
+      "zq": 10000,
+      "attr": "def",
+      "prob": 60,
+      "name": "俞府"
+     },
+     "7": {
+      "value": 24,
+      "zq": 10000,
+      "attr": "def",
+      "prob": 60,
+      "name": "或中"
+     },
+     "8": {
+      "value": 26,
+      "zq": 10000,
+      "attr": "def",
+      "prob": 60,
+      "name": "神藏"
+     },
+     "9": {
+      "value": 29,
+      "zq": 10000,
+      "attr": "def",
+      "prob": 50,
+      "name": "灵墟"
+     },
+     "10": {
+      "value": 30,
+      "zq": 10000,
+      "attr": "def",
+      "prob": 50,
+      "name": "神封"
+     },
+     "11": {
+      "value": 34,
+      "zq": 10000,
+      "attr": "def",
+      "prob": 50,
+      "name": "缺盆"
+     },
+     "12": {
+      "value": 35,
+      "zq": 10000,
+      "attr": "def",
+      "prob": 50,
+      "name": "气户"
+     },
+     "13": {
+      "value": 37,
+      "zq": 10000,
+      "attr": "def",
+      "prob": 30,
+      "name": "库房"
+     },
+     "14": {
+      "value": 41,
+      "zq": 10000,
+      "attr": "def",
+      "prob": 30,
+      "name": "屋翳"
+     },
+     "15": {
+      "value": 42,
+      "zq": 10000,
+      "attr": "def",
+      "prob": 30,
+      "name": "赝窗"
+     },
+     "16": {
+      "value": 44,
+      "zq": 10000,
+      "attr": "def",
+      "prob": 30,
+      "name": "天池"
+     },
+     "17": {
+      "value": 46,
+      "zq": 10000,
+      "attr": "def",
+      "prob": 20,
+      "name": "云门"
+     },
+     "18": {
+      "value": 49,
+      "zq": 10000,
+      "attr": "def",
+      "prob": 20,
+      "name": "中府"
+     },
+     "19": {
+      "value": 52,
+      "zq": 10000,
+      "attr": "def",
+      "prob": 20,
+      "name": "周荣"
+     },
+     "20": {
+      "value": 53,
+      "zq": 10000,
+      "attr": "def",
+      "prob": 20,
+      "name": "胸乡"
+     },
+     "21": {
+      "value": 56,
+      "zq": 10000,
+      "attr": "def",
+      "prob": 10,
+      "name": "天溪"
+     },
+     "22": {
+      "value": 58,
+      "zq": 10000,
+      "attr": "def",
+      "prob": 10,
+      "name": "大椎"
+     },
+     "23": {
+      "value": 60,
+      "zq": 10000,
+      "attr": "def",
+      "prob": 10,
+      "name": "陶道"
+     },
+     "24": {
+      "value": 64,
+      "zq": 10000,
+      "attr": "def",
+      "prob": 10,
+      "name": "身柱"
+     }
+    },
+    "name": "生门"
+   },
+   "3": {
+    "value": 70,
+    "attr": "atk",
+    "desc": "伤门居东方震宫，五行属木，震宫门为伤门，属凶门动则易伤",
+    "pts": {
+     "0": {
+      "value": 1,
+      "zq": 10000,
+      "attr": "atk",
+      "prob": 100,
+      "name": "神道"
+     },
+     "1": {
+      "value": 2,
+      "zq": 10000,
+      "attr": "atk",
+      "prob": 100,
+      "name": "灵台"
+     },
+     "2": {
+      "value": 8,
+      "zq": 10000,
+      "attr": "atk",
+      "prob": 80,
+      "name": "至阳"
+     },
+     "3": {
+      "value": 10,
+      "zq": 10000,
+      "attr": "atk",
+      "prob": 80,
+      "name": "大杼"
+     },
+     "4": {
+      "value": 13,
+      "zq": 10000,
+      "attr": "atk",
+      "prob": 70,
+      "name": "肺俞"
+     },
+     "5": {
+      "value": 16,
+      "zq": 10000,
+      "attr": "atk",
+      "prob": 70,
+      "name": "风门"
+     },
+     "6": {
+      "value": 19,
+      "zq": 10000,
+      "attr": "atk",
+      "prob": 60,
+      "name": "中庭"
+     },
+     "7": {
+      "value": 22,
+      "zq": 10000,
+      "attr": "atk",
+      "prob": 60,
+      "name": "鸠尾"
+     },
+     "8": {
+      "value": 24,
+      "zq": 10000,
+      "attr": "atk",
+      "prob": 60,
+      "name": "巨阙"
+     },
+     "9": {
+      "value": 26,
+      "zq": 10000,
+      "attr": "atk",
+      "prob": 50,
+      "name": "上脘"
+     },
+     "10": {
+      "value": 29,
+      "zq": 10000,
+      "attr": "atk",
+      "prob": 50,
+      "name": "中脘"
+     },
+     "11": {
+      "value": 30,
+      "zq": 10000,
+      "attr": "atk",
+      "prob": 50,
+      "name": "幽门"
+     },
+     "12": {
+      "value": 34,
+      "zq": 10000,
+      "attr": "atk",
+      "prob": 50,
+      "name": "腹通谷"
+     },
+     "13": {
+      "value": 35,
+      "zq": 10000,
+      "attr": "atk",
+      "prob": 30,
+      "name": "阴都"
+     },
+     "14": {
+      "value": 37,
+      "zq": 10000,
+      "attr": "atk",
+      "prob": 30,
+      "name": "承满"
+     },
+     "15": {
+      "value": 41,
+      "zq": 10000,
+      "attr": "atk",
+      "prob": 30,
+      "name": "梁门"
+     },
+     "16": {
+      "value": 42,
+      "zq": 10000,
+      "attr": "atk",
+      "prob": 30,
+      "name": "关门"
+     },
+     "17": {
+      "value": 44,
+      "zq": 10000,
+      "attr": "atk",
+      "prob": 30,
+      "name": "腹哀"
+     },
+     "18": {
+      "value": 46,
+      "zq": 10000,
+      "attr": "atk",
+      "prob": 20,
+      "name": "筋缩"
+     },
+     "19": {
+      "value": 49,
+      "zq": 10000,
+      "attr": "atk",
+      "prob": 20,
+      "name": "中枢"
+     },
+     "20": {
+      "value": 52,
+      "zq": 10000,
+      "attr": "atk",
+      "prob": 20,
+      "name": "脊中"
+     },
+     "21": {
+      "value": 53,
+      "zq": 10000,
+      "attr": "atk",
+      "prob": 20,
+      "name": "悬枢"
+     },
+     "22": {
+      "value": 56,
+      "zq": 10000,
+      "attr": "atk",
+      "prob": 10,
+      "name": "肝俞"
+     },
+     "23": {
+      "value": 58,
+      "zq": 10000,
+      "attr": "atk",
+      "prob": 10,
+      "name": "胆俞"
+     },
+     "24": {
+      "value": 60,
+      "zq": 10000,
+      "attr": "atk",
+      "prob": 10,
+      "name": "脾俞"
+     },
+     "25": {
+      "value": 64,
+      "zq": 10000,
+      "attr": "atk",
+      "prob": 10,
+      "name": "胃俞"
+     }
+    },
+    "name": "伤门"
+   },
+   "4": {
+    "value": 70,
+    "attr": "avd",
+    "desc": "杜门居东南巽宫，五行属木，巽宫门为杜门，已藏形避难之方",
+    "pts": {
+     "0": {
+      "value": 5,
+      "zq": 10000,
+      "attr": "avd",
+      "prob": 100,
+      "name": "建里"
+     },
+     "1": {
+      "value": 5,
+      "zq": 10000,
+      "attr": "bsk",
+      "prob": 100,
+      "name": "下脘"
+     },
+     "2": {
+      "value": 10,
+      "zq": 10000,
+      "attr": "avd",
+      "prob": 80,
+      "name": "水分"
+     },
+     "3": {
+      "value": 6,
+      "zq": 10000,
+      "attr": "bsk",
+      "prob": 80,
+      "name": "神阙"
+     },
+     "4": {
+      "value": 13,
+      "zq": 10000,
+      "attr": "avd",
+      "prob": 70,
+      "name": "石关"
+     },
+     "5": {
+      "value": 8,
+      "zq": 10000,
+      "attr": "bsk",
+      "prob": 60,
+      "name": "商曲"
+     },
+     "6": {
+      "value": 17,
+      "zq": 10000,
+      "attr": "avd",
+      "prob": 50,
+      "name": "盲俞"
+     },
+     "7": {
+      "value": 10,
+      "zq": 10000,
+      "attr": "bsk",
+      "prob": 50,
+      "name": "太乙"
+     },
+     "8": {
+      "value": 28,
+      "zq": 10000,
+      "attr": "avd",
+      "prob": 50,
+      "name": "滑肉门"
+     },
+     "9": {
+      "value": 12,
+      "zq": 10000,
+      "attr": "bsk",
+      "prob": 50,
+      "name": "天枢"
+     },
+     "10": {
+      "value": 34,
+      "zq": 10000,
+      "attr": "avd",
+      "prob": 30,
+      "name": "大横"
+     },
+     "11": {
+      "value": 13,
+      "zq": 10000,
+      "attr": "bsk",
+      "prob": 30,
+      "name": "阴交"
+     },
+     "12": {
+      "value": 35,
+      "zq": 10000,
+      "attr": "avd",
+      "prob": 30,
+      "name": "中注"
+     },
+     "13": {
+      "value": 14,
+      "zq": 10000,
+      "attr": "bsk",
+      "prob": 20,
+      "name": "命门"
+     },
+     "14": {
+      "value": 38,
+      "zq": 10000,
+      "attr": "avd",
+      "prob": 20,
+      "name": "腰阳关"
+     },
+     "15": {
+      "value": 16,
+      "zq": 10000,
+      "attr": "bsk",
+      "prob": 20,
+      "name": "三焦俞"
+     },
+     "16": {
+      "value": 44,
+      "zq": 10000,
+      "attr": "avd",
+      "prob": 20,
+      "name": "肾俞"
+     },
+     "17": {
+      "value": 50,
+      "zq": 10000,
+      "attr": "avd",
+      "prob": 10,
+      "name": "气海俞"
+     },
+     "18": {
+      "value": 20,
+      "zq": 10000,
+      "attr": "bsk",
+      "prob": 10,
+      "name": "胃仓"
+     },
+     "19": {
+      "value": 56,
+      "zq": 10000,
+      "attr": "avd",
+      "prob": 10,
+      "name": "盲门"
+     },
+     "20": {
+      "value": 60,
+      "zq": 10000,
+      "attr": "avd",
+      "prob": 10,
+      "name": "志室"
+     }
+    },
+    "name": "杜门"
+   },
+   "5": {
+    "value": 70,
+    "attr": "atk",
+    "desc": "景门居南方离宫，五行属火，离宫门为景门，当日升中天之时",
+    "pts": {
+     "0": {
+      "value": 19,
+      "zq": 10000,
+      "attr": "atk",
+      "prob": 100,
+      "name": "外陵"
+     },
+     "1": {
+      "value": 22,
+      "zq": 10000,
+      "attr": "atk",
+      "prob": 100,
+      "name": "腹结"
+     },
+     "2": {
+      "value": 23,
+      "zq": 10000,
+      "attr": "atk",
+      "prob": 80,
+      "name": "气海"
+     },
+     "3": {
+      "value": 24,
+      "zq": 10000,
+      "attr": "atk",
+      "prob": 70,
+      "name": "石门"
+     },
+     "4": {
+      "value": 26,
+      "zq": 10000,
+      "attr": "atk",
+      "prob": 60,
+      "name": "四满"
+     },
+     "5": {
+      "value": 30,
+      "zq": 10000,
+      "attr": "atk",
+      "prob": 50,
+      "name": "大巨"
+     },
+     "6": {
+      "value": 31,
+      "zq": 10000,
+      "attr": "atk",
+      "prob": 50,
+      "name": "关元"
+     },
+     "7": {
+      "value": 35,
+      "zq": 10000,
+      "attr": "atk",
+      "prob": 50,
+      "name": "气穴"
+     },
+     "8": {
+      "value": 36,
+      "zq": 10000,
+      "attr": "atk",
+      "prob": 50,
+      "name": "水道"
+     },
+     "9": {
+      "value": 37,
+      "zq": 10000,
+      "attr": "atk",
+      "prob": 30,
+      "name": "中极"
+     },
+     "10": {
+      "value": 41,
+      "zq": 10000,
+      "attr": "atk",
+      "prob": 30,
+      "name": "大赫"
+     },
+     "11": {
+      "value": 42,
+      "zq": 10000,
+      "attr": "atk",
+      "prob": 30,
+      "name": "归来"
+     },
+     "12": {
+      "value": 44,
+      "zq": 10000,
+      "attr": "atk",
+      "prob": 20,
+      "name": "府舍"
+     },
+     "13": {
+      "value": 46,
+      "zq": 10000,
+      "attr": "atk",
+      "prob": 20,
+      "name": "曲骨"
+     },
+     "14": {
+      "value": 49,
+      "zq": 10000,
+      "attr": "atk",
+      "prob": 20,
+      "name": "横骨"
+     },
+     "15": {
+      "value": 52,
+      "zq": 10000,
+      "attr": "atk",
+      "prob": 20,
+      "name": "气冲"
+     },
+     "16": {
+      "value": 53,
+      "zq": 10000,
+      "attr": "atk",
+      "prob": 20,
+      "name": "冲门"
+     },
+     "17": {
+      "value": 56,
+      "zq": 10000,
+      "attr": "atk",
+      "prob": 10,
+      "name": "会阴"
+     },
+     "18": {
+      "value": 60,
+      "zq": 10000,
+      "attr": "atk",
+      "prob": 10,
+      "name": "阴廉"
+     },
+     "19": {
+      "value": 65,
+      "zq": 10000,
+      "attr": "atk",
+      "prob": 10,
+      "name": "急脉"
+     },
+     "20": {
+      "value": 70,
+      "zq": 10000,
+      "attr": "atk",
+      "prob": 10,
+      "name": "髀关"
+     }
+    },
+    "name": "景门"
+   },
+   "6": {
+    "value": 91,
+    "attr": "maxmp",
+    "desc": "惊门居西方兑宫，五行属金，兑宫门为惊门，行寒气肃杀之应",
+    "pts": {
+     "0": {
+      "value": 16,
+      "zq": 10000,
+      "attr": "maxmp",
+      "prob": 100,
+      "name": "上髎"
+     },
+     "1": {
+      "value": 24,
+      "zq": 10000,
+      "attr": "maxhp",
+      "prob": 100,
+      "name": "次髎"
+     },
+     "2": {
+      "value": 32,
+      "zq": 10000,
+      "attr": "maxmp",
+      "prob": 80,
+      "name": "中髎"
+     },
+     "3": {
+      "value": 32,
+      "zq": 10000,
+      "attr": "maxhp",
+      "prob": 80,
+      "name": "下髎"
+     },
+     "4": {
+      "value": 40,
+      "zq": 10000,
+      "attr": "maxhp",
+      "prob": 80,
+      "name": "腰俞"
+     },
+     "5": {
+      "value": 50,
+      "zq": 10000,
+      "attr": "maxmp",
+      "prob": 50,
+      "name": "长强"
+     },
+     "6": {
+      "value": 50,
+      "zq": 10000,
+      "attr": "maxhp",
+      "prob": 50,
+      "name": "会阳"
+     },
+     "7": {
+      "value": 58,
+      "zq": 10000,
+      "attr": "maxhp",
+      "prob": 50,
+      "name": "居髎"
+     },
+     "8": {
+      "value": 64,
+      "zq": 10000,
+      "attr": "maxmp",
+      "prob": 30,
+      "name": "环跳"
+     },
+     "9": {
+      "value": 69,
+      "zq": 10000,
+      "attr": "maxhp",
+      "prob": 30,
+      "name": "髀关"
+     },
+     "10": {
+      "value": 82,
+      "zq": 10000,
+      "attr": "maxhp",
+      "prob": 30,
+      "name": "箕门"
+     },
+     "11": {
+      "value": 76,
+      "zq": 10000,
+      "attr": "maxmp",
+      "prob": 20,
+      "name": "血海"
+     },
+     "12": {
+      "value": 93,
+      "zq": 10000,
+      "attr": "maxhp",
+      "prob": 20,
+      "name": "阴包"
+     },
+     "13": {
+      "value": 88,
+      "zq": 10000,
+      "attr": "maxmp",
+      "prob": 20,
+      "name": "曲泉"
+     },
+     "14": {
+      "value": 102,
+      "zq": 10000,
+      "attr": "maxhp",
+      "prob": 10,
+      "name": "阴谷"
+     },
+     "15": {
+      "value": 100,
+      "zq": 10000,
+      "attr": "maxmp",
+      "prob": 10,
+      "name": "阴陵泉"
+     },
+     "16": {
+      "value": 118,
+      "zq": 10000,
+      "attr": "maxhp",
+      "prob": 10,
+      "name": "膝关"
+     }
+    },
+    "name": "惊门"
+   },
+   "7": {
+    "value": 22,
+    "attr": "bsk",
+    "desc": "死门居中西南坤宫，五行属土，坤宫门为死门，主刑戮征战之宜",
+    "pts": {
+     "0": {
+      "value": 2,
+      "zq": 10000,
+      "attr": "bsk",
+      "prob": 100,
+      "name": "厥阴俞"
+     },
+     "1": {
+      "value": 3,
+      "zq": 10000,
+      "attr": "bsk",
+      "prob": 100,
+      "name": "心俞"
+     },
+     "2": {
+      "value": 8,
+      "zq": 10000,
+      "attr": "avd",
+      "prob": 100,
+      "name": "督俞"
+     },
+     "3": {
+      "value": 3,
+      "zq": 10000,
+      "attr": "bsk",
+      "prob": 80,
+      "name": "膈俞"
+     },
+     "4": {
+      "value": 4,
+      "zq": 10000,
+      "attr": "bsk",
+      "prob": 80,
+      "name": "附分"
+     },
+     "5": {
+      "value": 18,
+      "zq": 10000,
+      "attr": "avd",
+      "prob": 70,
+      "name": "魄户"
+     },
+     "6": {
+      "value": 4,
+      "zq": 10000,
+      "attr": "bsk",
+      "prob": 60,
+      "name": "膏盲"
+     },
+     "7": {
+      "value": 7,
+      "zq": 10000,
+      "attr": "bsk",
+      "prob": 60,
+      "name": "神堂"
+     },
+     "8": {
+      "value": 26,
+      "zq": 10000,
+      "attr": "avd",
+      "prob": 50,
+      "name": "膈关"
+     },
+     "9": {
+      "value": 8,
+      "zq": 10000,
+      "attr": "bsk",
+      "prob": 50,
+      "name": "肩中俞"
+     },
+     "10": {
+      "value": 9,
+      "zq": 10000,
+      "attr": "bsk",
+      "prob": 50,
+      "name": "肩外俞"
+     },
+     "11": {
+      "value": 30,
+      "zq": 10000,
+      "attr": "avd",
+      "prob": 50,
+      "name": "肩井"
+     },
+     "12": {
+      "value": 10,
+      "zq": 10000,
+      "attr": "bsk",
+      "prob": 30,
+      "name": "天髎"
+     },
+     "13": {
+      "value": 12,
+      "zq": 10000,
+      "attr": "bsk",
+      "prob": 30,
+      "name": "曲垣"
+     },
+     "14": {
+      "value": 36,
+      "zq": 10000,
+      "attr": "avd",
+      "prob": 30,
+      "name": "乘风"
+     },
+     "15": {
+      "value": 14,
+      "zq": 10000,
+      "attr": "bsk",
+      "prob": 30,
+      "name": "天宗"
+     },
+     "16": {
+      "value": 15,
+      "zq": 10000,
+      "attr": "bsk",
+      "prob": 30,
+      "name": "臑俞"
+     },
+     "17": {
+      "value": 43,
+      "zq": 10000,
+      "attr": "avd",
+      "prob": 20,
+      "name": "肩贞"
+     },
+     "18": {
+      "value": 16,
+      "zq": 10000,
+      "attr": "bsk",
+      "prob": 20,
+      "name": "步廊"
+     },
+     "19": {
+      "value": 18,
+      "zq": 10000,
+      "attr": "bsk",
+      "prob": 20,
+      "name": "食窦"
+     },
+     "20": {
+      "value": 48,
+      "zq": 10000,
+      "attr": "avd",
+      "prob": 20,
+      "name": "期门"
+     },
+     "21": {
+      "value": 19,
+      "zq": 10000,
+      "attr": "bsk",
+      "prob": 20,
+      "name": "日月"
+     },
+     "22": {
+      "value": 21,
+      "zq": 10000,
+      "attr": "bsk",
+      "prob": 10,
+      "name": "不容"
+     },
+     "23": {
+      "value": 52,
+      "zq": 10000,
+      "attr": "avd",
+      "prob": 10,
+      "name": "魂门"
+     },
+     "24": {
+      "value": 22,
+      "zq": 10000,
+      "attr": "bsk",
+      "prob": 10,
+      "name": "阳纲"
+     },
+     "25": {
+      "value": 58,
+      "zq": 10000,
+      "attr": "avd",
+      "prob": 10,
+      "name": "意舍"
+     }
+    },
+    "name": "死门"
+   }
+  },
+  "name": "印八门"
+ },
+ "4": {
+  "mai": {
+   "0": {
+    "value": 278,
+    "attr": "maxhp",
+    "desc": "开门居西北干宫，五行属金，干宫门为开门，喻万物开始之意",
+    "pts": {
+     "0": {
+      "value": 24,
+      "zq": 50000,
+      "attr": "maxhp",
+      "prob": 100,
+      "name": "头维"
+     },
+     "1": {
+      "value": 33,
+      "zq": 50000,
+      "attr": "maxhp",
+      "prob": 100,
+      "name": "发际"
+     },
+     "2": {
+      "value": 26,
+      "zq": 50000,
+      "attr": "maxmp",
+      "prob": 100,
+      "name": "阴白"
+     },
+     "3": {
+      "value": 43,
+      "zq": 50000,
+      "attr": "maxhp",
+      "prob": 80,
+      "name": "印堂"
+     },
+     "4": {
+      "value": 50,
+      "zq": 50000,
+      "attr": "maxhp",
+      "prob": 70,
+      "name": "攒竹"
+     },
+     "5": {
+      "value": 54,
+      "zq": 50000,
+      "attr": "maxhp",
+      "prob": 60,
+      "name": "鱼腰"
+     },
+     "6": {
+      "value": 48,
+      "zq": 50000,
+      "attr": "maxmp",
+      "prob": 60,
+      "name": "外明"
+     },
+     "7": {
+      "value": 67,
+      "zq": 50000,
+      "attr": "maxhp",
+      "prob": 50,
+      "name": "晴明"
+     },
+     "8": {
+      "value": 73,
+      "zq": 50000,
+      "attr": "maxhp",
+      "prob": 50,
+      "name": "丝竹"
+     },
+     "9": {
+      "value": 76,
+      "zq": 50000,
+      "attr": "maxhp",
+      "prob": 50,
+      "name": "瞳子髎"
+     },
+     "10": {
+      "value": 84,
+      "zq": 50000,
+      "attr": "maxhp",
+      "prob": 50,
+      "name": "承泣"
+     },
+     "11": {
+      "value": 67,
+      "zq": 50000,
+      "attr": "maxmp",
+      "prob": 50,
+      "name": "球后"
+     },
+     "12": {
+      "value": 93,
+      "zq": 50000,
+      "attr": "maxhp",
+      "prob": 30,
+      "name": "四白"
+     },
+     "13": {
+      "value": 100,
+      "zq": 50000,
+      "attr": "maxhp",
+      "prob": 30,
+      "name": "迎香"
+     },
+     "14": {
+      "value": 108,
+      "zq": 50000,
+      "attr": "maxhp",
+      "prob": 30,
+      "name": "人中"
+     },
+     "15": {
+      "value": 115,
+      "zq": 50000,
+      "attr": "maxhp",
+      "prob": 30,
+      "name": "地仓"
+     },
+     "16": {
+      "value": 87,
+      "zq": 50000,
+      "attr": "maxmp",
+      "prob": 20,
+      "name": "承浆"
+     },
+     "17": {
+      "value": 123,
+      "zq": 50000,
+      "attr": "maxhp",
+      "prob": 20,
+      "name": "前顶"
+     },
+     "18": {
+      "value": 130,
+      "zq": 50000,
+      "attr": "maxhp",
+      "prob": 20,
+      "name": "通天"
+     },
+     "19": {
+      "value": 134,
+      "zq": 50000,
+      "attr": "maxhp",
+      "prob": 20,
+      "name": "上星"
+     },
+     "20": {
+      "value": 140,
+      "zq": 50000,
+      "attr": "maxhp",
+      "prob": 10,
+      "name": "神庭"
+     },
+     "21": {
+      "value": 98,
+      "zq": 50000,
+      "attr": "maxmp",
+      "prob": 10,
+      "name": "承光"
+     },
+     "22": {
+      "value": 152,
+      "zq": 50000,
+      "attr": "maxhp",
+      "prob": 10,
+      "name": "当阳"
+     },
+     "23": {
+      "value": 160,
+      "zq": 50000,
+      "attr": "maxhp",
+      "prob": 10,
+      "name": "五处"
+     }
+    },
+    "name": "开门"
+   },
+   "1": {
+    "value": 232,
+    "attr": "maxhp",
+    "desc": "休门居北方坎宫，五行属水，坎宫门为休门，乃修养生息之地",
+    "pts": {
+     "0": {
+      "value": 16,
+      "zq": 50000,
+      "attr": "maxhp",
+      "prob": 100,
+      "name": "曲差"
+     },
+     "1": {
+      "value": 14,
+      "zq": 50000,
+      "attr": "maxmp",
+      "prob": 100,
+      "name": "眉冲"
+     },
+     "2": {
+      "value": 22,
+      "zq": 50000,
+      "attr": "maxhp",
+      "prob": 100,
+      "name": "素髎"
+     },
+     "3": {
+      "value": 36,
+      "zq": 50000,
+      "attr": "maxhp",
+      "prob": 80,
+      "name": "兑端"
+     },
+     "4": {
+      "value": 22,
+      "zq": 50000,
+      "attr": "maxmp",
+      "prob": 70,
+      "name": "龈交"
+     },
+     "5": {
+      "value": 43,
+      "zq": 50000,
+      "attr": "maxhp",
+      "prob": 70,
+      "name": "上迎香"
+     },
+     "6": {
+      "value": 54,
+      "zq": 50000,
+      "attr": "maxhp",
+      "prob": 60,
+      "name": "百会"
+     },
+     "7": {
+      "value": 61,
+      "zq": 50000,
+      "attr": "maxhp",
+      "prob": 60,
+      "name": "后顶"
+     },
+     "8": {
+      "value": 40,
+      "zq": 50000,
+      "attr": "maxmp",
+      "prob": 50,
+      "name": "风府"
+     },
+     "9": {
+      "value": 67,
+      "zq": 50000,
+      "attr": "maxhp",
+      "prob": 50,
+      "name": "风池"
+     },
+     "10": {
+      "value": 76,
+      "zq": 50000,
+      "attr": "maxhp",
+      "prob": 50,
+      "name": "天柱"
+     },
+     "11": {
+      "value": 81,
+      "zq": 50000,
+      "attr": "maxhp",
+      "prob": 30,
+      "name": "哑门"
+     },
+     "12": {
+      "value": 90,
+      "zq": 50000,
+      "attr": "maxhp",
+      "prob": 30,
+      "name": "太阳"
+     },
+     "13": {
+      "value": 57,
+      "zq": 50000,
+      "attr": "maxmp",
+      "prob": 30,
+      "name": "下关"
+     },
+     "14": {
+      "value": 100,
+      "zq": 50000,
+      "attr": "maxhp",
+      "prob": 20,
+      "name": "客主人"
+     },
+     "15": {
+      "value": 104,
+      "zq": 50000,
+      "attr": "maxhp",
+      "prob": 20,
+      "name": "耳门"
+     },
+     "16": {
+      "value": 111,
+      "zq": 50000,
+      "attr": "maxhp",
+      "prob": 20,
+      "name": "听宫"
+     },
+     "17": {
+      "value": 118,
+      "zq": 50000,
+      "attr": "maxhp",
+      "prob": 10,
+      "name": "翳风"
+     },
+     "18": {
+      "value": 123,
+      "zq": 50000,
+      "attr": "maxhp",
+      "prob": 10,
+      "name": "颊车"
+     },
+     "19": {
+      "value": 67,
+      "zq": 50000,
+      "attr": "maxmp",
+      "prob": 10,
+      "name": "大迎"
+     },
+     "20": {
+      "value": 127,
+      "zq": 50000,
+      "attr": "maxhp",
+      "prob": 10,
+      "name": "人迎"
+     }
+    },
+    "name": "休门"
+   },
+   "2": {
+    "value": 72,
+    "attr": "def",
+    "desc": "生门居北方艮宫，五行属土，艮宫门为生门，为万物复苏之始",
+    "pts": {
+     "0": {
+      "value": 7,
+      "zq": 50000,
+      "attr": "def",
+      "prob": 100,
+      "name": "天突"
+     },
+     "1": {
+      "value": 10,
+      "zq": 50000,
+      "attr": "def",
+      "prob": 100,
+      "name": "璇玑"
+     },
+     "2": {
+      "value": 12,
+      "zq": 50000,
+      "attr": "def",
+      "prob": 100,
+      "name": "华盖"
+     },
+     "3": {
+      "value": 15,
+      "zq": 50000,
+      "attr": "def",
+      "prob": 80,
+      "name": "紫宫"
+     },
+     "4": {
+      "value": 18,
+      "zq": 50000,
+      "attr": "def",
+      "prob": 80,
+      "name": "玉堂"
+     },
+     "5": {
+      "value": 21,
+      "zq": 50000,
+      "attr": "def",
+      "prob": 70,
+      "name": "膻中"
+     },
+     "6": {
+      "value": 24,
+      "zq": 50000,
+      "attr": "def",
+      "prob": 60,
+      "name": "俞府"
+     },
+     "7": {
+      "value": 26,
+      "zq": 50000,
+      "attr": "def",
+      "prob": 60,
+      "name": "或中"
+     },
+     "8": {
+      "value": 28,
+      "zq": 50000,
+      "attr": "def",
+      "prob": 60,
+      "name": "神藏"
+     },
+     "9": {
+      "value": 31,
+      "zq": 50000,
+      "attr": "def",
+      "prob": 50,
+      "name": "灵墟"
+     },
+     "10": {
+      "value": 32,
+      "zq": 50000,
+      "attr": "def",
+      "prob": 50,
+      "name": "神封"
+     },
+     "11": {
+      "value": 36,
+      "zq": 50000,
+      "attr": "def",
+      "prob": 50,
+      "name": "缺盆"
+     },
+     "12": {
+      "value": 37,
+      "zq": 50000,
+      "attr": "def",
+      "prob": 50,
+      "name": "气户"
+     },
+     "13": {
+      "value": 39,
+      "zq": 50000,
+      "attr": "def",
+      "prob": 30,
+      "name": "库房"
+     },
+     "14": {
+      "value": 43,
+      "zq": 50000,
+      "attr": "def",
+      "prob": 30,
+      "name": "屋翳"
+     },
+     "15": {
+      "value": 44,
+      "zq": 50000,
+      "attr": "def",
+      "prob": 30,
+      "name": "赝窗"
+     },
+     "16": {
+      "value": 46,
+      "zq": 50000,
+      "attr": "def",
+      "prob": 30,
+      "name": "天池"
+     },
+     "17": {
+      "value": 48,
+      "zq": 50000,
+      "attr": "def",
+      "prob": 20,
+      "name": "云门"
+     },
+     "18": {
+      "value": 51,
+      "zq": 50000,
+      "attr": "def",
+      "prob": 20,
+      "name": "中府"
+     },
+     "19": {
+      "value": 54,
+      "zq": 50000,
+      "attr": "def",
+      "prob": 20,
+      "name": "周荣"
+     },
+     "20": {
+      "value": 55,
+      "zq": 50000,
+      "attr": "def",
+      "prob": 20,
+      "name": "胸乡"
+     },
+     "21": {
+      "value": 58,
+      "zq": 50000,
+      "attr": "def",
+      "prob": 10,
+      "name": "天溪"
+     },
+     "22": {
+      "value": 60,
+      "zq": 50000,
+      "attr": "def",
+      "prob": 10,
+      "name": "大椎"
+     },
+     "23": {
+      "value": 62,
+      "zq": 50000,
+      "attr": "def",
+      "prob": 10,
+      "name": "陶道"
+     },
+     "24": {
+      "value": 66,
+      "zq": 50000,
+      "attr": "def",
+      "prob": 10,
+      "name": "身柱"
+     }
+    },
+    "name": "生门"
+   },
+   "3": {
+    "value": 80,
+    "attr": "atk",
+    "desc": "伤门居东方震宫，五行属木，震宫门为伤门，属凶门动则易伤",
+    "pts": {
+     "0": {
+      "value": 3,
+      "zq": 50000,
+      "attr": "atk",
+      "prob": 100,
+      "name": "神道"
+     },
+     "1": {
+      "value": 4,
+      "zq": 50000,
+      "attr": "atk",
+      "prob": 100,
+      "name": "灵台"
+     },
+     "2": {
+      "value": 10,
+      "zq": 50000,
+      "attr": "atk",
+      "prob": 80,
+      "name": "至阳"
+     },
+     "3": {
+      "value": 12,
+      "zq": 50000,
+      "attr": "atk",
+      "prob": 80,
+      "name": "大杼"
+     },
+     "4": {
+      "value": 15,
+      "zq": 50000,
+      "attr": "atk",
+      "prob": 70,
+      "name": "肺俞"
+     },
+     "5": {
+      "value": 18,
+      "zq": 50000,
+      "attr": "atk",
+      "prob": 70,
+      "name": "风门"
+     },
+     "6": {
+      "value": 22,
+      "zq": 50000,
+      "attr": "atk",
+      "prob": 60,
+      "name": "中庭"
+     },
+     "7": {
+      "value": 24,
+      "zq": 50000,
+      "attr": "atk",
+      "prob": 60,
+      "name": "鸠尾"
+     },
+     "8": {
+      "value": 26,
+      "zq": 50000,
+      "attr": "atk",
+      "prob": 60,
+      "name": "巨阙"
+     },
+     "9": {
+      "value": 28,
+      "zq": 50000,
+      "attr": "atk",
+      "prob": 50,
+      "name": "上脘"
+     },
+     "10": {
+      "value": 31,
+      "zq": 50000,
+      "attr": "atk",
+      "prob": 50,
+      "name": "中脘"
+     },
+     "11": {
+      "value": 32,
+      "zq": 50000,
+      "attr": "atk",
+      "prob": 50,
+      "name": "幽门"
+     },
+     "12": {
+      "value": 36,
+      "zq": 50000,
+      "attr": "atk",
+      "prob": 50,
+      "name": "腹通谷"
+     },
+     "13": {
+      "value": 37,
+      "zq": 50000,
+      "attr": "atk",
+      "prob": 30,
+      "name": "阴都"
+     },
+     "14": {
+      "value": 39,
+      "zq": 50000,
+      "attr": "atk",
+      "prob": 30,
+      "name": "承满"
+     },
+     "15": {
+      "value": 42,
+      "zq": 50000,
+      "attr": "atk",
+      "prob": 30,
+      "name": "梁门"
+     },
+     "16": {
+      "value": 44,
+      "zq": 50000,
+      "attr": "atk",
+      "prob": 30,
+      "name": "关门"
+     },
+     "17": {
+      "value": 46,
+      "zq": 50000,
+      "attr": "atk",
+      "prob": 30,
+      "name": "腹哀"
+     },
+     "18": {
+      "value": 48,
+      "zq": 50000,
+      "attr": "atk",
+      "prob": 20,
+      "name": "筋缩"
+     },
+     "19": {
+      "value": 51,
+      "zq": 50000,
+      "attr": "atk",
+      "prob": 20,
+      "name": "中枢"
+     },
+     "20": {
+      "value": 54,
+      "zq": 50000,
+      "attr": "atk",
+      "prob": 20,
+      "name": "脊中"
+     },
+     "21": {
+      "value": 55,
+      "zq": 50000,
+      "attr": "atk",
+      "prob": 20,
+      "name": "悬枢"
+     },
+     "22": {
+      "value": 58,
+      "zq": 50000,
+      "attr": "atk",
+      "prob": 10,
+      "name": "肝俞"
+     },
+     "23": {
+      "value": 60,
+      "zq": 50000,
+      "attr": "atk",
+      "prob": 10,
+      "name": "胆俞"
+     },
+     "24": {
+      "value": 62,
+      "zq": 50000,
+      "attr": "atk",
+      "prob": 10,
+      "name": "脾俞"
+     },
+     "25": {
+      "value": 66,
+      "zq": 50000,
+      "attr": "atk",
+      "prob": 10,
+      "name": "胃俞"
+     }
+    },
+    "name": "伤门"
+   },
+   "4": {
+    "value": 72,
+    "attr": "avd",
+    "desc": "杜门居东南巽宫，五行属木，巽宫门为杜门，已藏形避难之方",
+    "pts": {
+     "0": {
+      "value": 7,
+      "zq": 50000,
+      "attr": "avd",
+      "prob": 100,
+      "name": "建里"
+     },
+     "1": {
+      "value": 7,
+      "zq": 50000,
+      "attr": "bsk",
+      "prob": 100,
+      "name": "下脘"
+     },
+     "2": {
+      "value": 12,
+      "zq": 50000,
+      "attr": "avd",
+      "prob": 80,
+      "name": "水分"
+     },
+     "3": {
+      "value": 8,
+      "zq": 50000,
+      "attr": "bsk",
+      "prob": 80,
+      "name": "神阙"
+     },
+     "4": {
+      "value": 15,
+      "zq": 50000,
+      "attr": "avd",
+      "prob": 70,
+      "name": "石关"
+     },
+     "5": {
+      "value": 10,
+      "zq": 50000,
+      "attr": "bsk",
+      "prob": 60,
+      "name": "商曲"
+     },
+     "6": {
+      "value": 19,
+      "zq": 50000,
+      "attr": "avd",
+      "prob": 50,
+      "name": "盲俞"
+     },
+     "7": {
+      "value": 12,
+      "zq": 50000,
+      "attr": "bsk",
+      "prob": 50,
+      "name": "太乙"
+     },
+     "8": {
+      "value": 30,
+      "zq": 50000,
+      "attr": "avd",
+      "prob": 50,
+      "name": "滑肉门"
+     },
+     "9": {
+      "value": 14,
+      "zq": 50000,
+      "attr": "bsk",
+      "prob": 50,
+      "name": "天枢"
+     },
+     "10": {
+      "value": 36,
+      "zq": 50000,
+      "attr": "avd",
+      "prob": 30,
+      "name": "大横"
+     },
+     "11": {
+      "value": 15,
+      "zq": 50000,
+      "attr": "bsk",
+      "prob": 30,
+      "name": "阴交"
+     },
+     "12": {
+      "value": 37,
+      "zq": 50000,
+      "attr": "avd",
+      "prob": 30,
+      "name": "中注"
+     },
+     "13": {
+      "value": 16,
+      "zq": 50000,
+      "attr": "bsk",
+      "prob": 20,
+      "name": "命门"
+     },
+     "14": {
+      "value": 40,
+      "zq": 50000,
+      "attr": "avd",
+      "prob": 20,
+      "name": "腰阳关"
+     },
+     "15": {
+      "value": 18,
+      "zq": 50000,
+      "attr": "bsk",
+      "prob": 20,
+      "name": "三焦俞"
+     },
+     "16": {
+      "value": 46,
+      "zq": 50000,
+      "attr": "avd",
+      "prob": 20,
+      "name": "肾俞"
+     },
+     "17": {
+      "value": 52,
+      "zq": 50000,
+      "attr": "avd",
+      "prob": 10,
+      "name": "气海俞"
+     },
+     "18": {
+      "value": 22,
+      "zq": 50000,
+      "attr": "bsk",
+      "prob": 10,
+      "name": "胃仓"
+     },
+     "19": {
+      "value": 58,
+      "zq": 50000,
+      "attr": "avd",
+      "prob": 10,
+      "name": "盲门"
+     },
+     "20": {
+      "value": 62,
+      "zq": 50000,
+      "attr": "avd",
+      "prob": 10,
+      "name": "志室"
+     }
+    },
+    "name": "杜门"
+   },
+   "5": {
+    "value": 72,
+    "attr": "atk",
+    "desc": "景门居南方离宫，五行属火，离宫门为景门，当日升中天之时",
+    "pts": {
+     "0": {
+      "value": 21,
+      "zq": 50000,
+      "attr": "atk",
+      "prob": 100,
+      "name": "外陵"
+     },
+     "1": {
+      "value": 24,
+      "zq": 50000,
+      "attr": "atk",
+      "prob": 100,
+      "name": "腹结"
+     },
+     "2": {
+      "value": 25,
+      "zq": 50000,
+      "attr": "atk",
+      "prob": 80,
+      "name": "气海"
+     },
+     "3": {
+      "value": 26,
+      "zq": 50000,
+      "attr": "atk",
+      "prob": 70,
+      "name": "石门"
+     },
+     "4": {
+      "value": 28,
+      "zq": 50000,
+      "attr": "atk",
+      "prob": 60,
+      "name": "四满"
+     },
+     "5": {
+      "value": 32,
+      "zq": 50000,
+      "attr": "atk",
+      "prob": 50,
+      "name": "大巨"
+     },
+     "6": {
+      "value": 33,
+      "zq": 50000,
+      "attr": "atk",
+      "prob": 50,
+      "name": "关元"
+     },
+     "7": {
+      "value": 37,
+      "zq": 50000,
+      "attr": "atk",
+      "prob": 50,
+      "name": "气穴"
+     },
+     "8": {
+      "value": 38,
+      "zq": 50000,
+      "attr": "atk",
+      "prob": 50,
+      "name": "水道"
+     },
+     "9": {
+      "value": 39,
+      "zq": 50000,
+      "attr": "atk",
+      "prob": 30,
+      "name": "中极"
+     },
+     "10": {
+      "value": 43,
+      "zq": 50000,
+      "attr": "atk",
+      "prob": 30,
+      "name": "大赫"
+     },
+     "11": {
+      "value": 44,
+      "zq": 50000,
+      "attr": "atk",
+      "prob": 30,
+      "name": "归来"
+     },
+     "12": {
+      "value": 46,
+      "zq": 50000,
+      "attr": "atk",
+      "prob": 20,
+      "name": "府舍"
+     },
+     "13": {
+      "value": 48,
+      "zq": 50000,
+      "attr": "atk",
+      "prob": 20,
+      "name": "曲骨"
+     },
+     "14": {
+      "value": 51,
+      "zq": 50000,
+      "attr": "atk",
+      "prob": 20,
+      "name": "横骨"
+     },
+     "15": {
+      "value": 54,
+      "zq": 50000,
+      "attr": "atk",
+      "prob": 20,
+      "name": "气冲"
+     },
+     "16": {
+      "value": 55,
+      "zq": 50000,
+      "attr": "atk",
+      "prob": 20,
+      "name": "冲门"
+     },
+     "17": {
+      "value": 58,
+      "zq": 50000,
+      "attr": "atk",
+      "prob": 10,
+      "name": "会阴"
+     },
+     "18": {
+      "value": 62,
+      "zq": 50000,
+      "attr": "atk",
+      "prob": 10,
+      "name": "阴廉"
+     },
+     "19": {
+      "value": 67,
+      "zq": 50000,
+      "attr": "atk",
+      "prob": 10,
+      "name": "急脉"
+     },
+     "20": {
+      "value": 72,
+      "zq": 50000,
+      "attr": "atk",
+      "prob": 10,
+      "name": "髀关"
+     }
+    },
+    "name": "景门"
+   },
+   "6": {
+    "value": 93,
+    "attr": "maxmp",
+    "desc": "惊门居西方兑宫，五行属金，兑宫门为惊门，行寒气肃杀之应",
+    "pts": {
+     "0": {
+      "value": 18,
+      "zq": 50000,
+      "attr": "maxmp",
+      "prob": 100,
+      "name": "上髎"
+     },
+     "1": {
+      "value": 26,
+      "zq": 50000,
+      "attr": "maxhp",
+      "prob": 100,
+      "name": "次髎"
+     },
+     "2": {
+      "value": 34,
+      "zq": 50000,
+      "attr": "maxmp",
+      "prob": 80,
+      "name": "中髎"
+     },
+     "3": {
+      "value": 34,
+      "zq": 50000,
+      "attr": "maxhp",
+      "prob": 80,
+      "name": "下髎"
+     },
+     "4": {
+      "value": 42,
+      "zq": 50000,
+      "attr": "maxhp",
+      "prob": 80,
+      "name": "腰俞"
+     },
+     "5": {
+      "value": 52,
+      "zq": 50000,
+      "attr": "maxmp",
+      "prob": 50,
+      "name": "长强"
+     },
+     "6": {
+      "value": 52,
+      "zq": 50000,
+      "attr": "maxhp",
+      "prob": 50,
+      "name": "会阳"
+     },
+     "7": {
+      "value": 60,
+      "zq": 50000,
+      "attr": "maxhp",
+      "prob": 50,
+      "name": "居髎"
+     },
+     "8": {
+      "value": 66,
+      "zq": 50000,
+      "attr": "maxmp",
+      "prob": 30,
+      "name": "环跳"
+     },
+     "9": {
+      "value": 71,
+      "zq": 50000,
+      "attr": "maxhp",
+      "prob": 30,
+      "name": "髀关"
+     },
+     "10": {
+      "value": 84,
+      "zq": 50000,
+      "attr": "maxhp",
+      "prob": 30,
+      "name": "箕门"
+     },
+     "11": {
+      "value": 78,
+      "zq": 50000,
+      "attr": "maxmp",
+      "prob": 20,
+      "name": "血海"
+     },
+     "12": {
+      "value": 95,
+      "zq": 50000,
+      "attr": "maxhp",
+      "prob": 20,
+      "name": "阴包"
+     },
+     "13": {
+      "value": 90,
+      "zq": 50000,
+      "attr": "maxmp",
+      "prob": 20,
+      "name": "曲泉"
+     },
+     "14": {
+      "value": 104,
+      "zq": 50000,
+      "attr": "maxhp",
+      "prob": 10,
+      "name": "阴谷"
+     },
+     "15": {
+      "value": 102,
+      "zq": 50000,
+      "attr": "maxmp",
+      "prob": 10,
+      "name": "阴陵泉"
+     },
+     "16": {
+      "value": 120,
+      "zq": 50000,
+      "attr": "maxhp",
+      "prob": 10,
+      "name": "膝关"
+     }
+    },
+    "name": "惊门"
+   },
+   "7": {
+    "value": 24,
+    "attr": "bsk",
+    "desc": "死门居中西南坤宫，五行属土，坤宫门为死门，主刑戮征战之宜",
+    "pts": {
+     "0": {
+      "value": 4,
+      "zq": 50000,
+      "attr": "bsk",
+      "prob": 100,
+      "name": "厥阴俞"
+     },
+     "1": {
+      "value": 5,
+      "zq": 50000,
+      "attr": "bsk",
+      "prob": 100,
+      "name": "心俞"
+     },
+     "2": {
+      "value": 10,
+      "zq": 50000,
+      "attr": "avd",
+      "prob": 100,
+      "name": "督俞"
+     },
+     "3": {
+      "value": 5,
+      "zq": 50000,
+      "attr": "bsk",
+      "prob": 80,
+      "name": "膈俞"
+     },
+     "4": {
+      "value": 6,
+      "zq": 50000,
+      "attr": "bsk",
+      "prob": 80,
+      "name": "附分"
+     },
+     "5": {
+      "value": 20,
+      "zq": 50000,
+      "attr": "avd",
+      "prob": 70,
+      "name": "魄户"
+     },
+     "6": {
+      "value": 6,
+      "zq": 50000,
+      "attr": "bsk",
+      "prob": 60,
+      "name": "膏盲"
+     },
+     "7": {
+      "value": 9,
+      "zq": 50000,
+      "attr": "bsk",
+      "prob": 60,
+      "name": "神堂"
+     },
+     "8": {
+      "value": 28,
+      "zq": 50000,
+      "attr": "avd",
+      "prob": 50,
+      "name": "膈关"
+     },
+     "9": {
+      "value": 10,
+      "zq": 50000,
+      "attr": "bsk",
+      "prob": 50,
+      "name": "肩中俞"
+     },
+     "10": {
+      "value": 11,
+      "zq": 50000,
+      "attr": "bsk",
+      "prob": 50,
+      "name": "肩外俞"
+     },
+     "11": {
+      "value": 32,
+      "zq": 50000,
+      "attr": "avd",
+      "prob": 50,
+      "name": "肩井"
+     },
+     "12": {
+      "value": 12,
+      "zq": 50000,
+      "attr": "bsk",
+      "prob": 30,
+      "name": "天髎"
+     },
+     "13": {
+      "value": 14,
+      "zq": 50000,
+      "attr": "bsk",
+      "prob": 30,
+      "name": "曲垣"
+     },
+     "14": {
+      "value": 38,
+      "zq": 50000,
+      "attr": "avd",
+      "prob": 30,
+      "name": "乘风"
+     },
+     "15": {
+      "value": 16,
+      "zq": 50000,
+      "attr": "bsk",
+      "prob": 30,
+      "name": "天宗"
+     },
+     "16": {
+      "value": 17,
+      "zq": 50000,
+      "attr": "bsk",
+      "prob": 30,
+      "name": "臑俞"
+     },
+     "17": {
+      "value": 45,
+      "zq": 50000,
+      "attr": "avd",
+      "prob": 20,
+      "name": "肩贞"
+     },
+     "18": {
+      "value": 18,
+      "zq": 50000,
+      "attr": "bsk",
+      "prob": 20,
+      "name": "步廊"
+     },
+     "19": {
+      "value": 20,
+      "zq": 50000,
+      "attr": "bsk",
+      "prob": 20,
+      "name": "食窦"
+     },
+     "20": {
+      "value": 50,
+      "zq": 50000,
+      "attr": "avd",
+      "prob": 20,
+      "name": "期门"
+     },
+     "21": {
+      "value": 21,
+      "zq": 50000,
+      "attr": "bsk",
+      "prob": 20,
+      "name": "日月"
+     },
+     "22": {
+      "value": 23,
+      "zq": 50000,
+      "attr": "bsk",
+      "prob": 10,
+      "name": "不容"
+     },
+     "23": {
+      "value": 54,
+      "zq": 50000,
+      "attr": "avd",
+      "prob": 10,
+      "name": "魂门"
+     },
+     "24": {
+      "value": 24,
+      "zq": 50000,
+      "attr": "bsk",
+      "prob": 10,
+      "name": "阳纲"
+     },
+     "25": {
+      "value": 60,
+      "zq": 50000,
+      "attr": "avd",
+      "prob": 10,
+      "name": "意舍"
+     }
+    },
+    "name": "死门"
+   }
+  },
+  "name": "仙八门"
+ },
+ "info": {
+  "levelup": {
+   "1": {
+    "zq": 10000,
+    "prob": 100,
+    "item": {
+     "id": 16000027,
+     "count": 9
+    }
+   },
+   "2": {
+    "zq": 10000,
+    "prob": 100,
+    "item": {
+     "id": 16000027,
+     "count": 18
+    }
+   },
+   "3": {
+    "zq": 50000,
+    "prob": 100,
+    "item": {
+     "id": 16000027,
+     "count": 36
+    }
+   },
+   "4": {
+    "zq": 50000,
+    "prob": 100,
+    "item": {
+     "id": 16000027,
+     "count": 188
+    }
+   }
+  },
+  "itemid": 16000001,
+  "itemprob": 5
+ },
+ "_客户端点序": {
+  "开门": [
+   "头维",
+   "发际",
+   "阴白",
+   "印堂",
+   "攒竹",
+   "鱼腰",
+   "外明",
+   "晴明",
+   "丝竹",
+   "瞳子髎",
+   "承泣",
+   "球后",
+   "四白",
+   "迎香",
+   "人中",
+   "地仓",
+   "承浆",
+   "前顶",
+   "通天",
+   "上星",
+   "神庭",
+   "承光",
+   "当阳",
+   "五处"
+  ],
+  "休门": [
+   "曲差",
+   "眉冲",
+   "素髎",
+   "兑端",
+   "龈交",
+   "上迎香",
+   "百会",
+   "后顶",
+   "风府",
+   "风池",
+   "天柱",
+   "哑门",
+   "太阳",
+   "下关",
+   "客主人",
+   "耳门",
+   "听宫",
+   "翳风",
+   "颊车",
+   "大迎",
+   "人迎"
+  ],
+  "生门": [
+   "天突",
+   "璇玑",
+   "华盖",
+   "紫宫",
+   "玉堂",
+   "膻中",
+   "俞府",
+   "或中",
+   "神藏",
+   "灵墟",
+   "神封",
+   "缺盆",
+   "气户",
+   "库房",
+   "屋翳",
+   "赝窗",
+   "天池",
+   "云门",
+   "中府",
+   "周荣",
+   "胸乡",
+   "天溪",
+   "大椎",
+   "陶道",
+   "身柱"
+  ],
+  "伤门": [
+   "神道",
+   "灵台",
+   "至阳",
+   "大杼",
+   "肺俞",
+   "风门",
+   "中庭",
+   "鸠尾",
+   "巨阙",
+   "上脘",
+   "中脘",
+   "幽门",
+   "腹通谷",
+   "阴都",
+   "承满",
+   "梁门",
+   "关门",
+   "腹哀",
+   "筋缩",
+   "中枢",
+   "脊中",
+   "悬枢",
+   "肝俞",
+   "胆俞",
+   "脾俞",
+   "胃俞"
+  ],
+  "杜门": [
+   "建里",
+   "下脘",
+   "水分",
+   "神阙",
+   "石关",
+   "商曲",
+   "盲俞",
+   "太乙",
+   "滑肉门",
+   "天枢",
+   "大横",
+   "阴交",
+   "中注",
+   "命门",
+   "腰阳关",
+   "三焦俞",
+   "肾俞",
+   "气海俞",
+   "胃仓",
+   "盲门",
+   "志室"
+  ],
+  "景门": [
+   "外陵",
+   "腹结",
+   "气海",
+   "石门",
+   "四满",
+   "大巨",
+   "关元",
+   "气穴",
+   "水道",
+   "中极",
+   "大赫",
+   "归来",
+   "府舍",
+   "曲骨",
+   "横骨",
+   "气冲",
+   "冲门",
+   "会阴",
+   "阴廉",
+   "急脉",
+   "髀关"
+  ],
+  "惊门": [
+   "上髎",
+   "次髎",
+   "中髎",
+   "下髎",
+   "腰俞",
+   "长强",
+   "会阳",
+   "居髎",
+   "环跳",
+   "髀关",
+   "箕门",
+   "血海",
+   "阴包",
+   "曲泉",
+   "阴谷",
+   "阴陵泉",
+   "膝关"
+  ],
+  "死门": [
+   "厥阴俞",
+   "心俞",
+   "督俞",
+   "膈俞",
+   "附分",
+   "魄户",
+   "膏盲",
+   "神堂",
+   "膈关",
+   "肩中俞",
+   "肩外俞",
+   "肩井",
+   "天髎",
+   "曲垣",
+   "乘风",
+   "天宗",
+   "臑俞",
+   "肩贞",
+   "步廊",
+   "食窦",
+   "期门",
+   "日月",
+   "不容",
+   "魂门",
+   "阳纲",
+   "意舍"
+  ]
+ },
+ "_客户端点序_出处": "配置键序（`pts` 的 0..N）＝原版 `for each` 对数值键的升序枚举；由 开发工具/导出八门点序.py 生成 —— 下标 = 发给服务端的 point_id",
+ "_客户端点序_说明": "**配置键序**（`pts` 的 \"0\"..\"N\"）—— 原版 `JingMaiSource.getMaiPointSource` 用 `for each` 遍历 `pts`，AS3 对象里**数值键按升序**枚举 ⇒ `pointId` 就是配置键号，玩家看到的**第一枚就是 `pts[0]`（开门=头维）**。⚠️ 2026-10-17 更正：本表原先是\"Ruffle 的动态属性哈希序\"（开门第 0 位是攒竹），与用户实机（原版第一枚＝**头维**）不符 ⇒ 已改成配置键序；服务端那张 `MAI_POINT_ORDER_BY_COUNT` 同步停用。"
+}

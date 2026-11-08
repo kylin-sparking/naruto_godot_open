@@ -1,0 +1,1352 @@
+{
+ "101": {
+  "buff_desc": "",
+  "desc": "【主动技能】在通灵兽出战时使用，对战斗目标进行近身攻击造成一定伤害",
+  "icon": {
+   "origin": {
+    "x": 17,
+    "y": 17
+   },
+   "value": {
+    "className": "Skill_PetSkill_101_icon",
+    "swfName": "Skill_PetSkill_101"
+   },
+   "z": 0
+  },
+  "info": {
+   "consume": {
+    "mpBase": 2
+   },
+   "cool_down": {
+    "cdBase": 1.12
+   },
+   "desc": {
+    "range": 1,
+    "skillType": 0,
+    "target": 1
+   },
+   "open": {
+    "reqBook": "7000044",
+    "reqLevel": 1
+   },
+   "type_attack": {
+    "effect": {
+     "timeBase": 0,
+     "timeLevel": 0,
+     "type": "attack",
+     "valueBase": 40,
+     "valueLevel": 1.3
+    },
+    "trigger": {
+     "probBase": 100,
+     "probLevel": 0
+    }
+   }
+  },
+  "name": "猛击"
+ },
+ "102": {
+  "buff_desc": "",
+  "desc": "【主动技能】在通灵兽出战时使用，对战斗目标进行远端攻击造成一定伤害",
+  "icon": {
+   "origin": {
+    "x": 17,
+    "y": 17
+   },
+   "value": {
+    "className": "Skill_PetSkill_102_icon",
+    "swfName": "Skill_PetSkill_102"
+   },
+   "z": 0
+  },
+  "info": {
+   "consume": {
+    "mpBase": 2
+   },
+   "cool_down": {
+    "cdBase": 1.12
+   },
+   "desc": {
+    "range": 2,
+    "skillType": 0,
+    "target": 1
+   },
+   "open": {
+    "reqBook": "7000045",
+    "reqLevel": 1
+   },
+   "type_attack": {
+    "effect": {
+     "timeBase": "0",
+     "timeLevel": 0,
+     "type": "attack",
+     "valueBase": 10,
+     "valueLevel": 1
+    },
+    "trigger": {
+     "probBase": 100,
+     "probLevel": 0
+    }
+   }
+  },
+  "name": "追牙"
+ },
+ "103": {
+  "buff_desc": "",
+  "desc": "【主动技能】在通灵兽出战时使用，对多个目标进行大范围的群体攻击",
+  "icon": {
+   "origin": {
+    "x": 17,
+    "y": 17
+   },
+   "value": {
+    "className": "Skill_PetSkill_103_icon",
+    "swfName": "Skill_PetSkill_103"
+   },
+   "z": 0
+  },
+  "info": {
+   "consume": {
+    "mpBase": 2
+   },
+   "cool_down": {
+    "cdBase": 1.379
+   },
+   "desc": {
+    "range": 3,
+    "skillType": 0,
+    "target": 2
+   },
+   "open": {
+    "reqBook": "7000046",
+    "reqLevel": 1
+   },
+   "type_attack": {
+    "effect": {
+     "timeBase": "0",
+     "timeLevel": 0,
+     "type": "attack",
+     "valueBase": -40,
+     "valueLevel": 0.7
+    },
+    "trigger": {
+     "probBase": 100,
+     "probLevel": 0
+    }
+   }
+  },
+  "name": "连弹旋风"
+ },
+ "104": {
+  "buff_desc": "",
+  "desc": "【主动技能】在通灵兽出战时使用，使用该技能后通灵兽可以为饲主恢复一定生命值",
+  "icon": {
+   "origin": {
+    "x": 17,
+    "y": 17
+   },
+   "value": {
+    "className": "Skill_PetSkill_104_icon",
+    "swfName": "Skill_PetSkill_104"
+   },
+   "z": 0
+  },
+  "info": {
+   "client": {
+    "forPlayer": 1
+   },
+   "consume": {
+    "mpBase": 2
+   },
+   "cool_down": {
+    "cdBase": 60
+   },
+   "desc": {
+    "range": 2,
+    "skillType": 0,
+    "target": 1
+   },
+   "open": {
+    "reqBook": "7000047",
+    "reqLevel": 1
+   },
+   "type_attack": {
+    "effect": {
+     "timeBase": "0",
+     "timeLevel": 0,
+     "type": "cure_hp",
+     "valueBase": 50,
+     "valueLevel": ""
+    },
+    "trigger": {
+     "probBase": 100,
+     "probLevel": 0
+    }
+   }
+  },
+  "name": "伤愈消元"
+ },
+ "105": {
+  "buff_desc": "",
+  "desc": "【主动技能】在通灵兽出战时使用，使用该技能后通灵兽可以为饲主恢复一定查克拉",
+  "icon": {
+   "origin": {
+    "x": 17,
+    "y": 17
+   },
+   "value": {
+    "className": "Skill_PetSkill_105_icon",
+    "swfName": "Skill_PetSkill_105"
+   },
+   "z": 0
+  },
+  "info": {
+   "client": {
+    "forPlayer": 1
+   },
+   "consume": {
+    "mpBase": 2
+   },
+   "cool_down": {
+    "cdBase": 60
+   },
+   "desc": {
+    "range": 2,
+    "skillType": 0,
+    "target": 1
+   },
+   "open": {
+    "reqBook": "7000048",
+    "reqLevel": 1
+   },
+   "type_attack": {
+    "effect": {
+     "timeBase": "0",
+     "timeLevel": 0,
+     "type": "cure_mp",
+     "valueBase": 50,
+     "valueLevel": ""
+    },
+    "trigger": {
+     "probBase": 100,
+     "probLevel": 0
+    }
+   }
+  },
+  "name": "查克拉再造"
+ },
+ "106": {
+  "buff_desc": "暴击降低valueTotal%，持续时间duration秒",
+  "desc": "【被动技能】通灵兽出战时随机自动施放，有几率在战斗中使目标在一定时间段内暴击率降低",
+  "icon": {
+   "origin": {
+    "x": 17,
+    "y": 17
+   },
+   "value": {
+    "className": "Skill_PetSkill_106_icon",
+    "swfName": "Skill_PetSkill_106"
+   },
+   "z": 0
+  },
+  "info": {
+   "consume": {
+    "mpBase": 2
+   },
+   "desc": {
+    "range": 1,
+    "skillType": 1,
+    "target": 1
+   },
+   "open": {
+    "reqBook": "7000049",
+    "reqLevel": 1
+   },
+   "type_attack": {
+    "effect": {
+     "timeBase": "10000",
+     "timeLevel": "",
+     "type": "pet_reduce_bsk",
+     "valueBase": 20,
+     "valueLevel": 0
+    },
+    "trigger": {
+     "probBase": 10,
+     "probLevel": 0
+    }
+   }
+  },
+  "name": "暴遁封印"
+ },
+ "107": {
+  "buff_desc": "移动速度降低valueTotal%，持续时间duration秒",
+  "desc": "【被动技能】通灵兽出战时随机自动施放，有几率在战斗中使目标在一定时间段内移动速度降低",
+  "icon": {
+   "origin": {
+    "x": 17,
+    "y": 17
+   },
+   "value": {
+    "className": "Skill_PetSkill_107_icon",
+    "swfName": "Skill_PetSkill_107"
+   },
+   "z": 0
+  },
+  "info": {
+   "consume": {
+    "mpBase": 2
+   },
+   "desc": {
+    "range": 1,
+    "skillType": 1,
+    "target": 1
+   },
+   "open": {
+    "reqBook": "7000050",
+    "reqLevel": 1
+   },
+   "type_attack": {
+    "effect": {
+     "timeBase": "2000",
+     "timeLevel": "",
+     "type": "pet_slow",
+     "valueBase": 50,
+     "valueLevel": 0
+    },
+    "trigger": {
+     "probBase": 1,
+     "probLevel": 0
+    }
+   }
+  },
+  "name": "绳缚结界"
+ },
+ "108": {
+  "buff_desc": "",
+  "desc": "【被动技能】通灵兽出战时随机自动施放，有几率在战斗中击退目标的攻势",
+  "icon": {
+   "origin": {
+    "x": 17,
+    "y": 17
+   },
+   "value": {
+    "className": "Skill_PetSkill_108_icon",
+    "swfName": "Skill_PetSkill_108"
+   },
+   "z": 0
+  },
+  "info": {
+   "consume": {
+    "mpBase": 2
+   },
+   "desc": {
+    "range": 1,
+    "skillType": 1,
+    "target": 0
+   },
+   "open": {
+    "reqBook": "7000051",
+    "reqLevel": 1
+   },
+   "type_attack": {
+    "effect": {
+     "timeBase": "0",
+     "timeLevel": 0,
+     "type": "knock_back",
+     "valueBase": 0,
+     "valueLevel": 0
+    },
+    "trigger": {
+     "probBase": 1,
+     "probLevel": 0
+    }
+   }
+  },
+  "name": "迅风猛击"
+ },
+ "109": {
+  "buff_desc": "攻击力降低valueTotal%，持续时间duration秒",
+  "desc": "【被动技能】通灵兽出战时随机自动施放，有几率在战斗中使目标在一定时间段内攻击力降低",
+  "icon": {
+   "origin": {
+    "x": 17,
+    "y": 17
+   },
+   "value": {
+    "className": "Skill_PetSkill_109_icon",
+    "swfName": "Skill_PetSkill_109"
+   },
+   "z": 0
+  },
+  "info": {
+   "consume": {
+    "mpBase": 2
+   },
+   "desc": {
+    "range": 1,
+    "skillType": 1,
+    "target": 1
+   },
+   "open": {
+    "reqBook": "7000052",
+    "reqLevel": 1
+   },
+   "type_attack": {
+    "effect": {
+     "timeBase": "10000",
+     "timeLevel": "",
+     "type": "pet_reduce_atk",
+     "valueBase": 20,
+     "valueLevel": 0
+    },
+    "trigger": {
+     "probBase": 10,
+     "probLevel": 0
+    }
+   }
+  },
+  "name": "通灵临唱"
+ },
+ "110": {
+  "buff_desc": "防御力提高valueTotal%，持续时间duration秒",
+  "desc": "【被动技能】通灵兽出战时随机自动施放，有几率在战斗中使饲主的防御力在一定时间内得到增强",
+  "icon": {
+   "origin": {
+    "x": 17,
+    "y": 17
+   },
+   "value": {
+    "className": "Skill_PetSkill_110_icon",
+    "swfName": "Skill_PetSkill_110"
+   },
+   "z": 0
+  },
+  "info": {
+   "client": {
+    "forPlayer": 1
+   },
+   "consume": {
+    "mpBase": 2
+   },
+   "desc": {
+    "range": 2,
+    "skillType": 1,
+    "target": 1
+   },
+   "open": {
+    "reqBook": "7000053",
+    "reqLevel": 1
+   },
+   "type_attack": {
+    "effect": {
+     "timeBase": "120000",
+     "timeLevel": 0,
+     "type": "pet_add_def",
+     "valueBase": 20,
+     "valueLevel": 0
+    },
+    "trigger": {
+     "probBase": 1,
+     "probLevel": 0
+    }
+   }
+  },
+  "name": "封印壁垒"
+ },
+ "111": {
+  "buff_desc": "被困住，不能移动，持续时间duration秒",
+  "desc": "【被动技能】通灵兽出战时随机自动施放，有几率在战斗中使目标在一定时间段内为定身状态无法进行攻击",
+  "icon": {
+   "origin": {
+    "x": 17,
+    "y": 17
+   },
+   "value": {
+    "className": "Skill_PetSkill_111_icon",
+    "swfName": "Skill_PetSkill_111"
+   },
+   "z": 0
+  },
+  "info": {
+   "consume": {
+    "mpBase": 2
+   },
+   "desc": {
+    "range": 2,
+    "skillType": 1,
+    "target": 1
+   },
+   "open": {
+    "reqBook": "7000054",
+    "reqLevel": 1
+   },
+   "type_attack": {
+    "effect": {
+     "timeBase": "2000",
+     "timeLevel": 0,
+     "type": "pet_stun",
+     "valueBase": 0,
+     "valueLevel": 0
+    },
+    "trigger": {
+     "probBase": 1,
+     "probLevel": 0
+    }
+   }
+  },
+  "name": "封缚结界"
+ },
+ "112": {
+  "buff_desc": "防御力降低valueTotal%，持续时间duration秒",
+  "desc": "【被动技能】通灵兽出战时随机自动施放，有几率在战斗中使目标在一定时间段内防御力降低",
+  "icon": {
+   "origin": {
+    "x": 17,
+    "y": 17
+   },
+   "value": {
+    "className": "Skill_PetSkill_112_icon",
+    "swfName": "Skill_PetSkill_112"
+   },
+   "z": 0
+  },
+  "info": {
+   "consume": {
+    "mpBase": 2
+   },
+   "desc": {
+    "range": 2,
+    "skillType": 1,
+    "target": 1
+   },
+   "open": {
+    "reqBook": "7000055",
+    "reqLevel": 1
+   },
+   "type_attack": {
+    "effect": {
+     "timeBase": "10000",
+     "timeLevel": "",
+     "type": "pet_reduce_def",
+     "valueBase": 20,
+     "valueLevel": 0
+    },
+    "trigger": {
+     "probBase": 10,
+     "probLevel": 0
+    }
+   }
+  },
+  "name": "见之术"
+ },
+ "113": {
+  "buff_desc": "闪避降低valueTotal%，持续时间duration秒",
+  "desc": "【被动技能】通灵兽出战时随机自动施放，有几率在战斗中使目标在一定时间段内闪避能力降低",
+  "icon": {
+   "origin": {
+    "x": 17,
+    "y": 17
+   },
+   "value": {
+    "className": "Skill_PetSkill_113_icon",
+    "swfName": "Skill_PetSkill_113"
+   },
+   "z": 0
+  },
+  "info": {
+   "consume": {
+    "mpBase": 2
+   },
+   "desc": {
+    "range": 2,
+    "skillType": 1,
+    "target": 1
+   },
+   "open": {
+    "reqBook": "7000056",
+    "reqLevel": 1
+   },
+   "type_attack": {
+    "effect": {
+     "timeBase": "10000",
+     "timeLevel": "",
+     "type": "pet_reduce_avd",
+     "valueBase": 20,
+     "valueLevel": 0
+    },
+    "trigger": {
+     "probBase": 10,
+     "probLevel": 0
+    }
+   }
+  },
+  "name": "霞从者"
+ },
+ "114": {
+  "buff_desc": "攻击速度降低valueTotal%，持续时间duration秒",
+  "desc": "【被动技能】通灵兽出战时随机自动施放，有几率在战斗中使目标在一定时间段内攻击速度降低",
+  "icon": {
+   "origin": {
+    "x": 17,
+    "y": 17
+   },
+   "value": {
+    "className": "Skill_PetSkill_114_icon",
+    "swfName": "Skill_PetSkill_114"
+   },
+   "z": 0
+  },
+  "info": {
+   "consume": {
+    "mpBase": 2
+   },
+   "desc": {
+    "range": 2,
+    "skillType": 1,
+    "target": 1
+   },
+   "open": {
+    "reqBook": "7000057",
+    "reqLevel": 1
+   },
+   "type_attack": {
+    "effect": {
+     "timeBase": "10000",
+     "timeLevel": "",
+     "type": "pet_reduce_atk_speed",
+     "valueBase": 20,
+     "valueLevel": 0
+    },
+    "trigger": {
+     "probBase": 10,
+     "probLevel": 0
+    }
+   }
+  },
+  "name": "涅盘精舍"
+ },
+ "116": {
+  "buff_desc": "查克拉被吸干且被封印，不能释放忍术，持续时间duration秒",
+  "desc": "【被动技能】通灵兽出战时随机自动施放，有几率在战斗中吸空目标全部查克拉，且一定时间段内无法服用任何药品",
+  "icon": {
+   "origin": {
+    "x": 17,
+    "y": 17
+   },
+   "value": {
+    "className": "Skill_PetSkill_116_icon",
+    "swfName": "Skill_PetSkill_116"
+   },
+   "z": 0
+  },
+  "info": {
+   "consume": {
+    "mpBase": 2
+   },
+   "desc": {
+    "range": 2,
+    "skillType": 1,
+    "target": 1
+   },
+   "open": {
+    "reqBook": "7000059",
+    "reqLevel": 1
+   },
+   "type_attack": {
+    "effect": {
+     "timeBase": "2000",
+     "timeLevel": "",
+     "type": "pet_lose_mp",
+     "valueBase": 20,
+     "valueLevel": 0
+    },
+    "trigger": {
+     "probBase": 1,
+     "probLevel": 0
+    }
+   }
+  },
+  "name": "吸溃封印"
+ },
+ "117": {
+  "buff_desc": "攻击力提高valueTotal%，持续时间duration秒",
+  "desc": "【被动技能】通灵兽出战时随机自动施放，有几率在战斗中使饲主的攻击力在一定时间内得到增强",
+  "icon": {
+   "origin": {
+    "x": 17,
+    "y": 17
+   },
+   "value": {
+    "className": "Skill_PetSkill_117_icon",
+    "swfName": "Skill_PetSkill_117"
+   },
+   "z": 0
+  },
+  "info": {
+   "client": {
+    "forPlayer": 1
+   },
+   "consume": {
+    "mpBase": 2
+   },
+   "desc": {
+    "range": 2,
+    "skillType": 1,
+    "target": 1
+   },
+   "open": {
+    "reqBook": "7000060",
+    "reqLevel": 1
+   },
+   "type_attack": {
+    "effect": {
+     "timeBase": "120000",
+     "timeLevel": 0,
+     "type": "pet_add_atk",
+     "valueBase": 20,
+     "valueLevel": 0
+    },
+    "trigger": {
+     "probBase": 1,
+     "probLevel": 0
+    }
+   }
+  },
+  "name": "武力增幅"
+ },
+ "118": {
+  "buff_desc": "持续回复查克拉，持续时间duration秒",
+  "desc": "【被动技能】通灵兽出战时随机自动施放，有几率在战斗中为饲主恢复查克拉",
+  "icon": {
+   "origin": {
+    "x": 17,
+    "y": 17
+   },
+   "value": {
+    "className": "Skill_PetSkill_118_icon",
+    "swfName": "Skill_PetSkill_118"
+   },
+   "z": 0
+  },
+  "info": {
+   "client": {
+    "forPlayer": 1
+   },
+   "consume": {
+    "mpBase": 2
+   },
+   "desc": {
+    "range": 2,
+    "skillType": 1,
+    "target": 1
+   },
+   "open": {
+    "reqBook": "7000061",
+    "reqLevel": 1
+   },
+   "type_attack": {
+    "effect": {
+     "timeBase": "120000",
+     "timeLevel": 0,
+     "type": "pet_cure_mp_buff",
+     "valueBase": 2,
+     "valueLevel": 0
+    },
+    "trigger": {
+     "probBase": 1,
+     "probLevel": 0
+    }
+   }
+  },
+  "name": "查克拉重生"
+ },
+ "119": {
+  "buff_desc": "闪避提高valueTotal%，持续时间duration秒",
+  "desc": "【被动技能】通灵兽出战时随机自动施放，有几率在战斗中使饲主的闪避能力在一定时间内得到增强",
+  "icon": {
+   "origin": {
+    "x": 17,
+    "y": 17
+   },
+   "value": {
+    "className": "Skill_PetSkill_119_icon",
+    "swfName": "Skill_PetSkill_119"
+   },
+   "z": 0
+  },
+  "info": {
+   "client": {
+    "forPlayer": 1
+   },
+   "consume": {
+    "mpBase": 2
+   },
+   "desc": {
+    "range": 2,
+    "skillType": 1,
+    "target": 1
+   },
+   "open": {
+    "reqBook": "7000062",
+    "reqLevel": 1
+   },
+   "type_attack": {
+    "effect": {
+     "timeBase": "120000",
+     "timeLevel": 0,
+     "type": "pet_add_avd",
+     "valueBase": 20,
+     "valueLevel": 0
+    },
+    "trigger": {
+     "probBase": 1,
+     "probLevel": 0
+    }
+   }
+  },
+  "name": "木叶连舞"
+ },
+ "120": {
+  "buff_desc": "持续回复生命值，持续时间duration秒",
+  "desc": "【被动技能】通灵兽出战时随机自动施放，有几率在战斗中为饲主恢复生命值",
+  "icon": {
+   "origin": {
+    "x": 17,
+    "y": 17
+   },
+   "value": {
+    "className": "Skill_PetSkill_120_icon",
+    "swfName": "Skill_PetSkill_120"
+   },
+   "z": 0
+  },
+  "info": {
+   "client": {
+    "forPlayer": 1
+   },
+   "desc": {
+    "range": 0,
+    "skillType": 1,
+    "target": 1
+   },
+   "open": {
+    "reqBook": "7000063",
+    "reqLevel": 1
+   },
+   "type_attack": {
+    "effect": {
+     "timeBase": "120000",
+     "timeLevel": 0,
+     "type": "pet_cure_hp_buff",
+     "valueBase": 2,
+     "valueLevel": 0
+    },
+    "trigger": {
+     "probBase": 1,
+     "probLevel": 0
+    }
+   }
+  },
+  "name": "通灵创生"
+ },
+ "121": {
+  "buff_desc": "暴击提高valueTotal%，持续时间duration秒",
+  "desc": "【被动技能】通灵兽出战时随机自动施放，有几率在战斗中使饲主的暴击能力在一定时间内得到增强",
+  "icon": {
+   "origin": {
+    "x": 17,
+    "y": 17
+   },
+   "value": {
+    "className": "Skill_PetSkill_121_icon",
+    "swfName": "Skill_PetSkill_121"
+   },
+   "z": 0
+  },
+  "info": {
+   "client": {
+    "forPlayer": 1
+   },
+   "desc": {
+    "range": 0,
+    "skillType": 1,
+    "target": 1
+   },
+   "open": {
+    "reqBook": "7000064",
+    "reqLevel": 1
+   },
+   "type_attack": {
+    "effect": {
+     "timeBase": "120000",
+     "timeLevel": 0,
+     "type": "pet_add_bsk",
+     "valueBase": 20,
+     "valueLevel": 0
+    },
+    "trigger": {
+     "probBase": 1,
+     "probLevel": 0
+    }
+   }
+  },
+  "name": "千鸟见世"
+ },
+ "122": {
+  "buff_desc": "每2秒生命值减少valueTotal点，持续时间duration秒",
+  "desc": "【被动技能】通灵兽出战时随机自动施放，有几率在战斗中使目标在一定时间段处于中毒状态",
+  "icon": {
+   "origin": {
+    "x": 17,
+    "y": 17
+   },
+   "value": {
+    "className": "Skill_PetSkill_122_icon",
+    "swfName": "Skill_PetSkill_122"
+   },
+   "z": 0
+  },
+  "info": {
+   "desc": {
+    "range": 0,
+    "skillType": 1,
+    "target": 1
+   },
+   "open": {
+    "reqBook": "7000065",
+    "reqLevel": 1
+   },
+   "type_attack": {
+    "effect": {
+     "timeBase": "2000",
+     "timeLevel": 0,
+     "type": "pet_poison",
+     "valueBase": 5,
+     "valueLevel": 0,
+     "valueMax": 5000
+    },
+    "trigger": {
+     "probBase": 1,
+     "probLevel": 0
+    }
+   }
+  },
+  "name": "尸鬼之术"
+ },
+ "123": {
+  "buff_desc": "无视敌方攻击，并定身敌人，持续时间duration秒",
+  "desc": "【被动技能】通灵兽在附身状态下有2%的几率在3秒内无视敌方攻击，并定身敌人2秒",
+  "icon": {
+   "origin": {
+    "x": 17,
+    "y": 17
+   },
+   "value": {
+    "className": "Skill_PetSkill_123_icon",
+    "swfName": "Skill_PetSkill_123"
+   }
+  },
+  "info": {
+   "consume": {
+    "mpBase": 2
+   },
+   "desc": {
+    "range": 2,
+    "skillType": 1,
+    "target": 1
+   },
+   "open": {
+    "reqBook": "7000054",
+    "reqLevel": 1
+   },
+   "type_attack": {
+    "effect": {
+     "timeBase": "2000",
+     "timeLevel": 0,
+     "type": "PET_INVINCIBLE_STUN",
+     "valueBase": 0,
+     "valueLevel": 0
+    },
+    "trigger": {
+     "probBase": 2,
+     "probLevel": 0
+    }
+   }
+  },
+  "name": "牛鬼之握"
+ },
+ "124": {
+  "buff_desc": "无视敌方攻击，并忽视敌人100%防御，持续时间duration秒",
+  "desc": "【被动技能】通灵兽在附身状态下有2%的几率在3秒内无视敌方攻击，并忽视敌人100%防御",
+  "icon": {
+   "origin": {
+    "x": 17,
+    "y": 17
+   },
+   "value": {
+    "className": "Skill_PetSkill_124_icon",
+    "swfName": "Skill_PetSkill_124"
+   }
+  },
+  "info": {
+   "consume": {
+    "mpBase": 2
+   },
+   "desc": {
+    "range": 2,
+    "skillType": 1,
+    "target": 1
+   },
+   "open": {
+    "reqBook": "7000054",
+    "reqLevel": 1
+   },
+   "type_attack": {
+    "effect": {
+     "timeBase": "3000",
+     "timeLevel": 0,
+     "type": "PET_INVINCIBLE_IGNORE_DEF",
+     "valueBase": 100,
+     "valueLevel": 0
+    },
+    "trigger": {
+     "probBase": 2,
+     "probLevel": 0
+    }
+   }
+  },
+  "name": "熔炎玉"
+ },
+ "125": {
+  "buff_desc": "无视敌方攻击，并反弹100%伤害，持续时间duration秒",
+  "desc": "【被动技能】通灵兽在附身状态下有2%的几率在3秒内无视敌方攻击，并反弹100%伤害",
+  "icon": {
+   "origin": {
+    "x": 17,
+    "y": 17
+   },
+   "value": {
+    "className": "Skill_PetSkill_125_icon",
+    "swfName": "Skill_PetSkill_125"
+   }
+  },
+  "info": {
+   "consume": {
+    "mpBase": 2
+   },
+   "desc": {
+    "range": 2,
+    "skillType": 1,
+    "target": 1
+   },
+   "open": {
+    "reqBook": "7000054",
+    "reqLevel": 1
+   },
+   "type_attack": {
+    "effect": {
+     "timeBase": "3000",
+     "timeLevel": 0,
+     "type": "PET_INVINCIBLE_DAMAGE_REFLECT",
+     "valueBase": 100,
+     "valueLevel": 0
+    },
+    "trigger": {
+     "probBase": 2,
+     "probLevel": 0
+    }
+   }
+  },
+  "name": "水龙盾"
+ },
+ "126": {
+  "buff_desc": "通灵兽在附身状态下有2%的几率使玩家获得尾兽之力，3秒内攻击力+5%，防御力+5%，闪避+5%，暴击+5%，同时BUFF状态下每秒回复10%自身最大生命值。",
+  "desc": "【被动技能】通灵兽在附身状态下有2%的几率使玩家获得尾兽之力，3秒内攻击力+5%，防御力+5%，闪避+5%，暴击+5%，同时BUFF状态下每秒回复10%自身最大生命值。",
+  "icon": {
+   "origin": {
+    "x": 17,
+    "y": 17
+   },
+   "value": {
+    "className": "Skill_PetSkill_126_icon",
+    "swfName": "Skill_PetSkill_126"
+   }
+  },
+  "info": {
+   "consume": {
+    "mpBase": 2
+   },
+   "desc": {
+    "range": 2,
+    "skillType": 1,
+    "target": 1
+   },
+   "open": {
+    "reqBook": "7000054",
+    "reqLevel": 1
+   },
+   "type_attack": {
+    "effect": {
+     "timeBase": "3000",
+     "timeLevel": 0,
+     "type": "PET_INVINCIBLE_DAMAGE_REFLECT",
+     "valueBase": 100,
+     "valueLevel": 0
+    },
+    "trigger": {
+     "probBase": 2,
+     "probLevel": 0
+    }
+   }
+  },
+  "name": "尾兽玉"
+ },
+ "201": {
+  "buff_desc": "",
+  "desc": "【被动技能】通灵兽附身状态中可以额外提升饲主的生命值上限",
+  "icon": {
+   "origin": {
+    "x": 17,
+    "y": 17
+   },
+   "value": {
+    "className": "Skill_PetSkill_201_icon",
+    "swfName": "Skill_PetSkill_201"
+   },
+   "z": 0
+  },
+  "info": {
+   "desc": {
+    "range": 0,
+    "skillType": 1,
+    "target": 0
+   },
+   "open": {
+    "reqBook": "7000066",
+    "reqLevel": 1
+   },
+   "type_attr": {
+    "type": "maxhp",
+    "valueLevel": 1
+   }
+  },
+  "name": "通灵血祭"
+ },
+ "202": {
+  "buff_desc": "",
+  "desc": "【被动技能】通灵兽附身状态中可以额外提升饲主的查克拉上限",
+  "icon": {
+   "origin": {
+    "x": 17,
+    "y": 17
+   },
+   "value": {
+    "className": "Skill_PetSkill_202_icon",
+    "swfName": "Skill_PetSkill_202"
+   },
+   "z": 0
+  },
+  "info": {
+   "desc": {
+    "range": 0,
+    "skillType": 1,
+    "target": 0
+   },
+   "open": {
+    "reqBook": "7000067",
+    "reqLevel": 1
+   },
+   "type_attr": {
+    "type": "maxmp",
+    "valueLevel": 1
+   }
+  },
+  "name": "查克拉转换"
+ },
+ "203": {
+  "buff_desc": "",
+  "desc": "【被动技能】通灵兽附身状态中可以额外提升饲主的攻击能力",
+  "icon": {
+   "origin": {
+    "x": 17,
+    "y": 17
+   },
+   "value": {
+    "className": "Skill_PetSkill_203_icon",
+    "swfName": "Skill_PetSkill_203"
+   },
+   "z": 0
+  },
+  "info": {
+   "desc": {
+    "range": 0,
+    "skillType": 1,
+    "target": 0
+   },
+   "open": {
+    "reqBook": "7000069",
+    "reqLevel": 1
+   },
+   "type_attr": {
+    "type": "atk",
+    "valueLevel": 1
+   }
+  },
+  "name": "牙暴之术"
+ },
+ "204": {
+  "buff_desc": "",
+  "desc": "【被动技能】通灵兽附身状态中可以额外提升饲主的防御能力",
+  "icon": {
+   "origin": {
+    "x": 17,
+    "y": 17
+   },
+   "value": {
+    "className": "Skill_PetSkill_204_icon",
+    "swfName": "Skill_PetSkill_204"
+   },
+   "z": 0
+  },
+  "info": {
+   "desc": {
+    "range": 0,
+    "skillType": 1,
+    "target": 0
+   },
+   "open": {
+    "reqBook": "7000070",
+    "reqLevel": 1
+   },
+   "type_attr": {
+    "type": "def",
+    "valueLevel": 1
+   }
+  },
+  "name": "忠心佑护"
+ },
+ "205": {
+  "buff_desc": "",
+  "desc": "【被动技能】通灵兽附身状态中可以额外提升饲主的暴击能力",
+  "icon": {
+   "origin": {
+    "x": 17,
+    "y": 17
+   },
+   "value": {
+    "className": "Skill_PetSkill_205_icon",
+    "swfName": "Skill_PetSkill_205"
+   },
+   "z": 0
+  },
+  "info": {
+   "desc": {
+    "range": 0,
+    "skillType": 1,
+    "target": 0
+   },
+   "open": {
+    "reqBook": "7000071",
+    "reqLevel": 1
+   },
+   "type_attr": {
+    "type": "bsk",
+    "valueLevel": 1
+   }
+  },
+  "name": "通灵咆哮"
+ },
+ "206": {
+  "buff_desc": "",
+  "desc": "【被动技能】通灵兽附身状态中可以额外提升饲主的闪避能力",
+  "icon": {
+   "origin": {
+    "x": 17,
+    "y": 17
+   },
+   "value": {
+    "className": "Skill_PetSkill_206_icon",
+    "swfName": "Skill_PetSkill_206"
+   },
+   "z": 0
+  },
+  "info": {
+   "desc": {
+    "range": 0,
+    "skillType": 1,
+    "target": 0
+   },
+   "open": {
+    "reqBook": "7000072",
+    "reqLevel": 1
+   },
+   "type_attr": {
+    "type": "avd",
+    "valueLevel": 1
+   }
+  },
+  "name": "疾风瞬影"
+ },
+ "207": {
+  "buff_desc": "",
+  "desc": "【被动技能】通灵兽附身状态中可以额外提升饲主的攻击速度",
+  "icon": {
+   "origin": {
+    "x": 17,
+    "y": 17
+   },
+   "value": {
+    "className": "Skill_PetSkill_207_icon",
+    "swfName": "Skill_PetSkill_207"
+   },
+   "z": 0
+  },
+  "info": {
+   "desc": {
+    "range": 0,
+    "skillType": 1,
+    "target": 0
+   },
+   "open": {
+    "reqBook": "7000073",
+    "reqLevel": 1
+   },
+   "type_attr": {
+    "type": "atkspeed",
+    "valueLevel": 1
+   }
+  },
+  "name": "急速爆攻"
+ },
+ "208": {
+  "buff_desc": "",
+  "desc": "【被动技能】通灵兽附身状态中可以额外提升饲主的移动速度",
+  "icon": {
+   "origin": {
+    "x": 17,
+    "y": 17
+   },
+   "value": {
+    "className": "Skill_PetSkill_208_icon",
+    "swfName": "Skill_PetSkill_208"
+   },
+   "z": 0
+  },
+  "info": {
+   "desc": {
+    "range": 0,
+    "skillType": 1,
+    "target": 0
+   },
+   "open": {
+    "reqBook": "7000074",
+    "reqLevel": 1
+   },
+   "type_attr": {
+    "type": "wlkspeed",
+    "valueLevel": 1
+   }
+  },
+  "name": "灵动附体"
+ }
+}

@@ -1,0 +1,164 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Texture2D" path="res://素材/地图/世界地图/世界地图背景.png" id="1_world"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/横向分隔线.png" id="2_line"]
+
+[node name="原版世界地图内容" type="Control"]
+custom_minimum_size = Vector2(769, 463)
+
+[node name="内容框" type="Panel" parent="."]
+offset_left = 6.0
+offset_top = 4.0
+offset_right = 763.0
+offset_bottom = 457.0
+
+[node name="分页" type="Control" parent="."]
+offset_left = 18.0
+offset_top = 10.0
+offset_right = 141.0
+offset_bottom = 32.0
+
+[node name="当前地图" type="Button" parent="分页"]
+offset_right = 61.0
+offset_bottom = 22.0
+toggle_mode = true
+text = "当前地图"
+
+[node name="世界地图" type="Button" parent="分页"]
+offset_left = 62.0
+offset_right = 123.0
+offset_bottom = 22.0
+toggle_mode = true
+text = "世界地图"
+
+[node name="地图标题" type="Label" parent="."]
+offset_left = 12.0
+offset_top = 8.0
+offset_right = 757.0
+offset_bottom = 26.0
+horizontal_alignment = 1
+
+[node name="地图面板" type="Panel" parent="."]
+offset_left = 12.0
+offset_top = 28.0
+offset_right = 550.0
+offset_bottom = 450.0
+
+[node name="地图底图" type="TextureRect" parent="."]
+offset_left = 14.0
+offset_top = 30.0
+offset_right = 548.0
+offset_bottom = 448.0
+texture = ExtResource("1_world")
+expand_mode = 1
+stretch_mode = 6
+mouse_filter = 2
+
+[node name="当前位置" type="Label" parent="."]
+offset_left = 245.0
+offset_top = 244.0
+offset_right = 325.0
+offset_bottom = 264.0
+text = "●"
+horizontal_alignment = 1
+
+[node name="右侧面板" type="Panel" parent="."]
+offset_left = 550.0
+offset_top = 28.0
+offset_right = 757.0
+offset_bottom = 450.0
+
+[node name="X标签" type="Label" parent="."]
+offset_left = 555.0
+offset_top = 36.0
+offset_right = 573.0
+offset_bottom = 56.0
+text = "X："
+
+[node name="X坐标" type="LineEdit" parent="."]
+offset_left = 573.0
+offset_top = 35.0
+offset_right = 623.0
+offset_bottom = 55.0
+placeholder_text = "0"
+max_length = 5
+alignment = 1
+
+[node name="Y标签" type="Label" parent="."]
+offset_left = 632.0
+offset_top = 36.0
+offset_right = 650.0
+offset_bottom = 56.0
+text = "Y："
+
+[node name="Y坐标" type="LineEdit" parent="."]
+offset_left = 650.0
+offset_top = 35.0
+offset_right = 700.0
+offset_bottom = 55.0
+placeholder_text = "0"
+max_length = 5
+alignment = 1
+
+[node name="前往" type="Button" parent="."]
+offset_left = 712.0
+offset_top = 35.0
+offset_right = 749.0
+offset_bottom = 57.0
+text = "前往"
+
+[node name="上分隔线" type="TextureRect" parent="."]
+offset_left = 550.0
+offset_top = 60.0
+offset_right = 757.0
+offset_bottom = 62.0
+texture = ExtResource("2_line")
+expand_mode = 1
+stretch_mode = 6
+mouse_filter = 2
+
+[node name="寻路列表" type="VBoxContainer" parent="."]
+offset_left = 555.0
+offset_top = 67.0
+offset_right = 752.0
+offset_bottom = 403.0
+theme_override_constants/separation = 2
+
+[node name="地图信息" type="Label" parent="寻路列表"]
+layout_mode = 2
+text = "当前地图"
+
+[node name="地图编号" type="Label" parent="寻路列表"]
+layout_mode = 2
+
+[node name="当前线路" type="Label" parent="寻路列表"]
+layout_mode = 2
+
+[node name="区域状态" type="Label" parent="寻路列表"]
+layout_mode = 2
+text = "木叶村安全区域"
+
+[node name="NPC标题" type="Label" parent="寻路列表"]
+layout_mode = 2
+text = "可寻路目标"
+
+[node name="NPC列表" type="VBoxContainer" parent="寻路列表"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="下分隔线" type="TextureRect" parent="."]
+offset_left = 550.0
+offset_top = 418.0
+offset_right = 757.0
+offset_bottom = 420.0
+texture = ExtResource("2_line")
+expand_mode = 1
+stretch_mode = 6
+mouse_filter = 2
+
+[node name="寻找NPC" type="Button" parent="."]
+offset_left = 610.0
+offset_top = 423.0
+offset_right = 692.0
+offset_bottom = 445.0
+text = "寻找NPC"

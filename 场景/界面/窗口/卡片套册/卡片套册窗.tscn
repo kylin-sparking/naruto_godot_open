@@ -1,0 +1,799 @@
+[gd_scene load_steps=30 format=3]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/内容面板.png" id="t1"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/子面板.png" id="t2"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/专用控件/属性箭头左.png" id="t3"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/专用控件/属性箭头右.png" id="t4"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/卡片套册/提交钮.png" id="t5"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/卡片套册/提交钮_悬停.png" id="t6"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/卡片套册/提交钮_按下.png" id="t7"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/卡片套册/提交钮_禁用.png" id="t8"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/卡片套册/领取钮.png" id="t9"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/卡片套册/领取钮_悬停.png" id="t10"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/卡片套册/领取钮_按下.png" id="t11"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/卡片套册/领取钮_禁用.png" id="t12"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/横向分隔线.png" id="t13"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/经验条槽.png" id="t14"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/经验条填充.png" id="t15"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/物品格.png" id="t16"]
+
+[ext_resource type="Texture2D" path="res://素材/物品/原版/CaiLiao/CaiLiao_12100000_info.swf_1_CaiLiao_12100000_info_icon.png" id="t17"]
+
+[ext_resource type="Texture2D" path="res://素材/物品/原版/CaiLiao/CaiLiao_12100001_info.swf_1_CaiLiao_12100001_info_icon.png" id="t18"]
+
+[ext_resource type="Texture2D" path="res://素材/物品/原版/CaiLiao/CaiLiao_12100002_info.swf_1_CaiLiao_12100002_info_icon.png" id="t19"]
+
+[ext_resource type="Texture2D" path="res://素材/物品/原版/CaiLiao/CaiLiao_12100003_info.swf_1_CaiLiao_12100003_info_icon.png" id="t20"]
+
+[ext_resource type="Texture2D" path="res://素材/物品/原版/CaiLiao/CaiLiao_12100004_info.swf_1_CaiLiao_12100004_info_icon.png" id="t21"]
+
+[sub_resource type="StyleBoxTexture" id="sb1_n"]
+texture = ExtResource("t5")
+
+[sub_resource type="StyleBoxTexture" id="sb1_h"]
+texture = ExtResource("t6")
+
+[sub_resource type="StyleBoxTexture" id="sb1_p"]
+texture = ExtResource("t7")
+
+[sub_resource type="StyleBoxTexture" id="sb1_d"]
+texture = ExtResource("t8")
+
+[sub_resource type="StyleBoxTexture" id="sb2_n"]
+texture = ExtResource("t9")
+
+[sub_resource type="StyleBoxTexture" id="sb2_h"]
+texture = ExtResource("t10")
+
+[sub_resource type="StyleBoxTexture" id="sb2_p"]
+texture = ExtResource("t11")
+
+[sub_resource type="StyleBoxTexture" id="sb2_d"]
+texture = ExtResource("t12")
+
+[node name="原版卡片套册内容" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 534
+offset_bottom = 355.0
+
+[node name="内容底" type="NinePatchRect" parent="."]
+texture = ExtResource("t1")
+patch_margin_left = 11
+patch_margin_right = 10
+patch_margin_top = 10
+patch_margin_bottom = 11
+layout_mode = 0
+offset_left = 6.0
+offset_top = 10.0
+offset_right = 528.0
+offset_bottom = 350.0
+
+[node name="树上方面板" type="NinePatchRect" parent="."]
+texture = ExtResource("t2")
+patch_margin_left = 8
+patch_margin_right = 7
+patch_margin_top = 7
+patch_margin_bottom = 7
+layout_mode = 0
+offset_left = 12.0
+offset_top = 35.0
+offset_right = 190.0
+offset_bottom = 243.0
+
+[node name="说明下方面板" type="NinePatchRect" parent="."]
+texture = ExtResource("t2")
+patch_margin_left = 8
+patch_margin_right = 7
+patch_margin_top = 7
+patch_margin_bottom = 7
+layout_mode = 0
+offset_left = 12.0
+offset_top = 261.0
+offset_right = 190.0
+offset_bottom = 344.0
+
+[node name="左箭头上" type="TextureRect" parent="."]
+texture = ExtResource("t3")
+mouse_filter = 2
+layout_mode = 0
+offset_left = 20.0
+offset_top = 15.0
+offset_right = 47.0
+offset_bottom = 37.0
+
+[node name="右箭头上" type="TextureRect" parent="."]
+texture = ExtResource("t4")
+mouse_filter = 2
+layout_mode = 0
+offset_left = 153.0
+offset_top = 15.0
+offset_right = 180.0
+offset_bottom = 37.0
+
+[node name="左箭头下" type="TextureRect" parent="."]
+texture = ExtResource("t3")
+mouse_filter = 2
+layout_mode = 0
+offset_left = 20.0
+offset_top = 246.0
+offset_right = 47.0
+offset_bottom = 268.0
+
+[node name="右箭头下" type="TextureRect" parent="."]
+texture = ExtResource("t4")
+mouse_filter = 2
+layout_mode = 0
+offset_left = 153.0
+offset_top = 246.0
+offset_right = 180.0
+offset_bottom = 268.0
+
+[node name="可收集物品" type="Label" parent="."]
+text = "可收集物品"
+theme_override_colors/font_color = Color(1.000000, 1.000000, 0.000000, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 70.0
+offset_top = 17.0
+offset_right = 150.0
+offset_bottom = 37.0
+
+[node name="提交说明" type="Label" parent="."]
+text = "提交说明"
+theme_override_colors/font_color = Color(1.000000, 1.000000, 0.000000, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 70.0
+offset_top = 245.0
+offset_right = 126.0
+offset_bottom = 265.0
+
+[node name="树" type="ScrollContainer" parent="."]
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 1
+layout_mode = 0
+offset_left = 13.0
+offset_top = 36.0
+offset_right = 184.0
+offset_bottom = 236.0
+
+[node name="树_内容" type="Control" parent="树"]
+mouse_filter = 2
+layout_mode = 0
+offset_right = 171.0
+offset_bottom = 200.0
+custom_minimum_size = Vector2(171.0, 200.0)
+
+[node name="说明框" type="Control" parent="."]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 23.0
+offset_top = 271.0
+offset_right = 178.0
+offset_bottom = 343.0
+
+[node name="说明框_说明文字" type="RichTextLabel" parent="说明框"]
+text = "[color=#ffffff]你可以将背包中的卡片分阶[/color][color=#ffffff]段提交，提交后将会被记录[/color][color=#ffffff]进度，从而可减少卡片对你[/color][color=#ffffff]背包空间的佔用。[/color]"
+scroll_active = false
+bbcode_enabled = true
+autowrap_mode = 3
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 2
+theme_override_colors/default_color = Color(1.000000, 1.000000, 1.000000, 1)
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 159.0
+offset_bottom = 68.0
+
+[node name="提交钮" type="Button" parent="."]
+theme_override_styles/normal = SubResource("sb1_n")
+theme_override_styles/hover = SubResource("sb1_h")
+theme_override_styles/pressed = SubResource("sb1_p")
+text = "提交卡片"
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+theme_override_styles/disabled = SubResource("sb1_d")
+theme_override_colors/font_disabled_color = Color(0.576, 0.576, 0.576, 1)
+layout_mode = 0
+offset_left = 442.0
+offset_top = 283.0
+offset_right = 503.0
+offset_bottom = 305.0
+
+[node name="领取钮" type="Button" parent="."]
+theme_override_styles/normal = SubResource("sb2_n")
+theme_override_styles/hover = SubResource("sb2_h")
+theme_override_styles/pressed = SubResource("sb2_p")
+text = "领取奖励"
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+theme_override_styles/disabled = SubResource("sb2_d")
+theme_override_colors/font_disabled_color = Color(0.576, 0.576, 0.576, 1)
+layout_mode = 0
+offset_left = 442.0
+offset_top = 308.0
+offset_right = 503.0
+offset_bottom = 330.0
+
+[node name="面板" type="Control" parent="."]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 192.0
+offset_top = 21.0
+offset_right = 522.0
+offset_bottom = 345.0
+
+[node name="面板_上格面板" type="NinePatchRect" parent="面板"]
+texture = ExtResource("t2")
+patch_margin_left = 8
+patch_margin_right = 7
+patch_margin_top = 7
+patch_margin_bottom = 7
+layout_mode = 0
+offset_left = 0.0
+offset_top = 44.0
+offset_right = 330.0
+offset_bottom = 226.0
+
+[node name="面板_下格面板" type="NinePatchRect" parent="面板"]
+texture = ExtResource("t2")
+patch_margin_left = 8
+patch_margin_right = 7
+patch_margin_top = 7
+patch_margin_bottom = 7
+layout_mode = 0
+offset_left = 0.0
+offset_top = 230.0
+offset_right = 330.0
+offset_bottom = 324.0
+
+[node name="面板_分隔线" type="TextureRect" parent="面板"]
+texture = ExtResource("t13")
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 0
+layout_mode = 0
+offset_left = 4.0
+offset_top = 82.0
+offset_right = 324.0
+offset_bottom = 84.0
+
+[node name="面板_套卡名" type="Label" parent="面板"]
+text = "火影套卡"
+theme_override_colors/font_color = Color(1.000000, 1.000000, 0.000000, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 7.0
+offset_top = -2.0
+offset_right = 145.0
+offset_bottom = 16.0
+
+[node name="面板_进度标题" type="Label" parent="面板"]
+text = "收集进度："
+theme_override_colors/font_color = Color(1.000000, 0.568627, 0.000000, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 150.0
+offset_top = -2.0
+offset_right = 215.0
+offset_bottom = 16.0
+
+[node name="面板_加成说明" type="Label" parent="面板"]
+text = "奖励：你将可获得10个潜能点的永久加成(系统随机分配)"
+theme_override_colors/font_color = Color(1.000000, 1.000000, 0.000000, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 7.0
+offset_top = 21.0
+offset_right = 318.0
+offset_bottom = 39.0
+
+[node name="面板_列需要卡片" type="Label" parent="面板"]
+text = "需要卡片"
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 24.0
+offset_top = 54.0
+offset_right = 91.0
+offset_bottom = 72.0
+
+[node name="面板_列已提交" type="Label" parent="面板"]
+text = "已提交/需要数量"
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 109.0
+offset_top = 54.0
+offset_right = 212.0
+offset_bottom = 72.0
+
+[node name="面板_列掉落怪" type="Label" parent="面板"]
+text = "掉落怪物"
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 235.0
+offset_top = 54.0
+offset_right = 302.0
+offset_bottom = 72.0
+
+[node name="面板_背包数量" type="Label" parent="面板"]
+text = "背包中的数量："
+theme_override_colors/font_color = Color(1.000000, 1.000000, 0.000000, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 10.0
+offset_top = 238.0
+offset_right = 103.0
+offset_bottom = 256.0
+
+[node name="面板_收集进度" type="Control" parent="面板"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 211.0
+offset_top = 1.0
+offset_right = 322.0
+offset_bottom = 12.0
+
+[node name="底" type="TextureRect" parent="面板/面板_收集进度"]
+texture = ExtResource("t14")
+expand_mode = 1
+layout_mode = 0
+offset_right = 111.0
+offset_bottom = 11.0
+
+[node name="裁剪" type="Control" parent="面板/面板_收集进度"]
+clip_contents = true
+mouse_filter = 2
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 108.0
+offset_bottom = 8.0
+
+[node name="填充" type="TextureRect" parent="面板/面板_收集进度/裁剪"]
+texture = ExtResource("t15")
+expand_mode = 1
+layout_mode = 0
+offset_left = -3.0
+offset_top = -3.0
+offset_right = 108.0
+offset_bottom = 8.0
+
+[node name="值" type="Label" parent="面板/面板_收集进度"]
+text = "0/52"
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+mouse_filter = 2
+layout_mode = 0
+offset_right = 111.0
+offset_bottom = 18
+
+[node name="行1" type="Control" parent="面板"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 17.0
+offset_top = 90.0
+offset_right = 17.0
+offset_bottom = 90.0
+
+[node name="行1_卡名" type="RichTextLabel" parent="面板/行1"]
+text = "[color=#00ff00]千手柱间卡[/color]"
+scroll_active = false
+bbcode_enabled = true
+autowrap_mode = 3
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 0
+layout_mode = 0
+offset_left = 0.0
+offset_top = -2.0
+offset_right = 112.0
+offset_bottom = 16.0
+
+[node name="行1_数量" type="RichTextLabel" parent="面板/行1"]
+text = "[color=#ff0000]0[/color][color=#ffffff]/20[/color]"
+scroll_active = false
+bbcode_enabled = true
+autowrap_mode = 3
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 0
+layout_mode = 0
+offset_left = 122.0
+offset_top = -2.0
+offset_right = 210.0
+offset_bottom = 16.0
+
+[node name="行1_掉落怪" type="RichTextLabel" parent="面板/行1"]
+text = "[url=mob1000017-105010000][u]通灵实验体[/u][/url]"
+scroll_active = false
+bbcode_enabled = true
+autowrap_mode = 3
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 0
+theme_override_colors/default_color = Color(0.000000, 1.000000, 0.000000, 1)
+layout_mode = 0
+offset_left = 220.0
+offset_top = 0.0
+offset_right = 314.0
+offset_bottom = 18.0
+
+[node name="行2" type="Control" parent="面板"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 17.0
+offset_top = 114.0
+offset_right = 17.0
+offset_bottom = 114.0
+
+[node name="行2_卡名" type="RichTextLabel" parent="面板/行2"]
+text = "[color=#00ff00]千手扉间卡[/color]"
+scroll_active = false
+bbcode_enabled = true
+autowrap_mode = 3
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 0
+layout_mode = 0
+offset_left = 0.0
+offset_top = -2.0
+offset_right = 112.0
+offset_bottom = 16.0
+
+[node name="行2_数量" type="RichTextLabel" parent="面板/行2"]
+text = "[color=#ff0000]0[/color][color=#ffffff]/15[/color]"
+scroll_active = false
+bbcode_enabled = true
+autowrap_mode = 3
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 0
+layout_mode = 0
+offset_left = 122.0
+offset_top = -2.0
+offset_right = 210.0
+offset_bottom = 16.0
+
+[node name="行2_掉落怪" type="RichTextLabel" parent="面板/行2"]
+text = "[url=mob1000018-105010000][u]化灵木巢[/u][/url]"
+scroll_active = false
+bbcode_enabled = true
+autowrap_mode = 3
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 0
+theme_override_colors/default_color = Color(0.000000, 1.000000, 0.000000, 1)
+layout_mode = 0
+offset_left = 220.0
+offset_top = 0.0
+offset_right = 314.0
+offset_bottom = 18.0
+
+[node name="行3" type="Control" parent="面板"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 17.0
+offset_top = 138.0
+offset_right = 17.0
+offset_bottom = 138.0
+
+[node name="行3_卡名" type="RichTextLabel" parent="面板/行3"]
+text = "[color=#00ff00]猿飞日斩卡[/color]"
+scroll_active = false
+bbcode_enabled = true
+autowrap_mode = 3
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 0
+layout_mode = 0
+offset_left = 0.0
+offset_top = -2.0
+offset_right = 112.0
+offset_bottom = 16.0
+
+[node name="行3_数量" type="RichTextLabel" parent="面板/行3"]
+text = "[color=#ff0000]0[/color][color=#ffffff]/10[/color]"
+scroll_active = false
+bbcode_enabled = true
+autowrap_mode = 3
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 0
+layout_mode = 0
+offset_left = 122.0
+offset_top = -2.0
+offset_right = 210.0
+offset_bottom = 16.0
+
+[node name="行3_掉落怪" type="RichTextLabel" parent="面板/行3"]
+text = "[url=mob1000018-105010000][u]化灵木巢[/u][/url]"
+scroll_active = false
+bbcode_enabled = true
+autowrap_mode = 3
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 0
+theme_override_colors/default_color = Color(0.000000, 1.000000, 0.000000, 1)
+layout_mode = 0
+offset_left = 220.0
+offset_top = 0.0
+offset_right = 314.0
+offset_bottom = 18.0
+
+[node name="行4" type="Control" parent="面板"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 17.0
+offset_top = 162.0
+offset_right = 17.0
+offset_bottom = 162.0
+
+[node name="行4_卡名" type="RichTextLabel" parent="面板/行4"]
+text = "[color=#00ff00]波风水门卡[/color]"
+scroll_active = false
+bbcode_enabled = true
+autowrap_mode = 3
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 0
+layout_mode = 0
+offset_left = 0.0
+offset_top = -2.0
+offset_right = 112.0
+offset_bottom = 16.0
+
+[node name="行4_数量" type="RichTextLabel" parent="面板/行4"]
+text = "[color=#ff0000]0[/color][color=#ffffff]/5[/color]"
+scroll_active = false
+bbcode_enabled = true
+autowrap_mode = 3
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 0
+layout_mode = 0
+offset_left = 122.0
+offset_top = -2.0
+offset_right = 210.0
+offset_bottom = 16.0
+
+[node name="行4_掉落怪" type="RichTextLabel" parent="面板/行4"]
+text = "[url=mob1000019-105020000][u]吞灵土蛊[/u][/url]"
+scroll_active = false
+bbcode_enabled = true
+autowrap_mode = 3
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 0
+theme_override_colors/default_color = Color(0.000000, 1.000000, 0.000000, 1)
+layout_mode = 0
+offset_left = 220.0
+offset_top = 0.0
+offset_right = 314.0
+offset_bottom = 18.0
+
+[node name="行5" type="Control" parent="面板"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 17.0
+offset_top = 186.0
+offset_right = 17.0
+offset_bottom = 186.0
+
+[node name="行5_卡名" type="RichTextLabel" parent="面板/行5"]
+text = "[color=#00ff00]千手纲手卡[/color]"
+scroll_active = false
+bbcode_enabled = true
+autowrap_mode = 3
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 0
+layout_mode = 0
+offset_left = 0.0
+offset_top = -2.0
+offset_right = 112.0
+offset_bottom = 16.0
+
+[node name="行5_数量" type="RichTextLabel" parent="面板/行5"]
+text = "[color=#ff0000]0[/color][color=#ffffff]/2[/color]"
+scroll_active = false
+bbcode_enabled = true
+autowrap_mode = 3
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 0
+layout_mode = 0
+offset_left = 122.0
+offset_top = -2.0
+offset_right = 210.0
+offset_bottom = 16.0
+
+[node name="行5_掉落怪" type="RichTextLabel" parent="面板/行5"]
+text = "[url=mob1000019-105020000][u]吞灵土蛊[/u][/url]"
+scroll_active = false
+bbcode_enabled = true
+autowrap_mode = 3
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 0
+theme_override_colors/default_color = Color(0.000000, 1.000000, 0.000000, 1)
+layout_mode = 0
+offset_left = 220.0
+offset_top = 0.0
+offset_right = 314.0
+offset_bottom = 18.0
+
+[node name="卡格1" type="TextureRect" parent="面板"]
+texture = ExtResource("t16")
+mouse_filter = 0
+layout_mode = 0
+offset_left = 9.0
+offset_top = 269.0
+offset_right = 49.0
+offset_bottom = 309.0
+
+[node name="卡格1_数量" type="Label" parent="面板/卡格1"]
+text = ""
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 1
+offset_top = 24
+offset_right = 38
+offset_bottom = 40
+
+[node name="卡格1_图标" type="TextureRect" parent="面板/卡格1"]
+texture = ExtResource("t17")
+expand_mode = 1
+mouse_filter = 2
+layout_mode = 0
+offset_left = 3
+offset_top = 3
+offset_right = 37
+offset_bottom = 37
+
+[node name="卡格2" type="TextureRect" parent="面板"]
+texture = ExtResource("t16")
+mouse_filter = 0
+layout_mode = 0
+offset_left = 53.0
+offset_top = 269.0
+offset_right = 93.0
+offset_bottom = 309.0
+
+[node name="卡格2_数量" type="Label" parent="面板/卡格2"]
+text = ""
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 1
+offset_top = 24
+offset_right = 38
+offset_bottom = 40
+
+[node name="卡格2_图标" type="TextureRect" parent="面板/卡格2"]
+texture = ExtResource("t18")
+expand_mode = 1
+mouse_filter = 2
+layout_mode = 0
+offset_left = 3
+offset_top = 3
+offset_right = 37
+offset_bottom = 37
+
+[node name="卡格3" type="TextureRect" parent="面板"]
+texture = ExtResource("t16")
+mouse_filter = 0
+layout_mode = 0
+offset_left = 97.0
+offset_top = 269.0
+offset_right = 137.0
+offset_bottom = 309.0
+
+[node name="卡格3_数量" type="Label" parent="面板/卡格3"]
+text = ""
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 1
+offset_top = 24
+offset_right = 38
+offset_bottom = 40
+
+[node name="卡格3_图标" type="TextureRect" parent="面板/卡格3"]
+texture = ExtResource("t19")
+expand_mode = 1
+mouse_filter = 2
+layout_mode = 0
+offset_left = 3
+offset_top = 3
+offset_right = 37
+offset_bottom = 37
+
+[node name="卡格4" type="TextureRect" parent="面板"]
+texture = ExtResource("t16")
+mouse_filter = 0
+layout_mode = 0
+offset_left = 141.0
+offset_top = 269.0
+offset_right = 181.0
+offset_bottom = 309.0
+
+[node name="卡格4_数量" type="Label" parent="面板/卡格4"]
+text = ""
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 1
+offset_top = 24
+offset_right = 38
+offset_bottom = 40
+
+[node name="卡格4_图标" type="TextureRect" parent="面板/卡格4"]
+texture = ExtResource("t20")
+expand_mode = 1
+mouse_filter = 2
+layout_mode = 0
+offset_left = 3
+offset_top = 3
+offset_right = 37
+offset_bottom = 37
+
+[node name="卡格5" type="TextureRect" parent="面板"]
+texture = ExtResource("t16")
+mouse_filter = 0
+layout_mode = 0
+offset_left = 185.0
+offset_top = 269.0
+offset_right = 225.0
+offset_bottom = 309.0
+
+[node name="卡格5_数量" type="Label" parent="面板/卡格5"]
+text = ""
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 1
+offset_top = 24
+offset_right = 38
+offset_bottom = 40
+
+[node name="卡格5_图标" type="TextureRect" parent="面板/卡格5"]
+texture = ExtResource("t21")
+expand_mode = 1
+mouse_filter = 2
+layout_mode = 0
+offset_left = 3
+offset_top = 3
+offset_right = 37
+offset_bottom = 37

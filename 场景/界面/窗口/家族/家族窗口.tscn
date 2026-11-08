@@ -1,0 +1,675 @@
+[gd_scene load_steps=15 format=3]
+
+[ext_resource type="Script" path="res://脚本/界面/窗口/家族/家族窗口.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/家族/盒底.png" id="2_盒底"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/家族/端帽左.png" id="3_端帽左"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/家族/端帽右.png" id="4_端帽右"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/横向分隔线.png" id="5_横线"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/家族/表头竖分隔线.png" id="6_竖分隔"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/物品格.png" id="7_物品格"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/家族/钮底61.png" id="8_钮底"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/家族/钮底37.png" id="8b_钮底37"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/滚动向上.png" id="9_滚上"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/滚动向下.png" id="10_滚下"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/滚动槽.png" id="11_滚槽"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/滚动滑块.png" id="12_滑块"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty1"]
+
+[node name="原版家族窗口内容" type="Control"]
+custom_minimum_size = Vector2(601, 352)
+script = ExtResource("1_script")
+
+[node name="家徽区" type="Control" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 215.0
+offset_bottom = 147.0
+mouse_filter = 2
+
+[node name="盒底" type="NinePatchRect" parent="家徽区"]
+layout_mode = 0
+offset_right = 210.0
+offset_bottom = 142.0
+mouse_filter = 2
+texture = ExtResource("2_盒底")
+patch_margin_left = 8
+patch_margin_top = 7
+patch_margin_right = 7
+patch_margin_bottom = 7
+
+[node name="家徽名标题" type="Label" parent="家徽区"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 72.0
+offset_bottom = 28.0
+text = "家徽名称"
+
+[node name="家徽名值" type="Label" parent="家徽区"]
+layout_mode = 0
+offset_left = 76.0
+offset_top = 8.0
+offset_right = 211.0
+offset_bottom = 28.0
+text = "未加入家族"
+
+[node name="家族等级标题" type="Label" parent="家徽区"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 30.0
+offset_right = 68.0
+offset_bottom = 50.0
+text = "家徽等级"
+
+[node name="家族等级值" type="Label" parent="家徽区"]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 30.0
+offset_right = 203.0
+offset_bottom = 50.0
+text = "0 级"
+
+[node name="加成属性" type="Label" parent="家徽区"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 52.0
+offset_right = 143.0
+offset_bottom = 72.0
+text = "加成属性"
+
+[node name="家徽格" type="Control" parent="家徽区"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 76.0
+offset_right = 58.0
+offset_bottom = 116.0
+mouse_filter = 2
+
+[node name="底色" type="ColorRect" parent="家徽区/家徽格"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+color = Color(1, 1, 1, 1)
+
+[node name="格底" type="TextureRect" parent="家徽区/家徽格"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+texture = ExtResource("7_物品格")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="图标" type="TextureRect" parent="家徽区/家徽格"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 4
+
+[node name="公告区" type="Control" parent="."]
+layout_mode = 0
+offset_left = 216.0
+offset_top = 19.0
+offset_right = 596.0
+offset_bottom = 146.0
+mouse_filter = 2
+
+[node name="盒底" type="NinePatchRect" parent="公告区"]
+layout_mode = 0
+offset_right = 380.0
+offset_bottom = 127.0
+mouse_filter = 2
+texture = ExtResource("2_盒底")
+patch_margin_left = 8
+patch_margin_top = 7
+patch_margin_right = 7
+patch_margin_bottom = 7
+
+[node name="端帽左" type="TextureRect" parent="公告区"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = -14.0
+offset_right = 57.0
+offset_bottom = 8.0
+mouse_filter = 2
+texture = ExtResource("3_端帽左")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="端帽右" type="TextureRect" parent="公告区"]
+layout_mode = 0
+offset_left = 323.0
+offset_top = -14.0
+offset_right = 350.0
+offset_bottom = 8.0
+mouse_filter = 2
+texture = ExtResource("4_端帽右")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="盒标题" type="Label" parent="公告区"]
+layout_mode = 0
+offset_top = -19.0
+offset_bottom = -1.0
+offset_right = 380.0
+mouse_filter = 2
+text = "家族公告"
+horizontal_alignment = 1
+
+[node name="公告" type="TextEdit" parent="公告区"]
+layout_mode = 0
+offset_right = 380.0
+offset_bottom = 137.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty1")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty1")
+theme_override_styles/focus = SubResource("StyleBoxEmpty1")
+text = " "
+editable = false
+wrap_mode = 3
+
+[node name="修改钮" type="TextureButton" parent="公告区"]
+layout_mode = 0
+offset_left = 338.0
+offset_top = 99.0
+offset_right = 375.0
+offset_bottom = 121.0
+focus_mode = 0
+texture_normal = ExtResource("8b_钮底37")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="修改钮文字" type="Label" parent="公告区/修改钮"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+text = "修改"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="信息区" type="Control" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 167.0
+offset_right = 215.0
+offset_bottom = 316.0
+mouse_filter = 2
+
+[node name="盒底" type="NinePatchRect" parent="信息区"]
+layout_mode = 0
+offset_right = 210.0
+offset_bottom = 149.0
+mouse_filter = 2
+texture = ExtResource("2_盒底")
+patch_margin_left = 8
+patch_margin_top = 7
+patch_margin_right = 7
+patch_margin_bottom = 7
+
+[node name="端帽左" type="TextureRect" parent="信息区"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = -14.0
+offset_right = 57.0
+offset_bottom = 8.0
+mouse_filter = 2
+texture = ExtResource("3_端帽左")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="端帽右" type="TextureRect" parent="信息区"]
+layout_mode = 0
+offset_left = 153.0
+offset_top = -14.0
+offset_right = 180.0
+offset_bottom = 8.0
+mouse_filter = 2
+texture = ExtResource("4_端帽右")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="盒标题" type="Label" parent="信息区"]
+layout_mode = 0
+offset_top = -19.0
+offset_bottom = -1.0
+offset_right = 210.0
+mouse_filter = 2
+text = "家族信息"
+horizontal_alignment = 1
+
+[node name="信息" type="RichTextLabel" parent="信息区"]
+layout_mode = 0
+offset_right = 210.0
+offset_bottom = 149.0
+mouse_filter = 2
+theme_override_colors/default_color = Color(1, 0.498039, 0, 1)
+theme_override_constants/line_separation = 2
+theme_override_font_sizes/normal_font_size = 12
+bbcode_enabled = true
+text = " "
+scroll_active = false
+
+[node name="成员区" type="Control" parent="."]
+layout_mode = 0
+offset_left = 216.0
+offset_top = 167.0
+offset_right = 596.0
+offset_bottom = 316.0
+mouse_filter = 2
+
+[node name="盒底" type="NinePatchRect" parent="成员区"]
+layout_mode = 0
+offset_right = 380.0
+offset_bottom = 149.0
+mouse_filter = 2
+texture = ExtResource("2_盒底")
+patch_margin_left = 8
+patch_margin_top = 7
+patch_margin_right = 7
+patch_margin_bottom = 7
+
+[node name="端帽左" type="TextureRect" parent="成员区"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = -14.0
+offset_right = 57.0
+offset_bottom = 8.0
+mouse_filter = 2
+texture = ExtResource("3_端帽左")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="端帽右" type="TextureRect" parent="成员区"]
+layout_mode = 0
+offset_left = 323.0
+offset_top = -14.0
+offset_right = 350.0
+offset_bottom = 8.0
+mouse_filter = 2
+texture = ExtResource("4_端帽右")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="盒标题" type="Label" parent="成员区"]
+layout_mode = 0
+offset_top = -19.0
+offset_bottom = -1.0
+offset_right = 380.0
+mouse_filter = 2
+text = "成员信息"
+horizontal_alignment = 1
+
+[node name="表头" type="Control" parent="成员区"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 5.0
+offset_right = 372.0
+offset_bottom = 25.0
+mouse_filter = 2
+
+[node name="角色名" type="Label" parent="成员区/表头"]
+layout_mode = 0
+offset_right = 110.0
+offset_bottom = 20.0
+text = "角色名"
+horizontal_alignment = 1
+
+[node name="等级" type="Label" parent="成员区/表头"]
+layout_mode = 0
+offset_left = 110.0
+offset_right = 168.0
+offset_bottom = 20.0
+text = "等级"
+horizontal_alignment = 1
+
+[node name="职位" type="Label" parent="成员区/表头"]
+layout_mode = 0
+offset_left = 168.0
+offset_right = 232.0
+offset_bottom = 20.0
+text = "职位"
+horizontal_alignment = 1
+
+[node name="贡献" type="Label" parent="成员区/表头"]
+layout_mode = 0
+offset_left = 232.0
+offset_right = 300.0
+offset_bottom = 20.0
+text = "贡献"
+horizontal_alignment = 1
+
+[node name="财富" type="Label" parent="成员区/表头"]
+layout_mode = 0
+offset_left = 300.0
+offset_right = 368.0
+offset_bottom = 20.0
+text = "财富"
+horizontal_alignment = 1
+
+[node name="分隔1" type="TextureRect" parent="成员区/表头"]
+layout_mode = 0
+offset_top = 2.0
+offset_left = 110.0
+offset_right = 112.0
+offset_bottom = 22.0
+mouse_filter = 2
+texture = ExtResource("6_竖分隔")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="分隔2" type="TextureRect" parent="成员区/表头"]
+layout_mode = 0
+offset_top = 2.0
+offset_left = 168.0
+offset_right = 170.0
+offset_bottom = 22.0
+mouse_filter = 2
+texture = ExtResource("6_竖分隔")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="分隔3" type="TextureRect" parent="成员区/表头"]
+layout_mode = 0
+offset_top = 2.0
+offset_left = 232.0
+offset_right = 234.0
+offset_bottom = 22.0
+mouse_filter = 2
+texture = ExtResource("6_竖分隔")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="分隔4" type="TextureRect" parent="成员区/表头"]
+layout_mode = 0
+offset_top = 2.0
+offset_left = 300.0
+offset_right = 302.0
+offset_bottom = 22.0
+mouse_filter = 2
+texture = ExtResource("6_竖分隔")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="表头横线" type="TextureRect" parent="成员区"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 25.0
+offset_right = 372.0
+offset_bottom = 27.0
+mouse_filter = 2
+texture = ExtResource("5_横线")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="列表窗口" type="Control" parent="成员区"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 27.0
+offset_right = 357.0
+offset_bottom = 143.0
+clip_contents = true
+mouse_filter = 2
+
+[node name="内容列" type="Control" parent="成员区/列表窗口"]
+layout_mode = 0
+offset_right = 349.0
+offset_bottom = 116.0
+mouse_filter = 2
+
+[node name="空提示" type="Label" parent="成员区/列表窗口/内容列"]
+layout_mode = 0
+offset_right = 349.0
+offset_bottom = 23.0
+text = "暂无成员"
+horizontal_alignment = 1
+
+[node name="滚动条" type="Control" parent="成员区"]
+visible = false
+layout_mode = 0
+offset_left = 357.0
+offset_top = 27.0
+offset_right = 372.0
+offset_bottom = 143.0
+mouse_filter = 2
+
+[node name="滚动上" type="TextureButton" parent="成员区/滚动条"]
+layout_mode = 0
+offset_right = 15.0
+offset_bottom = 14.0
+focus_mode = 0
+texture_normal = ExtResource("9_滚上")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="滚动槽" type="TextureRect" parent="成员区/滚动条"]
+layout_mode = 0
+offset_top = 14.0
+offset_right = 15.0
+offset_bottom = 102.0
+mouse_filter = 2
+texture = ExtResource("11_滚槽")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="滑块底" type="NinePatchRect" parent="成员区/滚动条"]
+layout_mode = 0
+offset_top = 14.0
+offset_right = 15.0
+offset_bottom = 51.0
+mouse_filter = 2
+texture = ExtResource("12_滑块")
+patch_margin_left = 6
+patch_margin_top = 9
+patch_margin_right = 6
+patch_margin_bottom = 9
+
+[node name="滑块" type="TextureButton" parent="成员区/滚动条"]
+layout_mode = 0
+offset_top = 14.0
+offset_right = 15.0
+offset_bottom = 51.0
+focus_mode = 0
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="滚动下" type="TextureButton" parent="成员区/滚动条"]
+layout_mode = 0
+offset_top = 102.0
+offset_right = 15.0
+offset_bottom = 116.0
+focus_mode = 0
+texture_normal = ExtResource("10_滚下")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="家族列表" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 0.0
+offset_top = 325.0
+offset_right = 61.0
+offset_bottom = 347.0
+focus_mode = 0
+texture_normal = ExtResource("8_钮底")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="家族列表"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+text = "家族列表"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="家族升级" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 78.0
+offset_top = 325.0
+offset_right = 139.0
+offset_bottom = 347.0
+focus_mode = 0
+texture_normal = ExtResource("8_钮底")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="家族升级"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+text = "家族升级"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="家族技能" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 154.0
+offset_top = 325.0
+offset_right = 215.0
+offset_bottom = 347.0
+focus_mode = 0
+texture_normal = ExtResource("8_钮底")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="家族技能"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+text = "家族技能"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="家族尾兽" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 232.0
+offset_top = 325.0
+offset_right = 293.0
+offset_bottom = 347.0
+focus_mode = 0
+texture_normal = ExtResource("8_钮底")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="家族尾兽"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+text = "家族尾兽"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="家族旗帜" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 308.0
+offset_top = 325.0
+offset_right = 369.0
+offset_bottom = 347.0
+focus_mode = 0
+texture_normal = ExtResource("8_钮底")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="家族旗帜"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+text = "家族旗帜"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="家族贡献" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 386.0
+offset_top = 325.0
+offset_right = 447.0
+offset_bottom = 347.0
+focus_mode = 0
+texture_normal = ExtResource("8_钮底")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="家族贡献"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+text = "家族贡献"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="家族商店" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 462.0
+offset_top = 325.0
+offset_right = 523.0
+offset_bottom = 347.0
+focus_mode = 0
+texture_normal = ExtResource("8_钮底")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="家族商店"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+text = "家族商店"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="成员信息" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 540.0
+offset_top = 325.0
+offset_right = 601.0
+offset_bottom = 347.0
+focus_mode = 0
+texture_normal = ExtResource("8_钮底")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="成员信息"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+text = "成员信息"
+horizontal_alignment = 1
+vertical_alignment = 1

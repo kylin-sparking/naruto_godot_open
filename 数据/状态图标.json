@@ -1,0 +1,1147 @@
+{
+  "说明": "原版 Buff 状态图标。生成物，别手改；改逻辑请改 开发工具/导出特效与图标.mjs。",
+  "真值": {
+    "来源": "Buff 表逐行读 icon.value.className（不是拼字符串）+ BuffWuPin 表 info.icon",
+    "形态": "每个图标就是一张静态位图：ByteArrayImage.as:89-92 走 getBitmapDataFromClassName，没有动画",
+    "格子": "BuffCell.as:65-71 格 40×40、图标画在 (3,3)，冷却遮罩是唯一的动效 GirdCool(0,0.4,40,10,false)",
+    "面板": "BuffPane.as:81-93：≤18 个时 6 列、间距 41；超过改 3 列"
+  },
+  "数量": 83,
+  "表": {
+    "Lianzhan/100": {
+      "子类": "Lianzhan",
+      "键": "100",
+      "名称": "百连",
+      "说明": "100次连斩达成，打怪经验+20%，对精英怪和BOSS可造成150%伤害，效果持续15分钟",
+      "贴图": "res://素材/状态图标/Buff_Lianzhan_100/Buff_Lianzhan_100_icon.png",
+      "类名": "Buff_Lianzhan_100_icon",
+      "swf": "Buff_Lianzhan_100",
+      "宽": 40,
+      "高": 40,
+      "原点": [
+        0,
+        0
+      ]
+    },
+    "Lianzhan/200": {
+      "子类": "Lianzhan",
+      "键": "200",
+      "名称": "二百连",
+      "说明": "200次连斩达成，打怪经验+30%，对精英怪和BOSS可造成200%伤害，效果持续15分钟",
+      "贴图": "res://素材/状态图标/Buff_Lianzhan_200/Buff_Lianzhan_200_icon.png",
+      "类名": "Buff_Lianzhan_200_icon",
+      "swf": "Buff_Lianzhan_200",
+      "宽": 40,
+      "高": 40,
+      "原点": [
+        0,
+        0
+      ]
+    },
+    "Lianzhan/300": {
+      "子类": "Lianzhan",
+      "键": "300",
+      "名称": "三百连",
+      "说明": "300次连斩达成，打怪经验+40%，对精英怪和BOSS可造成250%伤害，效果持续15分钟",
+      "贴图": "res://素材/状态图标/Buff_Lianzhan_300/Buff_Lianzhan_300_icon.png",
+      "类名": "Buff_Lianzhan_300_icon",
+      "swf": "Buff_Lianzhan_300",
+      "宽": 40,
+      "高": 40,
+      "原点": [
+        0,
+        0
+      ]
+    },
+    "Lianzhan/400": {
+      "子类": "Lianzhan",
+      "键": "400",
+      "名称": "四百连",
+      "说明": "400次连斩达成，打怪经验+50%，对精英怪和BOSS可造成300%伤害，效果持续15分钟",
+      "贴图": "res://素材/状态图标/Buff_Lianzhan_400/Buff_Lianzhan_400_icon.png",
+      "类名": "Buff_Lianzhan_400_icon",
+      "swf": "Buff_Lianzhan_400",
+      "宽": 40,
+      "高": 40,
+      "原点": [
+        0,
+        0
+      ]
+    },
+    "Lianzhan/500": {
+      "子类": "Lianzhan",
+      "键": "500",
+      "名称": "五百连",
+      "说明": "500次连斩达成，打怪经验+60%，对精英怪和BOSS可造成350%伤害，效果持续15分钟",
+      "贴图": "res://素材/状态图标/Buff_Lianzhan_500/Buff_Lianzhan_500_icon.png",
+      "类名": "Buff_Lianzhan_500_icon",
+      "swf": "Buff_Lianzhan_500",
+      "宽": 40,
+      "高": 40,
+      "原点": [
+        0,
+        0
+      ]
+    },
+    "Lianzhan/600": {
+      "子类": "Lianzhan",
+      "键": "600",
+      "名称": "六百连",
+      "说明": "600次连斩达成，打怪经验+70%，对精英怪和BOSS可造成400%伤害，效果持续15分钟",
+      "贴图": "res://素材/状态图标/Buff_Lianzhan_600/Buff_Lianzhan_600_icon.png",
+      "类名": "Buff_Lianzhan_600_icon",
+      "swf": "Buff_Lianzhan_600",
+      "宽": 40,
+      "高": 40,
+      "原点": [
+        0,
+        0
+      ]
+    },
+    "Lianzhan/700": {
+      "子类": "Lianzhan",
+      "键": "700",
+      "名称": "七百连",
+      "说明": "700次连斩达成，打怪经验+80%，对精英怪和BOSS可造成450%伤害，效果持续15分钟",
+      "贴图": "res://素材/状态图标/Buff_Lianzhan_700/Buff_Lianzhan_700_icon.png",
+      "类名": "Buff_Lianzhan_700_icon",
+      "swf": "Buff_Lianzhan_700",
+      "宽": 40,
+      "高": 40,
+      "原点": [
+        0,
+        0
+      ]
+    },
+    "Lianzhan/800": {
+      "子类": "Lianzhan",
+      "键": "800",
+      "名称": "八百连",
+      "说明": "800次连斩达成，打怪经验+90%，对精英怪和BOSS可造成500%伤害，效果持续15分钟",
+      "贴图": "res://素材/状态图标/Buff_Lianzhan_800/Buff_Lianzhan_800_icon.png",
+      "类名": "Buff_Lianzhan_800_icon",
+      "swf": "Buff_Lianzhan_800",
+      "宽": 40,
+      "高": 40,
+      "原点": [
+        0,
+        0
+      ]
+    },
+    "Weather/0": {
+      "子类": "Weather",
+      "键": "0",
+      "名称": "晴天",
+      "说明": "天气适宜，一切正常",
+      "贴图": "res://素材/状态图标/Buff_Weather_0/Buff_Weather_0_icon.png",
+      "类名": "Buff_Weather_0_icon",
+      "swf": "Buff_Weather_0",
+      "宽": 40,
+      "高": 40,
+      "原点": [
+        0,
+        0
+      ]
+    },
+    "Weather/1": {
+      "子类": "Weather",
+      "键": "1",
+      "名称": "小雨",
+      "说明": "淅沥小雨。忍犬所有属性降低10%，蛤蟆所有属性提升5%，忍蛇所有属性提升3%",
+      "贴图": "res://素材/状态图标/Buff_Weather_1/Buff_Weather_1_icon.png",
+      "类名": "Buff_Weather_1_icon",
+      "swf": "Buff_Weather_1",
+      "宽": 40,
+      "高": 40,
+      "原点": [
+        0,
+        0
+      ]
+    },
+    "Weather/2": {
+      "子类": "Weather",
+      "键": "2",
+      "名称": "中雨",
+      "说明": "连绵中雨。忍犬所有属性降低20%，蛤蟆所有属性提升10%，忍蛇所有属性提升6%",
+      "贴图": "res://素材/状态图标/Buff_Weather_2/Buff_Weather_2_icon.png",
+      "类名": "Buff_Weather_2_icon",
+      "swf": "Buff_Weather_2",
+      "宽": 40,
+      "高": 40,
+      "原点": [
+        0,
+        0
+      ]
+    },
+    "Weather/3": {
+      "子类": "Weather",
+      "键": "3",
+      "名称": "大雨",
+      "说明": "滂沱大雨。忍犬所有属性降低30%，蛤蟆所有属性提升15%，忍蛇所有属性提升9%",
+      "贴图": "res://素材/状态图标/Buff_Weather_3/Buff_Weather_3_icon.png",
+      "类名": "Buff_Weather_3_icon",
+      "swf": "Buff_Weather_3",
+      "宽": 40,
+      "高": 40,
+      "原点": [
+        0,
+        0
+      ]
+    },
+    "Weather/4": {
+      "子类": "Weather",
+      "键": "4",
+      "名称": "小雪",
+      "说明": "细雪飘零。忍犬所有属性提升5%，蛤蟆所有属性降低10%，忍蛇所有属性降低5%",
+      "贴图": "res://素材/状态图标/Buff_Weather_4/Buff_Weather_4_icon.png",
+      "类名": "Buff_Weather_4_icon",
+      "swf": "Buff_Weather_4",
+      "宽": 40,
+      "高": 40,
+      "原点": [
+        0,
+        0
+      ]
+    },
+    "Weather/5": {
+      "子类": "Weather",
+      "键": "5",
+      "名称": "中雪",
+      "说明": "沁园中雪。忍犬所有属性提升10%，蛤蟆所有属性降低20%，忍蛇所有属性降低10%",
+      "贴图": "res://素材/状态图标/Buff_Weather_5/Buff_Weather_5_icon.png",
+      "类名": "Buff_Weather_5_icon",
+      "swf": "Buff_Weather_5",
+      "宽": 40,
+      "高": 40,
+      "原点": [
+        0,
+        0
+      ]
+    },
+    "Weather/6": {
+      "子类": "Weather",
+      "键": "6",
+      "名称": "大雪",
+      "说明": "大雪纷飞。忍犬所有属性提升15%，蛤蟆所有属性降低30%，忍蛇所有属性降低15%",
+      "贴图": "res://素材/状态图标/Buff_Weather_6/Buff_Weather_6_icon.png",
+      "类名": "Buff_Weather_6_icon",
+      "swf": "Buff_Weather_6",
+      "宽": 40,
+      "高": 40,
+      "原点": [
+        0,
+        0
+      ]
+    },
+    "Weather/7": {
+      "子类": "Weather",
+      "键": "7",
+      "名称": "薄雾",
+      "说明": "淡薄雾气。忍犬所有属性降低5%，蛤蟆所有属性降低5%，忍蛇所有属性提升5%",
+      "贴图": "res://素材/状态图标/Buff_Weather_7/Buff_Weather_7_icon.png",
+      "类名": "Buff_Weather_7_icon",
+      "swf": "Buff_Weather_7",
+      "宽": 40,
+      "高": 40,
+      "原点": [
+        0,
+        0
+      ]
+    },
+    "Weather/8": {
+      "子类": "Weather",
+      "键": "8",
+      "名称": "大雾",
+      "说明": "视野朦胧。忍犬所有属性降低10%，蛤蟆所有属性降低10%，忍蛇所有属性提升10%",
+      "贴图": "res://素材/状态图标/Buff_Weather_8/Buff_Weather_8_icon.png",
+      "类名": "Buff_Weather_8_icon",
+      "swf": "Buff_Weather_8",
+      "宽": 40,
+      "高": 40,
+      "原点": [
+        0,
+        0
+      ]
+    },
+    "Weather/9": {
+      "子类": "Weather",
+      "键": "9",
+      "名称": "浓雾",
+      "说明": "伸手不见五指。忍犬所有属性降低15%，蛤蟆所有属性降低15%，忍蛇所有属性提升15%",
+      "贴图": "res://素材/状态图标/Buff_Weather_9/Buff_Weather_9_icon.png",
+      "类名": "Buff_Weather_9_icon",
+      "swf": "Buff_Weather_9",
+      "宽": 40,
+      "高": 40,
+      "原点": [
+        0,
+        0
+      ]
+    },
+    "flag/1": {
+      "子类": "flag",
+      "键": "1",
+      "名称": "一级家族经验与精华加成",
+      "说明": "<font color='#FFF102'>您附近存在本族的家族旗帜，在旗帜安插地图内您打怪将获得额外30%的经验加成，打坐获得经验与精华的速度将加快3%（与双倍经验符叠加求和）</font>",
+      "贴图": "res://素材/状态图标/Buff_flag_1/Buff_flag_1_icon.png",
+      "类名": "Buff_flag_1_icon",
+      "swf": "Buff_flag_1",
+      "宽": 40,
+      "高": 40,
+      "原点": [
+        20,
+        20
+      ]
+    },
+    "flag/2": {
+      "子类": "flag",
+      "键": "2",
+      "名称": "二级家族经验与精华加成",
+      "说明": "<font color='#FFF102'>您附近存在本族的家族旗帜，在旗帜安插地图内您打怪将获得额外40%的经验加成，打坐获得经验与精华的速度将加快5%（与双倍经验符叠加求和）</font>",
+      "贴图": "res://素材/状态图标/Buff_flag_1/Buff_flag_1_icon.png",
+      "类名": "Buff_flag_1_icon",
+      "swf": "Buff_flag_1",
+      "宽": 40,
+      "高": 40,
+      "原点": [
+        20,
+        20
+      ]
+    },
+    "flag/3": {
+      "子类": "flag",
+      "键": "3",
+      "名称": "三级家族经验与精华加成",
+      "说明": "<font color='#FFF102'>您附近存在本族的家族旗帜，在旗帜安插地图内您打怪将获得额外50%的经验加成，打坐获得经验与精华的速度将加快8%（与双倍经验符叠加求和）</font>",
+      "贴图": "res://素材/状态图标/Buff_flag_1/Buff_flag_1_icon.png",
+      "类名": "Buff_flag_1_icon",
+      "swf": "Buff_flag_1",
+      "宽": 40,
+      "高": 40,
+      "原点": [
+        20,
+        20
+      ]
+    },
+    "flag/4": {
+      "子类": "flag",
+      "键": "4",
+      "名称": "四级家族经验与精华加成",
+      "说明": "<font color='#FFF102'>您附近存在本族的家族旗帜，在旗帜安插地图内您打怪将获得额外60%的经验加成，打坐获得经验与精华的速度将加快10%（与双倍经验符叠加求和）</font>",
+      "贴图": "res://素材/状态图标/Buff_flag_1/Buff_flag_1_icon.png",
+      "类名": "Buff_flag_1_icon",
+      "swf": "Buff_flag_1",
+      "宽": 40,
+      "高": 40,
+      "原点": [
+        20,
+        20
+      ]
+    },
+    "flag/5": {
+      "子类": "flag",
+      "键": "5",
+      "名称": "五级家族经验与精华加成",
+      "说明": "<font color='#FFF102'>您附近存在本族的家族旗帜，在旗帜安插地图内您打怪将获得额外70%的经验加成，打坐获得经验与精华的速度将加快13%（与双倍经验符叠加求和）</font>",
+      "贴图": "res://素材/状态图标/Buff_flag_1/Buff_flag_1_icon.png",
+      "类名": "Buff_flag_1_icon",
+      "swf": "Buff_flag_1",
+      "宽": 40,
+      "高": 40,
+      "原点": [
+        20,
+        20
+      ]
+    },
+    "flag/6": {
+      "子类": "flag",
+      "键": "6",
+      "名称": "六级家族经验与精华加成",
+      "说明": "<font color='#FFF102'>您附近存在本族的家族旗帜，在旗帜安插地图内您打怪将获得额外80%的经验加成，打坐获得经验与精华的速度将加快15%（与双倍经验符叠加求和）</font>",
+      "贴图": "res://素材/状态图标/Buff_flag_1/Buff_flag_1_icon.png",
+      "类名": "Buff_flag_1_icon",
+      "swf": "Buff_flag_1",
+      "宽": 40,
+      "高": 40,
+      "原点": [
+        20,
+        20
+      ]
+    },
+    "flag/7": {
+      "子类": "flag",
+      "键": "7",
+      "名称": "七级家族经验与精华加成",
+      "说明": "<font color='#FFF102'>您附近存在本族的家族旗帜，在旗帜安插地图内您打怪将获得额外90%的经验加成，打坐获得经验与精华的速度将加快18%（与双倍经验符叠加求和）</font>",
+      "贴图": "res://素材/状态图标/Buff_flag_1/Buff_flag_1_icon.png",
+      "类名": "Buff_flag_1_icon",
+      "swf": "Buff_flag_1",
+      "宽": 40,
+      "高": 40,
+      "原点": [
+        20,
+        20
+      ]
+    },
+    "flag/8": {
+      "子类": "flag",
+      "键": "8",
+      "名称": "八级家族经验与精华加成",
+      "说明": "<font color='#FFF102'>您附近存在本族的家族旗帜，在旗帜安插地图内您打怪将获得额外100%的经验加成，打坐获得经验与精华的速度将加快21%（与双倍经验符叠加求和）</font>",
+      "贴图": "res://素材/状态图标/Buff_flag_1/Buff_flag_1_icon.png",
+      "类名": "Buff_flag_1_icon",
+      "swf": "Buff_flag_1",
+      "宽": 40,
+      "高": 40,
+      "原点": [
+        20,
+        20
+      ]
+    },
+    "flag/9": {
+      "子类": "flag",
+      "键": "9",
+      "名称": "九级家族经验与精华加成",
+      "说明": "<font color='#FFF102'>您附近存在本族的家族旗帜，在旗帜安插地图内您打怪将获得额外110%的经验加成，打坐获得经验与精华的速度将加快24%（与双倍经验符叠加求和）</font>",
+      "贴图": "res://素材/状态图标/Buff_flag_1/Buff_flag_1_icon.png",
+      "类名": "Buff_flag_1_icon",
+      "swf": "Buff_flag_1",
+      "宽": 40,
+      "高": 40,
+      "原点": [
+        20,
+        20
+      ]
+    },
+    "flag/10": {
+      "子类": "flag",
+      "键": "10",
+      "名称": "十级家族经验与精华加成",
+      "说明": "<font color='#FFF102'>您附近存在本族的家族旗帜，在旗帜安插地图内您打怪将获得额外120%的经验加成，打坐获得经验与精华的速度将加快28%（与双倍经验符叠加求和）</font>",
+      "贴图": "res://素材/状态图标/Buff_flag_1/Buff_flag_1_icon.png",
+      "类名": "Buff_flag_1_icon",
+      "swf": "Buff_flag_1",
+      "宽": 40,
+      "高": 40,
+      "原点": [
+        20,
+        20
+      ]
+    },
+    "PK/protect": {
+      "子类": "PK",
+      "键": "protect",
+      "名称": "和平保护中",
+      "说明": "被其它玩家PK死亡后获得本保护状态。在30分钟内你将无法被任何玩家PK。但如果你主动PK其他玩家，本保护状态将会立即消失，其他玩家也将会可以PK你。",
+      "贴图": "res://素材/状态图标/Buff_Lianzhan_100/Buff_Lianzhan_100_icon.png",
+      "类名": "Buff_Lianzhan_100_icon",
+      "swf": "Buff_Lianzhan_100",
+      "宽": 40,
+      "高": 40,
+      "原点": [
+        0,
+        0
+      ]
+    },
+    "PK/hangProtect": {
+      "子类": "PK",
+      "键": "hangProtect",
+      "名称": "夜间挂机保护",
+      "说明": "24：00-8：00期间，只要挂机超过5分钟，就会进入夜间挂机保护状态，可以放心睡觉了。",
+      "贴图": "res://素材/状态图标/Buff_Lianzhan_100/Buff_Lianzhan_100_icon.png",
+      "类名": "Buff_Lianzhan_100_icon",
+      "swf": "Buff_Lianzhan_100",
+      "宽": 40,
+      "高": 40,
+      "原点": [
+        0,
+        0
+      ]
+    },
+    "PK/crimeB": {
+      "子类": "PK",
+      "键": "crimeB",
+      "名称": "B级叛忍",
+      "说明": "<font color='#FFF102'>木叶的B级叛忍，攻击+50，防御-25；被其他忍者击杀后将掉落背包中3-5件物品，并有较低几率粉碎1件穿戴装备。</font><br/><font color='#0297FE'>（每杀死一个玩家将增加1000点罪恶值；线上每分钟减少25点罪恶值，每杀死一个不低于自身等级5级的怪物减少1点罪恶值；使用商城道具【暗部赦免令】可减少1000点罪恶值）</font>",
+      "贴图": "",
+      "备注": "原版这行没有 icon，不是缺图"
+    },
+    "PK/crimeA": {
+      "子类": "PK",
+      "键": "crimeA",
+      "名称": "A级叛忍",
+      "说明": "<font color='#FFF102'>木叶的A级叛忍，攻击+100，防御-50；被其他忍者击杀后将掉落背包中5-7件物品，并有较高几率粉碎1件穿戴装备。</font><br/><font color='#0297FE'>（每杀死一个玩家将增加1000点罪恶值；线上每分钟减少25点罪恶值，每杀死一个不低于自身等级5级的怪物减少1点罪恶值；使用商城道具【暗部赦免令】可减少1000点罪恶值）</font>",
+      "贴图": "",
+      "备注": "原版这行没有 icon，不是缺图"
+    },
+    "PK/crimeS": {
+      "子类": "PK",
+      "键": "crimeS",
+      "名称": "S级叛忍",
+      "说明": "<font color='#FFF102'>木叶的S级叛忍，攻击+200，防御-100；被其他忍者击杀后将掉落背包中7-9件物品，并有极高几率粉碎1件穿戴装备。</font><br/><font color='#0297FE'>（每杀死一个玩家将增加1000点罪恶值；线上每分钟减少25点罪恶值，每杀死一个不低于自身等级5级的怪物减少1点罪恶值；使用商城道具【暗部赦免令】可减少1000点罪恶值）</font>",
+      "贴图": "",
+      "备注": "原版这行没有 icon，不是缺图"
+    },
+    "PK/crimeC": {
+      "子类": "PK",
+      "键": "crimeC",
+      "名称": "C级叛忍",
+      "说明": "<font color='#FFF102'>木叶的C级叛忍，攻击+20，防御-10；被其他忍者击杀后将掉落背包中1-3件物品。</font><br/><font color='#0297FE'>（每杀死一个玩家将增加1000点罪恶值；线上每分钟减少25点罪恶值，每杀死一个不低于自身等级5级的怪物减少1点罪恶值；使用商城道具【暗部赦免令】可减少1000点罪恶值）</font>",
+      "贴图": "",
+      "备注": "原版这行没有 icon，不是缺图"
+    },
+    "PK/warfield_enter": {
+      "子类": "PK",
+      "键": "warfield_enter",
+      "名称": "神器之争参与资格",
+      "说明": "恭喜您获得神器之争参与资格，请于20：40-21：00在3线佐助处进入活动地图，该资格有效期至 21：00",
+      "贴图": "res://素材/状态图标/Buff_PK_warfield_enter/Buff_PK_warfield_enter_icon.png",
+      "类名": "Buff_PK_warfield_enter_icon",
+      "swf": "Buff_PK_warfield_enter",
+      "宽": 40,
+      "高": 40,
+      "原点": [
+        20,
+        20
+      ]
+    },
+    "PK/flagwar": {
+      "子类": "PK",
+      "键": "flagwar",
+      "名称": "领域战非保护中",
+      "说明": "<font color='#FFF102'>您参与了家族领域战活动，因此进入了【领域战非保护状态】，在本状态中全世界范围内对于您来讲均没有安全区可言。您将会有可能接受到来自任何玩家对您的攻击，而不受保护，请千万小心。</font><br/><font color='#0297FE'>（本状态总计将持续20分钟，玩家下线时间也会同样计入BUFF持续时间）</font>",
+      "贴图": "res://素材/状态图标/Buff_flag_1/Buff_flag_1_icon.png",
+      "类名": "Buff_flag_1_icon",
+      "swf": "Buff_flag_1",
+      "宽": 40,
+      "高": 40,
+      "原点": [
+        20,
+        20
+      ]
+    },
+    "PK/PkLose1": {
+      "子类": "PK",
+      "键": "PkLose1",
+      "名称": "越挫越勇1",
+      "说明": "屡败屡战，攻击、防御、暴击、闪避各增加10%",
+      "贴图": "res://素材/状态图标/Buff_PK_PkLose1/Buff_PK_PkLose1_icon.png",
+      "类名": "Buff_PK_PkLose1_icon",
+      "swf": "Buff_PK_PkLose1",
+      "宽": 40,
+      "高": 40,
+      "原点": [
+        0,
+        0
+      ]
+    },
+    "PK/PkLose2": {
+      "子类": "PK",
+      "键": "PkLose2",
+      "名称": "越挫越勇2",
+      "说明": "屡败屡战，攻击、防御、暴击、闪避各增加20%",
+      "贴图": "res://素材/状态图标/Buff_PK_PkLose2/Buff_PK_PkLose2_icon.png",
+      "类名": "Buff_PK_PkLose2_icon",
+      "swf": "Buff_PK_PkLose2",
+      "宽": 40,
+      "高": 40,
+      "原点": [
+        0,
+        0
+      ]
+    },
+    "PK/PkLose3": {
+      "子类": "PK",
+      "键": "PkLose3",
+      "名称": "越挫越勇3",
+      "说明": "屡败屡战，攻击、防御、暴击、闪避各增加30%",
+      "贴图": "res://素材/状态图标/Buff_PK_PkLose3/Buff_PK_PkLose3_icon.png",
+      "类名": "Buff_PK_PkLose3_icon",
+      "swf": "Buff_PK_PkLose3",
+      "宽": 40,
+      "高": 40,
+      "原点": [
+        0,
+        0
+      ]
+    },
+    "PK/PkLose4": {
+      "子类": "PK",
+      "键": "PkLose4",
+      "名称": "越挫越勇4",
+      "说明": "屡败屡战，攻击、防御、暴击、闪避各增加40%",
+      "贴图": "res://素材/状态图标/Buff_PK_PkLose4/Buff_PK_PkLose4_icon.png",
+      "类名": "Buff_PK_PkLose4_icon",
+      "swf": "Buff_PK_PkLose4",
+      "宽": 40,
+      "高": 40,
+      "原点": [
+        0,
+        0
+      ]
+    },
+    "PK/PkLose5": {
+      "子类": "PK",
+      "键": "PkLose5",
+      "名称": "越挫越勇5",
+      "说明": "屡败屡战，攻击、防御、暴击、闪避各增加50%",
+      "贴图": "res://素材/状态图标/Buff_PK_PkLose5/Buff_PK_PkLose5_icon.png",
+      "类名": "Buff_PK_PkLose5_icon",
+      "swf": "Buff_PK_PkLose5",
+      "宽": 40,
+      "高": 40,
+      "原点": [
+        0,
+        0
+      ]
+    },
+    "PK/PkWin1": {
+      "子类": "PK",
+      "键": "PkWin1",
+      "名称": "知难而进1",
+      "说明": "他强任他强，清风拂山岗，攻击、防御、暴击、闪避各增加5%",
+      "贴图": "res://素材/状态图标/Buff_PK_PkWin1/Buff_PK_PkWin1_icon.png",
+      "类名": "Buff_PK_PkWin1_icon",
+      "swf": "Buff_PK_PkWin1",
+      "宽": 40,
+      "高": 40,
+      "原点": [
+        0,
+        0
+      ]
+    },
+    "PK/PkWin2": {
+      "子类": "PK",
+      "键": "PkWin2",
+      "名称": "知难而进2",
+      "说明": "他强任他强，清风拂山岗，攻击、防御、暴击、闪避各增加10%",
+      "贴图": "res://素材/状态图标/Buff_PK_PkWin2/Buff_PK_PkWin2_icon.png",
+      "类名": "Buff_PK_PkWin2_icon",
+      "swf": "Buff_PK_PkWin2",
+      "宽": 40,
+      "高": 40,
+      "原点": [
+        0,
+        0
+      ]
+    },
+    "PK/PkWin3": {
+      "子类": "PK",
+      "键": "PkWin3",
+      "名称": "知难而进3",
+      "说明": "他强任他强，清风拂山岗，攻击、防御、暴击、闪避各增加15%",
+      "贴图": "res://素材/状态图标/Buff_PK_PkWin3/Buff_PK_PkWin3_icon.png",
+      "类名": "Buff_PK_PkWin3_icon",
+      "swf": "Buff_PK_PkWin3",
+      "宽": 40,
+      "高": 40,
+      "原点": [
+        0,
+        0
+      ]
+    },
+    "PK/PkWin4": {
+      "子类": "PK",
+      "键": "PkWin4",
+      "名称": "知难而进2",
+      "说明": "他强任他强，清风拂山岗，攻击、防御、暴击、闪避各增加20%",
+      "贴图": "res://素材/状态图标/Buff_PK_PkWin4/Buff_PK_PkWin4_icon.png",
+      "类名": "Buff_PK_PkWin4_icon",
+      "swf": "Buff_PK_PkWin4",
+      "宽": 40,
+      "高": 40,
+      "原点": [
+        0,
+        0
+      ]
+    },
+    "PK/PkWin5": {
+      "子类": "PK",
+      "键": "PkWin5",
+      "名称": "知难而进5",
+      "说明": "他强任他强，清风拂山岗，攻击、防御、暴击、闪避各增加25%",
+      "贴图": "res://素材/状态图标/Buff_PK_PkWin5/Buff_PK_PkWin5_icon.png",
+      "类名": "Buff_PK_PkWin5_icon",
+      "swf": "Buff_PK_PkWin5",
+      "宽": 40,
+      "高": 40,
+      "原点": [
+        0,
+        0
+      ]
+    },
+    "JieYin/1": {
+      "子类": "JieYin",
+      "键": "1",
+      "名称": "子印",
+      "说明": "拇指重叠，左手拇指在上。训练完成后，在子时（23:00-00:59）打怪经验额外增加50%。",
+      "贴图": "res://素材/状态图标/Buff_JieYin_1/Buff_JieYin_1_icon.png",
+      "类名": "Buff_JieYin_1_icon",
+      "swf": "Buff_JieYin_1",
+      "宽": 40,
+      "高": 40,
+      "原点": [
+        0,
+        0
+      ]
+    },
+    "JieYin/2": {
+      "子类": "JieYin",
+      "键": "2",
+      "名称": "丑印",
+      "说明": "右手水准，左手垂直。训练完成后，在丑时（1:00-2:59）打怪经验额外增加50%。",
+      "贴图": "res://素材/状态图标/Buff_JieYin_2/Buff_JieYin_2_icon.png",
+      "类名": "Buff_JieYin_2_icon",
+      "swf": "Buff_JieYin_2",
+      "宽": 40,
+      "高": 40,
+      "原点": [
+        0,
+        0
+      ]
+    },
+    "JieYin/3": {
+      "子类": "JieYin",
+      "键": "3",
+      "名称": "寅印",
+      "说明": "两手的拇指要伸直。训练完成后，在寅时（3:00-4:59）打怪经验额外增加50%。",
+      "贴图": "res://素材/状态图标/Buff_JieYin_3/Buff_JieYin_3_icon.png",
+      "类名": "Buff_JieYin_3_icon",
+      "swf": "Buff_JieYin_3",
+      "宽": 40,
+      "高": 40,
+      "原点": [
+        0,
+        0
+      ]
+    },
+    "JieYin/4": {
+      "子类": "JieYin",
+      "键": "4",
+      "名称": "卯印",
+      "说明": "右手除了小指伸直之外，其余的四指轻轻握拳。训练完成后，在卯时（5:00-6:59）打怪经验额外增加50%。",
+      "贴图": "res://素材/状态图标/Buff_JieYin_4/Buff_JieYin_4_icon.png",
+      "类名": "Buff_JieYin_4_icon",
+      "swf": "Buff_JieYin_4",
+      "宽": 40,
+      "高": 40,
+      "原点": [
+        0,
+        0
+      ]
+    },
+    "JieYin/5": {
+      "子类": "JieYin",
+      "键": "5",
+      "名称": "辰印",
+      "说明": "拇指重叠，左手拇指在上。训练完成后，在辰时（7:00-8:59）打怪经验额外增加50%。",
+      "贴图": "res://素材/状态图标/Buff_JieYin_5/Buff_JieYin_5_icon.png",
+      "类名": "Buff_JieYin_5_icon",
+      "swf": "Buff_JieYin_5",
+      "宽": 40,
+      "高": 40,
+      "原点": [
+        0,
+        0
+      ]
+    },
+    "JieYin/6": {
+      "子类": "JieYin",
+      "键": "6",
+      "名称": "巳印",
+      "说明": "拇指重叠，左手拇指在上。训练完成后，在巳时（9:00-10:59）打怪经验额外增加50%。",
+      "贴图": "res://素材/状态图标/Buff_JieYin_6/Buff_JieYin_6_icon.png",
+      "类名": "Buff_JieYin_6_icon",
+      "swf": "Buff_JieYin_6",
+      "宽": 40,
+      "高": 40,
+      "原点": [
+        0,
+        0
+      ]
+    },
+    "JieYin/7": {
+      "子类": "JieYin",
+      "键": "7",
+      "名称": "午印",
+      "说明": "两肘伸开，两手食指相对形成三角形。训练完成后，在午时（11:00-12:59）打怪经验额外增加50%。",
+      "贴图": "res://素材/状态图标/Buff_JieYin_7/Buff_JieYin_7_icon.png",
+      "类名": "Buff_JieYin_7_icon",
+      "swf": "Buff_JieYin_7",
+      "宽": 40,
+      "高": 40,
+      "原点": [
+        0,
+        0
+      ]
+    },
+    "JieYin/8": {
+      "子类": "JieYin",
+      "键": "8",
+      "名称": "未印",
+      "说明": "拇指向上伸直重叠，左手拇指在上。训练完成后，在未时（13:00-14:59）打怪经验额外增加50%。",
+      "贴图": "res://素材/状态图标/Buff_JieYin_8/Buff_JieYin_8_icon.png",
+      "类名": "Buff_JieYin_8_icon",
+      "swf": "Buff_JieYin_8",
+      "宽": 40,
+      "高": 40,
+      "原点": [
+        0,
+        0
+      ]
+    },
+    "JieYin/9": {
+      "子类": "JieYin",
+      "键": "9",
+      "名称": "申印",
+      "说明": "小指和拇指平行。训练完成后，在申时（15:00-16:59）打怪经验额外增加50%。",
+      "贴图": "res://素材/状态图标/Buff_JieYin_9/Buff_JieYin_9_icon.png",
+      "类名": "Buff_JieYin_9_icon",
+      "swf": "Buff_JieYin_9",
+      "宽": 40,
+      "高": 40,
+      "原点": [
+        0,
+        0
+      ]
+    },
+    "JieYin/10": {
+      "子类": "JieYin",
+      "键": "10",
+      "名称": "酉印",
+      "说明": "小指和食指指尖相抵并竖起，无名指和中指手指弯曲，指背中部相靠。训练完成后，在酉时（17:00-18:59）打怪经验额外增加50%。",
+      "贴图": "res://素材/状态图标/Buff_JieYin_10/Buff_JieYin_10_icon.png",
+      "类名": "Buff_JieYin_10_icon",
+      "swf": "Buff_JieYin_10",
+      "宽": 40,
+      "高": 40,
+      "原点": [
+        0,
+        0
+      ]
+    },
+    "JieYin/11": {
+      "子类": "JieYin",
+      "键": "11",
+      "名称": "戌印",
+      "说明": "右拳放在左手的掌心。训练完成后，在戌时（19:00-20:59）打怪经验额外增加50%。",
+      "贴图": "res://素材/状态图标/Buff_JieYin_11/Buff_JieYin_11_icon.png",
+      "类名": "Buff_JieYin_11_icon",
+      "swf": "Buff_JieYin_11",
+      "宽": 40,
+      "高": 40,
+      "原点": [
+        0,
+        0
+      ]
+    },
+    "JieYin/12": {
+      "子类": "JieYin",
+      "键": "12",
+      "名称": "亥印",
+      "说明": "这个姿式要求手腕的柔韧性好。训练完成后，在亥时（21:00-22:59）打怪经验额外增加50%。",
+      "贴图": "res://素材/状态图标/Buff_JieYin_12/Buff_JieYin_12_icon.png",
+      "类名": "Buff_JieYin_12_icon",
+      "swf": "Buff_JieYin_12",
+      "宽": 40,
+      "高": 40,
+      "原点": [
+        0,
+        0
+      ]
+    },
+    "Heal/0": {
+      "子类": "Heal",
+      "键": "0",
+      "名称": "单人打坐",
+      "说明": "您进入了单人打坐状态；每隔一段时间，您将获得人物经验的增长与查克拉精华存储量的增长。",
+      "贴图": "res://素材/状态图标/Buff_Heal_0/Buff_Heal_0_icon.png",
+      "类名": "Buff_Heal_0_icon",
+      "swf": "Buff_Heal_0",
+      "宽": 40,
+      "高": 40,
+      "原点": [
+        0,
+        0
+      ]
+    },
+    "Heal/1": {
+      "子类": "Heal",
+      "键": "1",
+      "名称": "双修",
+      "说明": "你进入了双人打坐状态；双修所获得的人物经验增长与查克拉精华存储量增长比单人打坐多20%。",
+      "贴图": "res://素材/状态图标/Buff_Heal_1/Buff_Heal_1_icon.png",
+      "类名": "Buff_Heal_1_icon",
+      "swf": "Buff_Heal_1",
+      "宽": 40,
+      "高": 40,
+      "原点": [
+        0,
+        0
+      ]
+    },
+    "System/0": {
+      "子类": "System",
+      "键": "0",
+      "名称": "系统双倍经验",
+      "说明": "活动时间段内进行打怪或打坐，可获得双倍经验收益。",
+      "贴图": "res://素材/状态图标/Buff_System_0/Buff_System_0_icon.png",
+      "类名": "Buff_System_0_icon",
+      "swf": "Buff_System_0",
+      "宽": 40,
+      "高": 40,
+      "原点": [
+        20,
+        20
+      ]
+    },
+    "System/1": {
+      "子类": "System",
+      "键": "1",
+      "名称": "系统双倍精华",
+      "说明": "活动时间段内进行打坐，可获得双倍查克拉精华收益。",
+      "贴图": "res://素材/状态图标/Buff_System_1/Buff_System_1_icon.png",
+      "类名": "Buff_System_1_icon",
+      "swf": "Buff_System_1",
+      "宽": 40,
+      "高": 40,
+      "原点": [
+        20,
+        20
+      ]
+    }
+  },
+  "物品Buff": {
+    "18000001": {
+      "贴图": "res://素材/状态图标/BuffWuPin_18000001_info/BuffWuPin_18000001_info_icon.png",
+      "类名": "BuffWuPin_18000001_info_icon",
+      "swf": "BuffWuPin_18000001_info",
+      "宽": 34,
+      "高": 34,
+      "原点": [
+        17,
+        17
+      ]
+    },
+    "18002001": {
+      "贴图": "res://素材/状态图标/BuffWuPin_18002001_info/BuffWuPin_18002001_info_icon.png",
+      "类名": "BuffWuPin_18002001_info_icon",
+      "swf": "BuffWuPin_18002001_info",
+      "宽": 34,
+      "高": 34,
+      "原点": [
+        17,
+        17
+      ]
+    },
+    "18003001": {
+      "贴图": "res://素材/状态图标/BuffWuPin_18003001_info/BuffWuPin_18003001_info_icon.png",
+      "类名": "BuffWuPin_18003001_info_icon",
+      "swf": "BuffWuPin_18003001_info",
+      "宽": 34,
+      "高": 34,
+      "原点": [
+        17,
+        17
+      ]
+    },
+    "18003002": {
+      "贴图": "res://素材/状态图标/BuffWuPin_18003002_info/BuffWuPin_18003002_info_icon.png",
+      "类名": "BuffWuPin_18003002_info_icon",
+      "swf": "BuffWuPin_18003002_info",
+      "宽": 34,
+      "高": 34,
+      "原点": [
+        17,
+        17
+      ]
+    },
+    "18003003": {
+      "贴图": "res://素材/状态图标/BuffWuPin_18003003_info/BuffWuPin_18003003_info_icon.png",
+      "类名": "BuffWuPin_18003003_info_icon",
+      "swf": "BuffWuPin_18003003_info",
+      "宽": 34,
+      "高": 34,
+      "原点": [
+        17,
+        17
+      ]
+    },
+    "18003004": {
+      "贴图": "res://素材/状态图标/BuffWuPin_18003004_info/BuffWuPin_18003004_info_icon.png",
+      "类名": "BuffWuPin_18003004_info_icon",
+      "swf": "BuffWuPin_18003004_info",
+      "宽": 34,
+      "高": 34,
+      "原点": [
+        17,
+        17
+      ]
+    },
+    "18003005": {
+      "贴图": "res://素材/状态图标/BuffWuPin_18003005_info/BuffWuPin_18003005_info_icon.png",
+      "类名": "BuffWuPin_18003005_info_icon",
+      "swf": "BuffWuPin_18003005_info",
+      "宽": 34,
+      "高": 34,
+      "原点": [
+        17,
+        17
+      ]
+    },
+    "18003006": {
+      "贴图": "res://素材/状态图标/BuffWuPin_18003006_info/BuffWuPin_18003006_info_icon.png",
+      "类名": "BuffWuPin_18003006_info_icon",
+      "swf": "BuffWuPin_18003006_info",
+      "宽": 34,
+      "高": 34,
+      "原点": [
+        17,
+        17
+      ]
+    },
+    "18003007": {
+      "贴图": "res://素材/状态图标/BuffWuPin_18003007_info/BuffWuPin_18003007_info_icon.png",
+      "类名": "BuffWuPin_18003007_info_icon",
+      "swf": "BuffWuPin_18003007_info",
+      "宽": 34,
+      "高": 34,
+      "原点": [
+        17,
+        17
+      ]
+    },
+    "18003008": {
+      "贴图": "res://素材/状态图标/BuffWuPin_18003008_info/BuffWuPin_18003008_info_icon.png",
+      "类名": "BuffWuPin_18003008_info_icon",
+      "swf": "BuffWuPin_18003008_info",
+      "宽": 34,
+      "高": 34,
+      "原点": [
+        17,
+        17
+      ]
+    },
+    "18003009": {
+      "贴图": "res://素材/状态图标/BuffWuPin_18003004_info/BuffWuPin_18003004_info_icon.png",
+      "类名": "BuffWuPin_18003004_info_icon",
+      "swf": "BuffWuPin_18003004_info",
+      "宽": 34,
+      "高": 34,
+      "原点": [
+        17,
+        17
+      ]
+    },
+    "18003010": {
+      "贴图": "res://素材/状态图标/BuffWuPin_18003001_info/BuffWuPin_18003001_info_icon.png",
+      "类名": "BuffWuPin_18003001_info_icon",
+      "swf": "BuffWuPin_18003001_info",
+      "宽": 34,
+      "高": 34,
+      "原点": [
+        17,
+        17
+      ]
+    },
+    "18003011": {
+      "贴图": "res://素材/状态图标/BuffWuPin_18003002_info/BuffWuPin_18003002_info_icon.png",
+      "类名": "BuffWuPin_18003002_info_icon",
+      "swf": "BuffWuPin_18003002_info",
+      "宽": 34,
+      "高": 34,
+      "原点": [
+        17,
+        17
+      ]
+    },
+    "18003012": {
+      "贴图": "res://素材/状态图标/BuffWuPin_18003012_info/BuffWuPin_18003012_info_icon.png",
+      "类名": "BuffWuPin_18003012_info_icon",
+      "swf": "BuffWuPin_18003012_info",
+      "宽": 34,
+      "高": 34,
+      "原点": [
+        17,
+        17
+      ]
+    },
+    "18003013": {
+      "贴图": "res://素材/状态图标/BuffWuPin_18003013_info/BuffWuPin_18003013_info_icon.png",
+      "类名": "BuffWuPin_18003013_info_icon",
+      "swf": "BuffWuPin_18003013_info",
+      "宽": 34,
+      "高": 34,
+      "原点": [
+        17,
+        17
+      ]
+    },
+    "18003014": {
+      "贴图": "res://素材/状态图标/BuffWuPin_18003008_info/BuffWuPin_18003008_info_icon.png",
+      "类名": "BuffWuPin_18003008_info_icon",
+      "swf": "BuffWuPin_18003008_info",
+      "宽": 34,
+      "高": 34,
+      "原点": [
+        17,
+        17
+      ]
+    },
+    "18003015": {
+      "贴图": "res://素材/状态图标/BuffWuPin_18003005_info/BuffWuPin_18003005_info_icon.png",
+      "类名": "BuffWuPin_18003005_info_icon",
+      "swf": "BuffWuPin_18003005_info",
+      "宽": 34,
+      "高": 34,
+      "原点": [
+        17,
+        17
+      ]
+    },
+    "18003016": {
+      "贴图": "res://素材/状态图标/BuffWuPin_18003006_info/BuffWuPin_18003006_info_icon.png",
+      "类名": "BuffWuPin_18003006_info_icon",
+      "swf": "BuffWuPin_18003006_info",
+      "宽": 34,
+      "高": 34,
+      "原点": [
+        17,
+        17
+      ]
+    },
+    "18003017": {
+      "贴图": "res://素材/状态图标/BuffWuPin_18003017_info/BuffWuPin_18003017_info_icon.png",
+      "类名": "BuffWuPin_18003017_info_icon",
+      "swf": "BuffWuPin_18003017_info",
+      "宽": 34,
+      "高": 34,
+      "原点": [
+        17,
+        17
+      ]
+    },
+    "18003018": {
+      "贴图": "res://素材/状态图标/BuffWuPin_18003018_info/BuffWuPin_18003018_info_icon.png",
+      "类名": "BuffWuPin_18003018_info_icon",
+      "swf": "BuffWuPin_18003018_info",
+      "宽": 34,
+      "高": 34,
+      "原点": [
+        17,
+        17
+      ]
+    },
+    "18004001": {
+      "贴图": "res://素材/状态图标/BuffWuPin_18004001_info/BuffWuPin_18004001_info_icon.png",
+      "类名": "BuffWuPin_18004001_info_icon",
+      "swf": "BuffWuPin_18004001_info",
+      "宽": 34,
+      "高": 34,
+      "原点": [
+        17,
+        17
+      ]
+    }
+  }
+}

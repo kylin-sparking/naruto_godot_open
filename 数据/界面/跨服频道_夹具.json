@@ -1,0 +1,41 @@
+{
+ "_说明": "门/量具夹具。字段名与顺序逐字对 WarChannelInfo.decode（int channel_id → UTF name → int load）；maxLoad 是帧尾单独一个 int（WarPanelProcessor.action_warServerList:146-156）。六个 load 挑的是三档色的边界：<=0.7 通畅 / <=0.99 良好 / 否则 爆满（SelectedChannelCell.kuaFuData:73-84），70 与 99 就是两个「含等号」的那一格。1 号 load=0 是照本机服务端 cmd 0 的真实回法拼的：fake_flash_server.py:21070-21072 回 `1825:0:1&忍界战场&{在线}:100`（**只有一行**）。⚠ 1825 已接真上下行（10-23）：门里既喂那一条逐字原文、也喂这份多行列表 —— 多行用 @ 连是本工程文本桥约定（同 SERVERLIST 145），真机拿不到多行，别把多行当成抓到的真帧。",
+ "maxLoad": 100,
+ "列表": [
+  {
+   "channel_id": 1,
+   "name": "忍界战场",
+   "load": 0
+  },
+  {
+   "channel_id": 2,
+   "name": "跨服频道 02",
+   "load": 30
+  },
+  {
+   "channel_id": 3,
+   "name": "跨服频道 03",
+   "load": 70
+  },
+  {
+   "channel_id": 4,
+   "name": "跨服频道 04",
+   "load": 80
+  },
+  {
+   "channel_id": 5,
+   "name": "跨服频道 05",
+   "load": 99
+  },
+  {
+   "channel_id": 6,
+   "name": "跨服频道 06",
+   "load": 100
+  },
+  {
+   "channel_id": 28,
+   "name": "跨服频道 28",
+   "load": 50
+  }
+ ]
+}

@@ -1,0 +1,1158 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>火影世界 · 运营控制台</title>
+<style>
+  *{box-sizing:border-box}
+  :root{
+    color-scheme:dark;
+    font-family:"Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+    --bg:#0b0d0f; --bg2:#11151a; --bg3:#161c22; --line:#232c34;
+    --ink:#e8ebee; --muted:#8b97a3; --dim:#5f6b76;
+    --gold:#d9b45a; --gold2:#f0d492; --teal:#5cc8b0; --red:#e06767;
+    --blue:#6ea8e8; --green:#6ec48a;
+  }
+  html,body{height:100%}
+  body{margin:0;background:radial-gradient(1200px 600px at 20% -10%,#16202a 0%,var(--bg) 55%);color:var(--ink);font-size:13px}
+  button,input,select,textarea{font:inherit;color:inherit}
+  button{cursor:pointer}
+  .hidden{display:none!important}
+  ::-webkit-scrollbar{width:10px;height:10px}
+  ::-webkit-scrollbar-thumb{background:#2b353f;border-radius:6px;border:2px solid transparent;background-clip:content-box}
+  ::-webkit-scrollbar-track{background:transparent}
+
+  /* ── 登录 ── */
+  .login{height:100%;display:flex;align-items:center;justify-content:center}
+  .login-card{width:360px;padding:30px 28px;border:1px solid var(--line);border-radius:14px;
+    background:linear-gradient(180deg,#151b21,#0e1216);box-shadow:0 24px 60px rgba(0,0,0,.5)}
+  .login-card h1{margin:0 0 4px;font-size:19px;color:var(--gold2);letter-spacing:.5px}
+  .login-card p{margin:0 0 20px;color:var(--muted);font-size:12px}
+  .login-card input{width:100%;min-height:38px;margin-bottom:12px}
+  .login-card button{width:100%;min-height:38px}
+  .login-err{color:var(--red);font-size:12px;min-height:16px;margin-bottom:6px}
+
+  /* ── 布局 ── */
+  .app{height:100%;display:grid;grid-template-rows:56px 1fr;grid-template-columns:300px 1fr;
+    grid-template-areas:"head head" "side main"}
+  header{grid-area:head;display:flex;align-items:center;gap:14px;padding:0 18px;
+    border-bottom:1px solid var(--line);background:linear-gradient(180deg,#161d24,#11161b)}
+  header .brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:15px;color:var(--gold2)}
+  header .brand .dot{width:9px;height:9px;border-radius:50%;background:var(--green);box-shadow:0 0 10px var(--green)}
+  header .brand .dot.off{background:var(--red);box-shadow:0 0 10px var(--red)}
+  header .spacer{flex:1}
+  header .meta{color:var(--muted);font-size:12px}
+  header .meta b{color:var(--ink);font-weight:600}
+
+  aside{grid-area:side;min-height:0;display:flex;flex-direction:column;border-right:1px solid var(--line);background:var(--bg2)}
+  .side-head{display:flex;align-items:baseline;gap:8px;padding:14px 14px 8px;font-weight:700;color:var(--ink)}
+  .side-head small{color:var(--muted);font-weight:400}
+  .side-tools{padding:0 12px 10px;display:grid;gap:8px}
+  .side-tools .row{display:flex;gap:6px}
+  .side-tools input{flex:1;min-width:0}
+  .chips{display:flex;gap:6px;padding:0 12px 10px;flex-wrap:wrap}
+  .chip{padding:3px 9px;border:1px solid var(--line);border-radius:999px;background:#151b21;color:var(--muted);font-size:11px}
+  .chip.on{border-color:var(--gold);color:var(--gold2);background:rgba(217,180,90,.1)}
+  .players{flex:1;overflow:auto;padding:4px 8px 16px}
+  .prow{display:grid;grid-template-columns:20px 1fr auto;gap:8px;align-items:center;
+    padding:9px 9px;border:1px solid transparent;border-radius:9px;cursor:pointer;margin-bottom:3px}
+  .prow:hover{background:#161d24}
+  .prow.sel{background:linear-gradient(90deg,rgba(217,180,90,.14),rgba(217,180,90,.03));border-color:rgba(217,180,90,.38)}
+  .prow .ck{accent-color:var(--gold)}
+  .prow .nm{display:flex;flex-direction:column;gap:2px;min-width:0}
+  .prow .nm b{font-weight:600;font-size:13px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .prow .nm span{color:var(--dim);font-size:11px}
+  .prow .lv{color:var(--gold);font-size:12px;text-align:right;white-space:nowrap}
+  .prow .lv em{display:block;font-style:normal;color:var(--dim);font-size:10px}
+  .online-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--dim);margin-right:4px}
+  .online-dot.on{background:var(--green);box-shadow:0 0 6px var(--green)}
+  .empty{padding:30px 14px;color:var(--dim);text-align:center;font-size:12px}
+
+  main{grid-area:main;min-height:0;display:flex;flex-direction:column}
+  .tabs{display:flex;gap:4px;padding:8px 14px 0;border-bottom:1px solid var(--line);background:var(--bg2)}
+  .tab{padding:9px 16px;border:1px solid transparent;border-bottom:none;border-radius:9px 9px 0 0;
+    background:transparent;color:var(--muted);font-size:13px}
+  .tab:hover{color:var(--ink);background:#161d24}
+  .tab.on{color:var(--gold2);background:var(--bg3);border-color:var(--line)}
+  #view{flex:1;overflow:auto;padding:16px 18px 40px}
+
+  /* ── 通用组件 ── */
+  .card{border:1px solid var(--line);border-radius:12px;background:linear-gradient(180deg,#141a20,#10151a);padding:14px 16px;margin-bottom:14px}
+  .card h3{margin:0 0 12px;font-size:13px;color:var(--gold2);font-weight:700;display:flex;align-items:center;gap:8px}
+  .card h3 small{color:var(--dim);font-weight:400}
+  .grid{display:grid;gap:14px}
+  .g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+  @media(max-width:1180px){.g4{grid-template-columns:repeat(2,minmax(0,1fr))}.g3{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  .stat{border:1px solid var(--line);border-radius:11px;padding:13px 15px;background:#121820}
+  .stat .k{color:var(--muted);font-size:11px;letter-spacing:.5px}
+  .stat .v{font-size:22px;font-weight:700;margin-top:6px;color:var(--ink)}
+  .stat .v.gold{color:var(--gold2)} .stat .v.teal{color:var(--teal)} .stat .v.blue{color:var(--blue)}
+  .stat .s{color:var(--dim);font-size:11px;margin-top:4px}
+  .kv{display:grid;grid-template-columns:92px 1fr;gap:6px 12px;font-size:12px}
+  .kv dt{color:var(--muted)} .kv dd{margin:0;color:var(--ink);word-break:break-all}
+  .tag{display:inline-block;padding:1px 7px;border-radius:5px;font-size:11px;border:1px solid var(--line);color:var(--muted)}
+  .tag.gold{color:var(--gold2);border-color:rgba(217,180,90,.4);background:rgba(217,180,90,.08)}
+  .tag.green{color:var(--green);border-color:rgba(110,196,138,.4);background:rgba(110,196,138,.08)}
+  .tag.red{color:var(--red);border-color:rgba(224,103,103,.4);background:rgba(224,103,103,.08)}
+  .tag.blue{color:var(--blue);border-color:rgba(110,168,232,.4);background:rgba(110,168,232,.08)}
+  table{width:100%;border-collapse:collapse;font-size:12px}
+  th,td{text-align:left;padding:7px 9px;border-bottom:1px solid #1b232b}
+  th{color:var(--muted);font-weight:600;font-size:11px;position:sticky;top:0;background:#121820}
+  tbody tr:hover{background:#141b22}
+  td.num{text-align:right;font-variant-numeric:tabular-nums}
+
+  /* ── 表单 ── */
+  input,select,textarea{min-height:34px;width:100%;padding:6px 10px;border:1px solid #2f3a44;border-radius:7px;
+    background:#0b1014;outline:none;transition:border-color .15s,box-shadow .15s}
+  input:focus,select:focus,textarea:focus{border-color:var(--gold);box-shadow:0 0 0 2px rgba(217,180,90,.13)}
+  textarea{min-height:84px;resize:vertical}
+  button{min-height:34px;padding:6px 14px;border:1px solid #37434e;border-radius:7px;background:#1b232b;font-size:12px;
+    transition:background .12s,border-color .12s}
+  button:hover{background:#24303a;border-color:#4a5866}
+  button.primary{border-color:#a8862f;background:linear-gradient(180deg,#c8a04a,#a8862f);color:#17120a;font-weight:700}
+  button.primary:hover{filter:brightness(1.08)}
+  button.ghost{background:transparent}
+  button.danger{border-color:rgba(224,103,103,.5);background:rgba(224,103,103,.12);color:#f0a0a0}
+  button:disabled{opacity:.45;cursor:not-allowed}
+  .field{display:grid;gap:5px;margin-bottom:12px}
+  .field>label{color:var(--muted);font-size:11px}
+  .field .hint{color:var(--dim);font-size:11px}
+  .inline{display:flex;gap:8px;align-items:center}
+  .checkline{display:flex;gap:8px;align-items:center;color:var(--muted);font-size:12px}
+  .checkline input{width:auto;min-height:0}
+  .seg{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
+  .seg button{padding:6px 12px;border-radius:999px;font-size:12px}
+  .seg button.on{border-color:var(--gold);color:var(--gold2);background:rgba(217,180,90,.1)}
+  .result{margin-top:12px;padding:10px 12px;border-radius:8px;border:1px solid var(--line);background:#0b1014;
+    font-family:Consolas,"Courier New",monospace;font-size:11px;white-space:pre-wrap;max-height:260px;overflow:auto;color:#b9c6d2}
+  .result.ok{border-color:rgba(110,196,138,.4)} .result.bad{border-color:rgba(224,103,103,.45);color:#f0b0b0}
+
+  /* ── 装备格 ── */
+  .eqgrid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px}
+  .eqcell{border:1px solid var(--line);border-radius:9px;background:#0e1318;padding:8px;min-height:66px;display:flex;flex-direction:column;gap:3px}
+  .eqcell .slot{color:var(--dim);font-size:10px}
+  .eqcell .nm{font-size:12px;color:var(--ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .eqcell .meta{color:var(--muted);font-size:10px;margin-top:auto}
+  .eqcell.empty .nm{color:var(--dim)}
+  .eqcell .apt{display:inline-block;width:6px;height:6px;border-radius:50%;margin-right:4px;background:var(--dim)}
+  .apt2{background:#e8e8e8}.apt3{background:#6ea8e8}.apt4{background:#b07ae0}.apt5{background:#e0b05a}.apt6{background:#e06767}
+
+  .list{display:grid;gap:6px;max-height:340px;overflow:auto}
+  .itemline{display:grid;grid-template-columns:52px 1fr auto;gap:10px;align-items:center;padding:7px 9px;
+    border:1px solid #1b232b;border-radius:8px;background:#0f1419;font-size:12px}
+  .itemline .id{color:var(--dim);font-family:Consolas,monospace;font-size:11px}
+  .itemline .nm{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .itemline .qty{color:var(--gold2);font-variant-numeric:tabular-nums}
+
+  .picker{position:relative}
+  .picker .drop{position:absolute;z-index:40;left:0;right:0;top:38px;max-height:260px;overflow:auto;
+    border:1px solid var(--line);border-radius:9px;background:#0d1216;box-shadow:0 18px 40px rgba(0,0,0,.5)}
+  .picker .drop button{display:block;width:100%;text-align:left;border:none;border-radius:0;background:transparent;padding:8px 10px}
+  .picker .drop button:hover{background:#18212a}
+  .picker .drop small{color:var(--dim);margin-left:6px}
+
+  /* ── 日志 / toast ── */
+  .logline{display:grid;grid-template-columns:150px 150px 1fr 70px;gap:10px;padding:7px 9px;border-bottom:1px solid #1b232b;font-size:12px}
+  .logline .t{color:var(--dim);font-family:Consolas,monospace;font-size:11px}
+  .logline .a{color:var(--teal);font-family:Consolas,monospace;font-size:11px}
+  .logline .e{color:#f0a0a0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .logline .ms{text-align:right;color:var(--dim);font-variant-numeric:tabular-nums}
+  #toast{position:fixed;right:20px;bottom:20px;display:grid;gap:8px;z-index:99}
+  .toast{padding:10px 14px;border-radius:9px;border:1px solid var(--line);background:#161d24;box-shadow:0 12px 30px rgba(0,0,0,.45);
+    font-size:12px;animation:in .18s ease-out;max-width:420px}
+  .toast.ok{border-color:rgba(110,196,138,.5)} .toast.bad{border-color:rgba(224,103,103,.55)}
+  @keyframes in{from{transform:translateY(6px);opacity:0}to{transform:none;opacity:1}}
+</style>
+</head>
+<body>
+
+<div id="login" class="login">
+  <form class="login-card" id="login-form">
+    <h1>火影世界 · 运营控制台</h1>
+    <p>GM 口令（环境变量 NARUTO_GM_PASSWORD，默认 123456）</p>
+    <div class="login-err" id="login-err"></div>
+    <input id="login-pw" type="password" placeholder="GM 口令" autocomplete="current-password">
+    <button class="primary" type="submit">进入</button>
+  </form>
+</div>
+
+<div id="app" class="app hidden">
+  <header>
+    <div class="brand"><span class="dot" id="srv-dot"></span>火影世界 · 运营控制台</div>
+    <span class="meta" id="head-meta"></span>
+    <span class="spacer"></span>
+    <button id="btn-refresh" class="ghost">刷新</button>
+    <button id="btn-classic" class="ghost" onclick="location.href='/gm/index.html'">原版页面</button>
+    <button id="btn-logout" class="ghost">退出</button>
+  </header>
+
+  <aside>
+    <div class="side-head">角色 <small id="online-count"></small></div>
+    <div class="side-tools">
+      <input id="player-search" placeholder="搜索角色名 / 账号 / ID">
+      <div class="row">
+        <button id="btn-select-all" class="ghost">全选</button>
+        <button id="btn-clear-all" class="ghost">清空</button>
+      </div>
+    </div>
+    <div class="chips">
+      <button class="chip on" data-filter="all">全部</button>
+      <button class="chip" data-filter="online">在线</button>
+      <button class="chip" data-filter="offline">离线</button>
+    </div>
+    <div class="players" id="player-list"></div>
+  </aside>
+
+  <main>
+    <nav class="tabs" id="tabs">
+      <button class="tab on" data-tab="overview">概览</button>
+      <button class="tab" data-tab="character">角色</button>
+      <button class="tab" data-tab="actions">动作</button>
+      <button class="tab" data-tab="saves">存档</button>
+      <button class="tab" data-tab="audit">日志</button>
+    </nav>
+    <section id="view"></section>
+  </main>
+</div>
+
+<div id="toast"></div>
+
+<script>
+'use strict';
+
+/* ══════════════════════════════════════════════════════════════
+   基础状态
+   ══════════════════════════════════════════════════════════════ */
+const app = {
+  pw: localStorage.getItem('gm-password') || '',
+  data: null,          // /api/gm/overview
+  full: null,          // /api/gm/status（懒加载）
+  detail: null,        // /api/gm/player
+  selected: null,
+  checked: new Set(),
+  filter: 'all',
+  tab: 'overview',
+  actionGroup: '货币与成长',
+  batch: false,
+  busy: false,
+};
+
+const CURRENCY_LABEL = {
+  money: '金币', bound_money: '绑定金币', cash_money: '元宝',
+  coupon_money: '礼券', recharge_total: '累计充值', zq: '查克拉精华',
+};
+const SLOT_NAME = {
+  '-1': '武器', '-2': '手套', '-3': '衣服', '-4': '护额', '-5': '护腰', '-6': '忍鞋',
+  '-7': '斗笠', '-8': '项链', '-9': '戒指', '-10': '手环', '-11': '忍包', '-12': '斗篷',
+  '-20': '勾玉', '-21': '变身', '-22': '徽章', '-23': '灵器', '-24': '忍具', '-50': '羁绊',
+  '-100': '神器剑', '-101': '神器镜',
+};
+const QUEST_STATE = { 0: '未接', 1: '进行中', 2: '可交', 3: '已完成' };
+const APT_NAME = { 1: '白', 2: '绿', 3: '蓝', 4: '紫', 5: '橙', 6: '红' };
+
+const $ = (sel, root = document) => root.querySelector(sel);
+const esc = (v) => String(v == null ? '' : v).replace(/[&<>"']/g,
+  (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const num = (v) => Number(v || 0).toLocaleString('zh-CN');
+const money = (v) => num(v);
+
+/* ══════════════════════════════════════════════════════════════
+   网络
+   ══════════════════════════════════════════════════════════════ */
+async function api(path, opts) {
+  opts = opts || {};
+  const res = await fetch(path, {
+    cache: 'no-store',
+    ...opts,
+    headers: { 'Content-Type': 'application/json', 'X-Naruto-GM-Password': app.pw, ...(opts.headers || {}) },
+  });
+  let body = null;
+  try { body = await res.json(); } catch (e) { body = { ok: false, error: '返回不是 JSON' }; }
+  if (res.status === 401) {
+    showLogin('口令错误');
+    throw new Error('口令错误');
+  }
+  if (!res.ok || body.ok === false) throw new Error(body.error || ('HTTP ' + res.status));
+  return body;
+}
+
+function postAction(action, payload) {
+  return api('/api/gm/action', { method: 'POST', body: JSON.stringify({ action, ...payload }) });
+}
+function postBatch(action, payload, characterIds) {
+  return api('/api/gm/batch', { method: 'POST', body: JSON.stringify({ action, characterIds, ...payload }) });
+}
+
+/* ══════════════════════════════════════════════════════════════
+   toast / 登录
+   ══════════════════════════════════════════════════════════════ */
+function toast(msg, kind) {
+  const box = document.createElement('div');
+  box.className = 'toast ' + (kind || '');
+  box.textContent = msg;
+  $('#toast').appendChild(box);
+  setTimeout(() => box.remove(), kind === 'bad' ? 6000 : 3200);
+}
+function showLogin(err) {
+  $('#app').classList.add('hidden');
+  $('#login').classList.remove('hidden');
+  $('#login-err').textContent = err || '';
+  setTimeout(() => $('#login-pw').focus(), 30);
+}
+function hideLogin() {
+  $('#login').classList.add('hidden');
+  $('#app').classList.remove('hidden');
+}
+
+$('#login-form').addEventListener('submit', async (ev) => {
+  ev.preventDefault();
+  app.pw = $('#login-pw').value.trim();
+  try {
+    await boot();
+    localStorage.setItem('gm-password', app.pw);
+    hideLogin();
+    toast('已连接', 'ok');
+  } catch (err) {
+    showLogin(String(err.message || err));
+  }
+});
+$('#btn-logout').onclick = () => {
+  localStorage.removeItem('gm-password');
+  app.pw = '';
+  app.data = null;
+  showLogin('');
+};
+
+/* ══════════════════════════════════════════════════════════════
+   启动与刷新
+   ══════════════════════════════════════════════════════════════ */
+async function boot() {
+  const data = await api('/api/gm/overview');
+  app.data = data;
+  if (app.selected == null && data.players.length) app.selected = data.players[0].characterId;
+  renderHeader();
+  renderPlayers();
+  if (app.selected != null) await loadDetail(app.selected);
+  renderTab();
+}
+
+async function refreshAll(silent) {
+  if (app.busy) return;
+  app.busy = true;
+  try {
+    app.data = await api('/api/gm/overview');
+    if (app.selected != null && !app.data.players.some((p) => p.characterId === app.selected)) {
+      app.selected = app.data.players.length ? app.data.players[0].characterId : null;
+      app.detail = null;
+    }
+    renderHeader();
+    if (app.selected != null) await loadDetail(app.selected, true);
+    renderPlayers();
+    // 静默轮询不动正在填写的动作表单 / 存档浏览，免得输入被整页重绘吃掉
+    if (!silent || app.tab === 'overview' || app.tab === 'character' || app.tab === 'audit') renderTab();
+    if (!silent) toast('已刷新', 'ok');
+  } catch (err) {
+    toast(String(err.message || err), 'bad');
+  } finally {
+    app.busy = false;
+  }
+}
+
+async function loadDetail(id, quiet) {
+  if (id == null) { app.detail = null; return; }
+  try {
+    const res = await api('/api/gm/player?id=' + encodeURIComponent(id));
+    if (app.selected === id) app.detail = res.detail;
+  } catch (err) {
+    if (app.selected === id) app.detail = null;
+    if (!quiet) toast('读取角色详情失败：' + String(err.message || err), 'bad');
+  }
+}
+
+$('#btn-refresh').onclick = () => refreshAll(false);
+
+// 15 秒轮询首屏；日志页额外 5 秒轮询
+setInterval(() => { if (app.data && !document.hidden) refreshAll(true); }, 15000);
+setInterval(() => {
+  if (app.tab === 'audit' && app.data && !document.hidden) renderTab();
+}, 5000);
+
+/* ══════════════════════════════════════════════════════════════
+   角色列表
+   ══════════════════════════════════════════════════════════════ */
+function renderHeader() {
+  const c = app.data.counts;
+  $('#srv-dot').classList.toggle('off', !c.online);
+  $('#online-count').textContent = `${c.players} 角色 · ${c.online} 在线 · ${c.saves} 存档文档`;
+  $('#head-meta').innerHTML = `服务端时间 <b>${new Date(app.data.serverTime * 1000).toLocaleString('zh-CN')}</b>`;
+}
+
+function renderPlayers() {
+  const list = $('#player-list');
+  const kw = ($('#player-search').value || '').trim().toLowerCase();
+  const rows = app.data.players.filter((p) => {
+    if (app.filter === 'online' && !p.online) return false;
+    if (app.filter === 'offline' && p.online) return false;
+    if (!kw) return true;
+    return String(p.name).toLowerCase().includes(kw)
+      || String(p.username).toLowerCase().includes(kw)
+      || String(p.characterId) === kw;
+  });
+  if (!rows.length) {
+    list.innerHTML = '<div class="empty">没有匹配的角色</div>';
+    return;
+  }
+  list.innerHTML = rows.map((p) => `
+    <div class="prow ${p.characterId === app.selected ? 'sel' : ''}" data-id="${p.characterId}">
+      <input class="ck" type="checkbox" data-check="${p.characterId}" ${app.checked.has(p.characterId) ? 'checked' : ''}>
+      <div class="nm" data-pick="${p.characterId}">
+        <b><span class="online-dot ${p.online ? 'on' : ''}"></span>${esc(p.name)}</b>
+        <span>${esc(p.username)} · Lv.${p.level}</span>
+      </div>
+      <div class="lv">${p.characterId}<em>${money(p.cashMoney)} 元宝</em></div>
+    </div>`).join('');
+}
+
+$('#player-list').addEventListener('click', async (ev) => {
+  const ck = ev.target.closest('[data-check]');
+  if (ck) {
+    const id = Number(ck.dataset.check);
+    if (ck.checked) app.checked.add(id); else app.checked.delete(id);
+    return;
+  }
+  const pick = ev.target.closest('[data-pick]');
+  if (!pick) return;
+  app.selected = Number(pick.dataset.pick);
+  renderPlayers();
+  if (app.tab === 'overview') {
+    app.tab = 'character';
+    document.querySelectorAll('.tab').forEach((b) => b.classList.toggle('on', b.dataset.tab === 'character'));
+  }
+  await loadDetail(app.selected);
+  renderTab();
+});
+
+$('#player-search').addEventListener('input', renderPlayers);
+document.querySelectorAll('.chip[data-filter]').forEach((btn) => {
+  btn.onclick = () => {
+    document.querySelectorAll('.chip[data-filter]').forEach((b) => b.classList.toggle('on', b === btn));
+    app.filter = btn.dataset.filter;
+    renderPlayers();
+  };
+});
+$('#btn-select-all').onclick = () => {
+  app.data.players.forEach((p) => app.checked.add(p.characterId));
+  renderPlayers();
+};
+$('#btn-clear-all').onclick = () => { app.checked.clear(); renderPlayers(); };
+
+/* ══════════════════════════════════════════════════════════════
+   页签
+   ══════════════════════════════════════════════════════════════ */
+document.querySelectorAll('.tab').forEach((btn) => {
+  btn.onclick = () => {
+    app.tab = btn.dataset.tab;
+    document.querySelectorAll('.tab').forEach((b) => b.classList.toggle('on', b === btn));
+    renderTab();
+  };
+});
+
+function renderTab() {
+  const view = $('#view');
+  if (!app.data) return;
+  if (app.tab === 'overview') return renderOverview(view);
+  if (app.tab === 'character') return renderCharacter(view);
+  if (app.tab === 'actions') return renderActions(view);
+  if (app.tab === 'saves') return renderSaves(view);
+  if (app.tab === 'audit') return renderAudit(view);
+}
+
+/* ══════════════════════════════════════════════════════════════
+   概览
+   ══════════════════════════════════════════════════════════════ */
+async function renderOverview(view) {
+  const d = app.data;
+  const state = d.state || {};
+  let audit = [];
+  try { audit = (await api('/api/gm/audit?limit=12')).entries; } catch (e) { /* 忽略 */ }
+  if (app.tab !== 'overview') return;
+  view.innerHTML = `
+    <div class="grid g4" style="margin-bottom:14px">
+      <div class="stat"><div class="k">角色总数</div><div class="v">${d.counts.players}</div><div class="s">本地账号</div></div>
+      <div class="stat"><div class="k">在线</div><div class="v teal">${d.counts.online}</div><div class="s">已进入游戏</div></div>
+      <div class="stat"><div class="k">存档文档</div><div class="v blue">${d.counts.saves}</div><div class="s">root / multiplayer / characters</div></div>
+      <div class="stat"><div class="k">天气覆盖</div><div class="v gold">${state.weather && state.weather.type >= 0 ? weatherName(state.weather.type) : '自动'}</div>
+        <div class="s">${state.weather && state.weather.type >= 0 ? '剩余 ' + countdown(state.weather.expiresAt) : '按时间'}</div></div>
+    </div>
+    <div class="grid g2">
+      <div class="card">
+        <h3>世界状态</h3>
+        <dl class="kv">
+          <dt>运行事件</dt><dd>${Object.keys(state.events || {}).length ? Object.keys(state.events).map((k) => `<span class="tag gold">${esc(k)}</span>`).join(' ') : '<span class="tag">无</span>'}</dd>
+          <dt>人工榜单</dt><dd>${Object.entries(state.rankings || {}).filter(([, v]) => v && v.length).map(([k, v]) => `<span class="tag blue">${esc(rankName(k))} ${v.length} 人</span>`).join(' ') || '<span class="tag">未设置</span>'}</dd>
+          <dt>目录</dt><dd>${d.catalog.currencies.length} 种货币 · ${d.catalog.weather.length} 种天气 · ${d.catalog.events.length} 个事件 · ${d.catalog.buffs.length} 种 Buff</dd>
+        </dl>
+      </div>
+      <div class="card">
+        <h3>最近操作 <small>本进程</small></h3>
+        <div class="logline"><span class="t">时间</span><span class="a">动作</span><span>目标</span><span class="ms">耗时</span></div>
+        ${audit.length ? audit.slice().reverse().map((e) => `
+          <div class="logline">
+            <span class="t">${esc(e.time)}</span>
+            <span class="a">${esc(e.action)}</span>
+            <span>${e.ok ? esc(JSON.stringify(e.targets)) : '<span class="tag red">失败</span> ' + esc(e.error || '')}</span>
+            <span class="ms">${e.ms} ms</span>
+          </div>`).join('') : '<div class="empty" style="padding:18px">还没有操作</div>'}
+      </div>
+    </div>`;
+}
+
+function weatherName(t) {
+  const row = (app.data.catalog.weather || []).find((w) => w.type === t);
+  return row ? row.name : ('天气 ' + t);
+}
+function rankName(k) {
+  const row = (app.data.catalog.rankings || []).find((r) => r.key === k);
+  return row ? row.name : k;
+}
+function countdown(ts) {
+  if (!ts) return '常驻';
+  const left = Math.max(0, Math.round(ts - Date.now() / 1000));
+  return left > 0 ? (Math.floor(left / 60) + ' 分 ' + (left % 60) + ' 秒') : '已到期';
+}
+
+/* ══════════════════════════════════════════════════════════════
+   角色详情
+   ══════════════════════════════════════════════════════════════ */
+function renderCharacter(view) {
+  if (!app.detail) {
+    view.innerHTML = '<div class="empty">先在左侧选择一个角色</div>';
+    return;
+  }
+  const d = app.detail;
+  const p = d.player;
+  const c = d.character;
+  const equipped = d.inventory.filter((it) => it.equipped);
+  const bag = d.inventory.filter((it) => !it.equipped);
+  const bySlot = new Map(equipped.map((it) => [String(it.slot), it]));
+  const standard = [-1, -2, -3, -4, -5, -6, -7, -8, -9, -10, -11, -12];
+  const extraSlots = [-20, -21, -22, -23, -24, -50, -100, -101];
+
+  view.innerHTML = `
+    <div class="grid g4" style="margin-bottom:14px">
+      <div class="stat"><div class="k">${esc(p.name)}</div><div class="v gold">Lv.${c.level}</div><div class="s">${esc(p.username)} · 角色 ${p.characterId}</div></div>
+      <div class="stat"><div class="k">金币</div><div class="v">${money(p.money)}</div><div class="s">绑定 ${money(p.boundMoney)}</div></div>
+      <div class="stat"><div class="k">元宝</div><div class="v gold">${money(p.cashMoney)}</div><div class="s">礼券 ${money(p.couponMoney)}</div></div>
+      <div class="stat"><div class="k">状态</div><div class="v ${p.online ? 'teal' : ''}">${p.online ? '在线' : '离线'}</div><div class="s">地图 ${c.mapId} · ${c.hp}/${c.maxHp}</div></div>
+    </div>
+
+    <div class="grid g3">
+      <div class="card">
+        <h3>属性</h3>
+        <dl class="kv">
+          <dt>职业</dt><dd>${c.job}</dd>
+          <dt>经验</dt><dd>${num(c.exp)}</dd>
+          <dt>查克拉精华</dt><dd>${num(c.zq)}</dd>
+          <dt>声望</dt><dd>${num(c.fame)}</dd>
+          <dt>攻击点</dt><dd>${c.apAtk}</dd>
+          <dt>防御点</dt><dd>${c.apDef}</dd>
+          <dt>敏捷点</dt><dd>${c.apDex}</dd>
+          <dt>体力点</dt><dd>${c.apPhy}</dd>
+          <dt>剩余点</dt><dd>${c.remainingAp} AP / ${c.remainingSp} SP</dd>
+          <dt>VIP</dt><dd>${c.vip ? '<span class="tag gold">是</span>' : '否'}</dd>
+        </dl>
+      </div>
+      <div class="card">
+        <h3>背包</h3>
+        <dl class="kv">
+          <dt>已用格</dt><dd>${bag.length} / ${d.capacities.bag}</dd>
+          <dt>仓库</dt><dd>${d.capacities.storage} 格</dd>
+          <dt>宠物</dt><dd>${d.pets.length} / ${d.capacities.pet}</dd>
+          <dt>技能</dt><dd>${d.skills.length} 个</dd>
+          <dt>任务</dt><dd>${d.quests.length} 条</dd>
+          <dt>装备</dt><dd>${equipped.length} 件（含特殊槽）</dd>
+        </dl>
+      </div>
+      <div class="card">
+        <h3>通知（最近 10 条）</h3>
+        <div class="list" style="max-height:200px">
+          ${d.notifications.length ? d.notifications.slice().reverse().map((n) => `
+            <div class="itemline" style="grid-template-columns:1fr auto">
+              <span class="nm">${esc(n.title || '')} — ${esc(n.body || n.message || '')}</span>
+              <span class="id">${esc(n.kind || '')}</span>
+            </div>`).join('') : '<div class="empty" style="padding:12px">暂无</div>'}
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>装备 <small>标准 12 槽</small></h3>
+      <div class="eqgrid">
+        ${standard.map((slot) => eqCell(bySlot.get(String(slot)), slot)).join('')}
+      </div>
+      ${extraSlots.some((s) => bySlot.has(String(s))) ? `
+        <h3 style="margin-top:16px">特殊槽</h3>
+        <div class="eqgrid">${extraSlots.filter((s) => bySlot.has(String(s))).map((slot) => eqCell(bySlot.get(String(slot)), slot)).join('')}</div>` : ''}
+    </div>
+
+    <div class="grid g2">
+      <div class="card">
+        <h3>背包物品 <small>${bag.length} 件</small></h3>
+        <div class="list">
+          ${bag.length ? bag.map((it) => `
+            <div class="itemline">
+              <span class="id">${it.itemId}</span>
+              <span class="nm">${esc(it.name)} ${it.isEquipment ? `<span class="tag ${it.aptitude >= 4 ? 'gold' : ''}">${APT_NAME[it.aptitude] || it.aptitude}</span>` : ''}</span>
+              <span class="qty">×${it.quantity}${it.strength ? ' · +' + it.strength : ''}</span>
+            </div>`).join('') : '<div class="empty" style="padding:12px">背包是空的</div>'}
+        </div>
+      </div>
+      <div class="card">
+        <h3>技能 <small>${d.skills.length} 个</small></h3>
+        <div class="list">
+          ${d.skills.length ? d.skills.map((s) => `
+            <div class="itemline">
+              <span class="id">${s.id}</span>
+              <span class="nm">${esc(s.name)}</span>
+              <span class="qty">Lv.${s.level}${s.masterLevel ? ' · 精通 ' + s.masterLevel : ''}</span>
+            </div>`).join('') : '<div class="empty" style="padding:12px">还没学技能</div>'}
+        </div>
+      </div>
+    </div>
+
+    <div class="grid g2">
+      <div class="card">
+        <h3>任务 <small>${d.quests.length} 条</small></h3>
+        <div class="list">
+          ${d.quests.length ? d.quests.map((q) => `
+            <div class="itemline" style="grid-template-columns:52px 1fr auto">
+              <span class="id">${q.id}</span>
+              <span class="nm">${esc(q.name)}</span>
+              <span class="qty">${QUEST_STATE[q.state] || q.state}${q.finishCount ? ' ×' + q.finishCount : ''}</span>
+            </div>`).join('') : '<div class="empty" style="padding:12px">没有任务记录</div>'}
+        </div>
+      </div>
+      <div class="card">
+        <h3>宠物 <small>${d.pets.length} 只</small></h3>
+        <div class="list">
+          ${d.pets.length ? d.pets.map((pet) => `
+            <div class="itemline" style="grid-template-columns:52px 1fr auto">
+              <span class="id">${pet.itemId}</span>
+              <span class="nm">${esc(pet.name)} <span class="tag ${pet.aptitude >= 4 ? 'gold' : ''}">${APT_NAME[pet.aptitude] || pet.aptitude}</span></span>
+              <span class="qty">Lv.${pet.level} · ${pet.position === 1 ? '附身' : '待命'}</span>
+            </div>`).join('') : '<div class="empty" style="padding:12px">没有宠物</div>'}
+        </div>
+      </div>
+    </div>`;
+}
+
+function eqCell(item, slot) {
+  if (!item) {
+    return `<div class="eqcell empty"><span class="slot">${esc(SLOT_NAME[String(slot)] || slot)}</span><span class="nm">空</span></div>`;
+  }
+  return `<div class="eqcell">
+    <span class="slot">${esc(SLOT_NAME[String(slot)] || slot)}</span>
+    <span class="nm"><span class="apt apt${item.aptitude}"></span>${esc(item.name)}</span>
+    <span class="meta">${APT_NAME[item.aptitude] || item.aptitude}${item.strength ? ' · +' + item.strength : ''}${item.plusCount ? ' · ' + item.plusCount + ' 词条' : ''}</span>
+  </div>`;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   动作
+   ══════════════════════════════════════════════════════════════ */
+const EQUIP_SCOPES = [['equipped', '身上装备'], ['bag', '背包里'], ['all', '全部']];
+const EQUIP_KINDS = [['character', '人物装备'], ['pet', '宠物装备']];
+
+const ACTION_DEFS = [
+  { group: '货币与成长', id: 'currency', title: '货币发放 / 设置', action: 'currency', batchable: true, fields: [
+    { key: 'currency', label: '货币', type: 'currency', default: 'cash_money' },
+    { key: 'operation', label: '方式', type: 'select', options: [['add', '增加 / 扣除（负数）'], ['set', '设为']], default: 'add' },
+    { key: 'amount', label: '数值', type: 'number', default: 0, hint: '扣除填负数；不能扣成负值' },
+  ] },
+  { group: '货币与成长', id: 'level', title: '等级调整', action: 'change_level', batchable: true, fields: [
+    { key: 'operation', label: '方式', type: 'select', options: [['set', '设为'], ['add', '增加 / 减少']], default: 'set' },
+    { key: 'amount', label: '等级', type: 'number', default: 100 },
+  ] },
+  { group: '货币与成长', id: 'all-skills', title: '学习全部技能', action: 'all-skills', batchable: true, fields: [
+    { key: 'level', label: '技能等级', type: 'number', default: 1 },
+  ] },
+  { group: '货币与成长', id: 'learn-all-skills', title: '学会全部技能', action: 'learn-all-skills', batchable: true, fields: [] },
+  { group: '货币与成长', id: 'max-skill-levels', title: '技能全满级', action: 'max-skill-levels', batchable: true, fields: [] },
+  { group: '货币与成长', id: 'complete-quests', title: '完成任务与成就', action: 'complete-quests-achievements', batchable: true, fields: [] },
+  { group: '货币与成长', id: 'complete-card', title: '集齐卡牌', action: 'complete-card-collection', batchable: true, fields: [] },
+  { group: '货币与成长', id: 'complete-album', title: '集齐藏品图鉴', action: 'complete-collection-album', batchable: true, fields: [] },
+  { group: '货币与成长', id: 'complete-pve', title: '通关全部副本', action: 'complete-pve', batchable: true, fields: [] },
+  { group: '货币与成长', id: 'reset-copies', title: '重置副本进度', action: 'reset-copies', batchable: true, fields: [] },
+  { group: '货币与成长', id: 'pet-potential', title: '附身宠物潜力速成', action: 'pet-potential-boost', batchable: true, fields: [
+    { key: 'potentialType', label: '潜力', type: 'select', options: [['atk', '攻击'], ['def', '防御'], ['dex', '灵巧'], ['str', '健体']], default: 'atk' },
+  ] },
+  { group: '货币与成长', id: 'cult-all', title: '经脉全满（全部）', action: 'cultivation-max-all', batchable: true, fields: [] },
+  { group: '货币与成长', id: 'cult-mai', title: '经脉全满（脉）', action: 'cultivation-max-mai', batchable: true, fields: [] },
+  { group: '货币与成长', id: 'cult-rouquan', title: '经脉全满（柔拳）', action: 'cultivation-max-rouquan', batchable: true, fields: [] },
+  { group: '货币与成长', id: 'cult-anqi', title: '经脉全满（暗器）', action: 'cultivation-max-anqi', batchable: true, fields: [] },
+  { group: '货币与成长', id: 'cult-jieyin', title: '经脉全满（结印）', action: 'cultivation-max-jieyin', batchable: true, fields: [] },
+  { group: '货币与成长', id: 'cult-xielunyan', title: '经脉全满（写轮眼）', action: 'cultivation-max-xielunyan', batchable: true, fields: [] },
+  { group: '货币与成长', id: 'cult-lunhuiyan', title: '经脉全满（轮回眼）', action: 'cultivation-max-lunhuiyan', batchable: true, fields: [] },
+
+  { group: '物品', id: 'item', title: '发放道具', action: 'item', batchable: true, fields: [
+    { key: 'itemId', label: '道具', type: 'item' },
+    { key: 'quantity', label: '数量', type: 'number', default: 1 },
+  ] },
+  { group: '物品', id: 'clear-inventory', title: '清空背包', action: 'clear-inventory', batchable: true, danger: true, fields: [] },
+  { group: '物品', id: 'max-carve', title: '刻印满级', action: 'max-carve', batchable: true, needFull: true, fields: [
+    { key: 'carveId', label: '刻印', type: 'carve' },
+    { key: 'scope', label: '范围', type: 'select', options: EQUIP_SCOPES, default: 'equipped' },
+  ] },
+  { group: '物品', id: 'spirit', title: '发放满级意志', action: 'max-spirit', batchable: true, needFull: true, fields: [
+    { key: 'spiritItemId', label: '意志', type: 'spirit' },
+    { key: 'placement', label: '放置', type: 'select', options: [['bag', '背包'], ['equip', '装备栏']], default: 'bag' },
+  ] },
+
+  { group: '装备', id: 'set-purple', title: '发最高紫装（职业套）', action: 'highest-purple-job-set', batchable: true, fields: [] },
+  { group: '装备', id: 'set-pet', title: '发最高宠物装备', action: 'highest-pet-equipment-set', batchable: true, fields: [] },
+  { group: '装备', id: 'max-strength', title: '强化满级', action: 'max-strength-equipment', batchable: true, fields: [
+    { key: 'equipmentKind', label: '类型', type: 'select', options: EQUIP_KINDS, default: 'character' },
+    { key: 'scope', label: '范围', type: 'select', options: EQUIP_SCOPES, default: 'equipped' },
+  ] },
+  { group: '装备', id: 'max-born', title: '天生满值', action: 'max-born-equipment', batchable: true, fields: [
+    { key: 'equipmentKind', label: '类型', type: 'select', options: EQUIP_KINDS, default: 'character' },
+    { key: 'scope', label: '范围', type: 'select', options: EQUIP_SCOPES, default: 'equipped' },
+  ] },
+  { group: '装备', id: 'max-refine', title: '精炼满级', action: 'max-refine-equipment', batchable: true, fields: [
+    { key: 'equipmentKind', label: '类型', type: 'select', options: EQUIP_KINDS, default: 'character' },
+    { key: 'scope', label: '范围', type: 'select', options: EQUIP_SCOPES, default: 'equipped' },
+  ] },
+  { group: '装备', id: 'evolve-legendary', title: '传说进化', action: 'evolve-legendary-equipment', batchable: true, fields: [
+    { key: 'equipmentKind', label: '类型', type: 'select', options: EQUIP_KINDS, default: 'character' },
+    { key: 'scope', label: '范围', type: 'select', options: EQUIP_SCOPES, default: 'equipped' },
+  ] },
+  { group: '装备', id: 'max-inlay', title: '镶嵌满级宝石', action: 'max-inlay-equipment', batchable: true, needFull: true, fields: [
+    { key: 'gemItemId', label: '宝石', type: 'gem' },
+    { key: 'equipmentKind', label: '类型', type: 'select', options: EQUIP_KINDS, default: 'character' },
+    { key: 'scope', label: '范围', type: 'select', options: EQUIP_SCOPES, default: 'equipped' },
+  ] },
+
+  { group: '世界', id: 'weather', title: '设置天气', action: 'weather', batchable: false, fields: [
+    { key: 'weatherType', label: '天气', type: 'weather', default: 0 },
+    { key: 'durationSeconds', label: '持续秒数（0 = 常驻）', type: 'number', default: 0 },
+  ] },
+  { group: '世界', id: 'start-event', title: '开启事件', action: 'start-event', batchable: false, fields: [
+    { key: 'eventKey', label: '事件', type: 'event' },
+    { key: 'durationSeconds', label: '持续秒数', type: 'number', default: 3600 },
+  ] },
+  { group: '世界', id: 'stop-event', title: '关闭事件', action: 'stop-event', batchable: false, fields: [
+    { key: 'eventKey', label: '事件', type: 'event' },
+  ] },
+  { group: '世界', id: 'announcement', title: '全服公告', action: 'announcement', batchable: false, fields: [
+    { key: 'message', label: '内容', type: 'textarea' },
+    { key: 'highlights', label: '标黄关键词（逗号分隔）', type: 'text' },
+    { key: 'noticeType', label: '类型', type: 'select', options: [['marquee', '跑马灯'], ['notice', '公告']], default: 'marquee' },
+  ] },
+  { group: '世界', id: 'refresh-boss', title: '刷新 Boss', action: 'refresh-bosses', batchable: false, fields: [
+    { key: 'templateId', label: 'Boss 模板 ID（0 = 全部）', type: 'number', default: 0 },
+  ] },
+  { group: '世界', id: 'ranking', title: '设置人工榜单', action: 'ranking', batchable: false, needsFull: true, fields: [
+    { key: 'rankType', label: '榜单', type: 'ranking' },
+    { key: 'characterIds', label: '角色 ID（逗号分隔，按顺序）', type: 'text' },
+  ] },
+  { group: '世界', id: 'buff', title: '发放 Buff', action: 'buff', batchable: true, needFull: true, fields: [
+    { key: 'buffType', label: 'Buff', type: 'buff' },
+    { key: 'valuePercent', label: '效果百分比', type: 'number', default: 10 },
+    { key: 'durationMs', label: '持续毫秒', type: 'number', default: 60000 },
+    { key: 'skillId', label: '技能 ID（可空）', type: 'number', default: 0 },
+  ] },
+
+  { group: '账号', id: 'kill', title: '击杀角色', action: 'kill', batchable: true, danger: true, fields: [] },
+  { group: '账号', id: 'reset-account', title: '重置账号（保留登录名）', action: 'reset-account', batchable: false, danger: true, fields: [
+    { key: 'confirmUsername', label: '输入账号名确认', type: 'text', hint: '会先自动备份，然后清空该账号的角色与数据' },
+  ] },
+  { group: '账号', id: 'delete-account', title: '彻底删除账号', action: 'delete-account', batchable: false, danger: true, fields: [
+    { key: 'confirmUsername', label: '输入账号名确认', type: 'text', hint: '会先自动备份，然后删除账号与存档，不可恢复' },
+  ] },
+];
+
+function actionGroups() {
+  return [...new Set(ACTION_DEFS.map((d) => d.group))];
+}
+
+function renderActions(view) {
+  const groups = actionGroups();
+  const defs = ACTION_DEFS.filter((d) => d.group === app.actionGroup);
+  view.innerHTML = `
+    <div class="seg">${groups.map((g) => `<button data-ag="${esc(g)}" class="${g === app.actionGroup ? 'on' : ''}">${esc(g)}</button>`).join('')}</div>
+    <div class="grid g2">
+      <div>
+        <div class="card">
+          <h3>执行对象</h3>
+          <div class="checkline" style="margin-bottom:10px">
+            <input type="checkbox" id="batch-toggle" ${app.batch ? 'checked' : ''}>
+            <label for="batch-toggle">批量模式（对左侧勾选的角色执行，当前 ${app.checked.size} 个）</label>
+          </div>
+          <div id="target-line" class="hint" style="color:var(--muted)"></div>
+        </div>
+        ${defs.map((d) => actionCard(d)).join('')}
+      </div>
+      <div>
+        <div class="card">
+          <h3>执行结果</h3>
+          <div id="result-box" class="result">还没有执行动作。</div>
+        </div>
+        <div class="card">
+          <h3>高级 · 任意动作</h3>
+          <div class="field">
+            <label>动作 ID（gm_admin.ACTIONS 的键）</label>
+            <input id="adv-action" list="adv-action-list" placeholder="例如 max-myth-attributes-equipment">
+            <datalist id="adv-action-list"></datalist>
+          </div>
+          <div class="field">
+            <label>JSON 参数（characterId 自动补）</label>
+            <textarea id="adv-json" placeholder='{"scope":"equipped","equipmentKind":"character"}'>{}</textarea>
+          </div>
+          <button id="adv-run" class="primary">执行</button>
+        </div>
+      </div>
+    </div>`;
+
+  view.querySelectorAll('[data-ag]').forEach((btn) => {
+    btn.onclick = () => { app.actionGroup = btn.dataset.ag; renderActions(view); };
+  });
+  const toggle = $('#batch-toggle', view);
+  if (toggle) toggle.onchange = () => { app.batch = toggle.checked; renderActions(view); };
+  updateTargetLine();
+  defs.forEach((d) => bindActionCard(d, view));
+  $('#adv-run', view).onclick = () => runAdvanced(view);
+  loadFull().then((full) => {
+    const list = $('#adv-action-list', view);
+    if (!list) return;
+    list.innerHTML = (full.actions || []).map((id) => `<option value="${esc(id)}"></option>`).join('');
+  });
+}
+
+function actionCard(def) {
+  const fields = def.fields.map((f) => fieldHtml(f)).join('');
+  return `<div class="card" data-action-card="${def.id}">
+    <h3>${esc(def.title)}${def.batchable ? '<span class="tag" style="margin-left:6px">可批量</span>' : ''}${def.danger ? '<span class="tag red" style="margin-left:6px">高风险</span>' : ''}
+      <small style="margin-left:auto;font-family:Consolas,monospace">${esc(def.action)}</small></h3>
+    ${fields || '<div class="hint" style="color:var(--dim);margin-bottom:10px">这个动作不需要额外参数。</div>'}
+    <button class="primary" data-run="${def.id}">执行</button>
+  </div>`;
+}
+
+function fieldHtml(f) {
+  if (f.type === 'select') {
+    return `<div class="field"><label>${esc(f.label)}</label>
+      <select data-field="${f.key}">${f.options.map(([v, t]) => `<option value="${esc(v)}" ${String(f.default) === String(v) ? 'selected' : ''}>${esc(t)}</option>`).join('')}</select>
+      ${f.hint ? `<span class="hint">${esc(f.hint)}</span>` : ''}</div>`;
+  }
+  if (f.type === 'textarea') {
+    return `<div class="field"><label>${esc(f.label)}</label><textarea data-field="${f.key}"></textarea></div>`;
+  }
+  if (f.type === 'item') {
+    return `<div class="field"><label>${esc(f.label)}</label>
+      <div class="picker">
+        <input data-item-search="${f.key}" placeholder="输入道具名或 ID 搜索">
+        <div class="drop hidden" data-item-drop="${f.key}"></div>
+      </div>
+      <input type="hidden" data-field="${f.key}" value="">
+      <span class="hint" data-item-name="${f.key}">未选择</span></div>`;
+  }
+  if (f.type === 'currency') {
+    const opts = (app.data.catalog.currencies || []).map((c) => [c.key, c.name]);
+    return `<div class="field"><label>${esc(f.label)}</label>
+      <select data-field="${f.key}">${opts.map(([v, t]) => `<option value="${esc(v)}" ${v === f.default ? 'selected' : ''}>${esc(t)}</option>`).join('')}</select></div>`;
+  }
+  if (f.type === 'weather') {
+    const opts = (app.data.catalog.weather || []).map((w) => [w.type, w.name]);
+    return `<div class="field"><label>${esc(f.label)}</label>
+      <select data-field="${f.key}">${opts.map(([v, t]) => `<option value="${v}" ${Number(f.default) === Number(v) ? 'selected' : ''}>${esc(t)}</option>`).join('')}</select></div>`;
+  }
+  if (f.type === 'event') {
+    const opts = (app.data.catalog.events || []).map((e) => [e.key, e.name]);
+    return `<div class="field"><label>${esc(f.label)}</label>
+      <select data-field="${f.key}">${opts.map(([v, t]) => `<option value="${esc(v)}">${esc(t)}</option>`).join('')}</select></div>`;
+  }
+  if (f.type === 'carve' || f.type === 'spirit' || f.type === 'gem' || f.type === 'buff' || f.type === 'ranking') {
+    return `<div class="field"><label>${esc(f.label)}</label>
+      <select data-field="${f.key}" data-dynamic="${f.type}"><option value="">加载中…</option></select></div>`;
+  }
+  return `<div class="field"><label>${esc(f.label)}</label>
+    <input type="${f.type === 'number' ? 'number' : 'text'}" data-field="${f.key}" value="${f.default == null ? '' : esc(f.default)}">
+    ${f.hint ? `<span class="hint">${esc(f.hint)}</span>` : ''}</div>`;
+}
+
+function bindActionCard(def, view) {
+  const card = view.querySelector(`[data-action-card="${def.id}"]`);
+  if (!card) return;
+  card.querySelectorAll('[data-dynamic]').forEach(async (sel) => {
+    const full = await loadFull();
+    fillDynamic(sel, sel.dataset.dynamic, full);
+  });
+  card.querySelectorAll('[data-item-search]').forEach((input) => {
+    input.addEventListener('input', () => searchItems(input));
+  });
+  const run = card.querySelector('[data-run]');
+  run.onclick = () => execute(def, card);
+}
+
+async function loadFull() {
+  if (app.full) return app.full;
+  const status = await api('/api/gm/status');
+  app.full = { catalog: status.catalog, state: status.state, actions: status.actions || [] };
+  return app.full;
+}
+
+function fillDynamic(sel, kind, full) {
+  const cat = full.catalog || {};
+  let rows = [];
+  if (kind === 'carve') rows = (cat.carves || []).map((c) => [c.carveId ?? c.id, c.name || ('刻印 ' + (c.carveId ?? c.id))]);
+  if (kind === 'spirit') rows = (cat.spirits || []).map((s) => [s.itemId, `${s.name}（${s.colorName || s.color || ''}）`]);
+  if (kind === 'gem') rows = (cat.maxGems || []).map((g) => [g.itemId, g.name || ('宝石 ' + g.itemId)]);
+  if (kind === 'buff') rows = (cat.buffs || []).map((b) => [b.type, b.name]);
+  if (kind === 'ranking') rows = (cat.rankings || []).map((r) => [r.key, r.name]);
+  sel.innerHTML = rows.map(([v, t]) => `<option value="${esc(v)}">${esc(t)}</option>`).join('') || '<option value="">无数据</option>';
+}
+
+let _itemTimer = null;
+async function searchItems(input) {
+  clearTimeout(_itemTimer);
+  const key = input.dataset.itemSearch;
+  const drop = input.parentElement.querySelector(`[data-item-drop="${key}"]`);
+  const kw = input.value.trim();
+  if (!kw) { drop.classList.add('hidden'); return; }
+  _itemTimer = setTimeout(async () => {
+    try {
+      const res = await api('/api/gm/items?q=' + encodeURIComponent(kw) + '&limit=40');
+      if (!res.items.length) {
+        drop.innerHTML = '<div class="empty" style="padding:10px">没有匹配道具</div>';
+      } else {
+        drop.innerHTML = res.items.map((it) => `<button data-item="${it.itemId}" data-name="${esc(it.name)}">${esc(it.name)}<small>${it.itemId}${it.section ? ' · ' + esc(it.section) : ''}</small></button>`).join('');
+      }
+      drop.classList.remove('hidden');
+      drop.querySelectorAll('[data-item]').forEach((btn) => {
+        btn.onclick = () => {
+          input.parentElement.parentElement.querySelector(`[data-field="${key}"]`).value = btn.dataset.item;
+          input.parentElement.parentElement.querySelector(`[data-item-name="${key}"]`).textContent = `${btn.dataset.name}（${btn.dataset.item}）`;
+          input.value = btn.dataset.name;
+          drop.classList.add('hidden');
+        };
+      });
+    } catch (err) {
+      toast(String(err.message || err), 'bad');
+    }
+  }, 180);
+}
+
+function currentTargets(def) {
+  if (def.batchable && app.batch) return [...app.checked];
+  return app.selected == null ? [] : [app.selected];
+}
+
+function updateTargetLine() {
+  const line = $('#target-line');
+  if (!line) return;
+  const targets = app.batch ? [...app.checked] : (app.selected == null ? [] : [app.selected]);
+  const names = targets.map((id) => {
+    const p = app.data.players.find((row) => row.characterId === id);
+    return p ? p.name : ('#' + id);
+  });
+  line.innerHTML = targets.length
+    ? `将作用：<b style="color:var(--ink)">${names.map(esc).join('、')}</b>`
+    : '还没有选角色（批量模式下请先勾选左侧角色）';
+}
+
+function readFields(card) {
+  const out = {};
+  card.querySelectorAll('[data-field]').forEach((node) => {
+    const key = node.dataset.field;
+    if (node.type === 'number') out[key] = Number(node.value || 0);
+    else if (node.tagName === 'SELECT' && node.dataset.dynamic) {
+      const v = node.value;
+      out[key] = /^-?\d+$/.test(v) ? Number(v) : v;
+    } else out[key] = node.value;
+  });
+  return out;
+}
+
+async function execute(def, card) {
+  const payload = readFields(card);
+  // 道具选择器没选时，别把空 id 打过去
+  if ('itemId' in payload && !payload.itemId) { toast('先搜索并选择道具', 'bad'); return; }
+  if (def.danger && !confirm(`确定执行「${def.title}」？\n此操作会写入存档。`)) return;
+
+  const ids = currentTargets(def);
+  const box = $('#result-box', $('#view'));
+  if (def.batchable && app.batch) {
+    if (!ids.length) { toast('批量模式下先勾选角色', 'bad'); return; }
+  } else if (def.group !== '世界') {
+    if (!ids.length) { toast('先在左侧选择角色', 'bad'); return; }
+    payload.characterId = ids[0];
+  }
+  if (def.group === '账号') {
+    const p = app.detail && app.detail.player;
+    if (!p) { toast('先选择角色', 'bad'); return; }
+    payload.characterId = p.characterId;
+    payload.accountId = p.accountId;
+  }
+
+  box.className = 'result';
+  box.textContent = '执行中…';
+  try {
+    let text;
+    if (def.batchable && app.batch) {
+      const res = await postBatch(def.action, payload, ids);
+      const ok = res.results.filter((r) => r.ok).length;
+      text = `批量完成：成功 ${ok} / ${res.results.length}\n` +
+        res.results.map((r) => `#${r.characterId} ${r.ok ? '✓ ' + JSON.stringify(r.result) : '✗ ' + r.error}`).join('\n');
+      box.className = 'result ' + (ok === res.results.length ? 'ok' : 'bad');
+    } else {
+      const res = await postAction(def.action, payload);
+      text = JSON.stringify(res.result, null, 2);
+      box.className = 'result ok';
+    }
+    box.textContent = text;
+    toast('已执行：' + def.title, 'ok');
+    await refreshAll(true);
+  } catch (err) {
+    box.className = 'result bad';
+    box.textContent = String(err.message || err);
+    toast(String(err.message || err), 'bad');
+  }
+}
+
+async function runAdvanced(view) {
+  const action = $('#adv-action', view).value.trim();
+  const raw = $('#adv-json', view).value.trim() || '{}';
+  let payload;
+  try { payload = JSON.parse(raw); } catch (e) { toast('JSON 格式不对：' + e.message, 'bad'); return; }
+  if (typeof payload !== 'object' || Array.isArray(payload)) { toast('JSON 必须是对象', 'bad'); return; }
+  if (!action) { toast('先填动作 ID', 'bad'); return; }
+  if (app.selected != null) payload.characterId = payload.characterId ?? app.selected;
+  const box = $('#result-box', $('#view'));
+  box.className = 'result';
+  box.textContent = '执行中…';
+  try {
+    const res = await postAction(action, payload);
+    box.className = 'result ok';
+    box.textContent = JSON.stringify(res.result, null, 2);
+    toast('已执行：' + action, 'ok');
+    await refreshAll(true);
+  } catch (err) {
+    box.className = 'result bad';
+    box.textContent = String(err.message || err);
+    toast(String(err.message || err), 'bad');
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   存档
+   ══════════════════════════════════════════════════════════════ */
+async function renderSaves(view) {
+  view.innerHTML = `
+    <div class="card">
+      <h3>存档文档 <small>root / multiplayer / characters</small>
+        <span style="margin-left:auto;display:flex;gap:8px">
+          <button id="save-repair-all" class="ghost">修复全部</button>
+          <button id="save-backups" class="ghost">备份列表</button>
+          <button id="save-refresh">刷新</button>
+        </span></h3>
+      <div id="save-table"><div class="empty">点「刷新」加载</div></div>
+    </div>
+    <div class="grid g2">
+      <div class="card"><h3>文档内容</h3><div id="save-detail" class="result" style="max-height:420px">点一行查看</div></div>
+      <div class="card"><h3>备份</h3><div id="save-backups-box" class="result" style="max-height:420px">点「备份列表」查看；恢复需在高级 JSON 里执行 save-restore</div></div>
+    </div>`;
+  $('#save-refresh', view).onclick = () => loadSaves(view);
+  $('#save-repair-all', view).onclick = async () => {
+    if (!confirm('修复全部存档文档？会逐份校验并规范化。')) return;
+    try {
+      const res = await postAction('save-repair', {});
+      toast('修复完成', 'ok');
+      $('#save-detail', view).textContent = JSON.stringify(res.result, null, 2);
+      loadSaves(view);
+    } catch (err) { toast(String(err.message || err), 'bad'); }
+  };
+  $('#save-backups', view).onclick = async () => {
+    try {
+      const res = await postAction('save-backups', {});
+      $('#save-backups-box', view).textContent = JSON.stringify(res.result, null, 2);
+    } catch (err) { toast(String(err.message || err), 'bad'); }
+  };
+  loadSaves(view);
+}
+
+async function loadSaves(view) {
+  const box = $('#save-table', view);
+  box.innerHTML = '<div class="empty">读取中…</div>';
+  try {
+    const res = await postAction('saves-list', {});
+    const rows = res.result.saves || [];
+    box.innerHTML = `<div class="hint" style="margin-bottom:8px;color:var(--dim)">后端：${esc(res.result.backend || '?')} · 共 ${rows.length} 份</div>
+      <div style="max-height:420px;overflow:auto">
+      <table><thead><tr><th>scope</th><th>key</th><th class="num">大小</th><th>摘要</th></tr></thead><tbody>
+      ${rows.map((r, i) => `<tr data-save="${i}" style="cursor:pointer">
+        <td>${esc(r.scope)}</td><td style="font-family:Consolas,monospace">${esc(r.key)}</td>
+        <td class="num">${num(r.size)} B</td><td style="color:var(--muted)">${esc(summarizeSave(r))}</td></tr>`).join('')}
+      </tbody></table></div>`;
+    box.querySelectorAll('[data-save]').forEach((tr) => {
+      tr.onclick = async () => {
+        const row = rows[Number(tr.dataset.save)];
+        try {
+          const detail = await postAction('save-detail', { scope: row.scope, key: row.key });
+          $('#save-detail', view).textContent = pretty(detail.result.payload);
+        } catch (err) { toast(String(err.message || err), 'bad'); }
+      };
+    });
+  } catch (err) {
+    box.innerHTML = `<div class="empty">读取失败：${esc(String(err.message || err))}</div>`;
+  }
+}
+function summarizeSave(row) {
+  const keys = Object.keys(row).filter((k) => !['scope', 'key', 'size'].includes(k));
+  return keys.slice(0, 4).map((k) => `${k}=${JSON.stringify(row[k])}`).join(' · ');
+}
+function pretty(text) {
+  try { return JSON.stringify(JSON.parse(text), null, 2); } catch (e) { return String(text); }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   日志
+   ══════════════════════════════════════════════════════════════ */
+async function renderAudit(view) {
+  let entries = [];
+  try { entries = (await api('/api/gm/audit?limit=200')).entries; } catch (err) { toast(String(err.message || err), 'bad'); }
+  if (app.tab !== 'audit') return;
+  view.innerHTML = `
+    <div class="card">
+      <h3>操作日志 <small>本进程 · 最多 500 条</small>
+        <button style="margin-left:auto" id="audit-refresh">刷新</button></h3>
+      <div class="logline" style="color:var(--muted);border-bottom:1px solid var(--line)">
+        <span>时间</span><span>动作</span><span>目标 / 错误</span><span class="ms">耗时</span></div>
+      ${entries.length ? entries.slice().reverse().map((e) => `
+        <div class="logline">
+          <span class="t">${esc(e.time)}</span>
+          <span class="a">${esc(e.action)}</span>
+          <span class="${e.ok ? '' : 'e'}">${e.ok ? esc(JSON.stringify(e.targets)) : esc(e.error || '失败')}</span>
+          <span class="ms">${e.ms} ms</span>
+        </div>`).join('') : '<div class="empty">还没有操作</div>'}
+    </div>`;
+  $('#audit-refresh', view).onclick = () => renderAudit(view);
+}
+
+/* ══════════════════════════════════════════════════════════════
+   启动
+   ══════════════════════════════════════════════════════════════ */
+(async function start() {
+  if (!app.pw) { showLogin(''); return; }
+  try {
+    await boot();
+    hideLogin();
+  } catch (err) {
+    showLogin('连接失败：' + String(err.message || err));
+  }
+})();
+</script>
+</body>
+</html>

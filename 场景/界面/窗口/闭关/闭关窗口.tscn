@@ -1,0 +1,149 @@
+[gd_scene format=3]
+[ext_resource type="Texture2D" uid="uid://dkil44jd6c66y" path="res://素材/界面/原版窗口/通用控件/横向分隔线.png" id="1_fengexian"]
+
+
+[node name="原版闭关窗口内容" type="Control"]
+custom_minimum_size = Vector2(267, 274)
+offset_right = 267.0
+offset_bottom = 274.0
+
+[node name="外层面板" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 39.0
+offset_right = 261.0
+offset_bottom = 269.0
+mouse_filter = 2
+
+[node name="开启提示" type="Label" parent="."]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 44.0
+offset_right = 255.0
+offset_bottom = 62.0
+
+[node name="分隔线" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 66.0
+offset_right = 256.0
+offset_bottom = 68.0
+mouse_filter = 2
+texture = ExtResource("1_fengexian")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="时间标题" type="Label" parent="."]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 74.0
+offset_right = 117.0
+offset_bottom = 92.0
+
+[node name="小时值" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 114.0
+offset_top = 74.0
+offset_right = 154.0
+offset_bottom = 95.0
+editable = false
+alignment = 1
+
+[node name="小时" type="Label" parent="."]
+layout_mode = 0
+offset_left = 155.0
+offset_top = 74.0
+offset_right = 184.0
+offset_bottom = 92.0
+
+[node name="分钟值" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 186.0
+offset_top = 74.0
+offset_right = 226.0
+offset_bottom = 95.0
+editable = false
+alignment = 1
+
+[node name="分钟" type="Label" parent="."]
+layout_mode = 0
+offset_left = 228.0
+offset_top = 74.0
+offset_right = 259.0
+offset_bottom = 92.0
+
+[node name="提示盒" type="Control" parent="."]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 97.0
+offset_right = 256.0
+offset_bottom = 137.0
+mouse_filter = 2
+
+[node name="说明" type="Label" parent="提示盒"]
+layout_mode = 0
+offset_right = 238.0
+offset_bottom = 40.0
+mouse_filter = 2
+autowrap_mode = 3
+
+[node name="收益面板" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 136.0
+offset_right = 256.0
+offset_bottom = 246.0
+mouse_filter = 2
+
+[node name="标题" type="Label" parent="收益面板"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 10.0
+offset_right = 150.0
+offset_bottom = 28.0
+mouse_filter = 2
+
+[node name="经验标题" type="Label" parent="收益面板"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 40.0
+offset_right = 78.0
+offset_bottom = 58.0
+mouse_filter = 2
+
+[node name="经验" type="LineEdit" parent="收益面板"]
+layout_mode = 0
+offset_left = 91.0
+offset_top = 41.0
+offset_right = 173.0
+offset_bottom = 62.0
+editable = false
+alignment = 0
+
+[node name="金币标题" type="Label" parent="收益面板"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 70.0
+offset_right = 91.0
+offset_bottom = 88.0
+mouse_filter = 2
+
+[node name="金币" type="LineEdit" parent="收益面板"]
+layout_mode = 0
+offset_left = 91.0
+offset_top = 69.0
+offset_right = 173.0
+offset_bottom = 90.0
+editable = false
+alignment = 0
+
+[node name="领取收益" type="Button" parent="收益面板"]
+visible = false
+layout_mode = 0
+offset_left = 193.0
+offset_top = 49.0
+offset_right = 230.0
+offset_bottom = 71.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+text = "领取"

@@ -1,0 +1,379 @@
+[gd_scene format=3]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/装备强化/箭头.png" id="箭头_tex"]
+[ext_resource type="PackedScene" path="res://场景/界面/组件/物品提示框.tscn" id="11_tip"]
+[ext_resource type="PackedScene" path="res://场景/界面/组件/装备提示框.tscn" id="12_tip2"]
+
+; 原版「装备打造」窗（`EquipStrengthWindow.as`），**页面 = 整个窗口 664x407**，
+; 靠 `数据/界面/窗口尺寸.json` 里 `"原点": [0,0]` 让页面铺满外框。
+;
+; ⚠️ 2026-09-22 重做：原来这一页是 360 宽 —— 尺寸表把它当成 `EquipJinJieWindow`
+; （`super(360,407,true)`，那是**另一个窗**）了。活着的「装备打造」是
+; `EquipStrengthWindow`（`:107` `super(664,407)`，`:325` 标题 `EQUIP_STRENGTH_WINDOW_TITLE` = "装备打造"），
+; 由 `UIConfig.EQUIP_STRENGTH_WINDOW` → `showEquipStrengthWindow()` 打开。
+;
+; 坐标全部来自 `EquipStrengthWindow.createChildren()`（`:322-406`）**逐行算出来的**，
+; 不是估的。常量：BORDER_GAP=5、CONTENT_GAP=8（`UIConfig.as:890/892`），
+; 页签宽 `btn_width_two/five/six` = 37/70/82（`:962-972`）。
+; 落到运行中的原版上核过五个地标（内容背景、标签行、材料格、消耗几率文本、部位列表首列）。
+
+; ⚠️ 本页按窗口局部坐标 1:1 画（尺寸表"原点":[0,0]），**铺满整个外框、连标题栏那 29px
+; 也在页面里**（`装备强化窗口.tscn` 头注）。拖动事件在 `功能窗口.tscn` 的 `遮罩/主窗口/拖动区`
+; 上，但输入只发给**命中链最顶**的控件——页面根/外框只要 STOP，就会把标题栏的点击吞在页面里，
+; `拖动区` 永远收不到 ⇒ 整窗拖不动（2026-10-01 用户报"打造窗不能自由拖动"）。
+; 能拖的背包页（同为"原点[0,0]"）根节点就是 IGNORE（mouse_filter=2），照它办。
+[node name="原版装备强化内容" type="Control"]
+custom_minimum_size = Vector2(664, 407)
+mouse_filter = 2
+
+; 悬停详情框：原版打造页的格子挂 `MToolTipItem`（`SimpleItemCell.as:220`、`ItemDropBox` 同一套），
+; 我们复用背包那两个组件 + `格子提示框.接线()`，节点名必须是「物品提示框 / 装备提示框」。
+[node name="物品提示框" parent="." instance=ExtResource("11_tip")]
+
+[node name="装备提示框" parent="." instance=ExtResource("12_tip2")]
+
+[node name="外框" type="Panel" parent="."]
+offset_right = 664.0
+offset_bottom = 407.0
+mouse_filter = 2
+
+; 页签：`_tabBar.x = BORDER_GAP + 5 = 10`、`y = 38`。
+; 原版宽度数组是 `tabBtnWidthS = [two, five, five, two, two, two, two, six, five, five]`
+; （十项），我们只用前七项的宽度；右边界 = 10 + 315 = 325。
+[node name="分页" type="Control" parent="."]
+offset_left = 10.0
+offset_top = 38.0
+offset_right = 325.0
+offset_bottom = 58.0
+
+[node name="强化" type="Button" parent="分页"]
+offset_right = 37.0
+offset_bottom = 20.0
+toggle_mode = true
+text = "强化"
+
+[node name="洗附加属性" type="Button" parent="分页"]
+offset_left = 37.0
+offset_right = 107.0
+offset_bottom = 20.0
+toggle_mode = true
+text = "洗附加属性"
+
+[node name="洗附加数值" type="Button" parent="分页"]
+offset_left = 107.0
+offset_right = 177.0
+offset_bottom = 20.0
+toggle_mode = true
+text = "洗附加数值"
+
+[node name="进阶" type="Button" parent="分页"]
+offset_left = 177.0
+offset_right = 214.0
+offset_bottom = 20.0
+toggle_mode = true
+text = "进阶"
+
+[node name="天生" type="Button" parent="分页"]
+offset_left = 214.0
+offset_right = 251.0
+offset_bottom = 20.0
+toggle_mode = true
+text = "天生"
+
+[node name="刻印" type="Button" parent="分页"]
+offset_left = 251.0
+offset_right = 288.0
+offset_bottom = 20.0
+toggle_mode = true
+text = "刻印"
+
+[node name="精炼" type="Button" parent="分页"]
+offset_left = 288.0
+offset_right = 325.0
+offset_bottom = 20.0
+toggle_mode = true
+text = "精炼"
+
+; ⚠️ 原版这里还有三个页签：**神话属性锻造 / 神话重置 / 特性属性**
+; （名字硬编码在 AS3 数组里 `EquipStrengthWindow.as:327`，不在语言表）。
+; **2026-09-25 用户明确决定本重制版不做这三个**，所以节点整个删掉，
+; 不留「尚未接」的占位 —— 少了三个按钮，`分页` 右边界也就只到「精炼」的 325。
+
+; `_contentBgSkin`：x=BORDER_GAP、y=tabBar.y+20、宽=664-10、高=407-91
+[node name="内容背景" type="Panel" parent="."]
+offset_left = 5.0
+offset_top = 58.0
+offset_right = 659.0
+offset_bottom = 374.0
+
+; `_contentBox`：位置同内容背景，宽 = 内容背景宽 - 304 = 350
+[node name="内容容器" type="Control" parent="."]
+offset_left = 5.0
+offset_top = 58.0
+offset_right = 355.0
+offset_bottom = 374.0
+
+; `_itemBox`（ItemDropBox，83x175）**整个盒挂在内容容器的 (CONTENT_GAP, CONTENT_GAP) = (8,8)**
+; （`EquipStrengthWindow.as:350` 的 `_itemBox.setPosition(UIConfig.CONTENT_GAP,UIConfig.CONTENT_GAP)`），
+; 下面三件的坐标都是**盒内**坐标，必须再加这个 8 —— 2026-10-09 修：原先漏了，三件里
+; 放入装备/装备格少了 (8,8)（箭头碰巧是对的，于是同场景内自相矛盾）。
+;   放入装备  dropBtn: 盒内 x=(83-61)/2=11、y=10            ⇒ 容器 (19,18)
+;   装备格    itemCell: 盒内 居中、y=10+按钮高+5=37         ⇒ 容器 (29,45)
+;   箭头      arrow:    盒内 居中、y=装备格下沿=77、高 88     ⇒ 容器 (42.5,85)
+; 对证：AS3 算出的绝对位置 (13,66)+(盒内) 与另外五个页场景
+; （刻印/洗附加属性/精炼/进阶/通用页）的 (19,18)/(29,45) **完全一致**，原版两张整窗截图
+; 在左栏 (0,0) 位移下残差最低也印证了这一点。
+[node name="放入装备" type="Button" parent="内容容器"]
+offset_left = 19.0
+offset_top = 18.0
+offset_right = 80.0
+offset_bottom = 40.0
+text = "放入装备"
+
+[node name="装备格" type="TextureRect" parent="内容容器"]
+offset_left = 29.0
+offset_top = 45.0
+offset_right = 69.0
+offset_bottom = 85.0
+mouse_filter = 2
+
+[node name="装备图标" type="TextureRect" parent="内容容器/装备格"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+mouse_filter = 2
+
+[node name="箭头" type="TextureRect" parent="内容容器"]
+offset_left = 42.5
+offset_top = 85.0
+offset_right = 56.5
+offset_bottom = 173.0
+mouse_filter = 2
+texture = ExtResource("箭头_tex")
+
+; `_descBox`（VBox）：x = itemBox.x + itemBox.width + CONTENT_GAP = 99、y = 8、244x180
+;   说明 244x76 → 内容容器局部 (99,8)
+;   注意 244x94 → 内容容器局部 (99,89)（76 + verticalGap 5 = 81？照 AS3 是紧接，
+;        这里用 89 是因为 VBox 的 verticalGap=5 且第一段高 76：8+76+5 = 89）
+; 文案带 `<font color=...>`，用 RichTextLabel（原版是 `EquipLineTextArea`，吃 htmlText）
+[node name="说明" type="RichTextLabel" parent="内容容器"]
+offset_left = 99.0
+offset_top = 8.0
+offset_right = 343.0
+offset_bottom = 84.0
+bbcode_enabled = true
+scroll_active = false
+mouse_filter = 2
+
+[node name="注意" type="RichTextLabel" parent="内容容器"]
+offset_left = 99.0
+offset_top = 89.0
+offset_right = 343.0
+offset_bottom = 183.0
+bbcode_enabled = true
+scroll_active = false
+mouse_filter = 2
+
+; `_label`（MGlowLabel，橙字居中）：y = itemBox.y + itemBox.height + 4 = 187
+[node name="标签" type="Label" parent="内容容器"]
+offset_left = 8.0
+offset_top = 187.0
+offset_right = 342.0
+offset_bottom = 207.0
+horizontal_alignment = 1
+
+; `_caiLiaoBox`（MPane_background）：y = 标签.y + 标签高 + 4 = 211、高 99、宽 = 内容容器宽 - 16
+[node name="材料框" type="Panel" parent="内容容器"]
+offset_left = 8.0
+offset_top = 211.0
+offset_right = 342.0
+offset_bottom = 310.0
+
+; `_caiLiao1`（ItemCaiLiaoBox，60x64，盒内 BORDER_GAP=5）：
+;   材料名  label  宽 60、在顶
+;   材料格  itemCell 居中 = (60-40)/2 = 10、y = 20 + verticalGap
+;   购买    buyBtn 宽 btn_width_two=37、y = 材料格下沿 + 3
+[node name="材料名" type="Label" parent="内容容器/材料框"]
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 65.0
+offset_bottom = 21.0
+horizontal_alignment = 1
+
+[node name="材料格" type="TextureRect" parent="内容容器/材料框"]
+offset_left = 15.0
+offset_top = 25.0
+offset_right = 55.0
+offset_bottom = 65.0
+mouse_filter = 2
+
+[node name="材料图标" type="TextureRect" parent="内容容器/材料框/材料格"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+mouse_filter = 2
+
+[node name="材料数量" type="Label" parent="内容容器/材料框/材料格"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -22.0
+offset_top = -14.0
+offset_right = -1.0
+offset_bottom = -1.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="购买" type="Button" parent="内容容器/材料框"]
+offset_left = 11.0
+offset_top = 68.0
+offset_right = 48.0
+offset_bottom = 90.0
+text = "购买"
+
+; `_textField`（TextArea2）：盒内 (90,23)、240x60 —— **原版那两行就在这里**
+[node name="消耗几率" type="RichTextLabel" parent="内容容器/材料框"]
+offset_left = 90.0
+offset_top = 23.0
+offset_right = 330.0
+offset_bottom = 83.0
+bbcode_enabled = true
+scroll_active = false
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 12
+; `_autoStrengthCheckBox`：盒内 (90,75)
+[node name="自动强化" type="CheckBox" parent="内容容器/材料框"]
+offset_left = 90.0
+offset_top = 75
+offset_right = 210.0
+offset_bottom = 94
+text = "自动强化到10级"
+
+; 专属面板容器：原版各页的面板就铺在这儿（`_contentBox` 的位置与尺寸）。
+; 与「内容容器」同位置同大小，但**互斥** —— 强化/天生用内容容器，其余七页用这个。
+[node name="面板容器" type="Control" parent="."]
+visible = false
+offset_left = 5.0
+offset_top = 58.0
+offset_right = 355.0
+offset_bottom = 374.0
+mouse_filter = 2
+
+; `_strengthBtn`：x = (664 - 304 - 61)/2 = 149.5、y = 407 - 高 - BORDER_GAP
+[node name="开始强化" type="Button" parent="."]
+offset_left = 149.0
+offset_top = 380.0
+offset_right = 210.0
+offset_bottom = 402.0
+text = "开始强化"
+
+; `_itemPanel`（EquipItemPanel）：x = contentBox.x + contentBox.width + CONTENT_GAP = 363、y = 66
+[node name="部位列表" type="Control" parent="."]
+offset_left = 363.0
+offset_top = 66.0
+offset_right = 659.0
+offset_bottom = 382.0
+
+; 页签名 `ZHUANGBEIWANFA_QIANGHUA_TAB_NAMES` = "全部%白色%绿色%蓝色%紫色"（按 % 切）；
+; `_tabBar.buttonSize = [48]`（单值 = 每个都 48 宽）
+[node name="列表分页" type="Control" parent="."]
+offset_left = 369.0
+offset_top = 66.0
+offset_right = 665.0
+offset_bottom = 90.0
+
+[node name="全部" type="Button" parent="列表分页"]
+offset_right = 48.0
+offset_bottom = 24.0
+toggle_mode = true
+text = "全部"
+
+[node name="白色" type="Button" parent="列表分页"]
+offset_left = 48.0
+offset_right = 96.0
+offset_bottom = 24.0
+toggle_mode = true
+text = "白色"
+
+[node name="绿色" type="Button" parent="列表分页"]
+offset_left = 96.0
+offset_right = 144.0
+offset_bottom = 24.0
+toggle_mode = true
+text = "绿色"
+
+[node name="蓝色" type="Button" parent="列表分页"]
+offset_left = 144.0
+offset_right = 192.0
+offset_bottom = 24.0
+toggle_mode = true
+text = "蓝色"
+
+[node name="紫色" type="Button" parent="列表分页"]
+offset_left = 192.0
+offset_right = 240.0
+offset_bottom = 24.0
+toggle_mode = true
+text = "紫色"
+
+; `ItemPanel`：2 列 x 6 行一页，行高 46（`ItemPanel.as:15-17` / `:84-85`），
+; 每行是 `ItemPanelRanderer`（底 135x44）
+[node name="列表内容" type="Control" parent="."]
+offset_left = 363.0
+offset_top = 86.0
+offset_right = 651.0
+offset_bottom = 369.0
+
+; 翻页条（`ItemPanel` 的 `_pageBar = new PageComponent(0)`，位置 (74, _list.y+283+12=315)）。
+; `PageComponent.createChildren` 的排布：首页 18 宽 @0、上一页 15 @20、
+; 页文本 50 @37、下一页 15 @89、末页 18 @106（总宽 124）。
+[node name="翻页条" type="Control" parent="."]
+offset_left = 437.0
+offset_top = 381.0
+offset_right = 561.0
+offset_bottom = 397.0
+
+[node name="首页" type="TextureButton" parent="翻页条"]
+offset_right = 18.0
+offset_bottom = 13.0
+
+[node name="上一页" type="TextureButton" parent="翻页条"]
+offset_left = 20.0
+offset_right = 35.0
+offset_bottom = 13.0
+
+[node name="页码" type="Label" parent="翻页条"]
+offset_left = 37.0
+offset_right = 87.0
+offset_bottom = 16.0
+horizontal_alignment = 1
+
+[node name="下一页" type="TextureButton" parent="翻页条"]
+offset_left = 89.0
+offset_right = 104.0
+offset_bottom = 13.0
+
+[node name="末页" type="TextureButton" parent="翻页条"]
+offset_left = 106.0
+offset_right = 124.0
+offset_bottom = 13.0

@@ -1,0 +1,81 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://脚本/界面/窗口/家族/家族子窗.gd" id="1_script"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/家族/旗帜帮助底.png" id="t1"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/复选框未选.png" id="t2"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/家族/钮底.png" id="t3"]
+
+
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/家族/钮底108.png" id="t4"]
+
+[node name="家族旗帜帮助窗" type="Control"]
+custom_minimum_size = Vector2(642, 426)
+script = ExtResource("1_script")
+窗名 = "家族旗帜帮助窗"
+
+[node name="整图旗帜帮助底" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 642.0
+offset_bottom = 426.0
+mouse_filter = 2
+texture = ExtResource("t1")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="复选跳过" type="Control" parent="."]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 402.0
+offset_right = 212.0
+offset_bottom = 421.0
+metadata/act = "跳过"
+
+[node name="框" type="TextureRect" parent="复选跳过"]
+layout_mode = 0
+offset_right = 19.0
+offset_bottom = 19.0
+mouse_filter = 2
+texture = ExtResource("t2")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="字" type="Label" parent="复选跳过"]
+layout_mode = 0
+offset_left = 24.0
+offset_right = 200.0
+offset_bottom = 19.0
+mouse_filter = 2
+text = "下次跳过本説明介面"
+theme_override_colors/font_color = Color(1, 0.5921568627450980, 0.2509803921568627, 1)
+
+[node name="钮进入旗帜" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 267.0
+offset_top = 402.0
+offset_right = 375.0
+offset_bottom = 424.0
+texture_normal = ExtResource("t4")
+expand_mode = 1
+stretch_mode = 0
+focus_mode = 0
+ignore_texture_size = true
+metadata/skin = "res://素材/界面/原版窗口/家族/钮底108"
+metadata/act = "进入旗帜"
+
+[node name="Label" type="Label" parent="钮进入旗帜"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+text = "进入家族旗帜介面"
+horizontal_alignment = 1
+vertical_alignment = 1

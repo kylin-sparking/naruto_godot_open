@@ -1,0 +1,466 @@
+[gd_scene load_steps=102 format=3]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/创角窗口底.png" id="1_1"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/创角面板底.png" id="1_2"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/创角输入框底.png" id="1_3"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_00.png" id="1_4"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_01.png" id="1_5"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_02.png" id="1_6"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_03.png" id="1_7"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_04.png" id="1_8"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_05.png" id="1_9"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_06.png" id="1_10"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_07.png" id="1_11"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_08.png" id="1_12"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_09.png" id="1_13"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_10.png" id="1_14"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_11.png" id="1_15"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_12.png" id="1_16"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_13.png" id="1_17"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_14.png" id="1_18"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_15.png" id="1_19"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_16.png" id="1_20"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_17.png" id="1_21"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_18.png" id="1_22"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_19.png" id="1_23"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_20.png" id="1_24"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_21.png" id="1_25"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_22.png" id="1_26"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_23.png" id="1_27"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_24.png" id="1_28"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_25.png" id="1_29"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_26.png" id="1_30"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_27.png" id="1_31"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_28.png" id="1_32"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_29.png" id="1_33"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_30.png" id="1_34"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_31.png" id="1_35"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_32.png" id="1_36"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_33.png" id="1_37"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_34.png" id="1_38"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_35.png" id="1_39"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_36.png" id="1_40"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_37.png" id="1_41"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_38.png" id="1_42"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_39.png" id="1_43"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_40.png" id="1_44"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_41.png" id="1_45"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_42.png" id="1_46"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_43.png" id="1_47"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_44.png" id="1_48"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_45.png" id="1_49"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_46.png" id="1_50"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_47.png" id="1_51"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_48.png" id="1_52"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_49.png" id="1_53"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_50.png" id="1_54"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_51.png" id="1_55"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_52.png" id="1_56"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_53.png" id="1_57"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_54.png" id="1_58"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_55.png" id="1_59"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_56.png" id="1_60"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_57.png" id="1_61"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_58.png" id="1_62"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_59.png" id="1_63"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_60.png" id="1_64"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_61.png" id="1_65"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_62.png" id="1_66"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_63.png" id="1_67"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_64.png" id="1_68"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_65.png" id="1_69"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_66.png" id="1_70"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_67.png" id="1_71"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_68.png" id="1_72"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/提交转圈/提交转圈_69.png" id="1_73"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/随机钮_常态.png" id="1_74"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/随机钮_悬停皮.png" id="1_75"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/随机钮_按下皮.png" id="1_76"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/随机钮_禁用皮.png" id="1_77"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/创角背景.png" id="1_78"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/创角标题.png" id="1_79"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/格_火男_未选.png" id="1_80"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/格_火男_悬停.png" id="1_81"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/格_水女_未选.png" id="1_82"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/格_水女_悬停.png" id="1_83"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/格_风女_未选.png" id="1_84"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/格_风女_悬停.png" id="1_85"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/格_雷男_未选.png" id="1_86"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/格_雷男_悬停.png" id="1_87"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/进入游戏_常态.png" id="1_88"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/进入游戏_悬停.png" id="1_89"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/创建角色/进入游戏_按下.png" id="1_90"]
+[ext_resource type="Script" path="res://脚本/界面/窗口/创建角色窗.gd" id="90_script"]
+
+[sub_resource type="StyleBoxTexture" id="sb_win"]
+texture = ExtResource("1_1")
+texture_margin_left = 48
+texture_margin_top = 29.25
+texture_margin_right = 48.05
+texture_margin_bottom = 18
+content_margin_left = 0
+content_margin_top = 0
+content_margin_right = 0
+content_margin_bottom = 0
+
+[sub_resource type="StyleBoxTexture" id="sb_panel"]
+texture = ExtResource("1_2")
+texture_margin_left = 7.5
+texture_margin_top = 6.75
+texture_margin_right = 7
+texture_margin_bottom = 7.25
+content_margin_left = 0
+content_margin_top = 0
+content_margin_right = 0
+content_margin_bottom = 0
+
+[sub_resource type="StyleBoxTexture" id="sb_input"]
+texture = ExtResource("1_3")
+texture_margin_left = 6.25
+texture_margin_top = 5
+texture_margin_right = 6.75
+texture_margin_bottom = 6
+content_margin_left = 6
+content_margin_top = 1
+content_margin_right = 6
+content_margin_bottom = 1
+
+[sub_resource type="AnimatedTexture" id="at_spin"]
+frames = 70
+frame_0/duration = 0.041667
+frame_1/duration = 0.041667
+frame_2/duration = 0.041667
+frame_3/duration = 0.041667
+frame_4/duration = 0.041667
+frame_5/duration = 0.041667
+frame_6/duration = 0.041667
+frame_7/duration = 0.041667
+frame_8/duration = 0.041667
+frame_9/duration = 0.041667
+frame_10/duration = 0.041667
+frame_11/duration = 0.041667
+frame_12/duration = 0.041667
+frame_13/duration = 0.041667
+frame_14/duration = 0.041667
+frame_15/duration = 0.041667
+frame_16/duration = 0.041667
+frame_17/duration = 0.041667
+frame_18/duration = 0.041667
+frame_19/duration = 0.041667
+frame_20/duration = 0.041667
+frame_21/duration = 0.041667
+frame_22/duration = 0.041667
+frame_23/duration = 0.041667
+frame_24/duration = 0.041667
+frame_25/duration = 0.041667
+frame_26/duration = 0.041667
+frame_27/duration = 0.041667
+frame_28/duration = 0.041667
+frame_29/duration = 0.041667
+frame_30/duration = 0.041667
+frame_31/duration = 0.041667
+frame_32/duration = 0.041667
+frame_33/duration = 0.041667
+frame_34/duration = 0.041667
+frame_35/duration = 0.041667
+frame_36/duration = 0.041667
+frame_37/duration = 0.041667
+frame_38/duration = 0.041667
+frame_39/duration = 0.041667
+frame_40/duration = 0.041667
+frame_41/duration = 0.041667
+frame_42/duration = 0.041667
+frame_43/duration = 0.041667
+frame_44/duration = 0.041667
+frame_45/duration = 0.041667
+frame_46/duration = 0.041667
+frame_47/duration = 0.041667
+frame_48/duration = 0.041667
+frame_49/duration = 0.041667
+frame_50/duration = 0.041667
+frame_51/duration = 0.041667
+frame_52/duration = 0.041667
+frame_53/duration = 0.041667
+frame_54/duration = 0.041667
+frame_55/duration = 0.041667
+frame_56/duration = 0.041667
+frame_57/duration = 0.041667
+frame_58/duration = 0.041667
+frame_59/duration = 0.041667
+frame_60/duration = 0.041667
+frame_61/duration = 0.041667
+frame_62/duration = 0.041667
+frame_63/duration = 0.041667
+frame_64/duration = 0.041667
+frame_65/duration = 0.041667
+frame_66/duration = 0.041667
+frame_67/duration = 0.041667
+frame_68/duration = 0.041667
+frame_69/duration = 0.041667
+frame_0/texture = ExtResource("1_4")
+frame_1/texture = ExtResource("1_5")
+frame_2/texture = ExtResource("1_6")
+frame_3/texture = ExtResource("1_7")
+frame_4/texture = ExtResource("1_8")
+frame_5/texture = ExtResource("1_9")
+frame_6/texture = ExtResource("1_10")
+frame_7/texture = ExtResource("1_11")
+frame_8/texture = ExtResource("1_12")
+frame_9/texture = ExtResource("1_13")
+frame_10/texture = ExtResource("1_14")
+frame_11/texture = ExtResource("1_15")
+frame_12/texture = ExtResource("1_16")
+frame_13/texture = ExtResource("1_17")
+frame_14/texture = ExtResource("1_18")
+frame_15/texture = ExtResource("1_19")
+frame_16/texture = ExtResource("1_20")
+frame_17/texture = ExtResource("1_21")
+frame_18/texture = ExtResource("1_22")
+frame_19/texture = ExtResource("1_23")
+frame_20/texture = ExtResource("1_24")
+frame_21/texture = ExtResource("1_25")
+frame_22/texture = ExtResource("1_26")
+frame_23/texture = ExtResource("1_27")
+frame_24/texture = ExtResource("1_28")
+frame_25/texture = ExtResource("1_29")
+frame_26/texture = ExtResource("1_30")
+frame_27/texture = ExtResource("1_31")
+frame_28/texture = ExtResource("1_32")
+frame_29/texture = ExtResource("1_33")
+frame_30/texture = ExtResource("1_34")
+frame_31/texture = ExtResource("1_35")
+frame_32/texture = ExtResource("1_36")
+frame_33/texture = ExtResource("1_37")
+frame_34/texture = ExtResource("1_38")
+frame_35/texture = ExtResource("1_39")
+frame_36/texture = ExtResource("1_40")
+frame_37/texture = ExtResource("1_41")
+frame_38/texture = ExtResource("1_42")
+frame_39/texture = ExtResource("1_43")
+frame_40/texture = ExtResource("1_44")
+frame_41/texture = ExtResource("1_45")
+frame_42/texture = ExtResource("1_46")
+frame_43/texture = ExtResource("1_47")
+frame_44/texture = ExtResource("1_48")
+frame_45/texture = ExtResource("1_49")
+frame_46/texture = ExtResource("1_50")
+frame_47/texture = ExtResource("1_51")
+frame_48/texture = ExtResource("1_52")
+frame_49/texture = ExtResource("1_53")
+frame_50/texture = ExtResource("1_54")
+frame_51/texture = ExtResource("1_55")
+frame_52/texture = ExtResource("1_56")
+frame_53/texture = ExtResource("1_57")
+frame_54/texture = ExtResource("1_58")
+frame_55/texture = ExtResource("1_59")
+frame_56/texture = ExtResource("1_60")
+frame_57/texture = ExtResource("1_61")
+frame_58/texture = ExtResource("1_62")
+frame_59/texture = ExtResource("1_63")
+frame_60/texture = ExtResource("1_64")
+frame_61/texture = ExtResource("1_65")
+frame_62/texture = ExtResource("1_66")
+frame_63/texture = ExtResource("1_67")
+frame_64/texture = ExtResource("1_68")
+frame_65/texture = ExtResource("1_69")
+frame_66/texture = ExtResource("1_70")
+frame_67/texture = ExtResource("1_71")
+frame_68/texture = ExtResource("1_72")
+frame_69/texture = ExtResource("1_73")
+
+[sub_resource type="StyleBoxTexture" id="sb_rand_normal"]
+texture = ExtResource("1_74")
+texture_margin_left = 7.15
+texture_margin_top = 7.15
+texture_margin_right = 7.3
+texture_margin_bottom = 7
+content_margin_left = 0
+content_margin_top = 0
+content_margin_right = 0
+content_margin_bottom = 0
+
+[sub_resource type="StyleBoxTexture" id="sb_rand_hover"]
+texture = ExtResource("1_75")
+texture_margin_left = 7.15
+texture_margin_top = 7.25
+texture_margin_right = 7.25
+texture_margin_bottom = 6.85
+content_margin_left = 0
+content_margin_top = 0
+content_margin_right = 0
+content_margin_bottom = 0
+
+[sub_resource type="StyleBoxTexture" id="sb_rand_pressed"]
+texture = ExtResource("1_76")
+texture_margin_left = 7
+texture_margin_top = 7
+texture_margin_right = 7.4
+texture_margin_bottom = 6.85
+content_margin_left = 0
+content_margin_top = 0
+content_margin_right = 0
+content_margin_bottom = 0
+
+[sub_resource type="StyleBoxTexture" id="sb_rand_disabled"]
+texture = ExtResource("1_77")
+texture_margin_left = 7.1
+texture_margin_top = 7
+texture_margin_right = 7.1
+texture_margin_bottom = 7
+content_margin_left = 0
+content_margin_top = 0
+content_margin_right = 0
+content_margin_bottom = 0
+
+[sub_resource type="Shader" id="sh_grad"]
+code = "shader_type canvas_item;\nuniform vec4 top_color : source_color = vec4(0.9921569, 0.5764706, 0.1882353, 1.0);\nuniform vec4 bottom_color : source_color = vec4(1.0, 0.7058824, 0.2627451, 1.0);\nuniform float box_height : hint_range(1.0, 200.0) = 19.0;\nvoid fragment() {\n\tfloat a = texture(TEXTURE, UV).a;\n\tfloat t = clamp(VERTEX.y / box_height, 0.0, 1.0);\n\tCOLOR = vec4(mix(top_color.rgb, bottom_color.rgb, t), top_color.a) * a;\n}"
+
+[sub_resource type="ShaderMaterial" id="sm_grad"]
+render_priority = 0
+shader = SubResource("sh_grad")
+shader_parameter/top_color = Vector4(0.992156863, 0.576470613, 0.188235298, 1)
+shader_parameter/bottom_color = Vector4(1, 0.705882373, 0.262745112, 1)
+shader_parameter/box_height = 19.0
+
+[node name="创建角色" type="Control"]
+custom_minimum_size = Vector2(249, 410)
+offset_right = 249
+offset_bottom = 410
+script = ExtResource("90_script")
+
+[node name="背景" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_78")
+expand_mode = 0
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="窗口" type="Control" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -124.5
+offset_top = -205
+offset_right = 124.5
+offset_bottom = 205
+mouse_filter = 2
+
+[node name="窗口底" type="Panel" parent="窗口"]
+offset_right = 249
+offset_bottom = 410
+theme_override_styles/panel = SubResource("sb_win")
+mouse_filter = 2
+
+[node name="标题" type="TextureRect" parent="窗口"]
+offset_left = 88.5
+offset_top = 5.0
+offset_right = 160.5
+offset_bottom = 24.0
+texture = ExtResource("1_79")
+mouse_filter = 2
+
+[node name="面板底" type="Panel" parent="窗口"]
+offset_left = 8.0
+offset_top = 32.0
+offset_right = 241
+offset_bottom = 362
+theme_override_styles/panel = SubResource("sb_panel")
+mouse_filter = 2
+
+[node name="职业格1" type="TextureButton" parent="窗口"]
+offset_left = 13
+offset_top = 37
+offset_right = 124
+offset_bottom = 173
+texture_normal = ExtResource("1_80")
+texture_hover = ExtResource("1_81")
+mouse_default_cursor_shape = 2
+
+[node name="职业格2" type="TextureButton" parent="窗口"]
+offset_left = 125
+offset_top = 37
+offset_right = 236
+offset_bottom = 173
+texture_normal = ExtResource("1_82")
+texture_hover = ExtResource("1_83")
+mouse_default_cursor_shape = 2
+
+[node name="职业格3" type="TextureButton" parent="窗口"]
+offset_left = 13
+offset_top = 174
+offset_right = 124
+offset_bottom = 310
+texture_normal = ExtResource("1_84")
+texture_hover = ExtResource("1_85")
+mouse_default_cursor_shape = 2
+
+[node name="职业格4" type="TextureButton" parent="窗口"]
+offset_left = 125
+offset_top = 174
+offset_right = 236
+offset_bottom = 310
+texture_normal = ExtResource("1_86")
+texture_hover = ExtResource("1_87")
+mouse_default_cursor_shape = 2
+
+[node name="名标签" type="Label" parent="窗口"]
+material = SubResource("sm_grad")
+offset_left = 56.0
+offset_top = 314
+offset_right = 134.0
+offset_bottom = 333
+theme_override_font_sizes/font_size = 12
+text = "请输入角色名"
+mouse_filter = 2
+
+[node name="角色名输入" type="LineEdit" parent="窗口"]
+offset_left = 46.0
+offset_top = 335
+offset_right = 171
+offset_bottom = 356
+theme_override_styles/normal = SubResource("sb_input")
+theme_override_styles/focus = SubResource("sb_input")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+max_length = 12
+alignment = 0
+theme_override_font_sizes/font_size = 12
+
+[node name="随机钮" type="Button" parent="窗口"]
+offset_left = 173
+offset_top = 335
+offset_right = 207
+offset_bottom = 357
+theme_override_styles/normal = SubResource("sb_rand_normal")
+theme_override_styles/hover = SubResource("sb_rand_hover")
+theme_override_styles/pressed = SubResource("sb_rand_pressed")
+theme_override_styles/disabled = SubResource("sb_rand_disabled")
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 0.764706, 1)
+theme_override_colors/font_pressed_color = Color(0.701961, 0.678431, 0.698039, 1)
+theme_override_colors/font_disabled_color = Color(0.576471, 0.576471, 0.576471, 1)
+theme_override_font_sizes/font_size = 12
+text = "随机"
+clip_text = true
+mouse_default_cursor_shape = 2
+
+[node name="进入游戏" type="TextureButton" parent="窗口"]
+offset_left = 67
+offset_top = 368
+offset_right = 182
+offset_bottom = 402
+texture_normal = ExtResource("1_88")
+texture_hover = ExtResource("1_89")
+texture_pressed = ExtResource("1_90")
+mouse_default_cursor_shape = 2
+
+[node name="提交转圈" type="TextureRect" parent="窗口"]
+offset_left = 33.95
+offset_top = 357.95
+offset_right = 216.95
+offset_bottom = 405.95
+texture = SubResource("at_spin")
+mouse_filter = 2

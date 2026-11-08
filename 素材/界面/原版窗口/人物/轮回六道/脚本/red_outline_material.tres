@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://bo3btla6w10ss"]
+
+[ext_resource type="Shader" uid="uid://c08ss0qbjvre6" path="res://素材/界面/原版窗口/人物/轮回六道/脚本/红色描边.gdshader" id="1_0g00r"]
+
+[resource]
+shader = ExtResource("1_0g00r")
+shader_parameter/outline_color = Color(1, 0, 0, 1)
+shader_parameter/outline_width = 3.0

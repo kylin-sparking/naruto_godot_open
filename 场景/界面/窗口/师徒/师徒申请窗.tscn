@@ -1,0 +1,99 @@
+[gd_scene load_steps=14 format=3]
+
+[ext_resource type="Script" path="res://脚本/界面/窗口/师徒/师徒申请窗.gd" id="1_sq"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/对话框底板.png" id="2_bg"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/内容面板.png" id="3_yl"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/洗点/确定钮.png" id="4_on"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/洗点/确定钮_悬停.png" id="5_oh"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/洗点/确定钮_按下.png" id="6_op"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/洗点/取消钮.png" id="7_cn"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/洗点/取消钮_悬停.png" id="8_ch"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/洗点/取消钮_按下.png" id="9_cp"]
+
+[sub_resource type="StyleBoxTexture" id="sb_ok_n"]
+texture = ExtResource("4_on")
+
+[sub_resource type="StyleBoxTexture" id="sb_ok_h"]
+texture = ExtResource("5_oh")
+
+[sub_resource type="StyleBoxTexture" id="sb_ok_p"]
+texture = ExtResource("6_op")
+
+[sub_resource type="StyleBoxTexture" id="sb_no_n"]
+texture = ExtResource("7_cn")
+
+[sub_resource type="StyleBoxTexture" id="sb_no_h"]
+texture = ExtResource("8_ch")
+
+[sub_resource type="StyleBoxTexture" id="sb_no_p"]
+texture = ExtResource("9_cp")
+
+[node name="师徒申请窗" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 302.0
+offset_bottom = 128.0
+script = ExtResource("1_sq")
+
+[node name="底" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_right = 302.0
+offset_bottom = 128.0
+texture = ExtResource("2_bg")
+patch_margin_left = 28
+patch_margin_top = 33
+patch_margin_right = 30
+patch_margin_bottom = 33
+
+[node name="黄底" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = 289.0
+offset_bottom = 86.0
+texture = ExtResource("3_yl")
+patch_margin_left = 11
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 11
+
+[node name="文" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 36.0
+offset_right = 277.0
+offset_bottom = 56.0
+theme_override_font_sizes/normal_font_size = 12
+scroll_active = false
+bbcode_enabled = true
+text = "[color=#00ff00][url=1|1001][u]名字[/u][/url][color=#ffffff]想拜你为师，是否同意？[/color][/color]"
+
+[node name="确定钮" type="Button" parent="."]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 91.0
+offset_right = 112.0
+offset_bottom = 113.0
+theme_override_styles/normal = SubResource("sb_ok_n")
+theme_override_styles/hover = SubResource("sb_ok_h")
+theme_override_styles/pressed = SubResource("sb_ok_p")
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+text = "确定"
+
+[node name="取消钮" type="Button" parent="."]
+layout_mode = 0
+offset_left = 196.0
+offset_top = 91.0
+offset_right = 233.0
+offset_bottom = 113.0
+theme_override_styles/normal = SubResource("sb_no_n")
+theme_override_styles/hover = SubResource("sb_no_h")
+theme_override_styles/pressed = SubResource("sb_no_p")
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+text = "取消"

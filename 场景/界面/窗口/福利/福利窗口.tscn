@@ -1,0 +1,4389 @@
+[gd_scene load_steps=63 format=3]
+
+[ext_resource type="Theme" path="res://素材/界面/原版主题.tres" id="r1"]
+
+[ext_resource type="Texture2D" uid="uid://dkil44jd6c66y" path="res://素材/界面/原版窗口/通用控件/横向分隔线.png" id="r2"]
+
+[ext_resource type="Texture2D" uid="uid://5akgvwhw3brc" path="res://素材/界面/原版窗口/福利/已领取.png" id="r3"]
+
+[ext_resource type="Texture2D" uid="uid://gumwsn66i8rl" path="res://素材/界面/原版窗口/通用控件/物品格.png" id="r4"]
+
+[ext_resource type="Texture2D" uid="uid://dcd3buxjtxfor" path="res://素材/物品/原版/LiBao/LiBao_11000160_info.swf_1_LiBao_11000160_info_icon.png" id="r5"]
+
+[ext_resource type="Texture2D" uid="uid://bthublh5dqq0d" path="res://素材/物品/原版/TeShuWuPin/TeShuWuPin_15002001_info.swf_1_TeShuWuPin_15002001_info_icon.png" id="r6"]
+
+[ext_resource type="Texture2D" uid="uid://bimaapochx8na" path="res://素材/物品/原版/FuZhuWuPin/FuZhuWuPin_16000010_info.swf_1_FuZhuWuPin_16000010_info_icon.png" id="r7"]
+
+[ext_resource type="Texture2D" uid="uid://bdhily3wgq6f8" path="res://素材/物品/原版/FuZhuWuPin/FuZhuWuPin_16000005_info.swf_1_FuZhuWuPin_16000005_info_icon.png" id="r8"]
+
+[ext_resource type="Texture2D" uid="uid://b0yfhg85guppx" path="res://素材/物品/原版/TeShuWuPin/TeShuWuPin_15003001_info.swf_1_TeShuWuPin_15003001_info_icon.png" id="r9"]
+
+[ext_resource type="Texture2D" uid="uid://ca2f0suetxxps" path="res://素材/物品/原版/FuZhuWuPin/FuZhuWuPin_16000032_info.swf_1_FuZhuWuPin_16000032_info_icon.png" id="r10"]
+
+[ext_resource type="Texture2D" uid="uid://miha87kupfp5" path="res://素材/物品/原版/TeShuWuPin/TeShuWuPin_15008002_info.swf_1_TeShuWuPin_15008002_info_icon.png" id="r11"]
+
+[ext_resource type="Texture2D" uid="uid://bocfnfld2pmid" path="res://素材/物品/原版/TeShuWuPin/TeShuWuPin_15004001_info.swf_1_TeShuWuPin_15004001_info_icon.png" id="r12"]
+
+[ext_resource type="Texture2D" uid="uid://dej4nqfmisuk" path="res://素材/物品/原版/TeShuWuPin/TeShuWuPin_15004002_info.swf_1_TeShuWuPin_15004002_info_icon.png" id="r13"]
+
+[ext_resource type="Texture2D" uid="uid://8q7ygqoat2fl" path="res://素材/物品/原版/FuZhuWuPin/FuZhuWuPin_16000015_info.swf_1_FuZhuWuPin_16000015_info_icon.png" id="r14"]
+
+[ext_resource type="Texture2D" uid="uid://c2bbvfduw3nwq" path="res://素材/物品/原版/TeShuWuPin/TeShuWuPin_15008003_info.swf_1_TeShuWuPin_15008003_info_icon.png" id="r15"]
+
+[ext_resource type="Texture2D" uid="uid://m2pgox5fugvh" path="res://素材/物品/原版/TeShuWuPin/TeShuWuPin_15007001_info.swf_1_TeShuWuPin_15007001_info_icon.png" id="r16"]
+
+[ext_resource type="Texture2D" uid="uid://g7w3gdqsctti" path="res://素材/物品/原版/LiBao/LiBao_11000102_info.swf_1_LiBao_11000102_info_icon.png" id="r17"]
+
+[ext_resource type="Texture2D" uid="uid://xpx23wci6qb2" path="res://素材/物品/原版/FuZhuWuPin/FuZhuWuPin_16000033_info.swf_1_FuZhuWuPin_16000033_info_icon.png" id="r18"]
+
+[ext_resource type="Texture2D" uid="uid://q4epell4gxjf" path="res://素材/物品/原版/TeShuWuPin/TeShuWuPin_15008004_info.swf_1_TeShuWuPin_15008004_info_icon.png" id="r19"]
+
+[ext_resource type="Texture2D" uid="uid://bt286ju3ojspp" path="res://素材/物品/原版/TeShuWuPin/TeShuWuPin_15001001_info.swf_1_TeShuWuPin_15001001_info_icon.png" id="r20"]
+
+[ext_resource type="Texture2D" uid="uid://c4ismb8r4yomy" path="res://素材/物品/原版/TeShuWuPin/TeShuWuPin_15009003_info.swf_1_TeShuWuPin_15009003_info_icon.png" id="r21"]
+
+[ext_resource type="Texture2D" uid="uid://duabjfocl7nw1" path="res://素材/界面/原版窗口/通用控件/小标左.png" id="r22"]
+
+[ext_resource type="Texture2D" uid="uid://dw5rvwucduayh" path="res://素材/界面/原版窗口/通用控件/小标右.png" id="r23"]
+
+[ext_resource type="Texture2D" uid="uid://diu4qxita72nw" path="res://素材/界面/原版窗口/福利/礼包图标.png" id="r24"]
+
+[ext_resource type="Texture2D" uid="uid://t1u3vnod224h" path="res://素材/界面/原版窗口/通用控件/线上进度槽.png" id="r25"]
+
+[ext_resource type="Texture2D" uid="uid://djy12xntu0dd" path="res://素材/界面/原版窗口/通用控件/线上进度填充.png" id="r26"]
+
+[ext_resource type="Texture2D" uid="uid://cws3o6vajuuv8" path="res://素材/物品/原版/LiBao/LiBao_11000021_info.swf_1_LiBao_11000021_info_icon.png" id="r27"]
+
+
+[ext_resource type="SystemFont" uid="uid://b8yq2nxvkm1r4" path="res://素材/界面/原版字体.tres" id="r29"]
+
+[ext_resource type="Texture2D" uid="uid://c7kld75vesnvc" path="res://素材/物品/原版/LiBao/LiBao_11000251_info.swf_1_LiBao_11000251_info_icon.png" id="r30"]
+
+[ext_resource type="Texture2D" uid="uid://db7c5uihd3byh" path="res://素材/物品/原版/LiBao/LiBao_11000287_info.swf_1_LiBao_11000287_info_icon.png" id="r31"]
+
+[ext_resource type="Texture2D" uid="uid://gi3kbxbf8mr3" path="res://素材/物品/原版/LiBao/LiBao_11000397_info.swf_1_LiBao_11000397_info_icon.png" id="r32"]
+
+[ext_resource type="Texture2D" uid="uid://dd37k1ak4s0pm" path="res://素材/物品/原版/LiBao/LiBao_11010029_info.swf_1_LiBao_11010029_info_icon.png" id="r33"]
+
+[ext_resource type="Texture2D" uid="uid://4xrlnjp852uk" path="res://素材/物品/原版/FuZhuWuPin/FuZhuWuPin_16000002_info.swf_1_FuZhuWuPin_16000002_info_icon.png" id="r34"]
+
+[ext_resource type="Texture2D" uid="uid://b87dbfcgout14" path="res://素材/物品/原版/TeShuWuPin/TeShuWuPin_15003041_info.swf_1_TeShuWuPin_15003041_info_icon.png" id="r35"]
+
+[ext_resource type="Texture2D" uid="uid://ctujsm0v2755r" path="res://素材/物品/原版/TeShuWuPin/TeShuWuPin_15003042_info.swf_1_TeShuWuPin_15003042_info_icon.png" id="r36"]
+
+[ext_resource type="Texture2D" uid="uid://duitu146kmqtd" path="res://素材/物品/原版/TeShuWuPin/TeShuWuPin_15003043_info.swf_1_TeShuWuPin_15003043_info_icon.png" id="r37"]
+
+[ext_resource type="Texture2D" uid="uid://ckk3lhw4iooph" path="res://素材/物品/原版/TeShuWuPin/TeShuWuPin_15003044_info.swf_1_TeShuWuPin_15003044_info_icon.png" id="r38"]
+
+[ext_resource type="Texture2D" uid="uid://byfowhk43hsx0" path="res://素材/物品/原版/FuZhuWuPin/FuZhuWuPin_16000018_info.swf_1_FuZhuWuPin_16000018_info_icon.png" id="r39"]
+
+[ext_resource type="Texture2D" uid="uid://c7nhj10jb24oj" path="res://素材/物品/原版/TeShuWuPin/TeShuWuPin_15026004_info.swf_1_TeShuWuPin_15026004_info_icon.png" id="r40"]
+
+[ext_resource type="Texture2D" uid="uid://c8tpak021wf18" path="res://素材/物品/原版/LiBao/LiBao_11010023_info.swf_1_LiBao_11010023_info_icon.png" id="r41"]
+
+[ext_resource type="Texture2D" uid="uid://bhj3wgkv8hsd2" path="res://素材/物品/原版/ZhuangBei/ZhuangBei_01210493_info.swf_1_ZhuangBei_01210493_info_icon.png" id="r42"]
+
+[ext_resource type="Texture2D" uid="uid://si86imts31im" path="res://素材/物品/原版/TeShuWuPin/TeShuWuPin_15028002_info.swf_1_TeShuWuPin_15028002_info_icon.png" id="r43"]
+
+[ext_resource type="Texture2D" uid="uid://b0cacr8arropa" path="res://素材/物品/原版/FuZhuWuPin/FuZhuWuPin_16000035_info.swf_1_FuZhuWuPin_16000035_info_icon.png" id="r44"]
+
+[ext_resource type="Texture2D" uid="uid://yysvb6cdgedv" path="res://素材/物品/原版/LiBao/LiBao_11010002_info.swf_1_LiBao_11010002_info_icon.png" id="r45"]
+
+[ext_resource type="Texture2D" uid="uid://cjo2oqi8klbv3" path="res://素材/物品/原版/LiBao/LiBao_11010014_info.swf_1_LiBao_11010014_info_icon.png" id="r46"]
+
+[ext_resource type="Texture2D" uid="uid://mttsi1gr2tbi" path="res://素材/物品/原版/TeShuWuPin/TeShuWuPin_15009005_info.swf_1_TeShuWuPin_15009005_info_icon.png" id="r47"]
+
+[ext_resource type="Texture2D" uid="uid://dkmwt05mpl4to" path="res://素材/物品/原版/ZhuangBei/ZhuangBei_01210247_info.swf_1_ZhuangBei_01210247_info_icon.png" id="r48"]
+
+[ext_resource type="Texture2D" uid="uid://bbs4yggx44vfs" path="res://素材/物品/原版/FuZhuWuPin/FuZhuWuPin_16000009_info.swf_1_FuZhuWuPin_16000009_info_icon.png" id="r49"]
+
+[ext_resource type="Texture2D" uid="uid://y3mecftp3yck" path="res://素材/物品/原版/LiBao/LiBao_11000477_info.swf_1_LiBao_11000477_info_icon.png" id="r50"]
+
+[ext_resource type="Texture2D" uid="uid://cnepqxr6fvg88" path="res://素材/物品/原版/FuZhuWuPin/FuZhuWuPin_16000108_info.swf_1_FuZhuWuPin_16000108_info_icon.png" id="r51"]
+
+[ext_resource type="Texture2D" uid="uid://dyiru5e4qp20v" path="res://素材/物品/原版/FuZhuWuPin/LiBao_11000440_info.swf_1_LiBao_11000440_info_icon.png" id="r52"]
+
+[ext_resource type="Texture2D" uid="uid://bd81j6lmy0fpf" path="res://素材/物品/原版/TeShuWuPin/TeShuWuPin_15009004_info.swf_1_TeShuWuPin_15009004_info_icon.png" id="r53"]
+
+[ext_resource type="Texture2D" uid="uid://s1yvcgow270u" path="res://素材/物品/原版/LiBao/LiBao_11000544_info.swf_1_LiBao_11000544_info_icon.png" id="r54"]
+
+[ext_resource type="Texture2D" uid="uid://mk3dw60y6t2r" path="res://素材/物品/原版/LiBao/LiBao_11000490_info.swf_1_LiBao_11000490_info_icon.png" id="r55"]
+
+[ext_resource type="Texture2D" uid="uid://b77xaalnkocxq" path="res://素材/物品/原版/FuZhuWuPin/FuZhuWuPin_16000169_info.swf_1_FuZhuWuPin_16000169_info_icon.png" id="r56"]
+
+[ext_resource type="Texture2D" uid="uid://c2j5kas1gx8q0" path="res://素材/物品/原版/FuZhuWuPin/FuZhuWuPin_16000170_info.swf_1_FuZhuWuPin_16000170_info_icon.png" id="r57"]
+
+[ext_resource type="Texture2D" uid="uid://bexk1h5bj6dfv" path="res://素材/物品/原版/FuZhuWuPin/FuZhuWuPin_16000117_info.swf_1_FuZhuWuPin_16000117_info_icon.png" id="r58"]
+
+[ext_resource type="Texture2D" uid="uid://vxf01cr47cpk" path="res://素材/物品/原版/FuZhuWuPin/FuZhuWuPin_16000120_info.swf_1_FuZhuWuPin_16000120_info_icon.png" id="r59"]
+[ext_resource type="Texture2D" uid="uid://d1e3vhytf03qa" path="res://素材/物品/原版/TeShuWuPin/TeShuWuPin_15012001_info.swf_1_TeShuWuPin_15012001_info_icon.png" id="r60"]
+
+[ext_resource type="PackedScene" path="res://场景/界面/组件/物品提示框.tscn" id="r61"]
+
+[ext_resource type="PackedScene" path="res://场景/界面/组件/装备提示框.tscn" id="r62"]
+
+[sub_resource type="FontVariation" id="FontVariation_1"]
+base_font = ExtResource("r29")
+spacing_glyph = 15.0
+font_weight = 700
+
+[node name="原版开心有礼内容" type="Control"]
+custom_minimum_size = Vector2(484.0, 364.0)
+theme = ExtResource("r1")
+
+[node name="外框" type="Panel" parent="."]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 484.0
+offset_bottom = 364.0
+mouse_filter = 2
+theme_type_variation = &"OrigContentPanel"
+
+[node name="分页" type="Control" parent="."]
+offset_left = 8.0
+offset_top = 5.0
+offset_right = 374.0
+offset_bottom = 27.0
+mouse_filter = 2
+
+[node name="每日签到" type="Button" parent="分页"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 61.0
+offset_bottom = 22.0
+text = "每日签到"
+disabled = false
+theme_type_variation = &"OrigTab"
+clip_text = true
+toggle_mode = true
+
+[node name="线上有礼" type="Button" parent="分页"]
+offset_left = 61.0
+offset_top = 0.0
+offset_right = 122.0
+offset_bottom = 22.0
+text = "线上有礼"
+disabled = false
+theme_type_variation = &"OrigTab"
+clip_text = true
+toggle_mode = true
+
+[node name="首杀礼包" type="Button" parent="分页"]
+offset_left = 122.0
+offset_top = 0.0
+offset_right = 183.0
+offset_bottom = 22.0
+text = "首杀礼包"
+disabled = false
+theme_type_variation = &"OrigTab"
+clip_text = true
+toggle_mode = true
+
+[node name="活动奖励" type="Button" parent="分页"]
+offset_left = 183.0
+offset_top = 0.0
+offset_right = 244.0
+offset_bottom = 22.0
+text = "活动奖励"
+disabled = false
+theme_type_variation = &"OrigTab"
+clip_text = true
+toggle_mode = true
+
+[node name="限时大奖" type="Button" parent="分页"]
+offset_left = 244.0
+offset_top = 0.0
+offset_right = 305.0
+offset_bottom = 22.0
+text = "限时大奖"
+disabled = false
+theme_type_variation = &"OrigTab"
+clip_text = true
+toggle_mode = true
+
+[node name="新服有礼" type="Button" parent="分页"]
+offset_left = 305.0
+offset_top = 0.0
+offset_right = 366.0
+offset_bottom = 22.0
+text = "新服有礼"
+disabled = false
+theme_type_variation = &"OrigTab"
+clip_text = true
+toggle_mode = true
+
+[node name="内容面板" type="Panel" parent="."]
+offset_left = 5.0
+offset_top = 25.0
+offset_right = 479.0
+offset_bottom = 359.0
+mouse_filter = 2
+
+[node name="滚动区" type="ScrollContainer" parent="."]
+offset_left = 13.0
+offset_top = 33.0
+offset_right = 471.0
+offset_bottom = 351.0
+mouse_filter = 0
+horizontal_scroll_mode = 0
+
+[node name="内容" type="VBoxContainer" parent="滚动区"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 458.0
+offset_bottom = 318.0
+mouse_filter = 2
+theme_override_constants/separation = 0
+
+[node name="每日签到" type="Control" parent="滚动区/内容"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 432.0
+offset_bottom = 317.0
+custom_minimum_size = Vector2(432.0, 317.0)
+mouse_filter = 2
+
+[node name="累计天数" type="Label" parent="滚动区/内容/每日签到"]
+offset_left = 12.0
+offset_top = 1.0
+offset_right = 247.0
+offset_bottom = 21.0
+text = "累计天数"
+horizontal_alignment = 0
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.9882352941176471, 0.7647058823529411, 0.6, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="奖励内容" type="Label" parent="滚动区/内容/每日签到"]
+offset_left = 229.0
+offset_top = 1.0
+offset_right = 419.0
+offset_bottom = 21.0
+text = "奖励内容"
+horizontal_alignment = 0
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.9882352941176471, 0.7647058823529411, 0.6, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="第1天" type="Control" parent="滚动区/内容/每日签到"]
+offset_left = 6.0
+offset_top = 25.0
+offset_right = 445.0
+offset_bottom = 67.0
+mouse_filter = 2
+
+[node name="分隔线" type="TextureRect" parent="滚动区/内容/每日签到/第1天"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 439.0
+offset_bottom = 2.0
+texture = ExtResource("r2")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="累计" type="Label" parent="滚动区/内容/每日签到/第1天"]
+offset_left = 10.0
+offset_top = 15.0
+offset_right = 71.0
+offset_bottom = 35.0
+text = "累计1天"
+horizontal_alignment = 0
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 0.5686274509803921, 0.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="领取" type="Button" parent="滚动区/内容/每日签到/第1天"]
+offset_left = 389.0
+offset_top = 10.0
+offset_right = 446.0
+offset_bottom = 32.0
+text = "未签到"
+disabled = false
+
+[node name="已领取" type="TextureRect" parent="滚动区/内容/每日签到/第1天"]
+offset_left = 389.0
+offset_top = 2.0
+offset_right = 444.0
+offset_bottom = 39.0
+texture = ExtResource("r3")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+
+[node name="物品1格" type="TextureRect" parent="滚动区/内容/每日签到/第1天"]
+offset_left = 105.0
+offset_top = 2.0
+offset_right = 145.0
+offset_bottom = 42.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="物品1图" type="TextureRect" parent="滚动区/内容/每日签到/第1天"]
+offset_left = 105.0
+offset_top = 2.0
+offset_right = 145.0
+offset_bottom = 42.0
+texture = ExtResource("r5")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="物品1数量" type="Label" parent="滚动区/内容/每日签到/第1天"]
+offset_left = 105.0
+offset_top = 23.0
+offset_right = 143.0
+offset_bottom = 43.0
+text = "3"
+horizontal_alignment = 2
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="物品2格" type="TextureRect" parent="滚动区/内容/每日签到/第1天"]
+offset_left = 150.0
+offset_top = 2.0
+offset_right = 190.0
+offset_bottom = 42.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="物品2图" type="TextureRect" parent="滚动区/内容/每日签到/第1天"]
+offset_left = 150.0
+offset_top = 2.0
+offset_right = 190.0
+offset_bottom = 42.0
+texture = ExtResource("r6")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="第2天" type="Control" parent="滚动区/内容/每日签到"]
+offset_left = 6.0
+offset_top = 67.0
+offset_right = 445.0
+offset_bottom = 109.0
+mouse_filter = 2
+
+[node name="分隔线" type="TextureRect" parent="滚动区/内容/每日签到/第2天"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 439.0
+offset_bottom = 2.0
+texture = ExtResource("r2")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="累计" type="Label" parent="滚动区/内容/每日签到/第2天"]
+offset_left = 10.0
+offset_top = 15.0
+offset_right = 71.0
+offset_bottom = 35.0
+text = "累计2天"
+horizontal_alignment = 0
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 0.5686274509803921, 0.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="领取" type="Button" parent="滚动区/内容/每日签到/第2天"]
+offset_left = 389.0
+offset_top = 10.0
+offset_right = 446.0
+offset_bottom = 32.0
+text = "未签到"
+disabled = false
+
+[node name="已领取" type="TextureRect" parent="滚动区/内容/每日签到/第2天"]
+offset_left = 389.0
+offset_top = 2.0
+offset_right = 444.0
+offset_bottom = 39.0
+texture = ExtResource("r3")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+
+[node name="物品1格" type="TextureRect" parent="滚动区/内容/每日签到/第2天"]
+offset_left = 105.0
+offset_top = 2.0
+offset_right = 145.0
+offset_bottom = 42.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="物品1图" type="TextureRect" parent="滚动区/内容/每日签到/第2天"]
+offset_left = 105.0
+offset_top = 2.0
+offset_right = 145.0
+offset_bottom = 42.0
+texture = ExtResource("r5")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="物品1数量" type="Label" parent="滚动区/内容/每日签到/第2天"]
+offset_left = 105.0
+offset_top = 23.0
+offset_right = 143.0
+offset_bottom = 43.0
+text = "4"
+horizontal_alignment = 2
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="物品2格" type="TextureRect" parent="滚动区/内容/每日签到/第2天"]
+offset_left = 150.0
+offset_top = 2.0
+offset_right = 190.0
+offset_bottom = 42.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="物品2图" type="TextureRect" parent="滚动区/内容/每日签到/第2天"]
+offset_left = 150.0
+offset_top = 2.0
+offset_right = 190.0
+offset_bottom = 42.0
+texture = ExtResource("r6")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="物品3格" type="TextureRect" parent="滚动区/内容/每日签到/第2天"]
+offset_left = 195.0
+offset_top = 2.0
+offset_right = 235.0
+offset_bottom = 42.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="物品3图" type="TextureRect" parent="滚动区/内容/每日签到/第2天"]
+offset_left = 195.0
+offset_top = 2.0
+offset_right = 235.0
+offset_bottom = 42.0
+texture = ExtResource("r7")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="第3天" type="Control" parent="滚动区/内容/每日签到"]
+offset_left = 6.0
+offset_top = 109.0
+offset_right = 445.0
+offset_bottom = 151.0
+mouse_filter = 2
+
+[node name="分隔线" type="TextureRect" parent="滚动区/内容/每日签到/第3天"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 439.0
+offset_bottom = 2.0
+texture = ExtResource("r2")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="累计" type="Label" parent="滚动区/内容/每日签到/第3天"]
+offset_left = 10.0
+offset_top = 15.0
+offset_right = 71.0
+offset_bottom = 35.0
+text = "累计3天"
+horizontal_alignment = 0
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 0.5686274509803921, 0.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="领取" type="Button" parent="滚动区/内容/每日签到/第3天"]
+offset_left = 389.0
+offset_top = 10.0
+offset_right = 446.0
+offset_bottom = 32.0
+text = "未签到"
+disabled = false
+
+[node name="已领取" type="TextureRect" parent="滚动区/内容/每日签到/第3天"]
+offset_left = 389.0
+offset_top = 2.0
+offset_right = 444.0
+offset_bottom = 39.0
+texture = ExtResource("r3")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+
+[node name="物品1格" type="TextureRect" parent="滚动区/内容/每日签到/第3天"]
+offset_left = 105.0
+offset_top = 2.0
+offset_right = 145.0
+offset_bottom = 42.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="物品1图" type="TextureRect" parent="滚动区/内容/每日签到/第3天"]
+offset_left = 105.0
+offset_top = 2.0
+offset_right = 145.0
+offset_bottom = 42.0
+texture = ExtResource("r5")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="物品1数量" type="Label" parent="滚动区/内容/每日签到/第3天"]
+offset_left = 105.0
+offset_top = 23.0
+offset_right = 143.0
+offset_bottom = 43.0
+text = "5"
+horizontal_alignment = 2
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="物品2格" type="TextureRect" parent="滚动区/内容/每日签到/第3天"]
+offset_left = 150.0
+offset_top = 2.0
+offset_right = 190.0
+offset_bottom = 42.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="物品2图" type="TextureRect" parent="滚动区/内容/每日签到/第3天"]
+offset_left = 150.0
+offset_top = 2.0
+offset_right = 190.0
+offset_bottom = 42.0
+texture = ExtResource("r6")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="物品3格" type="TextureRect" parent="滚动区/内容/每日签到/第3天"]
+offset_left = 195.0
+offset_top = 2.0
+offset_right = 235.0
+offset_bottom = 42.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="物品3图" type="TextureRect" parent="滚动区/内容/每日签到/第3天"]
+offset_left = 195.0
+offset_top = 2.0
+offset_right = 235.0
+offset_bottom = 42.0
+texture = ExtResource("r8")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="物品3数量" type="Label" parent="滚动区/内容/每日签到/第3天"]
+offset_left = 195.0
+offset_top = 23.0
+offset_right = 233.0
+offset_bottom = 43.0
+text = "2"
+horizontal_alignment = 2
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="第4天" type="Control" parent="滚动区/内容/每日签到"]
+offset_left = 6.0
+offset_top = 151.0
+offset_right = 445.0
+offset_bottom = 193.0
+mouse_filter = 2
+
+[node name="分隔线" type="TextureRect" parent="滚动区/内容/每日签到/第4天"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 439.0
+offset_bottom = 2.0
+texture = ExtResource("r2")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="累计" type="Label" parent="滚动区/内容/每日签到/第4天"]
+offset_left = 10.0
+offset_top = 15.0
+offset_right = 71.0
+offset_bottom = 35.0
+text = "累计4天"
+horizontal_alignment = 0
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 0.5686274509803921, 0.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="领取" type="Button" parent="滚动区/内容/每日签到/第4天"]
+offset_left = 389.0
+offset_top = 10.0
+offset_right = 446.0
+offset_bottom = 32.0
+text = "未签到"
+disabled = false
+
+[node name="已领取" type="TextureRect" parent="滚动区/内容/每日签到/第4天"]
+offset_left = 389.0
+offset_top = 2.0
+offset_right = 444.0
+offset_bottom = 39.0
+texture = ExtResource("r3")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+
+[node name="物品1格" type="TextureRect" parent="滚动区/内容/每日签到/第4天"]
+offset_left = 105.0
+offset_top = 2.0
+offset_right = 145.0
+offset_bottom = 42.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="物品1图" type="TextureRect" parent="滚动区/内容/每日签到/第4天"]
+offset_left = 105.0
+offset_top = 2.0
+offset_right = 145.0
+offset_bottom = 42.0
+texture = ExtResource("r5")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="物品1数量" type="Label" parent="滚动区/内容/每日签到/第4天"]
+offset_left = 105.0
+offset_top = 23.0
+offset_right = 143.0
+offset_bottom = 43.0
+text = "6"
+horizontal_alignment = 2
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="物品2格" type="TextureRect" parent="滚动区/内容/每日签到/第4天"]
+offset_left = 150.0
+offset_top = 2.0
+offset_right = 190.0
+offset_bottom = 42.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="物品2图" type="TextureRect" parent="滚动区/内容/每日签到/第4天"]
+offset_left = 150.0
+offset_top = 2.0
+offset_right = 190.0
+offset_bottom = 42.0
+texture = ExtResource("r6")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="物品2数量" type="Label" parent="滚动区/内容/每日签到/第4天"]
+offset_left = 150.0
+offset_top = 23.0
+offset_right = 188.0
+offset_bottom = 43.0
+text = "2"
+horizontal_alignment = 2
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="物品3格" type="TextureRect" parent="滚动区/内容/每日签到/第4天"]
+offset_left = 195.0
+offset_top = 2.0
+offset_right = 235.0
+offset_bottom = 42.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="物品3图" type="TextureRect" parent="滚动区/内容/每日签到/第4天"]
+offset_left = 195.0
+offset_top = 2.0
+offset_right = 235.0
+offset_bottom = 42.0
+texture = ExtResource("r9")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="物品3数量" type="Label" parent="滚动区/内容/每日签到/第4天"]
+offset_left = 195.0
+offset_top = 23.0
+offset_right = 233.0
+offset_bottom = 43.0
+text = "2"
+horizontal_alignment = 2
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="物品4格" type="TextureRect" parent="滚动区/内容/每日签到/第4天"]
+offset_left = 240.0
+offset_top = 2.0
+offset_right = 280.0
+offset_bottom = 42.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="物品4图" type="TextureRect" parent="滚动区/内容/每日签到/第4天"]
+offset_left = 240.0
+offset_top = 2.0
+offset_right = 280.0
+offset_bottom = 42.0
+texture = ExtResource("r10")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="第5天" type="Control" parent="滚动区/内容/每日签到"]
+offset_left = 6.0
+offset_top = 193.0
+offset_right = 445.0
+offset_bottom = 235.0
+mouse_filter = 2
+
+[node name="分隔线" type="TextureRect" parent="滚动区/内容/每日签到/第5天"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 439.0
+offset_bottom = 2.0
+texture = ExtResource("r2")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="累计" type="Label" parent="滚动区/内容/每日签到/第5天"]
+offset_left = 10.0
+offset_top = 15.0
+offset_right = 71.0
+offset_bottom = 35.0
+text = "累计5天"
+horizontal_alignment = 0
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 0.5686274509803921, 0.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="领取" type="Button" parent="滚动区/内容/每日签到/第5天"]
+offset_left = 389.0
+offset_top = 10.0
+offset_right = 446.0
+offset_bottom = 32.0
+text = "未签到"
+disabled = false
+
+[node name="已领取" type="TextureRect" parent="滚动区/内容/每日签到/第5天"]
+offset_left = 389.0
+offset_top = 2.0
+offset_right = 444.0
+offset_bottom = 39.0
+texture = ExtResource("r3")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+
+[node name="物品1格" type="TextureRect" parent="滚动区/内容/每日签到/第5天"]
+offset_left = 105.0
+offset_top = 2.0
+offset_right = 145.0
+offset_bottom = 42.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="物品1图" type="TextureRect" parent="滚动区/内容/每日签到/第5天"]
+offset_left = 105.0
+offset_top = 2.0
+offset_right = 145.0
+offset_bottom = 42.0
+texture = ExtResource("r5")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="物品1数量" type="Label" parent="滚动区/内容/每日签到/第5天"]
+offset_left = 105.0
+offset_top = 23.0
+offset_right = 143.0
+offset_bottom = 43.0
+text = "7"
+horizontal_alignment = 2
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="物品2格" type="TextureRect" parent="滚动区/内容/每日签到/第5天"]
+offset_left = 150.0
+offset_top = 2.0
+offset_right = 190.0
+offset_bottom = 42.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="物品2图" type="TextureRect" parent="滚动区/内容/每日签到/第5天"]
+offset_left = 150.0
+offset_top = 2.0
+offset_right = 190.0
+offset_bottom = 42.0
+texture = ExtResource("r6")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="物品2数量" type="Label" parent="滚动区/内容/每日签到/第5天"]
+offset_left = 150.0
+offset_top = 23.0
+offset_right = 188.0
+offset_bottom = 43.0
+text = "2"
+horizontal_alignment = 2
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="物品3格" type="TextureRect" parent="滚动区/内容/每日签到/第5天"]
+offset_left = 195.0
+offset_top = 2.0
+offset_right = 235.0
+offset_bottom = 42.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="物品3图" type="TextureRect" parent="滚动区/内容/每日签到/第5天"]
+offset_left = 195.0
+offset_top = 2.0
+offset_right = 235.0
+offset_bottom = 42.0
+texture = ExtResource("r11")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="物品4格" type="TextureRect" parent="滚动区/内容/每日签到/第5天"]
+offset_left = 240.0
+offset_top = 2.0
+offset_right = 280.0
+offset_bottom = 42.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="物品4图" type="TextureRect" parent="滚动区/内容/每日签到/第5天"]
+offset_left = 240.0
+offset_top = 2.0
+offset_right = 280.0
+offset_bottom = 42.0
+texture = ExtResource("r12")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="物品4数量" type="Label" parent="滚动区/内容/每日签到/第5天"]
+offset_left = 240.0
+offset_top = 23.0
+offset_right = 278.0
+offset_bottom = 43.0
+text = "2"
+horizontal_alignment = 2
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="物品5格" type="TextureRect" parent="滚动区/内容/每日签到/第5天"]
+offset_left = 285.0
+offset_top = 2.0
+offset_right = 325.0
+offset_bottom = 42.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="物品5图" type="TextureRect" parent="滚动区/内容/每日签到/第5天"]
+offset_left = 285.0
+offset_top = 2.0
+offset_right = 325.0
+offset_bottom = 42.0
+texture = ExtResource("r13")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="物品5数量" type="Label" parent="滚动区/内容/每日签到/第5天"]
+offset_left = 285.0
+offset_top = 23.0
+offset_right = 323.0
+offset_bottom = 43.0
+text = "2"
+horizontal_alignment = 2
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="物品6格" type="TextureRect" parent="滚动区/内容/每日签到/第5天"]
+offset_left = 330.0
+offset_top = 2.0
+offset_right = 370.0
+offset_bottom = 42.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="物品6图" type="TextureRect" parent="滚动区/内容/每日签到/第5天"]
+offset_left = 330.0
+offset_top = 2.0
+offset_right = 370.0
+offset_bottom = 42.0
+texture = ExtResource("r14")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="第6天" type="Control" parent="滚动区/内容/每日签到"]
+offset_left = 6.0
+offset_top = 235.0
+offset_right = 445.0
+offset_bottom = 277.0
+mouse_filter = 2
+
+[node name="分隔线" type="TextureRect" parent="滚动区/内容/每日签到/第6天"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 439.0
+offset_bottom = 2.0
+texture = ExtResource("r2")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="累计" type="Label" parent="滚动区/内容/每日签到/第6天"]
+offset_left = 10.0
+offset_top = 15.0
+offset_right = 71.0
+offset_bottom = 35.0
+text = "累计6天"
+horizontal_alignment = 0
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 0.5686274509803921, 0.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="领取" type="Button" parent="滚动区/内容/每日签到/第6天"]
+offset_left = 389.0
+offset_top = 10.0
+offset_right = 446.0
+offset_bottom = 32.0
+text = "未签到"
+disabled = false
+
+[node name="已领取" type="TextureRect" parent="滚动区/内容/每日签到/第6天"]
+offset_left = 389.0
+offset_top = 2.0
+offset_right = 444.0
+offset_bottom = 39.0
+texture = ExtResource("r3")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+
+[node name="物品1格" type="TextureRect" parent="滚动区/内容/每日签到/第6天"]
+offset_left = 105.0
+offset_top = 2.0
+offset_right = 145.0
+offset_bottom = 42.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="物品1图" type="TextureRect" parent="滚动区/内容/每日签到/第6天"]
+offset_left = 105.0
+offset_top = 2.0
+offset_right = 145.0
+offset_bottom = 42.0
+texture = ExtResource("r5")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="物品1数量" type="Label" parent="滚动区/内容/每日签到/第6天"]
+offset_left = 105.0
+offset_top = 23.0
+offset_right = 143.0
+offset_bottom = 43.0
+text = "8"
+horizontal_alignment = 2
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="物品2格" type="TextureRect" parent="滚动区/内容/每日签到/第6天"]
+offset_left = 150.0
+offset_top = 2.0
+offset_right = 190.0
+offset_bottom = 42.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="物品2图" type="TextureRect" parent="滚动区/内容/每日签到/第6天"]
+offset_left = 150.0
+offset_top = 2.0
+offset_right = 190.0
+offset_bottom = 42.0
+texture = ExtResource("r6")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="物品2数量" type="Label" parent="滚动区/内容/每日签到/第6天"]
+offset_left = 150.0
+offset_top = 23.0
+offset_right = 188.0
+offset_bottom = 43.0
+text = "4"
+horizontal_alignment = 2
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="物品3格" type="TextureRect" parent="滚动区/内容/每日签到/第6天"]
+offset_left = 195.0
+offset_top = 2.0
+offset_right = 235.0
+offset_bottom = 42.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="物品3图" type="TextureRect" parent="滚动区/内容/每日签到/第6天"]
+offset_left = 195.0
+offset_top = 2.0
+offset_right = 235.0
+offset_bottom = 42.0
+texture = ExtResource("r15")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="物品4格" type="TextureRect" parent="滚动区/内容/每日签到/第6天"]
+offset_left = 240.0
+offset_top = 2.0
+offset_right = 280.0
+offset_bottom = 42.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="物品4图" type="TextureRect" parent="滚动区/内容/每日签到/第6天"]
+offset_left = 240.0
+offset_top = 2.0
+offset_right = 280.0
+offset_bottom = 42.0
+texture = ExtResource("r16")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="物品5格" type="TextureRect" parent="滚动区/内容/每日签到/第6天"]
+offset_left = 285.0
+offset_top = 2.0
+offset_right = 325.0
+offset_bottom = 42.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="物品5图" type="TextureRect" parent="滚动区/内容/每日签到/第6天"]
+offset_left = 285.0
+offset_top = 2.0
+offset_right = 325.0
+offset_bottom = 42.0
+texture = ExtResource("r17")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="物品6格" type="TextureRect" parent="滚动区/内容/每日签到/第6天"]
+offset_left = 330.0
+offset_top = 2.0
+offset_right = 370.0
+offset_bottom = 42.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="物品6图" type="TextureRect" parent="滚动区/内容/每日签到/第6天"]
+offset_left = 330.0
+offset_top = 2.0
+offset_right = 370.0
+offset_bottom = 42.0
+texture = ExtResource("r18")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="物品6数量" type="Label" parent="滚动区/内容/每日签到/第6天"]
+offset_left = 330.0
+offset_top = 23.0
+offset_right = 368.0
+offset_bottom = 43.0
+text = "2"
+horizontal_alignment = 2
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="第7天" type="Control" parent="滚动区/内容/每日签到"]
+offset_left = 6.0
+offset_top = 277.0
+offset_right = 445.0
+offset_bottom = 319.0
+mouse_filter = 2
+
+[node name="分隔线" type="TextureRect" parent="滚动区/内容/每日签到/第7天"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 439.0
+offset_bottom = 2.0
+texture = ExtResource("r2")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="累计" type="Label" parent="滚动区/内容/每日签到/第7天"]
+offset_left = 10.0
+offset_top = 15.0
+offset_right = 71.0
+offset_bottom = 35.0
+text = "累计7天"
+horizontal_alignment = 0
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 0.5686274509803921, 0.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="领取" type="Button" parent="滚动区/内容/每日签到/第7天"]
+offset_left = 389.0
+offset_top = 10.0
+offset_right = 446.0
+offset_bottom = 32.0
+text = "未签到"
+disabled = false
+
+[node name="已领取" type="TextureRect" parent="滚动区/内容/每日签到/第7天"]
+offset_left = 389.0
+offset_top = 2.0
+offset_right = 444.0
+offset_bottom = 39.0
+texture = ExtResource("r3")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+
+[node name="物品1格" type="TextureRect" parent="滚动区/内容/每日签到/第7天"]
+offset_left = 105.0
+offset_top = 2.0
+offset_right = 145.0
+offset_bottom = 42.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="物品1图" type="TextureRect" parent="滚动区/内容/每日签到/第7天"]
+offset_left = 105.0
+offset_top = 2.0
+offset_right = 145.0
+offset_bottom = 42.0
+texture = ExtResource("r5")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="物品1数量" type="Label" parent="滚动区/内容/每日签到/第7天"]
+offset_left = 105.0
+offset_top = 23.0
+offset_right = 143.0
+offset_bottom = 43.0
+text = "10"
+horizontal_alignment = 2
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="物品2格" type="TextureRect" parent="滚动区/内容/每日签到/第7天"]
+offset_left = 150.0
+offset_top = 2.0
+offset_right = 190.0
+offset_bottom = 42.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="物品2图" type="TextureRect" parent="滚动区/内容/每日签到/第7天"]
+offset_left = 150.0
+offset_top = 2.0
+offset_right = 190.0
+offset_bottom = 42.0
+texture = ExtResource("r6")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="物品2数量" type="Label" parent="滚动区/内容/每日签到/第7天"]
+offset_left = 150.0
+offset_top = 23.0
+offset_right = 188.0
+offset_bottom = 43.0
+text = "4"
+horizontal_alignment = 2
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="物品3格" type="TextureRect" parent="滚动区/内容/每日签到/第7天"]
+offset_left = 195.0
+offset_top = 2.0
+offset_right = 235.0
+offset_bottom = 42.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="物品3图" type="TextureRect" parent="滚动区/内容/每日签到/第7天"]
+offset_left = 195.0
+offset_top = 2.0
+offset_right = 235.0
+offset_bottom = 42.0
+texture = ExtResource("r19")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="物品4格" type="TextureRect" parent="滚动区/内容/每日签到/第7天"]
+offset_left = 240.0
+offset_top = 2.0
+offset_right = 280.0
+offset_bottom = 42.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="物品4图" type="TextureRect" parent="滚动区/内容/每日签到/第7天"]
+offset_left = 240.0
+offset_top = 2.0
+offset_right = 280.0
+offset_bottom = 42.0
+texture = ExtResource("r17")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="物品5格" type="TextureRect" parent="滚动区/内容/每日签到/第7天"]
+offset_left = 285.0
+offset_top = 2.0
+offset_right = 325.0
+offset_bottom = 42.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="物品5图" type="TextureRect" parent="滚动区/内容/每日签到/第7天"]
+offset_left = 285.0
+offset_top = 2.0
+offset_right = 325.0
+offset_bottom = 42.0
+texture = ExtResource("r20")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="物品6格" type="TextureRect" parent="滚动区/内容/每日签到/第7天"]
+offset_left = 330.0
+offset_top = 2.0
+offset_right = 370.0
+offset_bottom = 42.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="物品6图" type="TextureRect" parent="滚动区/内容/每日签到/第7天"]
+offset_left = 330.0
+offset_top = 2.0
+offset_right = 370.0
+offset_bottom = 42.0
+texture = ExtResource("r21")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="线上有礼" type="Control" parent="滚动区/内容"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 454.0
+offset_bottom = 300.0
+custom_minimum_size = Vector2(454.0, 300.0)
+mouse_filter = 2
+visible = false
+
+[node name="标题" type="RichTextLabel" parent="滚动区/内容/线上有礼"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 454.0
+offset_bottom = 40.0
+bbcode_enabled = true
+text = "[center]最全面轻鬆的休闲横版游戏--《火影世界》\n每周发放海量商城点券，畅享免费游戏大作[/center]"
+scroll_active = false
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.0, 1.0, 0.0, 1.0)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+theme_override_constants/shadow_outline_size = 0
+theme_override_constants/line_separation = 4
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/padding_left = 4
+theme_override_constants/padding_top = 0
+theme_override_constants/padding_right = 4
+theme_override_constants/padding_bottom = 0
+
+[node name="标题分隔线" type="TextureRect" parent="滚动区/内容/线上有礼"]
+offset_left = 0.0
+offset_top = 40.0
+offset_right = 454.0
+offset_bottom = 42.0
+texture = ExtResource("r2")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="奖项框" type="Panel" parent="滚动区/内容/线上有礼"]
+offset_left = 4.0
+offset_top = 62.0
+offset_right = 286.0
+offset_bottom = 317.0
+mouse_filter = 2
+
+[node name="奖项框左标" type="TextureRect" parent="滚动区/内容/线上有礼/奖项框"]
+offset_left = 15.0
+offset_top = -14.0
+offset_right = 42.0
+offset_bottom = 8.0
+texture = ExtResource("r22")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="奖项框右标" type="TextureRect" parent="滚动区/内容/线上有礼/奖项框"]
+offset_left = 240.0
+offset_top = -14.0
+offset_right = 267.0
+offset_bottom = 8.0
+texture = ExtResource("r23")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="奖项标题" type="Label" parent="滚动区/内容/线上有礼"]
+offset_left = 105.0
+offset_top = 46.0
+offset_right = 185.0
+offset_bottom = 66.0
+text = "每周礼金奖项"
+horizontal_alignment = 0
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 0.9411764705882353, 0.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="档0格" type="TextureRect" parent="滚动区/内容/线上有礼"]
+offset_left = 10.0
+offset_top = 81.0
+offset_right = 64.0
+offset_bottom = 135.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="档0图标" type="TextureRect" parent="滚动区/内容/线上有礼"]
+offset_left = 15.0
+offset_top = 86.0
+offset_right = 59.0
+offset_bottom = 130.0
+texture = ExtResource("r24")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="档0说明" type="RichTextLabel" parent="滚动区/内容/线上有礼"]
+offset_left = 79.0
+offset_top = 81.0
+offset_right = 279.0
+offset_bottom = 145.0
+bbcode_enabled = true
+text = "[font_size=12][color=#ff9100]本周累计线上时间达100小时\n[color=#fcc399]进度：[/color][color=#00ff00]\n奖励：【商城点券：900】[/color][/color][/font_size]"
+scroll_active = false
+mouse_filter = 2
+theme_override_colors/default_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+theme_override_constants/shadow_outline_size = 0
+theme_override_constants/line_separation = 4
+theme_override_font_sizes/normal_font_size = 12
+
+[node name="档0进度底" type="TextureRect" parent="滚动区/内容/线上有礼"]
+offset_left = 119.0
+offset_top = 103.0
+offset_right = 222.0
+offset_bottom = 118.0
+texture = ExtResource("r25")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="档0进度" type="TextureRect" parent="滚动区/内容/线上有礼"]
+offset_left = 119.0
+offset_top = 103.0
+offset_right = 222.0
+offset_bottom = 118.0
+texture = ExtResource("r26")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+
+[node name="档1分隔线" type="TextureRect" parent="滚动区/内容/线上有礼"]
+offset_left = 7.0
+offset_top = 150.0
+offset_right = 283.0
+offset_bottom = 152.0
+texture = ExtResource("r2")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="档1格" type="TextureRect" parent="滚动区/内容/线上有礼"]
+offset_left = 10.0
+offset_top = 165.0
+offset_right = 64.0
+offset_bottom = 219.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="档1图标" type="TextureRect" parent="滚动区/内容/线上有礼"]
+offset_left = 15.0
+offset_top = 170.0
+offset_right = 59.0
+offset_bottom = 214.0
+texture = ExtResource("r24")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="档1说明" type="RichTextLabel" parent="滚动区/内容/线上有礼"]
+offset_left = 79.0
+offset_top = 165.0
+offset_right = 279.0
+offset_bottom = 229.0
+bbcode_enabled = true
+text = "[font_size=12][color=#ff9100]本周累计线上时间达120小时\n[color=#fcc399]进度：[/color][color=#00ff00]\n奖励：【商城点券：1200】[/color][/color][/font_size]"
+scroll_active = false
+mouse_filter = 2
+theme_override_colors/default_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+theme_override_constants/shadow_outline_size = 0
+theme_override_constants/line_separation = 4
+theme_override_font_sizes/normal_font_size = 12
+
+[node name="档1进度底" type="TextureRect" parent="滚动区/内容/线上有礼"]
+offset_left = 119.0
+offset_top = 187.0
+offset_right = 222.0
+offset_bottom = 202.0
+texture = ExtResource("r25")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="档1进度" type="TextureRect" parent="滚动区/内容/线上有礼"]
+offset_left = 119.0
+offset_top = 187.0
+offset_right = 222.0
+offset_bottom = 202.0
+texture = ExtResource("r26")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+
+[node name="档2分隔线" type="TextureRect" parent="滚动区/内容/线上有礼"]
+offset_left = 7.0
+offset_top = 234.0
+offset_right = 283.0
+offset_bottom = 236.0
+texture = ExtResource("r2")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="档2格" type="TextureRect" parent="滚动区/内容/线上有礼"]
+offset_left = 10.0
+offset_top = 249.0
+offset_right = 64.0
+offset_bottom = 303.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="档2图标" type="TextureRect" parent="滚动区/内容/线上有礼"]
+offset_left = 15.0
+offset_top = 254.0
+offset_right = 59.0
+offset_bottom = 298.0
+texture = ExtResource("r24")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="档2说明" type="RichTextLabel" parent="滚动区/内容/线上有礼"]
+offset_left = 79.0
+offset_top = 249.0
+offset_right = 279.0
+offset_bottom = 313.0
+bbcode_enabled = true
+text = "[font_size=12][color=#ff9100]本周累计线上时间达140小时\n[color=#fcc399]进度：[/color][color=#00ff00]\n奖励：【商城点券：2000】[/color][/color][/font_size]"
+scroll_active = false
+mouse_filter = 2
+theme_override_colors/default_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+theme_override_constants/shadow_outline_size = 0
+theme_override_constants/line_separation = 4
+theme_override_font_sizes/normal_font_size = 12
+
+[node name="档2进度底" type="TextureRect" parent="滚动区/内容/线上有礼"]
+offset_left = 119.0
+offset_top = 271.0
+offset_right = 222.0
+offset_bottom = 286.0
+texture = ExtResource("r25")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="档2进度" type="TextureRect" parent="滚动区/内容/线上有礼"]
+offset_left = 119.0
+offset_top = 271.0
+offset_right = 222.0
+offset_bottom = 286.0
+texture = ExtResource("r26")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+
+[node name="点券说明" type="RichTextLabel" parent="滚动区/内容/线上有礼"]
+offset_left = 290.0
+offset_top = 44.0
+offset_right = 460.0
+offset_bottom = 170.0
+bbcode_enabled = true
+text = "[font_size=12][color=#00ff00]商城点券用于在商城中购买增值道具使用，与元宝的区别在于使用点券购买的道具将与您绑定[/color][/font_size]\n[font_size=12][color=#ff0000]每周一00:00分结算上周累计线上时间奖励，请下次结算前领走奖励，否则资料将会被覆盖，造成损失[/color][/font_size]"
+scroll_active = false
+mouse_filter = 2
+theme_override_colors/default_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+theme_override_constants/shadow_outline_size = 0
+theme_override_constants/line_separation = 2
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/padding_left = 0
+theme_override_constants/padding_top = 0
+theme_override_constants/padding_right = 0
+theme_override_constants/padding_bottom = 0
+
+[node name="上周分隔线" type="TextureRect" parent="滚动区/内容/线上有礼"]
+offset_left = 290.0
+offset_top = 170.0
+offset_right = 460.0
+offset_bottom = 172.0
+texture = ExtResource("r2")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="上周标题" type="Label" parent="滚动区/内容/线上有礼"]
+offset_left = 290.0
+offset_top = 172.0
+offset_right = 458.0
+offset_bottom = 192.0
+text = "您上周的线上时间累计："
+horizontal_alignment = 0
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 0.5686274509803921, 0.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="上周时长" type="LineEdit" parent="滚动区/内容/线上有礼"]
+offset_left = 290.0
+offset_top = 194.0
+offset_right = 380.0
+offset_bottom = 214.0
+text = ""
+editable = false
+alignment = 1
+mouse_filter = 0
+theme_override_font_sizes/font_size = 12
+
+[node name="领取上周" type="Button" parent="滚动区/内容/线上有礼"]
+offset_left = 382.0
+offset_top = 194.0
+offset_right = 443.0
+offset_bottom = 216.0
+text = "领取奖励"
+disabled = false
+
+[node name="上周获奖" type="RichTextLabel" parent="滚动区/内容/线上有礼"]
+offset_left = 290.0
+offset_top = 212.0
+offset_right = 458.0
+offset_bottom = 232.0
+bbcode_enabled = true
+text = "[font_size=12][color=#00ff00][上周获得0点券奖励][/color][/font_size][font_size=12][color=#1e90ff]未获奖[/color][/font_size]"
+scroll_active = false
+mouse_filter = 2
+theme_override_colors/default_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+theme_override_constants/shadow_outline_size = 0
+theme_override_constants/line_separation = 4
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/padding_left = 0
+theme_override_constants/padding_top = 0
+theme_override_constants/padding_right = 0
+theme_override_constants/padding_bottom = 0
+
+[node name="本周分隔线" type="TextureRect" parent="滚动区/内容/线上有礼"]
+offset_left = 290.0
+offset_top = 236.0
+offset_right = 460.0
+offset_bottom = 238.0
+texture = ExtResource("r2")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="本周标题" type="Label" parent="滚动区/内容/线上有礼"]
+offset_left = 290.0
+offset_top = 238.0
+offset_right = 458.0
+offset_bottom = 258.0
+text = "您本周的线上时间累计："
+horizontal_alignment = 0
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 0.5686274509803921, 0.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="本周时长" type="LineEdit" parent="滚动区/内容/线上有礼"]
+offset_left = 310.0
+offset_top = 260.0
+offset_right = 430.0
+offset_bottom = 280.0
+text = ""
+editable = false
+alignment = 1
+mouse_filter = 0
+theme_override_font_sizes/font_size = 12
+
+[node name="本周提示" type="Label" parent="滚动区/内容/线上有礼"]
+offset_left = 290.0
+offset_top = 278.0
+offset_right = 458.0
+offset_bottom = 298.0
+text = "本周奖励可在下周一后领取"
+horizontal_alignment = 0
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.0, 1.0, 0.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="首杀礼包" type="Control" parent="滚动区/内容"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 458.0
+offset_bottom = 286.0
+custom_minimum_size = Vector2(458.0, 286.0)
+mouse_filter = 2
+visible = false
+
+[node name="顶部线" type="TextureRect" parent="滚动区/内容/首杀礼包"]
+offset_left = 5.0
+offset_top = 1.0
+offset_right = 453.0
+offset_bottom = 3.0
+texture = ExtResource("r2")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="奖励框" type="Panel" parent="滚动区/内容/首杀礼包"]
+offset_left = 5.0
+offset_top = 21.0
+offset_right = 453.0
+offset_bottom = 294.0
+mouse_filter = 2
+
+[node name="奖励框左标" type="TextureRect" parent="滚动区/内容/首杀礼包/奖励框"]
+offset_left = 30.0
+offset_top = -14.0
+offset_right = 57.0
+offset_bottom = 8.0
+texture = ExtResource("r22")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="奖励框右标" type="TextureRect" parent="滚动区/内容/首杀礼包/奖励框"]
+offset_left = 391.0
+offset_top = -14.0
+offset_right = 418.0
+offset_bottom = 8.0
+texture = ExtResource("r23")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="奖励框标题" type="Label" parent="滚动区/内容/首杀礼包/奖励框"]
+offset_left = 0.0
+offset_top = -19.0
+offset_right = 448.0
+offset_bottom = 1.0
+text = "首杀礼包奖励"
+horizontal_alignment = 1
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 0.9411764705882353, 0.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="礼包标题" type="Label" parent="滚动区/内容/首杀礼包/奖励框"]
+offset_left = 8.0
+offset_top = 20.0
+offset_right = 108.0
+offset_bottom = 40.0
+text = "首杀礼包"
+horizontal_alignment = 0
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 0.9411764705882353, 0.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="礼包格格" type="TextureRect" parent="滚动区/内容/首杀礼包/奖励框"]
+offset_left = 8.0
+offset_top = 40.0
+offset_right = 48.0
+offset_bottom = 80.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="礼包格图" type="TextureRect" parent="滚动区/内容/首杀礼包/奖励框"]
+offset_left = 8.0
+offset_top = 40.0
+offset_right = 48.0
+offset_bottom = 80.0
+texture = ExtResource("r27")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="开启说明" type="Label" parent="滚动区/内容/首杀礼包/奖励框"]
+offset_left = 53.0
+offset_top = 60.0
+offset_right = 393.0
+offset_bottom = 80.0
+text = "开启首杀礼包可随机获得一项以下物品："
+horizontal_alignment = 0
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.0, 1.0, 0.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="奖励格区" type="Control" parent="滚动区/内容/首杀礼包/奖励框"]
+offset_left = 8.0
+offset_top = 88.0
+offset_right = 48.0
+offset_bottom = 128.0
+custom_minimum_size = Vector2(40.0, 40.0)
+mouse_filter = 2
+
+[node name="奖励1格" type="TextureRect" parent="滚动区/内容/首杀礼包/奖励框/奖励格区"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="奖励1图" type="TextureRect" parent="滚动区/内容/首杀礼包/奖励框/奖励格区"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("r27")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="奖励1数量" type="Label" parent="滚动区/内容/首杀礼包/奖励框/奖励格区"]
+offset_left = 0.0
+offset_top = 20.0
+offset_right = 40.0
+offset_bottom = 40.0
+text = "10"
+horizontal_alignment = 2
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="奖励说明" type="RichTextLabel" parent="滚动区/内容/首杀礼包/奖励框"]
+offset_left = 8.0
+offset_top = 133.0
+offset_right = 436.0
+offset_bottom = 161.0
+bbcode_enabled = true
+text = "击杀任意BOSS一只即可领取"
+scroll_active = false
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.11764705882352941, 0.5647058823529412, 1.0, 1.0)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+theme_override_constants/shadow_outline_size = 0
+theme_override_constants/line_separation = 4
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/padding_left = 4
+theme_override_constants/padding_top = 4
+theme_override_constants/padding_right = 4
+theme_override_constants/padding_bottom = 4
+
+[node name="领取" type="Button" parent="滚动区/内容/首杀礼包/奖励框"]
+offset_left = 193.5
+offset_top = 171.0
+offset_right = 254.5
+offset_bottom = 193.0
+text = "领取奖励"
+disabled = false
+
+[node name="活动奖励" type="Control" parent="滚动区/内容"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 435.0
+offset_bottom = 330.0
+custom_minimum_size = Vector2(435.0, 330.0)
+mouse_filter = 2
+visible = false
+
+[node name="暂无奖励" type="Label" parent="滚动区/内容/活动奖励"]
+offset_left = 177.0
+offset_top = 155.0
+offset_right = 298.0
+offset_bottom = 175.0
+text = "暂无奖励"
+horizontal_alignment = 1
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.11764705882352941, 0.5647058823529412, 1.0, 1.0)
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = SubResource("FontVariation_1")
+
+[node name="限时大奖" type="Control" parent="滚动区/内容"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 436.0
+offset_bottom = 1109.0
+custom_minimum_size = Vector2(436.0, 1109.0)
+mouse_filter = 2
+visible = false
+
+[node name="活动标题" type="RichTextLabel" parent="滚动区/内容/限时大奖"]
+offset_left = 8.0
+offset_top = 1.0
+offset_right = 288.0
+offset_bottom = 21.0
+bbcode_enabled = true
+text = "[right][color=#00ff00]您活动期间[color=#ffffff]（2026.07.1-2026.08.1）[/color]累计击杀BOSS数：[/color][/right]"
+scroll_active = false
+mouse_filter = 2
+theme_override_colors/default_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+theme_override_constants/shadow_outline_size = 0
+theme_override_constants/line_separation = 4
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/padding_left = 0
+theme_override_constants/padding_top = 0
+theme_override_constants/padding_right = 0
+theme_override_constants/padding_bottom = 0
+
+[node name="击杀数" type="LineEdit" parent="滚动区/内容/限时大奖"]
+offset_left = 288.0
+offset_top = 1.0
+offset_right = 348.0
+offset_bottom = 21.0
+text = ""
+editable = false
+alignment = 1
+mouse_filter = 0
+theme_override_font_sizes/font_size = 12
+
+[node name="单位" type="Label" parent="滚动区/内容/限时大奖"]
+offset_left = 348.0
+offset_top = 1.0
+offset_right = 388.0
+offset_bottom = 21.0
+text = "只"
+horizontal_alignment = 0
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.0, 1.0, 0.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="顶部线" type="TextureRect" parent="滚动区/内容/限时大奖"]
+offset_left = 5.0
+offset_top = 25.0
+offset_right = 431.0
+offset_bottom = 27.0
+texture = ExtResource("r2")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="累计框" type="Panel" parent="滚动区/内容/限时大奖"]
+offset_left = 5.0
+offset_top = 45.0
+offset_right = 431.0
+offset_bottom = 735.0
+mouse_filter = 2
+
+[node name="累计框左标" type="TextureRect" parent="滚动区/内容/限时大奖/累计框"]
+offset_left = 30.0
+offset_top = -14.0
+offset_right = 57.0
+offset_bottom = 8.0
+texture = ExtResource("r22")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="累计框右标" type="TextureRect" parent="滚动区/内容/限时大奖/累计框"]
+offset_left = 369.0
+offset_top = -14.0
+offset_right = 396.0
+offset_bottom = 8.0
+texture = ExtResource("r23")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="累计框标题" type="Label" parent="滚动区/内容/限时大奖/累计框"]
+offset_left = 0.0
+offset_top = -19.0
+offset_right = 426.0
+offset_bottom = 1.0
+text = "累计击杀奖励"
+horizontal_alignment = 1
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 0.9411764705882353, 0.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="额度框" type="Panel" parent="滚动区/内容/限时大奖"]
+offset_left = 5.0
+offset_top = 755.0
+offset_right = 431.0
+offset_bottom = 1070.0
+mouse_filter = 2
+
+[node name="额度框左标" type="TextureRect" parent="滚动区/内容/限时大奖/额度框"]
+offset_left = 30.0
+offset_top = -14.0
+offset_right = 57.0
+offset_bottom = 8.0
+texture = ExtResource("r22")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="额度框右标" type="TextureRect" parent="滚动区/内容/限时大奖/额度框"]
+offset_left = 369.0
+offset_top = -14.0
+offset_right = 396.0
+offset_bottom = 8.0
+texture = ExtResource("r23")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="额度框标题" type="Label" parent="滚动区/内容/限时大奖/额度框"]
+offset_left = 0.0
+offset_top = -19.0
+offset_right = 426.0
+offset_bottom = 1.0
+text = "额度击杀奖励"
+horizontal_alignment = 1
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 0.9411764705882353, 0.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="累计1" type="Control" parent="滚动区/内容/限时大奖"]
+offset_left = 13.0
+offset_top = 55.0
+offset_right = 426.0
+offset_bottom = 130.0
+mouse_filter = 2
+
+[node name="文案" type="RichTextLabel" parent="滚动区/内容/限时大奖/累计1"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 413.0
+offset_bottom = 20.0
+bbcode_enabled = true
+text = "[color=#00ff00]活动期间累计击杀[color=#ff0000]1[/color]只BOSS，获得以下物品[/color]"
+scroll_active = false
+mouse_filter = 2
+theme_override_colors/default_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+theme_override_constants/shadow_outline_size = 0
+theme_override_constants/line_separation = 4
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/padding_left = 0
+theme_override_constants/padding_top = 0
+theme_override_constants/padding_right = 0
+theme_override_constants/padding_bottom = 0
+
+[node name="奖励1格" type="TextureRect" parent="滚动区/内容/限时大奖/累计1"]
+offset_left = 0.0
+offset_top = 26.0
+offset_right = 40.0
+offset_bottom = 66.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="奖励1图" type="TextureRect" parent="滚动区/内容/限时大奖/累计1"]
+offset_left = 0.0
+offset_top = 26.0
+offset_right = 40.0
+offset_bottom = 66.0
+texture = ExtResource("r30")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="奖励1数量" type="Label" parent="滚动区/内容/限时大奖/累计1"]
+offset_left = 0.0
+offset_top = 46.0
+offset_right = 40.0
+offset_bottom = 66.0
+text = "1"
+horizontal_alignment = 2
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="奖励2格" type="TextureRect" parent="滚动区/内容/限时大奖/累计1"]
+offset_left = 45.0
+offset_top = 26.0
+offset_right = 85.0
+offset_bottom = 66.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="奖励2图" type="TextureRect" parent="滚动区/内容/限时大奖/累计1"]
+offset_left = 45.0
+offset_top = 26.0
+offset_right = 85.0
+offset_bottom = 66.0
+texture = ExtResource("r31")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="奖励2数量" type="Label" parent="滚动区/内容/限时大奖/累计1"]
+offset_left = 45.0
+offset_top = 46.0
+offset_right = 85.0
+offset_bottom = 66.0
+text = "1"
+horizontal_alignment = 2
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="奖励3格" type="TextureRect" parent="滚动区/内容/限时大奖/累计1"]
+offset_left = 90.0
+offset_top = 26.0
+offset_right = 130.0
+offset_bottom = 66.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="奖励3图" type="TextureRect" parent="滚动区/内容/限时大奖/累计1"]
+offset_left = 90.0
+offset_top = 26.0
+offset_right = 130.0
+offset_bottom = 66.0
+texture = ExtResource("r32")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="奖励3数量" type="Label" parent="滚动区/内容/限时大奖/累计1"]
+offset_left = 90.0
+offset_top = 46.0
+offset_right = 130.0
+offset_bottom = 66.0
+text = "1"
+horizontal_alignment = 2
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="领取" type="Button" parent="滚动区/内容/限时大奖/累计1"]
+offset_left = 330.0
+offset_top = 32.0
+offset_right = 391.0
+offset_bottom = 54.0
+text = "领取奖励"
+disabled = true
+
+[node name="累计2" type="Control" parent="滚动区/内容/限时大奖"]
+offset_left = 13.0
+offset_top = 130.0
+offset_right = 426.0
+offset_bottom = 205.0
+mouse_filter = 2
+
+[node name="文案" type="RichTextLabel" parent="滚动区/内容/限时大奖/累计2"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 413.0
+offset_bottom = 20.0
+bbcode_enabled = true
+text = "[color=#00ff00]活动期间累计击杀[color=#ff0000]2[/color]只BOSS，获得以下物品[/color]"
+scroll_active = false
+mouse_filter = 2
+theme_override_colors/default_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+theme_override_constants/shadow_outline_size = 0
+theme_override_constants/line_separation = 4
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/padding_left = 0
+theme_override_constants/padding_top = 0
+theme_override_constants/padding_right = 0
+theme_override_constants/padding_bottom = 0
+
+[node name="奖励1格" type="TextureRect" parent="滚动区/内容/限时大奖/累计2"]
+offset_left = 0.0
+offset_top = 26.0
+offset_right = 40.0
+offset_bottom = 66.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="奖励1图" type="TextureRect" parent="滚动区/内容/限时大奖/累计2"]
+offset_left = 0.0
+offset_top = 26.0
+offset_right = 40.0
+offset_bottom = 66.0
+texture = ExtResource("r33")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="奖励1数量" type="Label" parent="滚动区/内容/限时大奖/累计2"]
+offset_left = 0.0
+offset_top = 46.0
+offset_right = 40.0
+offset_bottom = 66.0
+text = "12"
+horizontal_alignment = 2
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="奖励2格" type="TextureRect" parent="滚动区/内容/限时大奖/累计2"]
+offset_left = 45.0
+offset_top = 26.0
+offset_right = 85.0
+offset_bottom = 66.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="奖励2图" type="TextureRect" parent="滚动区/内容/限时大奖/累计2"]
+offset_left = 45.0
+offset_top = 26.0
+offset_right = 85.0
+offset_bottom = 66.0
+texture = ExtResource("r34")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="奖励2数量" type="Label" parent="滚动区/内容/限时大奖/累计2"]
+offset_left = 45.0
+offset_top = 46.0
+offset_right = 85.0
+offset_bottom = 66.0
+text = "4"
+horizontal_alignment = 2
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="领取" type="Button" parent="滚动区/内容/限时大奖/累计2"]
+offset_left = 330.0
+offset_top = 32.0
+offset_right = 391.0
+offset_bottom = 54.0
+text = "领取奖励"
+disabled = true
+
+[node name="累计3" type="Control" parent="滚动区/内容/限时大奖"]
+offset_left = 13.0
+offset_top = 205.0
+offset_right = 426.0
+offset_bottom = 280.0
+mouse_filter = 2
+
+[node name="文案" type="RichTextLabel" parent="滚动区/内容/限时大奖/累计3"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 413.0
+offset_bottom = 20.0
+bbcode_enabled = true
+text = "[color=#00ff00]活动期间累计击杀[color=#ff0000]3[/color]只BOSS，获得以下物品[/color]"
+scroll_active = false
+mouse_filter = 2
+theme_override_colors/default_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+theme_override_constants/shadow_outline_size = 0
+theme_override_constants/line_separation = 4
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/padding_left = 0
+theme_override_constants/padding_top = 0
+theme_override_constants/padding_right = 0
+theme_override_constants/padding_bottom = 0
+
+[node name="奖励1格" type="TextureRect" parent="滚动区/内容/限时大奖/累计3"]
+offset_left = 0.0
+offset_top = 26.0
+offset_right = 40.0
+offset_bottom = 66.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="奖励1图" type="TextureRect" parent="滚动区/内容/限时大奖/累计3"]
+offset_left = 0.0
+offset_top = 26.0
+offset_right = 40.0
+offset_bottom = 66.0
+texture = ExtResource("r35")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="奖励1数量" type="Label" parent="滚动区/内容/限时大奖/累计3"]
+offset_left = 0.0
+offset_top = 46.0
+offset_right = 40.0
+offset_bottom = 66.0
+text = "3"
+horizontal_alignment = 2
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="奖励2格" type="TextureRect" parent="滚动区/内容/限时大奖/累计3"]
+offset_left = 45.0
+offset_top = 26.0
+offset_right = 85.0
+offset_bottom = 66.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="奖励2图" type="TextureRect" parent="滚动区/内容/限时大奖/累计3"]
+offset_left = 45.0
+offset_top = 26.0
+offset_right = 85.0
+offset_bottom = 66.0
+texture = ExtResource("r36")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="奖励2数量" type="Label" parent="滚动区/内容/限时大奖/累计3"]
+offset_left = 45.0
+offset_top = 46.0
+offset_right = 85.0
+offset_bottom = 66.0
+text = "3"
+horizontal_alignment = 2
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="奖励3格" type="TextureRect" parent="滚动区/内容/限时大奖/累计3"]
+offset_left = 90.0
+offset_top = 26.0
+offset_right = 130.0
+offset_bottom = 66.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="奖励3图" type="TextureRect" parent="滚动区/内容/限时大奖/累计3"]
+offset_left = 90.0
+offset_top = 26.0
+offset_right = 130.0
+offset_bottom = 66.0
+texture = ExtResource("r37")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="奖励3数量" type="Label" parent="滚动区/内容/限时大奖/累计3"]
+offset_left = 90.0
+offset_top = 46.0
+offset_right = 130.0
+offset_bottom = 66.0
+text = "3"
+horizontal_alignment = 2
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="奖励4格" type="TextureRect" parent="滚动区/内容/限时大奖/累计3"]
+offset_left = 135.0
+offset_top = 26.0
+offset_right = 175.0
+offset_bottom = 66.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="奖励4图" type="TextureRect" parent="滚动区/内容/限时大奖/累计3"]
+offset_left = 135.0
+offset_top = 26.0
+offset_right = 175.0
+offset_bottom = 66.0
+texture = ExtResource("r38")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="奖励4数量" type="Label" parent="滚动区/内容/限时大奖/累计3"]
+offset_left = 135.0
+offset_top = 46.0
+offset_right = 175.0
+offset_bottom = 66.0
+text = "3"
+horizontal_alignment = 2
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="领取" type="Button" parent="滚动区/内容/限时大奖/累计3"]
+offset_left = 330.0
+offset_top = 32.0
+offset_right = 391.0
+offset_bottom = 54.0
+text = "领取奖励"
+disabled = true
+
+[node name="累计4" type="Control" parent="滚动区/内容/限时大奖"]
+offset_left = 13.0
+offset_top = 280.0
+offset_right = 426.0
+offset_bottom = 355.0
+mouse_filter = 2
+
+[node name="文案" type="RichTextLabel" parent="滚动区/内容/限时大奖/累计4"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 413.0
+offset_bottom = 20.0
+bbcode_enabled = true
+text = "[color=#00ff00]活动期间累计击杀[color=#ff0000]5[/color]只BOSS，获得以下物品[/color]"
+scroll_active = false
+mouse_filter = 2
+theme_override_colors/default_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+theme_override_constants/shadow_outline_size = 0
+theme_override_constants/line_separation = 4
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/padding_left = 0
+theme_override_constants/padding_top = 0
+theme_override_constants/padding_right = 0
+theme_override_constants/padding_bottom = 0
+
+[node name="奖励1格" type="TextureRect" parent="滚动区/内容/限时大奖/累计4"]
+offset_left = 0.0
+offset_top = 26.0
+offset_right = 40.0
+offset_bottom = 66.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="奖励1图" type="TextureRect" parent="滚动区/内容/限时大奖/累计4"]
+offset_left = 0.0
+offset_top = 26.0
+offset_right = 40.0
+offset_bottom = 66.0
+texture = ExtResource("r39")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="奖励1数量" type="Label" parent="滚动区/内容/限时大奖/累计4"]
+offset_left = 0.0
+offset_top = 46.0
+offset_right = 40.0
+offset_bottom = 66.0
+text = "200"
+horizontal_alignment = 2
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="奖励2格" type="TextureRect" parent="滚动区/内容/限时大奖/累计4"]
+offset_left = 45.0
+offset_top = 26.0
+offset_right = 85.0
+offset_bottom = 66.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="奖励2图" type="TextureRect" parent="滚动区/内容/限时大奖/累计4"]
+offset_left = 45.0
+offset_top = 26.0
+offset_right = 85.0
+offset_bottom = 66.0
+texture = ExtResource("r17")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="奖励2数量" type="Label" parent="滚动区/内容/限时大奖/累计4"]
+offset_left = 45.0
+offset_top = 46.0
+offset_right = 85.0
+offset_bottom = 66.0
+text = "5"
+horizontal_alignment = 2
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="领取" type="Button" parent="滚动区/内容/限时大奖/累计4"]
+offset_left = 330.0
+offset_top = 32.0
+offset_right = 391.0
+offset_bottom = 54.0
+text = "领取奖励"
+disabled = true
+
+[node name="累计5" type="Control" parent="滚动区/内容/限时大奖"]
+offset_left = 13.0
+offset_top = 355.0
+offset_right = 426.0
+offset_bottom = 430.0
+mouse_filter = 2
+
+[node name="文案" type="RichTextLabel" parent="滚动区/内容/限时大奖/累计5"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 413.0
+offset_bottom = 20.0
+bbcode_enabled = true
+text = "[color=#00ff00]活动期间累计击杀[color=#ff0000]8[/color]只BOSS，获得以下物品[/color]"
+scroll_active = false
+mouse_filter = 2
+theme_override_colors/default_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+theme_override_constants/shadow_outline_size = 0
+theme_override_constants/line_separation = 4
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/padding_left = 0
+theme_override_constants/padding_top = 0
+theme_override_constants/padding_right = 0
+theme_override_constants/padding_bottom = 0
+
+[node name="奖励1格" type="TextureRect" parent="滚动区/内容/限时大奖/累计5"]
+offset_left = 0.0
+offset_top = 26.0
+offset_right = 40.0
+offset_bottom = 66.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="奖励1图" type="TextureRect" parent="滚动区/内容/限时大奖/累计5"]
+offset_left = 0.0
+offset_top = 26.0
+offset_right = 40.0
+offset_bottom = 66.0
+texture = ExtResource("r17")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="奖励1数量" type="Label" parent="滚动区/内容/限时大奖/累计5"]
+offset_left = 0.0
+offset_top = 46.0
+offset_right = 40.0
+offset_bottom = 66.0
+text = "2"
+horizontal_alignment = 2
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="奖励2格" type="TextureRect" parent="滚动区/内容/限时大奖/累计5"]
+offset_left = 45.0
+offset_top = 26.0
+offset_right = 85.0
+offset_bottom = 66.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="奖励2图" type="TextureRect" parent="滚动区/内容/限时大奖/累计5"]
+offset_left = 45.0
+offset_top = 26.0
+offset_right = 85.0
+offset_bottom = 66.0
+texture = ExtResource("r40")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="奖励2数量" type="Label" parent="滚动区/内容/限时大奖/累计5"]
+offset_left = 45.0
+offset_top = 46.0
+offset_right = 85.0
+offset_bottom = 66.0
+text = "1"
+horizontal_alignment = 2
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="奖励3格" type="TextureRect" parent="滚动区/内容/限时大奖/累计5"]
+offset_left = 90.0
+offset_top = 26.0
+offset_right = 130.0
+offset_bottom = 66.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="奖励3图" type="TextureRect" parent="滚动区/内容/限时大奖/累计5"]
+offset_left = 90.0
+offset_top = 26.0
+offset_right = 130.0
+offset_bottom = 66.0
+texture = ExtResource("r41")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="奖励3数量" type="Label" parent="滚动区/内容/限时大奖/累计5"]
+offset_left = 90.0
+offset_top = 46.0
+offset_right = 130.0
+offset_bottom = 66.0
+text = "99"
+horizontal_alignment = 2
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="领取" type="Button" parent="滚动区/内容/限时大奖/累计5"]
+offset_left = 330.0
+offset_top = 32.0
+offset_right = 391.0
+offset_bottom = 54.0
+text = "领取奖励"
+disabled = true
+
+[node name="累计6" type="Control" parent="滚动区/内容/限时大奖"]
+offset_left = 13.0
+offset_top = 430.0
+offset_right = 426.0
+offset_bottom = 505.0
+mouse_filter = 2
+
+[node name="文案" type="RichTextLabel" parent="滚动区/内容/限时大奖/累计6"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 413.0
+offset_bottom = 20.0
+bbcode_enabled = true
+text = "[color=#00ff00]活动期间累计击杀[color=#ff0000]12[/color]只BOSS，获得以下物品[/color]"
+scroll_active = false
+mouse_filter = 2
+theme_override_colors/default_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+theme_override_constants/shadow_outline_size = 0
+theme_override_constants/line_separation = 4
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/padding_left = 0
+theme_override_constants/padding_top = 0
+theme_override_constants/padding_right = 0
+theme_override_constants/padding_bottom = 0
+
+[node name="奖励1格" type="TextureRect" parent="滚动区/内容/限时大奖/累计6"]
+offset_left = 0.0
+offset_top = 26.0
+offset_right = 40.0
+offset_bottom = 66.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="奖励1图" type="TextureRect" parent="滚动区/内容/限时大奖/累计6"]
+offset_left = 0.0
+offset_top = 26.0
+offset_right = 40.0
+offset_bottom = 66.0
+texture = ExtResource("r42")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="奖励1数量" type="Label" parent="滚动区/内容/限时大奖/累计6"]
+offset_left = 0.0
+offset_top = 46.0
+offset_right = 40.0
+offset_bottom = 66.0
+text = "1"
+horizontal_alignment = 2
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="奖励2格" type="TextureRect" parent="滚动区/内容/限时大奖/累计6"]
+offset_left = 45.0
+offset_top = 26.0
+offset_right = 85.0
+offset_bottom = 66.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="奖励2图" type="TextureRect" parent="滚动区/内容/限时大奖/累计6"]
+offset_left = 45.0
+offset_top = 26.0
+offset_right = 85.0
+offset_bottom = 66.0
+texture = ExtResource("r43")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="奖励2数量" type="Label" parent="滚动区/内容/限时大奖/累计6"]
+offset_left = 45.0
+offset_top = 46.0
+offset_right = 85.0
+offset_bottom = 66.0
+text = "100"
+horizontal_alignment = 2
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="奖励3格" type="TextureRect" parent="滚动区/内容/限时大奖/累计6"]
+offset_left = 90.0
+offset_top = 26.0
+offset_right = 130.0
+offset_bottom = 66.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="奖励3图" type="TextureRect" parent="滚动区/内容/限时大奖/累计6"]
+offset_left = 90.0
+offset_top = 26.0
+offset_right = 130.0
+offset_bottom = 66.0
+texture = ExtResource("r44")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="奖励3数量" type="Label" parent="滚动区/内容/限时大奖/累计6"]
+offset_left = 90.0
+offset_top = 46.0
+offset_right = 130.0
+offset_bottom = 66.0
+text = "5"
+horizontal_alignment = 2
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="领取" type="Button" parent="滚动区/内容/限时大奖/累计6"]
+offset_left = 330.0
+offset_top = 32.0
+offset_right = 391.0
+offset_bottom = 54.0
+text = "领取奖励"
+disabled = true
+
+[node name="累计7" type="Control" parent="滚动区/内容/限时大奖"]
+offset_left = 13.0
+offset_top = 505.0
+offset_right = 426.0
+offset_bottom = 580.0
+mouse_filter = 2
+
+[node name="文案" type="RichTextLabel" parent="滚动区/内容/限时大奖/累计7"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 413.0
+offset_bottom = 20.0
+bbcode_enabled = true
+text = "[color=#00ff00]活动期间累计击杀[color=#ff0000]20[/color]只BOSS，获得以下物品[/color]"
+scroll_active = false
+mouse_filter = 2
+theme_override_colors/default_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+theme_override_constants/shadow_outline_size = 0
+theme_override_constants/line_separation = 4
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/padding_left = 0
+theme_override_constants/padding_top = 0
+theme_override_constants/padding_right = 0
+theme_override_constants/padding_bottom = 0
+
+[node name="奖励1格" type="TextureRect" parent="滚动区/内容/限时大奖/累计7"]
+offset_left = 0.0
+offset_top = 26.0
+offset_right = 40.0
+offset_bottom = 66.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="奖励1图" type="TextureRect" parent="滚动区/内容/限时大奖/累计7"]
+offset_left = 0.0
+offset_top = 26.0
+offset_right = 40.0
+offset_bottom = 66.0
+texture = ExtResource("r45")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="奖励1数量" type="Label" parent="滚动区/内容/限时大奖/累计7"]
+offset_left = 0.0
+offset_top = 46.0
+offset_right = 40.0
+offset_bottom = 66.0
+text = "3"
+horizontal_alignment = 2
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="奖励2格" type="TextureRect" parent="滚动区/内容/限时大奖/累计7"]
+offset_left = 45.0
+offset_top = 26.0
+offset_right = 85.0
+offset_bottom = 66.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="奖励2图" type="TextureRect" parent="滚动区/内容/限时大奖/累计7"]
+offset_left = 45.0
+offset_top = 26.0
+offset_right = 85.0
+offset_bottom = 66.0
+texture = ExtResource("r46")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="奖励2数量" type="Label" parent="滚动区/内容/限时大奖/累计7"]
+offset_left = 45.0
+offset_top = 46.0
+offset_right = 85.0
+offset_bottom = 66.0
+text = "3"
+horizontal_alignment = 2
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="奖励3格" type="TextureRect" parent="滚动区/内容/限时大奖/累计7"]
+offset_left = 90.0
+offset_top = 26.0
+offset_right = 130.0
+offset_bottom = 66.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="奖励3图" type="TextureRect" parent="滚动区/内容/限时大奖/累计7"]
+offset_left = 90.0
+offset_top = 26.0
+offset_right = 130.0
+offset_bottom = 66.0
+texture = ExtResource("r47")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="奖励3数量" type="Label" parent="滚动区/内容/限时大奖/累计7"]
+offset_left = 90.0
+offset_top = 46.0
+offset_right = 130.0
+offset_bottom = 66.0
+text = "5"
+horizontal_alignment = 2
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="领取" type="Button" parent="滚动区/内容/限时大奖/累计7"]
+offset_left = 330.0
+offset_top = 32.0
+offset_right = 391.0
+offset_bottom = 54.0
+text = "领取奖励"
+disabled = true
+
+[node name="累计8" type="Control" parent="滚动区/内容/限时大奖"]
+offset_left = 13.0
+offset_top = 580.0
+offset_right = 426.0
+offset_bottom = 655.0
+mouse_filter = 2
+
+[node name="文案" type="RichTextLabel" parent="滚动区/内容/限时大奖/累计8"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 413.0
+offset_bottom = 20.0
+bbcode_enabled = true
+text = "[color=#00ff00]活动期间累计击杀[color=#ff0000]30[/color]只BOSS，获得以下物品[/color]"
+scroll_active = false
+mouse_filter = 2
+theme_override_colors/default_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+theme_override_constants/shadow_outline_size = 0
+theme_override_constants/line_separation = 4
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/padding_left = 0
+theme_override_constants/padding_top = 0
+theme_override_constants/padding_right = 0
+theme_override_constants/padding_bottom = 0
+
+[node name="奖励1格" type="TextureRect" parent="滚动区/内容/限时大奖/累计8"]
+offset_left = 0.0
+offset_top = 26.0
+offset_right = 40.0
+offset_bottom = 66.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="奖励1图" type="TextureRect" parent="滚动区/内容/限时大奖/累计8"]
+offset_left = 0.0
+offset_top = 26.0
+offset_right = 40.0
+offset_bottom = 66.0
+texture = ExtResource("r48")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="奖励1数量" type="Label" parent="滚动区/内容/限时大奖/累计8"]
+offset_left = 0.0
+offset_top = 46.0
+offset_right = 40.0
+offset_bottom = 66.0
+text = "1"
+horizontal_alignment = 2
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="奖励2格" type="TextureRect" parent="滚动区/内容/限时大奖/累计8"]
+offset_left = 45.0
+offset_top = 26.0
+offset_right = 85.0
+offset_bottom = 66.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="奖励2图" type="TextureRect" parent="滚动区/内容/限时大奖/累计8"]
+offset_left = 45.0
+offset_top = 26.0
+offset_right = 85.0
+offset_bottom = 66.0
+texture = ExtResource("r49")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="奖励2数量" type="Label" parent="滚动区/内容/限时大奖/累计8"]
+offset_left = 45.0
+offset_top = 46.0
+offset_right = 85.0
+offset_bottom = 66.0
+text = "10"
+horizontal_alignment = 2
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="奖励3格" type="TextureRect" parent="滚动区/内容/限时大奖/累计8"]
+offset_left = 90.0
+offset_top = 26.0
+offset_right = 130.0
+offset_bottom = 66.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="奖励3图" type="TextureRect" parent="滚动区/内容/限时大奖/累计8"]
+offset_left = 90.0
+offset_top = 26.0
+offset_right = 130.0
+offset_bottom = 66.0
+texture = ExtResource("r50")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="奖励3数量" type="Label" parent="滚动区/内容/限时大奖/累计8"]
+offset_left = 90.0
+offset_top = 46.0
+offset_right = 130.0
+offset_bottom = 66.0
+text = "39"
+horizontal_alignment = 2
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="领取" type="Button" parent="滚动区/内容/限时大奖/累计8"]
+offset_left = 330.0
+offset_top = 32.0
+offset_right = 391.0
+offset_bottom = 54.0
+text = "领取奖励"
+disabled = true
+
+[node name="累计9" type="Control" parent="滚动区/内容/限时大奖"]
+offset_left = 13.0
+offset_top = 655.0
+offset_right = 426.0
+offset_bottom = 730.0
+mouse_filter = 2
+
+[node name="文案" type="RichTextLabel" parent="滚动区/内容/限时大奖/累计9"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 413.0
+offset_bottom = 20.0
+bbcode_enabled = true
+text = "[color=#00ff00]活动期间累计击杀[color=#ff0000]50[/color]只BOSS，获得以下物品[/color]"
+scroll_active = false
+mouse_filter = 2
+theme_override_colors/default_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+theme_override_constants/shadow_outline_size = 0
+theme_override_constants/line_separation = 4
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/padding_left = 0
+theme_override_constants/padding_top = 0
+theme_override_constants/padding_right = 0
+theme_override_constants/padding_bottom = 0
+
+[node name="奖励1格" type="TextureRect" parent="滚动区/内容/限时大奖/累计9"]
+offset_left = 0.0
+offset_top = 26.0
+offset_right = 40.0
+offset_bottom = 66.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="奖励1图" type="TextureRect" parent="滚动区/内容/限时大奖/累计9"]
+offset_left = 0.0
+offset_top = 26.0
+offset_right = 40.0
+offset_bottom = 66.0
+texture = ExtResource("r51")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="奖励1数量" type="Label" parent="滚动区/内容/限时大奖/累计9"]
+offset_left = 0.0
+offset_top = 46.0
+offset_right = 40.0
+offset_bottom = 66.0
+text = "1"
+horizontal_alignment = 2
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="奖励2格" type="TextureRect" parent="滚动区/内容/限时大奖/累计9"]
+offset_left = 45.0
+offset_top = 26.0
+offset_right = 85.0
+offset_bottom = 66.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="奖励2图" type="TextureRect" parent="滚动区/内容/限时大奖/累计9"]
+offset_left = 45.0
+offset_top = 26.0
+offset_right = 85.0
+offset_bottom = 66.0
+texture = ExtResource("r52")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="奖励2数量" type="Label" parent="滚动区/内容/限时大奖/累计9"]
+offset_left = 45.0
+offset_top = 46.0
+offset_right = 85.0
+offset_bottom = 66.0
+text = "1"
+horizontal_alignment = 2
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="领取" type="Button" parent="滚动区/内容/限时大奖/累计9"]
+offset_left = 330.0
+offset_top = 32.0
+offset_right = 391.0
+offset_bottom = 54.0
+text = "领取奖励"
+disabled = true
+
+[node name="额度1" type="Control" parent="滚动区/内容/限时大奖"]
+offset_left = 13.0
+offset_top = 765.0
+offset_right = 426.0
+offset_bottom = 840.0
+mouse_filter = 2
+
+[node name="文案" type="RichTextLabel" parent="滚动区/内容/限时大奖/额度1"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 413.0
+offset_bottom = 20.0
+bbcode_enabled = true
+text = "[color=#fff000]活动期间每击杀满[color=#ff0000]2[/color]只BOSS，可领取一次以下物品[/color]"
+scroll_active = false
+mouse_filter = 2
+theme_override_colors/default_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+theme_override_constants/shadow_outline_size = 0
+theme_override_constants/line_separation = 4
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/padding_left = 0
+theme_override_constants/padding_top = 0
+theme_override_constants/padding_right = 0
+theme_override_constants/padding_bottom = 0
+
+[node name="奖励1格" type="TextureRect" parent="滚动区/内容/限时大奖/额度1"]
+offset_left = 0.0
+offset_top = 26.0
+offset_right = 40.0
+offset_bottom = 66.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="奖励1图" type="TextureRect" parent="滚动区/内容/限时大奖/额度1"]
+offset_left = 0.0
+offset_top = 26.0
+offset_right = 40.0
+offset_bottom = 66.0
+texture = ExtResource("r34")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="奖励1数量" type="Label" parent="滚动区/内容/限时大奖/额度1"]
+offset_left = 0.0
+offset_top = 46.0
+offset_right = 40.0
+offset_bottom = 66.0
+text = "1"
+horizontal_alignment = 2
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="奖励2格" type="TextureRect" parent="滚动区/内容/限时大奖/额度1"]
+offset_left = 45.0
+offset_top = 26.0
+offset_right = 85.0
+offset_bottom = 66.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="奖励2图" type="TextureRect" parent="滚动区/内容/限时大奖/额度1"]
+offset_left = 45.0
+offset_top = 26.0
+offset_right = 85.0
+offset_bottom = 66.0
+texture = ExtResource("r53")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="奖励2数量" type="Label" parent="滚动区/内容/限时大奖/额度1"]
+offset_left = 45.0
+offset_top = 46.0
+offset_right = 85.0
+offset_bottom = 66.0
+text = "4"
+horizontal_alignment = 2
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="领取" type="Button" parent="滚动区/内容/限时大奖/额度1"]
+offset_left = 330.0
+offset_top = 26.0
+offset_right = 391.0
+offset_bottom = 48.0
+text = "领取奖励"
+disabled = true
+
+[node name="可领" type="Label" parent="滚动区/内容/限时大奖/额度1"]
+offset_left = 276.0
+offset_top = 50.0
+offset_right = 356.0
+offset_bottom = 70.0
+text = "可领"
+horizontal_alignment = 2
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.0, 1.0, 0.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="次数" type="LineEdit" parent="滚动区/内容/限时大奖/额度1"]
+offset_left = 356.0
+offset_top = 51.0
+offset_right = 392.0
+offset_bottom = 71.0
+text = ""
+editable = false
+alignment = 1
+mouse_filter = 0
+theme_override_font_sizes/font_size = 12
+
+[node name="次" type="Label" parent="滚动区/内容/限时大奖/额度1"]
+offset_left = 392.0
+offset_top = 50.0
+offset_right = 422.0
+offset_bottom = 70.0
+text = "次"
+horizontal_alignment = 0
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.0, 1.0, 0.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="额度2" type="Control" parent="滚动区/内容/限时大奖"]
+offset_left = 13.0
+offset_top = 840.0
+offset_right = 426.0
+offset_bottom = 915.0
+mouse_filter = 2
+
+[node name="文案" type="RichTextLabel" parent="滚动区/内容/限时大奖/额度2"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 413.0
+offset_bottom = 20.0
+bbcode_enabled = true
+text = "[color=#fff000]活动期间每击杀满[color=#ff0000]4[/color]只BOSS，可领取一次以下物品[/color]"
+scroll_active = false
+mouse_filter = 2
+theme_override_colors/default_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+theme_override_constants/shadow_outline_size = 0
+theme_override_constants/line_separation = 4
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/padding_left = 0
+theme_override_constants/padding_top = 0
+theme_override_constants/padding_right = 0
+theme_override_constants/padding_bottom = 0
+
+[node name="奖励1格" type="TextureRect" parent="滚动区/内容/限时大奖/额度2"]
+offset_left = 0.0
+offset_top = 26.0
+offset_right = 40.0
+offset_bottom = 66.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="奖励1图" type="TextureRect" parent="滚动区/内容/限时大奖/额度2"]
+offset_left = 0.0
+offset_top = 26.0
+offset_right = 40.0
+offset_bottom = 66.0
+texture = ExtResource("r54")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="奖励1数量" type="Label" parent="滚动区/内容/限时大奖/额度2"]
+offset_left = 0.0
+offset_top = 46.0
+offset_right = 40.0
+offset_bottom = 66.0
+text = "6"
+horizontal_alignment = 2
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="奖励2格" type="TextureRect" parent="滚动区/内容/限时大奖/额度2"]
+offset_left = 45.0
+offset_top = 26.0
+offset_right = 85.0
+offset_bottom = 66.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="奖励2图" type="TextureRect" parent="滚动区/内容/限时大奖/额度2"]
+offset_left = 45.0
+offset_top = 26.0
+offset_right = 85.0
+offset_bottom = 66.0
+texture = ExtResource("r44")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="奖励2数量" type="Label" parent="滚动区/内容/限时大奖/额度2"]
+offset_left = 45.0
+offset_top = 46.0
+offset_right = 85.0
+offset_bottom = 66.0
+text = "2"
+horizontal_alignment = 2
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="奖励3格" type="TextureRect" parent="滚动区/内容/限时大奖/额度2"]
+offset_left = 90.0
+offset_top = 26.0
+offset_right = 130.0
+offset_bottom = 66.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="奖励3图" type="TextureRect" parent="滚动区/内容/限时大奖/额度2"]
+offset_left = 90.0
+offset_top = 26.0
+offset_right = 130.0
+offset_bottom = 66.0
+texture = ExtResource("r47")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="奖励3数量" type="Label" parent="滚动区/内容/限时大奖/额度2"]
+offset_left = 90.0
+offset_top = 46.0
+offset_right = 130.0
+offset_bottom = 66.0
+text = "5"
+horizontal_alignment = 2
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="奖励4格" type="TextureRect" parent="滚动区/内容/限时大奖/额度2"]
+offset_left = 135.0
+offset_top = 26.0
+offset_right = 175.0
+offset_bottom = 66.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="奖励4图" type="TextureRect" parent="滚动区/内容/限时大奖/额度2"]
+offset_left = 135.0
+offset_top = 26.0
+offset_right = 175.0
+offset_bottom = 66.0
+texture = ExtResource("r55")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="奖励4数量" type="Label" parent="滚动区/内容/限时大奖/额度2"]
+offset_left = 135.0
+offset_top = 46.0
+offset_right = 175.0
+offset_bottom = 66.0
+text = "2"
+horizontal_alignment = 2
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="领取" type="Button" parent="滚动区/内容/限时大奖/额度2"]
+offset_left = 330.0
+offset_top = 26.0
+offset_right = 391.0
+offset_bottom = 48.0
+text = "领取奖励"
+disabled = true
+
+[node name="可领" type="Label" parent="滚动区/内容/限时大奖/额度2"]
+offset_left = 276.0
+offset_top = 50.0
+offset_right = 356.0
+offset_bottom = 70.0
+text = "可领"
+horizontal_alignment = 2
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.0, 1.0, 0.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="次数" type="LineEdit" parent="滚动区/内容/限时大奖/额度2"]
+offset_left = 356.0
+offset_top = 51.0
+offset_right = 392.0
+offset_bottom = 71.0
+text = ""
+editable = false
+alignment = 1
+mouse_filter = 0
+theme_override_font_sizes/font_size = 12
+
+[node name="次" type="Label" parent="滚动区/内容/限时大奖/额度2"]
+offset_left = 392.0
+offset_top = 50.0
+offset_right = 422.0
+offset_bottom = 70.0
+text = "次"
+horizontal_alignment = 0
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.0, 1.0, 0.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="额度3" type="Control" parent="滚动区/内容/限时大奖"]
+offset_left = 13.0
+offset_top = 915.0
+offset_right = 426.0
+offset_bottom = 990.0
+mouse_filter = 2
+
+[node name="文案" type="RichTextLabel" parent="滚动区/内容/限时大奖/额度3"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 413.0
+offset_bottom = 20.0
+bbcode_enabled = true
+text = "[color=#fff000]活动期间每击杀满[color=#ff0000]8[/color]只BOSS，可领取一次以下物品[/color]"
+scroll_active = false
+mouse_filter = 2
+theme_override_colors/default_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+theme_override_constants/shadow_outline_size = 0
+theme_override_constants/line_separation = 4
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/padding_left = 0
+theme_override_constants/padding_top = 0
+theme_override_constants/padding_right = 0
+theme_override_constants/padding_bottom = 0
+
+[node name="奖励1格" type="TextureRect" parent="滚动区/内容/限时大奖/额度3"]
+offset_left = 0.0
+offset_top = 26.0
+offset_right = 40.0
+offset_bottom = 66.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="奖励1图" type="TextureRect" parent="滚动区/内容/限时大奖/额度3"]
+offset_left = 0.0
+offset_top = 26.0
+offset_right = 40.0
+offset_bottom = 66.0
+texture = ExtResource("r56")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="奖励1数量" type="Label" parent="滚动区/内容/限时大奖/额度3"]
+offset_left = 0.0
+offset_top = 46.0
+offset_right = 40.0
+offset_bottom = 66.0
+text = "1"
+horizontal_alignment = 2
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="领取" type="Button" parent="滚动区/内容/限时大奖/额度3"]
+offset_left = 330.0
+offset_top = 26.0
+offset_right = 391.0
+offset_bottom = 48.0
+text = "领取奖励"
+disabled = true
+
+[node name="可领" type="Label" parent="滚动区/内容/限时大奖/额度3"]
+offset_left = 276.0
+offset_top = 50.0
+offset_right = 356.0
+offset_bottom = 70.0
+text = "可领"
+horizontal_alignment = 2
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.0, 1.0, 0.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="次数" type="LineEdit" parent="滚动区/内容/限时大奖/额度3"]
+offset_left = 356.0
+offset_top = 51.0
+offset_right = 392.0
+offset_bottom = 71.0
+text = ""
+editable = false
+alignment = 1
+mouse_filter = 0
+theme_override_font_sizes/font_size = 12
+
+[node name="次" type="Label" parent="滚动区/内容/限时大奖/额度3"]
+offset_left = 392.0
+offset_top = 50.0
+offset_right = 422.0
+offset_bottom = 70.0
+text = "次"
+horizontal_alignment = 0
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.0, 1.0, 0.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="额度4" type="Control" parent="滚动区/内容/限时大奖"]
+offset_left = 13.0
+offset_top = 990.0
+offset_right = 426.0
+offset_bottom = 1065.0
+mouse_filter = 2
+
+[node name="文案" type="RichTextLabel" parent="滚动区/内容/限时大奖/额度4"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 413.0
+offset_bottom = 20.0
+bbcode_enabled = true
+text = "[color=#fff000]活动期间每击杀满[color=#ff0000]16[/color]只BOSS，可领取一次以下物品[/color]"
+scroll_active = false
+mouse_filter = 2
+theme_override_colors/default_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+theme_override_constants/shadow_outline_size = 0
+theme_override_constants/line_separation = 4
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/padding_left = 0
+theme_override_constants/padding_top = 0
+theme_override_constants/padding_right = 0
+theme_override_constants/padding_bottom = 0
+
+[node name="奖励1格" type="TextureRect" parent="滚动区/内容/限时大奖/额度4"]
+offset_left = 0.0
+offset_top = 26.0
+offset_right = 40.0
+offset_bottom = 66.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="奖励1图" type="TextureRect" parent="滚动区/内容/限时大奖/额度4"]
+offset_left = 0.0
+offset_top = 26.0
+offset_right = 40.0
+offset_bottom = 66.0
+texture = ExtResource("r57")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="奖励1数量" type="Label" parent="滚动区/内容/限时大奖/额度4"]
+offset_left = 0.0
+offset_top = 46.0
+offset_right = 40.0
+offset_bottom = 66.0
+text = "1"
+horizontal_alignment = 2
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="奖励2格" type="TextureRect" parent="滚动区/内容/限时大奖/额度4"]
+offset_left = 45.0
+offset_top = 26.0
+offset_right = 85.0
+offset_bottom = 66.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="奖励2图" type="TextureRect" parent="滚动区/内容/限时大奖/额度4"]
+offset_left = 45.0
+offset_top = 26.0
+offset_right = 85.0
+offset_bottom = 66.0
+texture = ExtResource("r58")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="奖励2数量" type="Label" parent="滚动区/内容/限时大奖/额度4"]
+offset_left = 45.0
+offset_top = 46.0
+offset_right = 85.0
+offset_bottom = 66.0
+text = "50"
+horizontal_alignment = 2
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="奖励3格" type="TextureRect" parent="滚动区/内容/限时大奖/额度4"]
+offset_left = 90.0
+offset_top = 26.0
+offset_right = 130.0
+offset_bottom = 66.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="奖励3图" type="TextureRect" parent="滚动区/内容/限时大奖/额度4"]
+offset_left = 90.0
+offset_top = 26.0
+offset_right = 130.0
+offset_bottom = 66.0
+texture = ExtResource("r59")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="奖励3数量" type="Label" parent="滚动区/内容/限时大奖/额度4"]
+offset_left = 90.0
+offset_top = 46.0
+offset_right = 130.0
+offset_bottom = 66.0
+text = "50"
+horizontal_alignment = 2
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="领取" type="Button" parent="滚动区/内容/限时大奖/额度4"]
+offset_left = 330.0
+offset_top = 26.0
+offset_right = 391.0
+offset_bottom = 48.0
+text = "领取奖励"
+disabled = true
+
+[node name="可领" type="Label" parent="滚动区/内容/限时大奖/额度4"]
+offset_left = 276.0
+offset_top = 50.0
+offset_right = 356.0
+offset_bottom = 70.0
+text = "可领"
+horizontal_alignment = 2
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.0, 1.0, 0.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="次数" type="LineEdit" parent="滚动区/内容/限时大奖/额度4"]
+offset_left = 356.0
+offset_top = 51.0
+offset_right = 392.0
+offset_bottom = 71.0
+text = ""
+editable = false
+alignment = 1
+mouse_filter = 0
+theme_override_font_sizes/font_size = 12
+
+[node name="次" type="Label" parent="滚动区/内容/限时大奖/额度4"]
+offset_left = 392.0
+offset_top = 50.0
+offset_right = 422.0
+offset_bottom = 70.0
+text = "次"
+horizontal_alignment = 0
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.0, 1.0, 0.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="说明底" type="Panel" parent="滚动区/内容/限时大奖"]
+offset_left = 5.0
+offset_top = 1075.0
+offset_right = 431.0
+offset_bottom = 1105.0
+mouse_filter = 2
+
+[node name="活动说明" type="RichTextLabel" parent="滚动区/内容/限时大奖"]
+offset_left = 10.0
+offset_top = 1080.0
+offset_right = 426.0
+offset_bottom = 1100.0
+bbcode_enabled = true
+text = "BOSS击杀奖励"
+scroll_active = false
+mouse_filter = 2
+theme_override_colors/default_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+theme_override_constants/shadow_outline_size = 0
+theme_override_constants/line_separation = 4
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/padding_left = 5
+theme_override_constants/padding_top = 5
+theme_override_constants/padding_right = 5
+theme_override_constants/padding_bottom = 5
+
+[node name="说明下线" type="TextureRect" parent="滚动区/内容/限时大奖"]
+offset_left = 5.0
+offset_top = 1101.0
+offset_right = 431.0
+offset_bottom = 1103.0
+texture = ExtResource("r2")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="新服有礼" type="Control" parent="滚动区/内容"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 458.0
+offset_bottom = 229.0
+custom_minimum_size = Vector2(458.0, 229.0)
+mouse_filter = 2
+visible = false
+
+[node name="开服说明" type="RichTextLabel" parent="滚动区/内容/新服有礼"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 458.0
+offset_bottom = 60.0
+bbcode_enabled = true
+text = "[center]亲爱的玩家：本新服正式开启啦！火爆大礼送不停，精彩礼包连连看[/center]"
+scroll_active = false
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.0, 1.0, 0.0, 1.0)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+theme_override_constants/shadow_outline_size = 0
+theme_override_constants/line_separation = 2
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/padding_left = 4
+theme_override_constants/padding_top = 0
+theme_override_constants/padding_right = 4
+theme_override_constants/padding_bottom = 0
+
+[node name="顶部线" type="TextureRect" parent="滚动区/内容/新服有礼"]
+offset_left = 5.0
+offset_top = 40.0
+offset_right = 453.0
+offset_bottom = 42.0
+texture = ExtResource("r2")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="大奖框" type="Panel" parent="滚动区/内容/新服有礼"]
+offset_left = 5.0
+offset_top = 62.0
+offset_right = 453.0
+offset_bottom = 229.0
+mouse_filter = 2
+
+[node name="大奖框左标" type="TextureRect" parent="滚动区/内容/新服有礼/大奖框"]
+offset_left = 30.0
+offset_top = -14.0
+offset_right = 57.0
+offset_bottom = 8.0
+texture = ExtResource("r22")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="大奖框右标" type="TextureRect" parent="滚动区/内容/新服有礼/大奖框"]
+offset_left = 391.0
+offset_top = -14.0
+offset_right = 418.0
+offset_bottom = 8.0
+texture = ExtResource("r23")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="大奖框标题" type="Label" parent="滚动区/内容/新服有礼/大奖框"]
+offset_left = 0.0
+offset_top = -19.0
+offset_right = 448.0
+offset_bottom = 1.0
+text = "新服活动大奖"
+horizontal_alignment = 1
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 0.9411764705882353, 0.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="每档1" type="Control" parent="滚动区/内容/新服有礼/大奖框"]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 428.0
+offset_bottom = 96.0
+mouse_filter = 2
+
+[node name="标题" type="Label" parent="滚动区/内容/新服有礼/大奖框/每档1"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 420.0
+offset_bottom = 20.0
+text = "1.免费修炼灵符（小）"
+horizontal_alignment = 0
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 0.9411764705882353, 0.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="说明" type="Label" parent="滚动区/内容/新服有礼/大奖框/每档1"]
+offset_left = 12.0
+offset_top = 18.0
+offset_right = 412.0
+offset_bottom = 38.0
+text = "免费修炼灵符（小）"
+horizontal_alignment = 0
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.0, 1.0, 0.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="领取" type="Button" parent="滚动区/内容/新服有礼/大奖框/每档1"]
+offset_left = 358.0
+offset_top = 42.0
+offset_right = 419.0
+offset_bottom = 64.0
+text = "领取奖励"
+disabled = false
+
+[node name="物品0格" type="TextureRect" parent="滚动区/内容/新服有礼/大奖框/每档1"]
+offset_left = 12.0
+offset_top = 44.0
+offset_right = 52.0
+offset_bottom = 84.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="物品0图" type="TextureRect" parent="滚动区/内容/新服有礼/大奖框/每档1"]
+offset_left = 12.0
+offset_top = 44.0
+offset_right = 52.0
+offset_bottom = 84.0
+texture = ExtResource("r60")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="物品0数量" type="Label" parent="滚动区/内容/新服有礼/大奖框/每档1"]
+offset_left = 12.0
+offset_top = 64.0
+offset_right = 52.0
+offset_bottom = 84.0
+text = "1"
+horizontal_alignment = 2
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="排行2" type="Control" parent="滚动区/内容/新服有礼/大奖框"]
+offset_left = 8.0
+offset_top = 96.0
+offset_right = 428.0
+offset_bottom = 184.0
+mouse_filter = 2
+
+[node name="标题" type="Label" parent="滚动区/内容/新服有礼/大奖框/排行2"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 420.0
+offset_bottom = 20.0
+text = "2.免费精华露"
+horizontal_alignment = 0
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 0.9411764705882353, 0.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="说明" type="Label" parent="滚动区/内容/新服有礼/大奖框/排行2"]
+offset_left = 12.0
+offset_top = 18.0
+offset_right = 412.0
+offset_bottom = 38.0
+text = "免费精华露"
+horizontal_alignment = 0
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.0, 1.0, 0.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+[node name="领取" type="Button" parent="滚动区/内容/新服有礼/大奖框/排行2"]
+offset_left = 358.0
+offset_top = 42.0
+offset_right = 419.0
+offset_bottom = 64.0
+text = "领取奖励"
+disabled = false
+
+[node name="物品0格" type="TextureRect" parent="滚动区/内容/新服有礼/大奖框/排行2"]
+offset_left = 12.0
+offset_top = 44.0
+offset_right = 52.0
+offset_bottom = 84.0
+texture = ExtResource("r4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+
+[node name="物品0图" type="TextureRect" parent="滚动区/内容/新服有礼/大奖框/排行2"]
+offset_left = 12.0
+offset_top = 44.0
+offset_right = 52.0
+offset_bottom = 84.0
+texture = ExtResource("r47")
+expand_mode = 1
+stretch_mode = 3
+mouse_filter = 2
+
+[node name="物品0数量" type="Label" parent="滚动区/内容/新服有礼/大奖框/排行2"]
+offset_left = 12.0
+offset_top = 64.0
+offset_right = 52.0
+offset_bottom = 84.0
+text = "1"
+horizontal_alignment = 2
+vertical_alignment = 1
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1.0)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1.0)
+theme_override_colors/font_shadow_color = Color(0.0, 0.0, 0.0, 0.0)
+theme_override_constants/outline_size = 2
+
+; 悬停详情框：原版 `PrizeItemCell.showToolTip:153-156` / `SimpleItemCell.as:220` 在
+; 格子上挂 `MToolTipItem.createToolTip`。这里的四个子页（签到/首杀/限时/新服）的
+; 图标格在场景里是 `mouse_filter = 2`，运行期由 `活动窗口._接格子提示` 抬成 STOP 再接线。
+; 放在根节点下（不是 `滚动区/内容` 里）—— ScrollContainer 会裁剪子节点，提示框必须跑出可视区。
+[node name="物品提示框" parent="." instance=ExtResource("r61")]
+visible = false
+
+[node name="装备提示框" parent="." instance=ExtResource("r62")]
+visible = false

@@ -1,0 +1,150 @@
+[gd_scene load_steps=3 format=3]
+
+; 原版**一键出售弹窗** —— `com/mxw/uifl/controls/QuickSaleWindow.as`（173 行）。
+;
+; 入口：商店页「一键出售」`quickSaleBtn` → `ShopWindow2.as:569-572 onQuickSaleBtn`
+; → `UIMain2.as:2401-2407 showQuickSaleWindow()`（跨服战场里直接 return，本轮不接）
+; → `PopUpMananger.centerWindow(new QuickSaleWindow(), true)` —— 那个 `true` 就是遮罩。
+;
+; 版式出自 `QuickSaleWindow` 的 `super(410,300,true)` + `createChildren()`（`:92-134`），
+; 坐标是**窗局部**：
+;   background   MWindow_background  @ (0,0) 410x300
+;   _contentBg   MYellow_background  @ (CONTENT_GAP=8, 38) 410-16 x (300-68) = 394x232   ← `UIWindow.as:36-39/64-65`
+;   titleTextField                   y = 5（`MWindow.as:61` 的默认值，这个窗**没**改它）
+;   closeBtn     MWindowCloseBtnF    y = titleTextFieldY + 1 = 6（`MWindow.as:216`）
+;   _tipText     TextArea2 390x185   @ (10,40)  白字（`UIConfig.UI_WHITE`），htmlText = SHOP_QUICKSALE_TIPS
+;   _levelComb   MComboBox 90 宽     @ (15,175)
+;   _starComb    MComboBox 90 宽     @ (15+90+5=110,175)
+;   _colorComb   MComboBox 90 宽     @ (110+90+5=205,175)     ← x 是**按上一枚的宽加 5** 推出来的，`y` 三枚同 175
+;   _sellCanJuanCheckBox  MCheckBoxF @ (15,215) 360 宽
+;   _sellYuLianCheckBox   MCheckBoxF @ (15,242) 360 宽
+;   _OKBtn       MButtonF 61 宽（`btn_width_four`）@ (90, 300-22-5=273)   ← `_height - height - BORDER_GAP(5)`
+;   _cancleBtn   MButtonF 61 宽      @ (230,273)
+;
+; ⚠️ 说明框 10..225 **压在**三枚下拉（175）与残卷勾选（215）上面 —— 原版 `TextArea2` 是透明文本、
+;    不吃鼠标，所以能点。这里必须 `mouse_filter = 2`（IGNORE），否则下面两行控件全被它挡住。
+; ⚠️ 按钮 y=273 落在**黄底之外**（黄底只到 270）：这是原样，不是笔误 —— 与 `商城购买窗`
+;    那两枚（256 vs 黄底 255）同一条口径。
+;
+; 文案逐字出自 `en_US$message_properties.as`：TITTLE :3177、TIPS :2473、LEVELARR :1268、
+; STARARR :2727、COLORARR :200；勾选两行是 `createChildren:118-119` 里的**硬编码**（不走语言表）。
+
+[ext_resource type="Script" path="res://脚本/界面/组件/一键出售窗.gd" id="1_win"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/关闭按钮.png" id="2_close"]
+
+[node name="一键出售窗" type="Control"]
+visible = false
+offset_right = 410.0
+offset_bottom = 300.0
+mouse_filter = 2
+script = ExtResource("1_win")
+
+[node name="框" type="Panel" parent="."]
+offset_right = 410.0
+offset_bottom = 300.0
+mouse_filter = 2
+theme_type_variation = &"OrigWindowFrame"
+
+[node name="标题" type="Label" parent="."]
+offset_top = 5.0
+offset_right = 410.0
+offset_bottom = 23.0
+mouse_filter = 2
+theme_type_variation = &"OrigWindowTitle"
+horizontal_alignment = 1
+text = "一键出售装备"
+
+[node name="关闭" type="Button" parent="."]
+offset_left = 383.0
+offset_top = 6.0
+offset_right = 408.0
+offset_bottom = 30.0
+focus_mode = 0
+flat = true
+icon = ExtResource("2_close")
+
+[node name="黄底" type="Panel" parent="."]
+offset_left = 8.0
+offset_top = 38.0
+offset_right = 402.0
+offset_bottom = 270.0
+mouse_filter = 2
+theme_type_variation = &"OrigContentPanel"
+
+[node name="说明" type="RichTextLabel" parent="."]
+offset_left = 10.0
+offset_top = 40.0
+offset_right = 400.0
+offset_bottom = 225.0
+mouse_filter = 2
+bbcode_enabled = true
+scroll_active = false
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 12
+text = "[color=#ff9100]一键出售说明：[/color]
+1.镶嵌有宝石的装备不会被出售。
+2.强化+7以上的装备不会被出售。
+3.勾选玉链时，仅出售非紫色品质、且未镶嵌勾玉的玉链。
+4.勾选残卷时，会排除奥义忍术残卷。
+5.点击确定会出售背包内所有符合条件的物品。
+[color=#ff9100]一键出售设置：[/color]
+可同时出售装备、残卷、玉链"
+
+[node name="等级下拉" type="OptionButton" parent="."]
+offset_left = 15.0
+offset_top = 175.0
+offset_right = 105.0
+offset_bottom = 197.0
+focus_mode = 0
+theme_override_constants/arrow_margin = 0
+clip_text = true
+
+[node name="星级下拉" type="OptionButton" parent="."]
+offset_left = 110.0
+offset_top = 175.0
+offset_right = 200.0
+offset_bottom = 197.0
+focus_mode = 0
+theme_override_constants/arrow_margin = 0
+clip_text = true
+
+[node name="品质下拉" type="OptionButton" parent="."]
+offset_left = 205.0
+offset_top = 175.0
+offset_right = 295.0
+offset_bottom = 197.0
+focus_mode = 0
+theme_override_constants/arrow_margin = 0
+clip_text = true
+
+[node name="残卷勾选" type="CheckBox" parent="."]
+offset_left = 15.0
+offset_top = 215
+offset_right = 375.0
+offset_bottom = 234
+focus_mode = 0
+text = "一键出售残卷(排除奥义忍术残卷)"
+
+[node name="玉链勾选" type="CheckBox" parent="."]
+offset_left = 15.0
+offset_top = 242
+offset_right = 375.0
+offset_bottom = 261
+focus_mode = 0
+text = "一键出售玉链(排除紫色品质玉链)"
+
+[node name="确定" type="Button" parent="."]
+offset_left = 90.0
+offset_top = 273.0
+offset_right = 151.0
+offset_bottom = 295.0
+focus_mode = 0
+text = "确定"
+
+[node name="取消" type="Button" parent="."]
+offset_left = 230.0
+offset_top = 273.0
+offset_right = 291.0
+offset_bottom = 295.0
+focus_mode = 0
+text = "取消"

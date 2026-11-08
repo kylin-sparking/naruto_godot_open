@@ -1,0 +1,250 @@
+[gd_scene load_steps=7 format=3]
+
+; 原版「买卖数量窗」—— `com/mxw/uifl/controls/BuyAndSaleItemWindow.as`（324 行）。
+;
+; 它是 **NPC 商店唯一的成交通路**：点商品格（`ShopWindow2.onItemClick`，`:415-424`）或
+; 出售模式下点背包物品（`saleValidateFun` = `showBuyAndSaleWindow`，`:648`）都弹它，
+; 数量在这里选、确定才发协议（`onOk`，`:88-107`）。
+;
+; 版式出自 `init()`（`:183-300`），坐标是**窗局部**：
+;   background        MWindowSmall_background @ (0,0)  187x199   ← `:185-186`
+;   cellBackground    MYellow_background     @ (6,30)  175x137
+;   itemCellContainerBg MPane_background     @ (11,34) 165x103   ← ⚠️ 建了但**什么都没往里放**
+;   itemPriceBg ×3    MTextInput_background  @ (67,60)/(67,85) 103x21、@ (86,111) 66x21
+;   MIconGoldCoinF ×2                        @ (69,62) / (69,87)  17x17
+;   四个橙标签（`setTextFieldXYWH(x, y, w, h)` 内部写 `y = param3 - 2`，故落 35/59/84/110）
+;     物品 BUY_AND_SALE_ITEM (17,35,48,18) / 单价 …_SINGLE_PRICE (17,59,…) /
+;     总价 …_TOTAL_PRICE (17,84,…) / 数量 …_ITEM_COUNT (17,110,…)
+;   三个白值：物品名 (67,35,104,18)、单价 (86,60,82,18)、总价 (86,84,82,18)
+;   数量输入 TextField 居中 @ (88,112) 66x18，`restrict="0123456789"`、`maxChars=8`
+;   减 MMinusBtnF @ (67,112) 18x18；加 MPlusBtnF @ (153,112) 18x18
+;   确定 MButtonF 宽 btn_width_two=37 @ ((187-37*2-30)>>1=41, 199-22-5=172)
+;   取消 MButtonF 宽 37 @ (41+37+30=108, 172)
+;
+; ⚠️ 标题栏与关闭按钮另算：`setData`（`:152-155`）把 `titleTextField.y` 改成 **2**、
+;    `closeBtn.x = background.width - closeBtn.width - 4 = 158`、`closeBtn.y = 4`
+;    （都不是 MWindow 默认那套）。
+;
+; ⚠️ 这个窗**没有分隔线** —— 别跟 `BuyEqpWindow` 搞混：三条 `LineHPicF`（87/140/224）
+;    是购买窗（`biguan/BuyEqpWindow.as`）的，不在本窗。
+;
+; 定位于 `PopUpMananger.centerWindow(this, true)` → `positionWindwo`（`:122-144`）：
+;   x = round((960 - 窗宽) >> 1)、y = round((560 - 窗高) >> 1)，即**舞台居中**。
+;   我们的主窗口本身就在视口里居中，所以舞台居中 == 屏幕正中，由脚本用 global_position 摆。
+
+[ext_resource type="Script" path="res://脚本/界面/组件/买卖数量窗.gd" id="1_win"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/金币.png" id="2_coin"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/增加按钮.png" id="3_plus"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/减少按钮.png" id="4_minus"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/关闭按钮.png" id="5_close"]
+[ext_resource type="Script" path="res://脚本/界面/组件/原版三态钮.gd" id="9_三态"]
+
+[node name="买卖数量窗" type="Control"]
+visible = false
+offset_right = 187.0
+offset_bottom = 199.0
+mouse_filter = 2
+script = ExtResource("1_win")
+
+[node name="框" type="Panel" parent="."]
+offset_right = 187.0
+offset_bottom = 199.0
+mouse_filter = 2
+theme_type_variation = &"OrigSmallWindowFrame"
+
+[node name="标题" type="Label" parent="."]
+offset_top = 2.0
+offset_right = 187.0
+offset_bottom = 20.0
+mouse_filter = 2
+theme_type_variation = &"OrigWindowTitle"
+horizontal_alignment = 1
+text = "购买窗口"
+
+; `:154-155` —— `closeBtn.x = 187 - 25 - 4 = 158`、`y = 4`（不是 MWindow 的默认位）
+[node name="关闭" type="Button" parent="."]
+offset_left = 158.0
+offset_top = 4.0
+offset_right = 183.0
+offset_bottom = 28.0
+focus_mode = 0
+flat = true
+icon = ExtResource("5_close")
+script = ExtResource("9_三态")
+mouse_default_cursor_shape = 2
+
+[node name="黄底" type="Panel" parent="."]
+offset_left = 6.0
+offset_top = 30.0
+offset_right = 181.0
+offset_bottom = 167.0
+mouse_filter = 2
+theme_type_variation = &"OrigContentPanel"
+
+; `:194-198` —— 建了却没往里面放任何东西，原版就是这样（空面板），照建以保几何真值
+[node name="空面板" type="Panel" parent="."]
+offset_left = 11.0
+offset_top = 34.0
+offset_right = 176.0
+offset_bottom = 137.0
+mouse_filter = 2
+
+[node name="物品底" type="Panel" parent="."]
+offset_left = 67.0
+offset_top = 60.0
+offset_right = 170.0
+offset_bottom = 81.0
+mouse_filter = 2
+theme_type_variation = &"OrigInputBox"
+
+[node name="单价底" type="Panel" parent="."]
+offset_left = 67.0
+offset_top = 85.0
+offset_right = 170.0
+offset_bottom = 106.0
+mouse_filter = 2
+theme_type_variation = &"OrigInputBox"
+
+[node name="数量底" type="Panel" parent="."]
+offset_left = 86.0
+offset_top = 111.0
+offset_right = 152.0
+offset_bottom = 132.0
+mouse_filter = 2
+theme_type_variation = &"OrigInputBox"
+
+[node name="金币图标1" type="TextureRect" parent="."]
+offset_left = 69.0
+offset_top = 62.0
+offset_right = 86.0
+offset_bottom = 79.0
+mouse_filter = 2
+texture = ExtResource("2_coin")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="金币图标2" type="TextureRect" parent="."]
+offset_left = 69.0
+offset_top = 87.0
+offset_right = 86.0
+offset_bottom = 104.0
+mouse_filter = 2
+texture = ExtResource("2_coin")
+expand_mode = 1
+stretch_mode = 5
+
+; 四个橙标签：`UIConfig.UI_ORANGE` = 0xFF8B00
+[node name="物品标签" type="Label" parent="."]
+offset_left = 17.0
+offset_top = 35.0
+offset_right = 65.0
+offset_bottom = 53.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 0.545098, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "物 品："
+
+[node name="单价标签" type="Label" parent="."]
+offset_left = 17.0
+offset_top = 59.0
+offset_right = 65.0
+offset_bottom = 77.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 0.545098, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "单 价："
+
+[node name="总价标签" type="Label" parent="."]
+offset_left = 17.0
+offset_top = 84.0
+offset_right = 65.0
+offset_bottom = 102.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 0.545098, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "总 价："
+
+[node name="数量标签" type="Label" parent="."]
+offset_left = 17.0
+offset_top = 110.0
+offset_right = 65.0
+offset_bottom = 128.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 0.545098, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "数 量："
+
+[node name="物品名" type="Label" parent="."]
+offset_left = 67.0
+offset_top = 35.0
+offset_right = 171.0
+offset_bottom = 53.0
+mouse_filter = 2
+theme_override_font_sizes/font_size = 12
+text = "—"
+
+[node name="单价值" type="Label" parent="."]
+offset_left = 86.0
+offset_top = 60.0
+offset_right = 168.0
+offset_bottom = 78.0
+mouse_filter = 2
+theme_override_font_sizes/font_size = 12
+text = "0"
+
+[node name="总价值" type="Label" parent="."]
+offset_left = 86.0
+offset_top = 84.0
+offset_right = 168.0
+offset_bottom = 102.0
+mouse_filter = 2
+theme_override_font_sizes/font_size = 12
+text = "0"
+
+; `:251-258` —— 居中、白、`restrict="0123456789"`（Godot 没有 restrict，脚本里滤）
+[node name="数量" type="LineEdit" parent="."]
+offset_left = 88.0
+offset_top = 112.0
+offset_right = 154.0
+offset_bottom = 130.0
+theme_override_font_sizes/font_size = 12
+alignment = 1
+text = "1"
+
+[node name="减" type="Button" parent="."]
+offset_left = 67.0
+offset_top = 112.0
+offset_right = 85.0
+offset_bottom = 130.0
+focus_mode = 0
+theme_type_variation = &"OrigBlankButton"
+icon = ExtResource("4_minus")
+script = ExtResource("9_三态")
+mouse_default_cursor_shape = 2
+
+[node name="加" type="Button" parent="."]
+offset_left = 153.0
+offset_top = 112.0
+offset_right = 171.0
+offset_bottom = 130.0
+focus_mode = 0
+theme_type_variation = &"OrigBlankButton"
+icon = ExtResource("3_plus")
+script = ExtResource("9_三态")
+mouse_default_cursor_shape = 2
+
+[node name="确定" type="Button" parent="."]
+offset_left = 41.0
+offset_top = 172.0
+offset_right = 78.0
+offset_bottom = 194.0
+focus_mode = 0
+text = "确定"
+
+[node name="取消" type="Button" parent="."]
+offset_left = 108.0
+offset_top = 172.0
+offset_right = 145.0
+offset_bottom = 194.0
+focus_mode = 0
+text = "取消"

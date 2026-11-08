@@ -1,0 +1,62 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/忍术/忍术格底.png" id="1_bg"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/忍术/忍术格选中环.png" id="2_sel"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/忍术/忍术格可升级.png" id="3_plus"]
+
+[node name="忍术格" type="Button"]
+custom_minimum_size = Vector2(40, 40)
+offset_right = 40.0
+offset_bottom = 40.0
+focus_mode = 0
+flat = true
+mouse_default_cursor_shape = 2
+
+[node name="选中环" type="TextureRect" parent="."]
+visible = false
+offset_left = -3.0
+offset_top = -3.0
+offset_right = 43.0
+offset_bottom = 43.0
+mouse_filter = 2
+texture = ExtResource("2_sel")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="底" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+texture = ExtResource("1_bg")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="图标" type="TextureRect" parent="."]
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 37.0
+offset_bottom = 37.0
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="等级" type="Label" parent="."]
+offset_left = 2.0
+offset_top = 25.0
+offset_right = 52.0
+offset_bottom = 41.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 14
+text = "0"
+
+[node name="可升级" type="TextureRect" parent="."]
+visible = false
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 14.0
+offset_bottom = 14.0
+mouse_filter = 2
+texture = ExtResource("3_plus")
+expand_mode = 1
+stretch_mode = 5

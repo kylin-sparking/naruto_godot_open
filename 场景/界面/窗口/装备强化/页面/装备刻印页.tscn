@@ -1,0 +1,171 @@
+[gd_scene format=3]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/装备强化/箭头.png" id="箭头_tex"]
+
+; 原版「装备打造」窗的**刻印**页（`EquipKeYinPanel.as` 的 `createChildren()`，`:205-262`）。
+;
+; 面板 `setSize(350, **349**)` —— 从窗口 y=58 铺到窗口底边 407（同其余专属面板）。
+; 下面坐标是面板局部，面板自己在窗口 (5,58)。CONTENT_GAP=8、BORDER_GAP=5。
+;
+; 落点逐行算自 `createChildren()`：
+;   丢弃盒   (8, 8) 83x**175**（`ItemDropBox()`，**不带 resultCell**）
+;     盒内：dropBtn x=(83-61)/2=11 y=10；itemCell 居中 y=37；arrow y=77、高 175-77-10=88
+;   说明/注意 (99, 8) 244x180 的 VBox 里两段：各 244x76 / 244x94，verticalGap 5
+;   标签     (8, 187) 334x20
+;   材料框   (8, 211) 334x99
+;     ├ 材料一 (5,5) 60x64（`ItemCaiLiaoBox(true)`）
+;     └ 文本   (85, 0) **260x99** —— 注意是**一整块**，没有消耗/几率那两行、
+;              **也没有幸运符勾选与下拉**（刻印不吃幸运符）
+;   两个按钮：`_keYinBtn`.x = **50**（不是居中！）、`_helpBtn`.x = 350-宽-50；
+;            y 都是 `349 - 高 - BORDER_GAP`
+
+[node name="原版装备刻印页" type="Control"]
+custom_minimum_size = Vector2(350, 349)
+
+[node name="放入装备" type="Button" parent="."]
+offset_left = 19.0
+offset_top = 18.0
+offset_right = 80.0
+offset_bottom = 40.0
+text = "放入装备"
+
+[node name="装备格" type="TextureRect" parent="."]
+offset_left = 29.0
+offset_top = 45.0
+offset_right = 69.0
+offset_bottom = 85.0
+mouse_filter = 2
+
+[node name="装备图标" type="TextureRect" parent="装备格"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+mouse_filter = 2
+
+[node name="箭头" type="TextureRect" parent="."]
+offset_left = 42.0
+offset_top = 85.0
+offset_right = 56.0
+offset_bottom = 173.0
+mouse_filter = 2
+texture = ExtResource("箭头_tex")
+
+[node name="说明" type="RichTextLabel" parent="."]
+offset_left = 99.0
+offset_top = 8.0
+offset_right = 343.0
+offset_bottom = 84.0
+bbcode_enabled = true
+scroll_active = false
+mouse_filter = 2
+
+[node name="注意" type="RichTextLabel" parent="."]
+offset_left = 99.0
+offset_top = 89.0
+offset_right = 343.0
+offset_bottom = 183.0
+bbcode_enabled = true
+scroll_active = false
+mouse_filter = 2
+
+[node name="标签" type="Label" parent="."]
+offset_left = 8.0
+offset_top = 187.0
+offset_right = 342.0
+offset_bottom = 207.0
+horizontal_alignment = 1
+mouse_filter = 2
+
+[node name="材料框" type="Panel" parent="."]
+offset_left = 8.0
+offset_top = 211.0
+offset_right = 342.0
+offset_bottom = 310.0
+
+[node name="材料一" type="Control" parent="材料框"]
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 65.0
+offset_bottom = 69.0
+
+[node name="材料名" type="Label" parent="材料框/材料一"]
+offset_right = 60.0
+offset_bottom = 16.0
+horizontal_alignment = 1
+
+[node name="材料格" type="TextureRect" parent="材料框/材料一"]
+offset_left = 10.0
+offset_top = 20.0
+offset_right = 50.0
+offset_bottom = 60.0
+mouse_filter = 2
+
+[node name="材料图标" type="TextureRect" parent="材料框/材料一/材料格"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+mouse_filter = 2
+
+[node name="材料数量" type="Label" parent="材料框/材料一/材料格"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -22.0
+offset_top = -14.0
+offset_right = -1.0
+offset_bottom = -1.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="购买" type="Button" parent="材料框/材料一"]
+offset_left = 11.0
+offset_top = 63.0
+offset_right = 48.0
+offset_bottom = 85.0
+text = "购买"
+
+; `_textField`：**260x99 一整块**（不是消耗/几率那两行，也没有幸运符控件）
+[node name="消耗文本" type="RichTextLabel" parent="材料框"]
+offset_left = 85.0
+offset_top = 0.0
+offset_right = 345.0
+offset_bottom = 99.0
+bbcode_enabled = true
+scroll_active = false
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 12
+; `_keYinBtn`：x = **50**（AS3 写死的，不是居中）
+[node name="开始刻印" type="Button" parent="."]
+offset_left = 50.0
+offset_top = 322.0
+offset_right = 111.0
+offset_bottom = 344.0
+text = "开始刻印"
+
+; `_helpBtn`：x = 350 - 宽 - 50
+[node name="刻印图解" type="Button" parent="."]
+offset_left = 239.0
+offset_top = 322.0
+offset_right = 300.0
+offset_bottom = 344.0
+text = "刻印图解"

@@ -1,0 +1,120 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/人物/角色/装备格耐久红框.png" id="1_dura"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/人物/角色/装备格破碎角标.png" id="2_broken"]
+[ext_resource type="Script" path="res://脚本/界面/组件/装备格.gd" id="3_cell"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/人物/角色/强化底.png" id="4_str"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/人物/角色/蓝钻.png" id="5_blue"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/人物/角色/金钻.png" id="6_gold"]
+[ext_resource type="Script" path="res://脚本/界面/组件/品质流光.gd" id="7_glow"]
+
+[node name="装备格" type="Button"]
+custom_minimum_size = Vector2(40, 40)
+offset_right = 40.0
+offset_bottom = 40.0
+focus_mode = 0
+flat = false
+; 原版 MCell.drawIcon（MCell.as:68-69）：图标按原尺寸居中摆放。
+;   icon.x = (width - icon.width) >> 1;  icon.y = (height - icon.height) >> 1
+; 装备图标是 34x34，所以在 40x40 的格子里落在 (3,3)、四周留 3px。
+; 不能用 expand_icon = true —— Godot 会把图标拉伸填满整个按钮（34→40），
+; 实机看就是图标顶满/吃掉边框（与 §3.10.10 ① 物品格那次同一个坑）。
+expand_icon = false
+icon_alignment = 1
+theme_type_variation = &"OrigItemSlotButton"
+script = ExtResource("3_cell")
+
+; 耐久归零的红框。原版 `EquipmentWindowCell.as:171`：
+;   this._maskMc.visible = value.endure == 0 ? true : false;
+; `_maskMc` 是符号 79（40x40 纯红），摆放时带 alphaMultTerm=51（≈0.2），
+; 所以是"底图透出来 + 20% 红"，不是纯红覆盖。这一层在图标**上面**，
+; 无装备时由渲染代码隐藏。
+[node name="耐久红框" type="TextureRect" parent="."]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+texture = ExtResource("1_dura")
+
+; 破碎角标。原版 `EquipmentWindowCell.as:144-151`：`value.crashTime > 0` 时
+; 叠一张 `UISwf_Text_EqpBrokenF`（不在 MainLib 里，见 读符号时间轴.py --源 UISwf_Text），
+; 摆在 (0,0) —— 25x16，落在格子左上角。
+[node name="破碎角标" type="TextureRect" parent="."]
+visible = false
+offset_right = 25.0
+offset_bottom = 16.0
+mouse_filter = 2
+texture = ExtResource("2_broken")
+
+; 资质框。原版 `EquipmentWindowCell.as:130-136`：`createAptitudeIconByItem(value)`，
+; 摆在 (-1,-1)；框本身是 42x42（比格子大一圈，正好把边框包进去）。
+; 资质 1(白) 不显示；玉莲/徽章/宠物时装一律不显示（`shouldHideAptitudeIcon` :89-92，本组件不判）。
+; 贴图由 `可拖拽格.设置品质()` 按 `数据/装备品质.json` 运行时填 —— 哪档配哪张图是数据，不是版式。
+[node name="资质框" type="TextureRect" parent="."]
+visible = false
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 41.0
+offset_bottom = 41.0
+mouse_filter = 2
+
+; 紫/橙两档（和灵气装）的呼吸流光。原版 `EquipmentWindowCell.as:138-143`：
+;   `equipAnimationF = new EquipAnimationF(); x = y = 3; addChild(...)`
+; 素材原始导出是 117x115，但 49 帧可见像素只有中间 35x35，已按包围盒裁成 35x35，
+; 于是注册点正好是贴图左上角 —— 原版的 (3,3) 就是**图标左上角**（34x34 图标在 40x40 格子里居中 = (3,3)），
+; 35x35 的环正好套住图标。依据：`KeyboardCell.setDefaultSkill :163` 的 `(width-34)>>1` 同款公式。
+; AnimatedSprite2D 原点在**中心** → position = (3 + 35/2, 3 + 35/2) = (20.5, 20.5)。
+; 排在资质框之后、强化角标之前，与原版 addChild 顺序一致（框 < 流光 < 强化/镶嵌）。
+; 帧集（49 帧、14fps、第 49 帧跳回 17 循环）由 `装备品质.挂流光` 现挂，不进场景。
+[node name="流光" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(20.5, 20.5)
+script = ExtResource("7_glow")
+
+; 强化角标。原版 `EquipmentWindowCell.as:152-160`：`EquipStrengthIconF` 摆在 (-2,26)，
+; 该符号 16x16，内部子件是 `background@(0,0)`、`tf@(2,2)`、`blueDiamond/goldDiamond@(2,3)`。
+; 换算到格子内：底 (-2,26) 16x16、数字 (0,28) 12x13、钻石 (0,29) 12x10。
+; ⚠️ 底/数字/钻石的左边都**伸到格子外**（原版就允许溢出），不要按格子裁剪。
+; 可见条件（`EquipStrengthIcon.setStrengthInfo` :45-63，格子传的 param2 = false）：
+;   强化等级 > 0 才显示底；等级 >= 10 显示蓝钻，否则显示数字。
+[node name="强化底" type="TextureRect" parent="."]
+visible = false
+offset_left = -2.0
+offset_top = 26.0
+offset_right = 14.0
+offset_bottom = 42.0
+mouse_filter = 2
+texture = ExtResource("4_str")
+
+[node name="强化数字" type="Label" parent="."]
+visible = false
+offset_left = 0.0
+offset_top = 28.0
+offset_right = 12.0
+offset_bottom = 41.0
+mouse_filter = 2
+theme_override_font_sizes/font_size = 9
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+[node name="蓝钻" type="TextureRect" parent="."]
+visible = false
+offset_left = 0.0
+offset_top = 29.0
+offset_right = 12.0
+offset_bottom = 39.0
+mouse_filter = 2
+texture = ExtResource("5_blue")
+
+; 镶嵌金钻。原版 `EquipmentWindowCell.as:161-168`：`EquipStrengthIconF` 摆在 (26,26)，
+; 金色子件 `goldDiamond@(2,3)` 12x10 ⇒ 格子内 (28,29)-(40,39)，仍在 40x40 格内。
+; 条件是 `EquipStrengthIcon.isShowGoldIcon(inlayList)`（:25-43）——
+; **至少 5 个镶嵌孔且每个宝石等级都 >= 6**。
+[node name="镶嵌金钻" type="TextureRect" parent="."]
+visible = false
+offset_left = 28.0
+offset_top = 29.0
+offset_right = 40.0
+offset_bottom = 39.0
+mouse_filter = 2
+texture = ExtResource("6_gold")

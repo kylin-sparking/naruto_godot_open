@@ -1,0 +1,407 @@
+[gd_scene load_steps=20 format=3]
+
+[ext_resource type="Script" path="res://脚本/界面/窗口/好友/好友选人窗.gd" id="1_script"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/小窗口边框.png" id="t1"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/关闭按钮.png" id="t2"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/内容面板.png" id="t3"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/子面板.png" id="t4"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/输入框.png" id="t5"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/横向分隔线.png" id="t6"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/横向分隔线.png" id="t7"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/好友/表头竖分隔.png" id="t8"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/好友/表头竖分隔.png" id="t9"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/选中条1.png" id="t10"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/上一页.png" id="t11"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/下一页.png" id="t12"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/好友/钮底37.png" id="t13"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/好友/钮底61.png" id="t14"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/好友/钮底61.png" id="t15"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/好友/钮底61.png" id="t16"]
+
+[ext_resource type="Script" path="res://脚本/界面/组件/原版三态钮.gd" id="9_三态"]
+
+
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty1"]
+
+
+
+[node name="好友选人窗" type="Control"]
+custom_minimum_size = Vector2(292, 279)
+script = ExtResource("1_script")
+窗名 = "好友选人窗"
+
+[node name="窗底" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 292.0
+offset_bottom = 279.0
+mouse_filter = 2
+texture = ExtResource("t1")
+patch_margin_left = 50
+patch_margin_top = 26
+patch_margin_right = 52
+patch_margin_bottom = 18
+
+[node name="标题" type="Label" parent="."]
+layout_mode = 0
+offset_left = 0.0
+offset_top = 3.0
+offset_right = 292.0
+offset_bottom = 21.0
+mouse_filter = 2
+text = ""
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_colors/font_color = Color(0.9882352941176471, 0.9568627450980393, 0.611764705882353, 1)
+
+[node name="关钮" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 261.0
+offset_top = 4.0
+offset_right = 286.0
+offset_bottom = 28.0
+focus_mode = 0
+ignore_texture_size = true
+texture_normal = ExtResource("t2")
+metadata/act = "关闭"
+script = ExtResource("9_三态")
+mouse_default_cursor_shape = 2
+
+[node name="内容底" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 30.0
+offset_right = 286.0
+offset_bottom = 245.0
+mouse_filter = 2
+texture = ExtResource("t3")
+patch_margin_left = 11
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 11
+
+[node name="列表底" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 83.0
+offset_right = 280.0
+offset_bottom = 225.0
+mouse_filter = 2
+texture = ExtResource("t4")
+patch_margin_left = 8
+patch_margin_top = 7
+patch_margin_right = 7
+patch_margin_bottom = 7
+
+[node name="输入框底" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 36.0
+offset_right = 190.0
+offset_bottom = 57.0
+mouse_filter = 2
+texture = ExtResource("t5")
+patch_margin_left = 6
+patch_margin_top = 5
+patch_margin_right = 7
+patch_margin_bottom = 6
+
+[node name="横线一" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 60.0
+offset_right = 266.0
+offset_bottom = 62.0
+mouse_filter = 2
+texture = ExtResource("t6")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="横线二" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 104.0
+offset_right = 266.0
+offset_bottom = 106.0
+mouse_filter = 2
+texture = ExtResource("t7")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="竖分隔一" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 148.0
+offset_top = 84.0
+offset_right = 150.0
+offset_bottom = 104.0
+mouse_filter = 2
+texture = ExtResource("t8")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="竖分隔二" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 204.0
+offset_top = 84.0
+offset_right = 206.0
+offset_bottom = 104.0
+mouse_filter = 2
+texture = ExtResource("t9")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="选中条" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 108.0
+offset_right = 277.0
+offset_bottom = 127.0
+mouse_filter = 2
+texture = ExtResource("t10")
+patch_margin_left = 7
+patch_margin_top = 5
+patch_margin_right = 8
+patch_margin_bottom = 6
+
+[node name="名标签" type="Label" parent="."]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 36.0
+offset_right = 89.0
+offset_bottom = 54.0
+mouse_filter = 2
+horizontal_alignment = 2
+vertical_alignment = 1
+text = "玩家名"
+
+[node name="名输入" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 91.0
+offset_top = 37.0
+offset_right = 190.0
+offset_bottom = 55.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty1")
+theme_override_styles/focus = SubResource("StyleBoxEmpty1")
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1)
+max_length = 20
+
+[node name="结果标签" type="Label" parent="."]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 64.0
+offset_right = 274.0
+offset_bottom = 82.0
+mouse_filter = 2
+horizontal_alignment = 0
+vertical_alignment = 1
+text = "查找结果"
+
+[node name="表头一" type="Label" parent="."]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 85.0
+offset_right = 145.0
+offset_bottom = 103.0
+mouse_filter = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+text = "玩家姓名"
+
+[node name="表头二" type="Label" parent="."]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 85.0
+offset_right = 201.0
+offset_bottom = 103.0
+mouse_filter = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+text = "等级"
+
+[node name="表头三" type="Label" parent="."]
+layout_mode = 0
+offset_left = 206.0
+offset_top = 85.0
+offset_right = 257.0
+offset_bottom = 103.0
+mouse_filter = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+text = "职业"
+
+[node name="行容器" type="Control" parent="."]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 108.0
+offset_right = 277.0
+offset_bottom = 225.0
+clip_contents = true
+
+[node name="模糊提示" type="Label" parent="."]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 223.0
+offset_right = 193.0
+offset_bottom = 241.0
+mouse_filter = 2
+horizontal_alignment = 0
+vertical_alignment = 1
+text = "本处支持模糊玩家名搜索"
+theme_override_colors/font_color = Color(1.0, 0.5686274509803921, 0.0, 1)
+
+[node name="页码" type="Label" parent="."]
+layout_mode = 0
+offset_left = 211.0
+offset_top = 224.0
+offset_right = 245.0
+offset_bottom = 242.0
+mouse_filter = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="上一页钮" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 194.0
+offset_top = 223.0
+offset_right = 209.0
+offset_bottom = 236.0
+focus_mode = 0
+ignore_texture_size = true
+texture_normal = ExtResource("t11")
+metadata/skin = "res://素材/界面/原版窗口/通用控件/上一页"
+metadata/act = "上一页钮"
+script = ExtResource("9_三态")
+mouse_default_cursor_shape = 2
+
+[node name="下一页钮" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 244.0
+offset_top = 223.0
+offset_right = 259.0
+offset_bottom = 236.0
+focus_mode = 0
+ignore_texture_size = true
+texture_normal = ExtResource("t12")
+metadata/skin = "res://素材/界面/原版窗口/通用控件/下一页"
+metadata/act = "下一页钮"
+script = ExtResource("9_三态")
+mouse_default_cursor_shape = 2
+
+[node name="搜索钮" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 36.0
+offset_right = 244.0
+offset_bottom = 58.0
+focus_mode = 0
+ignore_texture_size = true
+texture_normal = ExtResource("t13")
+metadata/skin = "res://素材/界面/原版窗口/好友/钮底37"
+metadata/act = "搜索钮"
+disabled = false
+
+[node name="Label" type="Label" parent="搜索钮"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+text = "搜索"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="查看资料钮" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 251.0
+offset_right = 87.0
+offset_bottom = 273.0
+focus_mode = 0
+ignore_texture_size = true
+texture_normal = ExtResource("t14")
+metadata/skin = "res://素材/界面/原版窗口/好友/钮底61"
+metadata/act = "查看资料钮"
+disabled = true
+
+[node name="Label" type="Label" parent="查看资料钮"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+text = "查看资料"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="多功能钮" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 116.0
+offset_top = 251.0
+offset_right = 177.0
+offset_bottom = 273.0
+focus_mode = 0
+ignore_texture_size = true
+texture_normal = ExtResource("t15")
+metadata/skin = "res://素材/界面/原版窗口/好友/钮底61"
+metadata/act = "多功能钮"
+disabled = true
+
+[node name="Label" type="Label" parent="多功能钮"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+text = "多功能"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="取消钮" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 201.0
+offset_top = 251.0
+offset_right = 262.0
+offset_bottom = 273.0
+focus_mode = 0
+ignore_texture_size = true
+texture_normal = ExtResource("t16")
+metadata/skin = "res://素材/界面/原版窗口/好友/钮底61"
+metadata/act = "取消钮"
+disabled = false
+
+[node name="Label" type="Label" parent="取消钮"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+text = "取消"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,0 +1,177 @@
+[gd_scene load_steps=12 format=3]
+
+[ext_resource type="Script" path="res://脚本/界面/窗口/家族/家族子窗.gd" id="1_script"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/家族/盒底.png" id="t1"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/横向分隔线.png" id="t2"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/分页首.png" id="t3"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/上一页.png" id="t4"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/下一页.png" id="t5"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/分页末.png" id="t6"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/输入框.png" id="t7"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/家族/商店角标.png" id="t8"]
+
+
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty1"]
+
+
+
+[node name="家族商城窗" type="Control"]
+custom_minimum_size = Vector2(559, 397)
+script = ExtResource("1_script")
+窗名 = "家族商城窗"
+
+[node name="盒商城底" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 554.0
+offset_bottom = 357.0
+mouse_filter = 2
+texture = ExtResource("t1")
+patch_margin_left = 8
+patch_margin_top = 7
+patch_margin_right = 7
+patch_margin_bottom = 7
+
+[node name="区商品区" type="Control" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 551.0
+offset_bottom = 324.0
+mouse_filter = 2
+
+[node name="线" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 329.0
+offset_right = 549.0
+offset_bottom = 331.0
+mouse_filter = 2
+texture = ExtResource("t2")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="分页分页" type="Control" parent="."]
+layout_mode = 0
+offset_left = 217.0
+offset_top = 332.0
+offset_right = 341.0
+offset_bottom = 350.0
+
+[node name="首页" type="TextureButton" parent="分页分页"]
+layout_mode = 0
+offset_left = 0.0
+offset_right = 18.0
+offset_bottom = 13.0
+focus_mode = 0
+texture_normal = ExtResource("t3")
+ignore_texture_size = true
+
+[node name="上一页" type="TextureButton" parent="分页分页"]
+layout_mode = 0
+offset_left = 20.0
+offset_right = 35.0
+offset_bottom = 13.0
+focus_mode = 0
+texture_normal = ExtResource("t4")
+ignore_texture_size = true
+
+[node name="页码" type="Label" parent="分页分页"]
+layout_mode = 0
+offset_left = 37.0
+offset_top = -2.0
+offset_right = 87.0
+offset_bottom = 16.0
+mouse_filter = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+text = "1/9"
+
+[node name="下一页" type="TextureButton" parent="分页分页"]
+layout_mode = 0
+offset_left = 89.0
+offset_right = 104.0
+offset_bottom = 13.0
+focus_mode = 0
+texture_normal = ExtResource("t5")
+ignore_texture_size = true
+
+[node name="末页" type="TextureButton" parent="分页分页"]
+layout_mode = 0
+offset_left = 106.0
+offset_right = 124.0
+offset_bottom = 13.0
+focus_mode = 0
+texture_normal = ExtResource("t6")
+ignore_texture_size = true
+
+[node name="标签贡值名" type="Label" parent="."]
+layout_mode = 0
+offset_left = 272.0
+offset_top = 362.0
+offset_right = 360.0
+offset_bottom = 381.0
+mouse_filter = 2
+text = "个人当前贡值："
+vertical_alignment = 1
+clip_text = true
+
+[node name="输入贡值底" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 372.0
+offset_top = 362.0
+offset_right = 452.0
+offset_bottom = 383.0
+mouse_filter = 2
+texture = ExtResource("t7")
+patch_margin_left = 6
+patch_margin_top = 5
+patch_margin_right = 7
+patch_margin_bottom = 6
+
+[node name="输入贡值" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 372.0
+offset_top = 362.0
+offset_right = 452.0
+offset_bottom = 383.0
+placeholder_text = ""
+theme_override_styles/normal = SubResource("StyleBoxEmpty1")
+theme_override_styles/focus = SubResource("StyleBoxEmpty1")
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.0, 1.0, 0.0, 1)
+text = ""
+max_length = 12
+
+[node name="角标商店" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 373.0
+offset_top = 364.0
+offset_right = 391.0
+offset_bottom = 382.0
+mouse_filter = 2
+texture = ExtResource("t8")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="标签如何获得" type="Label" parent="."]
+layout_mode = 0
+offset_left = 457.0
+offset_top = 362.0
+offset_right = 557.0
+offset_bottom = 381.0
+mouse_filter = 2
+text = "【如何增加贡值】"
+theme_override_colors/font_color = Color(0.0, 1.0, 0.0, 1)
+vertical_alignment = 1
+clip_text = true

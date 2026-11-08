@@ -1,0 +1,1041 @@
+[gd_scene load_steps=55 format=3]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/内容面板.png" id="t1"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/分页按钮未选.png" id="t2"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/分页按钮未选_悬停.png" id="t3"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/分页按钮未选_按下.png" id="t4"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/分页按钮选中.png" id="t5"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/勾玉炼制/提交钮.png" id="t6"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/勾玉炼制/提交钮_悬停.png" id="t7"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/勾玉炼制/提交钮_按下.png" id="t8"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/子面板.png" id="t9"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/勾玉炼制/投料钮0.png" id="t10"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/勾玉炼制/投料钮0_悬停.png" id="t11"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/勾玉炼制/投料钮0_按下.png" id="t12"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/物品格.png" id="t13"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/方向箭头.png" id="t14"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/横向分隔线.png" id="t15"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/勾玉炼制/合成投料钮.png" id="t16"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/勾玉炼制/合成投料钮_悬停.png" id="t17"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/勾玉炼制/合成投料钮_按下.png" id="t18"]
+
+[ext_resource type="Shader" path="res://脚本/界面/组件/禁用灰度.gdshader" id="sh1"]
+
+[ext_resource type="Texture2D" path="res://素材/物品/原版/FuZhuWuPin/FuZhuWuPin_16000031_info.swf_1_FuZhuWuPin_16000031_info_icon.png" id="t19"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/勾玉炼制/材料4购买钮.png" id="t20"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/勾玉炼制/材料4购买钮_悬停.png" id="t21"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/勾玉炼制/材料4购买钮_按下.png" id="t22"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/勾玉炼制/重置投料钮.png" id="t23"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/勾玉炼制/重置投料钮_悬停.png" id="t24"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/勾玉炼制/重置投料钮_按下.png" id="t25"]
+
+[sub_resource type="StyleBoxTexture" id="sb1_n"]
+texture = ExtResource("t2")
+texture_margin_left = 7.25
+texture_margin_right = 7
+texture_margin_top = 7.5
+texture_margin_bottom = 4.75
+content_margin_left = 0.0
+content_margin_right = 0.0
+content_margin_top = 0.0
+content_margin_bottom = 0.0
+
+[sub_resource type="StyleBoxTexture" id="sb1_h"]
+texture = ExtResource("t3")
+texture_margin_left = 7.25
+texture_margin_right = 7
+texture_margin_top = 7.5
+texture_margin_bottom = 4.75
+content_margin_left = 0.0
+content_margin_right = 0.0
+content_margin_top = 0.0
+content_margin_bottom = 0.0
+
+[sub_resource type="StyleBoxTexture" id="sb1_p"]
+texture = ExtResource("t4")
+texture_margin_left = 7.25
+texture_margin_right = 7
+texture_margin_top = 7.5
+texture_margin_bottom = 4.75
+content_margin_left = 0.0
+content_margin_right = 0.0
+content_margin_top = 0.0
+content_margin_bottom = 0.0
+
+[sub_resource type="StyleBoxTexture" id="sb1_d"]
+texture = ExtResource("t5")
+texture_margin_left = 9
+texture_margin_right = 8
+texture_margin_top = 9
+texture_margin_bottom = 4
+content_margin_left = 0.0
+content_margin_right = 0.0
+content_margin_top = 0.0
+content_margin_bottom = 0.0
+
+[sub_resource type="StyleBoxTexture" id="sb2_n"]
+texture = ExtResource("t2")
+texture_margin_left = 7.25
+texture_margin_right = 7
+texture_margin_top = 7.5
+texture_margin_bottom = 4.75
+content_margin_left = 0.0
+content_margin_right = 0.0
+content_margin_top = 0.0
+content_margin_bottom = 0.0
+
+[sub_resource type="StyleBoxTexture" id="sb2_h"]
+texture = ExtResource("t3")
+texture_margin_left = 7.25
+texture_margin_right = 7
+texture_margin_top = 7.5
+texture_margin_bottom = 4.75
+content_margin_left = 0.0
+content_margin_right = 0.0
+content_margin_top = 0.0
+content_margin_bottom = 0.0
+
+[sub_resource type="StyleBoxTexture" id="sb2_p"]
+texture = ExtResource("t4")
+texture_margin_left = 7.25
+texture_margin_right = 7
+texture_margin_top = 7.5
+texture_margin_bottom = 4.75
+content_margin_left = 0.0
+content_margin_right = 0.0
+content_margin_top = 0.0
+content_margin_bottom = 0.0
+
+[sub_resource type="StyleBoxTexture" id="sb2_d"]
+texture = ExtResource("t5")
+texture_margin_left = 9
+texture_margin_right = 8
+texture_margin_top = 9
+texture_margin_bottom = 4
+content_margin_left = 0.0
+content_margin_right = 0.0
+content_margin_top = 0.0
+content_margin_bottom = 0.0
+
+[sub_resource type="StyleBoxTexture" id="sb3_n"]
+texture = ExtResource("t2")
+texture_margin_left = 7.25
+texture_margin_right = 7
+texture_margin_top = 7.5
+texture_margin_bottom = 4.75
+content_margin_left = 0.0
+content_margin_right = 0.0
+content_margin_top = 0.0
+content_margin_bottom = 0.0
+
+[sub_resource type="StyleBoxTexture" id="sb3_h"]
+texture = ExtResource("t3")
+texture_margin_left = 7.25
+texture_margin_right = 7
+texture_margin_top = 7.5
+texture_margin_bottom = 4.75
+content_margin_left = 0.0
+content_margin_right = 0.0
+content_margin_top = 0.0
+content_margin_bottom = 0.0
+
+[sub_resource type="StyleBoxTexture" id="sb3_p"]
+texture = ExtResource("t4")
+texture_margin_left = 7.25
+texture_margin_right = 7
+texture_margin_top = 7.5
+texture_margin_bottom = 4.75
+content_margin_left = 0.0
+content_margin_right = 0.0
+content_margin_top = 0.0
+content_margin_bottom = 0.0
+
+[sub_resource type="StyleBoxTexture" id="sb3_d"]
+texture = ExtResource("t5")
+texture_margin_left = 9
+texture_margin_right = 8
+texture_margin_top = 9
+texture_margin_bottom = 4
+content_margin_left = 0.0
+content_margin_right = 0.0
+content_margin_top = 0.0
+content_margin_bottom = 0.0
+
+[sub_resource type="StyleBoxTexture" id="sb4_n"]
+texture = ExtResource("t6")
+
+[sub_resource type="StyleBoxTexture" id="sb4_h"]
+texture = ExtResource("t7")
+
+[sub_resource type="StyleBoxTexture" id="sb4_p"]
+texture = ExtResource("t8")
+
+[sub_resource type="StyleBoxTexture" id="sb5_n"]
+texture = ExtResource("t10")
+
+[sub_resource type="StyleBoxTexture" id="sb5_h"]
+texture = ExtResource("t11")
+
+[sub_resource type="StyleBoxTexture" id="sb5_p"]
+texture = ExtResource("t12")
+
+[sub_resource type="StyleBoxTexture" id="sb6_n"]
+texture = ExtResource("t16")
+
+[sub_resource type="StyleBoxTexture" id="sb6_h"]
+texture = ExtResource("t17")
+
+[sub_resource type="StyleBoxTexture" id="sb6_p"]
+texture = ExtResource("t18")
+
+[sub_resource type="ShaderMaterial" id="mat1"]
+render_priority = 0
+transparency = 0
+shader = ExtResource("sh1")
+
+[sub_resource type="StyleBoxTexture" id="sb7_n"]
+texture = ExtResource("t20")
+
+[sub_resource type="StyleBoxTexture" id="sb7_h"]
+texture = ExtResource("t21")
+
+[sub_resource type="StyleBoxTexture" id="sb7_p"]
+texture = ExtResource("t22")
+
+[sub_resource type="StyleBoxTexture" id="sb8_n"]
+texture = ExtResource("t23")
+
+[sub_resource type="StyleBoxTexture" id="sb8_h"]
+texture = ExtResource("t24")
+
+[sub_resource type="StyleBoxTexture" id="sb8_p"]
+texture = ExtResource("t25")
+
+[node name="原版勾玉炼制内容" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 360
+offset_bottom = 378.0
+
+[node name="内容底" type="NinePatchRect" parent="."]
+texture = ExtResource("t1")
+patch_margin_left = 11
+patch_margin_right = 10
+patch_margin_top = 10
+patch_margin_bottom = 11
+layout_mode = 0
+offset_left = 5.0
+offset_top = 29.0
+offset_right = 355.0
+offset_bottom = 345.0
+
+[node name="分页" type="Control" parent="."]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 10.0
+offset_top = 9.0
+offset_right = 175.0
+offset_bottom = 31.0
+
+[node name="页签0" type="Button" parent="分页"]
+theme_override_styles/normal = SubResource("sb1_n")
+theme_override_styles/hover = SubResource("sb1_h")
+theme_override_styles/pressed = SubResource("sb1_p")
+theme_override_styles/disabled = SubResource("sb1_d")
+focus_mode = 0
+toggle_mode = true
+text = "玉链升阶"
+horizontal_alignment = 1
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_disabled_color = Color(0.988235, 0.956863, 0.611765, 1)
+button_pressed = true
+disabled = true
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 54.0
+offset_bottom = 22.0
+
+[node name="页签1" type="Button" parent="分页"]
+theme_override_styles/normal = SubResource("sb2_n")
+theme_override_styles/hover = SubResource("sb2_h")
+theme_override_styles/pressed = SubResource("sb2_p")
+theme_override_styles/disabled = SubResource("sb2_d")
+focus_mode = 0
+toggle_mode = true
+text = "勾玉合成"
+horizontal_alignment = 1
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_disabled_color = Color(0.988235, 0.956863, 0.611765, 1)
+layout_mode = 0
+offset_left = 55.0
+offset_top = 0.0
+offset_right = 109.0
+offset_bottom = 22.0
+
+[node name="页签2" type="Button" parent="分页"]
+theme_override_styles/normal = SubResource("sb3_n")
+theme_override_styles/hover = SubResource("sb3_h")
+theme_override_styles/pressed = SubResource("sb3_p")
+theme_override_styles/disabled = SubResource("sb3_d")
+focus_mode = 0
+toggle_mode = true
+text = "勾玉重置"
+horizontal_alignment = 1
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_disabled_color = Color(0.988235, 0.956863, 0.611765, 1)
+layout_mode = 0
+offset_left = 110.0
+offset_top = 0.0
+offset_right = 164.0
+offset_bottom = 22.0
+
+[node name="提交钮" type="Button" parent="."]
+theme_override_styles/normal = SubResource("sb4_n")
+theme_override_styles/hover = SubResource("sb4_h")
+theme_override_styles/pressed = SubResource("sb4_p")
+text = "开始进阶"
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+layout_mode = 0
+offset_left = 296.0
+offset_top = 351.0
+offset_right = 350.0
+offset_bottom = 373.0
+
+[node name="面板0" type="Control" parent="内容底"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 350.0
+offset_bottom = 316.0
+
+[node name="投料框0" type="NinePatchRect" parent="内容底/面板0"]
+texture = ExtResource("t9")
+patch_margin_left = 8
+patch_margin_right = 7
+patch_margin_top = 7
+patch_margin_bottom = 7
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 91.0
+offset_bottom = 222.0
+
+[node name="投料钮0" type="Button" parent="内容底/面板0/投料框0"]
+theme_override_styles/normal = SubResource("sb5_n")
+theme_override_styles/hover = SubResource("sb5_h")
+theme_override_styles/pressed = SubResource("sb5_p")
+text = "放入玉链"
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+layout_mode = 0
+offset_left = 11.0
+offset_top = 10.0
+offset_right = 72.0
+offset_bottom = 32.0
+
+[node name="投料格0" type="NinePatchRect" parent="内容底/面板0/投料框0"]
+texture = ExtResource("t13")
+patch_margin_left = 9
+patch_margin_right = 6
+patch_margin_top = 9
+patch_margin_bottom = 6
+layout_mode = 0
+offset_left = 21.5
+offset_top = 37.0
+offset_right = 61.5
+offset_bottom = 77.0
+
+[node name="投料箭头0" type="NinePatchRect" parent="内容底/面板0/投料框0"]
+texture = ExtResource("t14")
+patch_margin_left = 4
+patch_margin_right = 4
+patch_margin_top = 1
+patch_margin_bottom = 9
+layout_mode = 0
+offset_left = 34.5
+offset_top = 77.0
+offset_right = 48.5
+offset_bottom = 164.0
+
+[node name="结果格0" type="NinePatchRect" parent="内容底/面板0/投料框0"]
+texture = ExtResource("t13")
+patch_margin_left = 9
+patch_margin_right = 6
+patch_margin_top = 9
+patch_margin_bottom = 6
+layout_mode = 0
+offset_left = 21.5
+offset_top = 164.0
+offset_right = 61.5
+offset_bottom = 204.0
+
+[node name="说明盒0" type="Control" parent="内容底/面板0"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 99.0
+offset_top = 8.0
+offset_right = 343.0
+offset_bottom = 222.0
+
+[node name="说明条0_1" type="Control" parent="内容底/面板0/说明盒0"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 244.0
+offset_bottom = 75.0
+
+[node name="说明条0_1文" type="RichTextLabel" parent="内容底/面板0/说明盒0/说明条0_1"]
+text = "[color=#ff9100]玉链进阶：\n[/color][color=#ffffff]进阶成功后将得到更高阶的玉链\n高阶玉链将带来更多的属性加成\n高阶玉链可镶嵌勾玉数更多，最多6个[/color]"
+scroll_active = false
+bbcode_enabled = true
+autowrap_mode = 3
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 6
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 244.0
+offset_bottom = 71.0
+
+[node name="说明条0_1线" type="TextureRect" parent="内容底/面板0/说明盒0/说明条0_1"]
+texture = ExtResource("t15")
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 0
+layout_mode = 0
+offset_left = 0.0
+offset_top = 73.0
+offset_right = 244.0
+offset_bottom = 75.0
+
+[node name="说明条0_2" type="Control" parent="内容底/面板0/说明盒0"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0.0
+offset_top = 80.0
+offset_right = 244.0
+offset_bottom = 155.0
+
+[node name="说明条0_2文" type="RichTextLabel" parent="内容底/面板0/说明盒0/说明条0_2"]
+text = "[color=#ff9100]进阶步骤说明：\n[/color][color=#ffffff]1：在左侧上方物品栏内放入玉链\n2：确认背包内有足够的金币\n3：点击【开始进阶】按钮[/color]"
+scroll_active = false
+bbcode_enabled = true
+autowrap_mode = 3
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 6
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 244.0
+offset_bottom = 71.0
+
+[node name="说明条0_2线" type="TextureRect" parent="内容底/面板0/说明盒0/说明条0_2"]
+texture = ExtResource("t15")
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 0
+layout_mode = 0
+offset_left = 0.0
+offset_top = 73.0
+offset_right = 244.0
+offset_bottom = 75.0
+
+[node name="说明条0_3" type="Control" parent="内容底/面板0/说明盒0"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0.0
+offset_top = 160.0
+offset_right = 244.0
+offset_bottom = 212.0
+
+[node name="说明条0_3文" type="RichTextLabel" parent="内容底/面板0/说明盒0/说明条0_3"]
+text = "[color=#ffffff]若进阶失败只扣除金币\n不会对玉链本身造成任何影响[/color]"
+scroll_active = false
+bbcode_enabled = true
+autowrap_mode = 3
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 6
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 244.0
+offset_bottom = 48.0
+
+[node name="结果区0" type="NinePatchRect" parent="内容底/面板0"]
+texture = ExtResource("t9")
+patch_margin_left = 8
+patch_margin_right = 7
+patch_margin_top = 7
+patch_margin_bottom = 7
+layout_mode = 0
+offset_left = 8.0
+offset_top = 227.0
+offset_right = 343.0
+offset_bottom = 310.0
+
+[node name="结果文0" type="RichTextLabel" parent="内容底/面板0/结果区0"]
+text = "[color=#ffffff]本次操作消耗金币：0\n本次操作成功几率：0%[/color]"
+scroll_active = false
+bbcode_enabled = true
+autowrap_mode = 3
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 6
+horizontal_alignment = 1
+layout_mode = 0
+offset_left = 0.0
+offset_top = 22.5
+offset_right = 335.0
+offset_bottom = 60.5
+
+[node name="面板1" type="Control" parent="内容底"]
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 350.0
+offset_bottom = 316.0
+
+[node name="合成说明条" type="Control" parent="内容底/面板1"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 344.0
+offset_bottom = 83.0
+
+[node name="合成说明文" type="RichTextLabel" parent="内容底/面板1/合成说明条"]
+text = "[color=#ff9100]勾玉合成：\n[/color][color=#ffffff]合成成功后将得到更高阶的勾玉\n合成成功后勾玉加成的忍术种类不变\n加成的忍术层数将会增多，最多可至15层[/color]"
+scroll_active = false
+bbcode_enabled = true
+autowrap_mode = 3
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 6
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 336.0
+offset_bottom = 71.0
+
+[node name="合成分隔线" type="TextureRect" parent="内容底/面板1/合成说明条"]
+texture = ExtResource("t15")
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 0
+layout_mode = 0
+offset_left = 0.0
+offset_top = 73.0
+offset_right = 336.0
+offset_bottom = 75.0
+
+[node name="合成投料框" type="NinePatchRect" parent="内容底/面板1"]
+texture = ExtResource("t9")
+patch_margin_left = 8
+patch_margin_right = 7
+patch_margin_top = 7
+patch_margin_bottom = 7
+layout_mode = 0
+offset_left = 8.0
+offset_top = 87.0
+offset_right = 91.0
+offset_bottom = 307.0
+
+[node name="合成投料钮" type="Button" parent="内容底/面板1/合成投料框"]
+theme_override_styles/normal = SubResource("sb6_n")
+theme_override_styles/hover = SubResource("sb6_h")
+theme_override_styles/pressed = SubResource("sb6_p")
+text = "取出玉链"
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+layout_mode = 0
+offset_left = 11.0
+offset_top = 10.0
+offset_right = 72.0
+offset_bottom = 32.0
+
+[node name="合成投料格" type="NinePatchRect" parent="内容底/面板1/合成投料框"]
+texture = ExtResource("t13")
+patch_margin_left = 9
+patch_margin_right = 6
+patch_margin_top = 9
+patch_margin_bottom = 6
+layout_mode = 0
+offset_left = 21.5
+offset_top = 37.0
+offset_right = 61.5
+offset_bottom = 77.0
+
+[node name="合成箭头" type="NinePatchRect" parent="内容底/面板1/合成投料框"]
+texture = ExtResource("t14")
+patch_margin_left = 4
+patch_margin_right = 4
+patch_margin_top = 1
+patch_margin_bottom = 9
+layout_mode = 0
+offset_left = 34.5
+offset_top = 77.0
+offset_right = 48.5
+offset_bottom = 170.0
+
+[node name="合成结果格" type="NinePatchRect" parent="内容底/面板1/合成投料框"]
+texture = ExtResource("t13")
+patch_margin_left = 9
+patch_margin_right = 6
+patch_margin_top = 9
+patch_margin_bottom = 6
+layout_mode = 0
+offset_left = 21.5
+offset_top = 170.0
+offset_right = 61.5
+offset_bottom = 210.0
+
+[node name="合成结果标签" type="RichTextLabel" parent="内容底/面板1"]
+text = "合成结果"
+scroll_active = false
+bbcode_enabled = true
+autowrap_mode = 3
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 4
+layout_mode = 0
+offset_left = 95.0
+offset_top = 87.0
+offset_right = 122.0
+offset_bottom = 157.0
+
+[node name="材料盒" type="Control" parent="内容底/面板1"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 112.0
+offset_top = 83.0
+offset_right = 352.0
+offset_bottom = 173.0
+
+[node name="材料1" type="Control" parent="内容底/面板1/材料盒"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 56.0
+offset_bottom = 64.0
+
+[node name="材料1名" type="Label" parent="内容底/面板1/材料盒/材料1"]
+text = "成  功"
+theme_override_colors/font_color = Color(1.000000, 0.568627, 0.000000, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 56.0
+offset_bottom = 20.0
+
+[node name="材料1格" type="NinePatchRect" parent="内容底/面板1/材料盒/材料1"]
+texture = ExtResource("t13")
+patch_margin_left = 9
+patch_margin_right = 6
+patch_margin_top = 9
+patch_margin_bottom = 6
+layout_mode = 0
+offset_left = 8.0
+offset_top = 20.0
+offset_right = 48.0
+offset_bottom = 60.0
+
+[node name="材料2" type="Control" parent="内容底/面板1/材料盒"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 59.0
+offset_top = 0.0
+offset_right = 115.0
+offset_bottom = 64.0
+
+[node name="材料2名" type="Label" parent="内容底/面板1/材料盒/材料2"]
+text = "退  还"
+theme_override_colors/font_color = Color(1.000000, 0.568627, 0.000000, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 56.0
+offset_bottom = 20.0
+
+[node name="材料2格" type="NinePatchRect" parent="内容底/面板1/材料盒/材料2"]
+texture = ExtResource("t13")
+patch_margin_left = 9
+patch_margin_right = 6
+patch_margin_top = 9
+patch_margin_bottom = 6
+layout_mode = 0
+offset_left = 8.0
+offset_top = 20.0
+offset_right = 48.0
+offset_bottom = 60.0
+
+[node name="材料3" type="Control" parent="内容底/面板1/材料盒"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 118.0
+offset_top = 0.0
+offset_right = 174.0
+offset_bottom = 64.0
+
+[node name="材料3名" type="Label" parent="内容底/面板1/材料盒/材料3"]
+text = "剩  余"
+theme_override_colors/font_color = Color(1.000000, 0.568627, 0.000000, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 56.0
+offset_bottom = 20.0
+
+[node name="材料3格" type="NinePatchRect" parent="内容底/面板1/材料盒/材料3"]
+texture = ExtResource("t13")
+patch_margin_left = 9
+patch_margin_right = 6
+patch_margin_top = 9
+patch_margin_bottom = 6
+layout_mode = 0
+offset_left = 8.0
+offset_top = 20.0
+offset_right = 48.0
+offset_bottom = 60.0
+
+[node name="材料4" type="Control" parent="内容底/面板1/材料盒"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 177.0
+offset_top = 0.0
+offset_right = 237.0
+offset_bottom = 88.0
+
+[node name="材料4名" type="Label" parent="内容底/面板1/材料盒/材料4"]
+text = "精玉灵珠"
+theme_override_colors/font_color = Color(1.000000, 0.568627, 0.000000, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 60.0
+offset_bottom = 20.0
+
+[node name="材料4格" type="TextureRect" parent="内容底/面板1/材料盒/材料4"]
+material = SubResource("mat1")
+texture = ExtResource("t13")
+mouse_filter = 2
+layout_mode = 0
+offset_left = 10.0
+offset_top = 20.0
+offset_right = 50.0
+offset_bottom = 60.0
+
+[node name="材料4格_数量" type="Label" parent="内容底/面板1/材料盒/材料4/材料4格"]
+material = SubResource("mat1")
+text = " "
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 20
+offset_right = 40.0
+offset_bottom = 40
+
+[node name="材料4格_图标" type="TextureRect" parent="内容底/面板1/材料盒/材料4/材料4格"]
+material = SubResource("mat1")
+texture = ExtResource("t19")
+expand_mode = 1
+mouse_filter = 2
+layout_mode = 0
+offset_left = 3
+offset_top = 3
+offset_right = 37
+offset_bottom = 37
+
+[node name="材料4购买钮" type="Button" parent="内容底/面板1/材料盒/材料4"]
+theme_override_styles/normal = SubResource("sb7_n")
+theme_override_styles/hover = SubResource("sb7_h")
+theme_override_styles/pressed = SubResource("sb7_p")
+text = "购买"
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+layout_mode = 0
+offset_left = 11.5
+offset_top = 63.0
+offset_right = 48.5
+offset_bottom = 85.0
+
+[node name="注意区" type="NinePatchRect" parent="内容底/面板1"]
+texture = ExtResource("t9")
+patch_margin_left = 8
+patch_margin_right = 7
+patch_margin_top = 7
+patch_margin_bottom = 7
+layout_mode = 0
+offset_left = 95.0
+offset_top = 170.0
+offset_right = 342.0
+offset_bottom = 245.0
+
+[node name="注意文" type="RichTextLabel" parent="内容底/面板1/注意区"]
+text = "[color=#ff9100]合成步骤说明：\n[/color][color=#ffffff]1：在左侧上方物品栏内放入勾玉\n2：确认背包内有足够的精玉灵珠\n3：点击【开始合成】按钮 [/color]"
+scroll_active = false
+bbcode_enabled = true
+autowrap_mode = 3
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 6
+layout_mode = 0
+offset_left = 4.0
+offset_top = 0.0
+offset_right = 243.0
+offset_bottom = 75.0
+
+[node name="合成结果区" type="NinePatchRect" parent="内容底/面板1"]
+texture = ExtResource("t9")
+patch_margin_left = 8
+patch_margin_right = 7
+patch_margin_top = 7
+patch_margin_bottom = 7
+layout_mode = 0
+offset_left = 95.0
+offset_top = 250.0
+offset_right = 342.0
+offset_bottom = 308.0
+
+[node name="合成结果文" type="RichTextLabel" parent="内容底/面板1/合成结果区"]
+text = "[color=#ffffff]若合成失败不会对勾玉本身造成任何影响[/color]\n[color=#ffffff]本次操作消耗金币：0\n本次操作成功几率：0%[/color]"
+scroll_active = false
+bbcode_enabled = true
+autowrap_mode = 3
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 6
+layout_mode = 0
+offset_left = 4.0
+offset_top = 0.0
+offset_right = 243.0
+offset_bottom = 58.0
+
+[node name="面板2" type="Control" parent="内容底"]
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 350.0
+offset_bottom = 316.0
+
+[node name="重置投料框" type="NinePatchRect" parent="内容底/面板2"]
+texture = ExtResource("t9")
+patch_margin_left = 8
+patch_margin_right = 7
+patch_margin_top = 7
+patch_margin_bottom = 7
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 91.0
+offset_bottom = 183.0
+
+[node name="重置投料钮" type="Button" parent="内容底/面板2/重置投料框"]
+theme_override_styles/normal = SubResource("sb8_n")
+theme_override_styles/hover = SubResource("sb8_h")
+theme_override_styles/pressed = SubResource("sb8_p")
+text = "取出玉链"
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+layout_mode = 0
+offset_left = 11.0
+offset_top = 10.0
+offset_right = 72.0
+offset_bottom = 32.0
+
+[node name="重置投料格" type="NinePatchRect" parent="内容底/面板2/重置投料框"]
+texture = ExtResource("t13")
+patch_margin_left = 9
+patch_margin_right = 6
+patch_margin_top = 9
+patch_margin_bottom = 6
+layout_mode = 0
+offset_left = 21.5
+offset_top = 37.0
+offset_right = 61.5
+offset_bottom = 77.0
+
+[node name="重置箭头" type="NinePatchRect" parent="内容底/面板2/重置投料框"]
+texture = ExtResource("t14")
+patch_margin_left = 4
+patch_margin_right = 4
+patch_margin_top = 1
+patch_margin_bottom = 9
+layout_mode = 0
+offset_left = 34.5
+offset_top = 77.0
+offset_right = 48.5
+offset_bottom = 165.0
+
+[node name="重置说明盒" type="Control" parent="内容底/面板2"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 99.0
+offset_top = 8.0
+offset_right = 343.0
+offset_bottom = 188.0
+
+[node name="重置说明条1" type="Control" parent="内容底/面板2/重置说明盒"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 244.0
+offset_bottom = 76.0
+
+[node name="重置说明文1" type="RichTextLabel" parent="内容底/面板2/重置说明盒/重置说明条1"]
+text = "[color=#ff9100]忍术类型重置步骤说明：\n[/color][color=#ffffff]1：在左侧上方物品栏内放入勾玉\n2：点击【开始重置】按钮\n\n[/color]"
+scroll_active = false
+bbcode_enabled = true
+autowrap_mode = 3
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 6
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 244.0
+offset_bottom = 72.0
+
+[node name="重置分隔线1" type="TextureRect" parent="内容底/面板2/重置说明盒/重置说明条1"]
+texture = ExtResource("t15")
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 0
+layout_mode = 0
+offset_left = 0.0
+offset_top = 74.0
+offset_right = 244.0
+offset_bottom = 76.0
+
+[node name="重置说明条2" type="Control" parent="内容底/面板2/重置说明盒"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0.0
+offset_top = 81.0
+offset_right = 244.0
+offset_bottom = 175.0
+
+[node name="重置说明文2" type="RichTextLabel" parent="内容底/面板2/重置说明盒/重置说明条2"]
+text = "[color=#ff9100]注意：\n[/color][color=#ffffff]1：重置成功后勾玉加成的忍术层数不变\n加成的忍术类型将会随机重新生成\n2：重置失败仅回收重置所需材料，不会\n对勾玉造成任何影响[/color]"
+scroll_active = false
+bbcode_enabled = true
+autowrap_mode = 3
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 6
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 244.0
+offset_bottom = 90.0
+
+[node name="重置分隔线2" type="TextureRect" parent="内容底/面板2/重置说明盒/重置说明条2"]
+texture = ExtResource("t15")
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 0
+layout_mode = 0
+offset_left = 0.0
+offset_top = 92.0
+offset_right = 244.0
+offset_bottom = 94.0
+
+[node name="重置提示条" type="Label" parent="内容底/面板2"]
+text = "特别注意：忍术层数不变，重新生成忍术类型"
+theme_override_colors/font_color = Color(1.000000, 0.568627, 0.000000, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+layout_mode = 0
+offset_left = 8.0
+offset_top = 185.0
+offset_right = 343.0
+offset_bottom = 205.0
+
+[node name="重置材料盒" type="NinePatchRect" parent="内容底/面板2"]
+texture = ExtResource("t9")
+patch_margin_left = 8
+patch_margin_right = 7
+patch_margin_top = 7
+patch_margin_bottom = 7
+layout_mode = 0
+offset_left = 8.0
+offset_top = 211.0
+offset_right = 343.0
+offset_bottom = 310.0
+
+[node name="重置结果文" type="RichTextLabel" parent="内容底/面板2/重置材料盒"]
+text = "[color=#ffffff]本次操作消耗金币：0\n本次操作成功几率：0%[/color]"
+scroll_active = false
+bbcode_enabled = true
+autowrap_mode = 3
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 6
+horizontal_alignment = 1
+layout_mode = 0
+offset_left = 0.0
+offset_top = 30.5
+offset_right = 335.0
+offset_bottom = 68.5

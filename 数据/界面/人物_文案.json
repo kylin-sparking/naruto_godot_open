@@ -1,0 +1,12 @@
+{
+ "CHARACTOR_BREATH_TIP": "<font color=\"#ffff00\">精华获得途径：<br/>人物通过线上打坐及离线修行都可获得精华<br/>精华达到上限后将不再上涨</font><br/><font color=\"#00ff00\">提示：<br/>精华可用于提升忍术层数，开通八门穴道等操作</font>",
+ "CHARACTOR_BREATH_TIP2": "当前精华：%1　　精华上限：%2<br/><font color=\"#ffff00\">精华获得途径：<br/>人物通过线上打坐及离线修行都可获得精华<br/>精华达到上限后将不再上涨</font><br/><font color=\"#00ff00\">提示：<br/>精华可用于提升忍术层数，开通八门穴道等操作</font>",
+ "CHARACTOR_EXP_TIP": "<font color=\"#ffff00\">经验获得途径：<br/>打怪，完成任务，打坐，修行等等</font><br/><font color=\"#00ff00\">人物升级后可以穿著更强大的装备，也可捕捉更为强力的通灵兽<br/>同时人物等级提升后属性也将相应提升，向排行榜发起挑战</font>",
+ "CHARACTOR_EXP_TIP2": "当前经验：%1　　本级所需经验：%2<br/><font color=\"#ffff00\">经验获得途径：<br/>打怪，完成任务，打坐，修行等等</font><br/><font color=\"#00ff00\">人物升级后可以穿著更强大的装备，也可捕捉更为强力的通灵兽<br/>同时人物等级提升后属性也将相应提升，向排行榜发起挑战</font>",
+ "CHARACTOR_FAMILY_TIP": "<font color=\"#00ff00\">加入家族后可学习到家族忍术</font>",
+ "CHARACTOR_HP_TIP": "代表人物的生命值，当生命值为0时，人物将会死亡",
+ "CHARACTOR_MP_TIP": "使用忍术技能进行攻击时将会消耗人物的查克拉",
+ "CHARACTOR_POPULAR_TIP": "<font color=\"#ff0000\">通过击败与自己等级相近的其他玩家人物获得</font><br/><font color=\"#00ff00\">罪恶值越大，你被击败时，掉落的物品越多</font><br/>",
+ "CHARACTOR_SPOUSE_TIP": "<font color=\"#00ff00\">羁绊后可学习羁绊忍术</font>",
+ "_出处": "原版 AS3 语言表 en_US$message_properties.as（<原版目录>），由导出工具抽取；别手改本文件"
+}

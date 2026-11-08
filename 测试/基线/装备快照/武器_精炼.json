@@ -1,0 +1,72 @@
+{
+ "-1": {
+  "id": "1010023",
+  "name": "长太刀",
+  "type": 1,
+  "equip_position": -1,
+  "slot": "武器",
+  "slot_index": -1,
+  "quantity": 1,
+  "unique_id": 8326661801,
+  "category": "装备",
+  "price": 0,
+  "req_level": 20,
+  "icon": "res://素材/物品/原版/ZhuangBei/ZhuangBei_01010023_info.swf_1_ZhuangBei_01010023_info_icon.png",
+  "aptitude": 4,
+  "max_endure": 180,
+  "endure": 180,
+  "base_attr_type": 4,
+  "base_attr_value": 116,
+  "born_attr_value": 0,
+  "strength_value": 423,
+  "strengthen": 11,
+  "strength_info": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "forge_additive_ratio": 3,
+  "crash_time": 0,
+  "carve_id": 0,
+  "carve_type": 0,
+  "carve_value": 0,
+  "tale_attr_type": -1,
+  "tale_attr_value": 0,
+  "stageup_120_percent": 0,
+  "inlays": [],
+  "plus_attributes": [
+   {
+    "attribute_type": 4,
+    "attribute_value": 18
+   },
+   {
+    "attribute_type": 6,
+    "attribute_value": 5
+   },
+   {
+    "attribute_type": 2,
+    "attribute_value": 41
+   },
+   {
+    "attribute_type": 7,
+    "attribute_value": 12
+   },
+   {
+    "attribute_type": 24,
+    "attribute_value": 30
+   },
+   {
+    "attribute_type": 25,
+    "attribute_value": 8
+   }
+  ]
+ }
+}

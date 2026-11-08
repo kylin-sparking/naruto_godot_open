@@ -1,0 +1,71 @@
+{
+  "-1": {
+    "aptitude": 2,
+    "base_attr_type": 4,
+    "base_attr_value": 35,
+    "born_attr_value": 0,
+    "carve_id": 0,
+    "carve_type": 0,
+    "carve_value": 0,
+    "category": "装备",
+    "crash_time": 0,
+    "endure": 150,
+    "equip_position": -1,
+    "forge_additive_ratio": 0,
+    "icon": "res://素材/物品/原版/ZhuangBei/ZhuangBei_01010013_info.swf_1_ZhuangBei_01010013_info_icon.png",
+    "id": "1010013",
+    "inlays": [
+      {
+        "stone_id": 13000005,
+        "stone_level": 6,
+        "attribute_type": 4,
+        "skill_id": 0,
+        "attribute_value": 500
+      },
+      {
+        "stone_id": 13010005,
+        "stone_level": 6,
+        "attribute_type": 5,
+        "skill_id": 0,
+        "attribute_value": 300
+      },
+      {
+        "stone_id": 13020005,
+        "stone_level": 6,
+        "attribute_type": 1,
+        "skill_id": 0,
+        "attribute_value": 190
+      },
+      {
+        "stone_id": 13030005,
+        "stone_level": 6,
+        "attribute_type": 6,
+        "skill_id": 0,
+        "attribute_value": 29
+      },
+      {
+        "stone_id": 13040005,
+        "stone_level": 6,
+        "attribute_type": 4,
+        "skill_id": 0,
+        "attribute_value": 81
+      }
+    ],
+    "max_endure": 150,
+    "name": "小太刀",
+    "plus_attributes": [],
+    "price": 0,
+    "quantity": 1,
+    "req_level": 1,
+    "slot": "武器",
+    "slot_index": -1,
+    "stageup_120_percent": 0,
+    "strength_info": [],
+    "strength_value": 0,
+    "strengthen": 0,
+    "tale_attr_type": -1,
+    "tale_attr_value": 0,
+    "type": 1,
+    "unique_id": 8326661800
+  }
+}

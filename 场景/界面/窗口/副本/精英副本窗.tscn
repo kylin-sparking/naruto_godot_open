@@ -1,0 +1,2272 @@
+[gd_scene load_steps=37 format=3]
+; 由 `开发工具/生成精英副本场景.py` 从 `数据/界面/精英副本_布局.json` 生成（布局由
+; `开发工具/出精英副本布局.py` 按 `EliteCopyWindow.as:101-149` 现算）⇒ **别手改本文件**。
+; 原版 `super(500,426)` 在 `:57`；标题 = `ELITECOPY_WINDOW_TITLE`「精英副本」`:383`。
+; 场景 y = AS3 窗口局部 y − 29（`整框: true` ⇒ 容器原点 (0,29)）。
+; 四个页签子页的格全烘进来（编辑器=运行期），运行期只翻 visible。
+; 逐件出处见 `测试/截图/精英副本_对照/真值对照表.md` 与 `game-client/真值/窗口/精英副本.md`。
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/内容面板.png" id="t0"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/子面板.png" id="t1"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/横向分隔线.png" id="t2"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/副本/精英格底.png" id="t3"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/副本/精英格锁.png" id="t4"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/副本/精英格选中.png" id="t5"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/副本/页签_未选.png" id="t6"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/副本/页签_未选_悬停.png" id="t7"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/副本/页签_未选_按下.png" id="t8"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/副本/页签_选中.png" id="t9"]
+[ext_resource type="Texture2D" path="res://素材/原版直解/Mob/Mob_2000001_info_portrait.swf_1_Mob_2000001_info_portrait.png" id="p0"]
+[ext_resource type="Texture2D" path="res://素材/原版直解/Mob/Mob_1000016_info_portrait.swf_1_Mob_1000016_info_portrait.png" id="p1"]
+[ext_resource type="Texture2D" path="res://素材/原版直解/Mob/Mob_2000004_info_portrait.swf_1_Mob_2000004_info_portrait.png" id="p2"]
+[ext_resource type="Texture2D" path="res://素材/原版直解/Mob/Mob_2000005_info_portrait.swf_1_Mob_2000005_info_portrait.png" id="p3"]
+[ext_resource type="Texture2D" path="res://素材/原版直解/Mob/Mob_2000011_info_portrait.swf_1_Mob_2000011_info_portrait.png" id="p4"]
+[ext_resource type="Texture2D" path="res://素材/原版直解/Mob/Mob_2000012_info_portrait.swf_1_Mob_2000012_info_portrait.png" id="p5"]
+[ext_resource type="Texture2D" path="res://素材/原版直解/Mob/Mob_2000013_info_portrait.swf_1_Mob_2000013_info_portrait.png" id="p6"]
+[ext_resource type="Texture2D" path="res://素材/原版直解/Mob/Mob_2000014_info_portrait.swf_1_Mob_2000014_info_portrait.png" id="p7"]
+[ext_resource type="Texture2D" path="res://素材/原版直解/Mob/Mob_2000015_info_portrait.swf_1_Mob_2000015_info_portrait.png" id="p8"]
+[ext_resource type="Texture2D" path="res://素材/原版直解/Mob/Mob_2000019_info_portrait.swf_1_Mob_2000019_info_portrait.png" id="p9"]
+[ext_resource type="Texture2D" path="res://素材/原版直解/Mob/Mob_2000020_info_portrait.swf_1_Mob_2000020_info_portrait.png" id="p10"]
+[ext_resource type="Texture2D" path="res://素材/原版直解/Mob/Mob_2000021_info_portrait.swf_1_Mob_2000021_info_portrait.png" id="p11"]
+[ext_resource type="Texture2D" path="res://素材/原版直解/Mob/Mob_2000022_info_portrait.swf_1_Mob_2000022_info_portrait.png" id="p12"]
+[ext_resource type="Texture2D" path="res://素材/原版直解/Mob/Mob_2000023_info_portrait.swf_1_Mob_2000023_info_portrait.png" id="p13"]
+[ext_resource type="Texture2D" path="res://素材/原版直解/Mob/Mob_5200040_info_portrait.swf_1_Mob_5200040_info_portrait.png" id="p14"]
+[ext_resource type="Texture2D" path="res://素材/原版直解/Mob/Mob_5200041_info_portrait.swf_1_Mob_5200041_info_portrait.png" id="p15"]
+[ext_resource type="Texture2D" path="res://素材/原版直解/Mob/Mob_5200042_info_portrait.swf_1_Mob_5200042_info_portrait.png" id="p16"]
+[ext_resource type="Texture2D" path="res://素材/原版直解/Mob/Mob_5200043_info_portrait.swf_1_Mob_5200043_info_portrait.png" id="p17"]
+[ext_resource type="Texture2D" path="res://素材/原版直解/Mob/Mob_5200044_info_portrait.swf_1_Mob_5200044_info_portrait.png" id="p18"]
+[ext_resource type="Texture2D" path="res://素材/原版直解/Mob/Mob_5200046_info_portrait.swf_1_Mob_5200046_info_portrait.png" id="p19"]
+[sub_resource type="StyleBoxTexture" id="r0"]
+texture = ExtResource("t0")
+texture_margin_left = 11
+texture_margin_right = 10
+texture_margin_top = 10
+texture_margin_bottom = 11
+
+[sub_resource type="StyleBoxTexture" id="r1"]
+texture = ExtResource("t1")
+texture_margin_left = 7.5
+texture_margin_right = 7.5
+texture_margin_top = 6.75
+texture_margin_bottom = 6.75
+
+[sub_resource type="StyleBoxTexture" id="sb_tab_normal"]
+texture = ExtResource("t6")
+texture_margin_left = 0
+texture_margin_right = 0
+texture_margin_top = 0
+texture_margin_bottom = 0
+
+[sub_resource type="StyleBoxTexture" id="sb_tab_hover"]
+texture = ExtResource("t7")
+texture_margin_left = 0
+texture_margin_right = 0
+texture_margin_top = 0
+texture_margin_bottom = 0
+
+[sub_resource type="StyleBoxTexture" id="sb_tab_pressed"]
+texture = ExtResource("t9")
+texture_margin_left = 0
+texture_margin_right = 0
+texture_margin_top = 0
+texture_margin_bottom = 0
+
+[sub_resource type="StyleBoxTexture" id="sb_tab_disabled"]
+texture = ExtResource("t9")
+texture_margin_left = 0
+texture_margin_right = 0
+texture_margin_top = 0
+texture_margin_bottom = 0
+
+
+[node name="原版精英副本内容" type="Control"]
+custom_minimum_size = Vector2(500, 397)
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 500
+offset_bottom = 397
+
+[node name="内容底" type="Panel" parent="."]
+theme_override_styles/panel = SubResource("r0")
+layout_mode = 0
+offset_left = 5
+offset_top = 10
+offset_right = 493
+offset_bottom = 391
+
+[node name="子面板" type="Panel" parent="."]
+theme_override_styles/panel = SubResource("r1")
+layout_mode = 0
+offset_left = 11
+offset_top = 36
+offset_right = 489
+offset_bottom = 372
+
+[node name="格滚动" type="ScrollContainer" parent="."]
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 1
+layout_mode = 0
+offset_left = 11
+offset_top = 36
+offset_right = 489
+offset_bottom = 372
+
+[node name="格容器" type="Control" parent="格滚动"]
+custom_minimum_size = Vector2(478, 336)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 478
+offset_bottom = 336
+
+[node name="副本名" type="RichTextLabel" parent="."]
+bbcode_enabled = true
+text = "[color=#00ff00]守卫波之国大桥\n[color=#1e90ff]（20级）[/color][/color]"
+scroll_active = false
+autowrap_mode = 3
+horizontal_alignment = 1
+theme_override_constants/line_separation = 5
+mouse_filter = 2
+layout_mode = 0
+offset_left = 11
+offset_top = 63.0
+offset_right = 95
+offset_bottom = 119.0
+
+[node name="分页" type="Control" parent="."]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 17
+offset_top = 16
+offset_right = 297
+offset_bottom = 38
+
+[node name="页签0" type="Button" parent="分页"]
+theme_override_styles/normal = SubResource("sb_tab_normal")
+theme_override_styles/hover = SubResource("sb_tab_hover")
+theme_override_styles/pressed = SubResource("sb_tab_pressed")
+theme_override_styles/disabled = SubResource("sb_tab_disabled")
+text = "波之国"
+toggle_mode = true
+button_pressed = true
+disabled = true
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_disabled_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 70
+offset_bottom = 22
+
+[node name="页签1" type="Button" parent="分页"]
+theme_override_styles/normal = SubResource("sb_tab_normal")
+theme_override_styles/hover = SubResource("sb_tab_hover")
+theme_override_styles/pressed = SubResource("sb_tab_pressed")
+theme_override_styles/disabled = SubResource("sb_tab_disabled")
+text = "音忍五人众"
+toggle_mode = true
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_disabled_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+layout_mode = 0
+offset_left = 70
+offset_top = 0
+offset_right = 140
+offset_bottom = 22
+
+[node name="页签2" type="Button" parent="分页"]
+theme_override_styles/normal = SubResource("sb_tab_normal")
+theme_override_styles/hover = SubResource("sb_tab_hover")
+theme_override_styles/pressed = SubResource("sb_tab_pressed")
+theme_override_styles/disabled = SubResource("sb_tab_disabled")
+text = "【晓】之谜"
+toggle_mode = true
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_disabled_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+layout_mode = 0
+offset_left = 140
+offset_top = 0
+offset_right = 210
+offset_bottom = 22
+
+[node name="页签3" type="Button" parent="分页"]
+theme_override_styles/normal = SubResource("sb_tab_normal")
+theme_override_styles/hover = SubResource("sb_tab_hover")
+theme_override_styles/pressed = SubResource("sb_tab_pressed")
+theme_override_styles/disabled = SubResource("sb_tab_disabled")
+text = "挑战佩恩"
+toggle_mode = true
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_disabled_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+layout_mode = 0
+offset_left = 210
+offset_top = 0
+offset_right = 280
+offset_bottom = 22
+
+[node name="页0" type="Control" parent="格滚动/格容器"]
+custom_minimum_size = Vector2(478, 336)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 478
+offset_bottom = 336.0
+
+[node name="格1" type="Control" parent="格滚动/格容器/页0"]
+custom_minimum_size = Vector2(84, 124)
+mouse_filter = 0
+layout_mode = 0
+offset_left = 84
+offset_top = 5
+offset_right = 168
+offset_bottom = 129
+
+[node name="格底" type="TextureRect" parent="格滚动/格容器/页0/格1"]
+texture = ExtResource("t3")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 84
+offset_bottom = 81
+
+[node name="锁" type="TextureRect" parent="格滚动/格容器/页0/格1"]
+texture = ExtResource("t4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 84
+offset_bottom = 81
+
+[node name="选中底" type="TextureRect" parent="格滚动/格容器/页0/格1"]
+texture = ExtResource("t5")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 84
+offset_bottom = 81
+
+[node name="名" type="Label" parent="格滚动/格容器/页0/格1"]
+text = "木叶叛忍"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.988235, 0.717647, 0.6, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 84
+offset_right = 84
+offset_bottom = 102
+
+[node name="章节" type="Label" parent="格滚动/格容器/页0/格1"]
+text = "第1章"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 21
+offset_top = 64
+offset_right = 64
+offset_bottom = 82
+
+[node name="头像" type="TextureRect" parent="格滚动/格容器/页0/格1"]
+texture = ExtResource("p0")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 11.0
+offset_top = 5.0
+offset_right = 73.0
+offset_bottom = 67.0
+
+[node name="次数" type="Label" parent="格滚动/格容器/页0/格1"]
+text = "（0/3次）"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 100
+offset_right = 84
+offset_bottom = 120
+
+[node name="格2" type="Control" parent="格滚动/格容器/页0"]
+custom_minimum_size = Vector2(84, 124)
+mouse_filter = 0
+layout_mode = 0
+offset_left = 178
+offset_top = 5
+offset_right = 262
+offset_bottom = 129
+
+[node name="格底" type="TextureRect" parent="格滚动/格容器/页0/格2"]
+texture = ExtResource("t3")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 84
+offset_bottom = 81
+
+[node name="锁" type="TextureRect" parent="格滚动/格容器/页0/格2"]
+texture = ExtResource("t4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 84
+offset_bottom = 81
+
+[node name="选中底" type="TextureRect" parent="格滚动/格容器/页0/格2"]
+texture = ExtResource("t5")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 84
+offset_bottom = 81
+
+[node name="名" type="Label" parent="格滚动/格容器/页0/格2"]
+text = "雾忍暗杀者"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.988235, 0.717647, 0.6, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 84
+offset_right = 84
+offset_bottom = 102
+
+[node name="章节" type="Label" parent="格滚动/格容器/页0/格2"]
+text = "第2章"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 21
+offset_top = 64
+offset_right = 64
+offset_bottom = 82
+
+[node name="头像" type="TextureRect" parent="格滚动/格容器/页0/格2"]
+texture = ExtResource("p1")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 11.0
+offset_top = 5.0
+offset_right = 73.0
+offset_bottom = 67.0
+
+[node name="次数" type="Label" parent="格滚动/格容器/页0/格2"]
+text = "（0/3次）"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 100
+offset_right = 84
+offset_bottom = 120
+
+[node name="格3" type="Control" parent="格滚动/格容器/页0"]
+custom_minimum_size = Vector2(84, 124)
+mouse_filter = 0
+layout_mode = 0
+offset_left = 272
+offset_top = 5
+offset_right = 356
+offset_bottom = 129
+
+[node name="格底" type="TextureRect" parent="格滚动/格容器/页0/格3"]
+texture = ExtResource("t3")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 84
+offset_bottom = 81
+
+[node name="锁" type="TextureRect" parent="格滚动/格容器/页0/格3"]
+texture = ExtResource("t4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 84
+offset_bottom = 81
+
+[node name="选中底" type="TextureRect" parent="格滚动/格容器/页0/格3"]
+texture = ExtResource("t5")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 84
+offset_bottom = 81
+
+[node name="名" type="Label" parent="格滚动/格容器/页0/格3"]
+text = "桃地再不斩"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.988235, 0.717647, 0.6, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 84
+offset_right = 84
+offset_bottom = 102
+
+[node name="章节" type="Label" parent="格滚动/格容器/页0/格3"]
+text = "第3章"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 21
+offset_top = 64
+offset_right = 64
+offset_bottom = 82
+
+[node name="头像" type="TextureRect" parent="格滚动/格容器/页0/格3"]
+texture = ExtResource("p2")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 15.0
+offset_top = 10.0
+offset_right = 69.0
+offset_bottom = 64.0
+
+[node name="次数" type="Label" parent="格滚动/格容器/页0/格3"]
+text = "（0/3次）"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 100
+offset_right = 84
+offset_bottom = 120
+
+[node name="格4" type="Control" parent="格滚动/格容器/页0"]
+custom_minimum_size = Vector2(84, 124)
+mouse_filter = 0
+layout_mode = 0
+offset_left = 366
+offset_top = 5
+offset_right = 450
+offset_bottom = 129
+
+[node name="格底" type="TextureRect" parent="格滚动/格容器/页0/格4"]
+texture = ExtResource("t3")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 84
+offset_bottom = 81
+
+[node name="锁" type="TextureRect" parent="格滚动/格容器/页0/格4"]
+texture = ExtResource("t4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 84
+offset_bottom = 81
+
+[node name="选中底" type="TextureRect" parent="格滚动/格容器/页0/格4"]
+texture = ExtResource("t5")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 84
+offset_bottom = 81
+
+[node name="名" type="Label" parent="格滚动/格容器/页0/格4"]
+text = "白"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.988235, 0.717647, 0.6, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 84
+offset_right = 84
+offset_bottom = 102
+
+[node name="章节" type="Label" parent="格滚动/格容器/页0/格4"]
+text = "第4章"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 21
+offset_top = 64
+offset_right = 64
+offset_bottom = 82
+
+[node name="头像" type="TextureRect" parent="格滚动/格容器/页0/格4"]
+texture = ExtResource("p3")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 15.0
+offset_top = 11.0
+offset_right = 69.0
+offset_bottom = 64.0
+
+[node name="次数" type="Label" parent="格滚动/格容器/页0/格4"]
+text = "（0/3次）"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 100
+offset_right = 84
+offset_bottom = 120
+
+[node name="页1" type="Control" parent="格滚动/格容器"]
+custom_minimum_size = Vector2(478, 336)
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 478
+offset_bottom = 336.0
+
+[node name="线0" type="TextureRect" parent="格滚动/格容器/页1"]
+texture = ExtResource("t2")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 133
+offset_right = 478
+offset_bottom = 135
+
+[node name="格1" type="Control" parent="格滚动/格容器/页1"]
+custom_minimum_size = Vector2(84, 124)
+mouse_filter = 0
+layout_mode = 0
+offset_left = 84
+offset_top = 5
+offset_right = 168
+offset_bottom = 129
+
+[node name="格底" type="TextureRect" parent="格滚动/格容器/页1/格1"]
+texture = ExtResource("t3")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 84
+offset_bottom = 81
+
+[node name="锁" type="TextureRect" parent="格滚动/格容器/页1/格1"]
+texture = ExtResource("t4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 84
+offset_bottom = 81
+
+[node name="选中底" type="TextureRect" parent="格滚动/格容器/页1/格1"]
+texture = ExtResource("t5")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 84
+offset_bottom = 81
+
+[node name="名" type="Label" parent="格滚动/格容器/页1/格1"]
+text = "多由也"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.988235, 0.717647, 0.6, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 84
+offset_right = 84
+offset_bottom = 102
+
+[node name="章节" type="Label" parent="格滚动/格容器/页1/格1"]
+text = "第1章"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 21
+offset_top = 64
+offset_right = 64
+offset_bottom = 82
+
+[node name="头像" type="TextureRect" parent="格滚动/格容器/页1/格1"]
+texture = ExtResource("p4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 19.0
+offset_top = 9.0
+offset_right = 67.0
+offset_bottom = 63.0
+
+[node name="次数" type="Label" parent="格滚动/格容器/页1/格1"]
+text = "（0/3次）"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 100
+offset_right = 84
+offset_bottom = 120
+
+[node name="格2" type="Control" parent="格滚动/格容器/页1"]
+custom_minimum_size = Vector2(84, 124)
+mouse_filter = 0
+layout_mode = 0
+offset_left = 178
+offset_top = 5
+offset_right = 262
+offset_bottom = 129
+
+[node name="格底" type="TextureRect" parent="格滚动/格容器/页1/格2"]
+texture = ExtResource("t3")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 84
+offset_bottom = 81
+
+[node name="锁" type="TextureRect" parent="格滚动/格容器/页1/格2"]
+texture = ExtResource("t4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 84
+offset_bottom = 81
+
+[node name="选中底" type="TextureRect" parent="格滚动/格容器/页1/格2"]
+texture = ExtResource("t5")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 84
+offset_bottom = 81
+
+[node name="名" type="Label" parent="格滚动/格容器/页1/格2"]
+text = "鬼童丸"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.988235, 0.717647, 0.6, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 84
+offset_right = 84
+offset_bottom = 102
+
+[node name="章节" type="Label" parent="格滚动/格容器/页1/格2"]
+text = "第2章"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 21
+offset_top = 64
+offset_right = 64
+offset_bottom = 82
+
+[node name="头像" type="TextureRect" parent="格滚动/格容器/页1/格2"]
+texture = ExtResource("p5")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 20.0
+offset_top = 9.0
+offset_right = 61.0
+offset_bottom = 63.0
+
+[node name="次数" type="Label" parent="格滚动/格容器/页1/格2"]
+text = "（0/3次）"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 100
+offset_right = 84
+offset_bottom = 120
+
+[node name="格3" type="Control" parent="格滚动/格容器/页1"]
+custom_minimum_size = Vector2(84, 124)
+mouse_filter = 0
+layout_mode = 0
+offset_left = 272
+offset_top = 5
+offset_right = 356
+offset_bottom = 129
+
+[node name="格底" type="TextureRect" parent="格滚动/格容器/页1/格3"]
+texture = ExtResource("t3")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 84
+offset_bottom = 81
+
+[node name="锁" type="TextureRect" parent="格滚动/格容器/页1/格3"]
+texture = ExtResource("t4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 84
+offset_bottom = 81
+
+[node name="选中底" type="TextureRect" parent="格滚动/格容器/页1/格3"]
+texture = ExtResource("t5")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 84
+offset_bottom = 81
+
+[node name="名" type="Label" parent="格滚动/格容器/页1/格3"]
+text = "次郎坊"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.988235, 0.717647, 0.6, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 84
+offset_right = 84
+offset_bottom = 102
+
+[node name="章节" type="Label" parent="格滚动/格容器/页1/格3"]
+text = "第3章"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 21
+offset_top = 64
+offset_right = 64
+offset_bottom = 82
+
+[node name="头像" type="TextureRect" parent="格滚动/格容器/页1/格3"]
+texture = ExtResource("p6")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 18.0
+offset_top = 9.0
+offset_right = 62.0
+offset_bottom = 63.0
+
+[node name="次数" type="Label" parent="格滚动/格容器/页1/格3"]
+text = "（0/3次）"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 100
+offset_right = 84
+offset_bottom = 120
+
+[node name="格4" type="Control" parent="格滚动/格容器/页1"]
+custom_minimum_size = Vector2(84, 124)
+mouse_filter = 0
+layout_mode = 0
+offset_left = 366
+offset_top = 5
+offset_right = 450
+offset_bottom = 129
+
+[node name="格底" type="TextureRect" parent="格滚动/格容器/页1/格4"]
+texture = ExtResource("t3")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 84
+offset_bottom = 81
+
+[node name="锁" type="TextureRect" parent="格滚动/格容器/页1/格4"]
+texture = ExtResource("t4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 84
+offset_bottom = 81
+
+[node name="选中底" type="TextureRect" parent="格滚动/格容器/页1/格4"]
+texture = ExtResource("t5")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 84
+offset_bottom = 81
+
+[node name="名" type="Label" parent="格滚动/格容器/页1/格4"]
+text = "左近右近兄弟"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.988235, 0.717647, 0.6, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 84
+offset_right = 84
+offset_bottom = 102
+
+[node name="章节" type="Label" parent="格滚动/格容器/页1/格4"]
+text = "第4章"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 21
+offset_top = 64
+offset_right = 64
+offset_bottom = 82
+
+[node name="头像" type="TextureRect" parent="格滚动/格容器/页1/格4"]
+texture = ExtResource("p7")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 15.0
+offset_top = 12.0
+offset_right = 66.0
+offset_bottom = 63.0
+
+[node name="次数" type="Label" parent="格滚动/格容器/页1/格4"]
+text = "（0/3次）"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 100
+offset_right = 84
+offset_bottom = 120
+
+[node name="格5" type="Control" parent="格滚动/格容器/页1"]
+custom_minimum_size = Vector2(84, 124)
+mouse_filter = 0
+layout_mode = 0
+offset_left = 0
+offset_top = 143
+offset_right = 84
+offset_bottom = 267
+
+[node name="格底" type="TextureRect" parent="格滚动/格容器/页1/格5"]
+texture = ExtResource("t3")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 84
+offset_bottom = 81
+
+[node name="锁" type="TextureRect" parent="格滚动/格容器/页1/格5"]
+texture = ExtResource("t4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 84
+offset_bottom = 81
+
+[node name="选中底" type="TextureRect" parent="格滚动/格容器/页1/格5"]
+texture = ExtResource("t5")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 84
+offset_bottom = 81
+
+[node name="名" type="Label" parent="格滚动/格容器/页1/格5"]
+text = "君麻吕"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.988235, 0.717647, 0.6, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 84
+offset_right = 84
+offset_bottom = 102
+
+[node name="章节" type="Label" parent="格滚动/格容器/页1/格5"]
+text = "第5章"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 21
+offset_top = 64
+offset_right = 64
+offset_bottom = 82
+
+[node name="头像" type="TextureRect" parent="格滚动/格容器/页1/格5"]
+texture = ExtResource("p8")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 18.0
+offset_top = 8.0
+offset_right = 67.0
+offset_bottom = 62.0
+
+[node name="次数" type="Label" parent="格滚动/格容器/页1/格5"]
+text = "（0/3次）"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 100
+offset_right = 84
+offset_bottom = 120
+
+[node name="页2" type="Control" parent="格滚动/格容器"]
+custom_minimum_size = Vector2(478, 336)
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 478
+offset_bottom = 336.0
+
+[node name="线0" type="TextureRect" parent="格滚动/格容器/页2"]
+texture = ExtResource("t2")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 133
+offset_right = 478
+offset_bottom = 135
+
+[node name="格1" type="Control" parent="格滚动/格容器/页2"]
+custom_minimum_size = Vector2(84, 124)
+mouse_filter = 0
+layout_mode = 0
+offset_left = 84
+offset_top = 5
+offset_right = 168
+offset_bottom = 129
+
+[node name="格底" type="TextureRect" parent="格滚动/格容器/页2/格1"]
+texture = ExtResource("t3")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 84
+offset_bottom = 81
+
+[node name="锁" type="TextureRect" parent="格滚动/格容器/页2/格1"]
+texture = ExtResource("t4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 84
+offset_bottom = 81
+
+[node name="选中底" type="TextureRect" parent="格滚动/格容器/页2/格1"]
+texture = ExtResource("t5")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 84
+offset_bottom = 81
+
+[node name="名" type="Label" parent="格滚动/格容器/页2/格1"]
+text = "蝎"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.988235, 0.717647, 0.6, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 84
+offset_right = 84
+offset_bottom = 102
+
+[node name="章节" type="Label" parent="格滚动/格容器/页2/格1"]
+text = "第1章"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 21
+offset_top = 64
+offset_right = 64
+offset_bottom = 82
+
+[node name="头像" type="TextureRect" parent="格滚动/格容器/页2/格1"]
+texture = ExtResource("p9")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 14.0
+offset_top = 9.0
+offset_right = 68.0
+offset_bottom = 63.0
+
+[node name="次数" type="Label" parent="格滚动/格容器/页2/格1"]
+text = "（0/3次）"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 100
+offset_right = 84
+offset_bottom = 120
+
+[node name="格2" type="Control" parent="格滚动/格容器/页2"]
+custom_minimum_size = Vector2(84, 124)
+mouse_filter = 0
+layout_mode = 0
+offset_left = 178
+offset_top = 5
+offset_right = 262
+offset_bottom = 129
+
+[node name="格底" type="TextureRect" parent="格滚动/格容器/页2/格2"]
+texture = ExtResource("t3")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 84
+offset_bottom = 81
+
+[node name="锁" type="TextureRect" parent="格滚动/格容器/页2/格2"]
+texture = ExtResource("t4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 84
+offset_bottom = 81
+
+[node name="选中底" type="TextureRect" parent="格滚动/格容器/页2/格2"]
+texture = ExtResource("t5")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 84
+offset_bottom = 81
+
+[node name="名" type="Label" parent="格滚动/格容器/页2/格2"]
+text = "迪达拉"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.988235, 0.717647, 0.6, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 84
+offset_right = 84
+offset_bottom = 102
+
+[node name="章节" type="Label" parent="格滚动/格容器/页2/格2"]
+text = "第2章"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 21
+offset_top = 64
+offset_right = 64
+offset_bottom = 82
+
+[node name="头像" type="TextureRect" parent="格滚动/格容器/页2/格2"]
+texture = ExtResource("p10")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 14.0
+offset_top = 10.0
+offset_right = 65.0
+offset_bottom = 64.0
+
+[node name="次数" type="Label" parent="格滚动/格容器/页2/格2"]
+text = "（0/3次）"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 100
+offset_right = 84
+offset_bottom = 120
+
+[node name="格3" type="Control" parent="格滚动/格容器/页2"]
+custom_minimum_size = Vector2(84, 124)
+mouse_filter = 0
+layout_mode = 0
+offset_left = 272
+offset_top = 5
+offset_right = 356
+offset_bottom = 129
+
+[node name="格底" type="TextureRect" parent="格滚动/格容器/页2/格3"]
+texture = ExtResource("t3")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 84
+offset_bottom = 81
+
+[node name="锁" type="TextureRect" parent="格滚动/格容器/页2/格3"]
+texture = ExtResource("t4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 84
+offset_bottom = 81
+
+[node name="选中底" type="TextureRect" parent="格滚动/格容器/页2/格3"]
+texture = ExtResource("t5")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 84
+offset_bottom = 81
+
+[node name="名" type="Label" parent="格滚动/格容器/页2/格3"]
+text = "大蛇丸"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.988235, 0.717647, 0.6, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 84
+offset_right = 84
+offset_bottom = 102
+
+[node name="章节" type="Label" parent="格滚动/格容器/页2/格3"]
+text = "第3章"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 21
+offset_top = 64
+offset_right = 64
+offset_bottom = 82
+
+[node name="头像" type="TextureRect" parent="格滚动/格容器/页2/格3"]
+texture = ExtResource("p11")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 21.0
+offset_top = 10.0
+offset_right = 64.0
+offset_bottom = 62.0
+
+[node name="次数" type="Label" parent="格滚动/格容器/页2/格3"]
+text = "（0/3次）"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 100
+offset_right = 84
+offset_bottom = 120
+
+[node name="格4" type="Control" parent="格滚动/格容器/页2"]
+custom_minimum_size = Vector2(84, 124)
+mouse_filter = 0
+layout_mode = 0
+offset_left = 366
+offset_top = 5
+offset_right = 450
+offset_bottom = 129
+
+[node name="格底" type="TextureRect" parent="格滚动/格容器/页2/格4"]
+texture = ExtResource("t3")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 84
+offset_bottom = 81
+
+[node name="锁" type="TextureRect" parent="格滚动/格容器/页2/格4"]
+texture = ExtResource("t4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 84
+offset_bottom = 81
+
+[node name="选中底" type="TextureRect" parent="格滚动/格容器/页2/格4"]
+texture = ExtResource("t5")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 84
+offset_bottom = 81
+
+[node name="名" type="Label" parent="格滚动/格容器/页2/格4"]
+text = "宇智波鼬"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.988235, 0.717647, 0.6, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 84
+offset_right = 84
+offset_bottom = 102
+
+[node name="章节" type="Label" parent="格滚动/格容器/页2/格4"]
+text = "第4章"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 21
+offset_top = 64
+offset_right = 64
+offset_bottom = 82
+
+[node name="头像" type="TextureRect" parent="格滚动/格容器/页2/格4"]
+texture = ExtResource("p12")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 16.0
+offset_top = 13.0
+offset_right = 64.0
+offset_bottom = 63.0
+
+[node name="次数" type="Label" parent="格滚动/格容器/页2/格4"]
+text = "（0/3次）"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 100
+offset_right = 84
+offset_bottom = 120
+
+[node name="格5" type="Control" parent="格滚动/格容器/页2"]
+custom_minimum_size = Vector2(84, 124)
+mouse_filter = 0
+layout_mode = 0
+offset_left = 0
+offset_top = 143
+offset_right = 84
+offset_bottom = 267
+
+[node name="格底" type="TextureRect" parent="格滚动/格容器/页2/格5"]
+texture = ExtResource("t3")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 84
+offset_bottom = 81
+
+[node name="锁" type="TextureRect" parent="格滚动/格容器/页2/格5"]
+texture = ExtResource("t4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 84
+offset_bottom = 81
+
+[node name="选中底" type="TextureRect" parent="格滚动/格容器/页2/格5"]
+texture = ExtResource("t5")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 84
+offset_bottom = 81
+
+[node name="名" type="Label" parent="格滚动/格容器/页2/格5"]
+text = "佩恩六道"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.988235, 0.717647, 0.6, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 84
+offset_right = 84
+offset_bottom = 102
+
+[node name="章节" type="Label" parent="格滚动/格容器/页2/格5"]
+text = "第5章"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 21
+offset_top = 64
+offset_right = 64
+offset_bottom = 82
+
+[node name="头像" type="TextureRect" parent="格滚动/格容器/页2/格5"]
+texture = ExtResource("p13")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 16.0
+offset_top = 9.0
+offset_right = 67.0
+offset_bottom = 63.0
+
+[node name="次数" type="Label" parent="格滚动/格容器/页2/格5"]
+text = "（0/3次）"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 100
+offset_right = 84
+offset_bottom = 120
+
+[node name="页3" type="Control" parent="格滚动/格容器"]
+custom_minimum_size = Vector2(478, 336)
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 478
+offset_bottom = 336.0
+
+[node name="线0" type="TextureRect" parent="格滚动/格容器/页3"]
+texture = ExtResource("t2")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 133
+offset_right = 478
+offset_bottom = 135
+
+[node name="格1" type="Control" parent="格滚动/格容器/页3"]
+custom_minimum_size = Vector2(84, 124)
+mouse_filter = 0
+layout_mode = 0
+offset_left = 84
+offset_top = 5
+offset_right = 168
+offset_bottom = 129
+
+[node name="格底" type="TextureRect" parent="格滚动/格容器/页3/格1"]
+texture = ExtResource("t3")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 84
+offset_bottom = 81
+
+[node name="锁" type="TextureRect" parent="格滚动/格容器/页3/格1"]
+texture = ExtResource("t4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 84
+offset_bottom = 81
+
+[node name="选中底" type="TextureRect" parent="格滚动/格容器/页3/格1"]
+texture = ExtResource("t5")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 84
+offset_bottom = 81
+
+[node name="名" type="Label" parent="格滚动/格容器/页3/格1"]
+text = "人间道"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.988235, 0.717647, 0.6, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 84
+offset_right = 84
+offset_bottom = 102
+
+[node name="章节" type="Label" parent="格滚动/格容器/页3/格1"]
+text = "第1章"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 21
+offset_top = 64
+offset_right = 64
+offset_bottom = 82
+
+[node name="头像" type="TextureRect" parent="格滚动/格容器/页3/格1"]
+texture = ExtResource("p14")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 11.0
+offset_top = 5.0
+offset_right = 73.0
+offset_bottom = 67.0
+
+[node name="次数" type="Label" parent="格滚动/格容器/页3/格1"]
+text = "（0/3次）"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 100
+offset_right = 84
+offset_bottom = 120
+
+[node name="格2" type="Control" parent="格滚动/格容器/页3"]
+custom_minimum_size = Vector2(84, 124)
+mouse_filter = 0
+layout_mode = 0
+offset_left = 178
+offset_top = 5
+offset_right = 262
+offset_bottom = 129
+
+[node name="格底" type="TextureRect" parent="格滚动/格容器/页3/格2"]
+texture = ExtResource("t3")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 84
+offset_bottom = 81
+
+[node name="锁" type="TextureRect" parent="格滚动/格容器/页3/格2"]
+texture = ExtResource("t4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 84
+offset_bottom = 81
+
+[node name="选中底" type="TextureRect" parent="格滚动/格容器/页3/格2"]
+texture = ExtResource("t5")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 84
+offset_bottom = 81
+
+[node name="名" type="Label" parent="格滚动/格容器/页3/格2"]
+text = "修罗道"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.988235, 0.717647, 0.6, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 84
+offset_right = 84
+offset_bottom = 102
+
+[node name="章节" type="Label" parent="格滚动/格容器/页3/格2"]
+text = "第2章"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 21
+offset_top = 64
+offset_right = 64
+offset_bottom = 82
+
+[node name="头像" type="TextureRect" parent="格滚动/格容器/页3/格2"]
+texture = ExtResource("p15")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 11.0
+offset_top = 5.0
+offset_right = 73.0
+offset_bottom = 67.0
+
+[node name="次数" type="Label" parent="格滚动/格容器/页3/格2"]
+text = "（0/3次）"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 100
+offset_right = 84
+offset_bottom = 120
+
+[node name="格3" type="Control" parent="格滚动/格容器/页3"]
+custom_minimum_size = Vector2(84, 124)
+mouse_filter = 0
+layout_mode = 0
+offset_left = 272
+offset_top = 5
+offset_right = 356
+offset_bottom = 129
+
+[node name="格底" type="TextureRect" parent="格滚动/格容器/页3/格3"]
+texture = ExtResource("t3")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 84
+offset_bottom = 81
+
+[node name="锁" type="TextureRect" parent="格滚动/格容器/页3/格3"]
+texture = ExtResource("t4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 84
+offset_bottom = 81
+
+[node name="选中底" type="TextureRect" parent="格滚动/格容器/页3/格3"]
+texture = ExtResource("t5")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 84
+offset_bottom = 81
+
+[node name="名" type="Label" parent="格滚动/格容器/页3/格3"]
+text = "畜生道"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.988235, 0.717647, 0.6, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 84
+offset_right = 84
+offset_bottom = 102
+
+[node name="章节" type="Label" parent="格滚动/格容器/页3/格3"]
+text = "第3章"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 21
+offset_top = 64
+offset_right = 64
+offset_bottom = 82
+
+[node name="头像" type="TextureRect" parent="格滚动/格容器/页3/格3"]
+texture = ExtResource("p16")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 11.0
+offset_top = 5.0
+offset_right = 73.0
+offset_bottom = 67.0
+
+[node name="次数" type="Label" parent="格滚动/格容器/页3/格3"]
+text = "（0/3次）"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 100
+offset_right = 84
+offset_bottom = 120
+
+[node name="格4" type="Control" parent="格滚动/格容器/页3"]
+custom_minimum_size = Vector2(84, 124)
+mouse_filter = 0
+layout_mode = 0
+offset_left = 366
+offset_top = 5
+offset_right = 450
+offset_bottom = 129
+
+[node name="格底" type="TextureRect" parent="格滚动/格容器/页3/格4"]
+texture = ExtResource("t3")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 84
+offset_bottom = 81
+
+[node name="锁" type="TextureRect" parent="格滚动/格容器/页3/格4"]
+texture = ExtResource("t4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 84
+offset_bottom = 81
+
+[node name="选中底" type="TextureRect" parent="格滚动/格容器/页3/格4"]
+texture = ExtResource("t5")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 84
+offset_bottom = 81
+
+[node name="名" type="Label" parent="格滚动/格容器/页3/格4"]
+text = "饿鬼道"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.988235, 0.717647, 0.6, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 84
+offset_right = 84
+offset_bottom = 102
+
+[node name="章节" type="Label" parent="格滚动/格容器/页3/格4"]
+text = "第4章"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 21
+offset_top = 64
+offset_right = 64
+offset_bottom = 82
+
+[node name="头像" type="TextureRect" parent="格滚动/格容器/页3/格4"]
+texture = ExtResource("p17")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 11.0
+offset_top = 5.0
+offset_right = 73.0
+offset_bottom = 67.0
+
+[node name="次数" type="Label" parent="格滚动/格容器/页3/格4"]
+text = "（0/3次）"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 100
+offset_right = 84
+offset_bottom = 120
+
+[node name="格5" type="Control" parent="格滚动/格容器/页3"]
+custom_minimum_size = Vector2(84, 124)
+mouse_filter = 0
+layout_mode = 0
+offset_left = 0
+offset_top = 143
+offset_right = 84
+offset_bottom = 267
+
+[node name="格底" type="TextureRect" parent="格滚动/格容器/页3/格5"]
+texture = ExtResource("t3")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 84
+offset_bottom = 81
+
+[node name="锁" type="TextureRect" parent="格滚动/格容器/页3/格5"]
+texture = ExtResource("t4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 84
+offset_bottom = 81
+
+[node name="选中底" type="TextureRect" parent="格滚动/格容器/页3/格5"]
+texture = ExtResource("t5")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 84
+offset_bottom = 81
+
+[node name="名" type="Label" parent="格滚动/格容器/页3/格5"]
+text = "地狱道"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.988235, 0.717647, 0.6, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 84
+offset_right = 84
+offset_bottom = 102
+
+[node name="章节" type="Label" parent="格滚动/格容器/页3/格5"]
+text = "第5章"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 21
+offset_top = 64
+offset_right = 64
+offset_bottom = 82
+
+[node name="头像" type="TextureRect" parent="格滚动/格容器/页3/格5"]
+texture = ExtResource("p18")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 11.0
+offset_top = 5.0
+offset_right = 73.0
+offset_bottom = 67.0
+
+[node name="次数" type="Label" parent="格滚动/格容器/页3/格5"]
+text = "（0/3次）"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 100
+offset_right = 84
+offset_bottom = 120
+
+[node name="格6" type="Control" parent="格滚动/格容器/页3"]
+custom_minimum_size = Vector2(84, 124)
+mouse_filter = 0
+layout_mode = 0
+offset_left = 84
+offset_top = 143
+offset_right = 168
+offset_bottom = 267
+
+[node name="格底" type="TextureRect" parent="格滚动/格容器/页3/格6"]
+texture = ExtResource("t3")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 84
+offset_bottom = 81
+
+[node name="锁" type="TextureRect" parent="格滚动/格容器/页3/格6"]
+texture = ExtResource("t4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 84
+offset_bottom = 81
+
+[node name="选中底" type="TextureRect" parent="格滚动/格容器/页3/格6"]
+texture = ExtResource("t5")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 84
+offset_bottom = 81
+
+[node name="名" type="Label" parent="格滚动/格容器/页3/格6"]
+text = "天道"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.988235, 0.717647, 0.6, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 84
+offset_right = 84
+offset_bottom = 102
+
+[node name="章节" type="Label" parent="格滚动/格容器/页3/格6"]
+text = "第6章"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 21
+offset_top = 64
+offset_right = 64
+offset_bottom = 82
+
+[node name="头像" type="TextureRect" parent="格滚动/格容器/页3/格6"]
+texture = ExtResource("p13")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 16.0
+offset_top = 9.0
+offset_right = 67.0
+offset_bottom = 63.0
+
+[node name="次数" type="Label" parent="格滚动/格容器/页3/格6"]
+text = "（0/3次）"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 100
+offset_right = 84
+offset_bottom = 120
+
+[node name="格7" type="Control" parent="格滚动/格容器/页3"]
+custom_minimum_size = Vector2(84, 124)
+mouse_filter = 0
+layout_mode = 0
+offset_left = 178
+offset_top = 143
+offset_right = 262
+offset_bottom = 267
+
+[node name="格底" type="TextureRect" parent="格滚动/格容器/页3/格7"]
+texture = ExtResource("t3")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 84
+offset_bottom = 81
+
+[node name="锁" type="TextureRect" parent="格滚动/格容器/页3/格7"]
+texture = ExtResource("t4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 84
+offset_bottom = 81
+
+[node name="选中底" type="TextureRect" parent="格滚动/格容器/页3/格7"]
+texture = ExtResource("t5")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 84
+offset_bottom = 81
+
+[node name="名" type="Label" parent="格滚动/格容器/页3/格7"]
+text = "外道（长门）"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.988235, 0.717647, 0.6, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 84
+offset_right = 84
+offset_bottom = 102
+
+[node name="章节" type="Label" parent="格滚动/格容器/页3/格7"]
+text = "第7章"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 21
+offset_top = 64
+offset_right = 64
+offset_bottom = 82
+
+[node name="头像" type="TextureRect" parent="格滚动/格容器/页3/格7"]
+texture = ExtResource("p19")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 11.0
+offset_top = 5.0
+offset_right = 73.0
+offset_bottom = 67.0
+
+[node name="次数" type="Label" parent="格滚动/格容器/页3/格7"]
+text = "（0/3次）"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 100
+offset_right = 84
+offset_bottom = 120
+

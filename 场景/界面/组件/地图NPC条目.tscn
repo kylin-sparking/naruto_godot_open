@@ -1,0 +1,13 @@
+[gd_scene format=3]
+
+[node name="地图NPC条目" type="Button"]
+custom_minimum_size = Vector2(190, 22)
+offset_right = 190.0
+offset_bottom = 22.0
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 0.8, 0.4, 1)
+flat = true
+alignment = 0
+text = "NPC名称  [职业]"

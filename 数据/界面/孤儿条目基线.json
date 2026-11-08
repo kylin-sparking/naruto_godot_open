@@ -1,0 +1,158 @@
+{
+ "说明": "「表里有、代码没人读」的条目按前缀归组 + 为什么没读。判据见 测试/数据条目有主回归测试.gd：孤儿必须**全部**落进这张表，且每组必须**至少还命中一条**（接完了就要把组删掉）。",
+ "组": {
+  "Effect_": {
+   "理由": "原版战斗/副本/跨服/经脉/护送奖卡那一族特效（`Etc.mcEffect` + `MCFromDatDefine` 前缀链）。本工程范围是界面与按钮，这些**没有对应玩法可播**；要接战斗表现时再从这里取，别另导一份。",
+   "条数": 34,
+   "样例": [
+    "Effect_BellGuanHuan",
+    "Effect_BianYiGuanHuan",
+    "Effect_BossGuanHuan"
+   ]
+  },
+  "maiTong": {
+   "理由": "经脉图（`maiTong1..17`）。原版是点经脉界面的一串光效，本工程经脉界面未做。",
+   "条数": 40,
+   "样例": [
+    "maiTong1",
+    "maiTong10",
+    "maiTong11"
+   ]
+  },
+  "No": {
+   "理由": "品质底图 NoBlue/NoCri/NoRed/NoViolet 各 0/1（装备品质框的「无光」态）。本工程装备格品质框走的是 `原版皮肤表` 那套，不读这几条。",
+   "条数": 7,
+   "样例": [
+    "NoBlue0",
+    "NoBlue1",
+    "NoCri0"
+   ]
+  },
+  "bgFlags/": {
+   "理由": "背景层标记（`Etc.mcEffect.bgFlags`，挂机拾取/攻击旗标）。属挂机玩法。",
+   "条数": 3,
+   "样例": [
+    "bgFlags/0",
+    "bgFlags/1",
+    "bgFlags/2"
+   ]
+  },
+  "chest": {
+   "理由": "宝箱开合动画。本工程没有可拾取宝箱实体。",
+   "条数": 2,
+   "样例": [
+    "chest/0",
+    "chest/1"
+   ]
+  },
+  "aToAttack": {
+   "理由": "挂机引导「去攻击」指示箭头。属挂机玩法。",
+   "条数": 1,
+   "样例": [
+    "aToAttack"
+   ]
+  },
+  "cToPickup": {
+   "理由": "挂机引导「去拾取」指示箭头。属挂机玩法。",
+   "条数": 1,
+   "样例": [
+    "cToPickup"
+   ]
+  },
+  "flying": {
+   "理由": "飞行/坐骑位移特效。本工程没有飞行态。",
+   "条数": 1,
+   "样例": [
+    "flying"
+   ]
+  },
+  "jobChange": {
+   "理由": "转职光效。本工程转职走的是对话窗文案 + 属性刷新，没接这条帧。",
+   "条数": 1,
+   "样例": [
+    "jobChange"
+   ]
+  },
+  "mob": {
+   "理由": "原版挂在怪物身上的位移/BOSS 标（mobBianyi、mobBoss）。属战斗表现，本工程范围是界面。",
+   "条数": 1,
+   "样例": [
+    "mobBianyi"
+   ]
+  },
+  "player": {
+   "理由": "playerBulb 玩家身上的光球（治疗/护盾指示）。属战斗表现。",
+   "条数": 1,
+   "样例": [
+    "playerBulb"
+   ]
+  },
+  "quest": {
+   "理由": "questClear 任务完成的小标 —— 与在用的大横幅 `questOverTip` **不是同一张图**，别混。",
+   "条数": 1,
+   "样例": [
+    "questClear"
+   ]
+  },
+  "summoned": {
+   "理由": "召唤兽登场特效。属召唤玩法。",
+   "条数": 1,
+   "样例": [
+    "summoned"
+   ]
+  },
+  "teleport": {
+   "理由": "传送光效。本工程在用的是 `portalPH`/`portalPV` 那两条，这条没接。",
+   "条数": 1,
+   "样例": [
+    "teleport"
+   ]
+  },
+  "wang": {
+   "理由": "wangBossPic 王者 BOSS 图。属玩法，不在界面范围。",
+   "条数": 1,
+   "样例": [
+    "wangBossPic"
+   ]
+  },
+  "minimap_party": {
+   "理由": "小地图上的队友/队长点。本工程没有组队。",
+   "条数": 4,
+   "样例": [
+    "minimap_party_skin",
+    "minimap_partymaster_skin",
+    "minimap_party_skin",
+    "minimap_partymaster_skin"
+   ]
+  },
+  "minimap_friend": {
+   "理由": "小地图上的好友点。好友窗有、小地图联动没做。",
+   "条数": 2,
+   "样例": [
+    "minimap_friend_skin",
+    "minimap_friend_skin"
+   ]
+  },
+  "minimap_flag_": {
+   "理由": "小地图上的家族旗（红/蓝/黄）。本工程没有家族战领地。",
+   "条数": 6,
+   "样例": [
+    "minimap_flag_blueSkin",
+    "minimap_flag_redSkin",
+    "minimap_flag_yellowSkin",
+    "minimap_flag_blueSkin",
+    "minimap_flag_redSkin",
+    "minimap_flag_yellowSkin"
+   ]
+  },
+  "minimap_npc": {
+   "理由": "小地图上按 NPC 种类分的 8 枚普通点（`minimap_npc1..8_skin`）。本工程一律画 `minimap_npc_skin` 或任务态那三枚 ⇒ **未实现按职业分色**。",
+   "条数": 8,
+   "样例": [
+    "minimap_npc1_skin",
+    "minimap_npc2_skin",
+    "minimap_npc3_skin"
+   ]
+  }
+ }
+}

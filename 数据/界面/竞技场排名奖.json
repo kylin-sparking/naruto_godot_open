@@ -1,0 +1,4002 @@
+{
+"1": {
+"jingbi": 0,
+"yueli": 500000
+},
+"10": {
+"jingbi": 0,
+"yueli": 204750
+},
+"100": {
+"jingbi": 0,
+"yueli": 46500
+},
+"1000": {
+"jingbi": 0,
+"yueli": 5000
+},
+"101": {
+"jingbi": 0,
+"yueli": 46400
+},
+"102": {
+"jingbi": 0,
+"yueli": 46300
+},
+"103": {
+"jingbi": 0,
+"yueli": 46200
+},
+"104": {
+"jingbi": 0,
+"yueli": 46100
+},
+"105": {
+"jingbi": 0,
+"yueli": 46000
+},
+"106": {
+"jingbi": 0,
+"yueli": 45900
+},
+"107": {
+"jingbi": 0,
+"yueli": 45800
+},
+"108": {
+"jingbi": 0,
+"yueli": 45700
+},
+"109": {
+"jingbi": 0,
+"yueli": 45600
+},
+"11": {
+"jingbi": 0,
+"yueli": 175000
+},
+"110": {
+"jingbi": 0,
+"yueli": 45500
+},
+"111": {
+"jingbi": 0,
+"yueli": 45400
+},
+"112": {
+"jingbi": 0,
+"yueli": 45300
+},
+"113": {
+"jingbi": 0,
+"yueli": 45200
+},
+"114": {
+"jingbi": 0,
+"yueli": 45100
+},
+"115": {
+"jingbi": 0,
+"yueli": 45000
+},
+"116": {
+"jingbi": 0,
+"yueli": 44900
+},
+"117": {
+"jingbi": 0,
+"yueli": 44800
+},
+"118": {
+"jingbi": 0,
+"yueli": 44700
+},
+"119": {
+"jingbi": 0,
+"yueli": 44600
+},
+"12": {
+"jingbi": 0,
+"yueli": 165000
+},
+"120": {
+"jingbi": 0,
+"yueli": 44500
+},
+"121": {
+"jingbi": 0,
+"yueli": 44400
+},
+"122": {
+"jingbi": 0,
+"yueli": 44300
+},
+"123": {
+"jingbi": 0,
+"yueli": 44200
+},
+"124": {
+"jingbi": 0,
+"yueli": 44100
+},
+"125": {
+"jingbi": 0,
+"yueli": 44000
+},
+"126": {
+"jingbi": 0,
+"yueli": 43900
+},
+"127": {
+"jingbi": 0,
+"yueli": 43800
+},
+"128": {
+"jingbi": 0,
+"yueli": 43700
+},
+"129": {
+"jingbi": 0,
+"yueli": 43600
+},
+"13": {
+"jingbi": 0,
+"yueli": 155000
+},
+"130": {
+"jingbi": 0,
+"yueli": 43500
+},
+"131": {
+"jingbi": 0,
+"yueli": 43400
+},
+"132": {
+"jingbi": 0,
+"yueli": 43300
+},
+"133": {
+"jingbi": 0,
+"yueli": 43200
+},
+"134": {
+"jingbi": 0,
+"yueli": 43100
+},
+"135": {
+"jingbi": 0,
+"yueli": 43000
+},
+"136": {
+"jingbi": 0,
+"yueli": 42900
+},
+"137": {
+"jingbi": 0,
+"yueli": 42800
+},
+"138": {
+"jingbi": 0,
+"yueli": 42700
+},
+"139": {
+"jingbi": 0,
+"yueli": 42600
+},
+"14": {
+"jingbi": 0,
+"yueli": 145000
+},
+"140": {
+"jingbi": 0,
+"yueli": 42500
+},
+"141": {
+"jingbi": 0,
+"yueli": 42400
+},
+"142": {
+"jingbi": 0,
+"yueli": 42300
+},
+"143": {
+"jingbi": 0,
+"yueli": 42200
+},
+"144": {
+"jingbi": 0,
+"yueli": 42100
+},
+"145": {
+"jingbi": 0,
+"yueli": 42000
+},
+"146": {
+"jingbi": 0,
+"yueli": 41900
+},
+"147": {
+"jingbi": 0,
+"yueli": 41800
+},
+"148": {
+"jingbi": 0,
+"yueli": 41700
+},
+"149": {
+"jingbi": 0,
+"yueli": 41600
+},
+"15": {
+"jingbi": 0,
+"yueli": 135000
+},
+"150": {
+"jingbi": 0,
+"yueli": 41500
+},
+"151": {
+"jingbi": 0,
+"yueli": 41400
+},
+"152": {
+"jingbi": 0,
+"yueli": 41300
+},
+"153": {
+"jingbi": 0,
+"yueli": 41200
+},
+"154": {
+"jingbi": 0,
+"yueli": 41100
+},
+"155": {
+"jingbi": 0,
+"yueli": 41000
+},
+"156": {
+"jingbi": 0,
+"yueli": 40900
+},
+"157": {
+"jingbi": 0,
+"yueli": 40800
+},
+"158": {
+"jingbi": 0,
+"yueli": 40700
+},
+"159": {
+"jingbi": 0,
+"yueli": 40600
+},
+"16": {
+"jingbi": 0,
+"yueli": 114750
+},
+"160": {
+"jingbi": 0,
+"yueli": 40500
+},
+"161": {
+"jingbi": 0,
+"yueli": 40400
+},
+"162": {
+"jingbi": 0,
+"yueli": 40300
+},
+"163": {
+"jingbi": 0,
+"yueli": 40200
+},
+"164": {
+"jingbi": 0,
+"yueli": 40100
+},
+"165": {
+"jingbi": 0,
+"yueli": 40000
+},
+"166": {
+"jingbi": 0,
+"yueli": 39900
+},
+"167": {
+"jingbi": 0,
+"yueli": 39800
+},
+"168": {
+"jingbi": 0,
+"yueli": 39700
+},
+"169": {
+"jingbi": 0,
+"yueli": 39600
+},
+"17": {
+"jingbi": 0,
+"yueli": 109750
+},
+"170": {
+"jingbi": 0,
+"yueli": 39500
+},
+"171": {
+"jingbi": 0,
+"yueli": 39400
+},
+"172": {
+"jingbi": 0,
+"yueli": 39300
+},
+"173": {
+"jingbi": 0,
+"yueli": 39200
+},
+"174": {
+"jingbi": 0,
+"yueli": 39100
+},
+"175": {
+"jingbi": 0,
+"yueli": 39000
+},
+"176": {
+"jingbi": 0,
+"yueli": 38900
+},
+"177": {
+"jingbi": 0,
+"yueli": 38800
+},
+"178": {
+"jingbi": 0,
+"yueli": 38700
+},
+"179": {
+"jingbi": 0,
+"yueli": 38600
+},
+"18": {
+"jingbi": 0,
+"yueli": 104750
+},
+"180": {
+"jingbi": 0,
+"yueli": 38500
+},
+"181": {
+"jingbi": 0,
+"yueli": 38400
+},
+"182": {
+"jingbi": 0,
+"yueli": 38300
+},
+"183": {
+"jingbi": 0,
+"yueli": 38200
+},
+"184": {
+"jingbi": 0,
+"yueli": 38100
+},
+"185": {
+"jingbi": 0,
+"yueli": 38000
+},
+"186": {
+"jingbi": 0,
+"yueli": 37900
+},
+"187": {
+"jingbi": 0,
+"yueli": 37800
+},
+"188": {
+"jingbi": 0,
+"yueli": 37700
+},
+"189": {
+"jingbi": 0,
+"yueli": 37600
+},
+"19": {
+"jingbi": 0,
+"yueli": 99750
+},
+"190": {
+"jingbi": 0,
+"yueli": 37500
+},
+"191": {
+"jingbi": 0,
+"yueli": 37400
+},
+"192": {
+"jingbi": 0,
+"yueli": 37300
+},
+"193": {
+"jingbi": 0,
+"yueli": 37200
+},
+"194": {
+"jingbi": 0,
+"yueli": 37100
+},
+"195": {
+"jingbi": 0,
+"yueli": 37000
+},
+"196": {
+"jingbi": 0,
+"yueli": 36900
+},
+"197": {
+"jingbi": 0,
+"yueli": 36800
+},
+"198": {
+"jingbi": 0,
+"yueli": 36700
+},
+"199": {
+"jingbi": 0,
+"yueli": 36600
+},
+"2": {
+"jingbi": 0,
+"yueli": 425000
+},
+"20": {
+"jingbi": 0,
+"yueli": 94750
+},
+"200": {
+"jingbi": 0,
+"yueli": 36500
+},
+"201": {
+"jingbi": 0,
+"yueli": 36400
+},
+"202": {
+"jingbi": 0,
+"yueli": 36300
+},
+"203": {
+"jingbi": 0,
+"yueli": 36200
+},
+"204": {
+"jingbi": 0,
+"yueli": 36100
+},
+"205": {
+"jingbi": 0,
+"yueli": 36000
+},
+"206": {
+"jingbi": 0,
+"yueli": 35900
+},
+"207": {
+"jingbi": 0,
+"yueli": 35800
+},
+"208": {
+"jingbi": 0,
+"yueli": 35700
+},
+"209": {
+"jingbi": 0,
+"yueli": 35600
+},
+"21": {
+"jingbi": 0,
+"yueli": 80500
+},
+"210": {
+"jingbi": 0,
+"yueli": 35500
+},
+"211": {
+"jingbi": 0,
+"yueli": 35400
+},
+"212": {
+"jingbi": 0,
+"yueli": 35300
+},
+"213": {
+"jingbi": 0,
+"yueli": 35200
+},
+"214": {
+"jingbi": 0,
+"yueli": 35100
+},
+"215": {
+"jingbi": 0,
+"yueli": 35000
+},
+"216": {
+"jingbi": 0,
+"yueli": 34900
+},
+"217": {
+"jingbi": 0,
+"yueli": 34800
+},
+"218": {
+"jingbi": 0,
+"yueli": 34700
+},
+"219": {
+"jingbi": 0,
+"yueli": 34600
+},
+"22": {
+"jingbi": 0,
+"yueli": 79500
+},
+"220": {
+"jingbi": 0,
+"yueli": 34500
+},
+"221": {
+"jingbi": 0,
+"yueli": 34400
+},
+"222": {
+"jingbi": 0,
+"yueli": 34300
+},
+"223": {
+"jingbi": 0,
+"yueli": 34200
+},
+"224": {
+"jingbi": 0,
+"yueli": 34100
+},
+"225": {
+"jingbi": 0,
+"yueli": 34000
+},
+"226": {
+"jingbi": 0,
+"yueli": 33900
+},
+"227": {
+"jingbi": 0,
+"yueli": 33800
+},
+"228": {
+"jingbi": 0,
+"yueli": 33700
+},
+"229": {
+"jingbi": 0,
+"yueli": 33600
+},
+"23": {
+"jingbi": 0,
+"yueli": 78500
+},
+"230": {
+"jingbi": 0,
+"yueli": 33500
+},
+"231": {
+"jingbi": 0,
+"yueli": 33400
+},
+"232": {
+"jingbi": 0,
+"yueli": 33300
+},
+"233": {
+"jingbi": 0,
+"yueli": 33200
+},
+"234": {
+"jingbi": 0,
+"yueli": 33100
+},
+"235": {
+"jingbi": 0,
+"yueli": 33000
+},
+"236": {
+"jingbi": 0,
+"yueli": 32900
+},
+"237": {
+"jingbi": 0,
+"yueli": 32800
+},
+"238": {
+"jingbi": 0,
+"yueli": 32700
+},
+"239": {
+"jingbi": 0,
+"yueli": 32600
+},
+"24": {
+"jingbi": 0,
+"yueli": 77500
+},
+"240": {
+"jingbi": 0,
+"yueli": 32500
+},
+"241": {
+"jingbi": 0,
+"yueli": 32400
+},
+"242": {
+"jingbi": 0,
+"yueli": 32300
+},
+"243": {
+"jingbi": 0,
+"yueli": 32200
+},
+"244": {
+"jingbi": 0,
+"yueli": 32100
+},
+"245": {
+"jingbi": 0,
+"yueli": 32000
+},
+"246": {
+"jingbi": 0,
+"yueli": 31900
+},
+"247": {
+"jingbi": 0,
+"yueli": 31800
+},
+"248": {
+"jingbi": 0,
+"yueli": 31700
+},
+"249": {
+"jingbi": 0,
+"yueli": 31600
+},
+"25": {
+"jingbi": 0,
+"yueli": 76500
+},
+"250": {
+"jingbi": 0,
+"yueli": 31500
+},
+"251": {
+"jingbi": 0,
+"yueli": 31400
+},
+"252": {
+"jingbi": 0,
+"yueli": 31300
+},
+"253": {
+"jingbi": 0,
+"yueli": 31200
+},
+"254": {
+"jingbi": 0,
+"yueli": 31100
+},
+"255": {
+"jingbi": 0,
+"yueli": 31000
+},
+"256": {
+"jingbi": 0,
+"yueli": 30900
+},
+"257": {
+"jingbi": 0,
+"yueli": 30800
+},
+"258": {
+"jingbi": 0,
+"yueli": 30700
+},
+"259": {
+"jingbi": 0,
+"yueli": 30600
+},
+"26": {
+"jingbi": 0,
+"yueli": 75500
+},
+"260": {
+"jingbi": 0,
+"yueli": 30500
+},
+"261": {
+"jingbi": 0,
+"yueli": 30400
+},
+"262": {
+"jingbi": 0,
+"yueli": 30300
+},
+"263": {
+"jingbi": 0,
+"yueli": 30200
+},
+"264": {
+"jingbi": 0,
+"yueli": 30100
+},
+"265": {
+"jingbi": 0,
+"yueli": 30000
+},
+"266": {
+"jingbi": 0,
+"yueli": 29900
+},
+"267": {
+"jingbi": 0,
+"yueli": 29800
+},
+"268": {
+"jingbi": 0,
+"yueli": 29700
+},
+"269": {
+"jingbi": 0,
+"yueli": 29600
+},
+"27": {
+"jingbi": 0,
+"yueli": 74500
+},
+"270": {
+"jingbi": 0,
+"yueli": 29500
+},
+"271": {
+"jingbi": 0,
+"yueli": 29400
+},
+"272": {
+"jingbi": 0,
+"yueli": 29300
+},
+"273": {
+"jingbi": 0,
+"yueli": 29200
+},
+"274": {
+"jingbi": 0,
+"yueli": 29100
+},
+"275": {
+"jingbi": 0,
+"yueli": 29000
+},
+"276": {
+"jingbi": 0,
+"yueli": 28900
+},
+"277": {
+"jingbi": 0,
+"yueli": 28800
+},
+"278": {
+"jingbi": 0,
+"yueli": 28700
+},
+"279": {
+"jingbi": 0,
+"yueli": 28600
+},
+"28": {
+"jingbi": 0,
+"yueli": 73500
+},
+"280": {
+"jingbi": 0,
+"yueli": 28500
+},
+"281": {
+"jingbi": 0,
+"yueli": 28400
+},
+"282": {
+"jingbi": 0,
+"yueli": 28300
+},
+"283": {
+"jingbi": 0,
+"yueli": 28200
+},
+"284": {
+"jingbi": 0,
+"yueli": 28100
+},
+"285": {
+"jingbi": 0,
+"yueli": 28000
+},
+"286": {
+"jingbi": 0,
+"yueli": 27900
+},
+"287": {
+"jingbi": 0,
+"yueli": 27800
+},
+"288": {
+"jingbi": 0,
+"yueli": 27700
+},
+"289": {
+"jingbi": 0,
+"yueli": 27600
+},
+"29": {
+"jingbi": 0,
+"yueli": 72500
+},
+"290": {
+"jingbi": 0,
+"yueli": 27500
+},
+"291": {
+"jingbi": 0,
+"yueli": 27400
+},
+"292": {
+"jingbi": 0,
+"yueli": 27300
+},
+"293": {
+"jingbi": 0,
+"yueli": 27200
+},
+"294": {
+"jingbi": 0,
+"yueli": 27100
+},
+"295": {
+"jingbi": 0,
+"yueli": 27000
+},
+"296": {
+"jingbi": 0,
+"yueli": 26900
+},
+"297": {
+"jingbi": 0,
+"yueli": 26800
+},
+"298": {
+"jingbi": 0,
+"yueli": 26700
+},
+"299": {
+"jingbi": 0,
+"yueli": 26600
+},
+"3": {
+"jingbi": 0,
+"yueli": 395000
+},
+"30": {
+"jingbi": 0,
+"yueli": 71500
+},
+"300": {
+"jingbi": 0,
+"yueli": 26500
+},
+"301": {
+"jingbi": 0,
+"yueli": 26400
+},
+"302": {
+"jingbi": 0,
+"yueli": 26300
+},
+"303": {
+"jingbi": 0,
+"yueli": 26200
+},
+"304": {
+"jingbi": 0,
+"yueli": 26100
+},
+"305": {
+"jingbi": 0,
+"yueli": 26000
+},
+"306": {
+"jingbi": 0,
+"yueli": 25900
+},
+"307": {
+"jingbi": 0,
+"yueli": 25800
+},
+"308": {
+"jingbi": 0,
+"yueli": 25700
+},
+"309": {
+"jingbi": 0,
+"yueli": 25600
+},
+"31": {
+"jingbi": 0,
+"yueli": 70500
+},
+"310": {
+"jingbi": 0,
+"yueli": 25500
+},
+"311": {
+"jingbi": 0,
+"yueli": 25400
+},
+"312": {
+"jingbi": 0,
+"yueli": 25300
+},
+"313": {
+"jingbi": 0,
+"yueli": 25200
+},
+"314": {
+"jingbi": 0,
+"yueli": 25100
+},
+"315": {
+"jingbi": 0,
+"yueli": 25000
+},
+"316": {
+"jingbi": 0,
+"yueli": 24900
+},
+"317": {
+"jingbi": 0,
+"yueli": 24800
+},
+"318": {
+"jingbi": 0,
+"yueli": 24700
+},
+"319": {
+"jingbi": 0,
+"yueli": 24600
+},
+"32": {
+"jingbi": 0,
+"yueli": 69500
+},
+"320": {
+"jingbi": 0,
+"yueli": 24500
+},
+"321": {
+"jingbi": 0,
+"yueli": 24400
+},
+"322": {
+"jingbi": 0,
+"yueli": 24300
+},
+"323": {
+"jingbi": 0,
+"yueli": 24200
+},
+"324": {
+"jingbi": 0,
+"yueli": 24100
+},
+"325": {
+"jingbi": 0,
+"yueli": 24000
+},
+"326": {
+"jingbi": 0,
+"yueli": 23900
+},
+"327": {
+"jingbi": 0,
+"yueli": 23800
+},
+"328": {
+"jingbi": 0,
+"yueli": 23700
+},
+"329": {
+"jingbi": 0,
+"yueli": 23600
+},
+"33": {
+"jingbi": 0,
+"yueli": 68500
+},
+"330": {
+"jingbi": 0,
+"yueli": 23500
+},
+"331": {
+"jingbi": 0,
+"yueli": 23400
+},
+"332": {
+"jingbi": 0,
+"yueli": 23300
+},
+"333": {
+"jingbi": 0,
+"yueli": 23200
+},
+"334": {
+"jingbi": 0,
+"yueli": 23100
+},
+"335": {
+"jingbi": 0,
+"yueli": 23000
+},
+"336": {
+"jingbi": 0,
+"yueli": 22900
+},
+"337": {
+"jingbi": 0,
+"yueli": 22800
+},
+"338": {
+"jingbi": 0,
+"yueli": 22700
+},
+"339": {
+"jingbi": 0,
+"yueli": 22600
+},
+"34": {
+"jingbi": 0,
+"yueli": 67500
+},
+"340": {
+"jingbi": 0,
+"yueli": 22500
+},
+"341": {
+"jingbi": 0,
+"yueli": 22400
+},
+"342": {
+"jingbi": 0,
+"yueli": 22300
+},
+"343": {
+"jingbi": 0,
+"yueli": 22200
+},
+"344": {
+"jingbi": 0,
+"yueli": 22100
+},
+"345": {
+"jingbi": 0,
+"yueli": 22000
+},
+"346": {
+"jingbi": 0,
+"yueli": 21900
+},
+"347": {
+"jingbi": 0,
+"yueli": 21800
+},
+"348": {
+"jingbi": 0,
+"yueli": 21700
+},
+"349": {
+"jingbi": 0,
+"yueli": 21600
+},
+"35": {
+"jingbi": 0,
+"yueli": 66500
+},
+"350": {
+"jingbi": 0,
+"yueli": 21500
+},
+"351": {
+"jingbi": 0,
+"yueli": 21400
+},
+"352": {
+"jingbi": 0,
+"yueli": 21300
+},
+"353": {
+"jingbi": 0,
+"yueli": 21200
+},
+"354": {
+"jingbi": 0,
+"yueli": 21100
+},
+"355": {
+"jingbi": 0,
+"yueli": 21000
+},
+"356": {
+"jingbi": 0,
+"yueli": 20900
+},
+"357": {
+"jingbi": 0,
+"yueli": 20800
+},
+"358": {
+"jingbi": 0,
+"yueli": 20700
+},
+"359": {
+"jingbi": 0,
+"yueli": 20600
+},
+"36": {
+"jingbi": 0,
+"yueli": 65500
+},
+"360": {
+"jingbi": 0,
+"yueli": 20500
+},
+"361": {
+"jingbi": 0,
+"yueli": 20400
+},
+"362": {
+"jingbi": 0,
+"yueli": 20300
+},
+"363": {
+"jingbi": 0,
+"yueli": 20200
+},
+"364": {
+"jingbi": 0,
+"yueli": 20100
+},
+"365": {
+"jingbi": 0,
+"yueli": 20000
+},
+"366": {
+"jingbi": 0,
+"yueli": 19900
+},
+"367": {
+"jingbi": 0,
+"yueli": 19800
+},
+"368": {
+"jingbi": 0,
+"yueli": 19700
+},
+"369": {
+"jingbi": 0,
+"yueli": 19600
+},
+"37": {
+"jingbi": 0,
+"yueli": 64500
+},
+"370": {
+"jingbi": 0,
+"yueli": 19500
+},
+"371": {
+"jingbi": 0,
+"yueli": 19400
+},
+"372": {
+"jingbi": 0,
+"yueli": 19300
+},
+"373": {
+"jingbi": 0,
+"yueli": 19200
+},
+"374": {
+"jingbi": 0,
+"yueli": 19100
+},
+"375": {
+"jingbi": 0,
+"yueli": 19000
+},
+"376": {
+"jingbi": 0,
+"yueli": 18900
+},
+"377": {
+"jingbi": 0,
+"yueli": 18800
+},
+"378": {
+"jingbi": 0,
+"yueli": 18700
+},
+"379": {
+"jingbi": 0,
+"yueli": 18600
+},
+"38": {
+"jingbi": 0,
+"yueli": 63500
+},
+"380": {
+"jingbi": 0,
+"yueli": 18500
+},
+"381": {
+"jingbi": 0,
+"yueli": 18400
+},
+"382": {
+"jingbi": 0,
+"yueli": 18300
+},
+"383": {
+"jingbi": 0,
+"yueli": 18200
+},
+"384": {
+"jingbi": 0,
+"yueli": 18100
+},
+"385": {
+"jingbi": 0,
+"yueli": 18000
+},
+"386": {
+"jingbi": 0,
+"yueli": 17900
+},
+"387": {
+"jingbi": 0,
+"yueli": 17800
+},
+"388": {
+"jingbi": 0,
+"yueli": 17700
+},
+"389": {
+"jingbi": 0,
+"yueli": 17600
+},
+"39": {
+"jingbi": 0,
+"yueli": 62500
+},
+"390": {
+"jingbi": 0,
+"yueli": 17500
+},
+"391": {
+"jingbi": 0,
+"yueli": 17400
+},
+"392": {
+"jingbi": 0,
+"yueli": 17300
+},
+"393": {
+"jingbi": 0,
+"yueli": 17200
+},
+"394": {
+"jingbi": 0,
+"yueli": 17100
+},
+"395": {
+"jingbi": 0,
+"yueli": 17000
+},
+"396": {
+"jingbi": 0,
+"yueli": 16900
+},
+"397": {
+"jingbi": 0,
+"yueli": 16800
+},
+"398": {
+"jingbi": 0,
+"yueli": 16700
+},
+"399": {
+"jingbi": 0,
+"yueli": 16600
+},
+"4": {
+"jingbi": 0,
+"yueli": 365000
+},
+"40": {
+"jingbi": 0,
+"yueli": 61500
+},
+"400": {
+"jingbi": 0,
+"yueli": 16500
+},
+"401": {
+"jingbi": 0,
+"yueli": 16400
+},
+"402": {
+"jingbi": 0,
+"yueli": 16300
+},
+"403": {
+"jingbi": 0,
+"yueli": 16200
+},
+"404": {
+"jingbi": 0,
+"yueli": 16100
+},
+"405": {
+"jingbi": 0,
+"yueli": 16000
+},
+"406": {
+"jingbi": 0,
+"yueli": 15900
+},
+"407": {
+"jingbi": 0,
+"yueli": 15800
+},
+"408": {
+"jingbi": 0,
+"yueli": 15700
+},
+"409": {
+"jingbi": 0,
+"yueli": 15600
+},
+"41": {
+"jingbi": 0,
+"yueli": 60500
+},
+"410": {
+"jingbi": 0,
+"yueli": 15500
+},
+"411": {
+"jingbi": 0,
+"yueli": 15400
+},
+"412": {
+"jingbi": 0,
+"yueli": 15300
+},
+"413": {
+"jingbi": 0,
+"yueli": 15200
+},
+"414": {
+"jingbi": 0,
+"yueli": 15100
+},
+"415": {
+"jingbi": 0,
+"yueli": 15000
+},
+"416": {
+"jingbi": 0,
+"yueli": 14900
+},
+"417": {
+"jingbi": 0,
+"yueli": 14800
+},
+"418": {
+"jingbi": 0,
+"yueli": 14700
+},
+"419": {
+"jingbi": 0,
+"yueli": 14600
+},
+"42": {
+"jingbi": 0,
+"yueli": 59500
+},
+"420": {
+"jingbi": 0,
+"yueli": 14500
+},
+"421": {
+"jingbi": 0,
+"yueli": 14400
+},
+"422": {
+"jingbi": 0,
+"yueli": 14300
+},
+"423": {
+"jingbi": 0,
+"yueli": 14200
+},
+"424": {
+"jingbi": 0,
+"yueli": 14100
+},
+"425": {
+"jingbi": 0,
+"yueli": 14000
+},
+"426": {
+"jingbi": 0,
+"yueli": 13900
+},
+"427": {
+"jingbi": 0,
+"yueli": 13800
+},
+"428": {
+"jingbi": 0,
+"yueli": 13700
+},
+"429": {
+"jingbi": 0,
+"yueli": 13600
+},
+"43": {
+"jingbi": 0,
+"yueli": 58500
+},
+"430": {
+"jingbi": 0,
+"yueli": 13500
+},
+"431": {
+"jingbi": 0,
+"yueli": 13400
+},
+"432": {
+"jingbi": 0,
+"yueli": 13300
+},
+"433": {
+"jingbi": 0,
+"yueli": 13200
+},
+"434": {
+"jingbi": 0,
+"yueli": 13100
+},
+"435": {
+"jingbi": 0,
+"yueli": 13000
+},
+"436": {
+"jingbi": 0,
+"yueli": 12900
+},
+"437": {
+"jingbi": 0,
+"yueli": 12800
+},
+"438": {
+"jingbi": 0,
+"yueli": 12700
+},
+"439": {
+"jingbi": 0,
+"yueli": 12600
+},
+"44": {
+"jingbi": 0,
+"yueli": 57500
+},
+"440": {
+"jingbi": 0,
+"yueli": 12500
+},
+"441": {
+"jingbi": 0,
+"yueli": 12400
+},
+"442": {
+"jingbi": 0,
+"yueli": 12300
+},
+"443": {
+"jingbi": 0,
+"yueli": 12200
+},
+"444": {
+"jingbi": 0,
+"yueli": 12100
+},
+"445": {
+"jingbi": 0,
+"yueli": 12000
+},
+"446": {
+"jingbi": 0,
+"yueli": 11900
+},
+"447": {
+"jingbi": 0,
+"yueli": 11800
+},
+"448": {
+"jingbi": 0,
+"yueli": 11700
+},
+"449": {
+"jingbi": 0,
+"yueli": 11600
+},
+"45": {
+"jingbi": 0,
+"yueli": 56500
+},
+"450": {
+"jingbi": 0,
+"yueli": 11500
+},
+"451": {
+"jingbi": 0,
+"yueli": 11400
+},
+"452": {
+"jingbi": 0,
+"yueli": 11300
+},
+"453": {
+"jingbi": 0,
+"yueli": 11200
+},
+"454": {
+"jingbi": 0,
+"yueli": 11100
+},
+"455": {
+"jingbi": 0,
+"yueli": 11000
+},
+"456": {
+"jingbi": 0,
+"yueli": 10900
+},
+"457": {
+"jingbi": 0,
+"yueli": 10800
+},
+"458": {
+"jingbi": 0,
+"yueli": 10700
+},
+"459": {
+"jingbi": 0,
+"yueli": 10600
+},
+"46": {
+"jingbi": 0,
+"yueli": 55500
+},
+"460": {
+"jingbi": 0,
+"yueli": 10500
+},
+"461": {
+"jingbi": 0,
+"yueli": 10400
+},
+"462": {
+"jingbi": 0,
+"yueli": 10300
+},
+"463": {
+"jingbi": 0,
+"yueli": 10200
+},
+"464": {
+"jingbi": 0,
+"yueli": 10100
+},
+"465": {
+"jingbi": 0,
+"yueli": 10000
+},
+"466": {
+"jingbi": 0,
+"yueli": 9900
+},
+"467": {
+"jingbi": 0,
+"yueli": 9800
+},
+"468": {
+"jingbi": 0,
+"yueli": 9700
+},
+"469": {
+"jingbi": 0,
+"yueli": 9600
+},
+"47": {
+"jingbi": 0,
+"yueli": 54500
+},
+"470": {
+"jingbi": 0,
+"yueli": 9500
+},
+"471": {
+"jingbi": 0,
+"yueli": 9400
+},
+"472": {
+"jingbi": 0,
+"yueli": 9300
+},
+"473": {
+"jingbi": 0,
+"yueli": 9200
+},
+"474": {
+"jingbi": 0,
+"yueli": 9100
+},
+"475": {
+"jingbi": 0,
+"yueli": 9000
+},
+"476": {
+"jingbi": 0,
+"yueli": 8900
+},
+"477": {
+"jingbi": 0,
+"yueli": 8800
+},
+"478": {
+"jingbi": 0,
+"yueli": 8700
+},
+"479": {
+"jingbi": 0,
+"yueli": 8600
+},
+"48": {
+"jingbi": 0,
+"yueli": 53500
+},
+"480": {
+"jingbi": 0,
+"yueli": 8500
+},
+"481": {
+"jingbi": 0,
+"yueli": 8400
+},
+"482": {
+"jingbi": 0,
+"yueli": 8300
+},
+"483": {
+"jingbi": 0,
+"yueli": 8200
+},
+"484": {
+"jingbi": 0,
+"yueli": 8100
+},
+"485": {
+"jingbi": 0,
+"yueli": 8000
+},
+"486": {
+"jingbi": 0,
+"yueli": 7900
+},
+"487": {
+"jingbi": 0,
+"yueli": 7800
+},
+"488": {
+"jingbi": 0,
+"yueli": 7700
+},
+"489": {
+"jingbi": 0,
+"yueli": 7600
+},
+"49": {
+"jingbi": 0,
+"yueli": 52500
+},
+"490": {
+"jingbi": 0,
+"yueli": 7500
+},
+"491": {
+"jingbi": 0,
+"yueli": 7400
+},
+"492": {
+"jingbi": 0,
+"yueli": 7300
+},
+"493": {
+"jingbi": 0,
+"yueli": 7200
+},
+"494": {
+"jingbi": 0,
+"yueli": 7100
+},
+"495": {
+"jingbi": 0,
+"yueli": 7000
+},
+"496": {
+"jingbi": 0,
+"yueli": 6900
+},
+"497": {
+"jingbi": 0,
+"yueli": 6800
+},
+"498": {
+"jingbi": 0,
+"yueli": 6700
+},
+"499": {
+"jingbi": 0,
+"yueli": 6600
+},
+"5": {
+"jingbi": 0,
+"yueli": 335000
+},
+"50": {
+"jingbi": 0,
+"yueli": 51500
+},
+"500": {
+"jingbi": 0,
+"yueli": 5000
+},
+"501": {
+"jingbi": 0,
+"yueli": 5000
+},
+"502": {
+"jingbi": 0,
+"yueli": 5000
+},
+"503": {
+"jingbi": 0,
+"yueli": 5000
+},
+"504": {
+"jingbi": 0,
+"yueli": 5000
+},
+"505": {
+"jingbi": 0,
+"yueli": 5000
+},
+"506": {
+"jingbi": 0,
+"yueli": 5000
+},
+"507": {
+"jingbi": 0,
+"yueli": 5000
+},
+"508": {
+"jingbi": 0,
+"yueli": 5000
+},
+"509": {
+"jingbi": 0,
+"yueli": 5000
+},
+"51": {
+"jingbi": 0,
+"yueli": 51400
+},
+"510": {
+"jingbi": 0,
+"yueli": 5000
+},
+"511": {
+"jingbi": 0,
+"yueli": 5000
+},
+"512": {
+"jingbi": 0,
+"yueli": 5000
+},
+"513": {
+"jingbi": 0,
+"yueli": 5000
+},
+"514": {
+"jingbi": 0,
+"yueli": 5000
+},
+"515": {
+"jingbi": 0,
+"yueli": 5000
+},
+"516": {
+"jingbi": 0,
+"yueli": 5000
+},
+"517": {
+"jingbi": 0,
+"yueli": 5000
+},
+"518": {
+"jingbi": 0,
+"yueli": 5000
+},
+"519": {
+"jingbi": 0,
+"yueli": 5000
+},
+"52": {
+"jingbi": 0,
+"yueli": 51300
+},
+"520": {
+"jingbi": 0,
+"yueli": 5000
+},
+"521": {
+"jingbi": 0,
+"yueli": 5000
+},
+"522": {
+"jingbi": 0,
+"yueli": 5000
+},
+"523": {
+"jingbi": 0,
+"yueli": 5000
+},
+"524": {
+"jingbi": 0,
+"yueli": 5000
+},
+"525": {
+"jingbi": 0,
+"yueli": 5000
+},
+"526": {
+"jingbi": 0,
+"yueli": 5000
+},
+"527": {
+"jingbi": 0,
+"yueli": 5000
+},
+"528": {
+"jingbi": 0,
+"yueli": 5000
+},
+"529": {
+"jingbi": 0,
+"yueli": 5000
+},
+"53": {
+"jingbi": 0,
+"yueli": 51200
+},
+"530": {
+"jingbi": 0,
+"yueli": 5000
+},
+"531": {
+"jingbi": 0,
+"yueli": 5000
+},
+"532": {
+"jingbi": 0,
+"yueli": 5000
+},
+"533": {
+"jingbi": 0,
+"yueli": 5000
+},
+"534": {
+"jingbi": 0,
+"yueli": 5000
+},
+"535": {
+"jingbi": 0,
+"yueli": 5000
+},
+"536": {
+"jingbi": 0,
+"yueli": 5000
+},
+"537": {
+"jingbi": 0,
+"yueli": 5000
+},
+"538": {
+"jingbi": 0,
+"yueli": 5000
+},
+"539": {
+"jingbi": 0,
+"yueli": 5000
+},
+"54": {
+"jingbi": 0,
+"yueli": 51100
+},
+"540": {
+"jingbi": 0,
+"yueli": 5000
+},
+"541": {
+"jingbi": 0,
+"yueli": 5000
+},
+"542": {
+"jingbi": 0,
+"yueli": 5000
+},
+"543": {
+"jingbi": 0,
+"yueli": 5000
+},
+"544": {
+"jingbi": 0,
+"yueli": 5000
+},
+"545": {
+"jingbi": 0,
+"yueli": 5000
+},
+"546": {
+"jingbi": 0,
+"yueli": 5000
+},
+"547": {
+"jingbi": 0,
+"yueli": 5000
+},
+"548": {
+"jingbi": 0,
+"yueli": 5000
+},
+"549": {
+"jingbi": 0,
+"yueli": 5000
+},
+"55": {
+"jingbi": 0,
+"yueli": 51000
+},
+"550": {
+"jingbi": 0,
+"yueli": 5000
+},
+"551": {
+"jingbi": 0,
+"yueli": 5000
+},
+"552": {
+"jingbi": 0,
+"yueli": 5000
+},
+"553": {
+"jingbi": 0,
+"yueli": 5000
+},
+"554": {
+"jingbi": 0,
+"yueli": 5000
+},
+"555": {
+"jingbi": 0,
+"yueli": 5000
+},
+"556": {
+"jingbi": 0,
+"yueli": 5000
+},
+"557": {
+"jingbi": 0,
+"yueli": 5000
+},
+"558": {
+"jingbi": 0,
+"yueli": 5000
+},
+"559": {
+"jingbi": 0,
+"yueli": 5000
+},
+"56": {
+"jingbi": 0,
+"yueli": 50900
+},
+"560": {
+"jingbi": 0,
+"yueli": 5000
+},
+"561": {
+"jingbi": 0,
+"yueli": 5000
+},
+"562": {
+"jingbi": 0,
+"yueli": 5000
+},
+"563": {
+"jingbi": 0,
+"yueli": 5000
+},
+"564": {
+"jingbi": 0,
+"yueli": 5000
+},
+"565": {
+"jingbi": 0,
+"yueli": 5000
+},
+"566": {
+"jingbi": 0,
+"yueli": 5000
+},
+"567": {
+"jingbi": 0,
+"yueli": 5000
+},
+"568": {
+"jingbi": 0,
+"yueli": 5000
+},
+"569": {
+"jingbi": 0,
+"yueli": 5000
+},
+"57": {
+"jingbi": 0,
+"yueli": 50800
+},
+"570": {
+"jingbi": 0,
+"yueli": 5000
+},
+"571": {
+"jingbi": 0,
+"yueli": 5000
+},
+"572": {
+"jingbi": 0,
+"yueli": 5000
+},
+"573": {
+"jingbi": 0,
+"yueli": 5000
+},
+"574": {
+"jingbi": 0,
+"yueli": 5000
+},
+"575": {
+"jingbi": 0,
+"yueli": 5000
+},
+"576": {
+"jingbi": 0,
+"yueli": 5000
+},
+"577": {
+"jingbi": 0,
+"yueli": 5000
+},
+"578": {
+"jingbi": 0,
+"yueli": 5000
+},
+"579": {
+"jingbi": 0,
+"yueli": 5000
+},
+"58": {
+"jingbi": 0,
+"yueli": 50700
+},
+"580": {
+"jingbi": 0,
+"yueli": 5000
+},
+"581": {
+"jingbi": 0,
+"yueli": 5000
+},
+"582": {
+"jingbi": 0,
+"yueli": 5000
+},
+"583": {
+"jingbi": 0,
+"yueli": 5000
+},
+"584": {
+"jingbi": 0,
+"yueli": 5000
+},
+"585": {
+"jingbi": 0,
+"yueli": 5000
+},
+"586": {
+"jingbi": 0,
+"yueli": 5000
+},
+"587": {
+"jingbi": 0,
+"yueli": 5000
+},
+"588": {
+"jingbi": 0,
+"yueli": 5000
+},
+"589": {
+"jingbi": 0,
+"yueli": 5000
+},
+"59": {
+"jingbi": 0,
+"yueli": 50600
+},
+"590": {
+"jingbi": 0,
+"yueli": 5000
+},
+"591": {
+"jingbi": 0,
+"yueli": 5000
+},
+"592": {
+"jingbi": 0,
+"yueli": 5000
+},
+"593": {
+"jingbi": 0,
+"yueli": 5000
+},
+"594": {
+"jingbi": 0,
+"yueli": 5000
+},
+"595": {
+"jingbi": 0,
+"yueli": 5000
+},
+"596": {
+"jingbi": 0,
+"yueli": 5000
+},
+"597": {
+"jingbi": 0,
+"yueli": 5000
+},
+"598": {
+"jingbi": 0,
+"yueli": 5000
+},
+"599": {
+"jingbi": 0,
+"yueli": 5000
+},
+"6": {
+"jingbi": 0,
+"yueli": 284750
+},
+"60": {
+"jingbi": 0,
+"yueli": 50500
+},
+"600": {
+"jingbi": 0,
+"yueli": 5000
+},
+"601": {
+"jingbi": 0,
+"yueli": 5000
+},
+"602": {
+"jingbi": 0,
+"yueli": 5000
+},
+"603": {
+"jingbi": 0,
+"yueli": 5000
+},
+"604": {
+"jingbi": 0,
+"yueli": 5000
+},
+"605": {
+"jingbi": 0,
+"yueli": 5000
+},
+"606": {
+"jingbi": 0,
+"yueli": 5000
+},
+"607": {
+"jingbi": 0,
+"yueli": 5000
+},
+"608": {
+"jingbi": 0,
+"yueli": 5000
+},
+"609": {
+"jingbi": 0,
+"yueli": 5000
+},
+"61": {
+"jingbi": 0,
+"yueli": 50400
+},
+"610": {
+"jingbi": 0,
+"yueli": 5000
+},
+"611": {
+"jingbi": 0,
+"yueli": 5000
+},
+"612": {
+"jingbi": 0,
+"yueli": 5000
+},
+"613": {
+"jingbi": 0,
+"yueli": 5000
+},
+"614": {
+"jingbi": 0,
+"yueli": 5000
+},
+"615": {
+"jingbi": 0,
+"yueli": 5000
+},
+"616": {
+"jingbi": 0,
+"yueli": 5000
+},
+"617": {
+"jingbi": 0,
+"yueli": 5000
+},
+"618": {
+"jingbi": 0,
+"yueli": 5000
+},
+"619": {
+"jingbi": 0,
+"yueli": 5000
+},
+"62": {
+"jingbi": 0,
+"yueli": 50300
+},
+"620": {
+"jingbi": 0,
+"yueli": 5000
+},
+"621": {
+"jingbi": 0,
+"yueli": 5000
+},
+"622": {
+"jingbi": 0,
+"yueli": 5000
+},
+"623": {
+"jingbi": 0,
+"yueli": 5000
+},
+"624": {
+"jingbi": 0,
+"yueli": 5000
+},
+"625": {
+"jingbi": 0,
+"yueli": 5000
+},
+"626": {
+"jingbi": 0,
+"yueli": 5000
+},
+"627": {
+"jingbi": 0,
+"yueli": 5000
+},
+"628": {
+"jingbi": 0,
+"yueli": 5000
+},
+"629": {
+"jingbi": 0,
+"yueli": 5000
+},
+"63": {
+"jingbi": 0,
+"yueli": 50200
+},
+"630": {
+"jingbi": 0,
+"yueli": 5000
+},
+"631": {
+"jingbi": 0,
+"yueli": 5000
+},
+"632": {
+"jingbi": 0,
+"yueli": 5000
+},
+"633": {
+"jingbi": 0,
+"yueli": 5000
+},
+"634": {
+"jingbi": 0,
+"yueli": 5000
+},
+"635": {
+"jingbi": 0,
+"yueli": 5000
+},
+"636": {
+"jingbi": 0,
+"yueli": 5000
+},
+"637": {
+"jingbi": 0,
+"yueli": 5000
+},
+"638": {
+"jingbi": 0,
+"yueli": 5000
+},
+"639": {
+"jingbi": 0,
+"yueli": 5000
+},
+"64": {
+"jingbi": 0,
+"yueli": 50100
+},
+"640": {
+"jingbi": 0,
+"yueli": 5000
+},
+"641": {
+"jingbi": 0,
+"yueli": 5000
+},
+"642": {
+"jingbi": 0,
+"yueli": 5000
+},
+"643": {
+"jingbi": 0,
+"yueli": 5000
+},
+"644": {
+"jingbi": 0,
+"yueli": 5000
+},
+"645": {
+"jingbi": 0,
+"yueli": 5000
+},
+"646": {
+"jingbi": 0,
+"yueli": 5000
+},
+"647": {
+"jingbi": 0,
+"yueli": 5000
+},
+"648": {
+"jingbi": 0,
+"yueli": 5000
+},
+"649": {
+"jingbi": 0,
+"yueli": 5000
+},
+"65": {
+"jingbi": 0,
+"yueli": 50000
+},
+"650": {
+"jingbi": 0,
+"yueli": 5000
+},
+"651": {
+"jingbi": 0,
+"yueli": 5000
+},
+"652": {
+"jingbi": 0,
+"yueli": 5000
+},
+"653": {
+"jingbi": 0,
+"yueli": 5000
+},
+"654": {
+"jingbi": 0,
+"yueli": 5000
+},
+"655": {
+"jingbi": 0,
+"yueli": 5000
+},
+"656": {
+"jingbi": 0,
+"yueli": 5000
+},
+"657": {
+"jingbi": 0,
+"yueli": 5000
+},
+"658": {
+"jingbi": 0,
+"yueli": 5000
+},
+"659": {
+"jingbi": 0,
+"yueli": 5000
+},
+"66": {
+"jingbi": 0,
+"yueli": 49900
+},
+"660": {
+"jingbi": 0,
+"yueli": 5000
+},
+"661": {
+"jingbi": 0,
+"yueli": 5000
+},
+"662": {
+"jingbi": 0,
+"yueli": 5000
+},
+"663": {
+"jingbi": 0,
+"yueli": 5000
+},
+"664": {
+"jingbi": 0,
+"yueli": 5000
+},
+"665": {
+"jingbi": 0,
+"yueli": 5000
+},
+"666": {
+"jingbi": 0,
+"yueli": 5000
+},
+"667": {
+"jingbi": 0,
+"yueli": 5000
+},
+"668": {
+"jingbi": 0,
+"yueli": 5000
+},
+"669": {
+"jingbi": 0,
+"yueli": 5000
+},
+"67": {
+"jingbi": 0,
+"yueli": 49800
+},
+"670": {
+"jingbi": 0,
+"yueli": 5000
+},
+"671": {
+"jingbi": 0,
+"yueli": 5000
+},
+"672": {
+"jingbi": 0,
+"yueli": 5000
+},
+"673": {
+"jingbi": 0,
+"yueli": 5000
+},
+"674": {
+"jingbi": 0,
+"yueli": 5000
+},
+"675": {
+"jingbi": 0,
+"yueli": 5000
+},
+"676": {
+"jingbi": 0,
+"yueli": 5000
+},
+"677": {
+"jingbi": 0,
+"yueli": 5000
+},
+"678": {
+"jingbi": 0,
+"yueli": 5000
+},
+"679": {
+"jingbi": 0,
+"yueli": 5000
+},
+"68": {
+"jingbi": 0,
+"yueli": 49700
+},
+"680": {
+"jingbi": 0,
+"yueli": 5000
+},
+"681": {
+"jingbi": 0,
+"yueli": 5000
+},
+"682": {
+"jingbi": 0,
+"yueli": 5000
+},
+"683": {
+"jingbi": 0,
+"yueli": 5000
+},
+"684": {
+"jingbi": 0,
+"yueli": 5000
+},
+"685": {
+"jingbi": 0,
+"yueli": 5000
+},
+"686": {
+"jingbi": 0,
+"yueli": 5000
+},
+"687": {
+"jingbi": 0,
+"yueli": 5000
+},
+"688": {
+"jingbi": 0,
+"yueli": 5000
+},
+"689": {
+"jingbi": 0,
+"yueli": 5000
+},
+"69": {
+"jingbi": 0,
+"yueli": 49600
+},
+"690": {
+"jingbi": 0,
+"yueli": 5000
+},
+"691": {
+"jingbi": 0,
+"yueli": 5000
+},
+"692": {
+"jingbi": 0,
+"yueli": 5000
+},
+"693": {
+"jingbi": 0,
+"yueli": 5000
+},
+"694": {
+"jingbi": 0,
+"yueli": 5000
+},
+"695": {
+"jingbi": 0,
+"yueli": 5000
+},
+"696": {
+"jingbi": 0,
+"yueli": 5000
+},
+"697": {
+"jingbi": 0,
+"yueli": 5000
+},
+"698": {
+"jingbi": 0,
+"yueli": 5000
+},
+"699": {
+"jingbi": 0,
+"yueli": 5000
+},
+"7": {
+"jingbi": 0,
+"yueli": 264750
+},
+"70": {
+"jingbi": 0,
+"yueli": 49500
+},
+"700": {
+"jingbi": 0,
+"yueli": 5000
+},
+"701": {
+"jingbi": 0,
+"yueli": 5000
+},
+"702": {
+"jingbi": 0,
+"yueli": 5000
+},
+"703": {
+"jingbi": 0,
+"yueli": 5000
+},
+"704": {
+"jingbi": 0,
+"yueli": 5000
+},
+"705": {
+"jingbi": 0,
+"yueli": 5000
+},
+"706": {
+"jingbi": 0,
+"yueli": 5000
+},
+"707": {
+"jingbi": 0,
+"yueli": 5000
+},
+"708": {
+"jingbi": 0,
+"yueli": 5000
+},
+"709": {
+"jingbi": 0,
+"yueli": 5000
+},
+"71": {
+"jingbi": 0,
+"yueli": 49400
+},
+"710": {
+"jingbi": 0,
+"yueli": 5000
+},
+"711": {
+"jingbi": 0,
+"yueli": 5000
+},
+"712": {
+"jingbi": 0,
+"yueli": 5000
+},
+"713": {
+"jingbi": 0,
+"yueli": 5000
+},
+"714": {
+"jingbi": 0,
+"yueli": 5000
+},
+"715": {
+"jingbi": 0,
+"yueli": 5000
+},
+"716": {
+"jingbi": 0,
+"yueli": 5000
+},
+"717": {
+"jingbi": 0,
+"yueli": 5000
+},
+"718": {
+"jingbi": 0,
+"yueli": 5000
+},
+"719": {
+"jingbi": 0,
+"yueli": 5000
+},
+"72": {
+"jingbi": 0,
+"yueli": 49300
+},
+"720": {
+"jingbi": 0,
+"yueli": 5000
+},
+"721": {
+"jingbi": 0,
+"yueli": 5000
+},
+"722": {
+"jingbi": 0,
+"yueli": 5000
+},
+"723": {
+"jingbi": 0,
+"yueli": 5000
+},
+"724": {
+"jingbi": 0,
+"yueli": 5000
+},
+"725": {
+"jingbi": 0,
+"yueli": 5000
+},
+"726": {
+"jingbi": 0,
+"yueli": 5000
+},
+"727": {
+"jingbi": 0,
+"yueli": 5000
+},
+"728": {
+"jingbi": 0,
+"yueli": 5000
+},
+"729": {
+"jingbi": 0,
+"yueli": 5000
+},
+"73": {
+"jingbi": 0,
+"yueli": 49200
+},
+"730": {
+"jingbi": 0,
+"yueli": 5000
+},
+"731": {
+"jingbi": 0,
+"yueli": 5000
+},
+"732": {
+"jingbi": 0,
+"yueli": 5000
+},
+"733": {
+"jingbi": 0,
+"yueli": 5000
+},
+"734": {
+"jingbi": 0,
+"yueli": 5000
+},
+"735": {
+"jingbi": 0,
+"yueli": 5000
+},
+"736": {
+"jingbi": 0,
+"yueli": 5000
+},
+"737": {
+"jingbi": 0,
+"yueli": 5000
+},
+"738": {
+"jingbi": 0,
+"yueli": 5000
+},
+"739": {
+"jingbi": 0,
+"yueli": 5000
+},
+"74": {
+"jingbi": 0,
+"yueli": 49100
+},
+"740": {
+"jingbi": 0,
+"yueli": 5000
+},
+"741": {
+"jingbi": 0,
+"yueli": 5000
+},
+"742": {
+"jingbi": 0,
+"yueli": 5000
+},
+"743": {
+"jingbi": 0,
+"yueli": 5000
+},
+"744": {
+"jingbi": 0,
+"yueli": 5000
+},
+"745": {
+"jingbi": 0,
+"yueli": 5000
+},
+"746": {
+"jingbi": 0,
+"yueli": 5000
+},
+"747": {
+"jingbi": 0,
+"yueli": 5000
+},
+"748": {
+"jingbi": 0,
+"yueli": 5000
+},
+"749": {
+"jingbi": 0,
+"yueli": 5000
+},
+"75": {
+"jingbi": 0,
+"yueli": 49000
+},
+"750": {
+"jingbi": 0,
+"yueli": 5000
+},
+"751": {
+"jingbi": 0,
+"yueli": 5000
+},
+"752": {
+"jingbi": 0,
+"yueli": 5000
+},
+"753": {
+"jingbi": 0,
+"yueli": 5000
+},
+"754": {
+"jingbi": 0,
+"yueli": 5000
+},
+"755": {
+"jingbi": 0,
+"yueli": 5000
+},
+"756": {
+"jingbi": 0,
+"yueli": 5000
+},
+"757": {
+"jingbi": 0,
+"yueli": 5000
+},
+"758": {
+"jingbi": 0,
+"yueli": 5000
+},
+"759": {
+"jingbi": 0,
+"yueli": 5000
+},
+"76": {
+"jingbi": 0,
+"yueli": 48900
+},
+"760": {
+"jingbi": 0,
+"yueli": 5000
+},
+"761": {
+"jingbi": 0,
+"yueli": 5000
+},
+"762": {
+"jingbi": 0,
+"yueli": 5000
+},
+"763": {
+"jingbi": 0,
+"yueli": 5000
+},
+"764": {
+"jingbi": 0,
+"yueli": 5000
+},
+"765": {
+"jingbi": 0,
+"yueli": 5000
+},
+"766": {
+"jingbi": 0,
+"yueli": 5000
+},
+"767": {
+"jingbi": 0,
+"yueli": 5000
+},
+"768": {
+"jingbi": 0,
+"yueli": 5000
+},
+"769": {
+"jingbi": 0,
+"yueli": 5000
+},
+"77": {
+"jingbi": 0,
+"yueli": 48800
+},
+"770": {
+"jingbi": 0,
+"yueli": 5000
+},
+"771": {
+"jingbi": 0,
+"yueli": 5000
+},
+"772": {
+"jingbi": 0,
+"yueli": 5000
+},
+"773": {
+"jingbi": 0,
+"yueli": 5000
+},
+"774": {
+"jingbi": 0,
+"yueli": 5000
+},
+"775": {
+"jingbi": 0,
+"yueli": 5000
+},
+"776": {
+"jingbi": 0,
+"yueli": 5000
+},
+"777": {
+"jingbi": 0,
+"yueli": 5000
+},
+"778": {
+"jingbi": 0,
+"yueli": 5000
+},
+"779": {
+"jingbi": 0,
+"yueli": 5000
+},
+"78": {
+"jingbi": 0,
+"yueli": 48700
+},
+"780": {
+"jingbi": 0,
+"yueli": 5000
+},
+"781": {
+"jingbi": 0,
+"yueli": 5000
+},
+"782": {
+"jingbi": 0,
+"yueli": 5000
+},
+"783": {
+"jingbi": 0,
+"yueli": 5000
+},
+"784": {
+"jingbi": 0,
+"yueli": 5000
+},
+"785": {
+"jingbi": 0,
+"yueli": 5000
+},
+"786": {
+"jingbi": 0,
+"yueli": 5000
+},
+"787": {
+"jingbi": 0,
+"yueli": 5000
+},
+"788": {
+"jingbi": 0,
+"yueli": 5000
+},
+"789": {
+"jingbi": 0,
+"yueli": 5000
+},
+"79": {
+"jingbi": 0,
+"yueli": 48600
+},
+"790": {
+"jingbi": 0,
+"yueli": 5000
+},
+"791": {
+"jingbi": 0,
+"yueli": 5000
+},
+"792": {
+"jingbi": 0,
+"yueli": 5000
+},
+"793": {
+"jingbi": 0,
+"yueli": 5000
+},
+"794": {
+"jingbi": 0,
+"yueli": 5000
+},
+"795": {
+"jingbi": 0,
+"yueli": 5000
+},
+"796": {
+"jingbi": 0,
+"yueli": 5000
+},
+"797": {
+"jingbi": 0,
+"yueli": 5000
+},
+"798": {
+"jingbi": 0,
+"yueli": 5000
+},
+"799": {
+"jingbi": 0,
+"yueli": 5000
+},
+"8": {
+"jingbi": 0,
+"yueli": 244750
+},
+"80": {
+"jingbi": 0,
+"yueli": 48500
+},
+"800": {
+"jingbi": 0,
+"yueli": 5000
+},
+"801": {
+"jingbi": 0,
+"yueli": 5000
+},
+"802": {
+"jingbi": 0,
+"yueli": 5000
+},
+"803": {
+"jingbi": 0,
+"yueli": 5000
+},
+"804": {
+"jingbi": 0,
+"yueli": 5000
+},
+"805": {
+"jingbi": 0,
+"yueli": 5000
+},
+"806": {
+"jingbi": 0,
+"yueli": 5000
+},
+"807": {
+"jingbi": 0,
+"yueli": 5000
+},
+"808": {
+"jingbi": 0,
+"yueli": 5000
+},
+"809": {
+"jingbi": 0,
+"yueli": 5000
+},
+"81": {
+"jingbi": 0,
+"yueli": 48400
+},
+"810": {
+"jingbi": 0,
+"yueli": 5000
+},
+"811": {
+"jingbi": 0,
+"yueli": 5000
+},
+"812": {
+"jingbi": 0,
+"yueli": 5000
+},
+"813": {
+"jingbi": 0,
+"yueli": 5000
+},
+"814": {
+"jingbi": 0,
+"yueli": 5000
+},
+"815": {
+"jingbi": 0,
+"yueli": 5000
+},
+"816": {
+"jingbi": 0,
+"yueli": 5000
+},
+"817": {
+"jingbi": 0,
+"yueli": 5000
+},
+"818": {
+"jingbi": 0,
+"yueli": 5000
+},
+"819": {
+"jingbi": 0,
+"yueli": 5000
+},
+"82": {
+"jingbi": 0,
+"yueli": 48300
+},
+"820": {
+"jingbi": 0,
+"yueli": 5000
+},
+"821": {
+"jingbi": 0,
+"yueli": 5000
+},
+"822": {
+"jingbi": 0,
+"yueli": 5000
+},
+"823": {
+"jingbi": 0,
+"yueli": 5000
+},
+"824": {
+"jingbi": 0,
+"yueli": 5000
+},
+"825": {
+"jingbi": 0,
+"yueli": 5000
+},
+"826": {
+"jingbi": 0,
+"yueli": 5000
+},
+"827": {
+"jingbi": 0,
+"yueli": 5000
+},
+"828": {
+"jingbi": 0,
+"yueli": 5000
+},
+"829": {
+"jingbi": 0,
+"yueli": 5000
+},
+"83": {
+"jingbi": 0,
+"yueli": 48200
+},
+"830": {
+"jingbi": 0,
+"yueli": 5000
+},
+"831": {
+"jingbi": 0,
+"yueli": 5000
+},
+"832": {
+"jingbi": 0,
+"yueli": 5000
+},
+"833": {
+"jingbi": 0,
+"yueli": 5000
+},
+"834": {
+"jingbi": 0,
+"yueli": 5000
+},
+"835": {
+"jingbi": 0,
+"yueli": 5000
+},
+"836": {
+"jingbi": 0,
+"yueli": 5000
+},
+"837": {
+"jingbi": 0,
+"yueli": 5000
+},
+"838": {
+"jingbi": 0,
+"yueli": 5000
+},
+"839": {
+"jingbi": 0,
+"yueli": 5000
+},
+"84": {
+"jingbi": 0,
+"yueli": 48100
+},
+"840": {
+"jingbi": 0,
+"yueli": 5000
+},
+"841": {
+"jingbi": 0,
+"yueli": 5000
+},
+"842": {
+"jingbi": 0,
+"yueli": 5000
+},
+"843": {
+"jingbi": 0,
+"yueli": 5000
+},
+"844": {
+"jingbi": 0,
+"yueli": 5000
+},
+"845": {
+"jingbi": 0,
+"yueli": 5000
+},
+"846": {
+"jingbi": 0,
+"yueli": 5000
+},
+"847": {
+"jingbi": 0,
+"yueli": 5000
+},
+"848": {
+"jingbi": 0,
+"yueli": 5000
+},
+"849": {
+"jingbi": 0,
+"yueli": 5000
+},
+"85": {
+"jingbi": 0,
+"yueli": 48000
+},
+"850": {
+"jingbi": 0,
+"yueli": 5000
+},
+"851": {
+"jingbi": 0,
+"yueli": 5000
+},
+"852": {
+"jingbi": 0,
+"yueli": 5000
+},
+"853": {
+"jingbi": 0,
+"yueli": 5000
+},
+"854": {
+"jingbi": 0,
+"yueli": 5000
+},
+"855": {
+"jingbi": 0,
+"yueli": 5000
+},
+"856": {
+"jingbi": 0,
+"yueli": 5000
+},
+"857": {
+"jingbi": 0,
+"yueli": 5000
+},
+"858": {
+"jingbi": 0,
+"yueli": 5000
+},
+"859": {
+"jingbi": 0,
+"yueli": 5000
+},
+"86": {
+"jingbi": 0,
+"yueli": 47900
+},
+"860": {
+"jingbi": 0,
+"yueli": 5000
+},
+"861": {
+"jingbi": 0,
+"yueli": 5000
+},
+"862": {
+"jingbi": 0,
+"yueli": 5000
+},
+"863": {
+"jingbi": 0,
+"yueli": 5000
+},
+"864": {
+"jingbi": 0,
+"yueli": 5000
+},
+"865": {
+"jingbi": 0,
+"yueli": 5000
+},
+"866": {
+"jingbi": 0,
+"yueli": 5000
+},
+"867": {
+"jingbi": 0,
+"yueli": 5000
+},
+"868": {
+"jingbi": 0,
+"yueli": 5000
+},
+"869": {
+"jingbi": 0,
+"yueli": 5000
+},
+"87": {
+"jingbi": 0,
+"yueli": 47800
+},
+"870": {
+"jingbi": 0,
+"yueli": 5000
+},
+"871": {
+"jingbi": 0,
+"yueli": 5000
+},
+"872": {
+"jingbi": 0,
+"yueli": 5000
+},
+"873": {
+"jingbi": 0,
+"yueli": 5000
+},
+"874": {
+"jingbi": 0,
+"yueli": 5000
+},
+"875": {
+"jingbi": 0,
+"yueli": 5000
+},
+"876": {
+"jingbi": 0,
+"yueli": 5000
+},
+"877": {
+"jingbi": 0,
+"yueli": 5000
+},
+"878": {
+"jingbi": 0,
+"yueli": 5000
+},
+"879": {
+"jingbi": 0,
+"yueli": 5000
+},
+"88": {
+"jingbi": 0,
+"yueli": 47700
+},
+"880": {
+"jingbi": 0,
+"yueli": 5000
+},
+"881": {
+"jingbi": 0,
+"yueli": 5000
+},
+"882": {
+"jingbi": 0,
+"yueli": 5000
+},
+"883": {
+"jingbi": 0,
+"yueli": 5000
+},
+"884": {
+"jingbi": 0,
+"yueli": 5000
+},
+"885": {
+"jingbi": 0,
+"yueli": 5000
+},
+"886": {
+"jingbi": 0,
+"yueli": 5000
+},
+"887": {
+"jingbi": 0,
+"yueli": 5000
+},
+"888": {
+"jingbi": 0,
+"yueli": 5000
+},
+"889": {
+"jingbi": 0,
+"yueli": 5000
+},
+"89": {
+"jingbi": 0,
+"yueli": 47600
+},
+"890": {
+"jingbi": 0,
+"yueli": 5000
+},
+"891": {
+"jingbi": 0,
+"yueli": 5000
+},
+"892": {
+"jingbi": 0,
+"yueli": 5000
+},
+"893": {
+"jingbi": 0,
+"yueli": 5000
+},
+"894": {
+"jingbi": 0,
+"yueli": 5000
+},
+"895": {
+"jingbi": 0,
+"yueli": 5000
+},
+"896": {
+"jingbi": 0,
+"yueli": 5000
+},
+"897": {
+"jingbi": 0,
+"yueli": 5000
+},
+"898": {
+"jingbi": 0,
+"yueli": 5000
+},
+"899": {
+"jingbi": 0,
+"yueli": 5000
+},
+"9": {
+"jingbi": 0,
+"yueli": 224750
+},
+"90": {
+"jingbi": 0,
+"yueli": 47500
+},
+"900": {
+"jingbi": 0,
+"yueli": 5000
+},
+"901": {
+"jingbi": 0,
+"yueli": 5000
+},
+"902": {
+"jingbi": 0,
+"yueli": 5000
+},
+"903": {
+"jingbi": 0,
+"yueli": 5000
+},
+"904": {
+"jingbi": 0,
+"yueli": 5000
+},
+"905": {
+"jingbi": 0,
+"yueli": 5000
+},
+"906": {
+"jingbi": 0,
+"yueli": 5000
+},
+"907": {
+"jingbi": 0,
+"yueli": 5000
+},
+"908": {
+"jingbi": 0,
+"yueli": 5000
+},
+"909": {
+"jingbi": 0,
+"yueli": 5000
+},
+"91": {
+"jingbi": 0,
+"yueli": 47400
+},
+"910": {
+"jingbi": 0,
+"yueli": 5000
+},
+"911": {
+"jingbi": 0,
+"yueli": 5000
+},
+"912": {
+"jingbi": 0,
+"yueli": 5000
+},
+"913": {
+"jingbi": 0,
+"yueli": 5000
+},
+"914": {
+"jingbi": 0,
+"yueli": 5000
+},
+"915": {
+"jingbi": 0,
+"yueli": 5000
+},
+"916": {
+"jingbi": 0,
+"yueli": 5000
+},
+"917": {
+"jingbi": 0,
+"yueli": 5000
+},
+"918": {
+"jingbi": 0,
+"yueli": 5000
+},
+"919": {
+"jingbi": 0,
+"yueli": 5000
+},
+"92": {
+"jingbi": 0,
+"yueli": 47300
+},
+"920": {
+"jingbi": 0,
+"yueli": 5000
+},
+"921": {
+"jingbi": 0,
+"yueli": 5000
+},
+"922": {
+"jingbi": 0,
+"yueli": 5000
+},
+"923": {
+"jingbi": 0,
+"yueli": 5000
+},
+"924": {
+"jingbi": 0,
+"yueli": 5000
+},
+"925": {
+"jingbi": 0,
+"yueli": 5000
+},
+"926": {
+"jingbi": 0,
+"yueli": 5000
+},
+"927": {
+"jingbi": 0,
+"yueli": 5000
+},
+"928": {
+"jingbi": 0,
+"yueli": 5000
+},
+"929": {
+"jingbi": 0,
+"yueli": 5000
+},
+"93": {
+"jingbi": 0,
+"yueli": 47200
+},
+"930": {
+"jingbi": 0,
+"yueli": 5000
+},
+"931": {
+"jingbi": 0,
+"yueli": 5000
+},
+"932": {
+"jingbi": 0,
+"yueli": 5000
+},
+"933": {
+"jingbi": 0,
+"yueli": 5000
+},
+"934": {
+"jingbi": 0,
+"yueli": 5000
+},
+"935": {
+"jingbi": 0,
+"yueli": 5000
+},
+"936": {
+"jingbi": 0,
+"yueli": 5000
+},
+"937": {
+"jingbi": 0,
+"yueli": 5000
+},
+"938": {
+"jingbi": 0,
+"yueli": 5000
+},
+"939": {
+"jingbi": 0,
+"yueli": 5000
+},
+"94": {
+"jingbi": 0,
+"yueli": 47100
+},
+"940": {
+"jingbi": 0,
+"yueli": 5000
+},
+"941": {
+"jingbi": 0,
+"yueli": 5000
+},
+"942": {
+"jingbi": 0,
+"yueli": 5000
+},
+"943": {
+"jingbi": 0,
+"yueli": 5000
+},
+"944": {
+"jingbi": 0,
+"yueli": 5000
+},
+"945": {
+"jingbi": 0,
+"yueli": 5000
+},
+"946": {
+"jingbi": 0,
+"yueli": 5000
+},
+"947": {
+"jingbi": 0,
+"yueli": 5000
+},
+"948": {
+"jingbi": 0,
+"yueli": 5000
+},
+"949": {
+"jingbi": 0,
+"yueli": 5000
+},
+"95": {
+"jingbi": 0,
+"yueli": 47000
+},
+"950": {
+"jingbi": 0,
+"yueli": 5000
+},
+"951": {
+"jingbi": 0,
+"yueli": 5000
+},
+"952": {
+"jingbi": 0,
+"yueli": 5000
+},
+"953": {
+"jingbi": 0,
+"yueli": 5000
+},
+"954": {
+"jingbi": 0,
+"yueli": 5000
+},
+"955": {
+"jingbi": 0,
+"yueli": 5000
+},
+"956": {
+"jingbi": 0,
+"yueli": 5000
+},
+"957": {
+"jingbi": 0,
+"yueli": 5000
+},
+"958": {
+"jingbi": 0,
+"yueli": 5000
+},
+"959": {
+"jingbi": 0,
+"yueli": 5000
+},
+"96": {
+"jingbi": 0,
+"yueli": 46900
+},
+"960": {
+"jingbi": 0,
+"yueli": 5000
+},
+"961": {
+"jingbi": 0,
+"yueli": 5000
+},
+"962": {
+"jingbi": 0,
+"yueli": 5000
+},
+"963": {
+"jingbi": 0,
+"yueli": 5000
+},
+"964": {
+"jingbi": 0,
+"yueli": 5000
+},
+"965": {
+"jingbi": 0,
+"yueli": 5000
+},
+"966": {
+"jingbi": 0,
+"yueli": 5000
+},
+"967": {
+"jingbi": 0,
+"yueli": 5000
+},
+"968": {
+"jingbi": 0,
+"yueli": 5000
+},
+"969": {
+"jingbi": 0,
+"yueli": 5000
+},
+"97": {
+"jingbi": 0,
+"yueli": 46800
+},
+"970": {
+"jingbi": 0,
+"yueli": 5000
+},
+"971": {
+"jingbi": 0,
+"yueli": 5000
+},
+"972": {
+"jingbi": 0,
+"yueli": 5000
+},
+"973": {
+"jingbi": 0,
+"yueli": 5000
+},
+"974": {
+"jingbi": 0,
+"yueli": 5000
+},
+"975": {
+"jingbi": 0,
+"yueli": 5000
+},
+"976": {
+"jingbi": 0,
+"yueli": 5000
+},
+"977": {
+"jingbi": 0,
+"yueli": 5000
+},
+"978": {
+"jingbi": 0,
+"yueli": 5000
+},
+"979": {
+"jingbi": 0,
+"yueli": 5000
+},
+"98": {
+"jingbi": 0,
+"yueli": 46700
+},
+"980": {
+"jingbi": 0,
+"yueli": 5000
+},
+"981": {
+"jingbi": 0,
+"yueli": 5000
+},
+"982": {
+"jingbi": 0,
+"yueli": 5000
+},
+"983": {
+"jingbi": 0,
+"yueli": 5000
+},
+"984": {
+"jingbi": 0,
+"yueli": 5000
+},
+"985": {
+"jingbi": 0,
+"yueli": 5000
+},
+"986": {
+"jingbi": 0,
+"yueli": 5000
+},
+"987": {
+"jingbi": 0,
+"yueli": 5000
+},
+"988": {
+"jingbi": 0,
+"yueli": 5000
+},
+"989": {
+"jingbi": 0,
+"yueli": 5000
+},
+"99": {
+"jingbi": 0,
+"yueli": 46600
+},
+"990": {
+"jingbi": 0,
+"yueli": 5000
+},
+"991": {
+"jingbi": 0,
+"yueli": 5000
+},
+"992": {
+"jingbi": 0,
+"yueli": 5000
+},
+"993": {
+"jingbi": 0,
+"yueli": 5000
+},
+"994": {
+"jingbi": 0,
+"yueli": 5000
+},
+"995": {
+"jingbi": 0,
+"yueli": 5000
+},
+"996": {
+"jingbi": 0,
+"yueli": 5000
+},
+"997": {
+"jingbi": 0,
+"yueli": 5000
+},
+"998": {
+"jingbi": 0,
+"yueli": 5000
+},
+"999": {
+"jingbi": 0,
+"yueli": 5000
+}
+}

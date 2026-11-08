@@ -1,0 +1,109 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://脚本/界面/组件/物品提示框.gd" id="1_tip"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/提示框底.png" id="2_bg"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/物品格.png" id="3_grid"]
+
+; ⚠️ 必须 `visible = false`。原版这个提示框是**悬停时才 new 出来的**
+; （`MToolTipItem.createToolTip` → `showToolTip`，`MToolTipItem.as:40-45`），
+; 不悬停时根本不存在。客户端把它做成了页面里的常驻节点，若默认可见，
+; 就会在**没人悬停**时也在窗口左上角糊一块 293x100 的深色底板
+; （2026-09-22 实测：刚建好的背包页上 `装备提示框.visible` 就是 true）。
+[node name="物品提示框" type="Control"]
+visible = false
+mouse_filter = 2
+script = ExtResource("1_tip")
+
+[node name="底" type="TextureRect" parent="."]
+offset_right = 293.0
+offset_bottom = 100.0
+mouse_filter = 2
+texture = ExtResource("2_bg")
+expand_mode = 1
+
+[node name="标题" type="Label" parent="."]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 288.0
+offset_bottom = 28.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 14
+horizontal_alignment = 1
+
+[node name="等级" type="Label" parent="."]
+offset_left = 8.0
+offset_top = 33.0
+offset_right = 288.0
+offset_bottom = 113.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/line_spacing = 4
+theme_override_font_sizes/font_size = 12
+
+[node name="描述" type="Label" parent="."]
+offset_left = 8.0
+offset_top = 118.0
+offset_right = 288.0
+offset_bottom = 138.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/line_spacing = 4
+theme_override_font_sizes/font_size = 12
+autowrap_mode = 2
+
+[node name="分隔线" type="TextureRect" parent="."]
+offset_left = 8.0
+offset_top = 143.0
+offset_right = 288.0
+offset_bottom = 145.0
+mouse_filter = 2
+expand_mode = 1
+
+[node name="价格" type="Label" parent="."]
+offset_left = 8.0
+offset_top = 150.0
+offset_right = 288.0
+offset_bottom = 170.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_constants/line_spacing = 4
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+
+[node name="绑定" type="Label" parent="."]
+offset_left = 8.0
+offset_top = 170.0
+offset_right = 288.0
+offset_bottom = 190.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.556863, 0.658824, 0.847059, 1)
+theme_override_constants/line_spacing = 4
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+
+[node name="过期" type="Label" parent="."]
+offset_left = 8.0
+offset_top = 195.0
+offset_right = 288.0
+offset_bottom = 215.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_constants/line_spacing = 4
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+
+[node name="图标框" type="TextureRect" parent="."]
+offset_left = 170.0
+offset_top = 38.0
+offset_right = 210.0
+offset_bottom = 78.0
+mouse_filter = 2
+texture = ExtResource("3_grid")
+
+[node name="图标" type="TextureRect" parent="图标框"]
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 37.0
+offset_bottom = 37.0
+mouse_filter = 2

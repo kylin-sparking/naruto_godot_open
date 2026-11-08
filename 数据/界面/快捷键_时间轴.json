@@ -1,0 +1,758 @@
+{
+ "符号": "KeyboardFrameF",
+ "tag": 558,
+ "件": {
+  "background": [
+   530,
+   "KeyboardFrameMWindow_background",
+   0.0,
+   0.0,
+   2.7818604,
+   0.87564087
+  ],
+  "keyboardListSprite": [
+   546,
+   "keyboardList_background",
+   0.0,
+   345.0,
+   1.0,
+   1.0
+  ],
+  "titleTextField": [
+   547,
+   "",
+   261.95,
+   8.5,
+   1.0,
+   1.0
+  ],
+  "closeBtn": [
+   535,
+   "KeyboardFrameMWindowCloseBtnF",
+   731.0,
+   4.0,
+   1.0,
+   1.0
+  ],
+  "escCell": [
+   552,
+   "KeyboardCellF",
+   14.0,
+   48.0,
+   1.0,
+   1.0
+  ],
+  "f1Cell": [
+   552,
+   "KeyboardCellF",
+   81.0,
+   48.0,
+   1.0,
+   1.0
+  ],
+  "f2Cell": [
+   552,
+   "KeyboardCellF",
+   123.0,
+   48.0,
+   1.0,
+   1.0
+  ],
+  "f3Cell": [
+   552,
+   "KeyboardCellF",
+   165.0,
+   48.0,
+   1.0,
+   1.0
+  ],
+  "f4Cell": [
+   552,
+   "KeyboardCellF",
+   207.0,
+   48.0,
+   1.0,
+   1.0
+  ],
+  "f5Cell": [
+   552,
+   "KeyboardCellF",
+   263.0,
+   48.0,
+   1.0,
+   1.0
+  ],
+  "f6Cell": [
+   552,
+   "KeyboardCellF",
+   305.0,
+   48.0,
+   1.0,
+   1.0
+  ],
+  "f7Cell": [
+   552,
+   "KeyboardCellF",
+   347.0,
+   48.0,
+   1.0,
+   1.0
+  ],
+  "f8Cell": [
+   552,
+   "KeyboardCellF",
+   389.0,
+   48.0,
+   1.0,
+   1.0
+  ],
+  "f9Cell": [
+   552,
+   "KeyboardCellF",
+   444.0,
+   48.0,
+   1.0,
+   1.0
+  ],
+  "f10Cell": [
+   552,
+   "KeyboardCellF",
+   486.0,
+   48.0,
+   1.0,
+   1.0
+  ],
+  "f11Cell": [
+   552,
+   "KeyboardCellF",
+   528.0,
+   48.0,
+   1.0,
+   1.0
+  ],
+  "f12Cell": [
+   552,
+   "KeyboardCellF",
+   570.0,
+   48.0,
+   1.0,
+   1.0
+  ],
+  "pscCell": [
+   552,
+   "KeyboardCellF",
+   627.0,
+   48.0,
+   1.0,
+   1.0
+  ],
+  "slkCell": [
+   552,
+   "KeyboardCellF",
+   669.0,
+   48.0,
+   1.0,
+   1.0
+  ],
+  "brkCell": [
+   552,
+   "KeyboardCellF",
+   711.0,
+   48.0,
+   1.0,
+   1.0
+  ],
+  "graveAccentCell": [
+   552,
+   "KeyboardCellF",
+   14.0,
+   95.0,
+   1.0,
+   1.0
+  ],
+  "num1Cell": [
+   552,
+   "KeyboardCellF",
+   56.0,
+   95.0,
+   1.0,
+   1.0
+  ],
+  "num2Cell": [
+   552,
+   "KeyboardCellF",
+   98.0,
+   95.0,
+   1.0,
+   1.0
+  ],
+  "num3Cell": [
+   552,
+   "KeyboardCellF",
+   140.0,
+   95.0,
+   1.0,
+   1.0
+  ],
+  "num4Cell": [
+   552,
+   "KeyboardCellF",
+   182.0,
+   95.0,
+   1.0,
+   1.0
+  ],
+  "num5Cell": [
+   552,
+   "KeyboardCellF",
+   224.0,
+   95.0,
+   1.0,
+   1.0
+  ],
+  "num6Cell": [
+   552,
+   "KeyboardCellF",
+   266.0,
+   95.0,
+   1.0,
+   1.0
+  ],
+  "num7Cell": [
+   552,
+   "KeyboardCellF",
+   308.0,
+   95.0,
+   1.0,
+   1.0
+  ],
+  "num8Cell": [
+   552,
+   "KeyboardCellF",
+   350.0,
+   95.0,
+   1.0,
+   1.0
+  ],
+  "num9Cell": [
+   552,
+   "KeyboardCellF",
+   392.0,
+   95.0,
+   1.0,
+   1.0
+  ],
+  "num0Cell": [
+   552,
+   "KeyboardCellF",
+   434.0,
+   95.0,
+   1.0,
+   1.0
+  ],
+  "minusCell": [
+   552,
+   "KeyboardCellF",
+   476.0,
+   95.0,
+   1.0,
+   1.0
+  ],
+  "equalsCell": [
+   552,
+   "KeyboardCellF",
+   518.0,
+   95.0,
+   1.0,
+   1.0
+  ],
+  "bkspCell": [
+   552,
+   "KeyboardCellF",
+   560.0,
+   95.0,
+   1.0,
+   1.0
+  ],
+  "insCell": [
+   552,
+   "KeyboardCellF",
+   627.0,
+   95.0,
+   1.0,
+   1.0
+  ],
+  "hmCell": [
+   552,
+   "KeyboardCellF",
+   669.0,
+   95.0,
+   1.0,
+   1.0
+  ],
+  "pupCell": [
+   552,
+   "KeyboardCellF",
+   711.0,
+   95.0,
+   1.0,
+   1.0
+  ],
+  "tabCell": [
+   552,
+   "KeyboardCellF",
+   14.0,
+   137.0,
+   1.0003815,
+   1.0
+  ],
+  "qCell": [
+   552,
+   "KeyboardCellF",
+   66.0,
+   137.0,
+   1.0003815,
+   1.0
+  ],
+  "wCell": [
+   552,
+   "KeyboardCellF",
+   108.0,
+   137.0,
+   1.0,
+   1.0
+  ],
+  "eCell": [
+   552,
+   "KeyboardCellF",
+   150.0,
+   137.0,
+   1.0,
+   1.0
+  ],
+  "rCell": [
+   552,
+   "KeyboardCellF",
+   192.0,
+   137.0,
+   1.0,
+   1.0
+  ],
+  "tCell": [
+   552,
+   "KeyboardCellF",
+   234.0,
+   137.0,
+   1.0,
+   1.0
+  ],
+  "yCell": [
+   552,
+   "KeyboardCellF",
+   276.0,
+   137.0,
+   1.0,
+   1.0
+  ],
+  "uCell": [
+   552,
+   "KeyboardCellF",
+   318.0,
+   137.0,
+   1.0,
+   1.0
+  ],
+  "iCell": [
+   552,
+   "KeyboardCellF",
+   360.0,
+   137.0,
+   1.0,
+   1.0
+  ],
+  "oCell": [
+   552,
+   "KeyboardCellF",
+   402.0,
+   137.0,
+   1.0,
+   1.0
+  ],
+  "pCell": [
+   552,
+   "KeyboardCellF",
+   444.0,
+   137.0,
+   1.0,
+   1.0
+  ],
+  "squareBracketsLeftCell": [
+   552,
+   "KeyboardCellF",
+   486.0,
+   137.0,
+   1.0,
+   1.0
+  ],
+  "squareBracketsRightCell": [
+   552,
+   "KeyboardCellF",
+   528.0,
+   137.0,
+   1.0,
+   1.0
+  ],
+  "backslashCell": [
+   552,
+   "KeyboardCellF",
+   570.0,
+   137.0,
+   1.0,
+   1.0
+  ],
+  "delCell": [
+   552,
+   "KeyboardCellF",
+   627.0,
+   137.0,
+   1.0,
+   1.0
+  ],
+  "endCell": [
+   552,
+   "KeyboardCellF",
+   669.0,
+   137.0,
+   1.0,
+   1.0
+  ],
+  "pdnCell": [
+   552,
+   "KeyboardCellF",
+   711.0,
+   137.0,
+   1.0,
+   1.0
+  ],
+  "lockCell": [
+   552,
+   "KeyboardCellF",
+   14.0,
+   179.0,
+   0.9999542,
+   1.0
+  ],
+  "aCell": [
+   552,
+   "KeyboardCellF",
+   92.95,
+   179.0,
+   1.0,
+   1.0
+  ],
+  "sCell": [
+   552,
+   "KeyboardCellF",
+   134.95,
+   179.0,
+   1.0,
+   1.0
+  ],
+  "dCell": [
+   552,
+   "KeyboardCellF",
+   176.95,
+   179.0,
+   1.0,
+   1.0
+  ],
+  "fCell": [
+   552,
+   "KeyboardCellF",
+   218.95,
+   179.0,
+   1.0,
+   1.0
+  ],
+  "gCell": [
+   552,
+   "KeyboardCellF",
+   260.95,
+   179.0,
+   1.0,
+   1.0
+  ],
+  "hCell": [
+   552,
+   "KeyboardCellF",
+   302.95,
+   179.0,
+   1.0,
+   1.0
+  ],
+  "jCell": [
+   552,
+   "KeyboardCellF",
+   344.95,
+   179.0,
+   1.0,
+   1.0
+  ],
+  "kCell": [
+   552,
+   "KeyboardCellF",
+   386.95,
+   179.0,
+   1.0,
+   1.0
+  ],
+  "lCell": [
+   552,
+   "KeyboardCellF",
+   428.95,
+   179.0,
+   1.0,
+   1.0
+  ],
+  "semicolonCell": [
+   552,
+   "KeyboardCellF",
+   470.95,
+   179.0,
+   1.0,
+   1.0
+  ],
+  "apostropheCell": [
+   552,
+   "KeyboardCellF",
+   513.0,
+   179.0,
+   1.0,
+   1.0
+  ],
+  "enterCell": [
+   552,
+   "KeyboardCellF",
+   555.0,
+   179.0,
+   1.0000153,
+   1.0
+  ],
+  "shiftLeftCell": [
+   552,
+   "KeyboardCellF",
+   14.0,
+   221.0,
+   1.0,
+   1.0
+  ],
+  "zCell": [
+   552,
+   "KeyboardCellF",
+   103.0,
+   221.0,
+   1.0,
+   1.0
+  ],
+  "xCell": [
+   552,
+   "KeyboardCellF",
+   145.0,
+   221.0,
+   1.0,
+   1.0
+  ],
+  "cCell": [
+   552,
+   "KeyboardCellF",
+   187.0,
+   221.0,
+   1.0,
+   1.0
+  ],
+  "vCell": [
+   552,
+   "KeyboardCellF",
+   229.0,
+   221.0,
+   1.0,
+   1.0
+  ],
+  "bCell": [
+   552,
+   "KeyboardCellF",
+   271.0,
+   221.0,
+   1.0,
+   1.0
+  ],
+  "nCell": [
+   552,
+   "KeyboardCellF",
+   313.0,
+   221.0,
+   1.0,
+   1.0
+  ],
+  "mCell": [
+   552,
+   "KeyboardCellF",
+   355.0,
+   221.0,
+   1.0,
+   1.0
+  ],
+  "commaCell": [
+   552,
+   "KeyboardCellF",
+   397.0,
+   221.0,
+   1.0,
+   1.0
+  ],
+  "fullStopCell": [
+   552,
+   "KeyboardCellF",
+   439.0,
+   221.0,
+   1.0,
+   1.0
+  ],
+  "solidusCell": [
+   552,
+   "KeyboardCellF",
+   481.0,
+   221.0,
+   1.0,
+   1.0
+  ],
+  "shiftRightCell": [
+   552,
+   "KeyboardCellF",
+   523.0,
+   221.0,
+   1.0000305,
+   1.0
+  ],
+  "arrowUpCell": [
+   552,
+   "KeyboardCellF",
+   669.0,
+   221.0,
+   1.0,
+   1.0
+  ],
+  "ctrlLeftCell": [
+   552,
+   "KeyboardCellF",
+   14.0,
+   263.0,
+   1.0,
+   1.0
+  ],
+  "windowCell": [
+   552,
+   "KeyboardCellF",
+   76.0,
+   263.0,
+   1.0,
+   1.0
+  ],
+  "altLeftCell": [
+   552,
+   "KeyboardCellF",
+   138.0,
+   263.0,
+   1.0,
+   1.0
+  ],
+  "spaceCell": [
+   552,
+   "KeyboardCellF",
+   200.0,
+   263.0,
+   1.000061,
+   1.0
+  ],
+  "altRightCell": [
+   552,
+   "KeyboardCellF",
+   426.0,
+   263.0,
+   1.0,
+   1.0
+  ],
+  "menuCell": [
+   552,
+   "KeyboardCellF",
+   488.0,
+   263.0,
+   1.0,
+   1.0
+  ],
+  "ctrlRightCell": [
+   552,
+   "KeyboardCellF",
+   550.0,
+   263.0,
+   1.0,
+   1.0
+  ],
+  "arrowLeftCell": [
+   552,
+   "KeyboardCellF",
+   627.0,
+   264.0,
+   1.0,
+   1.0
+  ],
+  "arrowDownCell": [
+   552,
+   "KeyboardCellF",
+   669.0,
+   264.0,
+   1.0,
+   1.0
+  ],
+  "arrowRightCell": [
+   552,
+   "KeyboardCellF",
+   711.0,
+   264.0,
+   1.0,
+   1.0
+  ],
+  "okBtn": [
+   557,
+   "KeyboardFrameMButtonF",
+   436.95,
+   317.0,
+   1.0,
+   1.0
+  ],
+  "cancelBtn": [
+   557,
+   "KeyboardFrameMButtonF",
+   522.95,
+   317.0,
+   1.0,
+   1.0
+  ],
+  "cancelEditBtn": [
+   557,
+   "KeyboardFrameMButtonF",
+   626.95,
+   317.0,
+   1.0,
+   1.0
+  ],
+  "resetBtn": [
+   557,
+   "KeyboardFrameMButtonF",
+   712.95,
+   317.0,
+   1.0,
+   1.0
+  ]
+ }
+}

@@ -1,0 +1,190 @@
+[gd_scene load_steps=5 format=3]
+
+; 原版商城商品行 —— `com/mxw/uifl/controls/cashShop/CashItemCell.as`。
+; 行高固定 **62**（`CashItemCell.as:74` 的 `_height`），宽 592（分隔线的宽度）。
+;
+; 坐标全部是 AS3 的**行局部**坐标，逐行对得上 `init()`（`:67-109`）：
+;   itemIcon          MGrid_background      @ (10,10)  40x40
+;   图标(格内)         PicTool.getItemPic    @ (3,3)    34x34   ← `:169` `icon.x = icon.y = 3`
+;   itemNameText      MLabel @ (55, 6-2=4)  117x18  UI_BLUE
+;   saleLabel         MLabel @ (55, 22-2=20) 43x18  UI_GREEN  文案 `SALE_LABEL`=「售价：」
+;   salePriceText     MLabel @ (90, 20)      48x18  UI_WHITE
+;   intrinsicPriceText MLabel @ (55, 38-2=36) 117x18 UI_BLUE  ← 原价，默认 `visible=false`
+;   iconCash          MIconGoldYuanBaoF    @ (140,24) 19x13   ← 位置随售价宽度浮动，见下
+;   iconBand          QUAN_ICON            @ (153,22) 19x13   ← 仅 isLiJin==1 显示
+;   iteminfoBox       Box                  @ (175,0) 355x58
+;   itemInfo          TextField(350x54)              说明框正文
+;   hotIcon           IconHot              @ (430,1)  43x28
+;   saleIcon          IconSale             @ (484,1)  44x27
+;   buyBtn            MButtonF             @ (532,22) 宽 btn_width_two=37
+;   分隔线             LineHPicF            @ (0,60)   592x2
+;
+; ⚠️ 两个换算，都跟 `场景/界面/组件/销毁窗口.tscn` 同一套（项目既定口径）：
+;    1. **`offset_top` 取 AS3 里那个 Label 容器自己的 y**，不是文字落点。
+;       `CashItemCell.setLabel()`（`:151-158`）写 `param1.y = param3 - 2`，所以 AS3 传的
+;       6/22/38 落到容器上是 **4/20/36** —— 本场景用的就是这一组。
+;       （`MLabel.initUI()` 内部再把 `textField.y` 设成 2（`MLabel.as:207`），文字净落点回到 6/22/38；
+;         但那一层是 Flash 特有、Godot 的 Label 没有，按项目口径不管它。）
+;       对照：`DestroyWindow.as:110` 直接 `destroyOkTf.y = 42`、场景也是 42。
+;    2. MLabel 的默认字号是 **12**（`MLabel.as:218-219`，`defaultTextFormat` 为空时写死 12），
+;       不是全局基准的 11 —— 本行所有文字都要显式 12。
+;
+; ⚠️ **位置是运行时算的**，本场景只给初值 —— `data` setter（`:186-232`）会：
+;    · `salePriceText.width = 文字宽 + 3`，再 `iconCash.x = round(售价.x + 售价.width)`、
+;      `iconBand.x = iconCash.x + 13`（元宝图标紧贴售价右边，券图标再右移 13）
+;    · **原价不显示时**（`origPrice == nowPrice`，是常态）：
+;      `itemNameText.y = 12`、售价标签/售价/券图标 `y = 30`、`iconCash.y = 32`
+;    这两段都在 `社交窗口.gd::_布置商品行()` 里，别在场景里写死。
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/火影币.png" id="1_yuanbao"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/商城/券.png" id="2_quan"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/商城/热卖.png" id="3_hot"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/商城/打折.png" id="4_sale"]
+
+[node name="商城商品行" type="Panel"]
+custom_minimum_size = Vector2(592, 62)
+offset_right = 592.0
+offset_bottom = 62.0
+mouse_filter = 2
+theme_type_variation = &"OrigBlankPanel"
+
+; CashItemCell.as:70-73 —— MGrid_background @ (10,10)；格内图标在 (3,3)、34x34
+; （物品图标一律 34x34，见 场景/界面/组件/物品格.tscn 的注释）
+[node name="物品格" type="Panel" parent="."]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 50.0
+offset_bottom = 50.0
+mouse_filter = 2
+theme_type_variation = &"OrigItemSlot"
+
+[node name="图标" type="TextureRect" parent="物品格"]
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 37.0
+offset_bottom = 37.0
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+
+; CashItemCell.as:87-97 —— UI_BLUE = 2003199 = 0x1E90FF（UIConfig.as:926）
+[node name="名称" type="Label" parent="."]
+offset_left = 55.0
+offset_top = 4.0
+offset_right = 172.0
+offset_bottom = 22.0
+mouse_filter = 2
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.117647, 0.564706, 1, 1)
+text = "商品名称"
+
+; CashItemCell.as:88-90 —— UI_GREEN = 0x00FF00
+[node name="售价标签" type="Label" parent="."]
+offset_left = 55.0
+offset_top = 20.0
+offset_right = 98.0
+offset_bottom = 38.0
+mouse_filter = 2
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "售价："
+
+[node name="售价" type="Label" parent="."]
+offset_left = 90.0
+offset_top = 20.0
+offset_right = 138.0
+offset_bottom = 38.0
+mouse_filter = 2
+theme_override_font_sizes/font_size = 12
+text = "0"
+
+; CashItemCell.as:231-233 —— 原价行只在 origPrice != nowPrice 时显示。
+; 文案 `CASHITEMCELL_NOW_PRICE`：「原价：」是 #018aff、数值是 #ffffff，故用 BBCode 富文本。
+[node name="原价" type="RichTextLabel" parent="."]
+visible = false
+offset_left = 55.0
+offset_top = 36.0
+offset_right = 172.0
+offset_bottom = 54.0
+mouse_filter = 2
+bbcode_enabled = true
+scroll_active = false
+theme_override_constants/line_separation = 2
+
+; CashItemCell.as:79-83 —— iconCash = MIconGoldYuanBaoF。x/y 运行时按售价宽度算。
+[node name="元宝图标" type="TextureRect" parent="."]
+offset_left = 140.0
+offset_top = 24.0
+offset_right = 159.0
+offset_bottom = 37.0
+mouse_filter = 2
+texture = ExtResource("1_yuanbao")
+expand_mode = 1
+stretch_mode = 5
+
+; CashItemCell.as:75-78 —— iconBand = QUAN_ICON，只在 isLiJin == 1 时可见（`:197`）。
+; 原版 wire 上第 13 个字段就是 isLiJin（CashItemInfo.as:69）。
+[node name="券图标" type="TextureRect" parent="."]
+visible = false
+offset_left = 153.0
+offset_top = 22.0
+offset_right = 172.0
+offset_bottom = 35.0
+mouse_filter = 2
+texture = ExtResource("2_quan")
+expand_mode = 1
+stretch_mode = 5
+
+; CashItemCell.as:99-107 —— 说明框 355x58 在 (175,0)，正文 350x54。
+; 正文是 HTML：`<font color="#00ff00">detaildesc</font><br/><font color="#ffffff">desc</font>`，
+; 由 `社交窗口.gd` 用 `功能窗口.译文为BBCode()` 翻成 BBCode。
+; `line_separation = 2` 对应 AS3 的 `<textformat leading="2">`。
+[node name="说明" type="RichTextLabel" parent="."]
+offset_left = 175.0
+offset_top = 0.0
+offset_right = 525.0
+offset_bottom = 54.0
+mouse_filter = 2
+bbcode_enabled = true
+scroll_active = false
+theme_override_constants/line_separation = 2
+
+; CashItemCell.as:203-214 —— 热卖/打折角标，按 isHot / isDiscount 显示，(430,1) 与 (484,1)
+[node name="热卖" type="TextureRect" parent="."]
+visible = false
+offset_left = 430.0
+offset_top = 1.0
+offset_right = 473.0
+offset_bottom = 29.0
+mouse_filter = 2
+texture = ExtResource("3_hot")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="打折" type="TextureRect" parent="."]
+visible = false
+offset_left = 484.0
+offset_top = 1.0
+offset_right = 528.0
+offset_bottom = 28.0
+mouse_filter = 2
+texture = ExtResource("4_sale")
+expand_mode = 1
+stretch_mode = 5
+
+; CashItemCell.as:84-86 + :110 —— buyBtn @ (532,22)，宽 UIConfig.btn_width_two = 37，文案 `SHOP_BUY`
+[node name="购买" type="Button" parent="."]
+offset_left = 532.0
+offset_top = 22.0
+offset_right = 569.0
+offset_bottom = 44.0
+tooltip_text = "购买当前商品"
+focus_mode = 0
+text = "购买"
+
+; CashItemCell.as:87-92 —— 分隔线 LineHPicF @ (0,60) 592x2（横向分隔线美术，九宫格拉伸）
+[node name="分隔线" type="HSeparator" parent="."]
+offset_top = 60.0
+offset_right = 592.0
+offset_bottom = 62.0
+mouse_filter = 2

@@ -1,0 +1,138 @@
+[gd_scene format=3]
+
+[node name="原版信息窗口内容" type="Control"]
+custom_minimum_size = Vector2(584, 432)
+
+[node name="外框" type="Panel" parent="."]
+offset_right = 584.0
+offset_bottom = 432.0
+
+[node name="分页" type="Control" parent="."]
+offset_left = 10.0
+offset_top = 6.0
+offset_right = 194.0
+offset_bottom = 29.0
+
+[node name="系统公告" type="Button" parent="分页"]
+offset_right = 61.0
+offset_bottom = 23.0
+toggle_mode = true
+text = "系统公告"
+
+[node name="聊天信息" type="Button" parent="分页"]
+offset_left = 61.0
+offset_right = 122.0
+offset_bottom = 23.0
+toggle_mode = true
+text = "聊天信息"
+
+[node name="个人成就" type="Button" parent="分页"]
+offset_left = 122.0
+offset_right = 183.0
+offset_bottom = 23.0
+toggle_mode = true
+text = "个人成就"
+
+[node name="页面" type="Control" parent="."]
+offset_left = 6.0
+offset_top = 29.0
+offset_right = 578.0
+offset_bottom = 426.0
+
+[node name="系统公告" type="Control" parent="页面"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="内容面板" type="Panel" parent="页面/系统公告"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="标题" type="Label" parent="页面/系统公告"]
+offset_left = 20.0
+offset_top = 16.0
+offset_right = 552.0
+offset_bottom = 40.0
+text = "系统公告"
+horizontal_alignment = 1
+
+[node name="内容" type="Label" parent="页面/系统公告"]
+offset_left = 22.0
+offset_top = 57.0
+offset_right = 550.0
+offset_bottom = 368.0
+text = "当前没有新的系统公告"
+autowrap_mode = 2
+
+[node name="聊天信息" type="Control" parent="页面"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="内容面板" type="Panel" parent="页面/聊天信息"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="标题" type="Label" parent="页面/聊天信息"]
+offset_left = 20.0
+offset_top = 16.0
+offset_right = 552.0
+offset_bottom = 40.0
+text = "聊天信息"
+horizontal_alignment = 1
+
+[node name="内容" type="Label" parent="页面/聊天信息"]
+offset_left = 22.0
+offset_top = 57.0
+offset_right = 550.0
+offset_bottom = 368.0
+text = "当前没有新的聊天信息"
+autowrap_mode = 2
+
+[node name="个人成就" type="Control" parent="页面"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="内容面板" type="Panel" parent="页面/个人成就"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="标题" type="Label" parent="页面/个人成就"]
+offset_left = 20.0
+offset_top = 16.0
+offset_right = 552.0
+offset_bottom = 40.0
+text = "个人成就"
+horizontal_alignment = 1
+
+[node name="内容" type="Label" parent="页面/个人成就"]
+offset_left = 22.0
+offset_top = 57.0
+offset_right = 550.0
+offset_bottom = 368.0
+text = "成就数据正在同步"
+autowrap_mode = 2

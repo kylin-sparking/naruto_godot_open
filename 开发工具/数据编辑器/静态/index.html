@@ -1,0 +1,915 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>火影世界 · 数据编辑器</title>
+<style>
+  *{box-sizing:border-box}
+  :root{
+    color-scheme:dark;
+    font-family:"Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+    --bg:#0b0d0f; --bg2:#11151a; --bg3:#161c22; --line:#232c34;
+    --ink:#e8ebee; --muted:#8b97a3; --dim:#5f6b76;
+    --gold:#d9b45a; --gold2:#f0d492; --teal:#5cc8b0; --red:#e06767;
+    --blue:#6ea8e8; --green:#6ec48a;
+  }
+  html,body{height:100%}
+  body{margin:0;background:radial-gradient(1200px 600px at 20% -10%,#16202a 0%,var(--bg) 55%);color:var(--ink);font-size:13px}
+  button,input,select,textarea{font:inherit;color:inherit}
+  button{cursor:pointer}
+  .hidden{display:none!important}
+  ::-webkit-scrollbar{width:10px;height:10px}
+  ::-webkit-scrollbar-thumb{background:#2b353f;border-radius:6px;border:2px solid transparent;background-clip:content-box}
+  ::-webkit-scrollbar-track{background:transparent}
+
+  .login{height:100%;display:flex;align-items:center;justify-content:center}
+  .login-card{width:380px;padding:30px 28px;border:1px solid var(--line);border-radius:14px;
+    background:linear-gradient(180deg,#151b21,#0e1216);box-shadow:0 24px 60px rgba(0,0,0,.5)}
+  .login-card h1{margin:0 0 4px;font-size:19px;color:var(--gold2);letter-spacing:.5px}
+  .login-card p{margin:0 0 20px;color:var(--muted);font-size:12px;line-height:1.7}
+  .login-card input{width:100%;min-height:38px;margin-bottom:12px}
+  .login-card button{width:100%;min-height:38px}
+  .login-err{color:var(--red);font-size:12px;min-height:16px;margin-bottom:6px}
+
+  .app{height:100%;display:grid;grid-template-rows:56px 1fr;grid-template-columns:216px 330px 1fr;
+    grid-template-areas:"head head head" "side list main"}
+  header{grid-area:head;display:flex;align-items:center;gap:14px;padding:0 18px;
+    border-bottom:1px solid var(--line);background:linear-gradient(180deg,#161d24,#11161b)}
+  header .brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:15px;color:var(--gold2)}
+  header .brand .dot{width:9px;height:9px;border-radius:50%;background:var(--green);box-shadow:0 0 10px var(--green)}
+  header .brand .dot.off{background:var(--red);box-shadow:0 0 10px var(--red)}
+  header .spacer{flex:1}
+  header .meta{color:var(--muted);font-size:12px}
+  header .meta b{color:var(--ink);font-weight:600}
+
+  aside{grid-area:side;min-height:0;display:flex;flex-direction:column;border-right:1px solid var(--line);background:var(--bg2)}
+  .side-head{padding:14px 14px 8px;font-weight:700;color:var(--ink)}
+  .side-head small{display:block;color:var(--muted);font-weight:400;margin-top:3px}
+  .tables{flex:1;overflow:auto;padding:4px 8px 16px}
+  .trow{display:flex;flex-direction:column;gap:3px;padding:9px 10px;border:1px solid transparent;border-radius:9px;cursor:pointer;margin-bottom:3px}
+  .trow:hover{background:#161d24}
+  .trow.sel{background:linear-gradient(90deg,rgba(217,180,90,.14),rgba(217,180,90,.03));border-color:rgba(217,180,90,.38)}
+  .trow .tt{display:flex;align-items:baseline;gap:8px}
+  .trow .tt b{font-weight:600;font-size:13px}
+  .trow .tt em{font-style:normal;color:var(--gold);font-size:11px;margin-left:auto}
+  .trow .tt .plus{color:var(--teal)}
+  .trow small{color:var(--dim);font-size:11px;line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+
+  .listpane{grid-area:list;min-height:0;display:flex;flex-direction:column;border-right:1px solid var(--line);background:#0e1216}
+  .list-tools{padding:12px 12px 8px;display:grid;gap:8px;border-bottom:1px solid var(--line)}
+  .list-tools .row{display:flex;gap:6px;align-items:center}
+  .list-tools input[type=search]{flex:1;min-width:0}
+  .list-count{color:var(--dim);font-size:11px;display:flex;justify-content:space-between}
+  .list-count b{color:var(--muted);font-weight:600}
+  .rows{flex:1;overflow:auto;padding:4px 8px 8px}
+  .rrow{display:grid;grid-template-columns:8px 1fr;gap:8px;padding:8px 9px;border:1px solid transparent;border-radius:8px;cursor:pointer;margin-bottom:2px}
+  .rrow:hover{background:#151c23}
+  .rrow.sel{background:linear-gradient(90deg,rgba(217,180,90,.13),rgba(217,180,90,.02));border-color:rgba(217,180,90,.35)}
+  .rrow .od{width:6px;height:6px;border-radius:50%;margin-top:6px;background:transparent}
+  .rrow .od.on{background:var(--teal);box-shadow:0 0 6px var(--teal)}
+  .rrow .nm{min-width:0;display:flex;flex-direction:column;gap:2px}
+  .rrow .nm b{font-size:12.5px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .rrow .nm span{color:var(--dim);font-size:11px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .rrow .nm i{font-style:normal;color:var(--muted);font-size:10.5px}
+  .pager{display:flex;gap:6px;padding:8px 12px 12px;border-top:1px solid var(--line)}
+  .pager button{flex:1}
+
+  main{grid-area:main;min-height:0;display:flex;flex-direction:column;background:var(--bg)}
+  .rec-head{display:flex;align-items:center;gap:10px;padding:12px 18px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,#151b21,#11161b);flex-wrap:wrap}
+  .rec-head h2{margin:0;font-size:15px;color:var(--gold2);font-weight:700}
+  .rec-head h2 small{color:var(--dim);font-weight:400;font-size:12px;margin-left:6px;font-family:Consolas,monospace}
+  .rec-head .spacer{flex:1}
+  .rec-head .btns{display:flex;gap:6px;flex-wrap:wrap}
+  .rec-body{flex:1;overflow:auto;padding:14px 18px 40px}
+  .rec-note{color:var(--muted);font-size:12px;line-height:1.7;margin-bottom:12px}
+  .tabs2{display:flex;gap:4px;margin-bottom:12px;border-bottom:1px solid var(--line)}
+  .tabs2 button{padding:7px 14px;border:1px solid transparent;border-bottom:none;border-radius:8px 8px 0 0;background:transparent;color:var(--muted)}
+  .tabs2 button:hover{color:var(--ink);background:#161d24}
+  .tabs2 button.on{color:var(--gold2);background:var(--bg3);border-color:var(--line)}
+  .card{border:1px solid var(--line);border-radius:12px;background:linear-gradient(180deg,#141a20,#10151a);padding:14px 16px;margin-bottom:14px}
+  .card h3{margin:0 0 10px;font-size:12.5px;color:var(--gold2);font-weight:700;display:flex;align-items:center;gap:8px}
+  .card h3 small{color:var(--dim);font-weight:400;font-size:11px}
+  .fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 16px}
+  .fields .field{display:grid;gap:5px;margin-bottom:11px;align-content:start}
+  .fields .field.wide{grid-column:1 / -1}
+  .fields label{color:var(--muted);font-size:11.5px;display:flex;gap:8px;align-items:baseline}
+  .fields label code{color:var(--dim);font-size:10.5px;font-family:Consolas,monospace}
+  .fields .hint{color:var(--dim);font-size:10.5px;line-height:1.5}
+  input,select,textarea{min-height:34px;width:100%;padding:6px 10px;border:1px solid #2f3a44;border-radius:7px;
+    background:#0b1014;outline:none;transition:border-color .15s,box-shadow .15s}
+  input:focus,select:focus,textarea:focus{border-color:var(--gold);box-shadow:0 0 0 2px rgba(217,180,90,.13)}
+  input.bad,textarea.bad{border-color:var(--red);box-shadow:0 0 0 2px rgba(224,103,103,.12)}
+  textarea{min-height:88px;resize:vertical;font-family:Consolas,"Cascadia Mono",monospace;font-size:12px;line-height:1.55}
+  textarea.short{min-height:60px}
+  button{min-height:34px;padding:6px 14px;border:1px solid #37434e;border-radius:7px;background:#1b232b;font-size:12px;
+    transition:background .12s,border-color .12s}
+  button:hover{background:#24303a;border-color:#4a5866}
+  button.primary{border-color:#a8862f;background:linear-gradient(180deg,#c8a04a,#a8862f);color:#17120a;font-weight:700}
+  button.primary:hover{filter:brightness(1.08)}
+  button.ghost{background:transparent}
+  button.danger{border-color:rgba(224,103,103,.5);background:rgba(224,103,103,.12);color:#f0a0a0}
+  button.sm{min-height:28px;padding:3px 10px;font-size:11.5px}
+  button:disabled{opacity:.45;cursor:not-allowed}
+  .tag{display:inline-block;padding:1px 7px;border-radius:5px;font-size:11px;border:1px solid var(--line);color:var(--muted)}
+  .tag.gold{color:var(--gold2);border-color:rgba(217,180,90,.4);background:rgba(217,180,90,.08)}
+  .tag.green{color:var(--green);border-color:rgba(110,196,138,.4);background:rgba(110,196,138,.08)}
+  .tag.red{color:var(--red);border-color:rgba(224,103,103,.4);background:rgba(224,103,103,.08)}
+  .tag.teal{color:var(--teal);border-color:rgba(92,200,176,.4);background:rgba(92,200,176,.08)}
+  .tag.blue{color:var(--blue);border-color:rgba(110,168,232,.4);background:rgba(110,168,232,.08)}
+  .muted{color:var(--muted)}
+  .dim{color:var(--dim)}
+  pre.json{margin:0;padding:12px;border:1px solid #1b232b;border-radius:9px;background:#0a0e12;color:#c9d6e2;
+    font-family:Consolas,"Cascadia Mono",monospace;font-size:11.5px;line-height:1.55;max-height:52vh;overflow:auto;white-space:pre}
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:1280px){.split{grid-template-columns:1fr}}
+  .empty{padding:44px 16px;color:var(--dim);text-align:center;font-size:12px;line-height:1.8}
+  .empty b{color:var(--muted)}
+  .warn{color:var(--red);font-size:11.5px;min-height:16px;margin-top:6px}
+  .okline{color:var(--green);font-size:11.5px;min-height:16px;margin-top:6px}
+  .dirty{color:var(--gold2);font-size:11.5px}
+
+  .modal{position:fixed;inset:0;background:rgba(4,6,8,.72);display:flex;align-items:center;justify-content:center;padding:24px;z-index:40}
+  .modal-card{width:min(820px,96vw);max-height:86vh;display:flex;flex-direction:column;border:1px solid var(--line);border-radius:14px;
+    background:linear-gradient(180deg,#151b21,#0e1216);box-shadow:0 30px 80px rgba(0,0,0,.6)}
+  .modal-head{display:flex;align-items:center;gap:10px;padding:14px 18px;border-bottom:1px solid var(--line)}
+  .modal-head h3{margin:0;font-size:14px;color:var(--gold2)}
+  .modal-head .spacer{flex:1}
+  .modal-body{padding:16px 18px;overflow:auto}
+  .modal-foot{padding:12px 18px;border-top:1px solid var(--line);display:flex;justify-content:flex-end;gap:8px}
+  table{width:100%;border-collapse:collapse;font-size:12px}
+  th,td{text-align:left;padding:7px 9px;border-bottom:1px solid #1b232b}
+  th{color:var(--muted);font-weight:600;font-size:11px;position:sticky;top:0;background:#121820}
+  tbody tr:hover{background:#141b22}
+  td.num{text-align:right;font-variant-numeric:tabular-nums}
+  td.mono{font-family:Consolas,monospace;font-size:11px;color:#b9c7d4}
+  .toasts{position:fixed;right:18px;bottom:18px;display:flex;flex-direction:column;gap:8px;z-index:60;max-width:420px}
+  .toast{padding:10px 14px;border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:8px;
+    background:#141b22;box-shadow:0 12px 30px rgba(0,0,0,.45);font-size:12.5px;line-height:1.5;animation:in .16s ease-out}
+  .toast.err{border-left-color:var(--red)}
+  .toast.ok{border-left-color:var(--green)}
+  @keyframes in{from{transform:translateY(6px);opacity:0}to{transform:none;opacity:1}}
+</style>
+</head>
+<body>
+
+<div id="login" class="login hidden">
+  <form class="login-card" id="login-form">
+    <h1>数据编辑器</h1>
+    <p>直接写 <code>editor_workspace/project.json</code> 的覆盖层。<br>保存即时生效，服务端按 mtime 热加载。</p>
+    <div class="login-err" id="login-err"></div>
+    <input type="password" id="login-pw" placeholder="编辑器口令" autocomplete="current-password">
+    <button class="primary" type="submit">进入</button>
+  </form>
+</div>
+
+<div id="app" class="app hidden">
+  <header>
+    <div class="brand"><span class="dot" id="srv-dot"></span>火影世界 · 数据编辑器</div>
+    <span class="tag" id="rev-tag">revision -</span>
+    <span class="tag" id="backup-tag">备份 -</span>
+    <div class="spacer"></div>
+    <span class="meta" id="path-meta"></span>
+    <button class="ghost sm" onclick="location.href='/editor/terrain'">地形浏览器</button>
+    <button class="ghost sm" data-action="backups">备份与恢复</button>
+    <button class="ghost sm" data-action="logout">退出</button>
+  </header>
+
+  <aside>
+    <div class="side-head">数据表<small>点一项切换</small></div>
+    <div class="tables" id="tables"></div>
+  </aside>
+
+  <section class="listpane">
+    <div class="list-tools">
+      <div class="row">
+        <input type="search" id="search" placeholder="搜名称 / ID / 摘要">
+        <button class="ghost sm" data-action="reload-list">刷新</button>
+      </div>
+      <div class="list-count"><span id="list-total">—</span><span id="list-over">—</span></div>
+    </div>
+    <div class="rows" id="rows"></div>
+    <div class="pager">
+      <button class="ghost sm" data-action="prev-page">上一页</button>
+      <button class="ghost sm" data-action="next-page">下一页</button>
+    </div>
+  </section>
+
+  <main>
+    <div class="rec-head hidden" id="rec-head">
+      <h2 id="rec-title"></h2>
+      <span id="rec-tags"></span>
+      <div class="spacer"></div>
+      <span class="dirty" id="dirty-tag"></span>
+      <div class="btns">
+        <button class="ghost sm" data-action="reload-record">重读</button>
+        <button class="danger sm" data-action="reset-record">还原基础值</button>
+        <button class="primary sm" data-action="save">保存</button>
+      </div>
+    </div>
+    <div class="rec-body" id="editor">
+      <div class="empty">左侧选择一张表，再选一条记录。</div>
+    </div>
+  </main>
+</div>
+
+<div id="modal" class="modal hidden">
+  <div class="modal-card">
+    <div class="modal-head"><h3 id="modal-title"></h3><div class="spacer"></div><button class="ghost sm" data-action="close-modal">关闭</button></div>
+    <div class="modal-body" id="modal-body"></div>
+    <div class="modal-foot" id="modal-foot"></div>
+  </div>
+</div>
+
+<div class="toasts" id="toasts"></div>
+
+<script>
+'use strict';
+
+const app = {
+  pw: '',
+  tables: [],
+  table: '',
+  tablesMeta: {},
+  limit: 200,
+  offset: 0,
+  total: 0,
+  q: '',
+  rows: [],
+  overridden: [],
+  rev: 0,
+  sel: null,          // {table,id,record,draft}
+  tab: 'fields',
+  busy: false,
+  jsonText: '',
+  jsonError: '',
+};
+
+const $ = (sel, root = document) => root.querySelector(sel);
+const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
+
+function esc(value) {
+  return String(value == null ? '' : value).replace(/[&<>"']/g, (c) => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;',
+  }[c]));
+}
+
+function fmtBytes(n) {
+  if (n < 1024) return n + ' B';
+  if (n < 1024 * 1024) return (n / 1024).toFixed(1) + ' KB';
+  return (n / 1024 / 1024).toFixed(1) + ' MB';
+}
+
+function toast(message, kind = '') {
+  const node = document.createElement('div');
+  node.className = 'toast ' + kind;
+  node.textContent = message;
+  $('#toasts').appendChild(node);
+  setTimeout(() => node.remove(), kind === 'err' ? 6000 : 3600);
+}
+
+async function api(path, options = {}) {
+  const headers = Object.assign({}, options.headers || {});
+  if (app.pw) headers['X-Naruto-Editor-Password'] = app.pw;
+  if (options.body !== undefined && !headers['Content-Type']) headers['Content-Type'] = 'application/json';
+  const response = await fetch(path, Object.assign({}, options, { headers }));
+  let data = null;
+  try { data = await response.json(); } catch (_) { /* 非 JSON */ }
+  if (response.status === 401) {
+    logout(true);
+    throw new Error((data && data.error) || '口令错误');
+  }
+  if (!response.ok || !data || data.ok === false) {
+    throw new Error((data && data.error) || ('请求失败 HTTP ' + response.status));
+  }
+  return data;
+}
+
+// ---------------------------------------------------------------- 登录
+
+function showLogin(message = '') {
+  $('#app').classList.add('hidden');
+  $('#login').classList.remove('hidden');
+  $('#login-err').textContent = message;
+  $('#login-pw').value = '';
+  setTimeout(() => $('#login-pw').focus(), 30);
+}
+
+function logout(expired = false) {
+  localStorage.removeItem('editor-password');
+  app.pw = '';
+  app.tables = [];
+  app.sel = null;
+  showLogin(expired ? '口令已失效，请重新输入。' : '');
+}
+
+$('#login-form').addEventListener('submit', async (event) => {
+  event.preventDefault();
+  const pw = $('#login-pw').value.trim();
+  if (!pw) return;
+  $('#login-err').textContent = '';
+  app.pw = pw;
+  try {
+    await boot();
+    localStorage.setItem('editor-password', pw);
+  } catch (error) {
+    app.pw = '';
+    $('#login-err').textContent = error.message;
+  }
+});
+
+// ---------------------------------------------------------------- 启动
+
+async function boot() {
+  const data = await api('/api/editor/tables');
+  app.tables = data.tables || [];
+  app.tablesMeta = {};
+  app.tables.forEach((t) => { app.tablesMeta[t.id] = t; });
+  $('#login').classList.add('hidden');
+  $('#app').classList.remove('hidden');
+  renderTables();
+  const params = new URLSearchParams(location.search);
+  const wanted = params.get('table');
+  const first = (wanted && app.tablesMeta[wanted]) ? wanted : (app.table || (app.tables[0] && app.tables[0].id));
+  if (first) await selectTable(first);
+  await refreshStatus();
+  startPolling();
+}
+
+function renderTables() {
+  const box = $('#tables');
+  box.innerHTML = app.tables.map((t) => `
+    <div class="trow ${t.id === app.table ? 'sel' : ''}" data-table="${esc(t.id)}" title="${esc(t.note)}">
+      <div class="tt"><b>${esc(t.title)}</b>${t.creatable ? '<span class="plus">＋</span>' : ''}<em>${t.count}</em></div>
+      <small>${esc(t.note)}</small>
+    </div>`).join('');
+  $$('.trow', box).forEach((row) => {
+    row.onclick = () => selectTable(row.dataset.table);
+  });
+}
+
+async function selectTable(table) {
+  if (app.sel && isDirty() && app.sel.table !== table) {
+    if (!confirm('当前记录有未保存的改动，切换后会丢失。继续？')) return;
+  }
+  app.table = table;
+  app.q = '';
+  app.offset = 0;
+  app.sel = null;
+  $('#search').value = '';
+  renderTables();
+  renderEditor();
+  $('#rec-head').classList.add('hidden');
+  await loadRecords();
+}
+
+// ---------------------------------------------------------------- 记录列表
+
+async function loadRecords() {
+  const table = app.tablesMeta[app.table];
+  if (!table) return;
+  const params = new URLSearchParams({
+    table: app.table,
+    q: app.q,
+    offset: String(app.offset),
+    limit: String(app.limit),
+  });
+  try {
+    const data = await api('/api/editor/records?' + params.toString());
+    app.total = data.total;
+    app.rows = data.records || [];
+    app.overridden = data.overridden || [];
+    renderRows();
+  } catch (error) {
+    toast('读取列表失败：' + error.message, 'err');
+  }
+}
+
+function renderRows() {
+  const meta = app.tablesMeta[app.table];
+  $('#list-total').innerHTML = `共 <b>${app.total}</b> 条 · 显示 ${app.rows.length ? (app.offset + 1) : 0}-${app.offset + app.rows.length}`;
+  $('#list-over').innerHTML = `已覆盖 <b>${app.overridden.length}</b>`;
+  const box = $('#rows');
+  if (!app.rows.length) {
+    box.innerHTML = `<div class="empty">没有记录。<br>${app.q ? '换个关键词试试。' : ''}</div>`;
+    return;
+  }
+  box.innerHTML = app.rows.map((row) => `
+    <div class="rrow ${app.sel && app.sel.table === app.table && app.sel.id === row.id ? 'sel' : ''}" data-id="${esc(row.id)}">
+      <span class="od ${row.overridden ? 'on' : ''}"></span>
+      <div class="nm">
+        <b>${esc(row.name)}</b>
+        <span>${esc(row.summary || '')}</span>
+        <i>#${esc(row.id)}</i>
+      </div>
+    </div>`).join('');
+  $$('.rrow', box).forEach((row) => {
+    row.onclick = () => openRecord(row.dataset.id);
+  });
+}
+
+async function openRecord(id) {
+  if (app.sel && isDirty() && app.sel.id !== id) {
+    if (!confirm('当前记录有未保存的改动，切换后会丢失。继续？')) return;
+  }
+  try {
+    const data = await api('/api/editor/record?table=' + encodeURIComponent(app.table) + '&id=' + encodeURIComponent(id));
+    app.sel = { table: app.table, id: data.record.id, record: data.record, draft: clone(data.record.merged) };
+    app.tab = 'fields';
+    app.jsonText = '';
+    app.jsonError = '';
+    renderEditor();
+    renderRows();
+  } catch (error) {
+    toast('读取记录失败：' + error.message, 'err');
+  }
+}
+
+function openNewRecord() {
+  if (!(app.tablesMeta[app.table] || {}).creatable) return;
+  showModal('新建 ' + app.tablesMeta[app.table].title, `
+    <div class="field" style="display:grid;gap:6px">
+      <label class="muted">记录 ID（数字或字母，最长 64）</label>
+      <input id="new-id" placeholder="例如 9001">
+      <span class="dim" style="font-size:11px">新建的记录只写进覆盖层；填完字段再保存。</span>
+    </div>`, `
+    <button class="ghost" data-action="close-modal">取消</button>
+    <button class="primary" data-action="create-record">创建</button>`);
+  setTimeout(() => $('#new-id').focus(), 30);
+}
+
+// ---------------------------------------------------------------- 编辑器
+
+function clone(value) { return JSON.parse(JSON.stringify(value == null ? {} : value)); }
+
+function getAt(obj, path) {
+  return path.split('.').reduce((cur, key) => (cur && typeof cur === 'object' ? cur[key] : undefined), obj);
+}
+
+function setAt(obj, path, value) {
+  const parts = path.split('.');
+  let cur = obj;
+  for (let i = 0; i < parts.length - 1; i += 1) {
+    if (!cur[parts[i]] || typeof cur[parts[i]] !== 'object') cur[parts[i]] = {};
+    cur = cur[parts[i]];
+  }
+  if (value === undefined) delete cur[parts[parts.length - 1]];
+  else cur[parts[parts.length - 1]] = value;
+}
+
+function deepEqual(a, b) {
+  if (a === b) return true;
+  if (Array.isArray(a) && Array.isArray(b)) {
+    return a.length === b.length && a.every((item, i) => deepEqual(item, b[i]));
+  }
+  if (a && b && typeof a === 'object' && typeof b === 'object' && !Array.isArray(a) && !Array.isArray(b)) {
+    const ka = Object.keys(a);
+    const kb = Object.keys(b);
+    return ka.length === kb.length && ka.every((key) => Object.prototype.hasOwnProperty.call(b, key) && deepEqual(a[key], b[key]));
+  }
+  return false;
+}
+
+function isDirty() {
+  return !!(app.sel && !deepEqual(app.sel.draft, app.sel.record.merged));
+}
+
+// 与服务端 _diff 同口径的最小覆盖补丁
+function diffPatch(base, edited, path = []) {
+  if (base && edited && typeof base === 'object' && typeof edited === 'object' && !Array.isArray(base) && !Array.isArray(edited)) {
+    const patch = {};
+    const deletions = [];
+    Object.keys(edited).forEach((key) => {
+      if (!Object.prototype.hasOwnProperty.call(base, key)) {
+        patch[key] = clone(edited[key]);
+        return;
+      }
+      const child = diffPatch(base[key], edited[key], path.concat([key]));
+      deletions.push(...child.deletions);
+      if (child.changed) patch[key] = child.patch;
+    });
+    Object.keys(base).forEach((key) => {
+      if (!Object.prototype.hasOwnProperty.call(edited, key)) deletions.push(path.concat([key]).join('.'));
+    });
+    const changed = Object.keys(patch).length > 0 || deletions.length > 0;
+    return { changed, patch, deletions };
+  }
+  if (deepEqual(base, edited)) return { changed: false, patch: undefined, deletions: [] };
+  return { changed: true, patch: clone(edited), deletions: [] };
+}
+
+function prepareRecord(draft) {
+  if (app.table === 'npc_shops') {
+    const base = app.sel.record.base || {};
+    const copy = clone(draft);
+    ['prices', 'buy_multiplier', 'sell_multiplier'].forEach((key) => {
+      if (Object.prototype.hasOwnProperty.call(base, key)) copy[key] = clone(base[key]);
+      else delete copy[key];
+    });
+    if (copy.enabled === true) delete copy.enabled;
+    return copy;
+  }
+  return draft;
+}
+
+function currentPatch() {
+  if (!app.sel) return { changed: false, patch: {}, deletions: [] };
+  const result = diffPatch(app.sel.record.base, prepareRecord(app.sel.draft));
+  return { changed: result.changed, patch: result.patch || {}, deletions: result.deletions };
+}
+
+function setDirtyTag() {
+  const dirty = isDirty();
+  $('#dirty-tag').textContent = dirty ? '● 未保存' : '';
+  const button = $('[data-action="save"]');
+  if (button) button.disabled = app.busy || !dirty;
+}
+
+function renderEditor() {
+  const host = $('#editor');
+  const head = $('#rec-head');
+  if (!app.sel) {
+    head.classList.add('hidden');
+    host.innerHTML = `<div class="empty">左侧选择一张表，再选一条记录。${(app.tablesMeta[app.table] || {}).creatable ? '<br><br><button class="primary sm" data-action="new-record">＋ 新建记录</button>' : ''}</div>`;
+    return;
+  }
+  const rec = app.sel.record;
+  head.classList.remove('hidden');
+  $('#rec-title').innerHTML = `${esc(recName(rec))}<small>#${esc(app.sel.id)}</small>`;
+  $('#rec-tags').innerHTML = `${rec.hasOverride ? '<span class="tag teal">有覆盖</span>' : '<span class="tag">未覆盖</span>'}
+    ${rec.creatable ? '<span class="tag blue">可新建</span>' : ''}`;
+  host.innerHTML = `
+    <div class="rec-note">${esc(rec.note || '')}</div>
+    <div class="tabs2">
+      ${tabButton('fields', '字段编辑')}
+      ${tabButton('json', '合并 JSON')}
+      ${tabButton('override', '当前覆盖')}
+      ${tabButton('base', '基础数据')}
+    </div>
+    <div id="tab-body"></div>`;
+  $$('.tabs2 button', host).forEach((button) => {
+    button.onclick = () => { app.tab = button.dataset.tab; renderTab(); };
+  });
+  renderTab();
+  setDirtyTag();
+}
+
+function tabButton(id, label) {
+  return `<button class="${app.tab === id ? 'on' : ''}" data-tab="${id}">${label}</button>`;
+}
+
+function recName(rec) {
+  const merged = rec.merged || {};
+  const name = merged.name || (merged.info && merged.info.name);
+  return String(name || rec.id);
+}
+
+function renderTab() {
+  $$('.tabs2 button').forEach((button) => button.classList.toggle('on', button.dataset.tab === app.tab));
+  const body = $('#tab-body');
+  if (!body || !app.sel) return;
+  if (app.tab === 'fields') renderFields(body);
+  else if (app.tab === 'json') renderJsonTab(body);
+  else if (app.tab === 'override') renderOverrideTab(body);
+  else renderBaseTab(body);
+}
+
+function renderFields(host) {
+  const fields = app.sel.record.fields || [];
+  host.innerHTML = `<div class="card"><h3>结构化字段 <small>改动会与服务端同口径算成最小覆盖补丁</small></h3>
+    <div class="fields">${fields.map(fieldHtml).join('')}</div></div>`;
+  $$('[data-field]', host).forEach((input) => {
+    const path = input.dataset.field;
+    const kind = input.dataset.kind;
+    if (kind === 'json') {
+      input.oninput = () => applyJsonField(input, path);
+    } else if (kind === 'number') {
+      input.oninput = () => {
+        input.classList.remove('bad');
+        if (input.value.trim() === '') { setAt(app.sel.draft, path, undefined); }
+        else {
+          const value = Number(input.value);
+          if (!Number.isFinite(value)) { input.classList.add('bad'); return; }
+          setAt(app.sel.draft, path, value);
+        }
+        setDirtyTag();
+      };
+    } else if (kind === 'bool') {
+      input.onchange = () => { setAt(app.sel.draft, path, input.checked); setDirtyTag(); };
+    } else {
+      input.oninput = () => {
+        if (input.value === '') setAt(app.sel.draft, path, undefined);
+        else setAt(app.sel.draft, path, input.value);
+        setDirtyTag();
+      };
+    }
+  });
+}
+
+function fieldHtml(field) {
+  const value = getAt(app.sel.draft, field.path);
+  const wide = field.kind === 'json' || field.kind === 'textarea';
+  const hint = field.hint ? `<span class="hint">${esc(field.hint)}</span>` : '';
+  let control = '';
+  if (field.kind === 'json') {
+    const text = value === undefined ? '' : JSON.stringify(value, null, 2);
+    control = `<textarea data-field="${esc(field.path)}" data-kind="json" spellcheck="false">${esc(text)}</textarea>
+      <span class="hint" data-json-hint="${esc(field.path)}">JSON 对象/数组/值；留空表示移除该键。</span>`;
+  } else if (field.kind === 'textarea') {
+    control = `<textarea class="short" data-field="${esc(field.path)}" data-kind="text">${esc(value == null ? '' : value)}</textarea>`;
+  } else if (field.kind === 'number') {
+    control = `<input type="number" step="any" data-field="${esc(field.path)}" data-kind="number" value="${value == null ? '' : esc(value)}">`;
+  } else if (field.kind === 'bool') {
+    control = `<label class="chk" style="display:flex;gap:8px;align-items:center;min-height:34px;color:var(--ink)">
+      <input type="checkbox" data-field="${esc(field.path)}" data-kind="bool" ${value === true ? 'checked' : ''} style="width:16px;min-height:16px">勾选</label>`;
+  } else {
+    control = `<input type="text" data-field="${esc(field.path)}" data-kind="text" value="${value == null ? '' : esc(value)}">`;
+  }
+  return `<div class="field ${wide ? 'wide' : ''}">
+    <label>${esc(field.label)}<code>${esc(field.path)}</code></label>
+    ${control}${hint}
+  </div>`;
+}
+
+function applyJsonField(input, path) {
+  const hint = $(`[data-json-hint="${CSS.escape(path)}"]`);
+  input.classList.remove('bad');
+  if (hint) hint.style.color = '';
+  const text = input.value.trim();
+  if (!text) { setAt(app.sel.draft, path, undefined); if (hint) hint.textContent = '已清空该键。'; setDirtyTag(); return; }
+  try {
+    const value = JSON.parse(text);
+    setAt(app.sel.draft, path, value);
+    if (hint) hint.textContent = 'JSON 有效。';
+    setDirtyTag();
+  } catch (error) {
+    input.classList.add('bad');
+    if (hint) { hint.style.color = 'var(--red)'; hint.textContent = 'JSON 无法解析：' + error.message; }
+  }
+}
+
+function renderJsonTab(host) {
+  const text = app.jsonText || JSON.stringify(app.sel.draft, null, 2);
+  host.innerHTML = `<div class="card"><h3>合并 JSON <small>整条记录，保存时自动取差量</small></h3>
+    <textarea id="json-editor" style="min-height:52vh" spellcheck="false">${esc(text)}</textarea>
+    <div class="warn" id="json-warn">${esc(app.jsonError || '')}</div></div>`;
+  const area = $('#json-editor', host);
+  area.oninput = () => {
+    app.jsonText = area.value;
+    try {
+      const value = JSON.parse(area.value);
+      if (!value || typeof value !== 'object' || Array.isArray(value)) throw new Error('必须是 JSON 对象');
+      app.sel.draft = value;
+      app.jsonError = '';
+      area.classList.remove('bad');
+      $('#json-warn').textContent = '';
+      setDirtyTag();
+    } catch (error) {
+      app.jsonError = 'JSON 无法解析：' + error.message;
+      area.classList.add('bad');
+      $('#json-warn').textContent = app.jsonError;
+    }
+  };
+}
+
+function renderOverrideTab(host) {
+  const record = app.sel.record;
+  const preview = currentPatch();
+  host.innerHTML = `<div class="split">
+    <div class="card"><h3>已落库的覆盖 <small>${esc(app.sel.table)} / ${esc(app.sel.id)}</small></h3>
+      <pre class="json">${esc(JSON.stringify(record.override || {}, null, 2))}</pre></div>
+    <div class="card"><h3>本次保存将写入 <small>最小补丁</small></h3>
+      <pre class="json">${esc(JSON.stringify(preview.patch, null, 2))}</pre>
+      ${preview.deletions.length ? `<div class="warn">基础字段不可删除：${esc(preview.deletions.join(', '))}</div>` : '<div class="dim" style="font-size:11px;margin-top:8px">没有删除基础字段。</div>'}
+    </div>
+  </div>`;
+}
+
+function renderBaseTab(host) {
+  host.innerHTML = `<div class="card"><h3>基础数据 <small>只读，来自服务端 GameData</small></h3>
+    <pre class="json">${esc(JSON.stringify(app.sel.record.base, null, 2))}</pre></div>`;
+}
+
+// ---------------------------------------------------------------- 保存 / 还原
+
+async function saveRecord() {
+  if (!app.sel || app.busy) return;
+  if (app.jsonError && app.tab === 'json') { toast('JSON 还有错误，先修正。', 'err'); return; }
+  if (!isDirty()) { toast('没有改动。'); return; }
+  const preview = currentPatch();
+  if (preview.deletions.length) { toast('不能删除基础字段：' + preview.deletions.join(', '), 'err'); return; }
+  app.busy = true;
+  setDirtyTag();
+  try {
+    const data = await api('/api/editor/save', {
+      method: 'POST',
+      body: JSON.stringify({
+        table: app.sel.table,
+        id: app.sel.id,
+        record: app.sel.draft,
+        expectedOverride: app.sel.record.override || {},
+      }),
+    });
+    toast(`已保存 · revision ${data.revision}${data.backup ? ' · 备份 ' + data.backup : ''}`, 'ok');
+    await refreshStatus();
+    await loadRecords();
+    await reloadSelected();
+  } catch (error) {
+    toast('保存失败：' + error.message, 'err');
+  } finally {
+    app.busy = false;
+    setDirtyTag();
+  }
+}
+
+async function resetRecord() {
+  if (!app.sel || app.busy) return;
+  if (!app.sel.record.hasOverride) { toast('这条记录本来就没有覆盖。'); return; }
+  if (!confirm(`把 #${app.sel.id} 恢复为基础值？会删掉它现有的覆盖。`)) return;
+  app.busy = true;
+  try {
+    const data = await api('/api/editor/reset', {
+      method: 'POST',
+      body: JSON.stringify({
+        table: app.sel.table,
+        id: app.sel.id,
+        expectedOverride: app.sel.record.override || {},
+      }),
+    });
+    toast(`已还原 · revision ${data.revision}`, 'ok');
+    await refreshStatus();
+    await loadRecords();
+    await reloadSelected();
+  } catch (error) {
+    toast('还原失败：' + error.message, 'err');
+  } finally {
+    app.busy = false;
+  }
+}
+
+async function reloadSelected() {
+  if (!app.sel) return;
+  await openRecord(app.sel.id);
+}
+
+// ---------------------------------------------------------------- 备份
+
+async function openBackups() {
+  let data;
+  try { data = await api('/api/editor/backups'); }
+  catch (error) { toast('读取备份失败：' + error.message, 'err'); return; }
+  const rows = data.backups || [];
+  const body = rows.length ? `<table><thead><tr><th>文件</th><th>时间</th><th class="num">revision</th><th class="num">大小</th><th></th></tr></thead>
+    <tbody>${rows.map((row) => `<tr>
+      <td class="mono">${esc(row.name)}</td><td>${esc(row.time)}</td>
+      <td class="num">${row.revision}</td><td class="num">${fmtBytes(row.size)}</td>
+      <td style="text-align:right"><button class="ghost sm" data-restore="${esc(row.name)}">还原</button></td>
+    </tr>`).join('')}</tbody></table>`
+    : '<div class="empty">还没有备份。每次保存/还原前都会自动留一份。</div>';
+  showModal('备份与恢复', body, `<button class="ghost" data-action="close-modal">关闭</button>`);
+  $$('[data-restore]', $('#modal-body')).forEach((button) => {
+    button.onclick = () => restoreBackup(button.dataset.restore, button);
+  });
+}
+
+async function restoreBackup(name, button) {
+  if (!confirm('用备份 ' + name + ' 覆盖当前 project.json？当前内容会先自动备份一份。')) return;
+  button.disabled = true;
+  try {
+    const data = await api('/api/editor/restore', { method: 'POST', body: JSON.stringify({ name }) });
+    toast(`已还原备份 · revision ${data.revision}`, 'ok');
+    closeModal();
+    await refreshStatus();
+    await loadRecords();
+    if (app.sel) await reloadSelected();
+  } catch (error) {
+    toast('还原备份失败：' + error.message, 'err');
+  } finally {
+    button.disabled = false;
+  }
+}
+
+// ---------------------------------------------------------------- 弹窗
+
+function showModal(title, body, foot = '') {
+  $('#modal-title').textContent = title;
+  $('#modal-body').innerHTML = body;
+  $('#modal-foot').innerHTML = foot;
+  $('#modal').classList.remove('hidden');
+  $$('#modal [data-action]').forEach((button) => {
+    button.onclick = modalAction(button.dataset.action);
+  });
+}
+
+function closeModal() { $('#modal').classList.add('hidden'); }
+
+function modalAction(action) {
+  if (action === 'close-modal') return closeModal;
+  if (action === 'create-record') {
+    return async () => {
+      const id = ($('#new-id') || {}).value ? $('#new-id').value.trim() : '';
+      if (!/^[0-9A-Za-z_.-]{1,64}$/.test(id)) { toast('记录 ID 只能用数字、字母、下划线、点或连字符。', 'err'); return; }
+      closeModal();
+      await openRecord(id);
+      toast('新记录已打开，填好字段后点保存。');
+    };
+  }
+  return () => {};
+}
+
+$('#modal').addEventListener('click', (event) => {
+  if (event.target === $('#modal')) closeModal();
+});
+
+// ---------------------------------------------------------------- 状态与轮询
+
+async function refreshStatus() {
+  try {
+    const status = await api('/api/editor/status');
+    app.rev = status.revision;
+    $('#rev-tag').textContent = 'revision ' + status.revision;
+    $('#backup-tag').textContent = '备份 ' + status.backupCount;
+    $('#path-meta').textContent = status.projectPath;
+    $('#srv-dot').classList.remove('off');
+    return status;
+  } catch (error) {
+    $('#srv-dot').classList.add('off');
+    return null;
+  }
+}
+
+let pollTimer = null;
+function startPolling() {
+  if (pollTimer) clearInterval(pollTimer);
+  pollTimer = setInterval(async () => {
+    const before = app.rev;
+    const status = await refreshStatus();
+    if (!status) return;
+    if (status.revision !== before && !isDirty() && !app.busy) {
+      app.rev = status.revision;
+      await loadRecords();
+      if (app.sel) await reloadSelected();
+      toast('其他窗口改动了数据，已自动刷新到 revision ' + status.revision);
+    }
+  }, 15000);
+}
+
+// ---------------------------------------------------------------- 事件
+
+$('#search').addEventListener('input', () => {
+  clearTimeout($('#search')._timer);
+  $('#search')._timer = setTimeout(() => {
+    app.q = $('#search').value.trim();
+    app.offset = 0;
+    loadRecords();
+  }, 260);
+});
+
+document.addEventListener('click', (event) => {
+  const button = event.target.closest('[data-action]');
+  if (!button || button.closest('#modal')) return;
+  const action = button.dataset.action;
+  if (action === 'logout') logout();
+  else if (action === 'backups') openBackups();
+  else if (action === 'reload-list') loadRecords();
+  else if (action === 'reload-record') reloadSelected();
+  else if (action === 'reset-record') resetRecord();
+  else if (action === 'save') saveRecord();
+  else if (action === 'prev-page') {
+    if (app.offset <= 0) return;
+    app.offset = Math.max(0, app.offset - app.limit);
+    loadRecords();
+  } else if (action === 'next-page') {
+    if (app.offset + app.limit >= app.total) { toast('已经是最后一页。'); return; }
+    app.offset += app.limit;
+    loadRecords();
+  } else if (action === 'new-record') openNewRecord();
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') { if (!$('#modal').classList.contains('hidden')) closeModal(); }
+  if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 's') {
+    if (app.sel) { event.preventDefault(); saveRecord(); }
+  }
+});
+
+window.addEventListener('beforeunload', (event) => {
+  if (isDirty()) { event.preventDefault(); event.returnValue = ''; }
+});
+
+// ---------------------------------------------------------------- 入口
+
+(async function init() {
+  const saved = localStorage.getItem('editor-password');
+  if (!saved) { showLogin(); return; }
+  app.pw = saved;
+  try {
+    await boot();
+  } catch (error) {
+    app.pw = '';
+    showLogin(error.message || '无法连接编辑器服务');
+  }
+})();
+</script>
+</body>
+</html>

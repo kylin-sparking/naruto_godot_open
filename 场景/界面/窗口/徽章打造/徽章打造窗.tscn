@@ -1,0 +1,694 @@
+[gd_scene load_steps=38 format=3]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/分页按钮未选.png" id="t1"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/分页按钮未选_悬停.png" id="t2"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/分页按钮未选_按下.png" id="t3"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/分页按钮选中.png" id="t4"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/内容面板.png" id="t5"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/徽章打造/确定钮.png" id="t6"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/徽章打造/确定钮_悬停.png" id="t7"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/徽章打造/确定钮_按下.png" id="t8"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/横向分隔线.png" id="t9"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/徽章打造/石页放入钮.png" id="t10"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/徽章打造/石页放入钮_悬停.png" id="t11"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/徽章打造/石页放入钮_按下.png" id="t12"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/物品格.png" id="t13"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/方向箭头.png" id="t14"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/子面板.png" id="t15"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/徽章打造/徽页放入钮.png" id="t16"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/徽章打造/徽页放入钮_悬停.png" id="t17"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/徽章打造/徽页放入钮_按下.png" id="t18"]
+
+[ext_resource type="Shader" path="res://脚本/界面/组件/禁用灰度.gdshader" id="sh1"]
+
+[sub_resource type="StyleBoxTexture" id="sb1_n"]
+texture = ExtResource("t1")
+texture_margin_left = 7.25
+texture_margin_right = 7
+texture_margin_top = 7.5
+texture_margin_bottom = 4.75
+content_margin_left = 0.0
+content_margin_right = 0.0
+content_margin_top = 0.0
+content_margin_bottom = 0.0
+
+[sub_resource type="StyleBoxTexture" id="sb1_h"]
+texture = ExtResource("t2")
+texture_margin_left = 7.25
+texture_margin_right = 7
+texture_margin_top = 7.5
+texture_margin_bottom = 4.75
+content_margin_left = 0.0
+content_margin_right = 0.0
+content_margin_top = 0.0
+content_margin_bottom = 0.0
+
+[sub_resource type="StyleBoxTexture" id="sb1_p"]
+texture = ExtResource("t3")
+texture_margin_left = 7.25
+texture_margin_right = 7
+texture_margin_top = 7.5
+texture_margin_bottom = 4.75
+content_margin_left = 0.0
+content_margin_right = 0.0
+content_margin_top = 0.0
+content_margin_bottom = 0.0
+
+[sub_resource type="StyleBoxTexture" id="sb1_d"]
+texture = ExtResource("t4")
+texture_margin_left = 9
+texture_margin_right = 8
+texture_margin_top = 9
+texture_margin_bottom = 4
+content_margin_left = 0.0
+content_margin_right = 0.0
+content_margin_top = 0.0
+content_margin_bottom = 0.0
+
+[sub_resource type="StyleBoxTexture" id="sb2_n"]
+texture = ExtResource("t1")
+texture_margin_left = 7.25
+texture_margin_right = 7
+texture_margin_top = 7.5
+texture_margin_bottom = 4.75
+content_margin_left = 0.0
+content_margin_right = 0.0
+content_margin_top = 0.0
+content_margin_bottom = 0.0
+
+[sub_resource type="StyleBoxTexture" id="sb2_h"]
+texture = ExtResource("t2")
+texture_margin_left = 7.25
+texture_margin_right = 7
+texture_margin_top = 7.5
+texture_margin_bottom = 4.75
+content_margin_left = 0.0
+content_margin_right = 0.0
+content_margin_top = 0.0
+content_margin_bottom = 0.0
+
+[sub_resource type="StyleBoxTexture" id="sb2_p"]
+texture = ExtResource("t3")
+texture_margin_left = 7.25
+texture_margin_right = 7
+texture_margin_top = 7.5
+texture_margin_bottom = 4.75
+content_margin_left = 0.0
+content_margin_right = 0.0
+content_margin_top = 0.0
+content_margin_bottom = 0.0
+
+[sub_resource type="StyleBoxTexture" id="sb2_d"]
+texture = ExtResource("t4")
+texture_margin_left = 9
+texture_margin_right = 8
+texture_margin_top = 9
+texture_margin_bottom = 4
+content_margin_left = 0.0
+content_margin_right = 0.0
+content_margin_top = 0.0
+content_margin_bottom = 0.0
+
+[sub_resource type="StyleBoxTexture" id="sb3_n"]
+texture = ExtResource("t6")
+
+[sub_resource type="StyleBoxTexture" id="sb3_h"]
+texture = ExtResource("t7")
+
+[sub_resource type="StyleBoxTexture" id="sb3_p"]
+texture = ExtResource("t8")
+
+[sub_resource type="StyleBoxTexture" id="sb4_n"]
+texture = ExtResource("t10")
+
+[sub_resource type="StyleBoxTexture" id="sb4_h"]
+texture = ExtResource("t11")
+
+[sub_resource type="StyleBoxTexture" id="sb4_p"]
+texture = ExtResource("t12")
+
+[sub_resource type="StyleBoxTexture" id="sb5_n"]
+texture = ExtResource("t16")
+
+[sub_resource type="StyleBoxTexture" id="sb5_h"]
+texture = ExtResource("t17")
+
+[sub_resource type="StyleBoxTexture" id="sb5_p"]
+texture = ExtResource("t18")
+
+[sub_resource type="ShaderMaterial" id="mat1"]
+render_priority = 0
+transparency = 0
+shader = ExtResource("sh1")
+
+[node name="原版徽章打造内容" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 340
+offset_bottom = 371.0
+
+[node name="页签条" type="Control" parent="."]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 8.0
+offset_top = 11.0
+offset_right = 149.0
+offset_bottom = 33.0
+
+[node name="页签0" type="Button" parent="页签条"]
+theme_override_styles/normal = SubResource("sb1_n")
+theme_override_styles/hover = SubResource("sb1_h")
+theme_override_styles/pressed = SubResource("sb1_p")
+theme_override_styles/disabled = SubResource("sb1_d")
+focus_mode = 0
+toggle_mode = true
+text = "打造石合成"
+horizontal_alignment = 1
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_disabled_color = Color(0.988235, 0.956863, 0.611765, 1)
+button_pressed = true
+disabled = true
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 70.0
+offset_bottom = 22.0
+
+[node name="页签1" type="Button" parent="页签条"]
+theme_override_styles/normal = SubResource("sb2_n")
+theme_override_styles/hover = SubResource("sb2_h")
+theme_override_styles/pressed = SubResource("sb2_p")
+theme_override_styles/disabled = SubResource("sb2_d")
+focus_mode = 0
+toggle_mode = true
+text = "徽章强化"
+horizontal_alignment = 1
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_disabled_color = Color(0.988235, 0.956863, 0.611765, 1)
+layout_mode = 0
+offset_left = 71.0
+offset_top = 0.0
+offset_right = 141.0
+offset_bottom = 22.0
+
+[node name="内容底" type="NinePatchRect" parent="."]
+texture = ExtResource("t5")
+patch_margin_left = 11
+patch_margin_right = 10
+patch_margin_top = 10
+patch_margin_bottom = 11
+layout_mode = 0
+offset_left = 5.0
+offset_top = 31.0
+offset_right = 335.0
+offset_bottom = 341.0
+
+[node name="内容层" type="Control" parent="."]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 5.0
+offset_top = 31.0
+offset_right = 335.0
+offset_bottom = 341.0
+
+[node name="确定钮" type="Button" parent="."]
+theme_override_styles/normal = SubResource("sb3_n")
+theme_override_styles/hover = SubResource("sb3_h")
+theme_override_styles/pressed = SubResource("sb3_p")
+text = "开始合成"
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+layout_mode = 0
+offset_left = 139.0
+offset_top = 344.0
+offset_right = 200.0
+offset_bottom = 366.0
+
+[node name="面板0" type="Control" parent="内容层"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 330.0
+offset_bottom = 310.0
+
+[node name="石页提示" type="RichTextLabel" parent="内容层/面板0"]
+text = "请您将需要合成的徽章打造石放入框内，\n每三颗同级别打造石可以合成一颗高级打造石，\n[color=#1e90ff]合成成功则三颗低级打造石头消失， 获得一颗高级打造石[/color]"
+scroll_active = false
+bbcode_enabled = true
+autowrap_mode = 3
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 6
+theme_override_colors/default_color = Color(1.000000, 0.568627, 0.000000, 1)
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 332.0
+offset_bottom = 102.0
+
+[node name="石页分隔线" type="TextureRect" parent="内容层/面板0"]
+texture = ExtResource("t9")
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 0
+layout_mode = 0
+offset_left = 10.0
+offset_top = 100.0
+offset_right = 332.0
+offset_bottom = 102.0
+
+[node name="石页投料盒" type="Control" parent="内容层/面板0"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 10.0
+offset_top = 105.0
+offset_right = 90.0
+offset_bottom = 305.0
+
+[node name="石页放入钮" type="Button" parent="内容层/面板0/石页投料盒"]
+theme_override_styles/normal = SubResource("sb4_n")
+theme_override_styles/hover = SubResource("sb4_h")
+theme_override_styles/pressed = SubResource("sb4_p")
+text = "放入打造石"
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+layout_mode = 0
+offset_left = 7.0
+offset_top = 10.0
+offset_right = 73.0
+offset_bottom = 32.0
+
+[node name="石页材料格" type="NinePatchRect" parent="内容层/面板0/石页投料盒"]
+texture = ExtResource("t13")
+patch_margin_left = 9
+patch_margin_right = 6
+patch_margin_top = 9
+patch_margin_bottom = 6
+layout_mode = 0
+offset_left = 20.0
+offset_top = 37.0
+offset_right = 60.0
+offset_bottom = 77.0
+
+[node name="石页材料格_数量" type="Label" parent="内容层/面板0/石页投料盒/石页材料格"]
+text = " "
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 20
+offset_right = 40.0
+offset_bottom = 40
+
+[node name="石页箭头" type="NinePatchRect" parent="内容层/面板0/石页投料盒"]
+texture = ExtResource("t14")
+patch_margin_left = 4
+patch_margin_right = 4
+patch_margin_top = 1
+patch_margin_bottom = 9
+layout_mode = 0
+offset_left = 33.0
+offset_top = 77.0
+offset_right = 47.0
+offset_bottom = 150.0
+
+[node name="石页结果格" type="NinePatchRect" parent="内容层/面板0/石页投料盒"]
+texture = ExtResource("t13")
+patch_margin_left = 9
+patch_margin_right = 6
+patch_margin_top = 9
+patch_margin_bottom = 6
+layout_mode = 0
+offset_left = 20.0
+offset_top = 150.0
+offset_right = 60.0
+offset_bottom = 190.0
+
+[node name="石页结果格_数量" type="Label" parent="内容层/面板0/石页投料盒/石页结果格"]
+text = " "
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 20
+offset_right = 40.0
+offset_bottom = 40
+
+[node name="石页结果底" type="NinePatchRect" parent="内容层/面板0"]
+texture = ExtResource("t15")
+patch_margin_left = 8
+patch_margin_right = 7
+patch_margin_top = 7
+patch_margin_bottom = 7
+layout_mode = 0
+offset_left = 95.0
+offset_top = 225.0
+offset_right = 325.0
+offset_bottom = 305.0
+
+[node name="石页绿文" type="RichTextLabel" parent="内容层/面板0"]
+text = "十尾徽章打造石为最高级别\n打造石用在徽章合成介面内打造高级徽章"
+scroll_active = false
+bbcode_enabled = true
+autowrap_mode = 3
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 6
+theme_override_colors/default_color = Color(0.000000, 1.000000, 0.000000, 1)
+layout_mode = 0
+offset_left = 97.0
+offset_top = 180.0
+offset_right = 327.0
+offset_bottom = 225.0
+
+[node name="石页白文" type="RichTextLabel" parent="内容层/面板0"]
+text = "本次合成成功几率：100% \n[color=#ff0000]注：本处合成为一次性批量合成，所有放入的打造石都会参与合成\n请先将打造石拆分后再放入合成框[/color]"
+scroll_active = false
+bbcode_enabled = true
+autowrap_mode = 3
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 6
+theme_override_colors/default_color = Color(1.000000, 1.000000, 1.000000, 1)
+layout_mode = 0
+offset_left = 98.0
+offset_top = 227.0
+offset_right = 328.0
+offset_bottom = 307.0
+
+[node name="石页竖题" type="Label" parent="内容层/面板0"]
+text = "合\n成\n结\n果"
+theme_override_colors/font_color = Color(1.000000, 0.568627, 0.000000, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 105.0
+offset_top = 107.0
+offset_right = 123.0
+offset_bottom = 157.0
+
+[node name="石页成功题" type="Label" parent="内容层/面板0"]
+text = "成  功"
+theme_override_colors/font_color = Color(1.000000, 0.568627, 0.000000, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 145.0
+offset_top = 107.0
+offset_right = 195.0
+offset_bottom = 122.0
+
+[node name="石页剩余题" type="Label" parent="内容层/面板0"]
+text = "剩  余"
+theme_override_colors/font_color = Color(1.000000, 0.568627, 0.000000, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 205.0
+offset_top = 107.0
+offset_right = 255.0
+offset_bottom = 122.0
+
+[node name="石页成功格" type="NinePatchRect" parent="内容层/面板0"]
+texture = ExtResource("t13")
+patch_margin_left = 9
+patch_margin_right = 6
+patch_margin_top = 9
+patch_margin_bottom = 6
+layout_mode = 0
+offset_left = 146.0
+offset_top = 125.0
+offset_right = 186.0
+offset_bottom = 165.0
+
+[node name="石页成功格_数量" type="Label" parent="内容层/面板0/石页成功格"]
+text = " "
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 20
+offset_right = 40.0
+offset_bottom = 40
+
+[node name="石页剩余格" type="NinePatchRect" parent="内容层/面板0"]
+texture = ExtResource("t13")
+patch_margin_left = 9
+patch_margin_right = 6
+patch_margin_top = 9
+patch_margin_bottom = 6
+layout_mode = 0
+offset_left = 206.0
+offset_top = 125.0
+offset_right = 246.0
+offset_bottom = 165.0
+
+[node name="石页剩余格_数量" type="Label" parent="内容层/面板0/石页剩余格"]
+text = " "
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 20
+offset_right = 40.0
+offset_bottom = 40
+
+[node name="面板1" type="Control" parent="内容层"]
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 330.0
+offset_bottom = 310.0
+
+[node name="徽页提示" type="RichTextLabel" parent="内容层/面板1"]
+text = "尾兽徽章 + 一尾徽章打造石[color=#ffffff]合成：[/color][color=#00ff00]一尾徽章[/color]\n一尾徽章 + 二尾徽章打造石[color=#ffffff]合成：[/color][color=#00ff00]二尾徽章[/color]\n二尾徽章 + 三尾徽章打造石[color=#ffffff]合成：[/color][color=#00ff00]三尾徽章[/color]\n以此类推...\n[color=#ff0000]注意：徽章打造后会和人物绑定[/color]"
+scroll_active = false
+bbcode_enabled = true
+autowrap_mode = 3
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 6
+theme_override_colors/default_color = Color(1.000000, 0.568627, 0.000000, 1)
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 332.0
+offset_bottom = 102.0
+
+[node name="徽页分隔线" type="TextureRect" parent="内容层/面板1"]
+texture = ExtResource("t9")
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 0
+layout_mode = 0
+offset_left = 10.0
+offset_top = 100.0
+offset_right = 332.0
+offset_bottom = 102.0
+
+[node name="徽页投料盒" type="Control" parent="内容层/面板1"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 10.0
+offset_top = 105.0
+offset_right = 90.0
+offset_bottom = 305.0
+
+[node name="徽页放入钮" type="Button" parent="内容层/面板1/徽页投料盒"]
+theme_override_styles/normal = SubResource("sb5_n")
+theme_override_styles/hover = SubResource("sb5_h")
+theme_override_styles/pressed = SubResource("sb5_p")
+text = "放入徽章"
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+layout_mode = 0
+offset_left = 9.5
+offset_top = 10.0
+offset_right = 70.5
+offset_bottom = 32.0
+
+[node name="徽页材料格" type="NinePatchRect" parent="内容层/面板1/徽页投料盒"]
+texture = ExtResource("t13")
+patch_margin_left = 9
+patch_margin_right = 6
+patch_margin_top = 9
+patch_margin_bottom = 6
+layout_mode = 0
+offset_left = 20.0
+offset_top = 37.0
+offset_right = 60.0
+offset_bottom = 77.0
+
+[node name="徽页材料格_数量" type="Label" parent="内容层/面板1/徽页投料盒/徽页材料格"]
+text = " "
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 20
+offset_right = 40.0
+offset_bottom = 40
+
+[node name="徽页箭头" type="NinePatchRect" parent="内容层/面板1/徽页投料盒"]
+texture = ExtResource("t14")
+patch_margin_left = 4
+patch_margin_right = 4
+patch_margin_top = 1
+patch_margin_bottom = 9
+layout_mode = 0
+offset_left = 33.0
+offset_top = 77.0
+offset_right = 47.0
+offset_bottom = 150.0
+
+[node name="徽页结果格" type="NinePatchRect" parent="内容层/面板1/徽页投料盒"]
+texture = ExtResource("t13")
+patch_margin_left = 9
+patch_margin_right = 6
+patch_margin_top = 9
+patch_margin_bottom = 6
+layout_mode = 0
+offset_left = 20.0
+offset_top = 150.0
+offset_right = 60.0
+offset_bottom = 190.0
+
+[node name="徽页结果格_数量" type="Label" parent="内容层/面板1/徽页投料盒/徽页结果格"]
+text = " "
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 20
+offset_right = 40.0
+offset_bottom = 40
+
+[node name="徽页结果底" type="NinePatchRect" parent="内容层/面板1"]
+texture = ExtResource("t15")
+patch_margin_left = 8
+patch_margin_right = 7
+patch_margin_top = 7
+patch_margin_bottom = 7
+layout_mode = 0
+offset_left = 95.0
+offset_top = 225.0
+offset_right = 325.0
+offset_bottom = 305.0
+
+[node name="徽页橙文上" type="RichTextLabel" parent="内容层/面板1"]
+text = "[color=#00ff00]徽章打造石：是合成各等级尾兽徽章的必备材料[/color]"
+scroll_active = false
+bbcode_enabled = true
+autowrap_mode = 3
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 6
+theme_override_colors/default_color = Color(1.000000, 0.568627, 0.000000, 1)
+layout_mode = 0
+offset_left = 97.0
+offset_top = 180.0
+offset_right = 327.0
+offset_bottom = 225.0
+
+[node name="徽页橙文下" type="RichTextLabel" parent="内容层/面板1"]
+text = "[color=#ffffff]本次合成成功几率：100% [/color]\n尾兽徽章与相应等级的尾兽徽章打造石可合成下一阶尾兽徽章。\n请先准备好徽章及相应级别的打造石。"
+scroll_active = false
+bbcode_enabled = true
+autowrap_mode = 3
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 6
+theme_override_colors/default_color = Color(1.000000, 0.568627, 0.000000, 1)
+layout_mode = 0
+offset_left = 97.0
+offset_top = 227.0
+offset_right = 327.0
+offset_bottom = 307.0
+
+[node name="材料盒" type="Control" parent="内容层/面板1"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 110.0
+offset_top = 110.0
+offset_right = 180.0
+offset_bottom = 198.0
+
+[node name="材料盒名" type="Label" parent="内容层/面板1/材料盒"]
+text = "徽章打造石"
+theme_override_colors/font_color = Color(1.000000, 0.568627, 0.000000, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 70.0
+offset_bottom = 20.0
+
+[node name="材料盒格" type="NinePatchRect" parent="内容层/面板1/材料盒"]
+material = SubResource("mat1")
+texture = ExtResource("t13")
+patch_margin_left = 9
+patch_margin_right = 6
+patch_margin_top = 9
+patch_margin_bottom = 6
+layout_mode = 0
+offset_left = 15.0
+offset_top = 20.0
+offset_right = 55.0
+offset_bottom = 60.0
+
+[node name="材料盒格_数量" type="Label" parent="内容层/面板1/材料盒/材料盒格"]
+material = SubResource("mat1")
+text = " "
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 20
+offset_right = 40.0
+offset_bottom = 40

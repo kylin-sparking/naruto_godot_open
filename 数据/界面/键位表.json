@@ -1,0 +1,914 @@
+{
+ "序": [
+  "esc",
+  "f1",
+  "f2",
+  "f3",
+  "f4",
+  "f5",
+  "f6",
+  "f7",
+  "f8",
+  "f9",
+  "f10",
+  "f11",
+  "f12",
+  "psc",
+  "slk",
+  "brk",
+  "graveAccent",
+  "num1",
+  "num2",
+  "num3",
+  "num4",
+  "num5",
+  "num6",
+  "num7",
+  "num8",
+  "num9",
+  "num0",
+  "minus",
+  "equals",
+  "bksp",
+  "tab",
+  "q",
+  "w",
+  "e",
+  "r",
+  "t",
+  "y",
+  "u",
+  "i",
+  "o",
+  "p",
+  "squareBracketsLeft",
+  "squareBracketsRight",
+  "backslash",
+  "lock",
+  "a",
+  "s",
+  "d",
+  "f",
+  "g",
+  "h",
+  "j",
+  "k",
+  "l",
+  "semicolon",
+  "apostrophe",
+  "enter",
+  "shiftLeft",
+  "z",
+  "x",
+  "c",
+  "v",
+  "b",
+  "n",
+  "m",
+  "comma",
+  "fullStop",
+  "solidus",
+  "shiftRight",
+  "ctrlLeft",
+  "window",
+  "altLeft",
+  "space",
+  "altRight",
+  "menu",
+  "ctrlRight",
+  "ins",
+  "hm",
+  "pup",
+  "del",
+  "end",
+  "pdn",
+  "arrowUp",
+  "arrowLeft",
+  "arrowDown",
+  "arrowRight"
+ ],
+ "表": {
+  "esc": {
+   "name": "ESC",
+   "width": 40,
+   "canSet": false,
+   "keyCode": "Keyboard.ESCAPE",
+   "keyId": "KEY_ID_0"
+  },
+  "f1": {
+   "name": "F1",
+   "width": 40,
+   "canSet": false,
+   "keyCode": "Keyboard.F1",
+   "keyId": "KEY_ID_59"
+  },
+  "f2": {
+   "name": "F2",
+   "width": 40,
+   "canSet": false,
+   "keyCode": "Keyboard.F2",
+   "keyId": "KEY_ID_60"
+  },
+  "f3": {
+   "name": "F3",
+   "width": 40,
+   "canSet": false,
+   "keyCode": "Keyboard.F3",
+   "keyId": "KEY_ID_61"
+  },
+  "f4": {
+   "name": "F4",
+   "width": 40,
+   "canSet": false,
+   "keyCode": "Keyboard.F4",
+   "keyId": "KEY_ID_62"
+  },
+  "f5": {
+   "name": "F5",
+   "width": 40,
+   "canSet": false,
+   "keyCode": "Keyboard.F5",
+   "keyId": "KEY_ID_63"
+  },
+  "f6": {
+   "name": "F6",
+   "width": 40,
+   "canSet": false,
+   "keyCode": "Keyboard.F6",
+   "keyId": "KEY_ID_64"
+  },
+  "f7": {
+   "name": "F7",
+   "width": 40,
+   "canSet": false,
+   "keyCode": "Keyboard.F7",
+   "keyId": "KEY_ID_65"
+  },
+  "f8": {
+   "name": "F8",
+   "width": 40,
+   "canSet": false,
+   "keyCode": "Keyboard.F8",
+   "keyId": "KEY_ID_66"
+  },
+  "f9": {
+   "name": "F9",
+   "width": 40,
+   "canSet": false,
+   "keyCode": "Keyboard.F9",
+   "keyId": "KEY_ID_67"
+  },
+  "f10": {
+   "name": "F10",
+   "width": 40,
+   "canSet": false,
+   "keyCode": "Keyboard.F10",
+   "keyId": "KEY_ID_68"
+  },
+  "f11": {
+   "name": "F11",
+   "width": 40,
+   "canSet": false,
+   "keyCode": "Keyboard.F11",
+   "keyId": "KEY_ID_87"
+  },
+  "f12": {
+   "name": "F12",
+   "width": 40,
+   "canSet": false,
+   "keyCode": "Keyboard.F12",
+   "keyId": "KEY_ID_88"
+  },
+  "psc": {
+   "name": "Psc",
+   "width": 40,
+   "canSet": false,
+   "keyCode": "PRINT_SCREEN",
+   "keyId": "KEY_ID_0"
+  },
+  "slk": {
+   "name": "Slk",
+   "width": 40,
+   "canSet": false,
+   "keyCode": "0",
+   "keyId": "KEY_ID_0"
+  },
+  "brk": {
+   "name": "Brk",
+   "width": 40,
+   "canSet": false,
+   "keyCode": "0",
+   "keyId": "KEY_ID_0"
+  },
+  "graveAccent": {
+   "name": "`",
+   "width": 40,
+   "canSet": true,
+   "keyCode": "GRAVE_ACCENT",
+   "keyId": "KEY_ID_41"
+  },
+  "num1": {
+   "name": "1",
+   "width": 40,
+   "canSet": true,
+   "keyCode": "KeyCode.KEY_1",
+   "keyId": "KEY_ID_2"
+  },
+  "num2": {
+   "name": "2",
+   "width": 40,
+   "canSet": true,
+   "keyCode": "KeyCode.KEY_2",
+   "keyId": "KEY_ID_3"
+  },
+  "num3": {
+   "name": "3",
+   "width": 40,
+   "canSet": true,
+   "keyCode": "KeyCode.KEY_3",
+   "keyId": "KEY_ID_4"
+  },
+  "num4": {
+   "name": "4",
+   "width": 40,
+   "canSet": true,
+   "keyCode": "KeyCode.KEY_4",
+   "keyId": "KEY_ID_5"
+  },
+  "num5": {
+   "name": "5",
+   "width": 40,
+   "canSet": true,
+   "keyCode": "KeyCode.KEY_5",
+   "keyId": "KEY_ID_6"
+  },
+  "num6": {
+   "name": "6",
+   "width": 40,
+   "canSet": true,
+   "keyCode": "KeyCode.KEY_6",
+   "keyId": "KEY_ID_7"
+  },
+  "num7": {
+   "name": "7",
+   "width": 40,
+   "canSet": true,
+   "keyCode": "KeyCode.KEY_7",
+   "keyId": "KEY_ID_8"
+  },
+  "num8": {
+   "name": "8",
+   "width": 40,
+   "canSet": true,
+   "keyCode": "KeyCode.KEY_8",
+   "keyId": "KEY_ID_9"
+  },
+  "num9": {
+   "name": "9",
+   "width": 40,
+   "canSet": true,
+   "keyCode": "KeyCode.KEY_9",
+   "keyId": "KEY_ID_10"
+  },
+  "num0": {
+   "name": "0",
+   "width": 40,
+   "canSet": true,
+   "keyCode": "KeyCode.KEY_0",
+   "keyId": "KEY_ID_11"
+  },
+  "minus": {
+   "name": "-",
+   "width": 40,
+   "canSet": true,
+   "keyCode": "MINUS",
+   "keyId": "KEY_ID_12"
+  },
+  "equals": {
+   "name": "=",
+   "width": 40,
+   "canSet": true,
+   "keyCode": "EQUALS",
+   "keyId": "KEY_ID_13"
+  },
+  "bksp": {
+   "name": "Bksp",
+   "width": 50,
+   "canSet": false,
+   "keyCode": "0",
+   "keyId": "KEY_ID_14"
+  },
+  "tab": {
+   "name": "Tab",
+   "width": 50,
+   "canSet": true,
+   "keyCode": "Keyboard.TAB",
+   "keyId": "KEY_ID_15"
+  },
+  "q": {
+   "name": "Q",
+   "width": 40,
+   "canSet": true,
+   "keyCode": "Q",
+   "keyId": "KEY_ID_16"
+  },
+  "w": {
+   "name": "W",
+   "width": 40,
+   "canSet": true,
+   "keyCode": "W",
+   "keyId": "KEY_ID_17"
+  },
+  "e": {
+   "name": "E",
+   "width": 40,
+   "canSet": true,
+   "keyCode": "E",
+   "keyId": "KEY_ID_18"
+  },
+  "r": {
+   "name": "R",
+   "width": 40,
+   "canSet": true,
+   "keyCode": "R",
+   "keyId": "KEY_ID_19"
+  },
+  "t": {
+   "name": "T",
+   "width": 40,
+   "canSet": true,
+   "keyCode": "T",
+   "keyId": "KEY_ID_20"
+  },
+  "y": {
+   "name": "Y",
+   "width": 40,
+   "canSet": true,
+   "keyCode": "Y",
+   "keyId": "KEY_ID_21"
+  },
+  "u": {
+   "name": "U",
+   "width": 40,
+   "canSet": true,
+   "keyCode": "U",
+   "keyId": "KEY_ID_22"
+  },
+  "i": {
+   "name": "I",
+   "width": 40,
+   "canSet": true,
+   "keyCode": "I",
+   "keyId": "KEY_ID_23"
+  },
+  "o": {
+   "name": "O",
+   "width": 40,
+   "canSet": true,
+   "keyCode": "O",
+   "keyId": "KEY_ID_24"
+  },
+  "p": {
+   "name": "P",
+   "width": 40,
+   "canSet": true,
+   "keyCode": "P",
+   "keyId": "KEY_ID_25"
+  },
+  "squareBracketsLeft": {
+   "name": "[",
+   "width": 40,
+   "canSet": true,
+   "keyCode": "SQUARE_BRACKETS_LEFT",
+   "keyId": "KEY_ID_26"
+  },
+  "squareBracketsRight": {
+   "name": "]",
+   "width": 40,
+   "canSet": true,
+   "keyCode": "SQUARE_BRACKETS_RIGHT",
+   "keyId": "KEY_ID_27"
+  },
+  "backslash": {
+   "name": "\\\\",
+   "width": 40,
+   "canSet": true,
+   "keyCode": "BACKSLASH",
+   "keyId": "KEY_ID_43"
+  },
+  "lock": {
+   "name": "Lock",
+   "width": 77,
+   "canSet": false,
+   "keyCode": "0",
+   "keyId": "KEY_ID_0"
+  },
+  "a": {
+   "name": "A",
+   "width": 40,
+   "canSet": true,
+   "keyCode": "A",
+   "keyId": "KEY_ID_30"
+  },
+  "s": {
+   "name": "S",
+   "width": 40,
+   "canSet": true,
+   "keyCode": "S",
+   "keyId": "KEY_ID_31"
+  },
+  "d": {
+   "name": "D",
+   "width": 40,
+   "canSet": true,
+   "keyCode": "D",
+   "keyId": "KEY_ID_32"
+  },
+  "f": {
+   "name": "F",
+   "width": 40,
+   "canSet": true,
+   "keyCode": "F",
+   "keyId": "KEY_ID_33"
+  },
+  "g": {
+   "name": "G",
+   "width": 40,
+   "canSet": true,
+   "keyCode": "G",
+   "keyId": "KEY_ID_34"
+  },
+  "h": {
+   "name": "H",
+   "width": 40,
+   "canSet": true,
+   "keyCode": "H",
+   "keyId": "KEY_ID_35"
+  },
+  "j": {
+   "name": "J",
+   "width": 40,
+   "canSet": true,
+   "keyCode": "J",
+   "keyId": "KEY_ID_36"
+  },
+  "k": {
+   "name": "K",
+   "width": 40,
+   "canSet": true,
+   "keyCode": "K",
+   "keyId": "KEY_ID_37"
+  },
+  "l": {
+   "name": "L",
+   "width": 40,
+   "canSet": true,
+   "keyCode": "L",
+   "keyId": "KEY_ID_38"
+  },
+  "semicolon": {
+   "name": ";",
+   "width": 40,
+   "canSet": true,
+   "keyCode": "SEMICOLON",
+   "keyId": "KEY_ID_39"
+  },
+  "apostrophe": {
+   "name": "\\'",
+   "width": 40,
+   "canSet": true,
+   "keyCode": "APOSTROPHE",
+   "keyId": "KEY_ID_40"
+  },
+  "enter": {
+   "name": "Enter",
+   "width": 55,
+   "canSet": false,
+   "keyCode": "0",
+   "keyId": "KEY_ID_0"
+  },
+  "shiftLeft": {
+   "name": "Shift",
+   "width": 87,
+   "canSet": false,
+   "keyCode": "Keyboard.SHIFT",
+   "keyId": "KEY_ID_42"
+  },
+  "z": {
+   "name": "Z",
+   "width": 40,
+   "canSet": true,
+   "keyCode": "Z",
+   "keyId": "KEY_ID_44"
+  },
+  "x": {
+   "name": "X",
+   "width": 40,
+   "canSet": true,
+   "keyCode": "X",
+   "keyId": "KEY_ID_45"
+  },
+  "c": {
+   "name": "C",
+   "width": 40,
+   "canSet": true,
+   "keyCode": "C",
+   "keyId": "KEY_ID_46"
+  },
+  "v": {
+   "name": "V",
+   "width": 40,
+   "canSet": true,
+   "keyCode": "V",
+   "keyId": "KEY_ID_47"
+  },
+  "b": {
+   "name": "B",
+   "width": 40,
+   "canSet": true,
+   "keyCode": "B",
+   "keyId": "KEY_ID_48"
+  },
+  "n": {
+   "name": "N",
+   "width": 40,
+   "canSet": true,
+   "keyCode": "N",
+   "keyId": "KEY_ID_49"
+  },
+  "m": {
+   "name": "M",
+   "width": 40,
+   "canSet": true,
+   "keyCode": "M",
+   "keyId": "KEY_ID_50"
+  },
+  "comma": {
+   "name": ",",
+   "width": 40,
+   "canSet": true,
+   "keyCode": "COMMA",
+   "keyId": "KEY_ID_51"
+  },
+  "fullStop": {
+   "name": ".",
+   "width": 40,
+   "canSet": true,
+   "keyCode": "FULL_STOP",
+   "keyId": "KEY_ID_52"
+  },
+  "solidus": {
+   "name": "/",
+   "width": 40,
+   "canSet": false,
+   "keyCode": "0",
+   "keyId": "KEY_ID_0"
+  },
+  "shiftRight": {
+   "name": "Shift",
+   "width": 87,
+   "canSet": false,
+   "keyCode": "Keyboard.SHIFT",
+   "keyId": "KEY_ID_42"
+  },
+  "ctrlLeft": {
+   "name": "Ctrl",
+   "width": 60,
+   "canSet": true,
+   "keyCode": "Keyboard.CONTROL",
+   "keyId": "KEY_ID_29"
+  },
+  "window": {
+   "name": "-",
+   "width": 60,
+   "canSet": false,
+   "keyCode": "0",
+   "keyId": "KEY_ID_0"
+  },
+  "altLeft": {
+   "name": "Alt",
+   "width": 60,
+   "canSet": false,
+   "keyCode": "ALT",
+   "keyId": "KEY_ID_56"
+  },
+  "space": {
+   "name": "Space",
+   "width": 224,
+   "canSet": true,
+   "keyCode": "Keyboard.SPACE",
+   "keyId": "KEY_ID_57"
+  },
+  "altRight": {
+   "name": "Alt",
+   "width": 60,
+   "canSet": false,
+   "keyCode": "ALT",
+   "keyId": "KEY_ID_56"
+  },
+  "menu": {
+   "name": "-",
+   "width": 60,
+   "canSet": false,
+   "keyCode": "0",
+   "keyId": "KEY_ID_0"
+  },
+  "ctrlRight": {
+   "name": "Ctrl",
+   "width": 60,
+   "canSet": true,
+   "keyCode": "Keyboard.CONTROL",
+   "keyId": "KEY_ID_29"
+  },
+  "ins": {
+   "name": "Ins",
+   "width": 40,
+   "canSet": true,
+   "keyCode": "Keyboard.INSERT",
+   "keyId": "KEY_ID_82"
+  },
+  "hm": {
+   "name": "Hm",
+   "width": 40,
+   "canSet": true,
+   "keyCode": "Keyboard.HOME",
+   "keyId": "KEY_ID_71"
+  },
+  "pup": {
+   "name": "Pup",
+   "width": 40,
+   "canSet": true,
+   "keyCode": "Keyboard.PAGE_UP",
+   "keyId": "KEY_ID_73"
+  },
+  "del": {
+   "name": "Del",
+   "width": 40,
+   "canSet": true,
+   "keyCode": "Keyboard.DELETE",
+   "keyId": "KEY_ID_83"
+  },
+  "end": {
+   "name": "End",
+   "width": 40,
+   "canSet": true,
+   "keyCode": "Keyboard.END",
+   "keyId": "KEY_ID_79"
+  },
+  "pdn": {
+   "name": "Pdn",
+   "width": 40,
+   "canSet": true,
+   "keyCode": "Keyboard.PAGE_DOWN",
+   "keyId": "KEY_ID_81"
+  },
+  "arrowUp": {
+   "name": "∧",
+   "width": 40,
+   "canSet": true,
+   "keyCode": "Keyboard.UP",
+   "keyId": "KEY_ID_90"
+  },
+  "arrowLeft": {
+   "name": "＜",
+   "width": 40,
+   "canSet": true,
+   "keyCode": "Keyboard.LEFT",
+   "keyId": "KEY_ID_91"
+  },
+  "arrowDown": {
+   "name": "∨",
+   "width": 40,
+   "canSet": true,
+   "keyCode": "Keyboard.DOWN",
+   "keyId": "KEY_ID_92"
+  },
+  "arrowRight": {
+   "name": "＞",
+   "width": 40,
+   "canSet": true,
+   "keyCode": "Keyboard.RIGHT",
+   "keyId": "KEY_ID_93"
+  }
+ },
+ "槽": [
+  {
+   "position": 0,
+   "语言键": "KEYBOARD_SHORTCUT_KEY_CHAR",
+   "type": "KEY_TYPE_UI",
+   "defaultKeyId": "KEY_ID_46",
+   "文": "人物"
+  },
+  {
+   "position": 1,
+   "语言键": "KEYBOARD_SHORTCUT_KEY_BAG",
+   "type": "KEY_TYPE_UI",
+   "defaultKeyId": "KEY_ID_48",
+   "文": "背包"
+  },
+  {
+   "position": 2,
+   "语言键": "KEYBOARD_SHORTCUT_KEY_SKILL",
+   "type": "KEY_TYPE_UI",
+   "defaultKeyId": "KEY_ID_47",
+   "文": "忍术"
+  },
+  {
+   "position": 3,
+   "语言键": "KEYBOARD_SHORTCUT_KEY_PET",
+   "type": "KEY_TYPE_UI",
+   "defaultKeyId": "KEY_ID_49",
+   "文": "宠物"
+  },
+  {
+   "position": 4,
+   "语言键": "KEYBOARD_SHORTCUT_KEY_QUEST",
+   "type": "KEY_TYPE_UI",
+   "defaultKeyId": "KEY_ID_16",
+   "文": "任务"
+  },
+  {
+   "position": 5,
+   "语言键": "KEYBOARD_SHORTCUT_KEY_TROOP",
+   "type": "KEY_TYPE_UI",
+   "defaultKeyId": "KEY_ID_20",
+   "文": "组队"
+  },
+  {
+   "position": 6,
+   "语言键": "KEYBOARD_SHORTCUT_KEY_FRIEND",
+   "type": "KEY_TYPE_UI",
+   "defaultKeyId": "KEY_ID_33",
+   "文": "好友"
+  },
+  {
+   "position": 7,
+   "语言键": "KEYBOARD_SHORTCUT_KEY_CONFRATERNITY",
+   "type": "KEY_TYPE_UI",
+   "defaultKeyId": "KEY_ID_34",
+   "文": "家族"
+  },
+  {
+   "position": 8,
+   "语言键": "KEYBOARD_SHORTCUT_KEY_SHOP",
+   "type": "KEY_TYPE_UI",
+   "defaultKeyId": "KEY_ID_24",
+   "文": "商城"
+  },
+  {
+   "position": 9,
+   "语言键": "KEYBOARD_SHORTCUT_KEY_SYSTEM_CONFIG",
+   "type": "KEY_TYPE_UI",
+   "defaultKeyId": "KEY_ID_31",
+   "文": "系统设置"
+  },
+  {
+   "position": 10,
+   "语言键": "KEYBOARD_SHORTCUT_KEY_MAP",
+   "type": "KEY_TYPE_UI",
+   "defaultKeyId": "KEY_ID_50",
+   "文": "世界地图"
+  },
+  {
+   "position": 11,
+   "语言键": "KEYBOARD_SHORTCUT_KEY_HIDE_CHAR_PIC",
+   "type": "KEY_TYPE_UI",
+   "defaultKeyId": "KEY_ID_18",
+   "文": "遮罩造型"
+  },
+  {
+   "position": 12,
+   "语言键": "KEYBOARD_SHORTCUT_KEY_HIDE_CHAR_NAME",
+   "type": "KEY_TYPE_UI",
+   "defaultKeyId": "KEY_ID_23",
+   "文": "遮罩名字"
+  },
+  {
+   "position": 13,
+   "语言键": "KEYBOARD_SHORTCUT_KEY_MUSIC_SWITCH",
+   "type": "KEY_TYPE_UI",
+   "defaultKeyId": "KEY_ID_21",
+   "文": "音乐开关"
+  },
+  {
+   "position": 14,
+   "语言键": "KEYBOARD_SHORTCUT_KEY_BI_GUAN",
+   "type": "KEY_TYPE_UI",
+   "defaultKeyId": "KEY_ID_30",
+   "文": "修行经验"
+  },
+  {
+   "position": 15,
+   "语言键": "KEYBOARD_SHORTCUT_KEY_GUA_JI",
+   "type": "KEY_TYPE_UI",
+   "defaultKeyId": "KEY_ID_36",
+   "文": "挂机设置"
+  },
+  {
+   "position": 16,
+   "语言键": "KEYBOARD_SHORTCUT_KEY_PAI_HANG",
+   "type": "KEY_TYPE_UI",
+   "defaultKeyId": "KEY_ID_37",
+   "文": "排行榜"
+  },
+  {
+   "position": 17,
+   "语言键": "KEYBOARD_SHORTCUT_KEY_CHENG_JIU",
+   "type": "KEY_TYPE_UI",
+   "defaultKeyId": "KEY_ID_32",
+   "文": "角色成就"
+  },
+  {
+   "position": 18,
+   "语言键": "KEYBOARD_SHORTCUT_CHAT_PANE_ZOOM",
+   "type": "KEY_TYPE_UI",
+   "defaultKeyId": "KEY_ID_19",
+   "文": "缩放聊天"
+  },
+  {
+   "position": 19,
+   "语言键": "KEYBOARD_SHORTCUT_KEY_CHANGE_ATTACK_TARGET",
+   "type": "KEY_TYPE_ACTION",
+   "defaultKeyId": "KEY_ID_41",
+   "文": "切换目标"
+  },
+  {
+   "position": 20,
+   "语言键": "KEYBOARD_SHORTCUT_KEY_PICK",
+   "type": "KEY_TYPE_ACTION",
+   "defaultKeyId": "KEY_ID_44",
+   "文": "捡取"
+  },
+  {
+   "position": 21,
+   "语言键": "KEYBOARD_SHORTCUT_KEY_JUMP",
+   "type": "KEY_TYPE_ACTION",
+   "defaultKeyId": "KEY_ID_57",
+   "文": "跳跃"
+  },
+  {
+   "position": 22,
+   "语言键": "KEYBOARD_SHORTCUT_KEY_PRACTISE",
+   "type": "KEY_TYPE_ACTION",
+   "defaultKeyId": "KEY_ID_45",
+   "文": "打坐"
+  },
+  {
+   "position": 23,
+   "语言键": "KEYBOARD_SHORTCUT_KEY_AUTO_GUA_JI",
+   "type": "KEY_TYPE_ACTION",
+   "defaultKeyId": "KEY_ID_35",
+   "文": "自动挂机"
+  },
+  {
+   "position": 24,
+   "语言键": "KEYBOARD_SHORTCUT_KEY_TAKE_PET",
+   "type": "KEY_TYPE_ACTION",
+   "defaultKeyId": "KEY_ID_17",
+   "文": "通灵附身"
+  },
+  {
+   "position": 30,
+   "语言键": "KEYBOARD_SHORTCUT_KEY_PICK_FLAG",
+   "type": "KEY_TYPE_ACTION",
+   "defaultKeyId": "KEY_ID_51",
+   "文": "拔旗"
+  },
+  {
+   "position": 25,
+   "语言键": "KEYBOARD_SHORTCUT_KEY_UP",
+   "type": "KEY_TYPE_DIRECTION",
+   "defaultKeyId": "KEY_ID_90",
+   "文": "上"
+  },
+  {
+   "position": 26,
+   "语言键": "KEYBOARD_SHORTCUT_KEY_DOWN",
+   "type": "KEY_TYPE_DIRECTION",
+   "defaultKeyId": "KEY_ID_92",
+   "文": "下"
+  },
+  {
+   "position": 27,
+   "语言键": "KEYBOARD_SHORTCUT_KEY_LEFT",
+   "type": "KEY_TYPE_DIRECTION",
+   "defaultKeyId": "KEY_ID_91",
+   "文": "左"
+  },
+  {
+   "position": 28,
+   "语言键": "KEYBOARD_SHORTCUT_KEY_RIGHT",
+   "type": "KEY_TYPE_DIRECTION",
+   "defaultKeyId": "KEY_ID_93",
+   "文": "右"
+  },
+  {
+   "position": 29,
+   "语言键": "KEYBOARD_SHORTCUT_KEY_ATK",
+   "type": "KEY_TYPE_SKILL",
+   "defaultKeyId": "KEY_ID_2",
+   "文": "攻击"
+  }
+ ],
+ "出处": "KeyDef.as:297-815（KEYBOARD_TEXTS/KEYBOARD_BTNS 按下标配对）、817-1009（BASE_SHORTCUT_KEYS）"
+}

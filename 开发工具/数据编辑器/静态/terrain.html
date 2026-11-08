@@ -1,0 +1,1021 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>火影世界 · 地形浏览器</title>
+<style>
+  *{box-sizing:border-box}
+  :root{
+    color-scheme:dark;
+    font-family:"Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+    --bg:#0b0d0f; --bg2:#11151a; --bg3:#161c22; --line:#232c34;
+    --ink:#e8ebee; --muted:#8b97a3; --dim:#5f6b76;
+    --gold:#d9b45a; --gold2:#f0d492; --teal:#5cc8b0; --red:#e06767;
+    --blue:#6ea8e8; --green:#6ec48a; --violet:#b794f4;
+  }
+  html,body{height:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);font-size:13px;overflow:hidden}
+  button,input,select{font:inherit;color:inherit}
+  button{cursor:pointer}
+  .hidden{display:none!important}
+  ::-webkit-scrollbar{width:10px;height:10px}
+  ::-webkit-scrollbar-thumb{background:#2b353f;border-radius:6px;border:2px solid transparent;background-clip:content-box}
+  ::-webkit-scrollbar-track{background:transparent}
+  button, .ghost{
+    background:#1a222a;border:1px solid var(--line);border-radius:7px;padding:5px 10px;
+  }
+  button:hover{background:#222c35;border-color:#33414d}
+  button.primary{background:linear-gradient(180deg,#c8a24b,#a9853a);border-color:#8a6d2f;color:#15120a;font-weight:700}
+  button.sm{padding:3px 9px;font-size:12px}
+  a{color:var(--gold2);text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  .login{height:100%;display:flex;align-items:center;justify-content:center}
+  .login-card{width:380px;padding:30px 28px;border:1px solid var(--line);border-radius:14px;
+    background:linear-gradient(180deg,#151b21,#0e1216);box-shadow:0 24px 60px rgba(0,0,0,.5)}
+  .login-card h1{margin:0 0 4px;font-size:19px;color:var(--gold2);letter-spacing:.5px}
+  .login-card p{margin:0 0 20px;color:var(--muted);font-size:12px;line-height:1.7}
+  .login-card input{width:100%;min-height:38px;margin-bottom:12px;border:1px solid var(--line);background:#0d1217;border-radius:8px;padding:0 10px}
+  .login-card button{width:100%;min-height:38px}
+  .login-err{color:var(--red);font-size:12px;min-height:16px;margin-bottom:6px}
+
+  .app{height:100%;display:grid;grid-template-rows:52px 1fr;
+    grid-template-columns:250px 1fr 316px;grid-template-areas:"head head head" "maps stage side"}
+  header{grid-area:head;display:flex;align-items:center;gap:12px;padding:0 14px;
+    border-bottom:1px solid var(--line);background:linear-gradient(180deg,#161d24,#11161b)}
+  .brand{display:flex;align-items:center;gap:9px;font-weight:700;font-size:15px;color:var(--gold2)}
+  .brand .dot{width:9px;height:9px;border-radius:50%;background:var(--green);box-shadow:0 0 10px var(--green)}
+  .brand .dot.off{background:var(--red);box-shadow:0 0 10px var(--red)}
+  .tag{border:1px solid var(--line);background:#0e1318;border-radius:999px;padding:2px 9px;font-size:11px;color:var(--muted)}
+  .tag.readonly{border-color:rgba(92,200,176,.45);color:var(--teal)}
+  .spacer{flex:1}
+  .meta{color:var(--muted);font-size:12px;font-variant-numeric:tabular-nums}
+  .meta b{color:var(--ink);font-weight:600}
+
+  .maps{grid-area:maps;min-height:0;display:flex;flex-direction:column;border-right:1px solid var(--line);background:var(--bg2)}
+  .pane-head{padding:12px 12px 8px;font-weight:700;display:flex;align-items:baseline;gap:8px}
+  .pane-head small{color:var(--dim);font-weight:400;font-size:11px}
+  .maps .tools{padding:0 10px 8px;display:grid;gap:6px}
+  .maps input[type=search]{width:100%;min-height:30px;border:1px solid var(--line);border-radius:7px;background:#0d1217;padding:0 9px}
+  .maplist{flex:1;overflow:auto;padding:2px 8px 14px}
+  .mrow{padding:7px 9px;border:1px solid transparent;border-radius:8px;cursor:pointer;margin-bottom:2px}
+  .mrow:hover{background:#161d24}
+  .mrow.sel{background:linear-gradient(90deg,rgba(217,180,90,.14),rgba(217,180,90,.02));border-color:rgba(217,180,90,.4)}
+  .mrow .l1{display:flex;align-items:baseline;gap:7px}
+  .mrow .l1 b{font-size:12.5px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .mrow .l1 i{font-style:normal;color:var(--dim);font-size:10.5px;font-family:Consolas,monospace;margin-left:auto}
+  .mrow .l2{display:flex;gap:8px;color:var(--dim);font-size:10.5px;margin-top:2px;font-variant-numeric:tabular-nums}
+  .mrow .l2 .baked{color:var(--teal)}
+  .mrow .meter{height:2px;border-radius:2px;background:#1c252d;margin-top:5px;overflow:hidden}
+  .mrow .meter i{display:block;height:100%;background:linear-gradient(90deg,#3b4b58,#5d7486)}
+
+  .stage{grid-area:stage;min-width:0;min-height:0;position:relative;background:#070a0d;display:flex;flex-direction:column}
+  .stage-tools{display:flex;align-items:center;gap:6px;padding:7px 10px;border-bottom:1px solid var(--line);background:#0e1216;flex-wrap:wrap}
+  .stage-tools .sep{width:1px;height:18px;background:var(--line);margin:0 3px}
+  .stage-tools label{display:flex;align-items:center;gap:4px;color:var(--muted);font-size:11.5px;user-select:none}
+  .stage-tools input[type=checkbox]{accent-color:var(--gold)}
+  .canvas-wrap{position:relative;flex:1;min-height:0;overflow:hidden}
+  #stage{position:absolute;inset:0;width:100%;height:100%;display:block;cursor:grab;touch-action:none}
+  #stage.dragging{cursor:grabbing}
+  .coord{position:absolute;left:10px;bottom:10px;background:rgba(9,13,17,.86);border:1px solid var(--line);
+    border-radius:7px;padding:4px 9px;font-family:Consolas,monospace;font-size:11.5px;color:var(--muted);pointer-events:none}
+  .coord b{color:var(--gold2);font-weight:600}
+  .legend{position:absolute;right:10px;bottom:10px;background:rgba(9,13,17,.86);border:1px solid var(--line);
+    border-radius:8px;padding:7px 10px;font-size:11px;color:var(--muted);display:flex;gap:12px;pointer-events:none}
+  .legend span{display:flex;align-items:center;gap:5px}
+  .legend i{display:inline-block;width:9px;height:9px;border-radius:2px}
+  .toast{position:absolute;left:50%;top:14px;transform:translateX(-50%);background:rgba(9,13,17,.92);
+    border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:8px;padding:7px 13px;font-size:12px;
+    opacity:0;pointer-events:none;transition:opacity .18s;max-width:70%}
+  .toast.on{opacity:1}
+  .toast.err{border-left-color:var(--red)}
+
+  .side{grid-area:side;min-height:0;display:flex;flex-direction:column;border-left:1px solid var(--line);background:var(--bg2)}
+  .side .scroll{flex:1;overflow:auto;padding:10px 12px 30px}
+  .card{border:1px solid var(--line);border-radius:10px;background:linear-gradient(180deg,#141a20,#10151a);padding:10px 12px;margin-bottom:10px}
+  .card h3{margin:0 0 8px;font-size:12.5px;color:var(--gold2);font-weight:700;display:flex;align-items:center;gap:7px}
+  .card h3 small{color:var(--dim);font-weight:400;font-size:10.5px;margin-left:auto}
+  .kv{display:grid;grid-template-columns:82px 1fr;gap:4px 8px;font-size:11.5px;line-height:1.5}
+  .kv dt{color:var(--dim)}
+  .kv dd{margin:0;color:var(--ink);word-break:break-all;font-variant-numeric:tabular-nums}
+  .kv dd.mono{font-family:Consolas,monospace;font-size:11px}
+  .checks{display:grid;grid-template-columns:1fr 1fr;gap:5px 10px;font-size:12px;color:var(--muted)}
+  .checks label{display:flex;align-items:center;gap:5px;user-select:none}
+  .checks input{accent-color:var(--gold)}
+  .layers{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}
+  .layers button{padding:2px 8px;font-size:11px;border-radius:999px;background:#141b21;color:var(--dim)}
+  .layers button.on{background:rgba(217,180,90,.16);border-color:rgba(217,180,90,.5);color:var(--gold2)}
+  .sel-kind{display:inline-block;border-radius:5px;padding:1px 6px;font-size:10.5px;margin-right:6px;
+    background:rgba(110,168,232,.15);color:var(--blue);border:1px solid rgba(110,168,232,.35)}
+  .sel-kind.object{background:rgba(183,148,244,.15);color:var(--violet);border-color:rgba(183,148,244,.35)}
+  .sel-kind.portal{background:rgba(255,122,217,.15);color:#ff7ad9;border-color:rgba(255,122,217,.35)}
+  .sel-kind.life{background:rgba(110,196,138,.15);color:var(--green);border-color:rgba(110,196,138,.35)}
+  .sel-kind.foothold{background:rgba(92,200,176,.15);color:var(--teal);border-color:rgba(92,200,176,.35)}
+  .sel-name{font-size:12.5px;font-weight:600;margin-bottom:6px}
+  .json{background:#0b1014;border:1px solid #1b242c;border-radius:8px;padding:8px 9px;font-family:Consolas,monospace;
+    font-size:10.8px;line-height:1.55;white-space:pre-wrap;word-break:break-all;max-height:280px;overflow:auto;color:#c8d3dc;margin-top:7px}
+  .hint{color:var(--dim);font-size:11px;line-height:1.6}
+  .empty{color:var(--dim);font-size:11.5px;padding:4px 0}
+  .warn{color:var(--red)}
+  @media (max-width:1500px){ .app{grid-template-columns:220px 1fr 284px} }
+  @media (max-width:1180px){
+    .app{grid-template-columns:212px 1fr;grid-template-areas:"head head" "maps stage"}
+    .side{display:none}
+  }
+  @media (max-width:820px){ .app{grid-template-columns:1fr;grid-template-areas:"head" "stage"} .maps{display:none} }
+</style>
+</head>
+<body>
+
+<div id="login" class="login hidden">
+  <form class="login-card" id="login-form">
+    <h1>地形浏览器</h1>
+    <p>只读查看 <code>数据/地图</code> 与 <code>素材/地图</code>：瓦片、物件、脚点、传送门、NPC/怪物出生点。<br>不写任何文件。</p>
+    <div class="login-err" id="login-err"></div>
+    <input type="password" id="login-pw" placeholder="编辑器口令" autocomplete="current-password">
+    <button class="primary" type="submit">进入</button>
+  </form>
+</div>
+
+<div id="app" class="app hidden">
+  <header>
+    <div class="brand"><span class="dot" id="srv-dot"></span>火影世界 · 地形浏览器</div>
+    <span class="tag readonly">只读</span>
+    <span class="tag" id="map-tag">未选地图</span>
+    <div class="spacer"></div>
+    <span class="meta" id="view-meta">缩放 —</span>
+    <button class="ghost sm" data-act="fit">适配全图 (F)</button>
+    <button class="ghost sm" data-act="zoom-out">−</button>
+    <button class="ghost sm" data-act="zoom-in">＋</button>
+    <a class="ghost sm" href="/editor/" style="padding:5px 10px;border:1px solid var(--line);border-radius:7px;background:#1a222a">数据编辑器</a>
+  </header>
+
+  <aside class="maps">
+    <div class="pane-head">地图 <small id="map-count">—</small></div>
+    <div class="tools">
+      <input type="search" id="map-search" placeholder="搜地图名 / ID / 目录">
+    </div>
+    <div class="maplist" id="maplist"></div>
+  </aside>
+
+  <section class="stage">
+    <div class="stage-tools">
+      <label><input type="checkbox" id="t-bg" checked>背景</label>
+      <label><input type="checkbox" id="t-tiles" checked>瓦片</label>
+      <label><input type="checkbox" id="t-objects" checked>物件</label>
+      <label><input type="checkbox" id="t-fh" checked>脚点</label>
+      <label><input type="checkbox" id="t-portal" checked>传送门</label>
+      <label><input type="checkbox" id="t-life" checked>NPC/怪物</label>
+      <label><input type="checkbox" id="t-grid">网格</label>
+      <label><input type="checkbox" id="t-anim" checked>物件动画</label>
+      <span class="sep"></span>
+      <button class="ghost sm" data-act="clear">清除选中 (Esc)</button>
+    </div>
+    <div class="canvas-wrap" id="canvas-wrap">
+      <canvas id="stage"></canvas>
+      <div class="coord" id="coord">世界坐标 <b>—</b></div>
+      <div class="legend">
+        <span><i style="background:#4fd1c5"></i>脚点</span>
+        <span><i style="background:#ff7ad9"></i>传送门</span>
+        <span><i style="background:#63b3ed"></i>NPC</span>
+        <span><i style="background:#f56565"></i>怪物</span>
+      </div>
+      <div class="toast" id="toast"></div>
+    </div>
+  </section>
+
+  <aside class="side">
+    <div class="pane-head">详情 <small>点地图上的元素查看</small></div>
+    <div class="scroll">
+      <div class="card" id="map-card"><div class="empty">正在读取地图列表…</div></div>
+      <div class="card" id="sel-card"><div class="empty">未选中元素。左键点一下瓦片 / 物件 / 脚点 / 传送门 / 出生点。</div></div>
+      <div class="card">
+        <h3>显示</h3>
+        <div class="checks">
+          <label><input type="checkbox" id="c-bg" checked>背景</label>
+          <label><input type="checkbox" id="c-tiles" checked>瓦片</label>
+          <label><input type="checkbox" id="c-objects" checked>物件</label>
+          <label><input type="checkbox" id="c-fh" checked>脚点</label>
+          <label><input type="checkbox" id="c-portal" checked>传送门</label>
+          <label><input type="checkbox" id="c-life" checked>出生点</label>
+          <label><input type="checkbox" id="c-grid">网格</label>
+          <label><input type="checkbox" id="c-anim" checked>动画</label>
+        </div>
+        <div id="layer-picks"></div>
+      </div>
+      <div class="card">
+        <h3>操作</h3>
+        <div class="hint">
+          拖拽平移 · 滚轮缩放 · 单击选中<br>
+          F 适配全图 · Esc 清除选中<br>
+          背景是静态取景（忽略视差跟随）；天空/纯色底块按游戏内“拉满整图”铺满 VR。
+        </div>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<script>
+'use strict';
+
+const $ = (s) => document.querySelector(s);
+const esc = (v) => String(v ?? '').replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+
+const app = {
+  pw: '',
+  maps: [],
+  map: null,
+  view: {scale: 0.4, tx: 0, ty: 0},
+  selected: null,
+  tileLayers: new Set(),
+  objectLayers: new Set(),
+  drag: null,
+  images: new Map(),
+  loaded: false,
+  dpr: window.devicePixelRatio || 1,
+};
+window.__terrainApp = app;
+
+function headers(extra) {
+  const h = Object.assign({}, extra || {});
+  if (app.pw) h['X-Naruto-Editor-Password'] = app.pw;
+  return h;
+}
+
+async function api(path) {
+  const response = await fetch(path, {headers: headers()});
+  let payload = null;
+  try { payload = await response.json(); } catch (_) {}
+  if (!response.ok || !payload || payload.ok === false) {
+    throw new Error((payload && payload.error) || ('请求失败 HTTP ' + response.status));
+  }
+  return payload;
+}
+
+function toast(message, isError) {
+  const el = $('#toast');
+  el.textContent = message;
+  el.classList.toggle('err', !!isError);
+  el.classList.add('on');
+  clearTimeout(toast.timer);
+  toast.timer = setTimeout(() => el.classList.remove('on'), 2400);
+}
+
+// ---------------------------------------------------------------- 登录
+
+function showLogin(message = '') {
+  $('#app').classList.add('hidden');
+  $('#login').classList.remove('hidden');
+  $('#login-err').textContent = message;
+  $('#login-pw').value = '';
+  setTimeout(() => $('#login-pw').focus(), 30);
+}
+
+$('#login-form').addEventListener('submit', async (event) => {
+  event.preventDefault();
+  const pw = $('#login-pw').value.trim();
+  if (!pw) return;
+  $('#login-err').textContent = '';
+  app.pw = pw;
+  try {
+    await boot();
+    localStorage.setItem('editor-password', pw);
+  } catch (error) {
+    app.pw = '';
+    $('#login-err').textContent = error.message || '无法连接编辑器服务';
+  }
+});
+
+// ---------------------------------------------------------------- 启动与地图列表
+
+async function boot() {
+  const data = await api('/api/terrain/maps');
+  app.maps = data.maps || [];
+  $('#login').classList.add('hidden');
+  $('#app').classList.remove('hidden');
+  resizeCanvas();
+  $('#srv-dot').classList.remove('off');
+  $('#map-count').textContent = app.maps.length + ' 张';
+  renderMapList();
+  const params = new URLSearchParams(location.search);
+  const wanted = params.get('id');
+  const id = (wanted && app.maps.some((m) => m.id === wanted)) ? wanted : (app.maps.find((m) => m.id === '100000000') || app.maps[0] || {}).id;
+  if (!id) throw new Error('没有可用地图');
+  await loadMap(id, true);
+}
+
+function renderMapList() {
+  const q = ($('#map-search').value || '').trim().toLowerCase();
+  const rows = app.maps.filter((m) => !q || m.id.includes(q) || m.name.toLowerCase().includes(q) || m.folder.toLowerCase().includes(q));
+  const maxTiles = Math.max(1, ...app.maps.map((m) => m.tiles));
+  $('#maplist').innerHTML = rows.map((m) => `
+    <div class="mrow ${app.map && app.map.id === m.id ? 'sel' : ''}" data-id="${esc(m.id)}">
+      <div class="l1"><b>${esc(m.name)}</b><i>${esc(m.id)}</i></div>
+      <div class="l2">
+        <span>瓦 ${m.tiles}</span><span>物 ${m.objects}</span><span>脚 ${m.footholds}</span>
+        <span>门 ${m.portals}</span><span>生 ${m.life}</span>
+        ${m.baked ? '<span class="baked">已烘焙</span>' : '<span>未烘焙</span>'}
+      </div>
+      <div class="meter"><i style="width:${Math.max(3, Math.round(m.tiles / maxTiles * 100))}%"></i></div>
+    </div>`).join('') || `<div class="empty">没有匹配「${esc(q)}」的地图</div>`;
+}
+
+$('#map-search').addEventListener('input', renderMapList);
+$('#maplist').addEventListener('click', (event) => {
+  const row = event.target.closest('.mrow');
+  if (row) loadMap(row.dataset.id);
+});
+
+async function loadMap(id, initial) {
+  if (!id) return;
+  if (!initial && app.map && app.map.id === id) return;
+  const data = await api('/api/terrain/map?id=' + encodeURIComponent(id));
+  app.map = data.map;
+  app.selected = null;
+  app.tileLayers = new Set(app.map.tiles.map((t) => t.layer));
+  app.objectLayers = new Set(app.map.objects.map((o) => o.layer));
+  $('#map-tag').textContent = app.map.name + ' · ' + app.map.id;
+  history.replaceState(null, '', '?id=' + encodeURIComponent(id));
+  renderMapList();
+  renderMapCard();
+  renderLayerPicks();
+  renderSelection();
+  fitView();
+}
+
+// ---------------------------------------------------------------- 右侧详情
+
+function kv(label, value, mono) {
+  return `<dt>${esc(label)}</dt><dd class="${mono ? 'mono' : ''}">${value}</dd>`;
+}
+
+function renderMapCard() {
+  const m = app.map;
+  if (!m) { $('#map-card').innerHTML = '<div class="empty">未选地图</div>'; return; }
+  const missing = m.missing || {};
+  const missTotal = (missing.tiles || 0) + (missing.objects || 0) + (missing.backgrounds || 0);
+  const vr = m.vr;
+  $('#map-card').innerHTML = `
+    <h3>${esc(m.name)} <small>${esc(m.folder)}</small></h3>
+    <dl class="kv">
+      ${kv('地图 ID', esc(m.id), true)}
+      ${kv('瓦片', m.tiles.length + ' 个')}
+      ${kv('物件', m.objects.length + ' 个')}
+      ${kv('脚点', m.footholds.length + ' 段')}
+      ${kv('传送门', m.portals.length + ' 个')}
+      ${kv('出生点', m.life.length + ' 个')}
+      ${kv('背景', m.backgrounds.length + ' 层')}
+      ${kv('VR', `${vr.left}, ${vr.top} → ${vr.right}, ${vr.bottom}`)}
+      ${kv('素材缺失', missTotal ? `<span class="warn">${missTotal} 个（瓦 ${missing.tiles || 0} / 物 ${missing.objects || 0} / 背 ${missing.backgrounds || 0}）</span>` : '0')}
+      ${kv('烘焙场景', m.baked ? '有' : '无')}
+      ${kv('实际场景', `<span class="mono">${esc(m.playableScene)}</span>`)}
+    </dl>`;
+}
+
+function renderLayerPicks() {
+  const box = $('#layer-picks');
+  if (!app.map) { box.innerHTML = ''; return; }
+  const mapLayers = (items) => [...new Set(items.map((x) => x.layer))].sort((a, b) => a - b);
+  const tiles = mapLayers(app.map.tiles);
+  const objects = mapLayers(app.map.objects);
+  const chips = (kind, layers, onSet) => layers.map((n) => {
+    const cls = onSet.has(n) ? 'on' : '';
+    const label = (kind === 'tile' ? '瓦' : '物') + ' 层' + n;
+    return `<button class="layers-chip ${cls}" data-kind="${kind}" data-layer="${n}" style="border:1px solid var(--line)">${label}</button>`;
+  }).join('');
+  box.innerHTML = `
+    ${tiles.length ? `<div class="hint" style="margin-top:10px">瓦片分层</div><div class="layers">${chips('tile', tiles, app.tileLayers)}</div>` : ''}
+    ${objects.length ? `<div class="hint" style="margin-top:8px">物件分层</div><div class="layers">${chips('object', objects, app.objectLayers)}</div>` : ''}`;
+}
+
+$('#layer-picks').addEventListener('click', (event) => {
+  const chip = event.target.closest('[data-kind]');
+  if (!chip) return;
+  const set = chip.dataset.kind === 'tile' ? app.tileLayers : app.objectLayers;
+  const n = Number(chip.dataset.layer);
+  if (set.has(n)) set.delete(n); else set.add(n);
+  renderLayerPicks();
+  scheduleDraw();
+});
+
+function describeSelection(sel) {
+  if (!sel) return null;
+  const item = sel.item;
+  if (sel.kind === 'tile') {
+    return {
+      kind: '瓦片', cls: '',
+      title: `${item.tS}_${item.u}_${item.no}`,
+      rows: {
+        '位置': `${item.x}, ${item.y}`, '绘制原点': `${item.x - item.ox}, ${item.y - item.oy}`,
+        '偏移 ox/oy': `${item.ox} / ${item.oy}`, '层 / z': `${item.layer} / ${item.z}`,
+        '描述符 z': item.descriptorZ, '素材': item.assetPath || '缺失',
+      },
+    };
+  }
+  if (sel.kind === 'object') {
+    return {
+      kind: '物件', cls: 'object',
+      title: item.base,
+      rows: {
+        '位置': `${item.x}, ${item.y}`, '绘制原点': `${item.flip ? item.x + item.ox : item.x - item.ox}, ${item.y - item.oy}`,
+        '翻转 / 偏移': `${item.flip ? '是' : '否'} / ${item.ox}, ${item.oy}`,
+        '层 / z': `${item.layer} / ${item.z}（mapZ ${item.mapZ}）`,
+        '帧数': item.frames.length,
+        '帧 0': item.frames[0] ? item.frames[0].path : '缺失',
+      },
+    };
+  }
+  if (sel.kind === 'foothold') {
+    return {
+      kind: '脚点', cls: 'foothold',
+      title: `层 ${item.layer} · 组 ${item.group} · 段 ${item.id}`,
+      rows: {
+        '起点': `${item.x1}, ${item.y1}`, '终点': `${item.x2}, ${item.y2}`,
+        'prev / next': `${item.prev} / ${item.next}`,
+        '类型': item.x1 === item.x2 ? '竖直（崖边）' : '可站立',
+      },
+    };
+  }
+  if (sel.kind === 'portal') {
+    return {
+      kind: '传送门', cls: 'portal',
+      title: `${item.pn || '(无名)'} · key ${item.key}`,
+      rows: {
+        '位置': `${item.x}, ${item.y}`, 'pt / tm': `${item.pt ?? '-'} / ${item.tm ?? '-'}`,
+        '目标名 tn': item.tn || '-',
+      },
+    };
+  }
+  if (sel.kind === 'life') {
+    const isNpc = item.type === 'n';
+    return {
+      kind: isNpc ? 'NPC 出生点' : '怪物出生点', cls: 'life',
+      title: `${isNpc ? 'NPC' : '怪物'} ${item.id}`,
+      rows: {
+        '位置': `${item.x}, ${item.y}`, '脚点 fh': item.fh ?? '-',
+        '移动范围': `${item.rx0 ?? '-'} → ${item.rx1 ?? '-'}`,
+        'cy': item.cy ?? '-', 'key': item.key,
+      },
+    };
+  }
+  return null;
+}
+
+function renderSelection() {
+  const info = describeSelection(app.selected);
+  const box = $('#sel-card');
+  if (!info) {
+    box.innerHTML = '<div class="empty">未选中元素。左键点一下瓦片 / 物件 / 脚点 / 传送门 / 出生点。</div>';
+    return;
+  }
+  box.innerHTML = `
+    <h3>选中 <small>${esc(info.kind)}</small></h3>
+    <div class="sel-name"><span class="sel-kind ${info.cls}">${esc(info.kind)}</span>${esc(info.title)}</div>
+    <dl class="kv">${Object.entries(info.rows).map(([k, v]) => kv(k, esc(v), k === '素材' || k === '帧 0' || k === '位置')).join('')}</dl>
+    <div class="json">${esc(JSON.stringify(slim(app.selected), null, 1))}</div>`;
+}
+
+function slim(sel) {
+  const item = Object.assign({}, sel.item);
+  if (item.frames) item.frames = item.frames.map((f) => f.path);
+  if (item.asset) item.asset = '(见 assetPath)';
+  return item;
+}
+
+// ---------------------------------------------------------------- 画布与视图
+
+const canvas = $('#stage');
+const ctx = canvas.getContext('2d', {alpha: false});
+let drawPending = false;
+
+function scheduleDraw() {
+  if (drawPending) return;
+  drawPending = true;
+  const run = () => {
+    if (!drawPending) return;
+    drawPending = false;
+    draw();
+  };
+  requestAnimationFrame(run);
+  // 后台标签页会暂停 rAF；留一个定时器兜底，页面切回来时不会一直空白。
+  setTimeout(run, 40);
+}
+
+function resizeCanvas() {
+  const box = $('#canvas-wrap');
+  const rect = box.getBoundingClientRect();
+  app.dpr = window.devicePixelRatio || 1;
+  canvas.width = Math.max(1, Math.round(rect.width * app.dpr));
+  canvas.height = Math.max(1, Math.round(rect.height * app.dpr));
+  scheduleDraw();
+}
+
+new ResizeObserver(resizeCanvas).observe($('#canvas-wrap'));
+
+function worldToScreen(x, y) {
+  return [x * app.view.scale + app.view.tx, y * app.view.scale + app.view.ty];
+}
+
+function screenToWorld(x, y) {
+  return [(x - app.view.tx) / app.view.scale, (y - app.view.ty) / app.view.scale];
+}
+
+function viewSize() {
+  return [canvas.clientWidth, canvas.clientHeight];
+}
+
+function fitView() {
+  const m = app.map;
+  if (!m) return;
+  let left = m.vr.left, top = m.vr.top, right = m.vr.right, bottom = m.vr.bottom;
+  if (!(right > left && bottom > top)) {
+    left = Infinity; top = Infinity; right = -Infinity; bottom = -Infinity;
+    for (const t of m.tiles) { left = Math.min(left, t.x - t.ox); right = Math.max(right, t.x - t.ox + 64); top = Math.min(top, t.y - t.oy); bottom = Math.max(bottom, t.y - t.oy + 64); }
+    for (const o of m.objects) { left = Math.min(left, o.x - o.ox); right = Math.max(right, o.x + o.ox); top = Math.min(top, o.y - o.oy); bottom = Math.max(bottom, o.y);
+      const img = o.frames[0] ? imageFor(o.frames[0].url) : null;
+      if (img) { right = Math.max(right, o.x - o.ox + img.naturalWidth); bottom = Math.max(bottom, o.y - o.oy + img.naturalHeight); }
+    }
+    if (!Number.isFinite(left)) { left = 0; top = 0; right = 960; bottom = 560; }
+  }
+  const [w, h] = viewSize();
+  const pad = 46;
+  const bw = Math.max(1, right - left);
+  const bh = Math.max(1, bottom - top);
+  const scale = clamp(Math.min((w - pad * 2) / bw, (h - pad * 2) / bh), 0.02, 2.5);
+  app.view = {scale, tx: w / 2 - (left + right) / 2 * scale, ty: h / 2 - (top + bottom) / 2 * scale};
+  updateViewMeta();
+  scheduleDraw();
+}
+
+function updateViewMeta() {
+  $('#view-meta').innerHTML = `缩放 <b>${Math.round(app.view.scale * 100)}%</b>`;
+}
+
+function zoomAt(factor, sx, sy) {
+  const [w, h] = viewSize();
+  sx = sx == null ? w / 2 : sx;
+  sy = sy == null ? h / 2 : sy;
+  const old = app.view.scale;
+  const next = clamp(old * factor, 0.03, 4);
+  if (next === old) return;
+  app.view.tx = sx - (sx - app.view.tx) * (next / old);
+  app.view.ty = sy - (sy - app.view.ty) * (next / old);
+  app.view.scale = next;
+  updateViewMeta();
+  scheduleDraw();
+}
+
+// ---------------------------------------------------------------- 图片缓存
+
+function imageFor(url) {
+  if (!url) return null;
+  let entry = app.images.get(url);
+  if (!entry) {
+    const img = new Image();
+    img.decoding = 'async';
+    entry = {img, ok: false, failed: false};
+    img.onload = () => { entry.ok = true; scheduleDraw(); };
+    img.onerror = () => { entry.failed = true; scheduleDraw(); };
+    img.src = url;
+    app.images.set(url, entry);
+  }
+  return entry.ok ? entry.img : null;
+}
+
+function preloadMapImages(m) {
+  for (const t of m.tiles) imageFor(t.asset);
+  for (const o of m.objects) if (o.frames[0]) imageFor(o.frames[0].url);
+  for (const b of m.backgrounds) imageFor(b.asset);
+}
+
+// ---------------------------------------------------------------- 绘制
+
+function draw() {
+  const [w, h] = viewSize();
+  if (w <= 0 || h <= 0) return;
+  ctx.setTransform(app.dpr, 0, 0, app.dpr, 0, 0);
+  ctx.fillStyle = '#070a0d';
+  ctx.fillRect(0, 0, w, h);
+  const m = app.map;
+  if (!m) return;
+  preloadMapImages(m);
+
+  if ($('#t-bg').checked) drawBackgrounds(m);
+  if ($('#t-grid').checked) drawGrid(m);
+
+  const animate = $('#t-anim').checked;
+  const now = performance.now();
+  if ($('#t-tiles').checked || $('#t-objects').checked) drawTerrain(m, animate, now);
+
+  if ($('#t-fh').checked) drawFootholds(m);
+  if ($('#t-portal').checked) drawPortals(m);
+  if ($('#t-life').checked) drawLife(m);
+  if (app.selected) drawSelectionOutline(app.selected);
+}
+
+function drawBackgrounds(m) {
+  const vr = m.vr;
+  const viewW = canvas.clientWidth, viewH = canvas.clientHeight;
+  const ordered = [...m.backgrounds].sort((a, b) => (a.次序 ?? 0) - (b.次序 ?? 0));
+  const first = ordered[0] || null;
+  const baseX = first ? first.x + 480 : 480;
+  const baseY = first ? first.y + 560 : 560;
+  const camX = (vr.left + vr.right) / 2;
+  const camBottom = vr.bottom;
+  for (const b of ordered) {
+    const img = imageFor(b.asset);
+    if (!img) continue;
+    const cw = Math.max(1, img.naturalWidth * (b.scale || 1));
+    const ch = Math.max(1, img.naturalHeight * (b.scale || 1));
+    const alpha = clamp((b.a ?? 255) / 255, 0, 1);
+    const type = ((b.type || 0) % 8 + 8) % 8;
+    // 天空/纯色底块：游戏内“拉满整图”，按 VR 铺满（再留 5% 余量）。
+    if (b.类别 === '天空' || b.类别 === '纯色底块') {
+      const ex = (vr.right - vr.left) * 0.05;
+      const ey = Math.max(280, (vr.bottom - vr.top) * 0.1);
+      const [x0, y0] = worldToScreen(vr.left - ex, vr.top - ey);
+      ctx.globalAlpha = alpha;
+      drawFlipped(img, x0, y0, (vr.right - vr.left + ex * 2) * app.view.scale, (vr.bottom - vr.top + ey * 2) * app.view.scale, !!b.f);
+      ctx.globalAlpha = 1;
+      continue;
+    }
+    let startX = b.x, startY = b.y;
+    if ([1, 3, 4, 6, 7].includes(type)) startX = align(b.x, -812, cw);
+    if ([2, 3, 5, 6, 7].includes(type)) startY = align(b.y, -1068, ch);
+    const gx = startX + camX + (camX - baseX) * ((b.rx || 0) / 100);
+    const gy = startY + camBottom + (camBottom - baseY) * ((b.ry || 0) / 100);
+    let minX = 0, maxX = 0, minY = 0, maxY = 0;
+    if (type === 1 || type === 4) {
+      minX = Math.floor((vr.left - gx) / cw); maxX = Math.ceil((vr.right - gx) / cw); minY = maxY = 0;
+    } else if (type === 2 || type === 5) {
+      minY = Math.floor((vr.top - gy) / ch); maxY = Math.ceil((vr.bottom - gy) / ch); minX = maxX = 0;
+    } else if (type === 3 || type === 6 || type === 7) {
+      minX = Math.floor((vr.left - gx) / cw); maxX = Math.ceil((vr.right - gx) / cw);
+      minY = Math.floor((vr.top - gy) / ch); maxY = Math.ceil((vr.bottom - gy) / ch);
+    }
+    ctx.globalAlpha = alpha;
+    for (let iy = minY; iy <= maxY; iy++) {
+      for (let ix = minX; ix <= maxX; ix++) {
+        const [sx, sy] = worldToScreen(gx + ix * cw - cw / 2, gy + iy * ch - ch / 2);
+        const dw = cw * app.view.scale, dh = ch * app.view.scale;
+        if (sx > viewW || sy > viewH || sx + dw < 0 || sy + dh < 0) continue;
+        drawFlipped(img, sx, sy, dw, dh, !!b.f);
+      }
+    }
+    ctx.globalAlpha = 1;
+  }
+}
+
+function align(value, minValue, cell) {
+  return value - Math.ceil((value - minValue) / cell) * cell;
+}
+
+function drawFlipped(img, x, y, drawW, drawH, flip) {
+  if (!flip) { ctx.drawImage(img, x, y, drawW, drawH); return; }
+  ctx.save();
+  ctx.translate(x + drawW, y);
+  ctx.scale(-1, 1);
+  ctx.drawImage(img, 0, 0, drawW, drawH);
+  ctx.restore();
+}
+
+function drawGrid(m) {
+  const scale = app.view.scale;
+  const step = 500;
+  if (scale * step < 24) return;
+  const [x0, y0] = screenToWorld(0, 0);
+  const [x1, y1] = screenToWorld(canvas.clientWidth, canvas.clientHeight);
+  ctx.save();
+  ctx.strokeStyle = 'rgba(120,150,175,.14)';
+  ctx.fillStyle = 'rgba(140,170,195,.5)';
+  ctx.lineWidth = 1;
+  ctx.font = '10px Consolas,monospace';
+  for (let x = Math.floor(x0 / step) * step; x <= x1; x += step) {
+    const [sx] = worldToScreen(x, 0);
+    ctx.beginPath(); ctx.moveTo(sx, 0); ctx.lineTo(sx, canvas.clientHeight); ctx.stroke();
+    ctx.fillText(String(x), sx + 3, 12);
+  }
+  for (let y = Math.floor(y0 / step) * step; y <= y1; y += step) {
+    const [, sy] = worldToScreen(0, y);
+    ctx.beginPath(); ctx.moveTo(0, sy); ctx.lineTo(canvas.clientWidth, sy); ctx.stroke();
+    ctx.fillText(String(y), 3, sy - 3);
+  }
+  drawVrBox(m);
+  ctx.restore();
+}
+
+function drawVrBox(m) {
+  const vr = m.vr;
+  if (!(vr.right > vr.left && vr.bottom > vr.top)) return;
+  const [x, y] = worldToScreen(vr.left, vr.top);
+  ctx.strokeStyle = 'rgba(217,180,90,.35)';
+  ctx.setLineDash([6, 4]);
+  ctx.strokeRect(x, y, (vr.right - vr.left) * app.view.scale, (vr.bottom - vr.top) * app.view.scale);
+  ctx.setLineDash([]);
+}
+
+function drawTerrain(m, animate, now) {
+  const items = [];
+  if ($('#t-objects').checked) {
+    for (const o of m.objects) {
+      if (!app.objectLayers.has(o.layer)) continue;
+      const frameIndex = animate && o.frames.length > 1 ? Math.floor(now / 200) % o.frames.length : 0;
+      const frame = o.frames[frameIndex];
+      if (!frame) continue;
+      const img = imageFor(frame.url);
+      if (!img) continue;
+      items.push({z: o.z, kind: 'object', o, img});
+    }
+  }
+  if ($('#t-tiles').checked) {
+    for (const t of m.tiles) {
+      if (!app.tileLayers.has(t.layer)) continue;
+      const img = imageFor(t.asset);
+      if (!img) continue;
+      items.push({z: t.z, kind: 'tile', t, img});
+    }
+  }
+  items.sort((a, b) => a.z - b.z);
+  const scale = app.view.scale;
+  const cw = canvas.clientWidth, chh = canvas.clientHeight;
+  for (const entry of items) {
+    let wx, wy, ww, wh, flip = false;
+    if (entry.kind === 'tile') {
+      const t = entry.t;
+      wx = t.x - t.ox; wy = t.y - t.oy;
+      ww = entry.img.naturalWidth; wh = entry.img.naturalHeight;
+    } else {
+      const o = entry.o;
+      ww = entry.img.naturalWidth; wh = entry.img.naturalHeight;
+      flip = !!o.flip;
+      wx = flip ? o.x + o.ox - ww : o.x - o.ox;
+      wy = o.y - o.oy;
+    }
+    const [sx, sy] = worldToScreen(wx, wy);
+    const dw = ww * scale, dh = wh * scale;
+    if (sx > cw || sy > chh || sx + dw < 0 || sy + dh < 0) continue;
+    drawFlipped(entry.img, sx, sy, dw, dh, flip);
+  }
+}
+
+function drawFootholds(m) {
+  const scale = app.view.scale;
+  const colors = ['#4fd1c5', '#f6ad55', '#b794f4', '#63b3ed', '#f687b3', '#9ae6b4', '#fbd38d', '#a0aec0'];
+  ctx.lineWidth = Math.max(1, Math.min(3, 1.4 * scale));
+  ctx.font = '10px Consolas,monospace';
+  for (const f of m.footholds) {
+    const [x1, y1] = worldToScreen(f.x1, f.y1);
+    const [x2, y2] = worldToScreen(f.x2, f.y2);
+    const color = colors[f.layer % colors.length];
+    ctx.strokeStyle = color;
+    ctx.beginPath();
+    ctx.moveTo(x1, y1); ctx.lineTo(x2, y2); ctx.stroke();
+    if (f.x1 === f.x2) {
+      ctx.fillStyle = color;
+      ctx.beginPath(); ctx.arc(x1, y1, 1.6, 0, Math.PI * 2); ctx.fill();
+    }
+    if (scale >= 0.75 && (f.id === '0' || f.id === '1' || Number(f.id) % 10 === 0)) {
+      ctx.fillStyle = 'rgba(230,240,245,.75)';
+      ctx.fillText('#' + f.id, (x1 + x2) / 2 + 3, (y1 + y2) / 2 - 3);
+    }
+  }
+}
+
+function drawPortals(m) {
+  const scale = app.view.scale;
+  ctx.font = '10px "Microsoft YaHei",sans-serif';
+  for (const p of m.portals) {
+    const [sx, sy] = worldToScreen(p.x, p.y);
+    if (sx < -40 || sy < -40 || sx > canvas.clientWidth + 40 || sy > canvas.clientHeight + 40) continue;
+    ctx.fillStyle = '#ff7ad9';
+    ctx.strokeStyle = 'rgba(0,0,0,.55)';
+    ctx.beginPath();
+    ctx.moveTo(sx, sy - 7); ctx.lineTo(sx + 7, sy); ctx.lineTo(sx, sy + 7); ctx.lineTo(sx - 7, sy);
+    ctx.closePath(); ctx.fill(); ctx.stroke();
+    if (scale >= 0.55) {
+      ctx.fillStyle = 'rgba(255,190,235,.92)';
+      ctx.fillText(p.pn || ('#' + p.key), sx + 9, sy + 4);
+    }
+  }
+}
+
+function drawLife(m) {
+  const scale = app.view.scale;
+  ctx.font = '10px "Microsoft YaHei",sans-serif';
+  for (const e of m.life) {
+    const [sx, sy] = worldToScreen(e.x, e.y);
+    if (sx < -40 || sy < -40 || sx > canvas.clientWidth + 40 || sy > canvas.clientHeight + 40) continue;
+    const isNpc = e.type === 'n';
+    ctx.strokeStyle = 'rgba(0,0,0,.55)';
+    ctx.fillStyle = isNpc ? '#63b3ed' : '#f56565';
+    if (isNpc) {
+      ctx.beginPath(); ctx.arc(sx, sy, 5, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
+    } else {
+      ctx.beginPath(); ctx.moveTo(sx, sy - 6); ctx.lineTo(sx + 6, sy + 5); ctx.lineTo(sx - 6, sy + 5); ctx.closePath();
+      ctx.fill(); ctx.stroke();
+    }
+    if (Number.isFinite(e.rx0) && Number.isFinite(e.rx1) && e.rx0 !== e.rx1) {
+      const [rx0, ry] = worldToScreen(e.rx0, e.y);
+      const [rx1] = worldToScreen(e.rx1, e.y);
+      ctx.strokeStyle = isNpc ? 'rgba(99,179,237,.35)' : 'rgba(245,101,101,.3)';
+      ctx.setLineDash([3, 3]);
+      ctx.beginPath(); ctx.moveTo(rx0, ry); ctx.lineTo(rx1, ry); ctx.stroke();
+      ctx.setLineDash([]);
+    }
+    if (scale >= 0.8) {
+      ctx.fillStyle = isNpc ? 'rgba(190,225,250,.92)' : 'rgba(250,190,190,.92)';
+      ctx.fillText((isNpc ? 'NPC ' : 'M ') + e.id, sx + 8, sy + 4);
+    }
+  }
+}
+
+function drawSelectionOutline(sel) {
+  const scale = app.view.scale;
+  ctx.save();
+  ctx.strokeStyle = '#f0d492';
+  ctx.lineWidth = 2;
+  if (sel.kind === 'tile' || sel.kind === 'object') {
+    const item = sel.item;
+    let wx, wy, ww, wh;
+    const img = sel.kind === 'tile' ? imageFor(item.asset) : (item.frames[0] ? imageFor(item.frames[0].url) : null);
+    ww = img ? img.naturalWidth : 32; wh = img ? img.naturalHeight : 32;
+    if (sel.kind === 'tile') { wx = item.x - item.ox; wy = item.y - item.oy; }
+    else { wx = item.flip ? item.x + item.ox - ww : item.x - item.ox; wy = item.y - item.oy; }
+    const [sx, sy] = worldToScreen(wx, wy);
+    ctx.strokeRect(sx, sy, ww * scale, wh * scale);
+  } else if (sel.kind === 'foothold') {
+    const f = sel.item;
+    const [x1, y1] = worldToScreen(f.x1, f.y1);
+    const [x2, y2] = worldToScreen(f.x2, f.y2);
+    ctx.beginPath(); ctx.arc((x1 + x2) / 2, (y1 + y2) / 2, 7, 0, Math.PI * 2); ctx.stroke();
+  } else {
+    const item = sel.item;
+    const [sx, sy] = worldToScreen(item.x, item.y);
+    ctx.beginPath(); ctx.arc(sx, sy, 10, 0, Math.PI * 2); ctx.stroke();
+  }
+  ctx.restore();
+}
+
+// ---------------------------------------------------------------- 拾取
+
+function pickAt(wx, wy) {
+  const m = app.map;
+  if (!m) return null;
+  const tol = 8 / app.view.scale;
+  const candidates = [];
+
+  if ($('#t-life').checked) {
+    for (const e of m.life) {
+      const d = Math.hypot(e.x - wx, e.y - wy);
+      if (d <= Math.max(tol, 6 / app.view.scale)) candidates.push({distance: d - 1000, kind: 'life', item: e});
+    }
+  }
+  if ($('#t-portal').checked) {
+    for (const p of m.portals) {
+      const d = Math.hypot(p.x - wx, p.y - wy);
+      if (d <= Math.max(tol, 7 / app.view.scale)) candidates.push({distance: d - 900, kind: 'portal', item: p});
+    }
+  }
+  if ($('#t-objects').checked) {
+    for (const o of m.objects) {
+      if (!app.objectLayers.has(o.layer) || !o.frames[0]) continue;
+      const img = imageFor(o.frames[0].url);
+      if (!img) continue;
+      const ww = img.naturalWidth, hh = img.naturalHeight;
+      const left = o.flip ? o.x + o.ox - ww : o.x - o.ox;
+      const top = o.y - o.oy;
+      if (wx >= left && wx <= left + ww && wy >= top && wy <= top + hh) {
+        candidates.push({distance: Math.hypot(wx - (left + ww / 2), wy - (top + hh / 2)) - 500, kind: 'object', item: o});
+      }
+    }
+  }
+  if ($('#t-tiles').checked) {
+    for (const t of m.tiles) {
+      if (!app.tileLayers.has(t.layer)) continue;
+      const img = imageFor(t.asset);
+      if (!img) continue;
+      const left = t.x - t.ox, top = t.y - t.oy;
+      if (wx >= left && wx <= left + img.naturalWidth && wy >= top && wy <= top + img.naturalHeight) {
+        candidates.push({distance: Math.hypot(wx - (left + img.naturalWidth / 2), wy - (top + img.naturalHeight / 2)) - 300, kind: 'tile', item: t});
+      }
+    }
+  }
+  if ($('#t-fh').checked) {
+    for (const f of m.footholds) {
+      const d = distToSegment(wx, wy, f.x1, f.y1, f.x2, f.y2);
+      if (d <= Math.max(tol, 5 / app.view.scale)) candidates.push({distance: d, kind: 'foothold', item: f});
+    }
+  }
+  if (!candidates.length) return null;
+  candidates.sort((a, b) => a.distance - b.distance);
+  return candidates[0];
+}
+
+function distToSegment(px, py, x1, y1, x2, y2) {
+  const dx = x2 - x1, dy = y2 - y1;
+  const len2 = dx * dx + dy * dy;
+  if (len2 === 0) return Math.hypot(px - x1, py - y1);
+  let t = ((px - x1) * dx + (py - y1) * dy) / len2;
+  t = clamp(t, 0, 1);
+  return Math.hypot(px - (x1 + t * dx), py - (y1 + t * dy));
+}
+
+// ---------------------------------------------------------------- 交互
+
+canvas.addEventListener('pointerdown', (event) => {
+  canvas.setPointerCapture(event.pointerId);
+  app.drag = {x: event.clientX, y: event.clientY, tx: app.view.tx, ty: app.view.ty, moved: false};
+  canvas.classList.add('dragging');
+});
+
+canvas.addEventListener('pointermove', (event) => {
+  const rect = canvas.getBoundingClientRect();
+  const [wx, wy] = screenToWorld(event.clientX - rect.left, event.clientY - rect.top);
+  $('#coord').innerHTML = `世界坐标 <b>${Math.round(wx)}, ${Math.round(wy)}</b>`;
+  if (!app.drag) return;
+  const dx = event.clientX - app.drag.x;
+  const dy = event.clientY - app.drag.y;
+  if (Math.abs(dx) + Math.abs(dy) > 3) app.drag.moved = true;
+  app.view.tx = app.drag.tx + dx;
+  app.view.ty = app.drag.ty + dy;
+  scheduleDraw();
+});
+
+canvas.addEventListener('pointerup', (event) => {
+  const drag = app.drag;
+  app.drag = null;
+  canvas.classList.remove('dragging');
+  if (!drag) return;
+  if (drag.moved) return;
+  const rect = canvas.getBoundingClientRect();
+  const [wx, wy] = screenToWorld(event.clientX - rect.left, event.clientY - rect.top);
+  const hit = pickAt(wx, wy);
+  app.selected = hit ? {kind: hit.kind, item: hit.item} : null;
+  renderSelection();
+  scheduleDraw();
+});
+
+canvas.addEventListener('pointerleave', () => {
+  if (!app.drag) $('#coord').innerHTML = '世界坐标 <b>—</b>';
+});
+
+canvas.addEventListener('wheel', (event) => {
+  event.preventDefault();
+  const rect = canvas.getBoundingClientRect();
+  zoomAt(event.deltaY < 0 ? 1.18 : 1 / 1.18, event.clientX - rect.left, event.clientY - rect.top);
+}, {passive: false});
+
+window.addEventListener('keydown', (event) => {
+  if (event.target && /input|textarea|select/i.test(event.target.tagName)) return;
+  if (event.key === 'f' || event.key === 'F') { event.preventDefault(); fitView(); }
+  if (event.key === 'Escape') { app.selected = null; renderSelection(); scheduleDraw(); }
+  if (event.key === '+' || event.key === '=') { event.preventDefault(); zoomAt(1.2); }
+  if (event.key === '-' || event.key === '_') { event.preventDefault(); zoomAt(1 / 1.2); }
+});
+
+function applyToggles() {
+  const pairs = [['t-bg','c-bg'], ['t-tiles','c-tiles'], ['t-objects','c-objects'], ['t-fh','c-fh'],
+    ['t-portal','c-portal'], ['t-life','c-life'], ['t-grid','c-grid'], ['t-anim','c-anim']];
+  for (const [a, b] of pairs) {
+    const x = $('#' + a), y = $('#' + b);
+    y.checked = x.checked;
+    x.addEventListener('change', () => { y.checked = x.checked; scheduleDraw(); });
+    y.addEventListener('change', () => { x.checked = y.checked; scheduleDraw(); });
+  }
+}
+
+document.addEventListener('click', (event) => {
+  const btn = event.target.closest('[data-act]');
+  if (!btn) return;
+  const act = btn.dataset.act;
+  if (act === 'fit') fitView();
+  if (act === 'zoom-in') zoomAt(1.2);
+  if (act === 'zoom-out') zoomAt(1 / 1.2);
+  if (act === 'clear') { app.selected = null; renderSelection(); scheduleDraw(); }
+});
+
+// ---------------------------------------------------------------- 入口
+
+(async function init() {
+  applyToggles();
+  resizeCanvas();
+  // 多帧物件按 5fps 重画（和客户端 OBJECT_FPS 一致）。
+  setInterval(() => {
+    if (!app.map || !$('#t-anim').checked || !$('#t-objects').checked) return;
+    if (app.map.objects.some((o) => o.frames.length > 1)) scheduleDraw();
+  }, 200);
+  const saved = localStorage.getItem('editor-password');
+  if (!saved) { showLogin(); return; }
+  app.pw = saved;
+  try {
+    await boot();
+  } catch (error) {
+    app.pw = '';
+    showLogin(error.message || '无法连接编辑器服务');
+  }
+})();
+</script>
+</body>
+</html>

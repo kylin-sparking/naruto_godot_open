@@ -1,0 +1,16 @@
+{
+ "出处": "MainLib.swf ABC 常量池（Flex message ResourceBundle），锚点 'com.mxw.common.gameCommon.language:CN/KEYBOARD_SCHEME_SAVE_CONFIRM/get'",
+ "说明": "真值文档/UI/texts 那份导出表缺这一族，LangUtil 查不到会回键名本身 ⇒ 原版不空白 ｜ 2026-10-09 再补四键 KEYBOARD_OPERATE_BTNS_1~4（确定/取消/全部重置/全部消除）：门原来只查**作者机器上那份** `../2.2.3/.../en_US$message_properties.as`，换台机器整表读不到 ⇒ 四条红是环境耦合、不是文案错。值与 快捷键窗期望.json 逐件真值一致。",
+ "表": {
+  "KEYBOARD_SCHEME_PREFIX": "方案",
+  "KEYBOARD_SCHEME_SAVE": "保存方案",
+  "KEYBOARD_SCHEME_EMPTY_SUFFIX": "(空)",
+  "KEYBOARD_SCHEME_EMPTY_NOTICE": "尚未保存，点击“保存方案”可保存当前设置",
+  "KEYBOARD_SCHEME_SAVED_NOTICE": "已保存",
+  "KEYBOARD_SCHEME_SAVE_CONFIRM": "确定用当前按键设置覆盖所选方案吗？",
+  "KEYBOARD_OPERATE_BTNS_1": "确定",
+  "KEYBOARD_OPERATE_BTNS_2": "取消",
+  "KEYBOARD_OPERATE_BTNS_3": "全部重置",
+  "KEYBOARD_OPERATE_BTNS_4": "全部消除"
+ }
+}

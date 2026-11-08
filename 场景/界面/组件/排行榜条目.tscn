@@ -1,0 +1,31 @@
+[gd_scene format=3]
+
+; 原版一行 = `RankListCell2`（Sprite，`createUI:62-91`）：三枚 `cretateLabel(宽, x, y=2)`，
+; 宽 40 / 95 / 90、x 依次 0 / 40 / 135（`_loc2_ += label.width` 累加），每枚 20 高、**顶边在 y=2**
+; （`setPosition(param2, 2)`，不是 0 —— 行底图 `UISwf_RankWindow_RankListBg` 是 25 高）。
+; 12 号白字、居中；三枚同色，色由 `setCellColor` 按**名次**整行改（见 系统窗口._渲染排行行）。
+[node name="排行榜条目" type="Control"]
+custom_minimum_size = Vector2(230, 20)
+offset_right = 230.0
+offset_bottom = 20.0
+mouse_filter = 2
+[node name="名次" type="Label" parent="."]
+offset_top = 2.0
+offset_right = 40.0
+offset_bottom = 22.0
+horizontal_alignment = 1
+text = "1"
+[node name="名称" type="Label" parent="."]
+offset_left = 40.0
+offset_top = 2.0
+offset_right = 135.0
+offset_bottom = 22.0
+horizontal_alignment = 1
+text = "忍者名称"
+[node name="数值" type="Label" parent="."]
+offset_left = 135.0
+offset_top = 2.0
+offset_right = 225.0
+offset_bottom = 22.0
+horizontal_alignment = 1
+text = "1"

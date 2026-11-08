@@ -1,0 +1,1471 @@
+{
+  "特效": [
+    {
+      "项": "heal",
+      "形态": "逐帧位图",
+      "表里帧数": 6,
+      "有图帧数": 6,
+      "导出成功": 6,
+      "用到类名": 6,
+      "swf": "Effect_heal",
+      "判定": "ok"
+    },
+    {
+      "项": "levelUp",
+      "形态": "逐帧位图",
+      "表里帧数": 22,
+      "有图帧数": 22,
+      "导出成功": 22,
+      "用到类名": 22,
+      "swf": "Effect_levelUp",
+      "判定": "ok"
+    },
+    {
+      "项": "jobChange",
+      "形态": "逐帧位图",
+      "表里帧数": 13,
+      "有图帧数": 13,
+      "导出成功": 13,
+      "用到类名": 13,
+      "swf": "Effect_jobChange",
+      "判定": "ok"
+    },
+    {
+      "项": "teleport",
+      "形态": "逐帧位图",
+      "表里帧数": 4,
+      "有图帧数": 4,
+      "导出成功": 4,
+      "用到类名": 4,
+      "swf": "Effect_teleport",
+      "判定": "ok"
+    },
+    {
+      "项": "summoned",
+      "形态": "逐帧位图",
+      "表里帧数": 4,
+      "有图帧数": 4,
+      "导出成功": 4,
+      "用到类名": 4,
+      "swf": "Effect_summoned",
+      "判定": "ok"
+    },
+    {
+      "项": "transform",
+      "形态": "逐帧位图",
+      "表里帧数": 7,
+      "有图帧数": 7,
+      "导出成功": 7,
+      "用到类名": 7,
+      "swf": "Effect_transform",
+      "判定": "ok"
+    },
+    {
+      "项": "flying",
+      "形态": "逐帧位图",
+      "表里帧数": 5,
+      "有图帧数": 5,
+      "导出成功": 5,
+      "用到类名": 5,
+      "swf": "Effect_flying",
+      "判定": "ok"
+    },
+    {
+      "项": "questClear",
+      "形态": "逐帧位图",
+      "表里帧数": 11,
+      "有图帧数": 11,
+      "导出成功": 11,
+      "用到类名": 11,
+      "swf": "Effect_questClear",
+      "判定": "ok"
+    },
+    {
+      "项": "portalPV",
+      "形态": "逐帧位图",
+      "表里帧数": 8,
+      "有图帧数": 8,
+      "导出成功": 8,
+      "用到类名": 8,
+      "swf": "Effect_portalPV",
+      "判定": "ok"
+    },
+    {
+      "项": "playerBulb",
+      "形态": "逐帧位图",
+      "表里帧数": 6,
+      "有图帧数": 6,
+      "导出成功": 6,
+      "用到类名": 6,
+      "swf": "Effect_playerBulb",
+      "判定": "ok"
+    },
+    {
+      "项": "questOverTip",
+      "形态": "逐帧位图",
+      "表里帧数": 1,
+      "有图帧数": 1,
+      "导出成功": 1,
+      "用到类名": 1,
+      "swf": "Effect_questOverTip",
+      "判定": "ok"
+    },
+    {
+      "项": "wangBossPic",
+      "形态": "逐帧位图",
+      "表里帧数": 11,
+      "有图帧数": 11,
+      "导出成功": 11,
+      "用到类名": 11,
+      "swf": "Effect_Wang_0|Effect_Wang_1|Effect_Wang_2|Effect_Wang_3|Effect_Wang_4|Effect_Wang_5|Effect_Wang_6|Effect_Wang_7|Effect_Wang_8|Effect_Wang_9|Effect_Wang_10",
+      "判定": "ok"
+    },
+    {
+      "项": "maiTong1",
+      "形态": "逐帧位图",
+      "表里帧数": 7,
+      "有图帧数": 6,
+      "导出成功": 6,
+      "用到类名": 3,
+      "swf": "Effect_maiTong1",
+      "判定": "ok"
+    },
+    {
+      "项": "maiTong2",
+      "形态": "逐帧位图",
+      "表里帧数": 7,
+      "有图帧数": 6,
+      "导出成功": 6,
+      "用到类名": 3,
+      "swf": "Effect_maiTong2",
+      "判定": "ok"
+    },
+    {
+      "项": "maiTong3",
+      "形态": "逐帧位图",
+      "表里帧数": 7,
+      "有图帧数": 6,
+      "导出成功": 6,
+      "用到类名": 3,
+      "swf": "Effect_maiTong3",
+      "判定": "ok"
+    },
+    {
+      "项": "maiTong4",
+      "形态": "逐帧位图",
+      "表里帧数": 7,
+      "有图帧数": 6,
+      "导出成功": 6,
+      "用到类名": 3,
+      "swf": "Effect_maiTong4",
+      "判定": "ok"
+    },
+    {
+      "项": "maiTong5",
+      "形态": "逐帧位图",
+      "表里帧数": 7,
+      "有图帧数": 6,
+      "导出成功": 6,
+      "用到类名": 3,
+      "swf": "Effect_maiTong5",
+      "判定": "ok"
+    },
+    {
+      "项": "maiTong6",
+      "形态": "逐帧位图",
+      "表里帧数": 7,
+      "有图帧数": 6,
+      "导出成功": 6,
+      "用到类名": 3,
+      "swf": "Effect_maiTong6",
+      "判定": "ok"
+    },
+    {
+      "项": "maiTong7",
+      "形态": "逐帧位图",
+      "表里帧数": 4,
+      "有图帧数": 3,
+      "导出成功": 3,
+      "用到类名": 3,
+      "swf": "Effect_maiTong7",
+      "判定": "ok"
+    },
+    {
+      "项": "maiTong8",
+      "形态": "逐帧位图",
+      "表里帧数": 4,
+      "有图帧数": 3,
+      "导出成功": 3,
+      "用到类名": 3,
+      "swf": "Effect_maiTong8",
+      "判定": "ok"
+    },
+    {
+      "项": "mobBianyi",
+      "形态": "逐帧位图",
+      "表里帧数": 3,
+      "有图帧数": 3,
+      "导出成功": 3,
+      "用到类名": 3,
+      "swf": "Effect_mobBianyi",
+      "判定": "ok"
+    },
+    {
+      "项": "mobBoss",
+      "形态": "逐帧位图",
+      "表里帧数": 3,
+      "有图帧数": 3,
+      "导出成功": 3,
+      "用到类名": 3,
+      "swf": "Effect_mobBoss",
+      "判定": "ok"
+    },
+    {
+      "项": "maiTong9",
+      "形态": "逐帧位图",
+      "表里帧数": 8,
+      "有图帧数": 7,
+      "导出成功": 7,
+      "用到类名": 7,
+      "swf": "Effect_maiTong9",
+      "判定": "ok"
+    },
+    {
+      "项": "maiTong16",
+      "形态": "逐帧位图",
+      "表里帧数": 8,
+      "有图帧数": 7,
+      "导出成功": 7,
+      "用到类名": 7,
+      "swf": "Effect_maiTong16",
+      "判定": "ok"
+    },
+    {
+      "项": "maiTong15",
+      "形态": "逐帧位图",
+      "表里帧数": 8,
+      "有图帧数": 7,
+      "导出成功": 7,
+      "用到类名": 7,
+      "swf": "Effect_maiTong15",
+      "判定": "ok"
+    },
+    {
+      "项": "maiTong14",
+      "形态": "逐帧位图",
+      "表里帧数": 8,
+      "有图帧数": 7,
+      "导出成功": 7,
+      "用到类名": 7,
+      "swf": "Effect_maiTong14",
+      "判定": "ok"
+    },
+    {
+      "项": "maiTong13",
+      "形态": "逐帧位图",
+      "表里帧数": 8,
+      "有图帧数": 7,
+      "导出成功": 7,
+      "用到类名": 7,
+      "swf": "Effect_maiTong13",
+      "判定": "ok"
+    },
+    {
+      "项": "maiTong12",
+      "形态": "逐帧位图",
+      "表里帧数": 8,
+      "有图帧数": 7,
+      "导出成功": 7,
+      "用到类名": 7,
+      "swf": "Effect_maiTong12",
+      "判定": "ok"
+    },
+    {
+      "项": "maiTong11",
+      "形态": "逐帧位图",
+      "表里帧数": 8,
+      "有图帧数": 7,
+      "导出成功": 7,
+      "用到类名": 7,
+      "swf": "Effect_maiTong11",
+      "判定": "ok"
+    },
+    {
+      "项": "maiTong10",
+      "形态": "逐帧位图",
+      "表里帧数": 8,
+      "有图帧数": 7,
+      "导出成功": 7,
+      "用到类名": 7,
+      "swf": "Effect_maiTong10",
+      "判定": "ok"
+    },
+    {
+      "项": "maiTong17",
+      "形态": "逐帧位图",
+      "表里帧数": 5,
+      "有图帧数": 4,
+      "导出成功": 4,
+      "用到类名": 4,
+      "swf": "Effect_maiTong17",
+      "判定": "ok"
+    },
+    {
+      "项": "maiTong18",
+      "形态": "逐帧位图",
+      "表里帧数": 5,
+      "有图帧数": 4,
+      "导出成功": 4,
+      "用到类名": 4,
+      "swf": "Effect_maiTong18",
+      "判定": "ok"
+    },
+    {
+      "项": "maiTong19",
+      "形态": "逐帧位图",
+      "表里帧数": 5,
+      "有图帧数": 4,
+      "导出成功": 4,
+      "用到类名": 4,
+      "swf": "Effect_maiTong19",
+      "判定": "ok"
+    },
+    {
+      "项": "maiTong20",
+      "形态": "逐帧位图",
+      "表里帧数": 5,
+      "有图帧数": 4,
+      "导出成功": 4,
+      "用到类名": 4,
+      "swf": "Effect_maiTong20",
+      "判定": "ok"
+    },
+    {
+      "项": "maiTong21",
+      "形态": "逐帧位图",
+      "表里帧数": 5,
+      "有图帧数": 4,
+      "导出成功": 4,
+      "用到类名": 4,
+      "swf": "Effect_maiTong21",
+      "判定": "ok"
+    },
+    {
+      "项": "maiTong22",
+      "形态": "逐帧位图",
+      "表里帧数": 5,
+      "有图帧数": 4,
+      "导出成功": 4,
+      "用到类名": 4,
+      "swf": "Effect_maiTong22",
+      "判定": "ok"
+    },
+    {
+      "项": "maiTong23",
+      "形态": "逐帧位图",
+      "表里帧数": 5,
+      "有图帧数": 4,
+      "导出成功": 4,
+      "用到类名": 4,
+      "swf": "Effect_maiTong23",
+      "判定": "ok"
+    },
+    {
+      "项": "maiTong24",
+      "形态": "逐帧位图",
+      "表里帧数": 5,
+      "有图帧数": 4,
+      "导出成功": 4,
+      "用到类名": 4,
+      "swf": "Effect_maiTong24",
+      "判定": "ok"
+    },
+    {
+      "项": "healNew",
+      "形态": "逐帧位图",
+      "表里帧数": 9,
+      "有图帧数": 9,
+      "导出成功": 9,
+      "用到类名": 9,
+      "swf": "Effect_healNew",
+      "判定": "ok"
+    },
+    {
+      "项": "portalPH",
+      "形态": "逐帧位图",
+      "表里帧数": 7,
+      "有图帧数": 7,
+      "导出成功": 7,
+      "用到类名": 7,
+      "swf": "Effect_portalPH",
+      "判定": "ok"
+    },
+    {
+      "项": "bgFlags/0",
+      "形态": "逐帧位图",
+      "表里帧数": 4,
+      "有图帧数": 4,
+      "导出成功": 4,
+      "用到类名": 4,
+      "swf": "Effect_bgFlags_0",
+      "判定": "ok"
+    },
+    {
+      "项": "bgFlags/1",
+      "形态": "逐帧位图",
+      "表里帧数": 4,
+      "有图帧数": 4,
+      "导出成功": 4,
+      "用到类名": 4,
+      "swf": "Effect_bgFlags_1",
+      "判定": "ok"
+    },
+    {
+      "项": "bgFlags/2",
+      "形态": "逐帧位图",
+      "表里帧数": 4,
+      "有图帧数": 4,
+      "导出成功": 4,
+      "用到类名": 4,
+      "swf": "Effect_bgFlags_2",
+      "判定": "ok"
+    },
+    {
+      "项": "chest/0",
+      "形态": "逐帧位图",
+      "表里帧数": 1,
+      "有图帧数": 1,
+      "导出成功": 1,
+      "用到类名": 1,
+      "swf": "Effect_chest_0",
+      "判定": "ok"
+    },
+    {
+      "项": "chest/1",
+      "形态": "逐帧位图",
+      "表里帧数": 1,
+      "有图帧数": 1,
+      "导出成功": 1,
+      "用到类名": 1,
+      "swf": "Effect_chest_1",
+      "判定": "ok"
+    },
+    {
+      "项": "maiTong25",
+      "形态": "逐帧位图",
+      "表里帧数": 8,
+      "有图帧数": 7,
+      "导出成功": 7,
+      "用到类名": 7,
+      "swf": "Effect_maiTong25",
+      "判定": "ok"
+    },
+    {
+      "项": "maiTong26",
+      "形态": "逐帧位图",
+      "表里帧数": 8,
+      "有图帧数": 7,
+      "导出成功": 7,
+      "用到类名": 7,
+      "swf": "Effect_maiTong26",
+      "判定": "ok"
+    },
+    {
+      "项": "maiTong27",
+      "形态": "逐帧位图",
+      "表里帧数": 8,
+      "有图帧数": 7,
+      "导出成功": 7,
+      "用到类名": 7,
+      "swf": "Effect_maiTong27",
+      "判定": "ok"
+    },
+    {
+      "项": "maiTong28",
+      "形态": "逐帧位图",
+      "表里帧数": 8,
+      "有图帧数": 7,
+      "导出成功": 7,
+      "用到类名": 7,
+      "swf": "Effect_maiTong28",
+      "判定": "ok"
+    },
+    {
+      "项": "maiTong29",
+      "形态": "逐帧位图",
+      "表里帧数": 8,
+      "有图帧数": 7,
+      "导出成功": 7,
+      "用到类名": 7,
+      "swf": "Effect_maiTong29",
+      "判定": "ok"
+    },
+    {
+      "项": "maiTong30",
+      "形态": "逐帧位图",
+      "表里帧数": 8,
+      "有图帧数": 7,
+      "导出成功": 7,
+      "用到类名": 7,
+      "swf": "Effect_maiTong30",
+      "判定": "ok"
+    },
+    {
+      "项": "maiTong31",
+      "形态": "逐帧位图",
+      "表里帧数": 8,
+      "有图帧数": 7,
+      "导出成功": 7,
+      "用到类名": 7,
+      "swf": "Effect_maiTong31",
+      "判定": "ok"
+    },
+    {
+      "项": "maiTong32",
+      "形态": "逐帧位图",
+      "表里帧数": 8,
+      "有图帧数": 7,
+      "导出成功": 7,
+      "用到类名": 7,
+      "swf": "Effect_maiTong32",
+      "判定": "ok"
+    },
+    {
+      "项": "maiTong33",
+      "形态": "逐帧位图",
+      "表里帧数": 8,
+      "有图帧数": 7,
+      "导出成功": 7,
+      "用到类名": 7,
+      "swf": "Effect_maiTong25",
+      "判定": "ok"
+    },
+    {
+      "项": "maiTong34",
+      "形态": "逐帧位图",
+      "表里帧数": 8,
+      "有图帧数": 7,
+      "导出成功": 7,
+      "用到类名": 7,
+      "swf": "Effect_maiTong26",
+      "判定": "ok"
+    },
+    {
+      "项": "maiTong35",
+      "形态": "逐帧位图",
+      "表里帧数": 8,
+      "有图帧数": 7,
+      "导出成功": 7,
+      "用到类名": 7,
+      "swf": "Effect_maiTong27",
+      "判定": "ok"
+    },
+    {
+      "项": "maiTong36",
+      "形态": "逐帧位图",
+      "表里帧数": 8,
+      "有图帧数": 7,
+      "导出成功": 7,
+      "用到类名": 7,
+      "swf": "Effect_maiTong28",
+      "判定": "ok"
+    },
+    {
+      "项": "maiTong37",
+      "形态": "逐帧位图",
+      "表里帧数": 8,
+      "有图帧数": 7,
+      "导出成功": 7,
+      "用到类名": 7,
+      "swf": "Effect_maiTong29",
+      "判定": "ok"
+    },
+    {
+      "项": "maiTong38",
+      "形态": "逐帧位图",
+      "表里帧数": 8,
+      "有图帧数": 7,
+      "导出成功": 7,
+      "用到类名": 7,
+      "swf": "Effect_maiTong30",
+      "判定": "ok"
+    },
+    {
+      "项": "maiTong39",
+      "形态": "逐帧位图",
+      "表里帧数": 8,
+      "有图帧数": 7,
+      "导出成功": 7,
+      "用到类名": 7,
+      "swf": "Effect_maiTong31",
+      "判定": "ok"
+    },
+    {
+      "项": "maiTong40",
+      "形态": "逐帧位图",
+      "表里帧数": 8,
+      "有图帧数": 7,
+      "导出成功": 7,
+      "用到类名": 7,
+      "swf": "Effect_maiTong32",
+      "判定": "ok"
+    },
+    {
+      "项": "cToPickup",
+      "形态": "swf 时间轴",
+      "表里帧数": 2,
+      "时间轴实有帧数": 2,
+      "落盘帧数": 2,
+      "判定": "ok",
+      "依据": "MCFromDatDefine.as:29/37/183（_fps=100、gotoAndStop 钉帧、%frameCount 循环）"
+    },
+    {
+      "项": "aToAttack",
+      "形态": "swf 时间轴",
+      "表里帧数": 2,
+      "时间轴实有帧数": 2,
+      "落盘帧数": 2,
+      "判定": "ok",
+      "依据": "MCFromDatDefine.as:29/37/183（_fps=100、gotoAndStop 钉帧、%frameCount 循环）"
+    },
+    {
+      "项": "NoBlue0",
+      "形态": "swf 时间轴",
+      "表里帧数": 10,
+      "时间轴实有帧数": 10,
+      "落盘帧数": 10,
+      "判定": "例外",
+      "依据": "ColorNumber.as:62-66 new MCFromDatDefine(type) 后只设 frame，没有 autoTick/tick",
+      "说明": "只有 NoCri1/NoRed0/NoViolet0 的时间轴真有第 11 帧（MISS 字形）；其余 5 个 No* 只有 10 帧 → 原版对它们 gotoAndStop(11) 越界、停在当前帧。这是原版行为，照搬不修。"
+    },
+    {
+      "项": "NoBlue1",
+      "形态": "swf 时间轴",
+      "表里帧数": 10,
+      "时间轴实有帧数": 10,
+      "落盘帧数": 10,
+      "判定": "例外",
+      "依据": "ColorNumber.as:62-66 new MCFromDatDefine(type) 后只设 frame，没有 autoTick/tick",
+      "说明": "只有 NoCri1/NoRed0/NoViolet0 的时间轴真有第 11 帧（MISS 字形）；其余 5 个 No* 只有 10 帧 → 原版对它们 gotoAndStop(11) 越界、停在当前帧。这是原版行为，照搬不修。"
+    },
+    {
+      "项": "NoCri0",
+      "形态": "swf 时间轴",
+      "表里帧数": 10,
+      "时间轴实有帧数": 10,
+      "落盘帧数": 10,
+      "判定": "例外",
+      "依据": "ColorNumber.as:62-66 new MCFromDatDefine(type) 后只设 frame，没有 autoTick/tick",
+      "说明": "只有 NoCri1/NoRed0/NoViolet0 的时间轴真有第 11 帧（MISS 字形）；其余 5 个 No* 只有 10 帧 → 原版对它们 gotoAndStop(11) 越界、停在当前帧。这是原版行为，照搬不修。"
+    },
+    {
+      "项": "NoCri1",
+      "形态": "swf 时间轴",
+      "表里帧数": 10,
+      "时间轴实有帧数": 11,
+      "落盘帧数": 11,
+      "判定": "例外",
+      "依据": "ColorNumber.as:62-66 new MCFromDatDefine(type) 后只设 frame，没有 autoTick/tick",
+      "说明": "只有 NoCri1/NoRed0/NoViolet0 的时间轴真有第 11 帧（MISS 字形）；其余 5 个 No* 只有 10 帧 → 原版对它们 gotoAndStop(11) 越界、停在当前帧。这是原版行为，照搬不修。"
+    },
+    {
+      "项": "NoRed0",
+      "形态": "swf 时间轴",
+      "表里帧数": 10,
+      "时间轴实有帧数": 11,
+      "落盘帧数": 11,
+      "判定": "例外",
+      "依据": "ColorNumber.as:62-66 new MCFromDatDefine(type) 后只设 frame，没有 autoTick/tick",
+      "说明": "只有 NoCri1/NoRed0/NoViolet0 的时间轴真有第 11 帧（MISS 字形）；其余 5 个 No* 只有 10 帧 → 原版对它们 gotoAndStop(11) 越界、停在当前帧。这是原版行为，照搬不修。"
+    },
+    {
+      "项": "NoRed1",
+      "形态": "swf 时间轴",
+      "表里帧数": 10,
+      "时间轴实有帧数": 10,
+      "落盘帧数": 10,
+      "判定": "例外",
+      "依据": "ColorNumber.as:62-66 new MCFromDatDefine(type) 后只设 frame，没有 autoTick/tick",
+      "说明": "只有 NoCri1/NoRed0/NoViolet0 的时间轴真有第 11 帧（MISS 字形）；其余 5 个 No* 只有 10 帧 → 原版对它们 gotoAndStop(11) 越界、停在当前帧。这是原版行为，照搬不修。"
+    },
+    {
+      "项": "NoViolet0",
+      "形态": "swf 时间轴",
+      "表里帧数": 10,
+      "时间轴实有帧数": 11,
+      "落盘帧数": 11,
+      "判定": "例外",
+      "依据": "ColorNumber.as:62-66 new MCFromDatDefine(type) 后只设 frame，没有 autoTick/tick",
+      "说明": "只有 NoCri1/NoRed0/NoViolet0 的时间轴真有第 11 帧（MISS 字形）；其余 5 个 No* 只有 10 帧 → 原版对它们 gotoAndStop(11) 越界、停在当前帧。这是原版行为，照搬不修。"
+    },
+    {
+      "项": "NoViolet1",
+      "形态": "swf 时间轴",
+      "表里帧数": 10,
+      "时间轴实有帧数": 10,
+      "落盘帧数": 10,
+      "判定": "例外",
+      "依据": "ColorNumber.as:62-66 new MCFromDatDefine(type) 后只设 frame，没有 autoTick/tick",
+      "说明": "只有 NoCri1/NoRed0/NoViolet0 的时间轴真有第 11 帧（MISS 字形）；其余 5 个 No* 只有 10 帧 → 原版对它们 gotoAndStop(11) 越界、停在当前帧。这是原版行为，照搬不修。"
+    },
+    {
+      "项": "Effect_MaiExplode_0",
+      "形态": "swf 时间轴",
+      "表里帧数": 58,
+      "时间轴实有帧数": 58,
+      "落盘帧数": 58,
+      "判定": "ok",
+      "依据": "ExplodeEffect.as:12 类名表 / :114-117 autoTick=true, fps=100, once=true"
+    },
+    {
+      "项": "Effect_MaiExplode_1",
+      "形态": "swf 时间轴",
+      "表里帧数": 58,
+      "时间轴实有帧数": 58,
+      "落盘帧数": 58,
+      "判定": "ok",
+      "依据": "ExplodeEffect.as:12 / :114-117"
+    },
+    {
+      "项": "Effect_MaiExplode_2",
+      "形态": "swf 时间轴",
+      "表里帧数": 35,
+      "时间轴实有帧数": 35,
+      "落盘帧数": 35,
+      "判定": "ok",
+      "依据": "ExplodeEffect.as:12 / :114-117"
+    },
+    {
+      "项": "Effect_guaJiZhong",
+      "形态": "swf 时间轴",
+      "表里帧数": 40,
+      "时间轴实有帧数": 40,
+      "落盘帧数": 40,
+      "判定": "ok",
+      "依据": "GuajiHandler.as:1074-1077 new MCFromDatDefine → autoTick=true, fps=40"
+    },
+    {
+      "项": "Effect_BianYiGuanHuan",
+      "形态": "swf 时间轴",
+      "表里帧数": 80,
+      "时间轴实有帧数": 80,
+      "落盘帧数": 80,
+      "判定": "ok",
+      "依据": "Monster.as:1655-1665（_loc2_==2 走这个名字）"
+    },
+    {
+      "项": "Effect_BossGuanHuan",
+      "形态": "swf 时间轴",
+      "表里帧数": 80,
+      "时间轴实有帧数": 80,
+      "落盘帧数": 80,
+      "判定": "ok",
+      "依据": "Monster.as:1661-1665 / Character.as:858-861（autoTick=false，由光环层 tick）"
+    },
+    {
+      "项": "Effect_itemBuble",
+      "形态": "swf 时间轴",
+      "表里帧数": 10,
+      "时间轴实有帧数": 10,
+      "落盘帧数": 10,
+      "判定": "ok",
+      "依据": "MCFromDatDefine.as:29/37/183（_fps=100、gotoAndStop 钉帧、%frameCount 循环）"
+    },
+    {
+      "项": "Effect_BellGuanHuan",
+      "形态": "swf 时间轴",
+      "表里帧数": 80,
+      "时间轴实有帧数": 80,
+      "落盘帧数": 80,
+      "判定": "ok",
+      "依据": "Character.as:1358-1363 autoTick=false, fps=40"
+    },
+    {
+      "项": "Effect_RenShuJingJie_0",
+      "形态": "静态图标",
+      "表里帧数": 1,
+      "时间轴实有帧数": 1,
+      "落盘帧数": 1,
+      "判定": "ok",
+      "依据": "MCFromDatDefine.as:29/37/183（_fps=100、gotoAndStop 钉帧、%frameCount 循环）"
+    },
+    {
+      "项": "Effect_RenShuJingJie_1",
+      "形态": "静态图标",
+      "表里帧数": 1,
+      "时间轴实有帧数": 1,
+      "落盘帧数": 1,
+      "判定": "ok",
+      "依据": "MCFromDatDefine.as:29/37/183（_fps=100、gotoAndStop 钉帧、%frameCount 循环）"
+    },
+    {
+      "项": "Effect_RenShuJingJie_2",
+      "形态": "静态图标",
+      "表里帧数": 1,
+      "时间轴实有帧数": 1,
+      "落盘帧数": 1,
+      "判定": "ok",
+      "依据": "MCFromDatDefine.as:29/37/183（_fps=100、gotoAndStop 钉帧、%frameCount 循环）"
+    },
+    {
+      "项": "Effect_RenShuJingJie_3",
+      "形态": "静态图标",
+      "表里帧数": 1,
+      "时间轴实有帧数": 1,
+      "落盘帧数": 1,
+      "判定": "ok",
+      "依据": "MCFromDatDefine.as:29/37/183（_fps=100、gotoAndStop 钉帧、%frameCount 循环）"
+    },
+    {
+      "项": "Effect_RenShuJingJie_4",
+      "形态": "静态图标",
+      "表里帧数": 1,
+      "时间轴实有帧数": 1,
+      "落盘帧数": 1,
+      "判定": "ok",
+      "依据": "MCFromDatDefine.as:29/37/183（_fps=100、gotoAndStop 钉帧、%frameCount 循环）"
+    },
+    {
+      "项": "Effect_RenShuJingJie_5",
+      "形态": "静态图标",
+      "表里帧数": 1,
+      "时间轴实有帧数": 1,
+      "落盘帧数": 1,
+      "判定": "ok",
+      "依据": "MCFromDatDefine.as:29/37/183（_fps=100、gotoAndStop 钉帧、%frameCount 循环）"
+    },
+    {
+      "项": "Effect_RenShuJingJie_6",
+      "形态": "静态图标",
+      "表里帧数": 1,
+      "时间轴实有帧数": 1,
+      "落盘帧数": 1,
+      "判定": "ok",
+      "依据": "MCFromDatDefine.as:29/37/183（_fps=100、gotoAndStop 钉帧、%frameCount 循环）"
+    },
+    {
+      "项": "minimap_portal_skin",
+      "形态": "静态图标",
+      "表里帧数": 1,
+      "时间轴实有帧数": 1,
+      "落盘帧数": 1,
+      "判定": "ok",
+      "依据": "MCFromDatDefine.as:29/37/183（_fps=100、gotoAndStop 钉帧、%frameCount 循环）"
+    },
+    {
+      "项": "minimap_user_skin",
+      "形态": "静态图标",
+      "表里帧数": 1,
+      "时间轴实有帧数": 1,
+      "落盘帧数": 1,
+      "判定": "ok",
+      "依据": "MCFromDatDefine.as:29/37/183（_fps=100、gotoAndStop 钉帧、%frameCount 循环）"
+    },
+    {
+      "项": "minimap_friend_skin",
+      "形态": "静态图标",
+      "表里帧数": 1,
+      "时间轴实有帧数": 1,
+      "落盘帧数": 1,
+      "判定": "ok",
+      "依据": "MCFromDatDefine.as:29/37/183（_fps=100、gotoAndStop 钉帧、%frameCount 循环）"
+    },
+    {
+      "项": "minimap_mob_skin",
+      "形态": "静态图标",
+      "表里帧数": 1,
+      "时间轴实有帧数": 1,
+      "落盘帧数": 1,
+      "判定": "ok",
+      "依据": "MCFromDatDefine.as:29/37/183（_fps=100、gotoAndStop 钉帧、%frameCount 循环）"
+    },
+    {
+      "项": "minimap_mobBoss_skin",
+      "形态": "静态图标",
+      "表里帧数": 1,
+      "时间轴实有帧数": 1,
+      "落盘帧数": 1,
+      "判定": "ok",
+      "依据": "MCFromDatDefine.as:29/37/183（_fps=100、gotoAndStop 钉帧、%frameCount 循环）"
+    },
+    {
+      "项": "minimap_mobJingYing_skin",
+      "形态": "静态图标",
+      "表里帧数": 1,
+      "时间轴实有帧数": 1,
+      "落盘帧数": 1,
+      "判定": "ok",
+      "依据": "MCFromDatDefine.as:29/37/183（_fps=100、gotoAndStop 钉帧、%frameCount 循环）"
+    },
+    {
+      "项": "minimap_npc_skin",
+      "形态": "静态图标",
+      "表里帧数": 1,
+      "时间轴实有帧数": 1,
+      "落盘帧数": 1,
+      "判定": "ok",
+      "依据": "MCFromDatDefine.as:29/37/183（_fps=100、gotoAndStop 钉帧、%frameCount 循环）"
+    },
+    {
+      "项": "minimap_startnpc_skin",
+      "形态": "静态图标",
+      "表里帧数": 1,
+      "时间轴实有帧数": 1,
+      "落盘帧数": 1,
+      "判定": "ok",
+      "依据": "MCFromDatDefine.as:29/37/183（_fps=100、gotoAndStop 钉帧、%frameCount 循环）"
+    },
+    {
+      "项": "minimap_questing_skin",
+      "形态": "静态图标",
+      "表里帧数": 1,
+      "时间轴实有帧数": 1,
+      "落盘帧数": 1,
+      "判定": "ok",
+      "依据": "MCFromDatDefine.as:29/37/183（_fps=100、gotoAndStop 钉帧、%frameCount 循环）"
+    },
+    {
+      "项": "minimap_endnpc_skin",
+      "形态": "静态图标",
+      "表里帧数": 1,
+      "时间轴实有帧数": 6,
+      "落盘帧数": 1,
+      "判定": "多帧",
+      "依据": "MCFromDatDefine.as:29/37/183（_fps=100、gotoAndStop 钉帧、%frameCount 循环）"
+    },
+    {
+      "项": "minimap_party_skin",
+      "形态": "静态图标",
+      "表里帧数": 1,
+      "时间轴实有帧数": 1,
+      "落盘帧数": 1,
+      "判定": "ok",
+      "依据": "MCFromDatDefine.as:29/37/183（_fps=100、gotoAndStop 钉帧、%frameCount 循环）"
+    },
+    {
+      "项": "minimap_partymaster_skin",
+      "形态": "静态图标",
+      "表里帧数": 1,
+      "时间轴实有帧数": 1,
+      "落盘帧数": 1,
+      "判定": "ok",
+      "依据": "MCFromDatDefine.as:29/37/183（_fps=100、gotoAndStop 钉帧、%frameCount 循环）"
+    },
+    {
+      "项": "minimap_flag_redSkin",
+      "形态": "静态图标",
+      "表里帧数": 1,
+      "时间轴实有帧数": 1,
+      "落盘帧数": 1,
+      "判定": "ok",
+      "依据": "MCFromDatDefine.as:29/37/183（_fps=100、gotoAndStop 钉帧、%frameCount 循环）"
+    },
+    {
+      "项": "minimap_flag_blueSkin",
+      "形态": "静态图标",
+      "表里帧数": 1,
+      "时间轴实有帧数": 1,
+      "落盘帧数": 1,
+      "判定": "ok",
+      "依据": "MCFromDatDefine.as:29/37/183（_fps=100、gotoAndStop 钉帧、%frameCount 循环）"
+    },
+    {
+      "项": "minimap_flag_yellowSkin",
+      "形态": "静态图标",
+      "表里帧数": 1,
+      "时间轴实有帧数": 1,
+      "落盘帧数": 1,
+      "判定": "ok",
+      "依据": "MCFromDatDefine.as:29/37/183（_fps=100、gotoAndStop 钉帧、%frameCount 循环）"
+    },
+    {
+      "项": "Effect_PathFindingTip",
+      "形态": "swf 时间轴",
+      "表里帧数": 40,
+      "时间轴实有帧数": 40,
+      "落盘帧数": 40,
+      "判定": "ok",
+      "依据": "KeyController.as:785-788 autoTick=true, fps=40"
+    },
+    {
+      "项": "Effect_EliteMob_Atk",
+      "形态": "静态图标",
+      "表里帧数": 1,
+      "时间轴实有帧数": 1,
+      "落盘帧数": 1,
+      "判定": "ok",
+      "依据": "MCFromDatDefine.as:29/37/183（_fps=100、gotoAndStop 钉帧、%frameCount 循环）"
+    },
+    {
+      "项": "Effect_EliteMob_Bsk",
+      "形态": "静态图标",
+      "表里帧数": 1,
+      "时间轴实有帧数": 1,
+      "落盘帧数": 1,
+      "判定": "ok",
+      "依据": "MCFromDatDefine.as:29/37/183（_fps=100、gotoAndStop 钉帧、%frameCount 循环）"
+    },
+    {
+      "项": "Effect_EliteMob_Def",
+      "形态": "静态图标",
+      "表里帧数": 1,
+      "时间轴实有帧数": 1,
+      "落盘帧数": 1,
+      "判定": "ok",
+      "依据": "MCFromDatDefine.as:29/37/183（_fps=100、gotoAndStop 钉帧、%frameCount 循环）"
+    },
+    {
+      "项": "Effect_EliteMob_Avd",
+      "形态": "静态图标",
+      "表里帧数": 1,
+      "时间轴实有帧数": 1,
+      "落盘帧数": 1,
+      "判定": "ok",
+      "依据": "MCFromDatDefine.as:29/37/183（_fps=100、gotoAndStop 钉帧、%frameCount 循环）"
+    },
+    {
+      "项": "Effect_EliteMob_Hp",
+      "形态": "静态图标",
+      "表里帧数": 1,
+      "时间轴实有帧数": 1,
+      "落盘帧数": 1,
+      "判定": "ok",
+      "依据": "MCFromDatDefine.as:29/37/183（_fps=100、gotoAndStop 钉帧、%frameCount 循环）"
+    },
+    {
+      "项": "Effect_EliteMob_Money",
+      "形态": "静态图标",
+      "表里帧数": 1,
+      "时间轴实有帧数": 1,
+      "落盘帧数": 1,
+      "判定": "ok",
+      "依据": "MCFromDatDefine.as:29/37/183（_fps=100、gotoAndStop 钉帧、%frameCount 循环）"
+    },
+    {
+      "项": "Effect_EliteMob_Violent",
+      "形态": "静态图标",
+      "表里帧数": 1,
+      "时间轴实有帧数": 1,
+      "落盘帧数": 1,
+      "判定": "ok",
+      "依据": "MCFromDatDefine.as:29/37/183（_fps=100、gotoAndStop 钉帧、%frameCount 循环）"
+    },
+    {
+      "项": "Effect_KuaFuShenQi_Zi",
+      "形态": "swf 时间轴",
+      "表里帧数": 80,
+      "时间轴实有帧数": 80,
+      "落盘帧数": 80,
+      "判定": "ok",
+      "依据": "StringTool.as:108-112 从 ShenQi.info.aura 取名 → Character.as:852-874 addShenQiAura"
+    },
+    {
+      "项": "Effect_KuaFuShenQi_Lv",
+      "形态": "swf 时间轴",
+      "表里帧数": 80,
+      "时间轴实有帧数": 80,
+      "落盘帧数": 80,
+      "判定": "ok",
+      "依据": "StringTool.as:108-112 从 ShenQi.info.aura 取名 → Character.as:852-874 addShenQiAura"
+    },
+    {
+      "项": "Effect_KuaFuShenQi_Lan",
+      "形态": "swf 时间轴",
+      "表里帧数": 80,
+      "时间轴实有帧数": 80,
+      "落盘帧数": 80,
+      "判定": "ok",
+      "依据": "StringTool.as:108-112 从 ShenQi.info.aura 取名 → Character.as:852-874 addShenQiAura"
+    },
+    {
+      "项": "Effect_KuaFuShenQi_Huang",
+      "形态": "swf 时间轴",
+      "表里帧数": 80,
+      "时间轴实有帧数": 80,
+      "落盘帧数": 80,
+      "判定": "ok",
+      "依据": "StringTool.as:108-112 从 ShenQi.info.aura 取名 → Character.as:852-874 addShenQiAura"
+    },
+    {
+      "项": "Effect_LianZhanGuanHuan_1",
+      "形态": "swf 时间轴",
+      "表里帧数": 80,
+      "时间轴实有帧数": 80,
+      "落盘帧数": 80,
+      "判定": "ok",
+      "依据": "Character.as:669-671 名字按下标拼、fps=40、autoTick=false"
+    },
+    {
+      "项": "Effect_LianZhanGuanHuan_2",
+      "形态": "swf 时间轴",
+      "表里帧数": 80,
+      "时间轴实有帧数": 80,
+      "落盘帧数": 80,
+      "判定": "ok",
+      "依据": "Character.as:669-671 名字按下标拼、fps=40、autoTick=false"
+    },
+    {
+      "项": "Effect_LianZhanGuanHuan_3",
+      "形态": "swf 时间轴",
+      "表里帧数": 80,
+      "时间轴实有帧数": 80,
+      "落盘帧数": 80,
+      "判定": "ok",
+      "依据": "Character.as:669-671 名字按下标拼、fps=40、autoTick=false"
+    },
+    {
+      "项": "Effect_LianZhanGuanHuan_4",
+      "形态": "swf 时间轴",
+      "表里帧数": 80,
+      "时间轴实有帧数": 80,
+      "落盘帧数": 80,
+      "判定": "ok",
+      "依据": "Character.as:669-671 名字按下标拼、fps=40、autoTick=false"
+    },
+    {
+      "项": "Effect_LianZhanGuanHuan_5",
+      "形态": "swf 时间轴",
+      "表里帧数": 80,
+      "时间轴实有帧数": 80,
+      "落盘帧数": 80,
+      "判定": "ok",
+      "依据": "Character.as:669-671 名字按下标拼、fps=40、autoTick=false"
+    },
+    {
+      "项": "Effect_LianZhanGuanHuan_6",
+      "形态": "swf 时间轴",
+      "表里帧数": 80,
+      "时间轴实有帧数": 80,
+      "落盘帧数": 80,
+      "判定": "ok",
+      "依据": "Character.as:669-671 名字按下标拼、fps=40、autoTick=false"
+    },
+    {
+      "项": "Effect_LianZhanGuanHuan_7",
+      "形态": "swf 时间轴",
+      "表里帧数": 80,
+      "时间轴实有帧数": 80,
+      "落盘帧数": 80,
+      "判定": "ok",
+      "依据": "Character.as:669-671 名字按下标拼、fps=40、autoTick=false"
+    },
+    {
+      "项": "Effect_LianZhanGuanHuan_8",
+      "形态": "swf 时间轴",
+      "表里帧数": 80,
+      "时间轴实有帧数": 80,
+      "落盘帧数": 80,
+      "判定": "ok",
+      "依据": "Character.as:669-671 名字按下标拼、fps=40、autoTick=false"
+    }
+  ],
+  "图标": [
+    {
+      "项": "Lianzhan/100",
+      "结果": "ok 40×40",
+      "类名": "Buff_Lianzhan_100_icon"
+    },
+    {
+      "项": "Lianzhan/200",
+      "结果": "ok 40×40",
+      "类名": "Buff_Lianzhan_200_icon"
+    },
+    {
+      "项": "Lianzhan/300",
+      "结果": "ok 40×40",
+      "类名": "Buff_Lianzhan_300_icon"
+    },
+    {
+      "项": "Lianzhan/400",
+      "结果": "ok 40×40",
+      "类名": "Buff_Lianzhan_400_icon"
+    },
+    {
+      "项": "Lianzhan/500",
+      "结果": "ok 40×40",
+      "类名": "Buff_Lianzhan_500_icon"
+    },
+    {
+      "项": "Lianzhan/600",
+      "结果": "ok 40×40",
+      "类名": "Buff_Lianzhan_600_icon"
+    },
+    {
+      "项": "Lianzhan/700",
+      "结果": "ok 40×40",
+      "类名": "Buff_Lianzhan_700_icon"
+    },
+    {
+      "项": "Lianzhan/800",
+      "结果": "ok 40×40",
+      "类名": "Buff_Lianzhan_800_icon"
+    },
+    {
+      "项": "Weather/0",
+      "结果": "ok 40×40",
+      "类名": "Buff_Weather_0_icon"
+    },
+    {
+      "项": "Weather/1",
+      "结果": "ok 40×40",
+      "类名": "Buff_Weather_1_icon"
+    },
+    {
+      "项": "Weather/2",
+      "结果": "ok 40×40",
+      "类名": "Buff_Weather_2_icon"
+    },
+    {
+      "项": "Weather/3",
+      "结果": "ok 40×40",
+      "类名": "Buff_Weather_3_icon"
+    },
+    {
+      "项": "Weather/4",
+      "结果": "ok 40×40",
+      "类名": "Buff_Weather_4_icon"
+    },
+    {
+      "项": "Weather/5",
+      "结果": "ok 40×40",
+      "类名": "Buff_Weather_5_icon"
+    },
+    {
+      "项": "Weather/6",
+      "结果": "ok 40×40",
+      "类名": "Buff_Weather_6_icon"
+    },
+    {
+      "项": "Weather/7",
+      "结果": "ok 40×40",
+      "类名": "Buff_Weather_7_icon"
+    },
+    {
+      "项": "Weather/8",
+      "结果": "ok 40×40",
+      "类名": "Buff_Weather_8_icon"
+    },
+    {
+      "项": "Weather/9",
+      "结果": "ok 40×40",
+      "类名": "Buff_Weather_9_icon"
+    },
+    {
+      "项": "flag/1",
+      "结果": "ok 40×40",
+      "类名": "Buff_flag_1_icon"
+    },
+    {
+      "项": "flag/2",
+      "结果": "ok 40×40",
+      "类名": "Buff_flag_1_icon"
+    },
+    {
+      "项": "flag/3",
+      "结果": "ok 40×40",
+      "类名": "Buff_flag_1_icon"
+    },
+    {
+      "项": "flag/4",
+      "结果": "ok 40×40",
+      "类名": "Buff_flag_1_icon"
+    },
+    {
+      "项": "flag/5",
+      "结果": "ok 40×40",
+      "类名": "Buff_flag_1_icon"
+    },
+    {
+      "项": "flag/6",
+      "结果": "ok 40×40",
+      "类名": "Buff_flag_1_icon"
+    },
+    {
+      "项": "flag/7",
+      "结果": "ok 40×40",
+      "类名": "Buff_flag_1_icon"
+    },
+    {
+      "项": "flag/8",
+      "结果": "ok 40×40",
+      "类名": "Buff_flag_1_icon"
+    },
+    {
+      "项": "flag/9",
+      "结果": "ok 40×40",
+      "类名": "Buff_flag_1_icon"
+    },
+    {
+      "项": "flag/10",
+      "结果": "ok 40×40",
+      "类名": "Buff_flag_1_icon"
+    },
+    {
+      "项": "PK/protect",
+      "结果": "ok 40×40",
+      "类名": "Buff_Lianzhan_100_icon"
+    },
+    {
+      "项": "PK/hangProtect",
+      "结果": "ok 40×40",
+      "类名": "Buff_Lianzhan_100_icon"
+    },
+    {
+      "项": "PK/crimeB",
+      "结果": "原版无图标"
+    },
+    {
+      "项": "PK/crimeA",
+      "结果": "原版无图标"
+    },
+    {
+      "项": "PK/crimeS",
+      "结果": "原版无图标"
+    },
+    {
+      "项": "PK/crimeC",
+      "结果": "原版无图标"
+    },
+    {
+      "项": "PK/warfield_enter",
+      "结果": "ok 40×40",
+      "类名": "Buff_PK_warfield_enter_icon"
+    },
+    {
+      "项": "PK/flagwar",
+      "结果": "ok 40×40",
+      "类名": "Buff_flag_1_icon"
+    },
+    {
+      "项": "PK/PkLose1",
+      "结果": "ok 40×40",
+      "类名": "Buff_PK_PkLose1_icon"
+    },
+    {
+      "项": "PK/PkLose2",
+      "结果": "ok 40×40",
+      "类名": "Buff_PK_PkLose2_icon"
+    },
+    {
+      "项": "PK/PkLose3",
+      "结果": "ok 40×40",
+      "类名": "Buff_PK_PkLose3_icon"
+    },
+    {
+      "项": "PK/PkLose4",
+      "结果": "ok 40×40",
+      "类名": "Buff_PK_PkLose4_icon"
+    },
+    {
+      "项": "PK/PkLose5",
+      "结果": "ok 40×40",
+      "类名": "Buff_PK_PkLose5_icon"
+    },
+    {
+      "项": "PK/PkWin1",
+      "结果": "ok 40×40",
+      "类名": "Buff_PK_PkWin1_icon"
+    },
+    {
+      "项": "PK/PkWin2",
+      "结果": "ok 40×40",
+      "类名": "Buff_PK_PkWin2_icon"
+    },
+    {
+      "项": "PK/PkWin3",
+      "结果": "ok 40×40",
+      "类名": "Buff_PK_PkWin3_icon"
+    },
+    {
+      "项": "PK/PkWin4",
+      "结果": "ok 40×40",
+      "类名": "Buff_PK_PkWin4_icon"
+    },
+    {
+      "项": "PK/PkWin5",
+      "结果": "ok 40×40",
+      "类名": "Buff_PK_PkWin5_icon"
+    },
+    {
+      "项": "JieYin/1",
+      "结果": "ok 40×40",
+      "类名": "Buff_JieYin_1_icon"
+    },
+    {
+      "项": "JieYin/2",
+      "结果": "ok 40×40",
+      "类名": "Buff_JieYin_2_icon"
+    },
+    {
+      "项": "JieYin/3",
+      "结果": "ok 40×40",
+      "类名": "Buff_JieYin_3_icon"
+    },
+    {
+      "项": "JieYin/4",
+      "结果": "ok 40×40",
+      "类名": "Buff_JieYin_4_icon"
+    },
+    {
+      "项": "JieYin/5",
+      "结果": "ok 40×40",
+      "类名": "Buff_JieYin_5_icon"
+    },
+    {
+      "项": "JieYin/6",
+      "结果": "ok 40×40",
+      "类名": "Buff_JieYin_6_icon"
+    },
+    {
+      "项": "JieYin/7",
+      "结果": "ok 40×40",
+      "类名": "Buff_JieYin_7_icon"
+    },
+    {
+      "项": "JieYin/8",
+      "结果": "ok 40×40",
+      "类名": "Buff_JieYin_8_icon"
+    },
+    {
+      "项": "JieYin/9",
+      "结果": "ok 40×40",
+      "类名": "Buff_JieYin_9_icon"
+    },
+    {
+      "项": "JieYin/10",
+      "结果": "ok 40×40",
+      "类名": "Buff_JieYin_10_icon"
+    },
+    {
+      "项": "JieYin/11",
+      "结果": "ok 40×40",
+      "类名": "Buff_JieYin_11_icon"
+    },
+    {
+      "项": "JieYin/12",
+      "结果": "ok 40×40",
+      "类名": "Buff_JieYin_12_icon"
+    },
+    {
+      "项": "Heal/0",
+      "结果": "ok 40×40",
+      "类名": "Buff_Heal_0_icon"
+    },
+    {
+      "项": "Heal/1",
+      "结果": "ok 40×40",
+      "类名": "Buff_Heal_1_icon"
+    },
+    {
+      "项": "System/0",
+      "结果": "ok 40×40",
+      "类名": "Buff_System_0_icon"
+    },
+    {
+      "项": "System/1",
+      "结果": "ok 40×40",
+      "类名": "Buff_System_1_icon"
+    }
+  ],
+  "失败": []
+}

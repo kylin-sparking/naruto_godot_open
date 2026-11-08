@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://脚本/界面/系统消息.gd" id="1_xiaoxi"]
+
+[node name="系统消息" type="CanvasLayer"]
+layer = 110
+script = ExtResource("1_xiaoxi")
+
+[node name="界面区域" type="Control" parent="."]
+offset_left = 6.0
+offset_top = 366.0
+offset_right = 204.0
+offset_bottom = 520.0
+mouse_filter = 2
+
+[node name="系统消息" type="Control" parent="界面区域"]
+offset_right = 200.0
+offset_bottom = 154.0
+mouse_filter = 2
+
+[node name="标题" type="Label" parent="界面区域/系统消息"]
+visible = false
+offset_right = 100.0
+offset_bottom = 18.0
+mouse_filter = 2
+
+[node name="消息列表" type="Control" parent="界面区域/系统消息"]
+offset_right = 196.0
+offset_bottom = 126.0
+mouse_filter = 2

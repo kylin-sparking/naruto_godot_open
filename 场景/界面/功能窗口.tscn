@@ -1,0 +1,108 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://脚本/界面/功能窗口.gd" id="1_feature"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/关闭按钮.png" id="2_close"]
+[ext_resource type="Script" path="res://脚本/界面/组件/原版三态钮.gd" id="9_三态"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_title"]
+
+[node name="功能窗口" type="CanvasLayer"]
+layer = 110
+script = ExtResource("1_feature")
+
+[node name="遮罩" type="Control" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+visible = false
+
+[node name="暗层" type="ColorRect" parent="遮罩"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
+[node name="主窗口" type="Control" parent="遮罩"]
+layout_mode = 0
+offset_right = 517.0
+offset_bottom = 440.0
+mouse_filter = 0
+
+[node name="窗口边框" type="Panel" parent="遮罩/主窗口"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="内容底" type="Panel" parent="遮罩/主窗口"]
+visible = false
+layout_mode = 0
+offset_left = 8.0
+offset_top = 38.0
+offset_right = 501.0
+offset_bottom = 372.0
+mouse_filter = 2
+
+; 拖动区必须排在 关闭按钮 之前：Godot 按子节点逆序派发输入，排在后面的先拿到事件。
+; 若拖动区在后，它会吞掉顶部 29px 内的关闭按钮点击。
+[node name="拖动区" type="Control" parent="遮罩/主窗口"]
+layout_mode = 0
+offset_right = 517.0
+offset_bottom = 29.0
+mouse_filter = 0
+
+[node name="页面容器" type="Control" parent="遮罩/主窗口"]
+layout_mode = 0
+offset_right = 517.0
+offset_bottom = 440.0
+mouse_filter = 2
+
+[node name="标题" type="Label" parent="遮罩/主窗口"]
+layout_mode = 0
+offset_left = 234.0
+offset_top = 2.0
+offset_right = 282.0
+offset_bottom = 19.0
+theme_type_variation = &"OrigWindowTitle"
+text = "人物属性"
+vertical_alignment = 1
+
+[node name="后端状态" type="Label" parent="遮罩/主窗口"]
+visible = false
+layout_mode = 0
+offset_left = 8.0
+offset_top = 3.0
+offset_right = 158.0
+offset_bottom = 26.0
+theme_override_colors/font_color = Color(0.373, 0.357, 0.341, 1)
+theme_override_font_sizes/font_size = 12
+text = "后端：检测中"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="关闭按钮" type="Button" parent="遮罩/主窗口"]
+layout_mode = 0
+offset_left = 479.0
+offset_top = 6.0
+offset_right = 504.0
+offset_bottom = 30.0
+tooltip_text = "关闭"
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_title")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_title")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_title")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_title")
+icon = ExtResource("2_close")
+flat = true
+script = ExtResource("9_三态")

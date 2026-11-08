@@ -1,0 +1,237 @@
+{
+ "_说明": "「兑换商店」离线夹具。字段名 = 客户端 `ExchangeItem.decode` 的字段（`exchangeShop/ExchangeItem.as:47-74`，顺序 sn / isTimeLimited(readByte==1) / restTime / totalCountLimit / singleCountLimit / exchangeCount / singleExchanged / targetItemid / targetQuantity / targetBind / needJinBi / needLiJin / needYuanBao / needItems[{itemid,count}]）。⚠ `needJinBi/needLiJin/needYuanBao` 三个字段**格子里根本没用**（全树只 decode 不读）⇒ 这里不落，别去渲染三行不存在的价格。值 = 2.2.3优化版 服务端捕获目录 exchange 段的前 12 行原样，**不是在线真值**：在线时服务端还会把 `exchange_counts` 本地进度加进 exchangeCount/singleExchanged（`fake_flash_server.py:26468-26474`）。",
+ "_源": {
+  "服务端根": "<原版目录>",
+  "目录": "<原版目录>\\tools\\nya_208_runtime_catalogs.json",
+  "目录md5": "b3817ad9159c",
+  "服务脚本md5": "399d5f550a37",
+  "总行数": 109,
+  "取了几行": 12
+ },
+ "行": [
+  {
+   "sn": 1,
+   "isTimeLimited": false,
+   "restTime": 0,
+   "totalCountLimit": 0,
+   "singleCountLimit": 0,
+   "exchangeCount": 0,
+   "singleExchanged": 0,
+   "targetItemid": 1210252,
+   "targetQuantity": 1,
+   "targetBind": false,
+   "needItems": [
+    {
+     "itemid": 1210242,
+     "count": 1
+    },
+    {
+     "itemid": 1210208,
+     "count": 1
+    },
+    {
+     "itemid": 16000106,
+     "count": 70
+    }
+   ]
+  },
+  {
+   "sn": 2,
+   "isTimeLimited": false,
+   "restTime": 0,
+   "totalCountLimit": 0,
+   "singleCountLimit": 0,
+   "exchangeCount": 2,
+   "singleExchanged": 0,
+   "targetItemid": 2050015,
+   "targetQuantity": 1,
+   "targetBind": true,
+   "needItems": [
+    {
+     "itemid": 2050012,
+     "count": 3
+    }
+   ]
+  },
+  {
+   "sn": 3,
+   "isTimeLimited": false,
+   "restTime": 0,
+   "totalCountLimit": 0,
+   "singleCountLimit": 0,
+   "exchangeCount": 0,
+   "singleExchanged": 0,
+   "targetItemid": 2050013,
+   "targetQuantity": 1,
+   "targetBind": true,
+   "needItems": [
+    {
+     "itemid": 2050012,
+     "count": 3
+    }
+   ]
+  },
+  {
+   "sn": 4,
+   "isTimeLimited": false,
+   "restTime": 0,
+   "totalCountLimit": 0,
+   "singleCountLimit": 0,
+   "exchangeCount": 7,
+   "singleExchanged": 0,
+   "targetItemid": 2050012,
+   "targetQuantity": 1,
+   "targetBind": true,
+   "needItems": [
+    {
+     "itemid": 2050010,
+     "count": 5
+    }
+   ]
+  },
+  {
+   "sn": 5,
+   "isTimeLimited": false,
+   "restTime": 0,
+   "totalCountLimit": 0,
+   "singleCountLimit": 0,
+   "exchangeCount": 1,
+   "singleExchanged": 0,
+   "targetItemid": 1210209,
+   "targetQuantity": 1,
+   "targetBind": true,
+   "needItems": [
+    {
+     "itemid": 2050010,
+     "count": 3
+    }
+   ]
+  },
+  {
+   "sn": 6,
+   "isTimeLimited": false,
+   "restTime": 0,
+   "totalCountLimit": 0,
+   "singleCountLimit": 0,
+   "exchangeCount": 1,
+   "singleExchanged": 0,
+   "targetItemid": 1210211,
+   "targetQuantity": 1,
+   "targetBind": true,
+   "needItems": [
+    {
+     "itemid": 2050010,
+     "count": 3
+    }
+   ]
+  },
+  {
+   "sn": 7,
+   "isTimeLimited": false,
+   "restTime": 0,
+   "totalCountLimit": 0,
+   "singleCountLimit": 0,
+   "exchangeCount": 0,
+   "singleExchanged": 0,
+   "targetItemid": 1210250,
+   "targetQuantity": 1,
+   "targetBind": true,
+   "needItems": [
+    {
+     "itemid": 2050011,
+     "count": 3
+    }
+   ]
+  },
+  {
+   "sn": 8,
+   "isTimeLimited": false,
+   "restTime": 0,
+   "totalCountLimit": 0,
+   "singleCountLimit": 0,
+   "exchangeCount": 1,
+   "singleExchanged": 0,
+   "targetItemid": 1210242,
+   "targetQuantity": 1,
+   "targetBind": true,
+   "needItems": [
+    {
+     "itemid": 1210243,
+     "count": 3
+    }
+   ]
+  },
+  {
+   "sn": 9,
+   "isTimeLimited": false,
+   "restTime": 0,
+   "totalCountLimit": 0,
+   "singleCountLimit": 0,
+   "exchangeCount": 1,
+   "singleExchanged": 0,
+   "targetItemid": 1210208,
+   "targetQuantity": 1,
+   "targetBind": true,
+   "needItems": [
+    {
+     "itemid": 1210207,
+     "count": 3
+    }
+   ]
+  },
+  {
+   "sn": 10,
+   "isTimeLimited": false,
+   "restTime": 0,
+   "totalCountLimit": 0,
+   "singleCountLimit": 0,
+   "exchangeCount": 302,
+   "singleExchanged": 0,
+   "targetItemid": 16000016,
+   "targetQuantity": 1,
+   "targetBind": true,
+   "needItems": [
+    {
+     "itemid": 16000001,
+     "count": 1
+    }
+   ]
+  },
+  {
+   "sn": 11,
+   "isTimeLimited": false,
+   "restTime": 0,
+   "totalCountLimit": 0,
+   "singleCountLimit": 0,
+   "exchangeCount": 27,
+   "singleExchanged": 0,
+   "targetItemid": 16000016,
+   "targetQuantity": 10,
+   "targetBind": true,
+   "needItems": [
+    {
+     "itemid": 16000027,
+     "count": 1
+    }
+   ]
+  },
+  {
+   "sn": 12,
+   "isTimeLimited": false,
+   "restTime": 0,
+   "totalCountLimit": 0,
+   "singleCountLimit": 0,
+   "exchangeCount": 408,
+   "singleExchanged": 0,
+   "targetItemid": 16000012,
+   "targetQuantity": 5,
+   "targetBind": true,
+   "needItems": [
+    {
+     "itemid": 16000013,
+     "count": 3
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,38 @@
+[gd_scene format=3]
+
+[node name="好友条目" type="Panel"]
+custom_minimum_size = Vector2(253, 43)
+offset_right = 253.0
+offset_bottom = 43.0
+
+[node name="角色" type="Label" parent="."]
+offset_left = 8.0
+offset_top = 3.0
+offset_right = 153.0
+offset_bottom = 21.0
+text = "忍者名称  Lv.1"
+
+[node name="状态" type="Label" parent="."]
+offset_left = 8.0
+offset_top = 21.0
+offset_right = 153.0
+offset_bottom = 38.0
+text = "在线  亲密 0"
+
+[node name="私聊" type="Button" parent="."]
+offset_left = 158.0
+offset_top = 9.0
+offset_right = 199.0
+offset_bottom = 33.0
+tooltip_text = "开始私聊"
+focus_mode = 0
+text = "私聊"
+
+[node name="删除" type="Button" parent="."]
+offset_left = 203.0
+offset_top = 9.0
+offset_right = 244.0
+offset_bottom = 33.0
+tooltip_text = "删除好友"
+focus_mode = 0
+text = "删除"

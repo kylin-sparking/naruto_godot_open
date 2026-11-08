@@ -1,0 +1,9 @@
+[gd_scene format=3]
+
+[node name="任务条目" type="Button"]
+custom_minimum_size = Vector2(200, 25)
+offset_right = 200.0
+offset_bottom = 25.0
+focus_mode = 0
+alignment = 0
+text = "◆ [主线] 任务名称"

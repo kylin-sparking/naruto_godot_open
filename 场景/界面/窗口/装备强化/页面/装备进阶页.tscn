@@ -1,0 +1,265 @@
+[gd_scene format=3]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/装备强化/箭头_进阶.png" id="箭头_tex"]
+
+; 原版「装备打造」窗的**进阶页**（`EquipUpgradeWindow.as` 的 `init()`，`:164-241`）。
+;
+; ⚠️ 这一页**不共用左栏** —— 原版给它 `new` 了一个面板，
+; 位置尺寸就是整个内容区（`EquipStrengthWindow.as:727-733`）：
+;   x = _contentBgSkin.x = 5、y = _contentBgSkin.y = 58、size = (350, 316)
+; 所以下面所有坐标都是**面板局部**，面板自己贴在窗口 (5,58)。
+; 面板宽度取 `_contentBox.width` = 350（右边那 304 宽留给右栏部位列表）。
+;
+; 落点全部逐行算自 `init()`，常量 CONTENT_GAP=8：
+;   说明    (8,8)   宽 = 350-16 = 334、高 58
+;   丢弃盒  (8,69)  83 x **241**（`setSize(83,241)`）
+;     盒内：dropBtn x=(83-61)/2=11 y=10；itemCell 居中 y=10+22+5=37；
+;           arrow y=77、高 = 241-127 = **114**（`_showResult` 为真那条分支）；
+;           resultCell y = 77+114 = 191
+;   材料盒  (8+83+4=95, 69)  220x92（HBox，horizontalGap 0）
+;     两格各 60x88
+;   幸运符说明 (95+116=211, 69+17=86)  145x50
+;   材料说明 (95, 69+92-2=159)  宽 = 350-8-83-10 = 249、高 77
+;   结果区  (95, 159+80=239)  249x70
+;     结果文本(2,2) 165x60；勾选(4,46) 宽98；下拉(102,44) 宽45；单位(147,46) 宽56
+
+[node name="原版装备进阶页" type="Control"]
+custom_minimum_size = Vector2(350, 316)
+
+[node name="说明" type="RichTextLabel" parent="."]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 342.0
+offset_bottom = 66.0
+bbcode_enabled = true
+scroll_active = false
+mouse_filter = 2
+
+[node name="放入装备" type="Button" parent="."]
+offset_left = 19.0
+offset_top = 79.0
+offset_right = 80.0
+offset_bottom = 101.0
+text = "放入装备"
+
+[node name="装备格" type="TextureRect" parent="."]
+offset_left = 29.0
+offset_top = 106.0
+offset_right = 69.0
+offset_bottom = 146.0
+mouse_filter = 2
+
+[node name="装备图标" type="TextureRect" parent="装备格"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+mouse_filter = 2
+
+; `ItemArrow`，高 114（`_showResult` 为真时是 `_height - 127`）
+[node name="箭头" type="TextureRect" parent="."]
+offset_left = 42.0
+offset_top = 151.0
+offset_right = 56.0
+offset_bottom = 246.0
+mouse_filter = 2
+texture = ExtResource("箭头_tex")
+
+; `resultCell`：进阶**之后**会变成的那件（`ItemFactory.getEquipUpgradeItemData`）
+[node name="结果格" type="TextureRect" parent="."]
+offset_left = 29.0
+offset_top = 260.0
+offset_right = 69.0
+offset_bottom = 300.0
+mouse_filter = 2
+
+[node name="结果图标" type="TextureRect" parent="结果格"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+mouse_filter = 2
+
+; `_fu1`（ItemCaiLiaoBox(true)，60x88）：label 在顶、itemCell 居中、buyBtn 在其下 +3
+[node name="材料一" type="Control" parent="."]
+offset_left = 95.0
+offset_top = 69.0
+offset_right = 155.0
+offset_bottom = 157.0
+
+[node name="材料名" type="Label" parent="材料一"]
+offset_right = 60.0
+offset_bottom = 16.0
+horizontal_alignment = 1
+
+[node name="材料格" type="TextureRect" parent="材料一"]
+offset_left = 10.0
+offset_top = 20.0
+offset_right = 50.0
+offset_bottom = 60.0
+mouse_filter = 2
+
+[node name="材料图标" type="TextureRect" parent="材料一/材料格"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+mouse_filter = 2
+
+[node name="材料数量" type="Label" parent="材料一/材料格"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -22.0
+offset_top = -14.0
+offset_right = -1.0
+offset_bottom = -1.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="购买" type="Button" parent="材料一"]
+offset_left = 11.0
+offset_top = 63.0
+offset_right = 48.0
+offset_bottom = 85.0
+text = "购买"
+
+; `_fu4`（幸运符那一格），多一个数量角标（`_fu4.itemCell.label = _fu4.count`）
+[node name="材料二" type="Control" parent="."]
+offset_left = 155.0
+offset_top = 69.0
+offset_right = 215.0
+offset_bottom = 157.0
+
+[node name="材料名" type="Label" parent="材料二"]
+offset_right = 60.0
+offset_bottom = 16.0
+horizontal_alignment = 1
+
+[node name="材料格" type="TextureRect" parent="材料二"]
+offset_left = 10.0
+offset_top = 20.0
+offset_right = 50.0
+offset_bottom = 60.0
+mouse_filter = 2
+
+[node name="材料图标" type="TextureRect" parent="材料二/材料格"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+mouse_filter = 2
+
+[node name="材料数量" type="Label" parent="材料二/材料格"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -22.0
+offset_top = -14.0
+offset_right = -1.0
+offset_bottom = -1.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="购买" type="Button" parent="材料二"]
+offset_left = 11.0
+offset_top = 63.0
+offset_right = 48.0
+offset_bottom = 85.0
+text = "购买"
+
+; `_xinYunField`（TextArea2，橙）：EQUIPUPGRAFEWINDOW_XIN_FUN_DESC
+[node name="幸运符说明" type="Label" parent="."]
+offset_left = 211.0
+offset_top = 86.0
+offset_right = 356.0
+offset_bottom = 136.0
+autowrap_mode = 2
+mouse_filter = 2
+
+; `_fuDescTextField`（EquipLineTextArea，色 16748800）
+[node name="材料说明" type="RichTextLabel" parent="."]
+offset_left = 95.0
+offset_top = 159.0
+offset_right = 344.0
+offset_bottom = 236.0
+bbcode_enabled = true
+scroll_active = false
+mouse_filter = 2
+
+; `_resultBox`（MPane_background）
+[node name="结果区" type="Panel" parent="."]
+offset_left = 95.0
+offset_top = 239.0
+offset_right = 344.0
+offset_bottom = 309.0
+
+[node name="结果文本" type="RichTextLabel" parent="结果区"]
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 167.0
+offset_bottom = 62.0
+mouse_filter = 2
+bbcode_enabled = true
+scroll_active = false
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 12
+; `_checkBox3`：文本 = EQUIP_STRENGTH_DESC_TEMPLATE_2 =「本次操作使用」
+[node name="使用幸运符" type="CheckBox" parent="结果区"]
+offset_left = 4.0
+offset_top = 46
+offset_right = 102.0
+offset_bottom = 65
+text = "本次操作使用"
+
+; `_comboBox`：`dataProvider = [1..9]`（幸运符颗数）
+[node name="幸运符数量" type="OptionButton" parent="结果区"]
+offset_left = 102.0
+offset_top = 42.0
+offset_right = 147.0
+offset_bottom = 62.0
+
+; `_comboBoxLabel`：`CN.replaceString(COMMON_GE, 幸运符名)`
+[node name="单位" type="Label" parent="结果区"]
+offset_left = 147.0
+offset_top = 46.0
+offset_right = 203.0
+offset_bottom = 62.0
+mouse_filter = 2

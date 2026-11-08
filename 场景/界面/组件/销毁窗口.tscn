@@ -1,0 +1,97 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://脚本/界面/组件/销毁窗口.gd" id="1_win"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/窗口内底.png" id="t2"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/物品格.png" id="t3"]
+
+[node name="销毁窗口" type="Control"]
+visible = false
+offset_right = 180.0
+offset_bottom = 204.0
+mouse_filter = 2
+script = ExtResource("1_win")
+
+[node name="框" type="Panel" parent="."]
+offset_right = 180.0
+offset_bottom = 204.0
+mouse_filter = 2
+theme_type_variation = &"OrigWindowFrame"
+
+[node name="标题" type="Label" parent="."]
+offset_left = 60.0
+offset_top = 5.0
+offset_right = 120.0
+offset_bottom = 23.0
+mouse_filter = 2
+theme_type_variation = &"OrigWindowTitle"
+horizontal_alignment = 1
+text = "物品销毁"
+
+[node name="关闭" type="Button" parent="."]
+offset_left = 149.0
+offset_top = 6.0
+offset_right = 174.0
+offset_bottom = 30.0
+focus_mode = 0
+flat = true
+
+[node name="黄底" type="TextureRect" parent="."]
+offset_left = 6.0
+offset_top = 39.0
+offset_right = 174.0
+offset_bottom = 176.0
+mouse_filter = 2
+texture = ExtResource("t2")
+expand_mode = 1
+
+[node name="提示" type="Label" parent="."]
+offset_left = 6.0
+offset_top = 42.0
+offset_right = 174.0
+offset_bottom = 62.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 0.568627, 0, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+text = "你确定销毁物品吗？"
+
+[node name="物品名" type="Label" parent="."]
+offset_left = 0.0
+offset_top = 71.0
+offset_right = 180.0
+offset_bottom = 91.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+
+[node name="物品格" type="TextureRect" parent="."]
+offset_left = 70.0
+offset_top = 92.0
+offset_right = 110.0
+offset_bottom = 132.0
+mouse_filter = 2
+texture = ExtResource("t3")
+
+[node name="图标" type="TextureRect" parent="物品格"]
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 37.0
+offset_bottom = 37.0
+mouse_filter = 2
+
+[node name="确定" type="Button" parent="."]
+offset_left = 25.0
+offset_top = 179.0
+offset_right = 62.0
+offset_bottom = 201.0
+focus_mode = 0
+text = "确定"
+
+[node name="取消" type="Button" parent="."]
+offset_left = 118.0
+offset_top = 179.0
+offset_right = 155.0
+offset_bottom = 201.0
+focus_mode = 0
+text = "取消"

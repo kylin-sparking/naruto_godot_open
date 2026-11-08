@@ -1,0 +1,722 @@
+[gd_scene format=3 uid="uid://dcfmlunfa448l"]
+
+[ext_resource type="Script" uid="uid://dkpn3fbecrvw8" path="res://素材/界面/原版窗口/人物/手里剑/脚本/手里剑页.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://tjhf4rsi7o76" path="res://素材/界面/原版窗口/人物/手里剑/手里剑槽.png" id="2_slot"]
+[ext_resource type="Texture2D" uid="uid://cf84t2mjci123" path="res://素材/界面/原版窗口/人物/手里剑/基础手里剑.png" id="3_shuriken"]
+[ext_resource type="Texture2D" uid="uid://m507s4c12u35" path="res://素材/界面/原版窗口/通用控件/子面板.png" id="4_panel"]
+[ext_resource type="Texture2D" uid="uid://ddchmtc63xs2h" path="res://素材/界面/原版窗口/通用控件/按钮.png" id="5_button"]
+[ext_resource type="Texture2D" uid="uid://crlxy3pv10h21" path="res://素材/界面/原版窗口/通用控件/按钮按下.png" id="6_button_down"]
+[ext_resource type="Texture2D" uid="uid://v8ognv0kia5f" path="res://素材/界面/原版窗口/通用控件/输入框.png" id="7_input"]
+[ext_resource type="Texture2D" uid="uid://dxkwj0pp80yc8" path="res://素材/界面/原版窗口/通用控件/复选框未选.png" id="8_checkbox"]
+[ext_resource type="Texture2D" uid="uid://bwubqh0a34gnl" path="res://素材/界面/原版窗口/通用控件/复选框选中.png" id="9_checkbox_on"]
+[ext_resource type="Texture2D" uid="uid://lcbygen1ls1k" path="res://素材/界面/原版窗口/通用控件/上一页.png" id="10_prev"]
+[ext_resource type="Texture2D" uid="uid://dvamf62f4lctb" path="res://素材/界面/原版窗口/通用控件/下一页.png" id="11_next"]
+[ext_resource type="Texture2D" uid="uid://dx7r2gb4v1qm0" path="res://素材/界面/原版窗口/通用控件/进度槽.png" id="12_progress_bg"]
+[ext_resource type="Texture2D" uid="uid://cd7y4m1ss231n" path="res://素材/界面/原版窗口/通用控件/进度填充.png" id="13_progress_fill"]
+[ext_resource type="PackedScene" uid="uid://drvxfqd7fepew" path="res://场景/界面/窗口/人物/页面/修炼提速弹窗.tscn" id="14_tisheng"]
+[ext_resource type="PackedScene" uid="uid://d0m5g1nbm6dc4" path="res://场景/界面/窗口/人物/页面/手里剑突破瓶颈弹窗.tscn" id="15_tupo"]
+[ext_resource type="Script" path="res://素材/界面/原版窗口/人物/手里剑/脚本/箭头按钮交互.gd" id="16_arrow"]
+
+[sub_resource type="StyleBoxTexture" id="StylePanel"]
+texture = ExtResource("4_panel")
+texture_margin_left = 8.0
+texture_margin_top = 7.0
+texture_margin_right = 7.0
+texture_margin_bottom = 7.0
+
+[sub_resource type="StyleBoxTexture" id="StyleInput"]
+texture = ExtResource("7_input")
+texture_margin_left = 6.0
+texture_margin_top = 5.0
+texture_margin_right = 7.0
+texture_margin_bottom = 6.0
+
+[sub_resource type="StyleBoxTexture" id="StyleButton"]
+texture = ExtResource("5_button")
+
+[sub_resource type="StyleBoxTexture" id="StyleButtonDown"]
+texture = ExtResource("6_button_down")
+
+[sub_resource type="StyleBoxTexture" id="StyleProgressBg"]
+texture = ExtResource("12_progress_bg")
+texture_margin_left = 6.0
+texture_margin_top = 4.0
+texture_margin_right = 6.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleProgressFill"]
+texture = ExtResource("13_progress_fill")
+texture_margin_left = 4.0
+texture_margin_top = 3.0
+texture_margin_right = 4.0
+texture_margin_bottom = 3.0
+
+[node name="手里剑内容" type="Control" unique_id=1909655690]
+custom_minimum_size = Vector2(421, 367)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 421.0
+offset_bottom = 367.0
+script = ExtResource("1_script")
+
+[node name="系统说明面板" type="Panel" parent="." unique_id=149057979]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 195.0
+offset_bottom = 150.0
+theme_override_styles/panel = SubResource("StylePanel")
+
+[node name="系统说明" type="RichTextLabel" parent="系统说明面板" unique_id=443809705]
+custom_minimum_size = Vector2(173, 130)
+layout_mode = 0
+offset_left = 10.0
+offset_top = 7.0
+offset_right = 183.0
+offset_bottom = 137.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/normal_font_size = 12
+bbcode_enabled = true
+text = "[color=#fcc399]当获得手里剑后，在战斗过程中
+手里剑会自动触发使用。[/color][color=#00ff00]每次触
+发手里剑都会增加其熟练度1点，
+当熟练度满时，将会自动提升手
+里剑修炼等级。[/color]
+[color=#ff0000]当修炼等级满时，需要进行突破
+瓶颈操作，才能获得下一阶段的手
+里剑。[/color]"
+scroll_active = false
+autowrap_mode = 2
+
+[node name="当前信息" type="Control" parent="." unique_id=777969043]
+anchors_preset = 0
+offset_left = 210.0
+offset_top = 5.0
+offset_right = 416.0
+offset_bottom = 150.0
+
+[node name="当前使用标题" type="Label" parent="当前信息" unique_id=1642935446]
+layout_mode = 0
+offset_right = 122.0
+offset_bottom = 22.0
+theme_override_colors/font_color = Color(1, 0.57, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "当前使用的手里剑：　"
+
+[node name="当前使用" type="Panel" parent="当前信息" unique_id=490309132]
+layout_mode = 0
+offset_left = 122.0
+offset_right = 206.0
+offset_bottom = 22.0
+theme_override_styles/panel = SubResource("StyleInput")
+
+[node name="值" type="Label" parent="当前信息/当前使用" unique_id=1235804166]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0.95, 0.1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "基础手里剑"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="当前进度标题" type="Label" parent="当前信息" unique_id=1989471185]
+layout_mode = 0
+offset_top = 26.0
+offset_right = 122.0
+offset_bottom = 48.0
+theme_override_colors/font_color = Color(1, 0.57, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "当前手里剑修炼进度："
+
+[node name="当前进度" type="Panel" parent="当前信息" unique_id=1529860068]
+layout_mode = 0
+offset_left = 122.0
+offset_top = 26.0
+offset_right = 206.0
+offset_bottom = 48.0
+theme_override_styles/panel = SubResource("StyleInput")
+
+[node name="值" type="Label" parent="当前信息/当前进度" unique_id=1292927121]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0/5000"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="当前等级标题" type="Label" parent="当前信息" unique_id=1650538472]
+layout_mode = 0
+offset_top = 52.0
+offset_right = 122.0
+offset_bottom = 74.0
+theme_override_colors/font_color = Color(1, 0.57, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "当前手里剑修炼等级："
+
+[node name="当前等级" type="Panel" parent="当前信息" unique_id=1578830526]
+layout_mode = 0
+offset_left = 122.0
+offset_top = 52.0
+offset_right = 206.0
+offset_bottom = 74.0
+theme_override_styles/panel = SubResource("StyleInput")
+
+[node name="值" type="Label" parent="当前信息/当前等级" unique_id=618429988]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "1/4级"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="当前触发几率标题" type="Label" parent="当前信息" unique_id=991635851]
+layout_mode = 0
+offset_top = 78.0
+offset_right = 122.0
+offset_bottom = 100.0
+theme_override_colors/font_color = Color(1, 0.57, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "当前触发使用几率：　"
+
+[node name="当前触发几率" type="Panel" parent="当前信息" unique_id=1893958087]
+layout_mode = 0
+offset_left = 122.0
+offset_top = 78.0
+offset_right = 206.0
+offset_bottom = 100.0
+theme_override_styles/panel = SubResource("StyleInput")
+
+[node name="值" type="Label" parent="当前信息/当前触发几率" unique_id=877776103]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "10%"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="启用复选框" type="TextureButton" parent="当前信息" unique_id=581945800]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 125.0
+offset_right = 49.0
+offset_bottom = 144.0
+focus_mode = 0
+toggle_mode = true
+button_pressed = true
+texture_normal = ExtResource("8_checkbox")
+texture_pressed = ExtResource("9_checkbox_on")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="启用说明" type="Label" parent="当前信息" unique_id=407369027]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 124.0
+offset_right = 192.0
+offset_bottom = 145.0
+theme_override_colors/font_color = Color(1, 0.65, 0.1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "开启手里剑使用"
+
+[node name="详情面板" type="Panel" parent="." unique_id=1441698407]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 150.0
+offset_right = 416.0
+offset_bottom = 362.0
+theme_override_styles/panel = SubResource("StylePanel")
+
+[node name="手里剑槽" type="TextureRect" parent="详情面板" unique_id=1246184547]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 30.0
+offset_right = 127.0
+offset_bottom = 151.0
+mouse_filter = 2
+texture = ExtResource("2_slot")
+
+[node name="手里剑图标" type="TextureRect" parent="详情面板" unique_id=550104163]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 35.0
+offset_right = 112.0
+offset_bottom = 137.0
+mouse_filter = 2
+texture = ExtResource("3_shuriken")
+
+[node name="上一页" type="TextureButton" parent="详情面板" unique_id=1498209670]
+custom_minimum_size = Vector2(14, 11)
+layout_mode = 0
+offset_left = 37.0
+offset_top = 162.0
+offset_right = 51.0
+offset_bottom = 173.0
+focus_mode = 0
+texture_normal = ExtResource("10_prev")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("16_arrow")
+
+[node name="页码" type="Label" parent="详情面板" unique_id=888428913]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 157.0
+offset_right = 79.0
+offset_bottom = 178.0
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "1/7"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="下一页" type="TextureButton" parent="详情面板" unique_id=844923528]
+custom_minimum_size = Vector2(14, 11)
+layout_mode = 0
+offset_left = 81.0
+offset_top = 162.0
+offset_right = 95.0
+offset_bottom = 173.0
+focus_mode = 0
+texture_normal = ExtResource("11_next")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("16_arrow")
+
+[node name="名称标题" type="Label" parent="详情面板" unique_id=101325947]
+layout_mode = 0
+offset_left = 137.0
+offset_top = 5.0
+offset_right = 211.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0.988, 0.765, 0.6, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "手里剑名称："
+
+[node name="名称" type="Panel" parent="详情面板" unique_id=1508955649]
+layout_mode = 0
+offset_left = 211.0
+offset_top = 3.0
+offset_right = 290.0
+offset_bottom = 24.0
+theme_override_styles/panel = SubResource("StyleInput")
+
+[node name="值" type="Label" parent="详情面板/名称" unique_id=1604067353]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "基础手里剑"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="品阶标题" type="Label" parent="详情面板" unique_id=1734303588]
+layout_mode = 0
+offset_left = 292.0
+offset_top = 5.0
+offset_right = 365.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0.988, 0.765, 0.6, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "手里剑品阶："
+
+[node name="品阶" type="Panel" parent="详情面板" unique_id=324439352]
+layout_mode = 0
+offset_left = 365.0
+offset_top = 3.0
+offset_right = 400.0
+offset_bottom = 24.0
+theme_override_styles/panel = SubResource("StyleInput")
+
+[node name="值" type="Label" parent="详情面板/品阶" unique_id=184178814]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "1阶"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="修炼进度标题" type="Label" parent="详情面板" unique_id=1756840057]
+layout_mode = 0
+offset_left = 137.0
+offset_top = 29.0
+offset_right = 211.0
+offset_bottom = 48.0
+theme_override_colors/font_color = Color(0.988, 0.765, 0.6, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "修炼进度："
+
+[node name="修炼进度" type="Panel" parent="详情面板" unique_id=284618469]
+layout_mode = 0
+offset_left = 211.0
+offset_top = 27.0
+offset_right = 336.0
+offset_bottom = 48.0
+theme_override_styles/panel = SubResource("StyleInput")
+
+[node name="值" type="Label" parent="详情面板/修炼进度" unique_id=894204246]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0/5000"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="提升速度" type="Button" parent="详情面板" unique_id=1520906180]
+custom_minimum_size = Vector2(61, 22)
+layout_mode = 0
+offset_left = 341.0
+offset_top = 27.0
+offset_right = 402.0
+offset_bottom = 49.0
+focus_mode = 0
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleButton")
+theme_override_styles/pressed = SubResource("StyleButtonDown")
+theme_override_styles/hover = SubResource("StyleButton")
+text = "提升速度"
+
+[node name="修炼等级标题" type="Label" parent="详情面板" unique_id=1282934856]
+layout_mode = 0
+offset_left = 137.0
+offset_top = 52.0
+offset_right = 211.0
+offset_bottom = 71.0
+theme_override_colors/font_color = Color(0.988, 0.765, 0.6, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "修炼等级："
+
+[node name="修炼等级" type="ProgressBar" parent="详情面板" unique_id=1165924648]
+layout_mode = 0
+offset_left = 211.0
+offset_top = 55.0
+offset_right = 336.0
+offset_bottom = 66.0
+theme_override_styles/background = SubResource("StyleProgressBg")
+theme_override_styles/fill = SubResource("StyleProgressFill")
+max_value = 4.0
+value = 1.0
+show_percentage = false
+
+[node name="值" type="Label" parent="详情面板/修炼等级" unique_id=135422196]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -5.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "1/4"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="突破瓶颈" type="Button" parent="详情面板" unique_id=569692636]
+custom_minimum_size = Vector2(61, 22)
+layout_mode = 0
+offset_left = 341.0
+offset_top = 52.0
+offset_right = 402.0
+offset_bottom = 74.0
+focus_mode = 0
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleButton")
+theme_override_styles/pressed = SubResource("StyleButtonDown")
+theme_override_styles/hover = SubResource("StyleButton")
+text = "突破瓶颈"
+
+[node name="获得方式标题" type="Label" parent="详情面板" unique_id=1202099762]
+layout_mode = 0
+offset_left = 137.0
+offset_top = 78.0
+offset_right = 211.0
+offset_bottom = 94.0
+theme_override_colors/font_color = Color(0.988, 0.765, 0.6, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "获得方式："
+vertical_alignment = 1
+
+[node name="获得方式值" type="Label" parent="详情面板" unique_id=297511244]
+layout_mode = 0
+offset_left = 211.0
+offset_top = 78.0
+offset_right = 406.0
+offset_bottom = 94.0
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "人物到达15级获得"
+vertical_alignment = 1
+
+[node name="攻击能力标题" type="Label" parent="详情面板" unique_id=759678378]
+layout_mode = 0
+offset_left = 137.0
+offset_top = 100.0
+offset_right = 211.0
+offset_bottom = 116.0
+theme_override_colors/font_color = Color(0.988, 0.765, 0.6, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "攻击能力："
+vertical_alignment = 1
+
+[node name="攻击能力值" type="Label" parent="详情面板" unique_id=645397450]
+layout_mode = 0
+offset_left = 211.0
+offset_top = 100.0
+offset_right = 406.0
+offset_bottom = 116.0
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0(10%的人物攻击力)"
+vertical_alignment = 1
+
+[node name="攻击距离标题" type="Label" parent="详情面板" unique_id=1464531512]
+layout_mode = 0
+offset_left = 137.0
+offset_top = 122.0
+offset_right = 211.0
+offset_bottom = 138.0
+theme_override_colors/font_color = Color(0.988, 0.765, 0.6, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "攻击距离："
+vertical_alignment = 1
+
+[node name="攻击距离值" type="Label" parent="详情面板" unique_id=418963011]
+layout_mode = 0
+offset_left = 211.0
+offset_top = 122.0
+offset_right = 255.0
+offset_bottom = 138.0
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "18格"
+vertical_alignment = 1
+
+[node name="攻击目标数量标题" type="Label" parent="详情面板" unique_id=1598143457]
+layout_mode = 0
+offset_left = 259.0
+offset_top = 136.0
+offset_right = 347.0
+offset_bottom = 152.0
+theme_override_colors/font_color = Color(0.988, 0.765, 0.6, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "攻击目标数量："
+vertical_alignment = 1
+
+[node name="攻击目标数量值" type="Label" parent="详情面板" unique_id=1141227438]
+layout_mode = 0
+offset_left = 347.0
+offset_top = 136.0
+offset_right = 406.0
+offset_bottom = 152.0
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "1"
+vertical_alignment = 1
+
+[node name="触发几率标题" type="Label" parent="详情面板" unique_id=686570442]
+layout_mode = 0
+offset_left = 137.0
+offset_top = 144.0
+offset_right = 211.0
+offset_bottom = 160.0
+theme_override_colors/font_color = Color(0.988, 0.765, 0.6, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "触发几率："
+vertical_alignment = 1
+
+[node name="触发几率值" type="Label" parent="详情面板" unique_id=1007632837]
+layout_mode = 0
+offset_left = 211.0
+offset_top = 144.0
+offset_right = 255.0
+offset_bottom = 160.0
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "10%"
+vertical_alignment = 1
+
+[node name="特殊能力标题" type="Label" parent="详情面板" unique_id=415691090]
+layout_mode = 0
+offset_left = 137.0
+offset_top = 166.0
+offset_right = 211.0
+offset_bottom = 182.0
+theme_override_colors/font_color = Color(0.988, 0.765, 0.6, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "特殊能力："
+vertical_alignment = 1
+
+[node name="特殊能力说明" type="RichTextLabel" parent="详情面板" unique_id=1314851258]
+layout_mode = 0
+offset_left = 219.0
+offset_top = 166.0
+offset_right = 411.0
+offset_bottom = 212.0
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/normal_font_size = 12
+bbcode_enabled = true
+text = "本阶段手里剑尚无特殊能力；长箸手里剑及以上品阶的手里剑拥有特殊能力"
+scroll_active = false
+autowrap_mode = 2
+
+[node name="技能图标1" type="TextureRect" parent="详情面板" unique_id=455046857]
+visible = false
+layout_mode = 0
+offset_left = 219.0
+offset_top = 166.0
+offset_right = 253.0
+offset_bottom = 200.0
+mouse_filter = 2
+
+[node name="技能图标2" type="TextureRect" parent="详情面板" unique_id=436281007]
+visible = false
+layout_mode = 0
+offset_left = 255.0
+offset_top = 166.0
+offset_right = 289.0
+offset_bottom = 200.0
+mouse_filter = 2
+
+[node name="技能图标3" type="TextureRect" parent="详情面板" unique_id=2112260752]
+visible = false
+layout_mode = 0
+offset_left = 291.0
+offset_top = 166.0
+offset_right = 325.0
+offset_bottom = 200.0
+mouse_filter = 2
+
+[node name="修炼提速弹窗" parent="." unique_id=104984331 instance=ExtResource("14_tisheng")]
+visible = false
+layout_mode = 0
+
+[node name="手里剑突破瓶颈弹窗" parent="." unique_id=135407631 instance=ExtResource("15_tupo")]
+visible = false
+layout_mode = 0

@@ -1,0 +1,206 @@
+{
+ "FRIEND_QUERY": {
+  "文": "查看",
+  "出处": "FG:132 查看"
+ },
+ "FRIEND_CHAT": {
+  "文": "对话",
+  "出处": "FG:132 对话"
+ },
+ "FRIEND_PRIVATE": {
+  "文": "密语",
+  "出处": "FG:132 密语"
+ },
+ "FRIEND_TEAM": {
+  "文": "组队",
+  "出处": "FG:132 组队"
+ },
+ "FRIEND_SHOP": {
+  "文": "看摊",
+  "出处": "FG:132 看摊"
+ },
+ "FRIEND_DEL": {
+  "文": "删除",
+  "出处": "FG:132 删除"
+ },
+ "FRIEND_BLACK": {
+  "文": "拉黑",
+  "出处": "FG:132 拉黑"
+ },
+ "FRIEND_MOVE": {
+  "文": "移除",
+  "出处": "FG:172 移除"
+ },
+ "FRIEND_DA_TAN": {
+  "文": "打探",
+  "出处": "FG:162 打探"
+ },
+ "ZENGHUA": {
+  "文": "赠花",
+  "出处": "FG:135 赠花"
+ },
+ "TROOP_MENU_ADD_FRIEND": {
+  "文": "交友",
+  "出处": "FG:150 交友"
+ },
+ "ZHUCHU_SHIMEN": {
+  "文": "逐出师门",
+  "出处": "FG:190 逐出师门"
+ },
+ "FRIEND_SHANCHU_LIANXIREN": {
+  "文": "你确定要删除以下连络人吗？",
+  "出处": "FW2:391 删除联系人"
+ },
+ "FRIEND_SHANCHU_ZUIJIN_LIANXIREN": {
+  "文": "你确定要删除以下最近连络人吗？",
+  "出处": "FW2:401 删除最近联系人"
+ },
+ "FRIEND_CHOUHEN_QINGLING": {
+  "文": "你确定与以下玩家泯恩仇？<br/>你们之间的仇恨度将会清零",
+  "出处": "FW2:406 泯恩仇"
+ },
+ "FRIEND_YIRU_BLACKLIST": {
+  "文": "你确定将以下连络人移至黑名单吗？",
+  "出处": "FW2:416 移入黑名单"
+ },
+ "FRIEND_CONG_BLACKLIST_YICHU": {
+  "文": "你确定将以下连络人从黑名单中移除吗？",
+  "出处": "FW2:380 从黑名单移除"
+ },
+ "FRIEND_DELETE_PEIOU": {
+  "文": "羁绊之间无法删除",
+  "出处": "FW2:198 羁绊不可删（showMessageDialog）"
+ },
+ "FRIEND_TIP_INPUT_CHAR_NAME": {
+  "文": "请输入角色名",
+  "出处": "FW2:92 请输入角色名（showMessageDialog）"
+ },
+ "ON_LINE_PLAYER": {
+  "文": "该玩家不在线！",
+  "出处": "FW2:355 该玩家不在线"
+ },
+ "FRIEND": {
+  "文": "好\t 友",
+  "出处": "FW2:265"
+ },
+ "FRIEND_TAB_LINKMAN": {
+  "文": "好友",
+  "出处": "FW2:266"
+ },
+ "FRIEND_TAB_SHITU": {
+  "文": "师徒",
+  "出处": "FW2:266"
+ },
+ "FRIEND_TAB_CHOU_REN": {
+  "文": "仇人",
+  "出处": "FW2:266"
+ },
+ "FRIEND_TAB_BACKLIST": {
+  "文": "黑名单",
+  "出处": "FW2:266"
+ },
+ "FRIEND_TAB_LAST": {
+  "文": "最近",
+  "出处": "FW2:266"
+ },
+ "FRIENDCHAT_WINDOW_TITLE": {
+  "文": "与%1对话中",
+  "出处": "FCW:132 与%1对话中"
+ },
+ "FRIENDCHAT_SEND": {
+  "文": "发送消息",
+  "出处": "FCW:274"
+ },
+ "SELCET_PLAYER_WINDOW_TITLE": {
+  "文": "查询玩家",
+  "出处": "SPW:123（原键拼错 SELCET）"
+ },
+ "PLAYER_NAME": {
+  "文": "玩家名",
+  "出处": "SPW:124 角色名"
+ },
+ "SEARCH_RESULTS": {
+  "文": "查找结果",
+  "出处": "SPW:146 搜索结果"
+ },
+ "GAME_PLAYER_NAME": {
+  "文": "玩家姓名",
+  "出处": "SPW:148 表头：名字"
+ },
+ "CHARACTOR_LEVEL": {
+  "文": "等级",
+  "出处": "SPW:151 表头：等级"
+ },
+ "CHARACTOR_JOB": {
+  "文": "职业",
+  "出处": "SPW:154 表头：职业"
+ },
+ "SEARCH_MOHU": {
+  "文": "本处支持模糊玩家名搜索",
+  "出处": "SPW:157 模糊查询提示"
+ },
+ "TROOP_SEARCH_BTN": {
+  "文": "搜索",
+  "出处": "SPW:213 搜索"
+ },
+ "TROOP_SHOW_CHAR_INFO_BTN": {
+  "文": "查看资料",
+  "出处": "SPW:216 查看资料"
+ },
+ "MULTIFUNCTIONAL": {
+  "文": "多功能",
+  "出处": "SPW:219 多功能"
+ },
+ "FRIEND_FUQI": {
+  "文": "【羁绊】",
+  "出处": "FI:92"
+ },
+ "DATAN_WINDOW_TITLE": {
+  "文": "打探玩家",
+  "出处": "MPW:97"
+ },
+ "DATAN_BUTTON_NAME": {
+  "文": "打探",
+  "出处": "MPW:98"
+ },
+ "DATAN_PROMPT_3": {
+  "文": "打探玩家当前所在地图与具体座标需要消耗一个“%1”",
+  "出处": "MPW:95"
+ },
+ "SHOP_BUY": {
+  "文": "购买",
+  "出处": "ItemCaiLiaoBox.as 材料盒里的购买钮"
+ },
+ "DATA_INFOSTR_1": {
+  "文": "<font color='#ffffff'>玩家：<font color='#1e90ff'>[%1线]%2</font><br/>所在地图：%3<br/>所在座标：<font color='#ff9100'>[%4,%5]</font></font>",
+  "出处": "MPW:327 查到了（线/图/座标）"
+ },
+ "DATA_INFOSTR_2": {
+  "文": "<font color='#ffffff'>玩家：<font color='#1e90ff'>%1</font><br/>所在地图：未知<br/>所在座标：未知座标</font>",
+  "出处": "MPW:332,337 图与座标未知"
+ },
+ "DATA_INFOSTR_3": {
+  "文": "<font color='#ffffff'>玩家：<font color='#1e90ff'>%1</font><br/>所在地图：<br/>所在座标：</font>",
+  "出处": "MPW:343 图与座标空"
+ },
+ "DATAN_PROMPT_1": {
+  "文": "打探失败，该玩家不在线",
+  "出处": "MPW:331 该玩家不在线"
+ },
+ "DATAN_PROMPT_2": {
+  "文": "打探失败，很抱歉，你的背包中没有%1",
+  "出处": "MPW:336 背包没有乾坤密卷"
+ },
+ "FRIEND_ADD": {
+  "文": "添加好友",
+  "出处": "FTL:55 添加好友"
+ },
+ "COMMON_OK": {
+  "文": "确定",
+  "出处": "通用"
+ },
+ "COMMON_CANCEL": {
+  "文": "取消",
+  "出处": "通用"
+ }
+}

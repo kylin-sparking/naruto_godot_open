@@ -1,0 +1,21 @@
+[gd_scene format=3]
+
+[node name="快捷键行" type="Control"]
+custom_minimum_size = Vector2(171, 23)
+mouse_filter = 2
+
+[node name="名称" type="Label" parent="."]
+offset_right = 104.0
+offset_bottom = 23.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.933, 0.898, 0.847, 1)
+theme_override_font_sizes/font_size = 12
+vertical_alignment = 1
+text = "操作名称"
+
+[node name="按键" type="Button" parent="."]
+offset_left = 105.0
+offset_right = 171.0
+offset_bottom = 23.0
+focus_mode = 0
+text = "按键"

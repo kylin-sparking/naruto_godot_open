@@ -1,0 +1,30 @@
+[gd_scene format=3]
+
+[node name="原版礼品码内容" type="Control"]
+custom_minimum_size = Vector2(420, 121)
+
+[node name="外框" type="Panel" parent="."]
+offset_left = 6.0
+offset_top = 1.0
+offset_right = 414.0
+offset_bottom = 115.0
+
+[node name="提示" type="Label" parent="."]
+offset_left = 30.0
+offset_top = 49.0
+offset_right = 108.0
+offset_bottom = 67.0
+text = "输入礼品码："
+
+[node name="兑换码输入" type="LineEdit" parent="."]
+offset_left = 108.0
+offset_top = 47.0
+offset_right = 348.0
+offset_bottom = 69.0
+
+[node name="兑换" type="Button" parent="."]
+offset_left = 353.0
+offset_top = 47.0
+offset_right = 387.0
+offset_bottom = 69.0
+text = "领取"

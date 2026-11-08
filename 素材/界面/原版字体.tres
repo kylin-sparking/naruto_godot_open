@@ -1,0 +1,8 @@
+[gd_resource type="SystemFont" format=3 uid="uid://b8yq2nxvkm1r4"]
+
+[resource]
+font_names = PackedStringArray("SimSun", "宋体", "Microsoft YaHei UI", "Microsoft YaHei", "Noto Sans SC", "sans-serif")
+antialiasing = 1
+hinting = 2
+subpixel_positioning = 0
+disable_embedded_bitmaps = false

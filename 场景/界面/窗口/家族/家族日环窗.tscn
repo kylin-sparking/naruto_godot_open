@@ -1,0 +1,267 @@
+[gd_scene load_steps=10 format=3]
+
+[ext_resource type="Script" path="res://脚本/界面/窗口/家族/家族子窗.gd" id="1_script"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/横向分隔线.png" id="t1"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/家族/盒底.png" id="t2"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/家族/星标.png" id="t3"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/复选框未选.png" id="t4"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/复选框未选.png" id="t5"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/家族/钮底.png" id="t6"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/家族/钮底.png" id="t7"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/家族/钮底.png" id="t8"]
+
+
+
+[node name="家族日环窗" type="Control"]
+custom_minimum_size = Vector2(339, 369)
+script = ExtResource("1_script")
+窗名 = "家族日环窗"
+
+[node name="标签任务说明" type="Label" parent="."]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 4.0
+offset_right = 82.0
+offset_bottom = 23.0
+mouse_filter = 2
+text = "家族任务说明"
+theme_override_colors/font_color = Color(1.0, 0.4980392156862745, 0.0, 1)
+vertical_alignment = 1
+clip_text = true
+
+[node name="文本说明一" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 321.0
+offset_bottom = 114.0
+mouse_filter = 2
+theme_override_constants/line_separation = 2
+theme_override_font_sizes/normal_font_size = 12
+theme_override_colors/default_color = Color(1.0, 0.592156862745098, 0.25098039215686274, 1)
+bbcode_enabled = true
+text = "1.任务共分为5个星级\n2.任务奖励随星级的提高而提高\n3.每天最多可接取5次家族任务\n4.家族任务后不可以再刷新\n5.每日完成全部5次家族任务，将有额外族贡金币"
+scroll_active = false
+
+[node name="线" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 114.0
+offset_right = 317.0
+offset_bottom = 116.0
+mouse_filter = 2
+texture = ExtResource("t1")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="文本说明二" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 118.0
+offset_right = 346.0
+offset_bottom = 158.0
+mouse_filter = 2
+theme_override_constants/line_separation = 2
+theme_override_font_sizes/normal_font_size = 12
+theme_override_colors/default_color = Color(0.11764705882352941, 0.5647058823529412, 1.0, 1)
+bbcode_enabled = true
+text = " "
+scroll_active = false
+
+[node name="盒任务盒" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 150.0
+offset_right = 336.0
+offset_bottom = 303.0
+mouse_filter = 2
+texture = ExtResource("t2")
+patch_margin_left = 8
+patch_margin_top = 7
+patch_margin_right = 7
+patch_margin_bottom = 7
+
+[node name="标签任务星级" type="Label" parent="."]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 158.0
+offset_right = 78.0
+offset_bottom = 177.0
+mouse_filter = 2
+text = "任务星级："
+theme_override_colors/font_color = Color(0.0, 1.0, 0.0, 1)
+vertical_alignment = 1
+clip_text = true
+
+[node name="星0" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 78.0
+offset_top = 160.0
+offset_right = 92.0
+offset_bottom = 173.0
+mouse_filter = 2
+texture = ExtResource("t3")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="标签星级说明" type="Label" parent="."]
+layout_mode = 0
+offset_left = 214.0
+offset_top = 158.0
+offset_right = 332.0
+offset_bottom = 177.0
+mouse_filter = 2
+text = "（最高可刷新到5星）"
+theme_override_colors/font_color = Color(0.0, 1.0, 0.0, 1)
+vertical_alignment = 1
+clip_text = true
+
+[node name="标签倒计时" type="Label" parent="."]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 281.0
+offset_right = 234.0
+offset_bottom = 300.0
+mouse_filter = 2
+text = "距离下次免费刷新任务时间：%100:00:00"
+theme_override_colors/font_color = Color(1.0, 0.4980392156862745, 0.0, 1)
+vertical_alignment = 1
+clip_text = true
+
+[node name="复选自动刷新" type="Control" parent="."]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 312.0
+offset_right = 105.0
+offset_bottom = 331.0
+metadata/act = "自动刷新"
+
+[node name="框" type="TextureRect" parent="复选自动刷新"]
+layout_mode = 0
+offset_right = 19.0
+offset_bottom = 19.0
+mouse_filter = 2
+texture = ExtResource("t4")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="字" type="Label" parent="复选自动刷新"]
+layout_mode = 0
+offset_left = 24.0
+offset_right = 99.0
+offset_bottom = 19.0
+mouse_filter = 2
+text = "自动刷新到5星"
+theme_override_colors/font_color = Color(1.0, 1.0, 0.0, 1)
+
+[node name="复选自动停止" type="Control" parent="."]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 312.0
+offset_right = 250.0
+offset_bottom = 331.0
+metadata/act = "自动停止"
+
+[node name="框" type="TextureRect" parent="复选自动停止"]
+layout_mode = 0
+offset_right = 19.0
+offset_bottom = 19.0
+mouse_filter = 2
+texture = ExtResource("t5")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="字" type="Label" parent="复选自动停止"]
+layout_mode = 0
+offset_left = 24.0
+offset_right = 141.0
+offset_bottom = 19.0
+mouse_filter = 2
+text = "当点券不够时自动停止"
+theme_override_colors/font_color = Color(1.0, 1.0, 0.0, 1)
+
+[node name="钮立即完成" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 271.0
+offset_top = 178.0
+offset_right = 328.0
+offset_bottom = 200.0
+texture_normal = ExtResource("t6")
+expand_mode = 1
+stretch_mode = 0
+focus_mode = 0
+ignore_texture_size = true
+metadata/skin = "res://素材/界面/原版窗口/家族/钮底"
+metadata/act = "立即完成"
+
+[node name="Label" type="Label" parent="钮立即完成"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+text = "立即完成"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="钮刷新任务" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 342.0
+offset_right = 129.0
+offset_bottom = 364.0
+texture_normal = ExtResource("t7")
+expand_mode = 1
+stretch_mode = 0
+focus_mode = 0
+ignore_texture_size = true
+metadata/skin = "res://素材/界面/原版窗口/家族/钮底"
+metadata/act = "刷新任务"
+
+[node name="Label" type="Label" parent="钮刷新任务"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+text = "刷新任务"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="钮开始任务" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 210.0
+offset_top = 342.0
+offset_right = 267.0
+offset_bottom = 364.0
+texture_normal = ExtResource("t8")
+expand_mode = 1
+stretch_mode = 0
+focus_mode = 0
+ignore_texture_size = true
+metadata/skin = "res://素材/界面/原版窗口/家族/钮底"
+metadata/act = "开始任务"
+
+[node name="Label" type="Label" parent="钮开始任务"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+text = "开始任务"
+horizontal_alignment = 1
+vertical_alignment = 1

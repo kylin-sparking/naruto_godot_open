@@ -1,0 +1,696 @@
+[gd_scene load_steps=12 format=3]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/竞技场/UISwf_PvpBg_Skin.png" id="t1"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/竞技场/UISwf_PvpUI_JingJiChang.png" id="t2"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/竞技场/UISwf_PvpUI_GongGaoSkin.png" id="t3"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/竞技场/UISwf_PvpUI_PaneSkin.png" id="t4"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/竞技场/UISwf_PvpUI_Line.png" id="t5"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/竞技场/UISwf_PvpUI_HeaderSkin.png" id="t6"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/竞技场/UISwf_PvpUI_HeaderOverSkin.png" id="t7"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/竞技场/UISwf_PvpUI_NameSkin.png" id="t8"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/竞技场/UISwf_PvpUI_JianIcon.png" id="t9"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/竞技场/UISwf_PvpHuo_Skin.png" id="t10"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/竞技场/清CD箭头.png" id="t11"]
+
+[node name="竞技场页" type="Control"]
+offset_left = 0
+offset_top = 0
+offset_right = 770
+offset_bottom = 538
+mouse_filter = 2
+; 整框：页面按窗口局部坐标烘 ⇒ 这里 y = AS3 窗口局部 y − 29（容器原点在 功能窗口 那边）
+[node name="底图" type="TextureRect" parent="."]
+offset_left = 10
+offset_top = 11
+offset_right = 760
+offset_bottom = 527
+texture = ExtResource("t1")
+stretch_mode = 1
+; PvpWindow.as:112-115，★在 _panel 之前 addChild
+[node name="面板" type="Control" parent="."]
+offset_left = 10
+offset_top = 11
+offset_right = 10
+offset_bottom = 11
+; :108-110 = 内容底(8,38) + 2
+[node name="徽记" type="TextureRect" parent="面板"]
+offset_left = 6
+offset_top = 6
+offset_right = 48
+offset_bottom = 44
+texture = ExtResource("t2")
+stretch_mode = 1
+; :203-206
+[node name="公告" type="RichTextLabel" parent="面板"]
+offset_left = 216
+offset_top = 25
+offset_right = 706
+offset_bottom = 45
+bbcode_enabled = true
+scroll_active = false
+text = ""
+; :207-213 宽 490、居中、14 号
+[node name="公告底板" type="TextureRect" parent="面板"]
+offset_left = 216
+offset_top = 55
+offset_right = 712
+offset_bottom = 142
+texture = ExtResource("t3")
+stretch_mode = 1
+; :214-217 y=公告+30
+[node name="排名奖" type="Label" parent="面板"]
+offset_left = 216
+offset_top = 87
+offset_right = 706
+offset_bottom = 107
+theme_override_colors/font_color = Color(1, 0.941176, 0, 1)
+theme_override_font_sizes/font_size = 14
+horizontal_alignment = 1
+; :218-225 + :226 悬停提示
+[node name="立绘" type="TextureRect" parent="面板"]
+offset_left = 0
+offset_top = 166
+offset_right = 240
+offset_bottom = 500
+texture = ExtResource("t10")
+stretch_mode = 1
+; :174-193 按 job 换四张；x 原版没设 ⇒ 0
+[node name="左列" type="Control" parent="面板"]
+offset_left = 15
+offset_top = 84
+offset_right = 15
+offset_bottom = 84
+; :235-258 那一竖排
+[node name="名字" type="Label" parent="面板/左列"]
+offset_left = 0
+offset_top = 0
+offset_right = 180
+offset_bottom = 20
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.686275, 0.501961, 0.12549, 1)
+theme_override_constants/outline_size = 3
+; :235-240 bold + 光晕 #AF8020
+[node name="排名行" type="Control" parent="面板/左列"]
+offset_left = 0
+offset_top = 22
+offset_right = 0
+offset_bottom = 22
+; FormItem2 :241-245 标题40+gap4+内容80、行高20
+[node name="标题" type="Label" parent="面板/左列/排名行"]
+offset_left = 0
+offset_top = 0
+offset_right = 40
+offset_bottom = 20
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.686275, 0.501961, 0.12549, 1)
+theme_override_constants/outline_size = 3
+text = "排名"
+[node name="值" type="Label" parent="面板/左列/排名行"]
+offset_left = 44
+offset_top = 0
+offset_right = 124
+offset_bottom = 20
+theme_override_colors/font_color = Color(1, 0.941176, 0, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.686275, 0.501961, 0.12549, 1)
+theme_override_constants/outline_size = 3
+text = "0"
+[node name="连胜行" type="Control" parent="面板/左列"]
+offset_left = 0
+offset_top = 42
+offset_right = 0
+offset_bottom = 42
+; :246-250
+[node name="标题" type="Label" parent="面板/左列/连胜行"]
+offset_left = 0
+offset_top = 0
+offset_right = 40
+offset_bottom = 20
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.686275, 0.501961, 0.12549, 1)
+theme_override_constants/outline_size = 3
+text = "连胜"
+[node name="值" type="Label" parent="面板/左列/连胜行"]
+offset_left = 44
+offset_top = 0
+offset_right = 124
+offset_bottom = 20
+theme_override_colors/font_color = Color(1, 0.941176, 0, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_outline_color = Color(0.686275, 0.501961, 0.12549, 1)
+theme_override_constants/outline_size = 3
+text = "0"
+[node name="查看英雄榜" type="LinkButton" parent="面板/左列"]
+offset_left = 0
+offset_top = 62
+offset_right = 120
+offset_bottom = 82
+flat = true
+text = "查看英雄榜"
+theme_override_colors/font_color = Color(0.117647, 0.564706, 1, 1)
+theme_override_font_sizes/font_size = 12
+; :251-258 UI_BLUE + 下划线 + 手型
+[node name="候选块" type="Control" parent="面板"]
+offset_left = 240
+offset_top = 155
+offset_right = 240
+offset_bottom = 155
+; PvpPlayerPanel :227-230 x=公告+24、y=底板+100
+[node name="底" type="TextureRect" parent="面板/候选块"]
+offset_left = 0
+offset_top = 0
+offset_right = 482
+offset_bottom = 198
+texture = ExtResource("t4")
+stretch_mode = 1
+; :122-126 天然 482×198 == 设定 ⇒ 不缩
+[node name="候选容器" type="Control" parent="面板/候选块"]
+offset_left = 8
+offset_top = 8
+offset_right = 8
+offset_bottom = 8
+; :127-130 CONTENT_GAP=8
+[node name="候选格1" type="Control" parent="面板/候选块/候选容器"]
+offset_left = 14
+offset_top = 0
+offset_right = 89
+offset_bottom = 156
+; updateCandidates:348 x=i*90+14
+[node name="头像框" type="TextureRect" parent="面板/候选块/候选容器/候选格1"]
+offset_left = 0
+offset_top = 28
+offset_right = 75
+offset_bottom = 103
+texture = ExtResource("t6")
+stretch_mode = 1
+; PvpPlayerCell.as:46-49
+[node name="悬停层" type="TextureRect" parent="面板/候选块/候选容器/候选格1"]
+offset_left = 0
+offset_top = 28
+offset_right = 75
+offset_bottom = 103
+texture = ExtResource("t7")
+stretch_mode = 1
+visible = false
+; overHandler:95-108 addChildAt(…,1) ⇒ 压在头像框之上、名字条之下
+[node name="名字条" type="TextureRect" parent="面板/候选块/候选容器/候选格1"]
+offset_left = 12.5
+offset_top = 96
+offset_right = 62.5
+offset_bottom = 113
+texture = ExtResource("t8")
+stretch_mode = 1
+; :113-115 (75-50)/2、28+75-17+10
+[node name="排名" type="Label" parent="面板/候选块/候选容器/候选格1"]
+offset_left = 12.5
+offset_top = 96
+offset_right = 62.5
+offset_bottom = 113
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+; :117-122
+[node name="名字" type="Label" parent="面板/候选块/候选容器/候选格1"]
+offset_left = 0
+offset_top = 116
+offset_right = 75
+offset_bottom = 133
+theme_override_colors/font_color = Color(1, 0.941176, 0, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+; :123-128
+[node name="等级" type="Label" parent="面板/候选块/候选容器/候选格1"]
+offset_left = 0
+offset_top = 136
+offset_right = 75
+offset_bottom = 153
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+; :129-134
+[node name="头像" type="TextureButton" parent="面板/候选块/候选容器/候选格1"]
+offset_left = 0
+offset_top = 28
+offset_right = 75
+offset_bottom = 103
+stretch_mode = 3
+mouse_default_cursor_shape = 2
+; :142-151 天然尺寸居中；只有它吃点击/悬停
+[node name="候选格2" type="Control" parent="面板/候选块/候选容器"]
+offset_left = 104
+offset_top = 0
+offset_right = 179
+offset_bottom = 156
+; updateCandidates:348 x=i*90+14
+[node name="头像框" type="TextureRect" parent="面板/候选块/候选容器/候选格2"]
+offset_left = 0
+offset_top = 28
+offset_right = 75
+offset_bottom = 103
+texture = ExtResource("t6")
+stretch_mode = 1
+; PvpPlayerCell.as:46-49
+[node name="悬停层" type="TextureRect" parent="面板/候选块/候选容器/候选格2"]
+offset_left = 0
+offset_top = 28
+offset_right = 75
+offset_bottom = 103
+texture = ExtResource("t7")
+stretch_mode = 1
+visible = false
+; overHandler:95-108 addChildAt(…,1) ⇒ 压在头像框之上、名字条之下
+[node name="名字条" type="TextureRect" parent="面板/候选块/候选容器/候选格2"]
+offset_left = 12.5
+offset_top = 96
+offset_right = 62.5
+offset_bottom = 113
+texture = ExtResource("t8")
+stretch_mode = 1
+; :113-115 (75-50)/2、28+75-17+10
+[node name="排名" type="Label" parent="面板/候选块/候选容器/候选格2"]
+offset_left = 12.5
+offset_top = 96
+offset_right = 62.5
+offset_bottom = 113
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+; :117-122
+[node name="名字" type="Label" parent="面板/候选块/候选容器/候选格2"]
+offset_left = 0
+offset_top = 116
+offset_right = 75
+offset_bottom = 133
+theme_override_colors/font_color = Color(1, 0.941176, 0, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+; :123-128
+[node name="等级" type="Label" parent="面板/候选块/候选容器/候选格2"]
+offset_left = 0
+offset_top = 136
+offset_right = 75
+offset_bottom = 153
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+; :129-134
+[node name="头像" type="TextureButton" parent="面板/候选块/候选容器/候选格2"]
+offset_left = 0
+offset_top = 28
+offset_right = 75
+offset_bottom = 103
+stretch_mode = 3
+mouse_default_cursor_shape = 2
+; :142-151 天然尺寸居中；只有它吃点击/悬停
+[node name="候选格3" type="Control" parent="面板/候选块/候选容器"]
+offset_left = 194
+offset_top = 0
+offset_right = 269
+offset_bottom = 156
+; updateCandidates:348 x=i*90+14
+[node name="头像框" type="TextureRect" parent="面板/候选块/候选容器/候选格3"]
+offset_left = 0
+offset_top = 28
+offset_right = 75
+offset_bottom = 103
+texture = ExtResource("t6")
+stretch_mode = 1
+; PvpPlayerCell.as:46-49
+[node name="悬停层" type="TextureRect" parent="面板/候选块/候选容器/候选格3"]
+offset_left = 0
+offset_top = 28
+offset_right = 75
+offset_bottom = 103
+texture = ExtResource("t7")
+stretch_mode = 1
+visible = false
+; overHandler:95-108 addChildAt(…,1) ⇒ 压在头像框之上、名字条之下
+[node name="名字条" type="TextureRect" parent="面板/候选块/候选容器/候选格3"]
+offset_left = 12.5
+offset_top = 96
+offset_right = 62.5
+offset_bottom = 113
+texture = ExtResource("t8")
+stretch_mode = 1
+; :113-115 (75-50)/2、28+75-17+10
+[node name="排名" type="Label" parent="面板/候选块/候选容器/候选格3"]
+offset_left = 12.5
+offset_top = 96
+offset_right = 62.5
+offset_bottom = 113
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+; :117-122
+[node name="名字" type="Label" parent="面板/候选块/候选容器/候选格3"]
+offset_left = 0
+offset_top = 116
+offset_right = 75
+offset_bottom = 133
+theme_override_colors/font_color = Color(1, 0.941176, 0, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+; :123-128
+[node name="等级" type="Label" parent="面板/候选块/候选容器/候选格3"]
+offset_left = 0
+offset_top = 136
+offset_right = 75
+offset_bottom = 153
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+; :129-134
+[node name="头像" type="TextureButton" parent="面板/候选块/候选容器/候选格3"]
+offset_left = 0
+offset_top = 28
+offset_right = 75
+offset_bottom = 103
+stretch_mode = 3
+mouse_default_cursor_shape = 2
+; :142-151 天然尺寸居中；只有它吃点击/悬停
+[node name="候选格4" type="Control" parent="面板/候选块/候选容器"]
+offset_left = 284
+offset_top = 0
+offset_right = 359
+offset_bottom = 156
+; updateCandidates:348 x=i*90+14
+[node name="头像框" type="TextureRect" parent="面板/候选块/候选容器/候选格4"]
+offset_left = 0
+offset_top = 28
+offset_right = 75
+offset_bottom = 103
+texture = ExtResource("t6")
+stretch_mode = 1
+; PvpPlayerCell.as:46-49
+[node name="悬停层" type="TextureRect" parent="面板/候选块/候选容器/候选格4"]
+offset_left = 0
+offset_top = 28
+offset_right = 75
+offset_bottom = 103
+texture = ExtResource("t7")
+stretch_mode = 1
+visible = false
+; overHandler:95-108 addChildAt(…,1) ⇒ 压在头像框之上、名字条之下
+[node name="名字条" type="TextureRect" parent="面板/候选块/候选容器/候选格4"]
+offset_left = 12.5
+offset_top = 96
+offset_right = 62.5
+offset_bottom = 113
+texture = ExtResource("t8")
+stretch_mode = 1
+; :113-115 (75-50)/2、28+75-17+10
+[node name="排名" type="Label" parent="面板/候选块/候选容器/候选格4"]
+offset_left = 12.5
+offset_top = 96
+offset_right = 62.5
+offset_bottom = 113
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+; :117-122
+[node name="名字" type="Label" parent="面板/候选块/候选容器/候选格4"]
+offset_left = 0
+offset_top = 116
+offset_right = 75
+offset_bottom = 133
+theme_override_colors/font_color = Color(1, 0.941176, 0, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+; :123-128
+[node name="等级" type="Label" parent="面板/候选块/候选容器/候选格4"]
+offset_left = 0
+offset_top = 136
+offset_right = 75
+offset_bottom = 153
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+; :129-134
+[node name="头像" type="TextureButton" parent="面板/候选块/候选容器/候选格4"]
+offset_left = 0
+offset_top = 28
+offset_right = 75
+offset_bottom = 103
+stretch_mode = 3
+mouse_default_cursor_shape = 2
+; :142-151 天然尺寸居中；只有它吃点击/悬停
+[node name="候选格5" type="Control" parent="面板/候选块/候选容器"]
+offset_left = 374
+offset_top = 0
+offset_right = 449
+offset_bottom = 156
+; updateCandidates:348 x=i*90+14
+[node name="头像框" type="TextureRect" parent="面板/候选块/候选容器/候选格5"]
+offset_left = 0
+offset_top = 28
+offset_right = 75
+offset_bottom = 103
+texture = ExtResource("t6")
+stretch_mode = 1
+; PvpPlayerCell.as:46-49
+[node name="悬停层" type="TextureRect" parent="面板/候选块/候选容器/候选格5"]
+offset_left = 0
+offset_top = 28
+offset_right = 75
+offset_bottom = 103
+texture = ExtResource("t7")
+stretch_mode = 1
+visible = false
+; overHandler:95-108 addChildAt(…,1) ⇒ 压在头像框之上、名字条之下
+[node name="名字条" type="TextureRect" parent="面板/候选块/候选容器/候选格5"]
+offset_left = 12.5
+offset_top = 96
+offset_right = 62.5
+offset_bottom = 113
+texture = ExtResource("t8")
+stretch_mode = 1
+; :113-115 (75-50)/2、28+75-17+10
+[node name="排名" type="Label" parent="面板/候选块/候选容器/候选格5"]
+offset_left = 12.5
+offset_top = 96
+offset_right = 62.5
+offset_bottom = 113
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+; :117-122
+[node name="名字" type="Label" parent="面板/候选块/候选容器/候选格5"]
+offset_left = 0
+offset_top = 116
+offset_right = 75
+offset_bottom = 133
+theme_override_colors/font_color = Color(1, 0.941176, 0, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+; :123-128
+[node name="等级" type="Label" parent="面板/候选块/候选容器/候选格5"]
+offset_left = 0
+offset_top = 136
+offset_right = 75
+offset_bottom = 153
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+; :129-134
+[node name="头像" type="TextureButton" parent="面板/候选块/候选容器/候选格5"]
+offset_left = 0
+offset_top = 28
+offset_right = 75
+offset_bottom = 103
+stretch_mode = 3
+mouse_default_cursor_shape = 2
+; :142-151 天然尺寸居中；只有它吃点击/悬停
+[node name="分隔线" type="TextureRect" parent="面板/候选块"]
+offset_left = 8
+offset_top = 163
+offset_right = 474
+offset_bottom = 166
+texture = ExtResource("t5")
+stretch_mode = 1
+; :131-134
+[node name="我的排名" type="RichTextLabel" parent="面板/候选块"]
+offset_left = 20
+offset_top = 169
+offset_right = 180
+offset_bottom = 189
+bbcode_enabled = true
+scroll_active = false
+text = ""
+; :135-137 + :106 那串 htmlText
+[node name="CD秒" type="Label" parent="面板/候选块"]
+offset_left = 185
+offset_top = 169
+offset_right = 225
+offset_bottom = 189
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 12
+visible = false
+; :138-142
+[node name="清CD钮" type="TextureButton" parent="面板/候选块"]
+offset_left = 225
+offset_top = 172
+offset_right = 245
+offset_bottom = 186
+texture_normal = ExtResource("t11")
+stretch_mode = 3
+mouse_default_cursor_shape = 2
+visible = false
+; :143-149 MArrowBtn2F（upSkin = MainLib tag190）默认藏，CD>0 才亮
+[node name="剩余次数" type="RichTextLabel" parent="面板/候选块"]
+offset_left = 305
+offset_top = 169
+offset_right = 425
+offset_bottom = 189
+bbcode_enabled = true
+scroll_active = false
+text = ""
+; :150-154 宽 120
+[node name="增加钮" type="TextureButton" parent="面板/候选块"]
+offset_left = 425
+offset_top = 169
+offset_right = 462
+offset_bottom = 191
+mouse_default_cursor_shape = 2
+; :155-161 btn_width_two=37、x=482-20-37；只有 VIP 够级才显
+[node name="战报块" type="Control" parent="面板"]
+offset_left = 240
+offset_top = 361
+offset_right = 240
+offset_bottom = 361
+; PvpWindow.as:231-234 y=候选块+206
+[node name="底" type="TextureRect" parent="面板/战报块"]
+offset_left = 0
+offset_top = 0
+offset_right = 482
+offset_bottom = 140
+texture = ExtResource("t4")
+expand_mode = 1
+stretch_mode = 0
+; PvpZhanBaoPanel.as:19-21 同一张皮**拉到 140 高**
+; 拉伸语义：UISwfMovieClipAgent 的 w/h setter 是 `_content.width/height`（整帧非等比，没有 scale9Grid）
+;   ⇒ stretch_mode=0 STRETCH_SCALE（1 是 TILE：只画 198 里的上 140，不压扁）
+;   ⇒ expand_mode=1 EXPAND_IGNORE_SIZE（缺省 0 KEEP_SIZE 会把盒顶回 198 ⇒ 整页掉出窗外 32 像素）
+[node name="战报容器" type="Control" parent="面板/战报块"]
+offset_left = 8
+offset_top = 8
+offset_right = 8
+offset_bottom = 8
+; :40-43
+[node name="战报行1" type="Control" parent="面板/战报块/战报容器"]
+offset_left = 0
+offset_top = 0
+offset_right = 466
+offset_bottom = 23
+; setData:59 行距恒 23
+[node name="剑" type="TextureRect" parent="面板/战报块/战报容器/战报行1"]
+offset_left = 0
+offset_top = 2
+offset_right = 18
+offset_bottom = 20
+texture = ExtResource("t9")
+stretch_mode = 1
+; ZhanBaoItem:94-96
+[node name="文本" type="RichTextLabel" parent="面板/战报块/战报容器/战报行1"]
+offset_left = 20
+offset_top = 3
+offset_right = 460
+offset_bottom = 23
+bbcode_enabled = true
+scroll_active = false
+text = ""
+; :97-102 htmlText = PvpManager.getZhanBao()
+[node name="战报行2" type="Control" parent="面板/战报块/战报容器"]
+offset_left = 0
+offset_top = 23
+offset_right = 466
+offset_bottom = 46
+; setData:59 行距恒 23
+[node name="剑" type="TextureRect" parent="面板/战报块/战报容器/战报行2"]
+offset_left = 0
+offset_top = 2
+offset_right = 18
+offset_bottom = 20
+texture = ExtResource("t9")
+stretch_mode = 1
+; ZhanBaoItem:94-96
+[node name="文本" type="RichTextLabel" parent="面板/战报块/战报容器/战报行2"]
+offset_left = 20
+offset_top = 3
+offset_right = 460
+offset_bottom = 23
+bbcode_enabled = true
+scroll_active = false
+text = ""
+; :97-102 htmlText = PvpManager.getZhanBao()
+[node name="战报行3" type="Control" parent="面板/战报块/战报容器"]
+offset_left = 0
+offset_top = 46
+offset_right = 466
+offset_bottom = 69
+; setData:59 行距恒 23
+[node name="剑" type="TextureRect" parent="面板/战报块/战报容器/战报行3"]
+offset_left = 0
+offset_top = 2
+offset_right = 18
+offset_bottom = 20
+texture = ExtResource("t9")
+stretch_mode = 1
+; ZhanBaoItem:94-96
+[node name="文本" type="RichTextLabel" parent="面板/战报块/战报容器/战报行3"]
+offset_left = 20
+offset_top = 3
+offset_right = 460
+offset_bottom = 23
+bbcode_enabled = true
+scroll_active = false
+text = ""
+; :97-102 htmlText = PvpManager.getZhanBao()
+[node name="战报行4" type="Control" parent="面板/战报块/战报容器"]
+offset_left = 0
+offset_top = 69
+offset_right = 466
+offset_bottom = 92
+; setData:59 行距恒 23
+[node name="剑" type="TextureRect" parent="面板/战报块/战报容器/战报行4"]
+offset_left = 0
+offset_top = 2
+offset_right = 18
+offset_bottom = 20
+texture = ExtResource("t9")
+stretch_mode = 1
+; ZhanBaoItem:94-96
+[node name="文本" type="RichTextLabel" parent="面板/战报块/战报容器/战报行4"]
+offset_left = 20
+offset_top = 3
+offset_right = 460
+offset_bottom = 23
+bbcode_enabled = true
+scroll_active = false
+text = ""
+; :97-102 htmlText = PvpManager.getZhanBao()
+[node name="战报行5" type="Control" parent="面板/战报块/战报容器"]
+offset_left = 0
+offset_top = 92
+offset_right = 466
+offset_bottom = 115
+; setData:59 行距恒 23
+[node name="剑" type="TextureRect" parent="面板/战报块/战报容器/战报行5"]
+offset_left = 0
+offset_top = 2
+offset_right = 18
+offset_bottom = 20
+texture = ExtResource("t9")
+stretch_mode = 1
+; ZhanBaoItem:94-96
+[node name="文本" type="RichTextLabel" parent="面板/战报块/战报容器/战报行5"]
+offset_left = 20
+offset_top = 3
+offset_right = 460
+offset_bottom = 23
+bbcode_enabled = true
+scroll_active = false
+text = ""
+; :97-102 htmlText = PvpManager.getZhanBao()

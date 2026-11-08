@@ -1,0 +1,99 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://脚本/界面/窗口/家族/家族子窗.gd" id="1_script"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/内容面板.png" id="t1"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/关闭按钮.png" id="t2"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/家族/钮底.png" id="t3"]
+[ext_resource type="Script" path="res://脚本/界面/组件/原版三态钮.gd" id="9_三态"]
+
+
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/家族/钮底66.png" id="t4"]
+
+[node name="家族Boss完成窗" type="Control"]
+custom_minimum_size = Vector2(268, 116)
+script = ExtResource("1_script")
+窗名 = "家族Boss完成窗"
+
+[node name="提示底" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 268.0
+offset_bottom = 116.0
+mouse_filter = 2
+texture = ExtResource("t1")
+patch_margin_left = 40
+patch_margin_top = 29
+patch_margin_right = 12
+patch_margin_bottom = 21
+
+[node name="钮关闭" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 238.0
+offset_top = 5.0
+offset_right = 263.0
+offset_bottom = 29.0
+texture_normal = ExtResource("t2")
+expand_mode = 1
+stretch_mode = 0
+focus_mode = 0
+ignore_texture_size = true
+metadata/act = "关闭"
+script = ExtResource("9_三态")
+mouse_default_cursor_shape = 2
+
+[node name="Label" type="Label" parent="钮关闭"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+text = ""
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="文本正文" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 0.0
+offset_top = 13.0
+offset_right = 268.0
+offset_bottom = 78.0
+mouse_filter = 2
+theme_override_constants/line_separation = 2
+theme_override_font_sizes/normal_font_size = 12
+theme_override_colors/default_color = Color(1.0, 0.592156862745098, 0.25098039215686274, 1)
+bbcode_enabled = true
+text = "恭喜您成功击杀家族BOSS！\n您共造成%1点伤害，获得奖励：精华%2、阅历%3;%1/%2/%3"
+scroll_active = false
+
+[node name="钮领取" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 101.0
+offset_top = 86.0
+offset_right = 167.0
+offset_bottom = 108.0
+texture_normal = ExtResource("t4")
+expand_mode = 1
+stretch_mode = 0
+focus_mode = 0
+ignore_texture_size = true
+metadata/skin = "res://素材/界面/原版窗口/家族/钮底66"
+metadata/act = "领取"
+
+[node name="Label" type="Label" parent="钮领取"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+text = "领取奖励"
+horizontal_alignment = 1
+vertical_alignment = 1

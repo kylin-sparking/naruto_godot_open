@@ -1,0 +1,8 @@
+{
+ "_说明": "秘笈合成（JiNengCompositeWindow）档位。need_zq/prob/help_item 逐字来自 Etc.CanJuanHeCheng（`skill_fragment_composition_config`）；ratio=3 来自 UIConfig.as:976 xingYunJingRatio。⚠️ 夹具 handle_can_juan_action 掷骰基率硬编码 30，与表 prob=25 不同源——展示按表、结果按夹具，见移植文档 §3.90.6。",
+ "need_zq": 100,
+ "prob": 25,
+ "help_item": 16000015,
+ "ratio": 3,
+ "max_helper": 9
+}

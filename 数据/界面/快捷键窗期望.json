@@ -1,0 +1,4078 @@
+{
+ "窗": [
+  765,
+  455
+ ],
+ "页": [
+  765,
+  426
+ ],
+ "抬": 29.0,
+ "_窗注": "background(530) 765×345 + KF:128 把列表条设成 110 高 ⇒ 455；530 是窗框，由宿主画，页里不重复铺底",
+ "件": {
+  "九宫列表底": [
+   [
+    0,
+    316.0,
+    765,
+    110
+   ],
+   "keyboardList_background(546) 原生 765×68；KF:128 运行期 height=(14+40<<1)+2=110"
+  ],
+  "格escCell": [
+   [
+    14.0,
+    19.0,
+    40,
+    40
+   ],
+   "时间轴 escCell (14,48)；KC:99 cellBg.width=KeyDef esc width=40"
+  ],
+  "格escCell/字escCell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格f1Cell": [
+   [
+    81.0,
+    19.0,
+    40,
+    40
+   ],
+   "时间轴 f1Cell (81,48)；KC:99 cellBg.width=KeyDef f1 width=40"
+  ],
+  "格f1Cell/字f1Cell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格f2Cell": [
+   [
+    123.0,
+    19.0,
+    40,
+    40
+   ],
+   "时间轴 f2Cell (123,48)；KC:99 cellBg.width=KeyDef f2 width=40"
+  ],
+  "格f2Cell/字f2Cell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格f3Cell": [
+   [
+    165.0,
+    19.0,
+    40,
+    40
+   ],
+   "时间轴 f3Cell (165,48)；KC:99 cellBg.width=KeyDef f3 width=40"
+  ],
+  "格f3Cell/字f3Cell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格f4Cell": [
+   [
+    207.0,
+    19.0,
+    40,
+    40
+   ],
+   "时间轴 f4Cell (207,48)；KC:99 cellBg.width=KeyDef f4 width=40"
+  ],
+  "格f4Cell/字f4Cell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格f5Cell": [
+   [
+    263.0,
+    19.0,
+    40,
+    40
+   ],
+   "时间轴 f5Cell (263,48)；KC:99 cellBg.width=KeyDef f5 width=40"
+  ],
+  "格f5Cell/字f5Cell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格f6Cell": [
+   [
+    305.0,
+    19.0,
+    40,
+    40
+   ],
+   "时间轴 f6Cell (305,48)；KC:99 cellBg.width=KeyDef f6 width=40"
+  ],
+  "格f6Cell/字f6Cell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格f7Cell": [
+   [
+    347.0,
+    19.0,
+    40,
+    40
+   ],
+   "时间轴 f7Cell (347,48)；KC:99 cellBg.width=KeyDef f7 width=40"
+  ],
+  "格f7Cell/字f7Cell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格f8Cell": [
+   [
+    389.0,
+    19.0,
+    40,
+    40
+   ],
+   "时间轴 f8Cell (389,48)；KC:99 cellBg.width=KeyDef f8 width=40"
+  ],
+  "格f8Cell/字f8Cell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格f9Cell": [
+   [
+    444.0,
+    19.0,
+    40,
+    40
+   ],
+   "时间轴 f9Cell (444,48)；KC:99 cellBg.width=KeyDef f9 width=40"
+  ],
+  "格f9Cell/字f9Cell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格f10Cell": [
+   [
+    486.0,
+    19.0,
+    40,
+    40
+   ],
+   "时间轴 f10Cell (486,48)；KC:99 cellBg.width=KeyDef f10 width=40"
+  ],
+  "格f10Cell/字f10Cell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格f11Cell": [
+   [
+    528.0,
+    19.0,
+    40,
+    40
+   ],
+   "时间轴 f11Cell (528,48)；KC:99 cellBg.width=KeyDef f11 width=40"
+  ],
+  "格f11Cell/字f11Cell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格f12Cell": [
+   [
+    570.0,
+    19.0,
+    40,
+    40
+   ],
+   "时间轴 f12Cell (570,48)；KC:99 cellBg.width=KeyDef f12 width=40"
+  ],
+  "格f12Cell/字f12Cell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格pscCell": [
+   [
+    627.0,
+    19.0,
+    40,
+    40
+   ],
+   "时间轴 pscCell (627,48)；KC:99 cellBg.width=KeyDef psc width=40"
+  ],
+  "格pscCell/字pscCell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格slkCell": [
+   [
+    669.0,
+    19.0,
+    40,
+    40
+   ],
+   "时间轴 slkCell (669,48)；KC:99 cellBg.width=KeyDef slk width=40"
+  ],
+  "格slkCell/字slkCell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格brkCell": [
+   [
+    711.0,
+    19.0,
+    40,
+    40
+   ],
+   "时间轴 brkCell (711,48)；KC:99 cellBg.width=KeyDef brk width=40"
+  ],
+  "格brkCell/字brkCell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格graveAccentCell": [
+   [
+    14.0,
+    66.0,
+    40,
+    40
+   ],
+   "时间轴 graveAccentCell (14,95)；KC:99 cellBg.width=KeyDef graveAccent width=40"
+  ],
+  "格graveAccentCell/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KC:79-93 addIcon 于 cellBg 内居中；默认绑 切换目标（KEY_ID_41）"
+  ],
+  "格graveAccentCell/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "格graveAccentCell/字graveAccentCell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格num1Cell": [
+   [
+    56.0,
+    66.0,
+    40,
+    40
+   ],
+   "时间轴 num1Cell (56,95)；KC:99 cellBg.width=KeyDef num1 width=40"
+  ],
+  "格num1Cell/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KC:79-93 addIcon 于 cellBg 内居中；默认绑 攻击（KEY_ID_2）"
+  ],
+  "格num1Cell/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "格num1Cell/字num1Cell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格num2Cell": [
+   [
+    98.0,
+    66.0,
+    40,
+    40
+   ],
+   "时间轴 num2Cell (98,95)；KC:99 cellBg.width=KeyDef num2 width=40"
+  ],
+  "格num2Cell/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KC:79-93 addIcon 于 cellBg 内居中；默认无绑定；未绑 ⇒ hidden"
+  ],
+  "格num2Cell/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "格num2Cell/字num2Cell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格num3Cell": [
+   [
+    140.0,
+    66.0,
+    40,
+    40
+   ],
+   "时间轴 num3Cell (140,95)；KC:99 cellBg.width=KeyDef num3 width=40"
+  ],
+  "格num3Cell/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KC:79-93 addIcon 于 cellBg 内居中；默认无绑定；未绑 ⇒ hidden"
+  ],
+  "格num3Cell/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "格num3Cell/字num3Cell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格num4Cell": [
+   [
+    182.0,
+    66.0,
+    40,
+    40
+   ],
+   "时间轴 num4Cell (182,95)；KC:99 cellBg.width=KeyDef num4 width=40"
+  ],
+  "格num4Cell/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KC:79-93 addIcon 于 cellBg 内居中；默认无绑定；未绑 ⇒ hidden"
+  ],
+  "格num4Cell/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "格num4Cell/字num4Cell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格num5Cell": [
+   [
+    224.0,
+    66.0,
+    40,
+    40
+   ],
+   "时间轴 num5Cell (224,95)；KC:99 cellBg.width=KeyDef num5 width=40"
+  ],
+  "格num5Cell/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KC:79-93 addIcon 于 cellBg 内居中；默认无绑定；未绑 ⇒ hidden"
+  ],
+  "格num5Cell/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "格num5Cell/字num5Cell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格num6Cell": [
+   [
+    266.0,
+    66.0,
+    40,
+    40
+   ],
+   "时间轴 num6Cell (266,95)；KC:99 cellBg.width=KeyDef num6 width=40"
+  ],
+  "格num6Cell/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KC:79-93 addIcon 于 cellBg 内居中；默认无绑定；未绑 ⇒ hidden"
+  ],
+  "格num6Cell/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "格num6Cell/字num6Cell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格num7Cell": [
+   [
+    308.0,
+    66.0,
+    40,
+    40
+   ],
+   "时间轴 num7Cell (308,95)；KC:99 cellBg.width=KeyDef num7 width=40"
+  ],
+  "格num7Cell/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KC:79-93 addIcon 于 cellBg 内居中；默认无绑定；未绑 ⇒ hidden"
+  ],
+  "格num7Cell/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "格num7Cell/字num7Cell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格num8Cell": [
+   [
+    350.0,
+    66.0,
+    40,
+    40
+   ],
+   "时间轴 num8Cell (350,95)；KC:99 cellBg.width=KeyDef num8 width=40"
+  ],
+  "格num8Cell/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KC:79-93 addIcon 于 cellBg 内居中；默认无绑定；未绑 ⇒ hidden"
+  ],
+  "格num8Cell/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "格num8Cell/字num8Cell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格num9Cell": [
+   [
+    392.0,
+    66.0,
+    40,
+    40
+   ],
+   "时间轴 num9Cell (392,95)；KC:99 cellBg.width=KeyDef num9 width=40"
+  ],
+  "格num9Cell/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KC:79-93 addIcon 于 cellBg 内居中；默认无绑定；未绑 ⇒ hidden"
+  ],
+  "格num9Cell/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "格num9Cell/字num9Cell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格num0Cell": [
+   [
+    434.0,
+    66.0,
+    40,
+    40
+   ],
+   "时间轴 num0Cell (434,95)；KC:99 cellBg.width=KeyDef num0 width=40"
+  ],
+  "格num0Cell/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KC:79-93 addIcon 于 cellBg 内居中；默认无绑定；未绑 ⇒ hidden"
+  ],
+  "格num0Cell/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "格num0Cell/字num0Cell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格minusCell": [
+   [
+    476.0,
+    66.0,
+    40,
+    40
+   ],
+   "时间轴 minusCell (476,95)；KC:99 cellBg.width=KeyDef minus width=40"
+  ],
+  "格minusCell/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KC:79-93 addIcon 于 cellBg 内居中；默认无绑定；未绑 ⇒ hidden"
+  ],
+  "格minusCell/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "格minusCell/字minusCell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格equalsCell": [
+   [
+    518.0,
+    66.0,
+    40,
+    40
+   ],
+   "时间轴 equalsCell (518,95)；KC:99 cellBg.width=KeyDef equals width=40"
+  ],
+  "格equalsCell/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KC:79-93 addIcon 于 cellBg 内居中；默认无绑定；未绑 ⇒ hidden"
+  ],
+  "格equalsCell/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "格equalsCell/字equalsCell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格bkspCell": [
+   [
+    560.0,
+    66.0,
+    50,
+    40
+   ],
+   "时间轴 bkspCell (560,95)；KC:99 cellBg.width=KeyDef bksp width=50"
+  ],
+  "格bkspCell/字bkspCell": [
+   [
+    2,
+    3,
+    48,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格insCell": [
+   [
+    627.0,
+    66.0,
+    40,
+    40
+   ],
+   "时间轴 insCell (627,95)；KC:99 cellBg.width=KeyDef ins width=40"
+  ],
+  "格insCell/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KC:79-93 addIcon 于 cellBg 内居中；默认无绑定；未绑 ⇒ hidden"
+  ],
+  "格insCell/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "格insCell/字insCell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格hmCell": [
+   [
+    669.0,
+    66.0,
+    40,
+    40
+   ],
+   "时间轴 hmCell (669,95)；KC:99 cellBg.width=KeyDef hm width=40"
+  ],
+  "格hmCell/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KC:79-93 addIcon 于 cellBg 内居中；默认无绑定；未绑 ⇒ hidden"
+  ],
+  "格hmCell/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "格hmCell/字hmCell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格pupCell": [
+   [
+    711.0,
+    66.0,
+    40,
+    40
+   ],
+   "时间轴 pupCell (711,95)；KC:99 cellBg.width=KeyDef pup width=40"
+  ],
+  "格pupCell/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KC:79-93 addIcon 于 cellBg 内居中；默认无绑定；未绑 ⇒ hidden"
+  ],
+  "格pupCell/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "格pupCell/字pupCell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格tabCell": [
+   [
+    14.0,
+    108.0,
+    50,
+    40
+   ],
+   "时间轴 tabCell (14,137)；KC:99 cellBg.width=KeyDef tab width=50"
+  ],
+  "格tabCell/牌": [
+   [
+    7,
+    2,
+    36,
+    36
+   ],
+   "KC:79-93 addIcon 于 cellBg 内居中；默认无绑定；未绑 ⇒ hidden"
+  ],
+  "格tabCell/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "格tabCell/字tabCell": [
+   [
+    2,
+    3,
+    48,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格qCell": [
+   [
+    66.0,
+    108.0,
+    40,
+    40
+   ],
+   "时间轴 qCell (66,137)；KC:99 cellBg.width=KeyDef q width=40"
+  ],
+  "格qCell/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KC:79-93 addIcon 于 cellBg 内居中；默认绑 任务（KEY_ID_16）"
+  ],
+  "格qCell/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "格qCell/字qCell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格wCell": [
+   [
+    108.0,
+    108.0,
+    40,
+    40
+   ],
+   "时间轴 wCell (108,137)；KC:99 cellBg.width=KeyDef w width=40"
+  ],
+  "格wCell/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KC:79-93 addIcon 于 cellBg 内居中；默认绑 通灵附身（KEY_ID_17）"
+  ],
+  "格wCell/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "格wCell/字wCell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格eCell": [
+   [
+    150.0,
+    108.0,
+    40,
+    40
+   ],
+   "时间轴 eCell (150,137)；KC:99 cellBg.width=KeyDef e width=40"
+  ],
+  "格eCell/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KC:79-93 addIcon 于 cellBg 内居中；默认绑 遮罩造型（KEY_ID_18）"
+  ],
+  "格eCell/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "格eCell/字eCell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格rCell": [
+   [
+    192.0,
+    108.0,
+    40,
+    40
+   ],
+   "时间轴 rCell (192,137)；KC:99 cellBg.width=KeyDef r width=40"
+  ],
+  "格rCell/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KC:79-93 addIcon 于 cellBg 内居中；默认绑 缩放聊天（KEY_ID_19）"
+  ],
+  "格rCell/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "格rCell/字rCell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格tCell": [
+   [
+    234.0,
+    108.0,
+    40,
+    40
+   ],
+   "时间轴 tCell (234,137)；KC:99 cellBg.width=KeyDef t width=40"
+  ],
+  "格tCell/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KC:79-93 addIcon 于 cellBg 内居中；默认绑 组队（KEY_ID_20）"
+  ],
+  "格tCell/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "格tCell/字tCell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格yCell": [
+   [
+    276.0,
+    108.0,
+    40,
+    40
+   ],
+   "时间轴 yCell (276,137)；KC:99 cellBg.width=KeyDef y width=40"
+  ],
+  "格yCell/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KC:79-93 addIcon 于 cellBg 内居中；默认绑 音乐开关（KEY_ID_21）"
+  ],
+  "格yCell/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "格yCell/字yCell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格uCell": [
+   [
+    318.0,
+    108.0,
+    40,
+    40
+   ],
+   "时间轴 uCell (318,137)；KC:99 cellBg.width=KeyDef u width=40"
+  ],
+  "格uCell/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KC:79-93 addIcon 于 cellBg 内居中；默认无绑定；未绑 ⇒ hidden"
+  ],
+  "格uCell/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "格uCell/字uCell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格iCell": [
+   [
+    360.0,
+    108.0,
+    40,
+    40
+   ],
+   "时间轴 iCell (360,137)；KC:99 cellBg.width=KeyDef i width=40"
+  ],
+  "格iCell/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KC:79-93 addIcon 于 cellBg 内居中；默认绑 遮罩名字（KEY_ID_23）"
+  ],
+  "格iCell/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "格iCell/字iCell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格oCell": [
+   [
+    402.0,
+    108.0,
+    40,
+    40
+   ],
+   "时间轴 oCell (402,137)；KC:99 cellBg.width=KeyDef o width=40"
+  ],
+  "格oCell/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KC:79-93 addIcon 于 cellBg 内居中；默认绑 商城（KEY_ID_24）"
+  ],
+  "格oCell/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "格oCell/字oCell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格pCell": [
+   [
+    444.0,
+    108.0,
+    40,
+    40
+   ],
+   "时间轴 pCell (444,137)；KC:99 cellBg.width=KeyDef p width=40"
+  ],
+  "格pCell/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KC:79-93 addIcon 于 cellBg 内居中；默认无绑定；未绑 ⇒ hidden"
+  ],
+  "格pCell/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "格pCell/字pCell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格squareBracketsLeftCell": [
+   [
+    486.0,
+    108.0,
+    40,
+    40
+   ],
+   "时间轴 squareBracketsLeftCell (486,137)；KC:99 cellBg.width=KeyDef squareBracketsLeft width=40"
+  ],
+  "格squareBracketsLeftCell/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KC:79-93 addIcon 于 cellBg 内居中；默认无绑定；未绑 ⇒ hidden"
+  ],
+  "格squareBracketsLeftCell/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "格squareBracketsLeftCell/字squareBracketsLeftCell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格squareBracketsRightCell": [
+   [
+    528.0,
+    108.0,
+    40,
+    40
+   ],
+   "时间轴 squareBracketsRightCell (528,137)；KC:99 cellBg.width=KeyDef squareBracketsRight width=40"
+  ],
+  "格squareBracketsRightCell/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KC:79-93 addIcon 于 cellBg 内居中；默认无绑定；未绑 ⇒ hidden"
+  ],
+  "格squareBracketsRightCell/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "格squareBracketsRightCell/字squareBracketsRightCell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格backslashCell": [
+   [
+    570.0,
+    108.0,
+    40,
+    40
+   ],
+   "时间轴 backslashCell (570,137)；KC:99 cellBg.width=KeyDef backslash width=40"
+  ],
+  "格backslashCell/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KC:79-93 addIcon 于 cellBg 内居中；默认无绑定；未绑 ⇒ hidden"
+  ],
+  "格backslashCell/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "格backslashCell/字backslashCell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格delCell": [
+   [
+    627.0,
+    108.0,
+    40,
+    40
+   ],
+   "时间轴 delCell (627,137)；KC:99 cellBg.width=KeyDef del width=40"
+  ],
+  "格delCell/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KC:79-93 addIcon 于 cellBg 内居中；默认无绑定；未绑 ⇒ hidden"
+  ],
+  "格delCell/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "格delCell/字delCell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格endCell": [
+   [
+    669.0,
+    108.0,
+    40,
+    40
+   ],
+   "时间轴 endCell (669,137)；KC:99 cellBg.width=KeyDef end width=40"
+  ],
+  "格endCell/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KC:79-93 addIcon 于 cellBg 内居中；默认无绑定；未绑 ⇒ hidden"
+  ],
+  "格endCell/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "格endCell/字endCell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格pdnCell": [
+   [
+    711.0,
+    108.0,
+    40,
+    40
+   ],
+   "时间轴 pdnCell (711,137)；KC:99 cellBg.width=KeyDef pdn width=40"
+  ],
+  "格pdnCell/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KC:79-93 addIcon 于 cellBg 内居中；默认无绑定；未绑 ⇒ hidden"
+  ],
+  "格pdnCell/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "格pdnCell/字pdnCell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格lockCell": [
+   [
+    14.0,
+    150.0,
+    77,
+    40
+   ],
+   "时间轴 lockCell (14,179)；KC:99 cellBg.width=KeyDef lock width=77"
+  ],
+  "格lockCell/字lockCell": [
+   [
+    2,
+    3,
+    75,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格aCell": [
+   [
+    92.95,
+    150.0,
+    40,
+    40
+   ],
+   "时间轴 aCell (93,179)；KC:99 cellBg.width=KeyDef a width=40"
+  ],
+  "格aCell/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KC:79-93 addIcon 于 cellBg 内居中；默认绑 修行经验（KEY_ID_30）"
+  ],
+  "格aCell/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "格aCell/字aCell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格sCell": [
+   [
+    134.95,
+    150.0,
+    40,
+    40
+   ],
+   "时间轴 sCell (135,179)；KC:99 cellBg.width=KeyDef s width=40"
+  ],
+  "格sCell/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KC:79-93 addIcon 于 cellBg 内居中；默认绑 系统设置（KEY_ID_31）"
+  ],
+  "格sCell/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "格sCell/字sCell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格dCell": [
+   [
+    176.95,
+    150.0,
+    40,
+    40
+   ],
+   "时间轴 dCell (177,179)；KC:99 cellBg.width=KeyDef d width=40"
+  ],
+  "格dCell/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KC:79-93 addIcon 于 cellBg 内居中；默认绑 角色成就（KEY_ID_32）"
+  ],
+  "格dCell/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "格dCell/字dCell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格fCell": [
+   [
+    218.95,
+    150.0,
+    40,
+    40
+   ],
+   "时间轴 fCell (219,179)；KC:99 cellBg.width=KeyDef f width=40"
+  ],
+  "格fCell/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KC:79-93 addIcon 于 cellBg 内居中；默认绑 好友（KEY_ID_33）"
+  ],
+  "格fCell/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "格fCell/字fCell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格gCell": [
+   [
+    260.95,
+    150.0,
+    40,
+    40
+   ],
+   "时间轴 gCell (261,179)；KC:99 cellBg.width=KeyDef g width=40"
+  ],
+  "格gCell/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KC:79-93 addIcon 于 cellBg 内居中；默认绑 家族（KEY_ID_34）"
+  ],
+  "格gCell/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "格gCell/字gCell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格hCell": [
+   [
+    302.95,
+    150.0,
+    40,
+    40
+   ],
+   "时间轴 hCell (303,179)；KC:99 cellBg.width=KeyDef h width=40"
+  ],
+  "格hCell/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KC:79-93 addIcon 于 cellBg 内居中；默认绑 自动挂机（KEY_ID_35）"
+  ],
+  "格hCell/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "格hCell/字hCell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格jCell": [
+   [
+    344.95,
+    150.0,
+    40,
+    40
+   ],
+   "时间轴 jCell (345,179)；KC:99 cellBg.width=KeyDef j width=40"
+  ],
+  "格jCell/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KC:79-93 addIcon 于 cellBg 内居中；默认绑 挂机设置（KEY_ID_36）"
+  ],
+  "格jCell/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "格jCell/字jCell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格kCell": [
+   [
+    386.95,
+    150.0,
+    40,
+    40
+   ],
+   "时间轴 kCell (387,179)；KC:99 cellBg.width=KeyDef k width=40"
+  ],
+  "格kCell/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KC:79-93 addIcon 于 cellBg 内居中；默认绑 排行榜（KEY_ID_37）"
+  ],
+  "格kCell/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "格kCell/字kCell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格lCell": [
+   [
+    428.95,
+    150.0,
+    40,
+    40
+   ],
+   "时间轴 lCell (429,179)；KC:99 cellBg.width=KeyDef l width=40"
+  ],
+  "格lCell/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KC:79-93 addIcon 于 cellBg 内居中；默认无绑定；未绑 ⇒ hidden"
+  ],
+  "格lCell/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "格lCell/字lCell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格semicolonCell": [
+   [
+    470.95,
+    150.0,
+    40,
+    40
+   ],
+   "时间轴 semicolonCell (471,179)；KC:99 cellBg.width=KeyDef semicolon width=40"
+  ],
+  "格semicolonCell/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KC:79-93 addIcon 于 cellBg 内居中；默认无绑定；未绑 ⇒ hidden"
+  ],
+  "格semicolonCell/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "格semicolonCell/字semicolonCell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格apostropheCell": [
+   [
+    513.0,
+    150.0,
+    40,
+    40
+   ],
+   "时间轴 apostropheCell (513,179)；KC:99 cellBg.width=KeyDef apostrophe width=40"
+  ],
+  "格apostropheCell/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KC:79-93 addIcon 于 cellBg 内居中；默认无绑定；未绑 ⇒ hidden"
+  ],
+  "格apostropheCell/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "格apostropheCell/字apostropheCell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格enterCell": [
+   [
+    555.0,
+    150.0,
+    55,
+    40
+   ],
+   "时间轴 enterCell (555,179)；KC:99 cellBg.width=KeyDef enter width=55"
+  ],
+  "格enterCell/字enterCell": [
+   [
+    2,
+    3,
+    53,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格shiftLeftCell": [
+   [
+    14.0,
+    192.0,
+    87,
+    40
+   ],
+   "时间轴 shiftLeftCell (14,221)；KC:99 cellBg.width=KeyDef shiftLeft width=87"
+  ],
+  "格shiftLeftCell/字shiftLeftCell": [
+   [
+    2,
+    3,
+    85,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格zCell": [
+   [
+    103.0,
+    192.0,
+    40,
+    40
+   ],
+   "时间轴 zCell (103,221)；KC:99 cellBg.width=KeyDef z width=40"
+  ],
+  "格zCell/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KC:79-93 addIcon 于 cellBg 内居中；默认绑 捡取（KEY_ID_44）"
+  ],
+  "格zCell/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "格zCell/字zCell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格xCell": [
+   [
+    145.0,
+    192.0,
+    40,
+    40
+   ],
+   "时间轴 xCell (145,221)；KC:99 cellBg.width=KeyDef x width=40"
+  ],
+  "格xCell/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KC:79-93 addIcon 于 cellBg 内居中；默认绑 打坐（KEY_ID_45）"
+  ],
+  "格xCell/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "格xCell/字xCell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格cCell": [
+   [
+    187.0,
+    192.0,
+    40,
+    40
+   ],
+   "时间轴 cCell (187,221)；KC:99 cellBg.width=KeyDef c width=40"
+  ],
+  "格cCell/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KC:79-93 addIcon 于 cellBg 内居中；默认绑 人物（KEY_ID_46）"
+  ],
+  "格cCell/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "格cCell/字cCell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格vCell": [
+   [
+    229.0,
+    192.0,
+    40,
+    40
+   ],
+   "时间轴 vCell (229,221)；KC:99 cellBg.width=KeyDef v width=40"
+  ],
+  "格vCell/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KC:79-93 addIcon 于 cellBg 内居中；默认绑 忍术（KEY_ID_47）"
+  ],
+  "格vCell/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "格vCell/字vCell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格bCell": [
+   [
+    271.0,
+    192.0,
+    40,
+    40
+   ],
+   "时间轴 bCell (271,221)；KC:99 cellBg.width=KeyDef b width=40"
+  ],
+  "格bCell/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KC:79-93 addIcon 于 cellBg 内居中；默认绑 背包（KEY_ID_48）"
+  ],
+  "格bCell/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "格bCell/字bCell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格nCell": [
+   [
+    313.0,
+    192.0,
+    40,
+    40
+   ],
+   "时间轴 nCell (313,221)；KC:99 cellBg.width=KeyDef n width=40"
+  ],
+  "格nCell/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KC:79-93 addIcon 于 cellBg 内居中；默认绑 宠物（KEY_ID_49）"
+  ],
+  "格nCell/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "格nCell/字nCell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格mCell": [
+   [
+    355.0,
+    192.0,
+    40,
+    40
+   ],
+   "时间轴 mCell (355,221)；KC:99 cellBg.width=KeyDef m width=40"
+  ],
+  "格mCell/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KC:79-93 addIcon 于 cellBg 内居中；默认绑 世界地图（KEY_ID_50）"
+  ],
+  "格mCell/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "格mCell/字mCell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格commaCell": [
+   [
+    397.0,
+    192.0,
+    40,
+    40
+   ],
+   "时间轴 commaCell (397,221)；KC:99 cellBg.width=KeyDef comma width=40"
+  ],
+  "格commaCell/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KC:79-93 addIcon 于 cellBg 内居中；默认绑 拔旗（KEY_ID_51）"
+  ],
+  "格commaCell/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "格commaCell/字commaCell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格fullStopCell": [
+   [
+    439.0,
+    192.0,
+    40,
+    40
+   ],
+   "时间轴 fullStopCell (439,221)；KC:99 cellBg.width=KeyDef fullStop width=40"
+  ],
+  "格fullStopCell/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KC:79-93 addIcon 于 cellBg 内居中；默认无绑定；未绑 ⇒ hidden"
+  ],
+  "格fullStopCell/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "格fullStopCell/字fullStopCell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格solidusCell": [
+   [
+    481.0,
+    192.0,
+    40,
+    40
+   ],
+   "时间轴 solidusCell (481,221)；KC:99 cellBg.width=KeyDef solidus width=40"
+  ],
+  "格solidusCell/字solidusCell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格shiftRightCell": [
+   [
+    523.0,
+    192.0,
+    87,
+    40
+   ],
+   "时间轴 shiftRightCell (523,221)；KC:99 cellBg.width=KeyDef shiftRight width=87"
+  ],
+  "格shiftRightCell/字shiftRightCell": [
+   [
+    2,
+    3,
+    85,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格arrowUpCell": [
+   [
+    669.0,
+    192.0,
+    40,
+    40
+   ],
+   "时间轴 arrowUpCell (669,221)；KC:99 cellBg.width=KeyDef arrowUp width=40"
+  ],
+  "格arrowUpCell/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KC:79-93 addIcon 于 cellBg 内居中；默认绑 上（KEY_ID_90）"
+  ],
+  "格arrowUpCell/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "格arrowUpCell/字arrowUpCell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格ctrlLeftCell": [
+   [
+    14.0,
+    234.0,
+    60,
+    40
+   ],
+   "时间轴 ctrlLeftCell (14,263)；KC:99 cellBg.width=KeyDef ctrlLeft width=60"
+  ],
+  "格ctrlLeftCell/牌": [
+   [
+    12,
+    2,
+    36,
+    36
+   ],
+   "KC:79-93 addIcon 于 cellBg 内居中；默认无绑定；未绑 ⇒ hidden"
+  ],
+  "格ctrlLeftCell/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "格ctrlLeftCell/字ctrlLeftCell": [
+   [
+    2,
+    3,
+    58,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格windowCell": [
+   [
+    76.0,
+    234.0,
+    60,
+    40
+   ],
+   "时间轴 windowCell (76,263)；KC:99 cellBg.width=KeyDef window width=60"
+  ],
+  "格windowCell/字windowCell": [
+   [
+    2,
+    3,
+    58,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格altLeftCell": [
+   [
+    138.0,
+    234.0,
+    60,
+    40
+   ],
+   "时间轴 altLeftCell (138,263)；KC:99 cellBg.width=KeyDef altLeft width=60"
+  ],
+  "格altLeftCell/字altLeftCell": [
+   [
+    2,
+    3,
+    58,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格spaceCell": [
+   [
+    200.0,
+    234.0,
+    224,
+    40
+   ],
+   "时间轴 spaceCell (200,263)；KC:99 cellBg.width=KeyDef space width=224"
+  ],
+  "格spaceCell/牌": [
+   [
+    94,
+    2,
+    36,
+    36
+   ],
+   "KC:79-93 addIcon 于 cellBg 内居中；默认绑 跳跃（KEY_ID_57）"
+  ],
+  "格spaceCell/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "格spaceCell/字spaceCell": [
+   [
+    2,
+    3,
+    222,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格altRightCell": [
+   [
+    426.0,
+    234.0,
+    60,
+    40
+   ],
+   "时间轴 altRightCell (426,263)；KC:99 cellBg.width=KeyDef altRight width=60"
+  ],
+  "格altRightCell/字altRightCell": [
+   [
+    2,
+    3,
+    58,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格menuCell": [
+   [
+    488.0,
+    234.0,
+    60,
+    40
+   ],
+   "时间轴 menuCell (488,263)；KC:99 cellBg.width=KeyDef menu width=60"
+  ],
+  "格menuCell/字menuCell": [
+   [
+    2,
+    3,
+    58,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格ctrlRightCell": [
+   [
+    550.0,
+    234.0,
+    60,
+    40
+   ],
+   "时间轴 ctrlRightCell (550,263)；KC:99 cellBg.width=KeyDef ctrlRight width=60"
+  ],
+  "格ctrlRightCell/牌": [
+   [
+    12,
+    2,
+    36,
+    36
+   ],
+   "KC:79-93 addIcon 于 cellBg 内居中；默认无绑定；未绑 ⇒ hidden"
+  ],
+  "格ctrlRightCell/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "格ctrlRightCell/字ctrlRightCell": [
+   [
+    2,
+    3,
+    58,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格arrowLeftCell": [
+   [
+    627.0,
+    235.0,
+    40,
+    40
+   ],
+   "时间轴 arrowLeftCell (627,264)；KC:99 cellBg.width=KeyDef arrowLeft width=40"
+  ],
+  "格arrowLeftCell/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KC:79-93 addIcon 于 cellBg 内居中；默认绑 左（KEY_ID_91）"
+  ],
+  "格arrowLeftCell/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "格arrowLeftCell/字arrowLeftCell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格arrowDownCell": [
+   [
+    669.0,
+    235.0,
+    40,
+    40
+   ],
+   "时间轴 arrowDownCell (669,264)；KC:99 cellBg.width=KeyDef arrowDown width=40"
+  ],
+  "格arrowDownCell/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KC:79-93 addIcon 于 cellBg 内居中；默认绑 下（KEY_ID_92）"
+  ],
+  "格arrowDownCell/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "格arrowDownCell/字arrowDownCell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "格arrowRightCell": [
+   [
+    711.0,
+    235.0,
+    40,
+    40
+   ],
+   "时间轴 arrowRightCell (711,264)；KC:99 cellBg.width=KeyDef arrowRight width=40"
+  ],
+  "格arrowRightCell/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KC:79-93 addIcon 于 cellBg 内居中；默认绑 右（KEY_ID_93）"
+  ],
+  "格arrowRightCell/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "格arrowRightCell/字arrowRightCell": [
+   [
+    2,
+    3,
+    38,
+    15
+   ],
+   "KC:49-53 getLabel()+x=2,y=1 与 ML:206-207 textField.y=2 ⇒ 字盒 (2,3)；KC:116 色 canSet?0xFF9F42:0xD2D2D2"
+  ],
+  "列格0": [
+   [
+    24,
+    330.0,
+    40,
+    40
+   ],
+   "KF:131-143 x=24+(i%17)·42、y=345+14+⌊i/17⌋·42"
+  ],
+  "列格0/底": [
+   [
+    0,
+    0,
+    40,
+    40
+   ],
+   "KeyboardListCellF(844) 40×40"
+  ],
+  "列格0/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KLC:44-49 非忍术槽铺 KeyboardShortcurIconF、(40−36)/2 居中；文=槽 人物"
+  ],
+  "列格0/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "列格1": [
+   [
+    66,
+    330.0,
+    40,
+    40
+   ],
+   "KF:131-143 x=24+(i%17)·42、y=345+14+⌊i/17⌋·42"
+  ],
+  "列格1/底": [
+   [
+    0,
+    0,
+    40,
+    40
+   ],
+   "KeyboardListCellF(844) 40×40"
+  ],
+  "列格1/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KLC:44-49 非忍术槽铺 KeyboardShortcurIconF、(40−36)/2 居中；文=槽 背包"
+  ],
+  "列格1/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "列格2": [
+   [
+    108,
+    330.0,
+    40,
+    40
+   ],
+   "KF:131-143 x=24+(i%17)·42、y=345+14+⌊i/17⌋·42"
+  ],
+  "列格2/底": [
+   [
+    0,
+    0,
+    40,
+    40
+   ],
+   "KeyboardListCellF(844) 40×40"
+  ],
+  "列格2/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KLC:44-49 非忍术槽铺 KeyboardShortcurIconF、(40−36)/2 居中；文=槽 忍术"
+  ],
+  "列格2/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "列格3": [
+   [
+    150,
+    330.0,
+    40,
+    40
+   ],
+   "KF:131-143 x=24+(i%17)·42、y=345+14+⌊i/17⌋·42"
+  ],
+  "列格3/底": [
+   [
+    0,
+    0,
+    40,
+    40
+   ],
+   "KeyboardListCellF(844) 40×40"
+  ],
+  "列格3/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KLC:44-49 非忍术槽铺 KeyboardShortcurIconF、(40−36)/2 居中；文=槽 宠物"
+  ],
+  "列格3/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "列格4": [
+   [
+    192,
+    330.0,
+    40,
+    40
+   ],
+   "KF:131-143 x=24+(i%17)·42、y=345+14+⌊i/17⌋·42"
+  ],
+  "列格4/底": [
+   [
+    0,
+    0,
+    40,
+    40
+   ],
+   "KeyboardListCellF(844) 40×40"
+  ],
+  "列格4/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KLC:44-49 非忍术槽铺 KeyboardShortcurIconF、(40−36)/2 居中；文=槽 任务"
+  ],
+  "列格4/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "列格5": [
+   [
+    234,
+    330.0,
+    40,
+    40
+   ],
+   "KF:131-143 x=24+(i%17)·42、y=345+14+⌊i/17⌋·42"
+  ],
+  "列格5/底": [
+   [
+    0,
+    0,
+    40,
+    40
+   ],
+   "KeyboardListCellF(844) 40×40"
+  ],
+  "列格5/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KLC:44-49 非忍术槽铺 KeyboardShortcurIconF、(40−36)/2 居中；文=槽 组队"
+  ],
+  "列格5/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "列格6": [
+   [
+    276,
+    330.0,
+    40,
+    40
+   ],
+   "KF:131-143 x=24+(i%17)·42、y=345+14+⌊i/17⌋·42"
+  ],
+  "列格6/底": [
+   [
+    0,
+    0,
+    40,
+    40
+   ],
+   "KeyboardListCellF(844) 40×40"
+  ],
+  "列格6/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KLC:44-49 非忍术槽铺 KeyboardShortcurIconF、(40−36)/2 居中；文=槽 好友"
+  ],
+  "列格6/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "列格7": [
+   [
+    318,
+    330.0,
+    40,
+    40
+   ],
+   "KF:131-143 x=24+(i%17)·42、y=345+14+⌊i/17⌋·42"
+  ],
+  "列格7/底": [
+   [
+    0,
+    0,
+    40,
+    40
+   ],
+   "KeyboardListCellF(844) 40×40"
+  ],
+  "列格7/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KLC:44-49 非忍术槽铺 KeyboardShortcurIconF、(40−36)/2 居中；文=槽 家族"
+  ],
+  "列格7/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "列格8": [
+   [
+    360,
+    330.0,
+    40,
+    40
+   ],
+   "KF:131-143 x=24+(i%17)·42、y=345+14+⌊i/17⌋·42"
+  ],
+  "列格8/底": [
+   [
+    0,
+    0,
+    40,
+    40
+   ],
+   "KeyboardListCellF(844) 40×40"
+  ],
+  "列格8/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KLC:44-49 非忍术槽铺 KeyboardShortcurIconF、(40−36)/2 居中；文=槽 商城"
+  ],
+  "列格8/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "列格9": [
+   [
+    402,
+    330.0,
+    40,
+    40
+   ],
+   "KF:131-143 x=24+(i%17)·42、y=345+14+⌊i/17⌋·42"
+  ],
+  "列格9/底": [
+   [
+    0,
+    0,
+    40,
+    40
+   ],
+   "KeyboardListCellF(844) 40×40"
+  ],
+  "列格9/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KLC:44-49 非忍术槽铺 KeyboardShortcurIconF、(40−36)/2 居中；文=槽 系统设置"
+  ],
+  "列格9/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "列格10": [
+   [
+    444,
+    330.0,
+    40,
+    40
+   ],
+   "KF:131-143 x=24+(i%17)·42、y=345+14+⌊i/17⌋·42"
+  ],
+  "列格10/底": [
+   [
+    0,
+    0,
+    40,
+    40
+   ],
+   "KeyboardListCellF(844) 40×40"
+  ],
+  "列格10/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KLC:44-49 非忍术槽铺 KeyboardShortcurIconF、(40−36)/2 居中；文=槽 世界地图"
+  ],
+  "列格10/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "列格11": [
+   [
+    486,
+    330.0,
+    40,
+    40
+   ],
+   "KF:131-143 x=24+(i%17)·42、y=345+14+⌊i/17⌋·42"
+  ],
+  "列格11/底": [
+   [
+    0,
+    0,
+    40,
+    40
+   ],
+   "KeyboardListCellF(844) 40×40"
+  ],
+  "列格11/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KLC:44-49 非忍术槽铺 KeyboardShortcurIconF、(40−36)/2 居中；文=槽 遮罩造型"
+  ],
+  "列格11/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "列格12": [
+   [
+    528,
+    330.0,
+    40,
+    40
+   ],
+   "KF:131-143 x=24+(i%17)·42、y=345+14+⌊i/17⌋·42"
+  ],
+  "列格12/底": [
+   [
+    0,
+    0,
+    40,
+    40
+   ],
+   "KeyboardListCellF(844) 40×40"
+  ],
+  "列格12/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KLC:44-49 非忍术槽铺 KeyboardShortcurIconF、(40−36)/2 居中；文=槽 遮罩名字"
+  ],
+  "列格12/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "列格13": [
+   [
+    570,
+    330.0,
+    40,
+    40
+   ],
+   "KF:131-143 x=24+(i%17)·42、y=345+14+⌊i/17⌋·42"
+  ],
+  "列格13/底": [
+   [
+    0,
+    0,
+    40,
+    40
+   ],
+   "KeyboardListCellF(844) 40×40"
+  ],
+  "列格13/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KLC:44-49 非忍术槽铺 KeyboardShortcurIconF、(40−36)/2 居中；文=槽 音乐开关"
+  ],
+  "列格13/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "列格14": [
+   [
+    612,
+    330.0,
+    40,
+    40
+   ],
+   "KF:131-143 x=24+(i%17)·42、y=345+14+⌊i/17⌋·42"
+  ],
+  "列格14/底": [
+   [
+    0,
+    0,
+    40,
+    40
+   ],
+   "KeyboardListCellF(844) 40×40"
+  ],
+  "列格14/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KLC:44-49 非忍术槽铺 KeyboardShortcurIconF、(40−36)/2 居中；文=槽 修行经验"
+  ],
+  "列格14/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "列格15": [
+   [
+    654,
+    330.0,
+    40,
+    40
+   ],
+   "KF:131-143 x=24+(i%17)·42、y=345+14+⌊i/17⌋·42"
+  ],
+  "列格15/底": [
+   [
+    0,
+    0,
+    40,
+    40
+   ],
+   "KeyboardListCellF(844) 40×40"
+  ],
+  "列格15/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KLC:44-49 非忍术槽铺 KeyboardShortcurIconF、(40−36)/2 居中；文=槽 挂机设置"
+  ],
+  "列格15/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "列格16": [
+   [
+    696,
+    330.0,
+    40,
+    40
+   ],
+   "KF:131-143 x=24+(i%17)·42、y=345+14+⌊i/17⌋·42"
+  ],
+  "列格16/底": [
+   [
+    0,
+    0,
+    40,
+    40
+   ],
+   "KeyboardListCellF(844) 40×40"
+  ],
+  "列格16/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KLC:44-49 非忍术槽铺 KeyboardShortcurIconF、(40−36)/2 居中；文=槽 排行榜"
+  ],
+  "列格16/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "列格17": [
+   [
+    24,
+    372.0,
+    40,
+    40
+   ],
+   "KF:131-143 x=24+(i%17)·42、y=345+14+⌊i/17⌋·42"
+  ],
+  "列格17/底": [
+   [
+    0,
+    0,
+    40,
+    40
+   ],
+   "KeyboardListCellF(844) 40×40"
+  ],
+  "列格17/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KLC:44-49 非忍术槽铺 KeyboardShortcurIconF、(40−36)/2 居中；文=槽 角色成就"
+  ],
+  "列格17/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "列格18": [
+   [
+    66,
+    372.0,
+    40,
+    40
+   ],
+   "KF:131-143 x=24+(i%17)·42、y=345+14+⌊i/17⌋·42"
+  ],
+  "列格18/底": [
+   [
+    0,
+    0,
+    40,
+    40
+   ],
+   "KeyboardListCellF(844) 40×40"
+  ],
+  "列格18/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KLC:44-49 非忍术槽铺 KeyboardShortcurIconF、(40−36)/2 居中；文=槽 缩放聊天"
+  ],
+  "列格18/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "列格19": [
+   [
+    108,
+    372.0,
+    40,
+    40
+   ],
+   "KF:131-143 x=24+(i%17)·42、y=345+14+⌊i/17⌋·42"
+  ],
+  "列格19/底": [
+   [
+    0,
+    0,
+    40,
+    40
+   ],
+   "KeyboardListCellF(844) 40×40"
+  ],
+  "列格19/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KLC:44-49 非忍术槽铺 KeyboardShortcurIconF、(40−36)/2 居中；文=槽 切换目标"
+  ],
+  "列格19/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "列格20": [
+   [
+    150,
+    372.0,
+    40,
+    40
+   ],
+   "KF:131-143 x=24+(i%17)·42、y=345+14+⌊i/17⌋·42"
+  ],
+  "列格20/底": [
+   [
+    0,
+    0,
+    40,
+    40
+   ],
+   "KeyboardListCellF(844) 40×40"
+  ],
+  "列格20/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KLC:44-49 非忍术槽铺 KeyboardShortcurIconF、(40−36)/2 居中；文=槽 捡取"
+  ],
+  "列格20/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "列格21": [
+   [
+    192,
+    372.0,
+    40,
+    40
+   ],
+   "KF:131-143 x=24+(i%17)·42、y=345+14+⌊i/17⌋·42"
+  ],
+  "列格21/底": [
+   [
+    0,
+    0,
+    40,
+    40
+   ],
+   "KeyboardListCellF(844) 40×40"
+  ],
+  "列格21/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KLC:44-49 非忍术槽铺 KeyboardShortcurIconF、(40−36)/2 居中；文=槽 跳跃"
+  ],
+  "列格21/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "列格22": [
+   [
+    234,
+    372.0,
+    40,
+    40
+   ],
+   "KF:131-143 x=24+(i%17)·42、y=345+14+⌊i/17⌋·42"
+  ],
+  "列格22/底": [
+   [
+    0,
+    0,
+    40,
+    40
+   ],
+   "KeyboardListCellF(844) 40×40"
+  ],
+  "列格22/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KLC:44-49 非忍术槽铺 KeyboardShortcurIconF、(40−36)/2 居中；文=槽 打坐"
+  ],
+  "列格22/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "列格23": [
+   [
+    276,
+    372.0,
+    40,
+    40
+   ],
+   "KF:131-143 x=24+(i%17)·42、y=345+14+⌊i/17⌋·42"
+  ],
+  "列格23/底": [
+   [
+    0,
+    0,
+    40,
+    40
+   ],
+   "KeyboardListCellF(844) 40×40"
+  ],
+  "列格23/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KLC:44-49 非忍术槽铺 KeyboardShortcurIconF、(40−36)/2 居中；文=槽 自动挂机"
+  ],
+  "列格23/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "列格24": [
+   [
+    318,
+    372.0,
+    40,
+    40
+   ],
+   "KF:131-143 x=24+(i%17)·42、y=345+14+⌊i/17⌋·42"
+  ],
+  "列格24/底": [
+   [
+    0,
+    0,
+    40,
+    40
+   ],
+   "KeyboardListCellF(844) 40×40"
+  ],
+  "列格24/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KLC:44-49 非忍术槽铺 KeyboardShortcurIconF、(40−36)/2 居中；文=槽 通灵附身"
+  ],
+  "列格24/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "列格25": [
+   [
+    360,
+    372.0,
+    40,
+    40
+   ],
+   "KF:131-143 x=24+(i%17)·42、y=345+14+⌊i/17⌋·42"
+  ],
+  "列格25/底": [
+   [
+    0,
+    0,
+    40,
+    40
+   ],
+   "KeyboardListCellF(844) 40×40"
+  ],
+  "列格25/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KLC:44-49 非忍术槽铺 KeyboardShortcurIconF、(40−36)/2 居中；文=槽 上"
+  ],
+  "列格25/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "列格26": [
+   [
+    402,
+    372.0,
+    40,
+    40
+   ],
+   "KF:131-143 x=24+(i%17)·42、y=345+14+⌊i/17⌋·42"
+  ],
+  "列格26/底": [
+   [
+    0,
+    0,
+    40,
+    40
+   ],
+   "KeyboardListCellF(844) 40×40"
+  ],
+  "列格26/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KLC:44-49 非忍术槽铺 KeyboardShortcurIconF、(40−36)/2 居中；文=槽 下"
+  ],
+  "列格26/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "列格27": [
+   [
+    444,
+    372.0,
+    40,
+    40
+   ],
+   "KF:131-143 x=24+(i%17)·42、y=345+14+⌊i/17⌋·42"
+  ],
+  "列格27/底": [
+   [
+    0,
+    0,
+    40,
+    40
+   ],
+   "KeyboardListCellF(844) 40×40"
+  ],
+  "列格27/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KLC:44-49 非忍术槽铺 KeyboardShortcurIconF、(40−36)/2 居中；文=槽 左"
+  ],
+  "列格27/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "列格28": [
+   [
+    486,
+    372.0,
+    40,
+    40
+   ],
+   "KF:131-143 x=24+(i%17)·42、y=345+14+⌊i/17⌋·42"
+  ],
+  "列格28/底": [
+   [
+    0,
+    0,
+    40,
+    40
+   ],
+   "KeyboardListCellF(844) 40×40"
+  ],
+  "列格28/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KLC:44-49 非忍术槽铺 KeyboardShortcurIconF、(40−36)/2 居中；文=槽 右"
+  ],
+  "列格28/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "列格29": [
+   [
+    528,
+    372.0,
+    40,
+    40
+   ],
+   "KF:131-143 x=24+(i%17)·42、y=345+14+⌊i/17⌋·42"
+  ],
+  "列格29/底": [
+   [
+    0,
+    0,
+    40,
+    40
+   ],
+   "KeyboardListCellF(844) 40×40"
+  ],
+  "列格29/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KLC:44-49 非忍术槽铺 KeyboardShortcurIconF、(40−36)/2 居中；文=槽 攻击"
+  ],
+  "列格29/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "列格30": [
+   [
+    570,
+    372.0,
+    40,
+    40
+   ],
+   "KF:131-143 x=24+(i%17)·42、y=345+14+⌊i/17⌋·42"
+  ],
+  "列格30/底": [
+   [
+    0,
+    0,
+    40,
+    40
+   ],
+   "KeyboardListCellF(844) 40×40"
+  ],
+  "列格30/牌": [
+   [
+    2,
+    2,
+    36,
+    36
+   ],
+   "KLC:44-49 非忍术槽铺 KeyboardShortcurIconF、(40−36)/2 居中；文=槽 拔旗"
+  ],
+  "列格30/牌/牌字": [
+   [
+    5,
+    5,
+    31,
+    31
+   ],
+   "KSI:31-44 宋体分支 + 1121 bounds (−2,−2)-(29,29) ⇒ 盒 (5,5)31×31 右对齐"
+  ],
+  "列格31": [
+   [
+    612,
+    372.0,
+    40,
+    40
+   ],
+   "KF:131-143 x=24+(i%17)·42、y=345+14+⌊i/17⌋·42"
+  ],
+  "列格31/底": [
+   [
+    0,
+    0,
+    40,
+    40
+   ],
+   "KeyboardListCellF(844) 40×40"
+  ],
+  "列格32": [
+   [
+    654,
+    372.0,
+    40,
+    40
+   ],
+   "KF:131-143 x=24+(i%17)·42、y=345+14+⌊i/17⌋·42"
+  ],
+  "列格32/底": [
+   [
+    0,
+    0,
+    40,
+    40
+   ],
+   "KeyboardListCellF(844) 40×40"
+  ],
+  "列格33": [
+   [
+    696,
+    372.0,
+    40,
+    40
+   ],
+   "KF:131-143 x=24+(i%17)·42、y=345+14+⌊i/17⌋·42"
+  ],
+  "列格33/底": [
+   [
+    0,
+    0,
+    40,
+    40
+   ],
+   "KeyboardListCellF(844) 40×40"
+  ],
+  "钮确定": [
+   [
+    515,
+    288.0,
+    32,
+    22
+   ],
+   "KF:109-120 右对齐链（reset.x = 765−14−54）；文案键 KEYBOARD_OPERATE_BTNS_1 =「确定」"
+  ],
+  "钮确定/字确定": [
+   [
+    0,
+    0,
+    32,
+    22
+   ],
+   "钮上文字（MButton3 的 tf，MenuPane 同族口径）"
+  ],
+  "钮取消": [
+   [
+    552,
+    288.0,
+    32,
+    22
+   ],
+   "KF:109-120 右对齐链（reset.x = 765−14−54）；文案键 KEYBOARD_OPERATE_BTNS_2 =「取消」"
+  ],
+  "钮取消/字取消": [
+   [
+    0,
+    0,
+    32,
+    22
+   ],
+   "钮上文字（MButton3 的 tf，MenuPane 同族口径）"
+  ],
+  "钮全部重置": [
+   [
+    638,
+    288.0,
+    54,
+    22
+   ],
+   "KF:109-120 右对齐链（reset.x = 765−14−54）；文案键 KEYBOARD_OPERATE_BTNS_3 =「全部重置」"
+  ],
+  "钮全部重置/字全部重置": [
+   [
+    0,
+    0,
+    54,
+    22
+   ],
+   "钮上文字（MButton3 的 tf，MenuPane 同族口径）"
+  ],
+  "钮全部消除": [
+   [
+    697,
+    288.0,
+    54,
+    22
+   ],
+   "KF:109-120 右对齐链（reset.x = 765−14−54）；文案键 KEYBOARD_OPERATE_BTNS_4 =「全部消除」"
+  ],
+  "钮全部消除/字全部消除": [
+   [
+    0,
+    0,
+    54,
+    22
+   ],
+   "钮上文字（MButton3 的 tf，MenuPane 同族口径）"
+  ],
+  "钮方案1": [
+   [
+    14,
+    288.0,
+    72,
+    22
+   ],
+   "KF:766-785 x=14+(i−1)·75、宽 72、name=keyScheme1；KF:806 selected=1==selectedScheme(1)"
+  ],
+  "钮方案1/字方案1": [
+   [
+    0,
+    0,
+    72,
+    22
+   ],
+   "钮上文字（MButton3 的 tf，MenuPane 同族口径）"
+  ],
+  "钮方案2": [
+   [
+    89,
+    288.0,
+    72,
+    22
+   ],
+   "KF:766-785 x=14+(i−1)·75、宽 72、name=keyScheme2；KF:806 selected=2==selectedScheme(1)"
+  ],
+  "钮方案2/字方案2": [
+   [
+    0,
+    0,
+    72,
+    22
+   ],
+   "钮上文字（MButton3 的 tf，MenuPane 同族口径）"
+  ],
+  "钮方案3": [
+   [
+    164,
+    288.0,
+    72,
+    22
+   ],
+   "KF:766-785 x=14+(i−1)·75、宽 72、name=keyScheme3；KF:806 selected=3==selectedScheme(1)"
+  ],
+  "钮方案3/字方案3": [
+   [
+    0,
+    0,
+    72,
+    22
+   ],
+   "钮上文字（MButton3 的 tf，MenuPane 同族口径）"
+  ],
+  "钮方案4": [
+   [
+    239,
+    288.0,
+    72,
+    22
+   ],
+   "KF:766-785 x=14+(i−1)·75、宽 72、name=keyScheme4；KF:806 selected=4==selectedScheme(1)"
+  ],
+  "钮方案4/字方案4": [
+   [
+    0,
+    0,
+    72,
+    22
+   ],
+   "钮上文字（MButton3 的 tf，MenuPane 同族口径）"
+  ],
+  "钮方案5": [
+   [
+    314,
+    288.0,
+    72,
+    22
+   ],
+   "KF:766-785 x=14+(i−1)·75、宽 72、name=keyScheme5；KF:806 selected=5==selectedScheme(1)"
+  ],
+  "钮方案5/字方案5": [
+   [
+    0,
+    0,
+    72,
+    22
+   ],
+   "钮上文字（MButton3 的 tf，MenuPane 同族口径）"
+  ],
+  "钮保存方案": [
+   [
+    392,
+    288.0,
+    72,
+    22
+   ],
+   "KF:786-793 x=14+5·75+3=392、宽 72；文案键 KEYBOARD_SCHEME_SAVE"
+  ],
+  "钮保存方案/字保存方案": [
+   [
+    0,
+    0,
+    72,
+    22
+   ],
+   "钮上文字（MButton3 的 tf，MenuPane 同族口径）"
+  ]
+ },
+ "格数": 86,
+ "列表数": 34,
+ "宽键": {
+  "": 60,
+  "e": 55,
+  "shift": 87,
+  "shiftR": 87,
+  "ctrl": 60,
+  "wi": 60,
+  "alt": 60,
+  "s": 224,
+  "altR": 60,
+  "ctrlR": 60
+ },
+ "钮": [
+  [
+   "钮全部消除",
+   697,
+   288.0,
+   54
+  ],
+  [
+   "钮全部重置",
+   638,
+   288.0,
+   54
+  ],
+  [
+   "钮取消",
+   552,
+   288.0,
+   32
+  ],
+  [
+   "钮确定",
+   515,
+   288.0,
+   32
+  ]
+ ],
+ "方案": [
+  [
+   "钮方案1",
+   14,
+   288.0
+  ],
+  [
+   "钮方案2",
+   89,
+   288.0
+  ],
+  [
+   "钮方案3",
+   164,
+   288.0
+  ],
+  [
+   "钮方案4",
+   239,
+   288.0
+  ],
+  [
+   "钮方案5",
+   314,
+   288.0
+  ],
+  [
+   "钮保存方案",
+   392,
+   288.0
+  ]
+ ],
+ "文案": {
+  "方案前缀": "方案",
+  "空后缀": "(空)",
+  "保存": "保存方案"
+ }
+}

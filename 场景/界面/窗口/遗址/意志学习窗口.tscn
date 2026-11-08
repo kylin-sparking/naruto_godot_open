@@ -1,0 +1,1923 @@
+[gd_scene load_steps=25 format=3]
+; ── 意志学习（原版 `com/mxw/uifl/controls/yiZhi/YiZhiStudyWindow.as`，772×564，整窗 1:1 移植）──
+; 本文件由 `开发工具/生成意志学习场景.py` 从量具表 `截意志学习页.gd` 的 件路径/件期望 生成。
+; **改真值改量具表再重跑生成器，别手改本文件。** 逐件算式与出处见 `game-client/真值/窗口/意志学习.md`；
+; 场景 y = AS3 窗口局部 y − 29（`窗口尺寸.json` 的「意志学习」标 `整框: true` ⇒ 容器原点 (0,29)）。
+; 主美术来自运行期包 `swf/UISwf/UISwf_yizhi.swf`；四枚大钮皮来自 `UISwf_Text.swf`（前缀见 BaseUtil.getLocalPath）。
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/内容面板.png" id="t0"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/意志/背景.png" id="t1"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/意志/小标题底.png" id="t2"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/元宝币.png" id="t3"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/意志/阅历图标.png" id="t4"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/意志/意志格底.png" id="t5"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/意志/导师条底.png" id="t6"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/意志/导师悬停框.png" id="t7"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/意志/气泡1.png" id="t8"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/意志/气泡2.png" id="t9"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/意志/气泡3.png" id="t10"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/意志/钮_返回.png" id="t11"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/意志/钮_全部卖出.png" id="t12"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/意志/钮_全部拾取.png" id="t13"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/意志/钮_一键学习.png" id="t14"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/意志/打开背包钮.png" id="t15"]
+[ext_resource type="Texture2D" path="res://素材/界面/专用控件/意志_召唤.png" id="t16"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/意志/导师1.png" id="t17"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/意志/导师2.png" id="t18"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/意志/导师3.png" id="t19"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/意志/导师4.png" id="t20"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/意志/导师5.png" id="t21"]
+[sub_resource type="StyleBoxTexture" id="sb_yellow"]
+texture = ExtResource("t0")
+texture_margin_left = 11
+texture_margin_top = 10
+texture_margin_right = 10
+texture_margin_bottom = 11
+content_margin_left = 0.0
+content_margin_right = 0.0
+content_margin_top = 0.0
+content_margin_bottom = 0.0
+
+[sub_resource type="AnimatedTexture" id="anim_paopao"]
+frames = 3
+frame_0/texture = ExtResource("t8")
+frame_0/duration = 0.375
+frame_1/texture = ExtResource("t9")
+frame_1/duration = 0.375
+frame_2/texture = ExtResource("t10")
+frame_2/duration = 0.375
+
+[node name="原版意志学习内容" type="Control"]
+custom_minimum_size = Vector2(772, 535)
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 772.0
+offset_bottom = 535.0
+
+[node name="外框黄底" type="Panel" parent="."]
+theme_override_styles/panel = SubResource("sb_yellow")
+
+layout_mode = 0
+offset_left = 8.0
+offset_top = 9.0
+offset_right = 764.0
+offset_bottom = 527.0
+
+[node name="主背景" type="TextureRect" parent="."]
+texture = ExtResource("t1")
+expand_mode = 1
+
+layout_mode = 0
+offset_left = 10.0
+offset_top = 11.0
+offset_right = 760.0
+offset_bottom = 525.0
+
+[node name="小标题条" type="TextureRect" parent="."]
+texture = ExtResource("t2")
+expand_mode = 1
+
+layout_mode = 0
+offset_left = 15.0
+offset_top = 16.0
+offset_right = 205.0
+offset_bottom = 41.0
+
+[node name="货币条" type="Control" parent="."]
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 0
+offset_bottom = 0
+
+[node name="元宝图标" type="TextureRect" parent="货币条"]
+texture = ExtResource("t3")
+expand_mode = 1
+
+layout_mode = 0
+offset_left = 20.0
+offset_top = 21.0
+offset_right = 39.0
+offset_bottom = 34.0
+
+[node name="元宝数值" type="Label" parent="货币条"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 0.941176, 0, 1)
+horizontal_alignment = 0
+text = "0"
+
+layout_mode = 0
+offset_left = 39.0
+offset_top = 19.0
+offset_right = 99.0
+offset_bottom = 38.0
+
+[node name="阅历图标" type="TextureRect" parent="货币条"]
+texture = ExtResource("t4")
+expand_mode = 1
+
+layout_mode = 0
+offset_left = 109.0
+offset_top = 23.0
+offset_right = 126.0
+offset_bottom = 36.0
+
+[node name="阅历数值" type="Label" parent="货币条"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 0
+text = "0"
+
+layout_mode = 0
+offset_left = 126.0
+offset_top = 19.0
+offset_right = 186.0
+offset_bottom = 38.0
+
+[node name="意志容器" type="Control" parent="."]
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 15.0
+offset_top = 71.0
+offset_right = 727.0
+offset_bottom = 215.0
+
+[node name="意志格_0" type="Control" parent="意志容器"]
+visible = false
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 62.0
+offset_bottom = 62.0
+
+[node name="意志格_1" type="Control" parent="意志容器"]
+visible = false
+
+layout_mode = 0
+offset_left = 72.0
+offset_top = 0.0
+offset_right = 134.0
+offset_bottom = 62.0
+
+[node name="意志格_2" type="Control" parent="意志容器"]
+visible = false
+
+layout_mode = 0
+offset_left = 144.0
+offset_top = 0.0
+offset_right = 206.0
+offset_bottom = 62.0
+
+[node name="意志格_3" type="Control" parent="意志容器"]
+visible = false
+
+layout_mode = 0
+offset_left = 216.0
+offset_top = 0.0
+offset_right = 278.0
+offset_bottom = 62.0
+
+[node name="意志格_4" type="Control" parent="意志容器"]
+visible = false
+
+layout_mode = 0
+offset_left = 288.0
+offset_top = 0.0
+offset_right = 350.0
+offset_bottom = 62.0
+
+[node name="意志格_5" type="Control" parent="意志容器"]
+visible = false
+
+layout_mode = 0
+offset_left = 360.0
+offset_top = 0.0
+offset_right = 422.0
+offset_bottom = 62.0
+
+[node name="意志格_6" type="Control" parent="意志容器"]
+visible = false
+
+layout_mode = 0
+offset_left = 432.0
+offset_top = 0.0
+offset_right = 494.0
+offset_bottom = 62.0
+
+[node name="意志格_7" type="Control" parent="意志容器"]
+visible = false
+
+layout_mode = 0
+offset_left = 504.0
+offset_top = 0.0
+offset_right = 566.0
+offset_bottom = 62.0
+
+[node name="意志格_8" type="Control" parent="意志容器"]
+visible = false
+
+layout_mode = 0
+offset_left = 576.0
+offset_top = 0.0
+offset_right = 638.0
+offset_bottom = 62.0
+
+[node name="意志格_9" type="Control" parent="意志容器"]
+visible = false
+
+layout_mode = 0
+offset_left = 648.0
+offset_top = 0.0
+offset_right = 710.0
+offset_bottom = 62.0
+
+[node name="意志格_10" type="Control" parent="意志容器"]
+visible = false
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 82.0
+offset_right = 62.0
+offset_bottom = 144.0
+
+[node name="意志格_11" type="Control" parent="意志容器"]
+visible = false
+
+layout_mode = 0
+offset_left = 72.0
+offset_top = 82.0
+offset_right = 134.0
+offset_bottom = 144.0
+
+[node name="意志格_12" type="Control" parent="意志容器"]
+visible = false
+
+layout_mode = 0
+offset_left = 144.0
+offset_top = 82.0
+offset_right = 206.0
+offset_bottom = 144.0
+
+[node name="意志格_13" type="Control" parent="意志容器"]
+visible = false
+
+layout_mode = 0
+offset_left = 216.0
+offset_top = 82.0
+offset_right = 278.0
+offset_bottom = 144.0
+
+[node name="意志格_14" type="Control" parent="意志容器"]
+visible = false
+
+layout_mode = 0
+offset_left = 288.0
+offset_top = 82.0
+offset_right = 350.0
+offset_bottom = 144.0
+
+[node name="意志格_15" type="Control" parent="意志容器"]
+visible = false
+
+layout_mode = 0
+offset_left = 360.0
+offset_top = 82.0
+offset_right = 422.0
+offset_bottom = 144.0
+
+[node name="意志格_16" type="Control" parent="意志容器"]
+visible = false
+
+layout_mode = 0
+offset_left = 432.0
+offset_top = 82.0
+offset_right = 494.0
+offset_bottom = 144.0
+
+[node name="意志格_17" type="Control" parent="意志容器"]
+visible = false
+
+layout_mode = 0
+offset_left = 504.0
+offset_top = 82.0
+offset_right = 566.0
+offset_bottom = 144.0
+
+[node name="意志格_18" type="Control" parent="意志容器"]
+visible = false
+
+layout_mode = 0
+offset_left = 576.0
+offset_top = 82.0
+offset_right = 638.0
+offset_bottom = 144.0
+
+[node name="意志格_19" type="Control" parent="意志容器"]
+visible = false
+
+layout_mode = 0
+offset_left = 648.0
+offset_top = 82.0
+offset_right = 710.0
+offset_bottom = 144.0
+
+[node name="格底" type="TextureRect" parent="意志容器/意志格_0"]
+texture = ExtResource("t5")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 62.0
+offset_bottom = 62.0
+
+[node name="图标" type="TextureRect" parent="意志容器/意志格_0"]
+expand_mode = 1
+
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 59.0
+offset_bottom = 59.0
+
+[node name="名称" type="Label" parent="意志容器/意志格_0"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 24.0
+offset_right = 62.0
+offset_bottom = 43.0
+
+[node name="卖出" type="Label" parent="意志容器/意志格_0"]
+mouse_filter = 0
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 0.941176, 0, 1)
+horizontal_alignment = 2
+text = "卖出"
+
+layout_mode = 0
+offset_left = 2.0
+offset_top = 38.0
+offset_right = 60.0
+offset_bottom = 57.0
+
+[node name="拾取" type="Label" parent="意志容器/意志格_0"]
+mouse_filter = 0
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 0.941176, 0, 1)
+horizontal_alignment = 0
+text = "拾取"
+
+layout_mode = 0
+offset_left = 5.0
+offset_top = 38.0
+offset_right = 29.0
+offset_bottom = 57.0
+
+[node name="导师面板" type="Control" parent="."]
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 41.0
+offset_top = 425.0
+offset_right = 729.0
+offset_bottom = 512.0
+
+[node name="条底" type="TextureRect" parent="导师面板"]
+texture = ExtResource("t6")
+expand_mode = 1
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 688.0
+offset_bottom = 87.0
+
+[node name="导师容器" type="Control" parent="导师面板"]
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 14.0
+offset_top = 16.0
+offset_right = 374.0
+offset_bottom = 73.0
+
+[node name="导师_0" type="Control" parent="导师面板/导师容器"]
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 56.0
+offset_bottom = 57.0
+
+[node name="导师_1" type="Control" parent="导师面板/导师容器"]
+
+layout_mode = 0
+offset_left = 76.0
+offset_top = 0.0
+offset_right = 132.0
+offset_bottom = 57.0
+
+[node name="导师_2" type="Control" parent="导师面板/导师容器"]
+
+layout_mode = 0
+offset_left = 152.0
+offset_top = 0.0
+offset_right = 208.0
+offset_bottom = 57.0
+
+[node name="导师_3" type="Control" parent="导师面板/导师容器"]
+
+layout_mode = 0
+offset_left = 228.0
+offset_top = 0.0
+offset_right = 284.0
+offset_bottom = 57.0
+
+[node name="导师_4" type="Control" parent="导师面板/导师容器"]
+
+layout_mode = 0
+offset_left = 304.0
+offset_top = 0.0
+offset_right = 360.0
+offset_bottom = 57.0
+
+[node name="头像" type="TextureRect" parent="导师面板/导师容器/导师_0"]
+texture = ExtResource("t17")
+expand_mode = 1
+mouse_filter = 0
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 56.0
+offset_bottom = 57.0
+
+[node name="悬停框" type="TextureRect" parent="导师面板/导师容器/导师_0"]
+visible = false
+texture = ExtResource("t7")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 57.0
+offset_bottom = 57.0
+
+[node name="召唤" type="TextureButton" parent="导师面板/导师容器/导师_0"]
+visible = false
+texture_normal = ExtResource("t16")
+
+layout_mode = 0
+offset_left = 9.5
+offset_top = 46.0
+offset_right = 46.5
+offset_bottom = 68.0
+
+[node name="召唤文字" type="Label" parent="导师面板/导师容器/导师_0/召唤"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+horizontal_alignment = 1
+text = "召唤"
+
+vertical_alignment = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 37.0
+offset_bottom = 22.0
+
+[node name="气泡" type="TextureRect" parent="导师面板/导师容器/导师_0"]
+texture = SubResource("anim_paopao")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 34.0
+offset_top = -22.0
+offset_right = 80.0
+offset_bottom = 26.0
+
+[node name="头像" type="TextureRect" parent="导师面板/导师容器/导师_1"]
+texture = ExtResource("t18")
+expand_mode = 1
+mouse_filter = 0
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 56.0
+offset_bottom = 57.0
+
+[node name="悬停框" type="TextureRect" parent="导师面板/导师容器/导师_1"]
+visible = false
+texture = ExtResource("t7")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 57.0
+offset_bottom = 57.0
+
+[node name="召唤" type="TextureButton" parent="导师面板/导师容器/导师_1"]
+visible = false
+texture_normal = ExtResource("t16")
+
+layout_mode = 0
+offset_left = 9.5
+offset_top = 46.0
+offset_right = 46.5
+offset_bottom = 68.0
+
+[node name="召唤文字" type="Label" parent="导师面板/导师容器/导师_1/召唤"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+horizontal_alignment = 1
+text = "召唤"
+
+vertical_alignment = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 37.0
+offset_bottom = 22.0
+
+[node name="气泡" type="TextureRect" parent="导师面板/导师容器/导师_1"]
+visible = false
+texture = SubResource("anim_paopao")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 34.0
+offset_top = -22.0
+offset_right = 80.0
+offset_bottom = 26.0
+
+[node name="头像" type="TextureRect" parent="导师面板/导师容器/导师_2"]
+texture = ExtResource("t19")
+expand_mode = 1
+mouse_filter = 0
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 56.0
+offset_bottom = 57.0
+
+[node name="悬停框" type="TextureRect" parent="导师面板/导师容器/导师_2"]
+visible = false
+texture = ExtResource("t7")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 57.0
+offset_bottom = 57.0
+
+[node name="召唤" type="TextureButton" parent="导师面板/导师容器/导师_2"]
+visible = false
+texture_normal = ExtResource("t16")
+
+layout_mode = 0
+offset_left = 9.5
+offset_top = 46.0
+offset_right = 46.5
+offset_bottom = 68.0
+
+[node name="召唤文字" type="Label" parent="导师面板/导师容器/导师_2/召唤"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+horizontal_alignment = 1
+text = "召唤"
+
+vertical_alignment = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 37.0
+offset_bottom = 22.0
+
+[node name="气泡" type="TextureRect" parent="导师面板/导师容器/导师_2"]
+visible = false
+texture = SubResource("anim_paopao")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 34.0
+offset_top = -22.0
+offset_right = 80.0
+offset_bottom = 26.0
+
+[node name="头像" type="TextureRect" parent="导师面板/导师容器/导师_3"]
+texture = ExtResource("t20")
+expand_mode = 1
+mouse_filter = 0
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 56.0
+offset_bottom = 57.0
+
+[node name="悬停框" type="TextureRect" parent="导师面板/导师容器/导师_3"]
+visible = false
+texture = ExtResource("t7")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 57.0
+offset_bottom = 57.0
+
+[node name="召唤" type="TextureButton" parent="导师面板/导师容器/导师_3"]
+visible = false
+texture_normal = ExtResource("t16")
+
+layout_mode = 0
+offset_left = 9.5
+offset_top = 46.0
+offset_right = 46.5
+offset_bottom = 68.0
+
+[node name="召唤文字" type="Label" parent="导师面板/导师容器/导师_3/召唤"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+horizontal_alignment = 1
+text = "召唤"
+
+vertical_alignment = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 37.0
+offset_bottom = 22.0
+
+[node name="气泡" type="TextureRect" parent="导师面板/导师容器/导师_3"]
+visible = false
+texture = SubResource("anim_paopao")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 34.0
+offset_top = -22.0
+offset_right = 80.0
+offset_bottom = 26.0
+
+[node name="头像" type="TextureRect" parent="导师面板/导师容器/导师_4"]
+texture = ExtResource("t21")
+expand_mode = 1
+mouse_filter = 0
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 56.0
+offset_bottom = 57.0
+
+[node name="悬停框" type="TextureRect" parent="导师面板/导师容器/导师_4"]
+visible = false
+texture = ExtResource("t7")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 57.0
+offset_bottom = 57.0
+
+[node name="召唤" type="TextureButton" parent="导师面板/导师容器/导师_4"]
+visible = false
+texture_normal = ExtResource("t16")
+
+layout_mode = 0
+offset_left = 9.5
+offset_top = 46.0
+offset_right = 46.5
+offset_bottom = 68.0
+
+[node name="召唤文字" type="Label" parent="导师面板/导师容器/导师_4/召唤"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+horizontal_alignment = 1
+text = "召唤"
+
+vertical_alignment = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 37.0
+offset_bottom = 22.0
+
+[node name="气泡" type="TextureRect" parent="导师面板/导师容器/导师_4"]
+visible = false
+texture = SubResource("anim_paopao")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 34.0
+offset_top = -22.0
+offset_right = 80.0
+offset_bottom = 26.0
+
+[node name="今日次数" type="Label" parent="导师面板"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 0
+text = "今日还可免费学习意志0次"
+
+layout_mode = 0
+offset_left = 382.0
+offset_top = 0.0
+offset_right = 600.0
+offset_bottom = 19.0
+
+[node name="说明文字" type="RichTextLabel" parent="导师面板"]
+bbcode_enabled = true
+scroll_active = false
+fit_content = true
+text = "[color=#ffffff]离开教室20分钟后未领取的意志将被售出\n[/color][color=#ff9100]选择一位老师为你传授意志，你将有机会一次开启更高级的老师，老师的级别越高习得高级意志的机会越大。[/color]"
+
+layout_mode = 0
+offset_left = 382.0
+offset_top = 18.0
+offset_right = 608.0
+offset_bottom = 88.0
+
+[node name="一键学习" type="TextureButton" parent="导师面板"]
+texture_normal = ExtResource("t14")
+
+layout_mode = 0
+offset_left = 272.0
+offset_top = -35.0
+offset_right = 370.0
+offset_bottom = -2.0
+
+[node name="全部拾取" type="TextureButton" parent="导师面板"]
+texture_normal = ExtResource("t13")
+
+layout_mode = 0
+offset_left = 380.0
+offset_top = -30.0
+offset_right = 476.0
+offset_bottom = -2.0
+
+[node name="全部卖出" type="TextureButton" parent="导师面板"]
+texture_normal = ExtResource("t12")
+
+layout_mode = 0
+offset_left = 486.0
+offset_top = -30.0
+offset_right = 580.0
+offset_bottom = -2.0
+
+[node name="返回" type="TextureButton" parent="导师面板"]
+texture_normal = ExtResource("t11")
+
+layout_mode = 0
+offset_left = 590.0
+offset_top = -33.0
+offset_right = 678.0
+offset_bottom = 0.0
+
+[node name="打开背包" type="TextureButton" parent="导师面板"]
+texture_normal = ExtResource("t15")
+
+layout_mode = 0
+offset_left = 616.0
+offset_top = 16.0
+offset_right = 673.0
+offset_bottom = 77.0
+
+[node name="格底" type="TextureRect" parent="意志容器/意志格_1"]
+texture = ExtResource("t5")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 62.0
+offset_bottom = 62.0
+
+[node name="图标" type="TextureRect" parent="意志容器/意志格_1"]
+expand_mode = 1
+
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 59.0
+offset_bottom = 59.0
+
+[node name="名称" type="Label" parent="意志容器/意志格_1"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 24.0
+offset_right = 62.0
+offset_bottom = 43.0
+
+[node name="卖出" type="Label" parent="意志容器/意志格_1"]
+mouse_filter = 0
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 0.941176, 0, 1)
+horizontal_alignment = 2
+text = "卖出"
+
+layout_mode = 0
+offset_left = 2.0
+offset_top = 38.0
+offset_right = 60.0
+offset_bottom = 57.0
+
+[node name="拾取" type="Label" parent="意志容器/意志格_1"]
+mouse_filter = 0
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 0.941176, 0, 1)
+horizontal_alignment = 0
+text = "拾取"
+
+layout_mode = 0
+offset_left = 5.0
+offset_top = 38.0
+offset_right = 29.0
+offset_bottom = 57.0
+
+[node name="格底" type="TextureRect" parent="意志容器/意志格_2"]
+texture = ExtResource("t5")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 62.0
+offset_bottom = 62.0
+
+[node name="图标" type="TextureRect" parent="意志容器/意志格_2"]
+expand_mode = 1
+
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 59.0
+offset_bottom = 59.0
+
+[node name="名称" type="Label" parent="意志容器/意志格_2"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 24.0
+offset_right = 62.0
+offset_bottom = 43.0
+
+[node name="卖出" type="Label" parent="意志容器/意志格_2"]
+mouse_filter = 0
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 0.941176, 0, 1)
+horizontal_alignment = 2
+text = "卖出"
+
+layout_mode = 0
+offset_left = 2.0
+offset_top = 38.0
+offset_right = 60.0
+offset_bottom = 57.0
+
+[node name="拾取" type="Label" parent="意志容器/意志格_2"]
+mouse_filter = 0
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 0.941176, 0, 1)
+horizontal_alignment = 0
+text = "拾取"
+
+layout_mode = 0
+offset_left = 5.0
+offset_top = 38.0
+offset_right = 29.0
+offset_bottom = 57.0
+
+[node name="格底" type="TextureRect" parent="意志容器/意志格_3"]
+texture = ExtResource("t5")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 62.0
+offset_bottom = 62.0
+
+[node name="图标" type="TextureRect" parent="意志容器/意志格_3"]
+expand_mode = 1
+
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 59.0
+offset_bottom = 59.0
+
+[node name="名称" type="Label" parent="意志容器/意志格_3"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 24.0
+offset_right = 62.0
+offset_bottom = 43.0
+
+[node name="卖出" type="Label" parent="意志容器/意志格_3"]
+mouse_filter = 0
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 0.941176, 0, 1)
+horizontal_alignment = 2
+text = "卖出"
+
+layout_mode = 0
+offset_left = 2.0
+offset_top = 38.0
+offset_right = 60.0
+offset_bottom = 57.0
+
+[node name="拾取" type="Label" parent="意志容器/意志格_3"]
+mouse_filter = 0
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 0.941176, 0, 1)
+horizontal_alignment = 0
+text = "拾取"
+
+layout_mode = 0
+offset_left = 5.0
+offset_top = 38.0
+offset_right = 29.0
+offset_bottom = 57.0
+
+[node name="格底" type="TextureRect" parent="意志容器/意志格_4"]
+texture = ExtResource("t5")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 62.0
+offset_bottom = 62.0
+
+[node name="图标" type="TextureRect" parent="意志容器/意志格_4"]
+expand_mode = 1
+
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 59.0
+offset_bottom = 59.0
+
+[node name="名称" type="Label" parent="意志容器/意志格_4"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 24.0
+offset_right = 62.0
+offset_bottom = 43.0
+
+[node name="卖出" type="Label" parent="意志容器/意志格_4"]
+mouse_filter = 0
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 0.941176, 0, 1)
+horizontal_alignment = 2
+text = "卖出"
+
+layout_mode = 0
+offset_left = 2.0
+offset_top = 38.0
+offset_right = 60.0
+offset_bottom = 57.0
+
+[node name="拾取" type="Label" parent="意志容器/意志格_4"]
+mouse_filter = 0
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 0.941176, 0, 1)
+horizontal_alignment = 0
+text = "拾取"
+
+layout_mode = 0
+offset_left = 5.0
+offset_top = 38.0
+offset_right = 29.0
+offset_bottom = 57.0
+
+[node name="格底" type="TextureRect" parent="意志容器/意志格_5"]
+texture = ExtResource("t5")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 62.0
+offset_bottom = 62.0
+
+[node name="图标" type="TextureRect" parent="意志容器/意志格_5"]
+expand_mode = 1
+
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 59.0
+offset_bottom = 59.0
+
+[node name="名称" type="Label" parent="意志容器/意志格_5"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 24.0
+offset_right = 62.0
+offset_bottom = 43.0
+
+[node name="卖出" type="Label" parent="意志容器/意志格_5"]
+mouse_filter = 0
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 0.941176, 0, 1)
+horizontal_alignment = 2
+text = "卖出"
+
+layout_mode = 0
+offset_left = 2.0
+offset_top = 38.0
+offset_right = 60.0
+offset_bottom = 57.0
+
+[node name="拾取" type="Label" parent="意志容器/意志格_5"]
+mouse_filter = 0
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 0.941176, 0, 1)
+horizontal_alignment = 0
+text = "拾取"
+
+layout_mode = 0
+offset_left = 5.0
+offset_top = 38.0
+offset_right = 29.0
+offset_bottom = 57.0
+
+[node name="格底" type="TextureRect" parent="意志容器/意志格_6"]
+texture = ExtResource("t5")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 62.0
+offset_bottom = 62.0
+
+[node name="图标" type="TextureRect" parent="意志容器/意志格_6"]
+expand_mode = 1
+
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 59.0
+offset_bottom = 59.0
+
+[node name="名称" type="Label" parent="意志容器/意志格_6"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 24.0
+offset_right = 62.0
+offset_bottom = 43.0
+
+[node name="卖出" type="Label" parent="意志容器/意志格_6"]
+mouse_filter = 0
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 0.941176, 0, 1)
+horizontal_alignment = 2
+text = "卖出"
+
+layout_mode = 0
+offset_left = 2.0
+offset_top = 38.0
+offset_right = 60.0
+offset_bottom = 57.0
+
+[node name="拾取" type="Label" parent="意志容器/意志格_6"]
+mouse_filter = 0
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 0.941176, 0, 1)
+horizontal_alignment = 0
+text = "拾取"
+
+layout_mode = 0
+offset_left = 5.0
+offset_top = 38.0
+offset_right = 29.0
+offset_bottom = 57.0
+
+[node name="格底" type="TextureRect" parent="意志容器/意志格_7"]
+texture = ExtResource("t5")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 62.0
+offset_bottom = 62.0
+
+[node name="图标" type="TextureRect" parent="意志容器/意志格_7"]
+expand_mode = 1
+
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 59.0
+offset_bottom = 59.0
+
+[node name="名称" type="Label" parent="意志容器/意志格_7"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 24.0
+offset_right = 62.0
+offset_bottom = 43.0
+
+[node name="卖出" type="Label" parent="意志容器/意志格_7"]
+mouse_filter = 0
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 0.941176, 0, 1)
+horizontal_alignment = 2
+text = "卖出"
+
+layout_mode = 0
+offset_left = 2.0
+offset_top = 38.0
+offset_right = 60.0
+offset_bottom = 57.0
+
+[node name="拾取" type="Label" parent="意志容器/意志格_7"]
+mouse_filter = 0
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 0.941176, 0, 1)
+horizontal_alignment = 0
+text = "拾取"
+
+layout_mode = 0
+offset_left = 5.0
+offset_top = 38.0
+offset_right = 29.0
+offset_bottom = 57.0
+
+[node name="格底" type="TextureRect" parent="意志容器/意志格_8"]
+texture = ExtResource("t5")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 62.0
+offset_bottom = 62.0
+
+[node name="图标" type="TextureRect" parent="意志容器/意志格_8"]
+expand_mode = 1
+
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 59.0
+offset_bottom = 59.0
+
+[node name="名称" type="Label" parent="意志容器/意志格_8"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 24.0
+offset_right = 62.0
+offset_bottom = 43.0
+
+[node name="卖出" type="Label" parent="意志容器/意志格_8"]
+mouse_filter = 0
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 0.941176, 0, 1)
+horizontal_alignment = 2
+text = "卖出"
+
+layout_mode = 0
+offset_left = 2.0
+offset_top = 38.0
+offset_right = 60.0
+offset_bottom = 57.0
+
+[node name="拾取" type="Label" parent="意志容器/意志格_8"]
+mouse_filter = 0
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 0.941176, 0, 1)
+horizontal_alignment = 0
+text = "拾取"
+
+layout_mode = 0
+offset_left = 5.0
+offset_top = 38.0
+offset_right = 29.0
+offset_bottom = 57.0
+
+[node name="格底" type="TextureRect" parent="意志容器/意志格_9"]
+texture = ExtResource("t5")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 62.0
+offset_bottom = 62.0
+
+[node name="图标" type="TextureRect" parent="意志容器/意志格_9"]
+expand_mode = 1
+
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 59.0
+offset_bottom = 59.0
+
+[node name="名称" type="Label" parent="意志容器/意志格_9"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 24.0
+offset_right = 62.0
+offset_bottom = 43.0
+
+[node name="卖出" type="Label" parent="意志容器/意志格_9"]
+mouse_filter = 0
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 0.941176, 0, 1)
+horizontal_alignment = 2
+text = "卖出"
+
+layout_mode = 0
+offset_left = 2.0
+offset_top = 38.0
+offset_right = 60.0
+offset_bottom = 57.0
+
+[node name="拾取" type="Label" parent="意志容器/意志格_9"]
+mouse_filter = 0
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 0.941176, 0, 1)
+horizontal_alignment = 0
+text = "拾取"
+
+layout_mode = 0
+offset_left = 5.0
+offset_top = 38.0
+offset_right = 29.0
+offset_bottom = 57.0
+
+[node name="格底" type="TextureRect" parent="意志容器/意志格_10"]
+texture = ExtResource("t5")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 62.0
+offset_bottom = 62.0
+
+[node name="图标" type="TextureRect" parent="意志容器/意志格_10"]
+expand_mode = 1
+
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 59.0
+offset_bottom = 59.0
+
+[node name="名称" type="Label" parent="意志容器/意志格_10"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 24.0
+offset_right = 62.0
+offset_bottom = 43.0
+
+[node name="卖出" type="Label" parent="意志容器/意志格_10"]
+mouse_filter = 0
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 0.941176, 0, 1)
+horizontal_alignment = 2
+text = "卖出"
+
+layout_mode = 0
+offset_left = 2.0
+offset_top = 38.0
+offset_right = 60.0
+offset_bottom = 57.0
+
+[node name="拾取" type="Label" parent="意志容器/意志格_10"]
+mouse_filter = 0
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 0.941176, 0, 1)
+horizontal_alignment = 0
+text = "拾取"
+
+layout_mode = 0
+offset_left = 5.0
+offset_top = 38.0
+offset_right = 29.0
+offset_bottom = 57.0
+
+[node name="格底" type="TextureRect" parent="意志容器/意志格_11"]
+texture = ExtResource("t5")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 62.0
+offset_bottom = 62.0
+
+[node name="图标" type="TextureRect" parent="意志容器/意志格_11"]
+expand_mode = 1
+
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 59.0
+offset_bottom = 59.0
+
+[node name="名称" type="Label" parent="意志容器/意志格_11"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 24.0
+offset_right = 62.0
+offset_bottom = 43.0
+
+[node name="卖出" type="Label" parent="意志容器/意志格_11"]
+mouse_filter = 0
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 0.941176, 0, 1)
+horizontal_alignment = 2
+text = "卖出"
+
+layout_mode = 0
+offset_left = 2.0
+offset_top = 38.0
+offset_right = 60.0
+offset_bottom = 57.0
+
+[node name="拾取" type="Label" parent="意志容器/意志格_11"]
+mouse_filter = 0
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 0.941176, 0, 1)
+horizontal_alignment = 0
+text = "拾取"
+
+layout_mode = 0
+offset_left = 5.0
+offset_top = 38.0
+offset_right = 29.0
+offset_bottom = 57.0
+
+[node name="格底" type="TextureRect" parent="意志容器/意志格_12"]
+texture = ExtResource("t5")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 62.0
+offset_bottom = 62.0
+
+[node name="图标" type="TextureRect" parent="意志容器/意志格_12"]
+expand_mode = 1
+
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 59.0
+offset_bottom = 59.0
+
+[node name="名称" type="Label" parent="意志容器/意志格_12"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 24.0
+offset_right = 62.0
+offset_bottom = 43.0
+
+[node name="卖出" type="Label" parent="意志容器/意志格_12"]
+mouse_filter = 0
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 0.941176, 0, 1)
+horizontal_alignment = 2
+text = "卖出"
+
+layout_mode = 0
+offset_left = 2.0
+offset_top = 38.0
+offset_right = 60.0
+offset_bottom = 57.0
+
+[node name="拾取" type="Label" parent="意志容器/意志格_12"]
+mouse_filter = 0
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 0.941176, 0, 1)
+horizontal_alignment = 0
+text = "拾取"
+
+layout_mode = 0
+offset_left = 5.0
+offset_top = 38.0
+offset_right = 29.0
+offset_bottom = 57.0
+
+[node name="格底" type="TextureRect" parent="意志容器/意志格_13"]
+texture = ExtResource("t5")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 62.0
+offset_bottom = 62.0
+
+[node name="图标" type="TextureRect" parent="意志容器/意志格_13"]
+expand_mode = 1
+
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 59.0
+offset_bottom = 59.0
+
+[node name="名称" type="Label" parent="意志容器/意志格_13"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 24.0
+offset_right = 62.0
+offset_bottom = 43.0
+
+[node name="卖出" type="Label" parent="意志容器/意志格_13"]
+mouse_filter = 0
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 0.941176, 0, 1)
+horizontal_alignment = 2
+text = "卖出"
+
+layout_mode = 0
+offset_left = 2.0
+offset_top = 38.0
+offset_right = 60.0
+offset_bottom = 57.0
+
+[node name="拾取" type="Label" parent="意志容器/意志格_13"]
+mouse_filter = 0
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 0.941176, 0, 1)
+horizontal_alignment = 0
+text = "拾取"
+
+layout_mode = 0
+offset_left = 5.0
+offset_top = 38.0
+offset_right = 29.0
+offset_bottom = 57.0
+
+[node name="格底" type="TextureRect" parent="意志容器/意志格_14"]
+texture = ExtResource("t5")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 62.0
+offset_bottom = 62.0
+
+[node name="图标" type="TextureRect" parent="意志容器/意志格_14"]
+expand_mode = 1
+
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 59.0
+offset_bottom = 59.0
+
+[node name="名称" type="Label" parent="意志容器/意志格_14"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 24.0
+offset_right = 62.0
+offset_bottom = 43.0
+
+[node name="卖出" type="Label" parent="意志容器/意志格_14"]
+mouse_filter = 0
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 0.941176, 0, 1)
+horizontal_alignment = 2
+text = "卖出"
+
+layout_mode = 0
+offset_left = 2.0
+offset_top = 38.0
+offset_right = 60.0
+offset_bottom = 57.0
+
+[node name="拾取" type="Label" parent="意志容器/意志格_14"]
+mouse_filter = 0
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 0.941176, 0, 1)
+horizontal_alignment = 0
+text = "拾取"
+
+layout_mode = 0
+offset_left = 5.0
+offset_top = 38.0
+offset_right = 29.0
+offset_bottom = 57.0
+
+[node name="格底" type="TextureRect" parent="意志容器/意志格_15"]
+texture = ExtResource("t5")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 62.0
+offset_bottom = 62.0
+
+[node name="图标" type="TextureRect" parent="意志容器/意志格_15"]
+expand_mode = 1
+
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 59.0
+offset_bottom = 59.0
+
+[node name="名称" type="Label" parent="意志容器/意志格_15"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 24.0
+offset_right = 62.0
+offset_bottom = 43.0
+
+[node name="卖出" type="Label" parent="意志容器/意志格_15"]
+mouse_filter = 0
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 0.941176, 0, 1)
+horizontal_alignment = 2
+text = "卖出"
+
+layout_mode = 0
+offset_left = 2.0
+offset_top = 38.0
+offset_right = 60.0
+offset_bottom = 57.0
+
+[node name="拾取" type="Label" parent="意志容器/意志格_15"]
+mouse_filter = 0
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 0.941176, 0, 1)
+horizontal_alignment = 0
+text = "拾取"
+
+layout_mode = 0
+offset_left = 5.0
+offset_top = 38.0
+offset_right = 29.0
+offset_bottom = 57.0
+
+[node name="格底" type="TextureRect" parent="意志容器/意志格_16"]
+texture = ExtResource("t5")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 62.0
+offset_bottom = 62.0
+
+[node name="图标" type="TextureRect" parent="意志容器/意志格_16"]
+expand_mode = 1
+
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 59.0
+offset_bottom = 59.0
+
+[node name="名称" type="Label" parent="意志容器/意志格_16"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 24.0
+offset_right = 62.0
+offset_bottom = 43.0
+
+[node name="卖出" type="Label" parent="意志容器/意志格_16"]
+mouse_filter = 0
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 0.941176, 0, 1)
+horizontal_alignment = 2
+text = "卖出"
+
+layout_mode = 0
+offset_left = 2.0
+offset_top = 38.0
+offset_right = 60.0
+offset_bottom = 57.0
+
+[node name="拾取" type="Label" parent="意志容器/意志格_16"]
+mouse_filter = 0
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 0.941176, 0, 1)
+horizontal_alignment = 0
+text = "拾取"
+
+layout_mode = 0
+offset_left = 5.0
+offset_top = 38.0
+offset_right = 29.0
+offset_bottom = 57.0
+
+[node name="格底" type="TextureRect" parent="意志容器/意志格_17"]
+texture = ExtResource("t5")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 62.0
+offset_bottom = 62.0
+
+[node name="图标" type="TextureRect" parent="意志容器/意志格_17"]
+expand_mode = 1
+
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 59.0
+offset_bottom = 59.0
+
+[node name="名称" type="Label" parent="意志容器/意志格_17"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 24.0
+offset_right = 62.0
+offset_bottom = 43.0
+
+[node name="卖出" type="Label" parent="意志容器/意志格_17"]
+mouse_filter = 0
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 0.941176, 0, 1)
+horizontal_alignment = 2
+text = "卖出"
+
+layout_mode = 0
+offset_left = 2.0
+offset_top = 38.0
+offset_right = 60.0
+offset_bottom = 57.0
+
+[node name="拾取" type="Label" parent="意志容器/意志格_17"]
+mouse_filter = 0
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 0.941176, 0, 1)
+horizontal_alignment = 0
+text = "拾取"
+
+layout_mode = 0
+offset_left = 5.0
+offset_top = 38.0
+offset_right = 29.0
+offset_bottom = 57.0
+
+[node name="格底" type="TextureRect" parent="意志容器/意志格_18"]
+texture = ExtResource("t5")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 62.0
+offset_bottom = 62.0
+
+[node name="图标" type="TextureRect" parent="意志容器/意志格_18"]
+expand_mode = 1
+
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 59.0
+offset_bottom = 59.0
+
+[node name="名称" type="Label" parent="意志容器/意志格_18"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 24.0
+offset_right = 62.0
+offset_bottom = 43.0
+
+[node name="卖出" type="Label" parent="意志容器/意志格_18"]
+mouse_filter = 0
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 0.941176, 0, 1)
+horizontal_alignment = 2
+text = "卖出"
+
+layout_mode = 0
+offset_left = 2.0
+offset_top = 38.0
+offset_right = 60.0
+offset_bottom = 57.0
+
+[node name="拾取" type="Label" parent="意志容器/意志格_18"]
+mouse_filter = 0
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 0.941176, 0, 1)
+horizontal_alignment = 0
+text = "拾取"
+
+layout_mode = 0
+offset_left = 5.0
+offset_top = 38.0
+offset_right = 29.0
+offset_bottom = 57.0
+
+[node name="格底" type="TextureRect" parent="意志容器/意志格_19"]
+texture = ExtResource("t5")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 62.0
+offset_bottom = 62.0
+
+[node name="图标" type="TextureRect" parent="意志容器/意志格_19"]
+expand_mode = 1
+
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 59.0
+offset_bottom = 59.0
+
+[node name="名称" type="Label" parent="意志容器/意志格_19"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 24.0
+offset_right = 62.0
+offset_bottom = 43.0
+
+[node name="卖出" type="Label" parent="意志容器/意志格_19"]
+mouse_filter = 0
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 0.941176, 0, 1)
+horizontal_alignment = 2
+text = "卖出"
+
+layout_mode = 0
+offset_left = 2.0
+offset_top = 38.0
+offset_right = 60.0
+offset_bottom = 57.0
+
+[node name="拾取" type="Label" parent="意志容器/意志格_19"]
+mouse_filter = 0
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 0.941176, 0, 1)
+horizontal_alignment = 0
+text = "拾取"
+
+layout_mode = 0
+offset_left = 5.0
+offset_top = 38.0
+offset_right = 29.0
+offset_bottom = 57.0

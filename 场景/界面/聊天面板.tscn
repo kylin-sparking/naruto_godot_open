@@ -1,0 +1,635 @@
+[gd_scene format=3 uid="uid://bolnvfgiti01a"]
+
+; 原版聊天栏（`com/mxw/uifl/controls/ChatPane.as` + 时间轴符号 symbol229 `ChatPaneF`）。
+; 真值：`game-client/真值/窗口/聊天栏.md`。装配 `UIMain2.as:4256-4257` x=1、y=STAGE_HEIGHT−266。
+; 时间轴摆位从元件图 `DefineSprite_229_ChatPaneF`（278×199）实测：
+;   页签带 y=154 高 18：六枚 x=30/66/102/138/174/210（皮 35×18、运行期 `ChatPane.as:248` 设宽 37），
+;   表情钮 x=246 宽 25；输入带 y=172 高 27：^钮 x=3、输入条 x=27 宽 239、
+;   频道钮 x=28 宽 41、输入框 x=70..244、发送钮 x=248 宽 26。
+; 滚动区 `ChatPane.as:260-263` (26,7) 265×144，条在左（MScrollPannel 左移一条宽），
+;   文字宽 245 ⇒ 消息区 (41,7) 250×144；展开 `RESIZE_HEIGHT=200`（`ChatPane.as:65,353-383`）。
+; 选中页签 = disabled 灰皮（`ChatPane.as:873-880`）；行距 5（行高 18 = `MTextSprite.as:98`）。
+
+[ext_resource type="Script" uid="uid://d3je7tqbgi61" path="res://脚本/界面/聊天面板.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://素材/界面/专用控件/聊天面板底.png" id="2_面板底"]
+[ext_resource type="Texture2D" path="res://素材/界面/专用控件/聊天滚动上.png" id="3_滚上"]
+[ext_resource type="Texture2D" path="res://素材/界面/专用控件/聊天滚动下.png" id="4_滚下"]
+[ext_resource type="Texture2D" path="res://素材/界面/专用控件/聊天滚动槽.png" id="5_滚槽"]
+[ext_resource type="Texture2D" path="res://素材/界面/专用控件/聊天滚动滑块.png" id="6_滑块"]
+[ext_resource type="Texture2D" path="res://素材/界面/专用控件/聊天输入条.png" id="7_输入条"]
+[ext_resource type="Texture2D" path="res://素材/界面/专用控件/聊天页签.png" id="8_页签"]
+[ext_resource type="Texture2D" path="res://素材/界面/专用控件/聊天页签_选中.png" id="9_页签选中"]
+[ext_resource type="Texture2D" path="res://素材/界面/专用控件/聊天表情钮.png" id="10_表情"]
+[ext_resource type="Texture2D" path="res://素材/界面/专用控件/聊天展开钮.png" id="11_展开"]
+[ext_resource type="Texture2D" path="res://素材/界面/专用控件/聊天频道钮.png" id="12_频道钮"]
+[ext_resource type="Texture2D" path="res://素材/界面/专用控件/聊天输入框底.png" id="13_输入框底"]
+[ext_resource type="Texture2D" path="res://素材/界面/专用控件/聊天发送钮.png" id="14_发送"]
+[ext_resource type="Texture2D" path="res://素材/界面/专用控件/聊天喇叭底.png" id="15_喇叭底"]
+[ext_resource type="Texture2D" path="res://素材/界面/专用控件/聊天表情底.png" id="16_表情底"]
+[ext_resource type="PackedScene" path="res://场景/界面/组件/聊天表情按钮.tscn" id="17_表情格"]
+[ext_resource type="Texture2D" path="res://素材/界面/专用控件/聊天弹层底.png" id="18_弹层底"]
+[ext_resource type="Texture2D" path="res://素材/界面/专用控件/聊天菜单钮.png" id="19_菜单钮"]
+[ext_resource type="Texture2D" path="res://素材/界面/专用控件/聊天隐藏.png" id="20_隐藏"]
+[ext_resource type="Texture2D" path="res://素材/界面/专用控件/聊天显示.png" id="21_显示"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleEmpty"]
+
+[sub_resource type="StyleBoxTexture" id="MenuBtn"]
+texture = ExtResource("19_菜单钮")
+texture_margin_left = 0.0
+texture_margin_top = 0.0
+texture_margin_right = 0.0
+texture_margin_bottom = 0.0
+content_margin_left = 0.0
+content_margin_right = 0.0
+content_margin_top = 0.0
+content_margin_bottom = 0.0
+
+[node name="聊天面板" type="CanvasLayer" groups=["chat_panel"]]
+layer = 100
+script = ExtResource("1_script")
+
+[node name="聊天内容" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -266.0
+offset_right = 279.0
+offset_bottom = -67.0
+grow_vertical = 0
+
+[node name="面板底" type="NinePatchRect" parent="聊天内容"]
+layout_mode = 0
+offset_right = 278.0
+offset_bottom = 199.0
+mouse_filter = 2
+texture = ExtResource("2_面板底")
+patch_margin_left = 14
+patch_margin_top = 12
+patch_margin_right = 15
+patch_margin_bottom = 13
+
+[node name="滚动条" type="Control" parent="聊天内容"]
+visible = false
+layout_mode = 0
+offset_left = 26.0
+offset_top = 7.0
+offset_right = 41.0
+offset_bottom = 151.0
+mouse_filter = 2
+
+[node name="滚动上" type="TextureButton" parent="聊天内容/滚动条"]
+layout_mode = 0
+offset_right = 15.0
+offset_bottom = 14.0
+tooltip_text = "向上滚动"
+focus_mode = 0
+texture_normal = ExtResource("3_滚上")
+ignore_texture_size = true
+
+[node name="滚动槽" type="TextureRect" parent="聊天内容/滚动条"]
+layout_mode = 0
+offset_top = 14.0
+offset_right = 15.0
+offset_bottom = 130.0
+mouse_filter = 2
+texture = ExtResource("5_滚槽")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="滑块底" type="NinePatchRect" parent="聊天内容/滚动条"]
+layout_mode = 0
+offset_top = 14.0
+offset_right = 15.0
+offset_bottom = 51.0
+mouse_filter = 2
+texture = ExtResource("6_滑块")
+patch_margin_left = 6
+patch_margin_top = 9
+patch_margin_right = 6
+patch_margin_bottom = 9
+
+[node name="滑块" type="TextureButton" parent="聊天内容/滚动条"]
+layout_mode = 0
+offset_top = 14.0
+offset_right = 15.0
+offset_bottom = 51.0
+tooltip_text = "拖动聊天记录"
+focus_mode = 0
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="滚动下" type="TextureButton" parent="聊天内容/滚动条"]
+layout_mode = 0
+offset_top = 130.0
+offset_right = 15.0
+offset_bottom = 144.0
+tooltip_text = "向下滚动"
+focus_mode = 0
+texture_normal = ExtResource("4_滚下")
+ignore_texture_size = true
+
+[node name="消息窗口" type="Control" parent="聊天内容"]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 7.0
+offset_right = 291.0
+offset_bottom = 151.0
+clip_contents = true
+
+[node name="消息区" type="RichTextLabel" parent="聊天内容/消息窗口"]
+layout_mode = 0
+offset_right = 250.0
+offset_bottom = 144.0
+mouse_filter = 1
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_constants/line_separation = 5
+theme_override_font_sizes/normal_font_size = 12
+bbcode_enabled = true
+scroll_active = false
+
+[node name="输入条" type="TextureRect" parent="聊天内容"]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 172.0
+offset_right = 278.0
+offset_bottom = 199.0
+mouse_filter = 2
+texture = ExtResource("7_输入条")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="页签综合" type="TextureButton" parent="聊天内容"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 154.0
+offset_right = 67.0
+offset_bottom = 172.0
+focus_mode = 0
+texture_normal = ExtResource("8_页签")
+texture_disabled = ExtResource("9_页签选中")
+ignore_texture_size = true
+
+[node name="Label" type="Label" parent="聊天内容/页签综合"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.847, 0.863, 0.902, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "综合"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="页签普通" type="TextureButton" parent="聊天内容"]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 154.0
+offset_right = 103.0
+offset_bottom = 172.0
+focus_mode = 0
+texture_normal = ExtResource("8_页签")
+texture_disabled = ExtResource("9_页签选中")
+ignore_texture_size = true
+
+[node name="Label" type="Label" parent="聊天内容/页签普通"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.847, 0.863, 0.902, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "普通"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="页签私聊" type="TextureButton" parent="聊天内容"]
+layout_mode = 0
+offset_left = 102.0
+offset_top = 154.0
+offset_right = 139.0
+offset_bottom = 172.0
+focus_mode = 0
+texture_normal = ExtResource("8_页签")
+texture_disabled = ExtResource("9_页签选中")
+ignore_texture_size = true
+
+[node name="Label" type="Label" parent="聊天内容/页签私聊"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.847, 0.863, 0.902, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "私聊"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="页签队伍" type="TextureButton" parent="聊天内容"]
+layout_mode = 0
+offset_left = 138.0
+offset_top = 154.0
+offset_right = 175.0
+offset_bottom = 172.0
+focus_mode = 0
+texture_normal = ExtResource("8_页签")
+texture_disabled = ExtResource("9_页签选中")
+ignore_texture_size = true
+
+[node name="Label" type="Label" parent="聊天内容/页签队伍"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.847, 0.863, 0.902, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "队伍"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="页签家族" type="TextureButton" parent="聊天内容"]
+layout_mode = 0
+offset_left = 174.0
+offset_top = 154.0
+offset_right = 211.0
+offset_bottom = 172.0
+focus_mode = 0
+texture_normal = ExtResource("8_页签")
+texture_disabled = ExtResource("9_页签选中")
+ignore_texture_size = true
+
+[node name="Label" type="Label" parent="聊天内容/页签家族"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.847, 0.863, 0.902, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "家族"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="页签世界" type="TextureButton" parent="聊天内容"]
+layout_mode = 0
+offset_left = 210.0
+offset_top = 154.0
+offset_right = 247.0
+offset_bottom = 172.0
+focus_mode = 0
+texture_normal = ExtResource("8_页签")
+texture_disabled = ExtResource("9_页签选中")
+ignore_texture_size = true
+
+[node name="Label" type="Label" parent="聊天内容/页签世界"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.847, 0.863, 0.902, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "世界"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="表情钮" type="TextureButton" parent="聊天内容"]
+layout_mode = 0
+offset_left = 246.0
+offset_top = 154.0
+offset_right = 271.0
+offset_bottom = 172.0
+tooltip_text = "表情"
+focus_mode = 0
+texture_normal = ExtResource("10_表情")
+ignore_texture_size = true
+
+[node name="展开钮" type="TextureButton" parent="聊天内容"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 174.0
+offset_right = 26.0
+offset_bottom = 197.0
+tooltip_text = "展开"
+focus_mode = 0
+toggle_mode = true
+texture_normal = ExtResource("11_展开")
+ignore_texture_size = true
+
+[node name="频道钮" type="TextureButton" parent="聊天内容"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 174.0
+offset_right = 69.0
+offset_bottom = 197.0
+tooltip_text = "选择聊天频道"
+focus_mode = 0
+texture_normal = ExtResource("12_频道钮")
+ignore_texture_size = true
+
+[node name="Label" type="Label" parent="聊天内容/频道钮"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.847, 0.863, 0.902, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "世界"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="输入框底" type="NinePatchRect" parent="聊天内容"]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 174.0
+offset_right = 245.0
+offset_bottom = 197.0
+mouse_filter = 2
+texture = ExtResource("13_输入框底")
+patch_margin_left = 7
+patch_margin_top = 6
+patch_margin_right = 7
+patch_margin_bottom = 6
+
+[node name="输入框" type="LineEdit" parent="聊天内容"]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 174.0
+offset_right = 245.0
+offset_bottom = 197.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/caret_color = Color(1, 0.85, 0.55, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleEmpty")
+theme_override_styles/focus = SubResource("StyleEmpty")
+max_length = 100
+
+[node name="发送钮" type="TextureButton" parent="聊天内容"]
+layout_mode = 0
+offset_left = 248.0
+offset_top = 174.0
+offset_right = 274.0
+offset_bottom = 197.0
+tooltip_text = "发送"
+focus_mode = 0
+texture_normal = ExtResource("14_发送")
+ignore_texture_size = true
+
+[node name="喇叭条" type="Control" parent="聊天内容"]
+visible = false
+layout_mode = 0
+offset_top = -26.0
+offset_right = 278.0
+offset_bottom = -1.0
+mouse_filter = 2
+
+[node name="喇叭底" type="NinePatchRect" parent="聊天内容/喇叭条"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("15_喇叭底")
+patch_margin_left = 16
+patch_margin_top = 11
+patch_margin_right = 16
+patch_margin_bottom = 13
+
+[node name="喇叭列表" type="VBoxContainer" parent="聊天内容/喇叭条"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 275.0
+offset_bottom = 28.0
+mouse_filter = 2
+
+[node name="表情面板" type="Control" parent="聊天内容"]
+visible = false
+layout_mode = 0
+offset_left = 83.0
+offset_top = -34.0
+offset_right = 271.0
+offset_bottom = 154.0
+z_index = 21
+
+[node name="表情底" type="NinePatchRect" parent="聊天内容/表情面板"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("16_表情底")
+patch_margin_left = 19
+patch_margin_top = 15
+patch_margin_right = 19
+patch_margin_bottom = 15
+
+[node name="表情网格" type="GridContainer" parent="聊天内容/表情面板"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+theme_override_constants/h_separation = 5
+theme_override_constants/v_separation = 5
+mouse_filter = 2
+columns = 6
+
+[node name="表情01" parent="聊天内容/表情面板/表情网格" instance=ExtResource("17_表情格")]
+[node name="表情02" parent="聊天内容/表情面板/表情网格" instance=ExtResource("17_表情格")]
+[node name="表情03" parent="聊天内容/表情面板/表情网格" instance=ExtResource("17_表情格")]
+[node name="表情04" parent="聊天内容/表情面板/表情网格" instance=ExtResource("17_表情格")]
+[node name="表情05" parent="聊天内容/表情面板/表情网格" instance=ExtResource("17_表情格")]
+[node name="表情06" parent="聊天内容/表情面板/表情网格" instance=ExtResource("17_表情格")]
+[node name="表情07" parent="聊天内容/表情面板/表情网格" instance=ExtResource("17_表情格")]
+[node name="表情08" parent="聊天内容/表情面板/表情网格" instance=ExtResource("17_表情格")]
+[node name="表情09" parent="聊天内容/表情面板/表情网格" instance=ExtResource("17_表情格")]
+[node name="表情10" parent="聊天内容/表情面板/表情网格" instance=ExtResource("17_表情格")]
+[node name="表情11" parent="聊天内容/表情面板/表情网格" instance=ExtResource("17_表情格")]
+[node name="表情12" parent="聊天内容/表情面板/表情网格" instance=ExtResource("17_表情格")]
+[node name="表情13" parent="聊天内容/表情面板/表情网格" instance=ExtResource("17_表情格")]
+[node name="表情14" parent="聊天内容/表情面板/表情网格" instance=ExtResource("17_表情格")]
+[node name="表情15" parent="聊天内容/表情面板/表情网格" instance=ExtResource("17_表情格")]
+[node name="表情16" parent="聊天内容/表情面板/表情网格" instance=ExtResource("17_表情格")]
+[node name="表情17" parent="聊天内容/表情面板/表情网格" instance=ExtResource("17_表情格")]
+[node name="表情18" parent="聊天内容/表情面板/表情网格" instance=ExtResource("17_表情格")]
+[node name="表情19" parent="聊天内容/表情面板/表情网格" instance=ExtResource("17_表情格")]
+[node name="表情20" parent="聊天内容/表情面板/表情网格" instance=ExtResource("17_表情格")]
+[node name="表情21" parent="聊天内容/表情面板/表情网格" instance=ExtResource("17_表情格")]
+[node name="表情22" parent="聊天内容/表情面板/表情网格" instance=ExtResource("17_表情格")]
+[node name="表情23" parent="聊天内容/表情面板/表情网格" instance=ExtResource("17_表情格")]
+[node name="表情24" parent="聊天内容/表情面板/表情网格" instance=ExtResource("17_表情格")]
+[node name="表情25" parent="聊天内容/表情面板/表情网格" instance=ExtResource("17_表情格")]
+[node name="表情26" parent="聊天内容/表情面板/表情网格" instance=ExtResource("17_表情格")]
+[node name="表情27" parent="聊天内容/表情面板/表情网格" instance=ExtResource("17_表情格")]
+[node name="表情28" parent="聊天内容/表情面板/表情网格" instance=ExtResource("17_表情格")]
+[node name="表情29" parent="聊天内容/表情面板/表情网格" instance=ExtResource("17_表情格")]
+[node name="表情30" parent="聊天内容/表情面板/表情网格" instance=ExtResource("17_表情格")]
+[node name="表情31" parent="聊天内容/表情面板/表情网格" instance=ExtResource("17_表情格")]
+[node name="表情32" parent="聊天内容/表情面板/表情网格" instance=ExtResource("17_表情格")]
+[node name="表情33" parent="聊天内容/表情面板/表情网格" instance=ExtResource("17_表情格")]
+[node name="表情34" parent="聊天内容/表情面板/表情网格" instance=ExtResource("17_表情格")]
+[node name="表情35" parent="聊天内容/表情面板/表情网格" instance=ExtResource("17_表情格")]
+[node name="表情36" parent="聊天内容/表情面板/表情网格" instance=ExtResource("17_表情格")]
+
+[node name="频道菜单" type="Control" parent="聊天内容"]
+visible = false
+layout_mode = 0
+offset_left = 20.0
+offset_top = 59.0
+offset_right = 73.0
+offset_bottom = 179.0
+z_index = 20
+
+[node name="菜单底" type="NinePatchRect" parent="聊天内容/频道菜单"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("18_弹层底")
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+
+[node name="频道列表" type="VBoxContainer" parent="聊天内容/频道菜单"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 50.0
+offset_bottom = 117.0
+theme_override_constants/separation = 0
+
+[node name="普通" type="Button" parent="聊天内容/频道菜单/频道列表"]
+custom_minimum_size = Vector2(47, 19)
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("MenuBtn")
+theme_override_styles/hover = SubResource("MenuBtn")
+theme_override_styles/pressed = SubResource("MenuBtn")
+text = "普通"
+flat = true
+
+[node name="私聊" type="Button" parent="聊天内容/频道菜单/频道列表"]
+custom_minimum_size = Vector2(47, 19)
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("MenuBtn")
+theme_override_styles/hover = SubResource("MenuBtn")
+theme_override_styles/pressed = SubResource("MenuBtn")
+text = "私聊"
+flat = true
+
+[node name="队伍" type="Button" parent="聊天内容/频道菜单/频道列表"]
+custom_minimum_size = Vector2(47, 19)
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("MenuBtn")
+theme_override_styles/hover = SubResource("MenuBtn")
+theme_override_styles/pressed = SubResource("MenuBtn")
+text = "队伍"
+flat = true
+
+[node name="家族" type="Button" parent="聊天内容/频道菜单/频道列表"]
+custom_minimum_size = Vector2(47, 19)
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("MenuBtn")
+theme_override_styles/hover = SubResource("MenuBtn")
+theme_override_styles/pressed = SubResource("MenuBtn")
+text = "家族"
+flat = true
+
+[node name="世界" type="Button" parent="聊天内容/频道菜单/频道列表"]
+custom_minimum_size = Vector2(47, 19)
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("MenuBtn")
+theme_override_styles/hover = SubResource("MenuBtn")
+theme_override_styles/pressed = SubResource("MenuBtn")
+text = "世界"
+flat = true
+
+[node name="喇叭" type="Button" parent="聊天内容/频道菜单/频道列表"]
+custom_minimum_size = Vector2(47, 19)
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("MenuBtn")
+theme_override_styles/hover = SubResource("MenuBtn")
+theme_override_styles/pressed = SubResource("MenuBtn")
+text = "喇叭"
+flat = true
+
+[node name="隐藏聊天" type="TextureButton" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -66.0
+offset_right = 21.0
+offset_bottom = -43.0
+grow_vertical = 0
+tooltip_text = "点击隐藏聊天框"
+focus_mode = 0
+texture_normal = ExtResource("20_隐藏")
+ignore_texture_size = true
+
+[node name="显示聊天" type="TextureButton" parent="."]
+visible = false
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -66.0
+offset_right = 21.0
+offset_bottom = -43.0
+grow_vertical = 0
+tooltip_text = "点击展开聊天框"
+focus_mode = 0
+texture_normal = ExtResource("21_显示")
+ignore_texture_size = true

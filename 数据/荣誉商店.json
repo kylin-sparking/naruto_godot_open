@@ -1,0 +1,49 @@
+{
+ "_说明": "2026-10-20 新增（§3.227 荣誉类页签）。真值出处：GameData `MuyeBattle.shop`，客户端读法 `RongYuPanel.setData():91-107`（`ImgUtil.getImg(ImgType.MuyeBattle,\"shop\")`，**不发任何请求**）；服务端同段读法 `fake_flash_server.py:6181 muye_battle_shop()`，兑换判定 `:30002 _redeem_muye_battle_reward`。`itemId`/`famePoint` 是 GameData **原样字段名** ⇒ 不改名（理由见 开发工具/导出荣誉商店.py）。行序 = GameData 键序 `0..10`，已按数值排好；商品名与 `detaildesc` 不在本表，运行期查 `游戏数据.item_name` / `item_detail`（`StringTool.getItemStringObject` 同义）。",
+ "条目": [
+  {
+   "itemId": 1410001,
+   "famePoint": 1000
+  },
+  {
+   "itemId": 13200000,
+   "famePoint": 2
+  },
+  {
+   "itemId": 16000035,
+   "famePoint": 50
+  },
+  {
+   "itemId": 16000015,
+   "famePoint": 5
+  },
+  {
+   "itemId": 11010077,
+   "famePoint": 10
+  },
+  {
+   "itemId": 15028002,
+   "famePoint": 3
+  },
+  {
+   "itemId": 15028001,
+   "famePoint": 40
+  },
+  {
+   "itemId": 11020006,
+   "famePoint": 30
+  },
+  {
+   "itemId": 11020012,
+   "famePoint": 6
+  },
+  {
+   "itemId": 11020016,
+   "famePoint": 100
+  },
+  {
+   "itemId": 11010099,
+   "famePoint": 20
+  }
+ ]
+}

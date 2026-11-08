@@ -1,0 +1,17 @@
+{
+ "revision": 1,
+ "overrides": {
+  "system_configs": {
+   "EquipSystem": {
+    "forgeAdditive": {
+     "prob": 25
+    },
+    "strength": {
+     "level11": {
+      "prob": 25
+     }
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,1737 @@
+[gd_scene load_steps=112 format=3]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/跨服/进入钮.png" id="t1"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/跨服/进入钮_悬停.png" id="t2"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/跨服/进入钮_按下.png" id="t3"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/跨服/刷新钮.png" id="t4"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/跨服/刷新钮_悬停.png" id="t5"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/跨服/刷新钮_按下.png" id="t6"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/跨服/频道格.png" id="t7"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/跨服/频道格_悬停.png" id="t8"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/跨服/频道格_按下.png" id="t9"]
+
+[sub_resource type="StyleBoxTexture" id="sb1_n"]
+texture = ExtResource("t1")
+
+[sub_resource type="StyleBoxTexture" id="sb1_h"]
+texture = ExtResource("t2")
+
+[sub_resource type="StyleBoxTexture" id="sb1_p"]
+texture = ExtResource("t3")
+
+[sub_resource type="StyleBoxTexture" id="sb2_n"]
+texture = ExtResource("t4")
+
+[sub_resource type="StyleBoxTexture" id="sb2_h"]
+texture = ExtResource("t5")
+
+[sub_resource type="StyleBoxTexture" id="sb2_p"]
+texture = ExtResource("t6")
+
+[sub_resource type="StyleBoxTexture" id="sb3_n"]
+texture = ExtResource("t7")
+
+[sub_resource type="StyleBoxTexture" id="sb3_h"]
+texture = ExtResource("t8")
+
+[sub_resource type="StyleBoxTexture" id="sb3_p"]
+texture = ExtResource("t9")
+
+[sub_resource type="StyleBoxTexture" id="sb4_n"]
+texture = ExtResource("t7")
+
+[sub_resource type="StyleBoxTexture" id="sb4_h"]
+texture = ExtResource("t8")
+
+[sub_resource type="StyleBoxTexture" id="sb4_p"]
+texture = ExtResource("t9")
+
+[sub_resource type="StyleBoxTexture" id="sb5_n"]
+texture = ExtResource("t7")
+
+[sub_resource type="StyleBoxTexture" id="sb5_h"]
+texture = ExtResource("t8")
+
+[sub_resource type="StyleBoxTexture" id="sb5_p"]
+texture = ExtResource("t9")
+
+[sub_resource type="StyleBoxTexture" id="sb6_n"]
+texture = ExtResource("t7")
+
+[sub_resource type="StyleBoxTexture" id="sb6_h"]
+texture = ExtResource("t8")
+
+[sub_resource type="StyleBoxTexture" id="sb6_p"]
+texture = ExtResource("t9")
+
+[sub_resource type="StyleBoxTexture" id="sb7_n"]
+texture = ExtResource("t7")
+
+[sub_resource type="StyleBoxTexture" id="sb7_h"]
+texture = ExtResource("t8")
+
+[sub_resource type="StyleBoxTexture" id="sb7_p"]
+texture = ExtResource("t9")
+
+[sub_resource type="StyleBoxTexture" id="sb8_n"]
+texture = ExtResource("t7")
+
+[sub_resource type="StyleBoxTexture" id="sb8_h"]
+texture = ExtResource("t8")
+
+[sub_resource type="StyleBoxTexture" id="sb8_p"]
+texture = ExtResource("t9")
+
+[sub_resource type="StyleBoxTexture" id="sb9_n"]
+texture = ExtResource("t7")
+
+[sub_resource type="StyleBoxTexture" id="sb9_h"]
+texture = ExtResource("t8")
+
+[sub_resource type="StyleBoxTexture" id="sb9_p"]
+texture = ExtResource("t9")
+
+[sub_resource type="StyleBoxTexture" id="sb10_n"]
+texture = ExtResource("t7")
+
+[sub_resource type="StyleBoxTexture" id="sb10_h"]
+texture = ExtResource("t8")
+
+[sub_resource type="StyleBoxTexture" id="sb10_p"]
+texture = ExtResource("t9")
+
+[sub_resource type="StyleBoxTexture" id="sb11_n"]
+texture = ExtResource("t7")
+
+[sub_resource type="StyleBoxTexture" id="sb11_h"]
+texture = ExtResource("t8")
+
+[sub_resource type="StyleBoxTexture" id="sb11_p"]
+texture = ExtResource("t9")
+
+[sub_resource type="StyleBoxTexture" id="sb12_n"]
+texture = ExtResource("t7")
+
+[sub_resource type="StyleBoxTexture" id="sb12_h"]
+texture = ExtResource("t8")
+
+[sub_resource type="StyleBoxTexture" id="sb12_p"]
+texture = ExtResource("t9")
+
+[sub_resource type="StyleBoxTexture" id="sb13_n"]
+texture = ExtResource("t7")
+
+[sub_resource type="StyleBoxTexture" id="sb13_h"]
+texture = ExtResource("t8")
+
+[sub_resource type="StyleBoxTexture" id="sb13_p"]
+texture = ExtResource("t9")
+
+[sub_resource type="StyleBoxTexture" id="sb14_n"]
+texture = ExtResource("t7")
+
+[sub_resource type="StyleBoxTexture" id="sb14_h"]
+texture = ExtResource("t8")
+
+[sub_resource type="StyleBoxTexture" id="sb14_p"]
+texture = ExtResource("t9")
+
+[sub_resource type="StyleBoxTexture" id="sb15_n"]
+texture = ExtResource("t7")
+
+[sub_resource type="StyleBoxTexture" id="sb15_h"]
+texture = ExtResource("t8")
+
+[sub_resource type="StyleBoxTexture" id="sb15_p"]
+texture = ExtResource("t9")
+
+[sub_resource type="StyleBoxTexture" id="sb16_n"]
+texture = ExtResource("t7")
+
+[sub_resource type="StyleBoxTexture" id="sb16_h"]
+texture = ExtResource("t8")
+
+[sub_resource type="StyleBoxTexture" id="sb16_p"]
+texture = ExtResource("t9")
+
+[sub_resource type="StyleBoxTexture" id="sb17_n"]
+texture = ExtResource("t7")
+
+[sub_resource type="StyleBoxTexture" id="sb17_h"]
+texture = ExtResource("t8")
+
+[sub_resource type="StyleBoxTexture" id="sb17_p"]
+texture = ExtResource("t9")
+
+[sub_resource type="StyleBoxTexture" id="sb18_n"]
+texture = ExtResource("t7")
+
+[sub_resource type="StyleBoxTexture" id="sb18_h"]
+texture = ExtResource("t8")
+
+[sub_resource type="StyleBoxTexture" id="sb18_p"]
+texture = ExtResource("t9")
+
+[sub_resource type="StyleBoxTexture" id="sb19_n"]
+texture = ExtResource("t7")
+
+[sub_resource type="StyleBoxTexture" id="sb19_h"]
+texture = ExtResource("t8")
+
+[sub_resource type="StyleBoxTexture" id="sb19_p"]
+texture = ExtResource("t9")
+
+[sub_resource type="StyleBoxTexture" id="sb20_n"]
+texture = ExtResource("t7")
+
+[sub_resource type="StyleBoxTexture" id="sb20_h"]
+texture = ExtResource("t8")
+
+[sub_resource type="StyleBoxTexture" id="sb20_p"]
+texture = ExtResource("t9")
+
+[sub_resource type="StyleBoxTexture" id="sb21_n"]
+texture = ExtResource("t7")
+
+[sub_resource type="StyleBoxTexture" id="sb21_h"]
+texture = ExtResource("t8")
+
+[sub_resource type="StyleBoxTexture" id="sb21_p"]
+texture = ExtResource("t9")
+
+[sub_resource type="StyleBoxTexture" id="sb22_n"]
+texture = ExtResource("t7")
+
+[sub_resource type="StyleBoxTexture" id="sb22_h"]
+texture = ExtResource("t8")
+
+[sub_resource type="StyleBoxTexture" id="sb22_p"]
+texture = ExtResource("t9")
+
+[sub_resource type="StyleBoxTexture" id="sb23_n"]
+texture = ExtResource("t7")
+
+[sub_resource type="StyleBoxTexture" id="sb23_h"]
+texture = ExtResource("t8")
+
+[sub_resource type="StyleBoxTexture" id="sb23_p"]
+texture = ExtResource("t9")
+
+[sub_resource type="StyleBoxTexture" id="sb24_n"]
+texture = ExtResource("t7")
+
+[sub_resource type="StyleBoxTexture" id="sb24_h"]
+texture = ExtResource("t8")
+
+[sub_resource type="StyleBoxTexture" id="sb24_p"]
+texture = ExtResource("t9")
+
+[sub_resource type="StyleBoxTexture" id="sb25_n"]
+texture = ExtResource("t7")
+
+[sub_resource type="StyleBoxTexture" id="sb25_h"]
+texture = ExtResource("t8")
+
+[sub_resource type="StyleBoxTexture" id="sb25_p"]
+texture = ExtResource("t9")
+
+[sub_resource type="StyleBoxTexture" id="sb26_n"]
+texture = ExtResource("t7")
+
+[sub_resource type="StyleBoxTexture" id="sb26_h"]
+texture = ExtResource("t8")
+
+[sub_resource type="StyleBoxTexture" id="sb26_p"]
+texture = ExtResource("t9")
+
+[sub_resource type="StyleBoxTexture" id="sb27_n"]
+texture = ExtResource("t7")
+
+[sub_resource type="StyleBoxTexture" id="sb27_h"]
+texture = ExtResource("t8")
+
+[sub_resource type="StyleBoxTexture" id="sb27_p"]
+texture = ExtResource("t9")
+
+[sub_resource type="StyleBoxTexture" id="sb28_n"]
+texture = ExtResource("t7")
+
+[sub_resource type="StyleBoxTexture" id="sb28_h"]
+texture = ExtResource("t8")
+
+[sub_resource type="StyleBoxTexture" id="sb28_p"]
+texture = ExtResource("t9")
+
+[sub_resource type="StyleBoxTexture" id="sb29_n"]
+texture = ExtResource("t7")
+
+[sub_resource type="StyleBoxTexture" id="sb29_h"]
+texture = ExtResource("t8")
+
+[sub_resource type="StyleBoxTexture" id="sb29_p"]
+texture = ExtResource("t9")
+
+[sub_resource type="StyleBoxTexture" id="sb30_n"]
+texture = ExtResource("t7")
+
+[sub_resource type="StyleBoxTexture" id="sb30_h"]
+texture = ExtResource("t8")
+
+[sub_resource type="StyleBoxTexture" id="sb30_p"]
+texture = ExtResource("t9")
+
+[sub_resource type="StyleBoxTexture" id="sb31_n"]
+texture = ExtResource("t7")
+
+[sub_resource type="StyleBoxTexture" id="sb31_h"]
+texture = ExtResource("t8")
+
+[sub_resource type="StyleBoxTexture" id="sb31_p"]
+texture = ExtResource("t9")
+
+[sub_resource type="StyleBoxTexture" id="sb32_n"]
+texture = ExtResource("t7")
+
+[sub_resource type="StyleBoxTexture" id="sb32_h"]
+texture = ExtResource("t8")
+
+[sub_resource type="StyleBoxTexture" id="sb32_p"]
+texture = ExtResource("t9")
+
+[sub_resource type="StyleBoxTexture" id="sb33_n"]
+texture = ExtResource("t7")
+
+[sub_resource type="StyleBoxTexture" id="sb33_h"]
+texture = ExtResource("t8")
+
+[sub_resource type="StyleBoxTexture" id="sb33_p"]
+texture = ExtResource("t9")
+
+[sub_resource type="StyleBoxTexture" id="sb34_n"]
+texture = ExtResource("t7")
+
+[sub_resource type="StyleBoxTexture" id="sb34_h"]
+texture = ExtResource("t8")
+
+[sub_resource type="StyleBoxTexture" id="sb34_p"]
+texture = ExtResource("t9")
+
+[node name="原版跨服频道内容" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 595
+offset_bottom = 422.0
+
+[node name="频道列表" type="Control" parent="."]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 18.0
+offset_top = 19.0
+offset_right = 578.0
+offset_bottom = 382.0
+
+[node name="频道名头" type="Label" parent="."]
+text = "跨服战场频道:"
+theme_override_colors/font_color = Color(0.000000, 1.000000, 0.000000, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 18.0
+offset_top = 14.0
+offset_right = 218.0
+offset_bottom = 34.0
+
+[node name="等级名头" type="Label" parent="."]
+text = "60级--80级跨服战场："
+theme_override_colors/font_color = Color(0.000000, 1.000000, 0.000000, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 18.0
+offset_top = 304.0
+offset_right = 218.0
+offset_bottom = 324.0
+
+[node name="进入钮" type="Button" parent="."]
+theme_override_styles/normal = SubResource("sb1_n")
+theme_override_styles/hover = SubResource("sb1_h")
+theme_override_styles/pressed = SubResource("sb1_p")
+text = "进入跨服战场"
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+layout_mode = 0
+offset_left = 256.5
+offset_top = 395.0
+offset_right = 338.5
+offset_bottom = 417.0
+
+[node name="刷新钮" type="Button" parent="."]
+theme_override_styles/normal = SubResource("sb2_n")
+theme_override_styles/hover = SubResource("sb2_h")
+theme_override_styles/pressed = SubResource("sb2_p")
+text = "刷新"
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+layout_mode = 0
+offset_left = 550.0
+offset_top = 395.0
+offset_right = 587.0
+offset_bottom = 417.0
+
+[node name="频道格1" type="Button" parent="频道列表"]
+theme_override_styles/normal = SubResource("sb3_n")
+theme_override_styles/hover = SubResource("sb3_h")
+theme_override_styles/pressed = SubResource("sb3_p")
+text = ""
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+theme_override_styles/disabled = SubResource("sb3_n")
+theme_override_colors/font_disabled_color = Color(0.443137, 0.439216, 0.407843, 1)
+toggle_mode = true
+disabled = true
+layout_mode = 0
+offset_left = 0.0
+offset_top = 17.0
+offset_right = 180.0
+offset_bottom = 43.0
+
+[node name="频道格1名" type="Label" parent="频道列表/频道格1"]
+text = "跨服频道 01"
+theme_override_colors/font_color = Color(0.443137, 0.439216, 0.407843, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 94.0
+offset_bottom = 22.0
+
+[node name="频道格1态" type="Label" parent="频道列表/频道格1"]
+text = "（维护）"
+theme_override_colors/font_color = Color(0.443137, 0.439216, 0.407843, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 104.0
+offset_top = 2.0
+offset_right = 174.0
+offset_bottom = 22.0
+
+[node name="频道格2" type="Button" parent="频道列表"]
+theme_override_styles/normal = SubResource("sb4_n")
+theme_override_styles/hover = SubResource("sb4_h")
+theme_override_styles/pressed = SubResource("sb4_p")
+text = ""
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+theme_override_styles/disabled = SubResource("sb4_n")
+theme_override_colors/font_disabled_color = Color(0.443137, 0.439216, 0.407843, 1)
+toggle_mode = true
+disabled = true
+layout_mode = 0
+offset_left = 190.0
+offset_top = 17.0
+offset_right = 370.0
+offset_bottom = 43.0
+
+[node name="频道格2名" type="Label" parent="频道列表/频道格2"]
+text = "跨服频道 02"
+theme_override_colors/font_color = Color(0.443137, 0.439216, 0.407843, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 94.0
+offset_bottom = 22.0
+
+[node name="频道格2态" type="Label" parent="频道列表/频道格2"]
+text = "（维护）"
+theme_override_colors/font_color = Color(0.443137, 0.439216, 0.407843, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 104.0
+offset_top = 2.0
+offset_right = 174.0
+offset_bottom = 22.0
+
+[node name="频道格3" type="Button" parent="频道列表"]
+theme_override_styles/normal = SubResource("sb5_n")
+theme_override_styles/hover = SubResource("sb5_h")
+theme_override_styles/pressed = SubResource("sb5_p")
+text = ""
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+theme_override_styles/disabled = SubResource("sb5_n")
+theme_override_colors/font_disabled_color = Color(0.443137, 0.439216, 0.407843, 1)
+toggle_mode = true
+disabled = true
+layout_mode = 0
+offset_left = 380.0
+offset_top = 17.0
+offset_right = 560.0
+offset_bottom = 43.0
+
+[node name="频道格3名" type="Label" parent="频道列表/频道格3"]
+text = "跨服频道 03"
+theme_override_colors/font_color = Color(0.443137, 0.439216, 0.407843, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 94.0
+offset_bottom = 22.0
+
+[node name="频道格3态" type="Label" parent="频道列表/频道格3"]
+text = "（维护）"
+theme_override_colors/font_color = Color(0.443137, 0.439216, 0.407843, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 104.0
+offset_top = 2.0
+offset_right = 174.0
+offset_bottom = 22.0
+
+[node name="频道格4" type="Button" parent="频道列表"]
+theme_override_styles/normal = SubResource("sb6_n")
+theme_override_styles/hover = SubResource("sb6_h")
+theme_override_styles/pressed = SubResource("sb6_p")
+text = ""
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+theme_override_styles/disabled = SubResource("sb6_n")
+theme_override_colors/font_disabled_color = Color(0.443137, 0.439216, 0.407843, 1)
+toggle_mode = true
+disabled = true
+layout_mode = 0
+offset_left = 0.0
+offset_top = 47.0
+offset_right = 180.0
+offset_bottom = 73.0
+
+[node name="频道格4名" type="Label" parent="频道列表/频道格4"]
+text = "跨服频道 04"
+theme_override_colors/font_color = Color(0.443137, 0.439216, 0.407843, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 94.0
+offset_bottom = 22.0
+
+[node name="频道格4态" type="Label" parent="频道列表/频道格4"]
+text = "（维护）"
+theme_override_colors/font_color = Color(0.443137, 0.439216, 0.407843, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 104.0
+offset_top = 2.0
+offset_right = 174.0
+offset_bottom = 22.0
+
+[node name="频道格5" type="Button" parent="频道列表"]
+theme_override_styles/normal = SubResource("sb7_n")
+theme_override_styles/hover = SubResource("sb7_h")
+theme_override_styles/pressed = SubResource("sb7_p")
+text = ""
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+theme_override_styles/disabled = SubResource("sb7_n")
+theme_override_colors/font_disabled_color = Color(0.443137, 0.439216, 0.407843, 1)
+toggle_mode = true
+disabled = true
+layout_mode = 0
+offset_left = 190.0
+offset_top = 47.0
+offset_right = 370.0
+offset_bottom = 73.0
+
+[node name="频道格5名" type="Label" parent="频道列表/频道格5"]
+text = "跨服频道 05"
+theme_override_colors/font_color = Color(0.443137, 0.439216, 0.407843, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 94.0
+offset_bottom = 22.0
+
+[node name="频道格5态" type="Label" parent="频道列表/频道格5"]
+text = "（维护）"
+theme_override_colors/font_color = Color(0.443137, 0.439216, 0.407843, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 104.0
+offset_top = 2.0
+offset_right = 174.0
+offset_bottom = 22.0
+
+[node name="频道格6" type="Button" parent="频道列表"]
+theme_override_styles/normal = SubResource("sb8_n")
+theme_override_styles/hover = SubResource("sb8_h")
+theme_override_styles/pressed = SubResource("sb8_p")
+text = ""
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+theme_override_styles/disabled = SubResource("sb8_n")
+theme_override_colors/font_disabled_color = Color(0.443137, 0.439216, 0.407843, 1)
+toggle_mode = true
+disabled = true
+layout_mode = 0
+offset_left = 380.0
+offset_top = 47.0
+offset_right = 560.0
+offset_bottom = 73.0
+
+[node name="频道格6名" type="Label" parent="频道列表/频道格6"]
+text = "跨服频道 06"
+theme_override_colors/font_color = Color(0.443137, 0.439216, 0.407843, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 94.0
+offset_bottom = 22.0
+
+[node name="频道格6态" type="Label" parent="频道列表/频道格6"]
+text = "（维护）"
+theme_override_colors/font_color = Color(0.443137, 0.439216, 0.407843, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 104.0
+offset_top = 2.0
+offset_right = 174.0
+offset_bottom = 22.0
+
+[node name="频道格7" type="Button" parent="频道列表"]
+theme_override_styles/normal = SubResource("sb9_n")
+theme_override_styles/hover = SubResource("sb9_h")
+theme_override_styles/pressed = SubResource("sb9_p")
+text = ""
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+theme_override_styles/disabled = SubResource("sb9_n")
+theme_override_colors/font_disabled_color = Color(0.443137, 0.439216, 0.407843, 1)
+toggle_mode = true
+disabled = true
+layout_mode = 0
+offset_left = 0.0
+offset_top = 77.0
+offset_right = 180.0
+offset_bottom = 103.0
+
+[node name="频道格7名" type="Label" parent="频道列表/频道格7"]
+text = "跨服频道 07"
+theme_override_colors/font_color = Color(0.443137, 0.439216, 0.407843, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 94.0
+offset_bottom = 22.0
+
+[node name="频道格7态" type="Label" parent="频道列表/频道格7"]
+text = "（维护）"
+theme_override_colors/font_color = Color(0.443137, 0.439216, 0.407843, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 104.0
+offset_top = 2.0
+offset_right = 174.0
+offset_bottom = 22.0
+
+[node name="频道格8" type="Button" parent="频道列表"]
+theme_override_styles/normal = SubResource("sb10_n")
+theme_override_styles/hover = SubResource("sb10_h")
+theme_override_styles/pressed = SubResource("sb10_p")
+text = ""
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+theme_override_styles/disabled = SubResource("sb10_n")
+theme_override_colors/font_disabled_color = Color(0.443137, 0.439216, 0.407843, 1)
+toggle_mode = true
+disabled = true
+layout_mode = 0
+offset_left = 190.0
+offset_top = 77.0
+offset_right = 370.0
+offset_bottom = 103.0
+
+[node name="频道格8名" type="Label" parent="频道列表/频道格8"]
+text = "跨服频道 08"
+theme_override_colors/font_color = Color(0.443137, 0.439216, 0.407843, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 94.0
+offset_bottom = 22.0
+
+[node name="频道格8态" type="Label" parent="频道列表/频道格8"]
+text = "（维护）"
+theme_override_colors/font_color = Color(0.443137, 0.439216, 0.407843, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 104.0
+offset_top = 2.0
+offset_right = 174.0
+offset_bottom = 22.0
+
+[node name="频道格9" type="Button" parent="频道列表"]
+theme_override_styles/normal = SubResource("sb11_n")
+theme_override_styles/hover = SubResource("sb11_h")
+theme_override_styles/pressed = SubResource("sb11_p")
+text = ""
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+theme_override_styles/disabled = SubResource("sb11_n")
+theme_override_colors/font_disabled_color = Color(0.443137, 0.439216, 0.407843, 1)
+toggle_mode = true
+disabled = true
+layout_mode = 0
+offset_left = 380.0
+offset_top = 77.0
+offset_right = 560.0
+offset_bottom = 103.0
+
+[node name="频道格9名" type="Label" parent="频道列表/频道格9"]
+text = "跨服频道 09"
+theme_override_colors/font_color = Color(0.443137, 0.439216, 0.407843, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 94.0
+offset_bottom = 22.0
+
+[node name="频道格9态" type="Label" parent="频道列表/频道格9"]
+text = "（维护）"
+theme_override_colors/font_color = Color(0.443137, 0.439216, 0.407843, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 104.0
+offset_top = 2.0
+offset_right = 174.0
+offset_bottom = 22.0
+
+[node name="频道格10" type="Button" parent="频道列表"]
+theme_override_styles/normal = SubResource("sb12_n")
+theme_override_styles/hover = SubResource("sb12_h")
+theme_override_styles/pressed = SubResource("sb12_p")
+text = ""
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+theme_override_styles/disabled = SubResource("sb12_n")
+theme_override_colors/font_disabled_color = Color(0.443137, 0.439216, 0.407843, 1)
+toggle_mode = true
+disabled = true
+layout_mode = 0
+offset_left = 0.0
+offset_top = 107.0
+offset_right = 180.0
+offset_bottom = 133.0
+
+[node name="频道格10名" type="Label" parent="频道列表/频道格10"]
+text = "跨服频道 10"
+theme_override_colors/font_color = Color(0.443137, 0.439216, 0.407843, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 94.0
+offset_bottom = 22.0
+
+[node name="频道格10态" type="Label" parent="频道列表/频道格10"]
+text = "（维护）"
+theme_override_colors/font_color = Color(0.443137, 0.439216, 0.407843, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 104.0
+offset_top = 2.0
+offset_right = 174.0
+offset_bottom = 22.0
+
+[node name="频道格11" type="Button" parent="频道列表"]
+theme_override_styles/normal = SubResource("sb13_n")
+theme_override_styles/hover = SubResource("sb13_h")
+theme_override_styles/pressed = SubResource("sb13_p")
+text = ""
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+theme_override_styles/disabled = SubResource("sb13_n")
+theme_override_colors/font_disabled_color = Color(0.443137, 0.439216, 0.407843, 1)
+toggle_mode = true
+disabled = true
+layout_mode = 0
+offset_left = 190.0
+offset_top = 107.0
+offset_right = 370.0
+offset_bottom = 133.0
+
+[node name="频道格11名" type="Label" parent="频道列表/频道格11"]
+text = "跨服频道 11"
+theme_override_colors/font_color = Color(0.443137, 0.439216, 0.407843, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 94.0
+offset_bottom = 22.0
+
+[node name="频道格11态" type="Label" parent="频道列表/频道格11"]
+text = "（维护）"
+theme_override_colors/font_color = Color(0.443137, 0.439216, 0.407843, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 104.0
+offset_top = 2.0
+offset_right = 174.0
+offset_bottom = 22.0
+
+[node name="频道格12" type="Button" parent="频道列表"]
+theme_override_styles/normal = SubResource("sb14_n")
+theme_override_styles/hover = SubResource("sb14_h")
+theme_override_styles/pressed = SubResource("sb14_p")
+text = ""
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+theme_override_styles/disabled = SubResource("sb14_n")
+theme_override_colors/font_disabled_color = Color(0.443137, 0.439216, 0.407843, 1)
+toggle_mode = true
+disabled = true
+layout_mode = 0
+offset_left = 380.0
+offset_top = 107.0
+offset_right = 560.0
+offset_bottom = 133.0
+
+[node name="频道格12名" type="Label" parent="频道列表/频道格12"]
+text = "跨服频道 12"
+theme_override_colors/font_color = Color(0.443137, 0.439216, 0.407843, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 94.0
+offset_bottom = 22.0
+
+[node name="频道格12态" type="Label" parent="频道列表/频道格12"]
+text = "（维护）"
+theme_override_colors/font_color = Color(0.443137, 0.439216, 0.407843, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 104.0
+offset_top = 2.0
+offset_right = 174.0
+offset_bottom = 22.0
+
+[node name="频道格13" type="Button" parent="频道列表"]
+theme_override_styles/normal = SubResource("sb15_n")
+theme_override_styles/hover = SubResource("sb15_h")
+theme_override_styles/pressed = SubResource("sb15_p")
+text = ""
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+theme_override_styles/disabled = SubResource("sb15_n")
+theme_override_colors/font_disabled_color = Color(0.443137, 0.439216, 0.407843, 1)
+toggle_mode = true
+disabled = true
+layout_mode = 0
+offset_left = 0.0
+offset_top = 137.0
+offset_right = 180.0
+offset_bottom = 163.0
+
+[node name="频道格13名" type="Label" parent="频道列表/频道格13"]
+text = "跨服频道 13"
+theme_override_colors/font_color = Color(0.443137, 0.439216, 0.407843, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 94.0
+offset_bottom = 22.0
+
+[node name="频道格13态" type="Label" parent="频道列表/频道格13"]
+text = "（维护）"
+theme_override_colors/font_color = Color(0.443137, 0.439216, 0.407843, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 104.0
+offset_top = 2.0
+offset_right = 174.0
+offset_bottom = 22.0
+
+[node name="频道格14" type="Button" parent="频道列表"]
+theme_override_styles/normal = SubResource("sb16_n")
+theme_override_styles/hover = SubResource("sb16_h")
+theme_override_styles/pressed = SubResource("sb16_p")
+text = ""
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+theme_override_styles/disabled = SubResource("sb16_n")
+theme_override_colors/font_disabled_color = Color(0.443137, 0.439216, 0.407843, 1)
+toggle_mode = true
+disabled = true
+layout_mode = 0
+offset_left = 190.0
+offset_top = 137.0
+offset_right = 370.0
+offset_bottom = 163.0
+
+[node name="频道格14名" type="Label" parent="频道列表/频道格14"]
+text = "跨服频道 14"
+theme_override_colors/font_color = Color(0.443137, 0.439216, 0.407843, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 94.0
+offset_bottom = 22.0
+
+[node name="频道格14态" type="Label" parent="频道列表/频道格14"]
+text = "（维护）"
+theme_override_colors/font_color = Color(0.443137, 0.439216, 0.407843, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 104.0
+offset_top = 2.0
+offset_right = 174.0
+offset_bottom = 22.0
+
+[node name="频道格15" type="Button" parent="频道列表"]
+theme_override_styles/normal = SubResource("sb17_n")
+theme_override_styles/hover = SubResource("sb17_h")
+theme_override_styles/pressed = SubResource("sb17_p")
+text = ""
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+theme_override_styles/disabled = SubResource("sb17_n")
+theme_override_colors/font_disabled_color = Color(0.443137, 0.439216, 0.407843, 1)
+toggle_mode = true
+disabled = true
+layout_mode = 0
+offset_left = 380.0
+offset_top = 137.0
+offset_right = 560.0
+offset_bottom = 163.0
+
+[node name="频道格15名" type="Label" parent="频道列表/频道格15"]
+text = "跨服频道 15"
+theme_override_colors/font_color = Color(0.443137, 0.439216, 0.407843, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 94.0
+offset_bottom = 22.0
+
+[node name="频道格15态" type="Label" parent="频道列表/频道格15"]
+text = "（维护）"
+theme_override_colors/font_color = Color(0.443137, 0.439216, 0.407843, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 104.0
+offset_top = 2.0
+offset_right = 174.0
+offset_bottom = 22.0
+
+[node name="频道格16" type="Button" parent="频道列表"]
+theme_override_styles/normal = SubResource("sb18_n")
+theme_override_styles/hover = SubResource("sb18_h")
+theme_override_styles/pressed = SubResource("sb18_p")
+text = ""
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+theme_override_styles/disabled = SubResource("sb18_n")
+theme_override_colors/font_disabled_color = Color(0.443137, 0.439216, 0.407843, 1)
+toggle_mode = true
+disabled = true
+layout_mode = 0
+offset_left = 0.0
+offset_top = 167.0
+offset_right = 180.0
+offset_bottom = 193.0
+
+[node name="频道格16名" type="Label" parent="频道列表/频道格16"]
+text = "跨服频道 16"
+theme_override_colors/font_color = Color(0.443137, 0.439216, 0.407843, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 94.0
+offset_bottom = 22.0
+
+[node name="频道格16态" type="Label" parent="频道列表/频道格16"]
+text = "（维护）"
+theme_override_colors/font_color = Color(0.443137, 0.439216, 0.407843, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 104.0
+offset_top = 2.0
+offset_right = 174.0
+offset_bottom = 22.0
+
+[node name="频道格17" type="Button" parent="频道列表"]
+theme_override_styles/normal = SubResource("sb19_n")
+theme_override_styles/hover = SubResource("sb19_h")
+theme_override_styles/pressed = SubResource("sb19_p")
+text = ""
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+theme_override_styles/disabled = SubResource("sb19_n")
+theme_override_colors/font_disabled_color = Color(0.443137, 0.439216, 0.407843, 1)
+toggle_mode = true
+disabled = true
+layout_mode = 0
+offset_left = 190.0
+offset_top = 167.0
+offset_right = 370.0
+offset_bottom = 193.0
+
+[node name="频道格17名" type="Label" parent="频道列表/频道格17"]
+text = "跨服频道 17"
+theme_override_colors/font_color = Color(0.443137, 0.439216, 0.407843, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 94.0
+offset_bottom = 22.0
+
+[node name="频道格17态" type="Label" parent="频道列表/频道格17"]
+text = "（维护）"
+theme_override_colors/font_color = Color(0.443137, 0.439216, 0.407843, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 104.0
+offset_top = 2.0
+offset_right = 174.0
+offset_bottom = 22.0
+
+[node name="频道格18" type="Button" parent="频道列表"]
+theme_override_styles/normal = SubResource("sb20_n")
+theme_override_styles/hover = SubResource("sb20_h")
+theme_override_styles/pressed = SubResource("sb20_p")
+text = ""
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+theme_override_styles/disabled = SubResource("sb20_n")
+theme_override_colors/font_disabled_color = Color(0.443137, 0.439216, 0.407843, 1)
+toggle_mode = true
+disabled = true
+layout_mode = 0
+offset_left = 380.0
+offset_top = 167.0
+offset_right = 560.0
+offset_bottom = 193.0
+
+[node name="频道格18名" type="Label" parent="频道列表/频道格18"]
+text = "跨服频道 18"
+theme_override_colors/font_color = Color(0.443137, 0.439216, 0.407843, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 94.0
+offset_bottom = 22.0
+
+[node name="频道格18态" type="Label" parent="频道列表/频道格18"]
+text = "（维护）"
+theme_override_colors/font_color = Color(0.443137, 0.439216, 0.407843, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 104.0
+offset_top = 2.0
+offset_right = 174.0
+offset_bottom = 22.0
+
+[node name="频道格19" type="Button" parent="频道列表"]
+theme_override_styles/normal = SubResource("sb21_n")
+theme_override_styles/hover = SubResource("sb21_h")
+theme_override_styles/pressed = SubResource("sb21_p")
+text = ""
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+theme_override_styles/disabled = SubResource("sb21_n")
+theme_override_colors/font_disabled_color = Color(0.443137, 0.439216, 0.407843, 1)
+toggle_mode = true
+disabled = true
+layout_mode = 0
+offset_left = 0.0
+offset_top = 197.0
+offset_right = 180.0
+offset_bottom = 223.0
+
+[node name="频道格19名" type="Label" parent="频道列表/频道格19"]
+text = "跨服频道 19"
+theme_override_colors/font_color = Color(0.443137, 0.439216, 0.407843, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 94.0
+offset_bottom = 22.0
+
+[node name="频道格19态" type="Label" parent="频道列表/频道格19"]
+text = "（维护）"
+theme_override_colors/font_color = Color(0.443137, 0.439216, 0.407843, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 104.0
+offset_top = 2.0
+offset_right = 174.0
+offset_bottom = 22.0
+
+[node name="频道格20" type="Button" parent="频道列表"]
+theme_override_styles/normal = SubResource("sb22_n")
+theme_override_styles/hover = SubResource("sb22_h")
+theme_override_styles/pressed = SubResource("sb22_p")
+text = ""
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+theme_override_styles/disabled = SubResource("sb22_n")
+theme_override_colors/font_disabled_color = Color(0.443137, 0.439216, 0.407843, 1)
+toggle_mode = true
+disabled = true
+layout_mode = 0
+offset_left = 190.0
+offset_top = 197.0
+offset_right = 370.0
+offset_bottom = 223.0
+
+[node name="频道格20名" type="Label" parent="频道列表/频道格20"]
+text = "跨服频道 20"
+theme_override_colors/font_color = Color(0.443137, 0.439216, 0.407843, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 94.0
+offset_bottom = 22.0
+
+[node name="频道格20态" type="Label" parent="频道列表/频道格20"]
+text = "（维护）"
+theme_override_colors/font_color = Color(0.443137, 0.439216, 0.407843, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 104.0
+offset_top = 2.0
+offset_right = 174.0
+offset_bottom = 22.0
+
+[node name="频道格21" type="Button" parent="频道列表"]
+theme_override_styles/normal = SubResource("sb23_n")
+theme_override_styles/hover = SubResource("sb23_h")
+theme_override_styles/pressed = SubResource("sb23_p")
+text = ""
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+theme_override_styles/disabled = SubResource("sb23_n")
+theme_override_colors/font_disabled_color = Color(0.443137, 0.439216, 0.407843, 1)
+toggle_mode = true
+disabled = true
+layout_mode = 0
+offset_left = 380.0
+offset_top = 197.0
+offset_right = 560.0
+offset_bottom = 223.0
+
+[node name="频道格21名" type="Label" parent="频道列表/频道格21"]
+text = "跨服频道 21"
+theme_override_colors/font_color = Color(0.443137, 0.439216, 0.407843, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 94.0
+offset_bottom = 22.0
+
+[node name="频道格21态" type="Label" parent="频道列表/频道格21"]
+text = "（维护）"
+theme_override_colors/font_color = Color(0.443137, 0.439216, 0.407843, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 104.0
+offset_top = 2.0
+offset_right = 174.0
+offset_bottom = 22.0
+
+[node name="频道格22" type="Button" parent="频道列表"]
+theme_override_styles/normal = SubResource("sb24_n")
+theme_override_styles/hover = SubResource("sb24_h")
+theme_override_styles/pressed = SubResource("sb24_p")
+text = ""
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+theme_override_styles/disabled = SubResource("sb24_n")
+theme_override_colors/font_disabled_color = Color(0.443137, 0.439216, 0.407843, 1)
+toggle_mode = true
+disabled = true
+layout_mode = 0
+offset_left = 0.0
+offset_top = 227.0
+offset_right = 180.0
+offset_bottom = 253.0
+
+[node name="频道格22名" type="Label" parent="频道列表/频道格22"]
+text = "跨服频道 22"
+theme_override_colors/font_color = Color(0.443137, 0.439216, 0.407843, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 94.0
+offset_bottom = 22.0
+
+[node name="频道格22态" type="Label" parent="频道列表/频道格22"]
+text = "（维护）"
+theme_override_colors/font_color = Color(0.443137, 0.439216, 0.407843, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 104.0
+offset_top = 2.0
+offset_right = 174.0
+offset_bottom = 22.0
+
+[node name="频道格23" type="Button" parent="频道列表"]
+theme_override_styles/normal = SubResource("sb25_n")
+theme_override_styles/hover = SubResource("sb25_h")
+theme_override_styles/pressed = SubResource("sb25_p")
+text = ""
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+theme_override_styles/disabled = SubResource("sb25_n")
+theme_override_colors/font_disabled_color = Color(0.443137, 0.439216, 0.407843, 1)
+toggle_mode = true
+disabled = true
+layout_mode = 0
+offset_left = 190.0
+offset_top = 227.0
+offset_right = 370.0
+offset_bottom = 253.0
+
+[node name="频道格23名" type="Label" parent="频道列表/频道格23"]
+text = "跨服频道 23"
+theme_override_colors/font_color = Color(0.443137, 0.439216, 0.407843, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 94.0
+offset_bottom = 22.0
+
+[node name="频道格23态" type="Label" parent="频道列表/频道格23"]
+text = "（维护）"
+theme_override_colors/font_color = Color(0.443137, 0.439216, 0.407843, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 104.0
+offset_top = 2.0
+offset_right = 174.0
+offset_bottom = 22.0
+
+[node name="频道格24" type="Button" parent="频道列表"]
+theme_override_styles/normal = SubResource("sb26_n")
+theme_override_styles/hover = SubResource("sb26_h")
+theme_override_styles/pressed = SubResource("sb26_p")
+text = ""
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+theme_override_styles/disabled = SubResource("sb26_n")
+theme_override_colors/font_disabled_color = Color(0.443137, 0.439216, 0.407843, 1)
+toggle_mode = true
+disabled = true
+layout_mode = 0
+offset_left = 380.0
+offset_top = 227.0
+offset_right = 560.0
+offset_bottom = 253.0
+
+[node name="频道格24名" type="Label" parent="频道列表/频道格24"]
+text = "跨服频道 24"
+theme_override_colors/font_color = Color(0.443137, 0.439216, 0.407843, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 94.0
+offset_bottom = 22.0
+
+[node name="频道格24态" type="Label" parent="频道列表/频道格24"]
+text = "（维护）"
+theme_override_colors/font_color = Color(0.443137, 0.439216, 0.407843, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 104.0
+offset_top = 2.0
+offset_right = 174.0
+offset_bottom = 22.0
+
+[node name="频道格25" type="Button" parent="频道列表"]
+theme_override_styles/normal = SubResource("sb27_n")
+theme_override_styles/hover = SubResource("sb27_h")
+theme_override_styles/pressed = SubResource("sb27_p")
+text = ""
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+theme_override_styles/disabled = SubResource("sb27_n")
+theme_override_colors/font_disabled_color = Color(0.443137, 0.439216, 0.407843, 1)
+toggle_mode = true
+disabled = true
+layout_mode = 0
+offset_left = 0.0
+offset_top = 257.0
+offset_right = 180.0
+offset_bottom = 283.0
+
+[node name="频道格25名" type="Label" parent="频道列表/频道格25"]
+text = "跨服频道 25"
+theme_override_colors/font_color = Color(0.443137, 0.439216, 0.407843, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 94.0
+offset_bottom = 22.0
+
+[node name="频道格25态" type="Label" parent="频道列表/频道格25"]
+text = "（维护）"
+theme_override_colors/font_color = Color(0.443137, 0.439216, 0.407843, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 104.0
+offset_top = 2.0
+offset_right = 174.0
+offset_bottom = 22.0
+
+[node name="频道格26" type="Button" parent="频道列表"]
+theme_override_styles/normal = SubResource("sb28_n")
+theme_override_styles/hover = SubResource("sb28_h")
+theme_override_styles/pressed = SubResource("sb28_p")
+text = ""
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+theme_override_styles/disabled = SubResource("sb28_n")
+theme_override_colors/font_disabled_color = Color(0.443137, 0.439216, 0.407843, 1)
+toggle_mode = true
+disabled = true
+layout_mode = 0
+offset_left = 190.0
+offset_top = 257.0
+offset_right = 370.0
+offset_bottom = 283.0
+
+[node name="频道格26名" type="Label" parent="频道列表/频道格26"]
+text = "跨服频道 26"
+theme_override_colors/font_color = Color(0.443137, 0.439216, 0.407843, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 94.0
+offset_bottom = 22.0
+
+[node name="频道格26态" type="Label" parent="频道列表/频道格26"]
+text = "（维护）"
+theme_override_colors/font_color = Color(0.443137, 0.439216, 0.407843, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 104.0
+offset_top = 2.0
+offset_right = 174.0
+offset_bottom = 22.0
+
+[node name="频道格27" type="Button" parent="频道列表"]
+theme_override_styles/normal = SubResource("sb29_n")
+theme_override_styles/hover = SubResource("sb29_h")
+theme_override_styles/pressed = SubResource("sb29_p")
+text = ""
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+theme_override_styles/disabled = SubResource("sb29_n")
+theme_override_colors/font_disabled_color = Color(0.443137, 0.439216, 0.407843, 1)
+toggle_mode = true
+disabled = true
+layout_mode = 0
+offset_left = 380.0
+offset_top = 257.0
+offset_right = 560.0
+offset_bottom = 283.0
+
+[node name="频道格27名" type="Label" parent="频道列表/频道格27"]
+text = "跨服频道 27"
+theme_override_colors/font_color = Color(0.443137, 0.439216, 0.407843, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 94.0
+offset_bottom = 22.0
+
+[node name="频道格27态" type="Label" parent="频道列表/频道格27"]
+text = "（维护）"
+theme_override_colors/font_color = Color(0.443137, 0.439216, 0.407843, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 104.0
+offset_top = 2.0
+offset_right = 174.0
+offset_bottom = 22.0
+
+[node name="频道格28" type="Button" parent="频道列表"]
+theme_override_styles/normal = SubResource("sb30_n")
+theme_override_styles/hover = SubResource("sb30_h")
+theme_override_styles/pressed = SubResource("sb30_p")
+text = ""
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+theme_override_styles/disabled = SubResource("sb30_n")
+theme_override_colors/font_disabled_color = Color(0.443137, 0.439216, 0.407843, 1)
+toggle_mode = true
+disabled = true
+layout_mode = 0
+offset_left = 0.0
+offset_top = 307.0
+offset_right = 180.0
+offset_bottom = 333.0
+
+[node name="频道格28名" type="Label" parent="频道列表/频道格28"]
+text = "跨服频道 28"
+theme_override_colors/font_color = Color(0.443137, 0.439216, 0.407843, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 94.0
+offset_bottom = 22.0
+
+[node name="频道格28态" type="Label" parent="频道列表/频道格28"]
+text = "（维护）"
+theme_override_colors/font_color = Color(0.443137, 0.439216, 0.407843, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 104.0
+offset_top = 2.0
+offset_right = 174.0
+offset_bottom = 22.0
+
+[node name="频道格29" type="Button" parent="频道列表"]
+theme_override_styles/normal = SubResource("sb31_n")
+theme_override_styles/hover = SubResource("sb31_h")
+theme_override_styles/pressed = SubResource("sb31_p")
+text = ""
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+theme_override_styles/disabled = SubResource("sb31_n")
+theme_override_colors/font_disabled_color = Color(0.443137, 0.439216, 0.407843, 1)
+toggle_mode = true
+disabled = true
+layout_mode = 0
+offset_left = 190.0
+offset_top = 307.0
+offset_right = 370.0
+offset_bottom = 333.0
+
+[node name="频道格29名" type="Label" parent="频道列表/频道格29"]
+text = "跨服频道 29"
+theme_override_colors/font_color = Color(0.443137, 0.439216, 0.407843, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 94.0
+offset_bottom = 22.0
+
+[node name="频道格29态" type="Label" parent="频道列表/频道格29"]
+text = "（维护）"
+theme_override_colors/font_color = Color(0.443137, 0.439216, 0.407843, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 104.0
+offset_top = 2.0
+offset_right = 174.0
+offset_bottom = 22.0
+
+[node name="频道格30" type="Button" parent="频道列表"]
+theme_override_styles/normal = SubResource("sb32_n")
+theme_override_styles/hover = SubResource("sb32_h")
+theme_override_styles/pressed = SubResource("sb32_p")
+text = ""
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+theme_override_styles/disabled = SubResource("sb32_n")
+theme_override_colors/font_disabled_color = Color(0.443137, 0.439216, 0.407843, 1)
+toggle_mode = true
+disabled = true
+layout_mode = 0
+offset_left = 380.0
+offset_top = 307.0
+offset_right = 560.0
+offset_bottom = 333.0
+
+[node name="频道格30名" type="Label" parent="频道列表/频道格30"]
+text = "跨服频道 30"
+theme_override_colors/font_color = Color(0.443137, 0.439216, 0.407843, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 94.0
+offset_bottom = 22.0
+
+[node name="频道格30态" type="Label" parent="频道列表/频道格30"]
+text = "（维护）"
+theme_override_colors/font_color = Color(0.443137, 0.439216, 0.407843, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 104.0
+offset_top = 2.0
+offset_right = 174.0
+offset_bottom = 22.0
+
+[node name="频道格31" type="Button" parent="频道列表"]
+theme_override_styles/normal = SubResource("sb33_n")
+theme_override_styles/hover = SubResource("sb33_h")
+theme_override_styles/pressed = SubResource("sb33_p")
+text = ""
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+theme_override_styles/disabled = SubResource("sb33_n")
+theme_override_colors/font_disabled_color = Color(0.443137, 0.439216, 0.407843, 1)
+toggle_mode = true
+disabled = true
+layout_mode = 0
+offset_left = 0.0
+offset_top = 337.0
+offset_right = 180.0
+offset_bottom = 363.0
+
+[node name="频道格31名" type="Label" parent="频道列表/频道格31"]
+text = "跨服频道 31"
+theme_override_colors/font_color = Color(0.443137, 0.439216, 0.407843, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 94.0
+offset_bottom = 22.0
+
+[node name="频道格31态" type="Label" parent="频道列表/频道格31"]
+text = "（维护）"
+theme_override_colors/font_color = Color(0.443137, 0.439216, 0.407843, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 104.0
+offset_top = 2.0
+offset_right = 174.0
+offset_bottom = 22.0
+
+[node name="频道格32" type="Button" parent="频道列表"]
+theme_override_styles/normal = SubResource("sb34_n")
+theme_override_styles/hover = SubResource("sb34_h")
+theme_override_styles/pressed = SubResource("sb34_p")
+text = ""
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+theme_override_styles/disabled = SubResource("sb34_n")
+theme_override_colors/font_disabled_color = Color(0.443137, 0.439216, 0.407843, 1)
+toggle_mode = true
+disabled = true
+layout_mode = 0
+offset_left = 190.0
+offset_top = 337.0
+offset_right = 370.0
+offset_bottom = 363.0
+
+[node name="频道格32名" type="Label" parent="频道列表/频道格32"]
+text = "跨服频道 32"
+theme_override_colors/font_color = Color(0.443137, 0.439216, 0.407843, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 94.0
+offset_bottom = 22.0
+
+[node name="频道格32态" type="Label" parent="频道列表/频道格32"]
+text = "（维护）"
+theme_override_colors/font_color = Color(0.443137, 0.439216, 0.407843, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 104.0
+offset_top = 2.0
+offset_right = 174.0
+offset_bottom = 22.0

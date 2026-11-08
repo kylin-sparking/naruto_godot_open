@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bzd0k1c1ick0"]
+
+[ext_resource type="Script" path="res://开发工具/真窗口点击诊断.gd" id="1_diag"]
+
+[node name="真窗口点击诊断" type="Node"]
+script = ExtResource("1_diag")

@@ -1,0 +1,289 @@
+[gd_scene format=3]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/装备强化/箭头.png" id="箭头_tex"]
+
+; 原版「装备打造」窗的**洗附加属性**页（`EquipPropResetPanel.as` 的 `createChildren()`，`:182-273`）。
+;
+; ⚠️ 和「进阶」一样，它是**整块换掉左栏**的面板（`EquipStrengthWindow.as:213-223` 的 case 1）。
+; 面板 `setSize(350, **349**)` —— 比内容区（316）高，**从窗口 y=58 一直铺到窗口底边 407**。
+; 所以下面坐标是面板局部，面板自己在窗口 (5,58)。
+;
+; 落点全部逐行算自 `createChildren()`，CONTENT_GAP=8、BORDER_GAP=5：
+;   说明     (94, 8) 244x175（`_descField`，TextArea2；本页可见，
+;            而 `_propLabel`/`_propBox` 被 `showView()` 设成隐藏，所以这里不建）
+;   丢弃盒   (8, 8) 83x175（`ItemDropBox()` —— **不带 resultCell**，和进阶页那个不同）
+;     盒内：dropBtn x=(83-61)/2=11 y=10；itemCell 居中 y=10+22+5=37；
+;           arrow y=77、高 = 175-77-10 = 88
+;   横线     (99, 181)（`LineHPicF`，itemBox.y + itemBox.height - 2）
+;   标签     (8, 187) 334x20 —— 文案 TEMPLATE_5[2]
+;   材料框   (8, 211) 334x99
+;     ├ 材料一 (5,5) 60x64      ├ 材料二 (70,5) **50x64**（比材料一小，别抄错）
+;     ├ 消耗文本 (150, 15) 240x60
+;     ├ 勾选 (130, 61) 宽98  ├ 下拉 (228, 59) 宽45  ├ 单位 (273, 61) 宽56
+;   开始重置 x=(350-61)/2=144.5、y=349-高-5
+
+[node name="原版装备洗附加属性页" type="Control"]
+custom_minimum_size = Vector2(350, 349)
+
+[node name="说明" type="RichTextLabel" parent="."]
+offset_left = 94.0
+offset_top = 8.0
+offset_right = 338.0
+offset_bottom = 183.0
+bbcode_enabled = true
+scroll_active = false
+mouse_filter = 2
+
+[node name="放入装备" type="Button" parent="."]
+offset_left = 19.0
+offset_top = 18.0
+offset_right = 80.0
+offset_bottom = 40.0
+text = "放入装备"
+
+[node name="装备格" type="TextureRect" parent="."]
+offset_left = 29.0
+offset_top = 45.0
+offset_right = 69.0
+offset_bottom = 85.0
+mouse_filter = 2
+
+[node name="装备图标" type="TextureRect" parent="装备格"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+mouse_filter = 2
+
+[node name="箭头" type="TextureRect" parent="."]
+offset_left = 42.0
+offset_top = 85.0
+offset_right = 56.0
+offset_bottom = 173.0
+mouse_filter = 2
+texture = ExtResource("箭头_tex")
+
+[node name="横线" type="TextureRect" parent="."]
+offset_left = 99.0
+offset_top = 181.0
+offset_right = 339.0
+offset_bottom = 183.0
+mouse_filter = 2
+
+[node name="标签" type="Label" parent="."]
+offset_left = 8.0
+offset_top = 187.0
+offset_right = 342.0
+offset_bottom = 207.0
+horizontal_alignment = 1
+mouse_filter = 2
+
+[node name="材料框" type="Panel" parent="."]
+offset_left = 8.0
+offset_top = 211.0
+offset_right = 342.0
+offset_bottom = 310.0
+
+[node name="材料一" type="Control" parent="材料框"]
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 65.0
+offset_bottom = 69.0
+
+[node name="材料名" type="Label" parent="材料框/材料一"]
+offset_right = 60.0
+offset_bottom = 16.0
+horizontal_alignment = 1
+
+[node name="材料格" type="TextureRect" parent="材料框/材料一"]
+offset_left = 10.0
+offset_top = 20.0
+offset_right = 50.0
+offset_bottom = 60.0
+mouse_filter = 2
+
+[node name="材料图标" type="TextureRect" parent="材料框/材料一/材料格"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+mouse_filter = 2
+
+[node name="材料数量" type="Label" parent="材料框/材料一/材料格"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -22.0
+offset_top = -14.0
+offset_right = -1.0
+offset_bottom = -1.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="购买" type="Button" parent="材料框/材料一"]
+offset_left = 11.0
+offset_top = 63.0
+offset_right = 48.0
+offset_bottom = 85.0
+text = "购买"
+
+; `_caiLiao2` 是 **50 宽**（不是 60），照 AS3 的 `setSize(50,64)`
+[node name="材料二" type="Control" parent="材料框"]
+offset_left = 70.0
+offset_top = 5.0
+offset_right = 120.0
+offset_bottom = 69.0
+
+[node name="材料名" type="Label" parent="材料框/材料二"]
+offset_right = 50.0
+offset_bottom = 16.0
+horizontal_alignment = 1
+
+[node name="材料格" type="TextureRect" parent="材料框/材料二"]
+offset_left = 5.0
+offset_top = 20.0
+offset_right = 45.0
+offset_bottom = 60.0
+mouse_filter = 2
+
+[node name="材料图标" type="TextureRect" parent="材料框/材料二/材料格"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+mouse_filter = 2
+
+[node name="材料数量" type="Label" parent="材料框/材料二/材料格"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -22.0
+offset_top = -14.0
+offset_right = -1.0
+offset_bottom = -1.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="购买" type="Button" parent="材料框/材料二"]
+offset_left = 6.0
+offset_top = 63.0
+offset_right = 43.0
+offset_bottom = 85.0
+text = "购买"
+
+; 消耗/几率两行（`EQUIP_STRENGTH_DESC_TEMPLATE_0`）
+[node name="消耗几率" type="RichTextLabel" parent="材料框"]
+offset_left = 150.0
+offset_top = 15.0
+offset_right = 390.0
+offset_bottom = 75.0
+bbcode_enabled = true
+scroll_active = false
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 12
+[node name="使用幸运符" type="CheckBox" parent="材料框"]
+offset_left = 130.0
+offset_top = 61
+offset_right = 228.0
+offset_bottom = 80
+text = "本次操作使用"
+
+[node name="幸运符数量" type="OptionButton" parent="材料框"]
+offset_left = 228.0
+offset_top = 57.0
+offset_right = 273.0
+offset_bottom = 77.0
+
+[node name="单位" type="Label" parent="材料框"]
+offset_left = 273.0
+offset_top = 61.0
+offset_right = 329.0
+offset_bottom = 77.0
+mouse_filter = 2
+
+; `STRENGTH_BTN_NAMES[1]` = 开始重置（0 基下标 → 第 2 个 = `_2`）
+[node name="开始重置" type="Button" parent="."]
+offset_left = 144.0
+offset_top = 322.0
+offset_right = 205.0
+offset_bottom = 344.0
+text = "开始重置"
+
+; ── 下面这一组只有**「洗附加数值」**那一页用得上（原版 `EquipPropLianZhiPanel`）──
+; 出处 `EquipPropLianZhiPanel.as:205-217 / 264-276 / 316-330`（`drawPropView` + `operationResultHandler`）。
+; 默认**全部隐藏**：洗出结果之前 `showView()` 会把它们关掉（`:286`），
+; 收到预览回包才 `_upgradeBtn.visible = false` 并把这一组打开。
+;
+; 对照区那一行的版式（`drawPropView`）：每行 20 高，左列 x=0、右列 x=75（=左列宽 70 + 5），
+; 标记跟在右列之后；左列整条白，右列**只有数值和标记**变色：
+;   新 < 旧 → 红 + ↓ ；新 > 旧 且没满 → 绿 + ↑ ；到/超上限 → 绿 + ★ ；没变 → 白
+[node name="原属性" type="Label" parent="."]
+offset_left = 111.0
+offset_top = 20.0
+offset_right = 219.0
+offset_bottom = 40.0
+visible = false
+mouse_filter = 2
+
+[node name="新属性" type="Label" parent="."]
+offset_left = 299.0
+offset_top = 20.0
+offset_right = 407.0
+offset_bottom = 40.0
+visible = false
+mouse_filter = 2
+
+[node name="对照区" type="Control" parent="."]
+offset_left = 91.0
+offset_top = 43.0
+offset_right = 335.0
+offset_bottom = 170.0
+visible = false
+mouse_filter = 2
+
+; `EQUIPLIANZHIWINDOW_SAVE_BUTTON_NAME` = 保存，x 写死 100、宽 btn_width_four(61)
+[node name="保存" type="Button" parent="."]
+offset_left = 100.0
+offset_top = 322.0
+offset_right = 161.0
+offset_bottom = 344.0
+visible = false
+text = "保存"
+
+; `COMMON_CANCEL` = 取消，x = 350-61-100 = 189
+[node name="取消" type="Button" parent="."]
+offset_left = 189.0
+offset_top = 322.0
+offset_right = 250.0
+offset_bottom = 344.0
+visible = false
+text = "取消"

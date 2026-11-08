@@ -1,0 +1,238 @@
+[gd_scene load_steps=21 format=3]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/横向分隔线.png" id="t1"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/子面板.png" id="t2"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/环任务/立即完成钮.png" id="t3"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/环任务/立即完成钮_悬停.png" id="t4"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/环任务/立即完成钮_按下.png" id="t5"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/环任务/刷新任务钮.png" id="t6"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/环任务/刷新任务钮_悬停.png" id="t7"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/环任务/刷新任务钮_按下.png" id="t8"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/环任务/开始任务钮.png" id="t9"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/环任务/开始任务钮_悬停.png" id="t10"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/环任务/开始任务钮_按下.png" id="t11"]
+
+[sub_resource type="StyleBoxTexture" id="sb1_n"]
+texture = ExtResource("t3")
+
+[sub_resource type="StyleBoxTexture" id="sb1_h"]
+texture = ExtResource("t4")
+
+[sub_resource type="StyleBoxTexture" id="sb1_p"]
+texture = ExtResource("t5")
+
+[sub_resource type="StyleBoxTexture" id="sb2_n"]
+texture = ExtResource("t6")
+
+[sub_resource type="StyleBoxTexture" id="sb2_h"]
+texture = ExtResource("t7")
+
+[sub_resource type="StyleBoxTexture" id="sb2_p"]
+texture = ExtResource("t8")
+
+[sub_resource type="StyleBoxTexture" id="sb3_n"]
+texture = ExtResource("t9")
+
+[sub_resource type="StyleBoxTexture" id="sb3_h"]
+texture = ExtResource("t10")
+
+[sub_resource type="StyleBoxTexture" id="sb3_p"]
+texture = ExtResource("t11")
+
+[node name="原版日环任务内容" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 355
+offset_bottom = 378.0
+
+[node name="说明标题" type="Label" parent="."]
+text = "日环任务说明"
+theme_override_colors/font_color = Color(1.000000, 0.568627, 0.000000, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 14.0
+offset_top = 13.0
+offset_right = 86.0
+offset_bottom = 33.0
+
+[node name="说明" type="RichTextLabel" parent="."]
+text = "1.任务共分为5个星级\n2.任务奖励随星级的提高而提高\n3.每天最多可接取20次日环任务\n4.日环任务后不可以再刷新\n5.每日完成全部20次日环任务，将有额外经验奖励"
+scroll_active = false
+bbcode_enabled = true
+autowrap_mode = 3
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 6
+layout_mode = 0
+offset_left = 32.0
+offset_top = 33.0
+offset_right = 329.0
+offset_bottom = 123.0
+
+[node name="分隔线" type="TextureRect" parent="."]
+texture = ExtResource("t1")
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 0
+layout_mode = 0
+offset_left = 14.0
+offset_top = 123.0
+offset_right = 325.0
+offset_bottom = 125.0
+
+[node name="次数文本" type="RichTextLabel" parent="."]
+text = ""
+scroll_active = false
+bbcode_enabled = true
+autowrap_mode = 3
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 6
+theme_override_colors/default_color = Color(0.117647, 0.564706, 1.000000, 1)
+layout_mode = 0
+offset_left = 14.0
+offset_top = 127.0
+offset_right = 354.0
+offset_bottom = 167.0
+
+[node name="数据底板" type="NinePatchRect" parent="."]
+texture = ExtResource("t2")
+patch_margin_left = 8
+patch_margin_right = 7
+patch_margin_top = 7
+patch_margin_bottom = 7
+layout_mode = 0
+offset_left = 14.0
+offset_top = 159.0
+offset_right = 344.0
+offset_bottom = 312.0
+
+[node name="星级标签" type="Label" parent="."]
+text = "任务星级："
+theme_override_colors/font_color = Color(0.000000, 1.000000, 0.000000, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 22.0
+offset_top = 167.0
+offset_right = 82.0
+offset_bottom = 187.0
+
+[node name="星级槽" type="Control" parent="."]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 82.0
+offset_top = 169.0
+offset_right = 152.0
+offset_bottom = 182.0
+
+[node name="星级说明" type="Label" parent="."]
+text = "（最高可刷新到5星）"
+theme_override_colors/font_color = Color(0.000000, 1.000000, 0.000000, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 222.0
+offset_top = 167.0
+offset_right = 336.0
+offset_bottom = 187.0
+
+[node name="倒计时" type="Label" parent="."]
+text = ""
+theme_override_colors/font_color = Color(1.000000, 0.568627, 0.000000, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 22.0
+offset_top = 290.0
+offset_right = 208.0
+offset_bottom = 310.0
+
+[node name="勾选槽" type="Control" parent="."]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 14.0
+offset_top = 321.0
+offset_right = 113.0
+offset_bottom = 340.0
+
+[node name="勾选槽2" type="Control" parent="."]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 117.0
+offset_top = 321.0
+offset_right = 258.0
+offset_bottom = 340.0
+
+[node name="立即完成钮" type="Button" parent="."]
+theme_override_styles/normal = SubResource("sb1_n")
+theme_override_styles/hover = SubResource("sb1_h")
+theme_override_styles/pressed = SubResource("sb1_p")
+text = "立即完成"
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+layout_mode = 0
+offset_left = 282.0
+offset_top = 187.0
+offset_right = 336.0
+offset_bottom = 209.0
+
+[node name="刷新任务钮" type="Button" parent="."]
+theme_override_styles/normal = SubResource("sb2_n")
+theme_override_styles/hover = SubResource("sb2_h")
+theme_override_styles/pressed = SubResource("sb2_p")
+text = "刷新任务"
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+layout_mode = 0
+offset_left = 80.0
+offset_top = 351.0
+offset_right = 134.0
+offset_bottom = 373.0
+
+[node name="开始任务钮" type="Button" parent="."]
+theme_override_styles/normal = SubResource("sb3_n")
+theme_override_styles/hover = SubResource("sb3_h")
+theme_override_styles/pressed = SubResource("sb3_p")
+text = "开始任务"
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+layout_mode = 0
+offset_left = 221.0
+offset_top = 351.0
+offset_right = 275.0
+offset_bottom = 373.0
+
+[node name="鼓励槽" type="Control" parent="."]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 22.0
+offset_top = 187.0
+offset_right = 272.0
+offset_bottom = 187.0
+
+[node name="赠送格槽" type="Control" parent="."]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 22.0
+offset_top = 248.0
+offset_right = 62.0
+offset_bottom = 288.0

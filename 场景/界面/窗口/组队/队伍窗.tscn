@@ -1,0 +1,3073 @@
+[gd_scene load_steps=13 format=3]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/内容面板.png" id="t1"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/子面板.png" id="t2"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/选中条1.png" id="t3"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/物品格.png" id="t4"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/横向分隔线.png" id="t5"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/列表分隔.png" id="t6"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/竖向分隔线.png" id="t7"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/首页.png" id="t8"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/上一页.png" id="t9"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/下一页.png" id="t10"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/末页.png" id="t11"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/小标右.png" id="t12"]
+
+[node name="原版组队窗口内容" type="Control"]
+custom_minimum_size = Vector2(515, 403)
+offset_right = 515
+offset_bottom = 403
+mouse_filter = 2
+; 整框：页局部 y = 窗口局部 y − 29（宿把内容区摆在 (0,29)）。逐件出处 = 真值/窗口/组队.md §①
+[node name="内容背景" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 8
+offset_top = 9
+offset_right = 507
+offset_bottom = 395
+texture = ExtResource("t1")
+patch_margin_left = 11
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 11
+mouse_filter = 2
+[node name="分页" type="Control" parent="."]
+layout_mode = 0
+offset_left = 16
+offset_top = 14
+offset_right = 321
+offset_bottom = 36
+[node name="我的队伍" type="Button" parent="分页"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 61
+offset_bottom = 22
+theme_type_variation = &"OrigTab"
+toggle_mode = true
+focus_mode = 0
+text = "我的队伍"
+[node name="附近队伍" type="Button" parent="分页"]
+layout_mode = 0
+offset_left = 61
+offset_top = 0
+offset_right = 122
+offset_bottom = 22
+theme_type_variation = &"OrigTab"
+toggle_mode = true
+focus_mode = 0
+text = "附近队伍"
+[node name="附近玩家" type="Button" parent="分页"]
+layout_mode = 0
+offset_left = 122
+offset_top = 0
+offset_right = 183
+offset_bottom = 22
+theme_type_variation = &"OrigTab"
+toggle_mode = true
+focus_mode = 0
+text = "附近玩家"
+[node name="我的羁绊" type="Button" parent="分页"]
+layout_mode = 0
+offset_left = 183
+offset_top = 0
+offset_right = 244
+offset_bottom = 22
+theme_type_variation = &"OrigTab"
+toggle_mode = true
+focus_mode = 0
+text = "我的羁绊"
+[node name="酒宴列表" type="Button" parent="分页"]
+layout_mode = 0
+offset_left = 244
+offset_top = 0
+offset_right = 305
+offset_bottom = 22
+theme_type_variation = &"OrigTab"
+toggle_mode = true
+focus_mode = 0
+text = "酒宴列表"
+[node name="内容区" type="Control" parent="."]
+layout_mode = 0
+offset_left = 13
+offset_top = 34
+offset_right = 502
+offset_bottom = 390
+[node name="我的队伍" type="Control" parent="内容区"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 489
+offset_bottom = 356
+[node name="底板" type="NinePatchRect" parent="内容区/我的队伍"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 489
+offset_bottom = 326
+texture = ExtResource("t2")
+patch_margin_left = 8
+patch_margin_top = 7
+patch_margin_right = 7
+patch_margin_bottom = 7
+mouse_filter = 2
+[node name="提示" type="Label" parent="内容区/我的队伍"]
+layout_mode = 0
+offset_left = 5
+offset_top = 3
+offset_right = 484
+offset_bottom = 21
+text = "每多组一个人，怪物总经验增加 5%"
+theme_override_colors/font_color = Color(0.117647, 0.564706, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="成员格1" type="Button" parent="内容区/我的队伍"]
+layout_mode = 0
+offset_left = 3
+offset_top = 24
+offset_right = 244
+offset_bottom = 88
+theme_type_variation = &"OrigBlankButton"
+focus_mode = 0
+text = ""
+text = ""
+[node name="底" type="NinePatchRect" parent="内容区/我的队伍/成员格1"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 241
+offset_bottom = 64
+texture = ExtResource("t2")
+patch_margin_left = 8
+patch_margin_top = 7
+patch_margin_right = 7
+patch_margin_bottom = 7
+mouse_filter = 2
+[node name="悬停底" type="NinePatchRect" parent="内容区/我的队伍/成员格1"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 241
+offset_bottom = 64
+texture = ExtResource("t3")
+patch_margin_left = 7
+patch_margin_top = 5
+patch_margin_right = 8
+patch_margin_bottom = 6
+mouse_filter = 2
+visible = false
+[node name="选中底" type="NinePatchRect" parent="内容区/我的队伍/成员格1"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 241
+offset_bottom = 64
+texture = ExtResource("t3")
+patch_margin_left = 7
+patch_margin_top = 5
+patch_margin_right = 8
+patch_margin_bottom = 6
+mouse_filter = 2
+visible = false
+[node name="头像盒" type="NinePatchRect" parent="内容区/我的队伍/成员格1"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 59
+offset_bottom = 59
+texture = ExtResource("t4")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 6
+patch_margin_bottom = 6
+mouse_filter = 2
+[node name="头像" type="TextureRect" parent="内容区/我的队伍/成员格1/头像盒"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 51
+offset_bottom = 51
+expand_mode = 1
+mouse_filter = 2
+[node name="名字" type="Label" parent="内容区/我的队伍/成员格1"]
+layout_mode = 0
+offset_left = 60
+offset_top = 6
+offset_right = 200
+offset_bottom = 22
+text = ""
+theme_override_colors/font_color = Color(1.000000, 0.568627, 0.000000, 1.0)
+horizontal_alignment = 0
+[node name="等级" type="Label" parent="内容区/我的队伍/成员格1"]
+layout_mode = 0
+offset_left = 60
+offset_top = 22
+offset_right = 235
+offset_bottom = 38
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="地图" type="Label" parent="内容区/我的队伍/成员格1"]
+layout_mode = 0
+offset_left = 60
+offset_top = 38
+offset_right = 235
+offset_bottom = 54
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="队长" type="Label" parent="内容区/我的队伍/成员格1"]
+layout_mode = 0
+offset_left = 60
+offset_top = 6
+offset_right = 235
+offset_bottom = 22
+text = ""
+theme_override_colors/font_color = Color(0.000000, 1.000000, 0.000000, 1.0)
+horizontal_alignment = 2
+[node name="成员格2" type="Button" parent="内容区/我的队伍"]
+layout_mode = 0
+offset_left = 245
+offset_top = 24
+offset_right = 486
+offset_bottom = 88
+theme_type_variation = &"OrigBlankButton"
+focus_mode = 0
+text = ""
+text = ""
+[node name="底" type="NinePatchRect" parent="内容区/我的队伍/成员格2"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 241
+offset_bottom = 64
+texture = ExtResource("t2")
+patch_margin_left = 8
+patch_margin_top = 7
+patch_margin_right = 7
+patch_margin_bottom = 7
+mouse_filter = 2
+[node name="悬停底" type="NinePatchRect" parent="内容区/我的队伍/成员格2"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 241
+offset_bottom = 64
+texture = ExtResource("t3")
+patch_margin_left = 7
+patch_margin_top = 5
+patch_margin_right = 8
+patch_margin_bottom = 6
+mouse_filter = 2
+visible = false
+[node name="选中底" type="NinePatchRect" parent="内容区/我的队伍/成员格2"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 241
+offset_bottom = 64
+texture = ExtResource("t3")
+patch_margin_left = 7
+patch_margin_top = 5
+patch_margin_right = 8
+patch_margin_bottom = 6
+mouse_filter = 2
+visible = false
+[node name="头像盒" type="NinePatchRect" parent="内容区/我的队伍/成员格2"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 59
+offset_bottom = 59
+texture = ExtResource("t4")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 6
+patch_margin_bottom = 6
+mouse_filter = 2
+[node name="头像" type="TextureRect" parent="内容区/我的队伍/成员格2/头像盒"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 51
+offset_bottom = 51
+expand_mode = 1
+mouse_filter = 2
+[node name="名字" type="Label" parent="内容区/我的队伍/成员格2"]
+layout_mode = 0
+offset_left = 60
+offset_top = 6
+offset_right = 200
+offset_bottom = 22
+text = ""
+theme_override_colors/font_color = Color(1.000000, 0.568627, 0.000000, 1.0)
+horizontal_alignment = 0
+[node name="等级" type="Label" parent="内容区/我的队伍/成员格2"]
+layout_mode = 0
+offset_left = 60
+offset_top = 22
+offset_right = 235
+offset_bottom = 38
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="地图" type="Label" parent="内容区/我的队伍/成员格2"]
+layout_mode = 0
+offset_left = 60
+offset_top = 38
+offset_right = 235
+offset_bottom = 54
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="队长" type="Label" parent="内容区/我的队伍/成员格2"]
+layout_mode = 0
+offset_left = 60
+offset_top = 6
+offset_right = 235
+offset_bottom = 22
+text = ""
+theme_override_colors/font_color = Color(0.000000, 1.000000, 0.000000, 1.0)
+horizontal_alignment = 2
+[node name="成员格3" type="Button" parent="内容区/我的队伍"]
+layout_mode = 0
+offset_left = 3
+offset_top = 89
+offset_right = 244
+offset_bottom = 153
+theme_type_variation = &"OrigBlankButton"
+focus_mode = 0
+text = ""
+text = ""
+[node name="底" type="NinePatchRect" parent="内容区/我的队伍/成员格3"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 241
+offset_bottom = 64
+texture = ExtResource("t2")
+patch_margin_left = 8
+patch_margin_top = 7
+patch_margin_right = 7
+patch_margin_bottom = 7
+mouse_filter = 2
+[node name="悬停底" type="NinePatchRect" parent="内容区/我的队伍/成员格3"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 241
+offset_bottom = 64
+texture = ExtResource("t3")
+patch_margin_left = 7
+patch_margin_top = 5
+patch_margin_right = 8
+patch_margin_bottom = 6
+mouse_filter = 2
+visible = false
+[node name="选中底" type="NinePatchRect" parent="内容区/我的队伍/成员格3"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 241
+offset_bottom = 64
+texture = ExtResource("t3")
+patch_margin_left = 7
+patch_margin_top = 5
+patch_margin_right = 8
+patch_margin_bottom = 6
+mouse_filter = 2
+visible = false
+[node name="头像盒" type="NinePatchRect" parent="内容区/我的队伍/成员格3"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 59
+offset_bottom = 59
+texture = ExtResource("t4")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 6
+patch_margin_bottom = 6
+mouse_filter = 2
+[node name="头像" type="TextureRect" parent="内容区/我的队伍/成员格3/头像盒"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 51
+offset_bottom = 51
+expand_mode = 1
+mouse_filter = 2
+[node name="名字" type="Label" parent="内容区/我的队伍/成员格3"]
+layout_mode = 0
+offset_left = 60
+offset_top = 6
+offset_right = 200
+offset_bottom = 22
+text = ""
+theme_override_colors/font_color = Color(1.000000, 0.568627, 0.000000, 1.0)
+horizontal_alignment = 0
+[node name="等级" type="Label" parent="内容区/我的队伍/成员格3"]
+layout_mode = 0
+offset_left = 60
+offset_top = 22
+offset_right = 235
+offset_bottom = 38
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="地图" type="Label" parent="内容区/我的队伍/成员格3"]
+layout_mode = 0
+offset_left = 60
+offset_top = 38
+offset_right = 235
+offset_bottom = 54
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="队长" type="Label" parent="内容区/我的队伍/成员格3"]
+layout_mode = 0
+offset_left = 60
+offset_top = 6
+offset_right = 235
+offset_bottom = 22
+text = ""
+theme_override_colors/font_color = Color(0.000000, 1.000000, 0.000000, 1.0)
+horizontal_alignment = 2
+[node name="成员格4" type="Button" parent="内容区/我的队伍"]
+layout_mode = 0
+offset_left = 245
+offset_top = 89
+offset_right = 486
+offset_bottom = 153
+theme_type_variation = &"OrigBlankButton"
+focus_mode = 0
+text = ""
+text = ""
+[node name="底" type="NinePatchRect" parent="内容区/我的队伍/成员格4"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 241
+offset_bottom = 64
+texture = ExtResource("t2")
+patch_margin_left = 8
+patch_margin_top = 7
+patch_margin_right = 7
+patch_margin_bottom = 7
+mouse_filter = 2
+[node name="悬停底" type="NinePatchRect" parent="内容区/我的队伍/成员格4"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 241
+offset_bottom = 64
+texture = ExtResource("t3")
+patch_margin_left = 7
+patch_margin_top = 5
+patch_margin_right = 8
+patch_margin_bottom = 6
+mouse_filter = 2
+visible = false
+[node name="选中底" type="NinePatchRect" parent="内容区/我的队伍/成员格4"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 241
+offset_bottom = 64
+texture = ExtResource("t3")
+patch_margin_left = 7
+patch_margin_top = 5
+patch_margin_right = 8
+patch_margin_bottom = 6
+mouse_filter = 2
+visible = false
+[node name="头像盒" type="NinePatchRect" parent="内容区/我的队伍/成员格4"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 59
+offset_bottom = 59
+texture = ExtResource("t4")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 6
+patch_margin_bottom = 6
+mouse_filter = 2
+[node name="头像" type="TextureRect" parent="内容区/我的队伍/成员格4/头像盒"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 51
+offset_bottom = 51
+expand_mode = 1
+mouse_filter = 2
+[node name="名字" type="Label" parent="内容区/我的队伍/成员格4"]
+layout_mode = 0
+offset_left = 60
+offset_top = 6
+offset_right = 200
+offset_bottom = 22
+text = ""
+theme_override_colors/font_color = Color(1.000000, 0.568627, 0.000000, 1.0)
+horizontal_alignment = 0
+[node name="等级" type="Label" parent="内容区/我的队伍/成员格4"]
+layout_mode = 0
+offset_left = 60
+offset_top = 22
+offset_right = 235
+offset_bottom = 38
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="地图" type="Label" parent="内容区/我的队伍/成员格4"]
+layout_mode = 0
+offset_left = 60
+offset_top = 38
+offset_right = 235
+offset_bottom = 54
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="队长" type="Label" parent="内容区/我的队伍/成员格4"]
+layout_mode = 0
+offset_left = 60
+offset_top = 6
+offset_right = 235
+offset_bottom = 22
+text = ""
+theme_override_colors/font_color = Color(0.000000, 1.000000, 0.000000, 1.0)
+horizontal_alignment = 2
+[node name="成员格5" type="Button" parent="内容区/我的队伍"]
+layout_mode = 0
+offset_left = 3
+offset_top = 154
+offset_right = 244
+offset_bottom = 218
+theme_type_variation = &"OrigBlankButton"
+focus_mode = 0
+text = ""
+text = ""
+[node name="底" type="NinePatchRect" parent="内容区/我的队伍/成员格5"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 241
+offset_bottom = 64
+texture = ExtResource("t2")
+patch_margin_left = 8
+patch_margin_top = 7
+patch_margin_right = 7
+patch_margin_bottom = 7
+mouse_filter = 2
+[node name="悬停底" type="NinePatchRect" parent="内容区/我的队伍/成员格5"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 241
+offset_bottom = 64
+texture = ExtResource("t3")
+patch_margin_left = 7
+patch_margin_top = 5
+patch_margin_right = 8
+patch_margin_bottom = 6
+mouse_filter = 2
+visible = false
+[node name="选中底" type="NinePatchRect" parent="内容区/我的队伍/成员格5"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 241
+offset_bottom = 64
+texture = ExtResource("t3")
+patch_margin_left = 7
+patch_margin_top = 5
+patch_margin_right = 8
+patch_margin_bottom = 6
+mouse_filter = 2
+visible = false
+[node name="头像盒" type="NinePatchRect" parent="内容区/我的队伍/成员格5"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 59
+offset_bottom = 59
+texture = ExtResource("t4")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 6
+patch_margin_bottom = 6
+mouse_filter = 2
+[node name="头像" type="TextureRect" parent="内容区/我的队伍/成员格5/头像盒"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 51
+offset_bottom = 51
+expand_mode = 1
+mouse_filter = 2
+[node name="名字" type="Label" parent="内容区/我的队伍/成员格5"]
+layout_mode = 0
+offset_left = 60
+offset_top = 6
+offset_right = 200
+offset_bottom = 22
+text = ""
+theme_override_colors/font_color = Color(1.000000, 0.568627, 0.000000, 1.0)
+horizontal_alignment = 0
+[node name="等级" type="Label" parent="内容区/我的队伍/成员格5"]
+layout_mode = 0
+offset_left = 60
+offset_top = 22
+offset_right = 235
+offset_bottom = 38
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="地图" type="Label" parent="内容区/我的队伍/成员格5"]
+layout_mode = 0
+offset_left = 60
+offset_top = 38
+offset_right = 235
+offset_bottom = 54
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="队长" type="Label" parent="内容区/我的队伍/成员格5"]
+layout_mode = 0
+offset_left = 60
+offset_top = 6
+offset_right = 235
+offset_bottom = 22
+text = ""
+theme_override_colors/font_color = Color(0.000000, 1.000000, 0.000000, 1.0)
+horizontal_alignment = 2
+[node name="成员格6" type="Button" parent="内容区/我的队伍"]
+layout_mode = 0
+offset_left = 245
+offset_top = 154
+offset_right = 486
+offset_bottom = 218
+theme_type_variation = &"OrigBlankButton"
+focus_mode = 0
+text = ""
+text = ""
+[node name="底" type="NinePatchRect" parent="内容区/我的队伍/成员格6"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 241
+offset_bottom = 64
+texture = ExtResource("t2")
+patch_margin_left = 8
+patch_margin_top = 7
+patch_margin_right = 7
+patch_margin_bottom = 7
+mouse_filter = 2
+[node name="悬停底" type="NinePatchRect" parent="内容区/我的队伍/成员格6"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 241
+offset_bottom = 64
+texture = ExtResource("t3")
+patch_margin_left = 7
+patch_margin_top = 5
+patch_margin_right = 8
+patch_margin_bottom = 6
+mouse_filter = 2
+visible = false
+[node name="选中底" type="NinePatchRect" parent="内容区/我的队伍/成员格6"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 241
+offset_bottom = 64
+texture = ExtResource("t3")
+patch_margin_left = 7
+patch_margin_top = 5
+patch_margin_right = 8
+patch_margin_bottom = 6
+mouse_filter = 2
+visible = false
+[node name="头像盒" type="NinePatchRect" parent="内容区/我的队伍/成员格6"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 59
+offset_bottom = 59
+texture = ExtResource("t4")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 6
+patch_margin_bottom = 6
+mouse_filter = 2
+[node name="头像" type="TextureRect" parent="内容区/我的队伍/成员格6/头像盒"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 51
+offset_bottom = 51
+expand_mode = 1
+mouse_filter = 2
+[node name="名字" type="Label" parent="内容区/我的队伍/成员格6"]
+layout_mode = 0
+offset_left = 60
+offset_top = 6
+offset_right = 200
+offset_bottom = 22
+text = ""
+theme_override_colors/font_color = Color(1.000000, 0.568627, 0.000000, 1.0)
+horizontal_alignment = 0
+[node name="等级" type="Label" parent="内容区/我的队伍/成员格6"]
+layout_mode = 0
+offset_left = 60
+offset_top = 22
+offset_right = 235
+offset_bottom = 38
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="地图" type="Label" parent="内容区/我的队伍/成员格6"]
+layout_mode = 0
+offset_left = 60
+offset_top = 38
+offset_right = 235
+offset_bottom = 54
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="队长" type="Label" parent="内容区/我的队伍/成员格6"]
+layout_mode = 0
+offset_left = 60
+offset_top = 6
+offset_right = 235
+offset_bottom = 22
+text = ""
+theme_override_colors/font_color = Color(0.000000, 1.000000, 0.000000, 1.0)
+horizontal_alignment = 2
+[node name="勾选1" type="CheckBox" parent="内容区/我的队伍"]
+layout_mode = 0
+offset_left = 8
+offset_top = 221
+offset_right = 478
+offset_bottom = 240
+text = "自动接收组队邀请"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+mouse_default_cursor_shape = 2
+[node name="勾选2" type="CheckBox" parent="内容区/我的队伍"]
+layout_mode = 0
+offset_left = 8
+offset_top = 245
+offset_right = 478
+offset_bottom = 264
+text = "自动接收入队申请"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+mouse_default_cursor_shape = 2
+[node name="勾选3" type="CheckBox" parent="内容区/我的队伍"]
+layout_mode = 0
+offset_left = 8
+offset_top = 269
+offset_right = 478
+offset_bottom = 288
+text = "主介面显示队员头像清单"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+mouse_default_cursor_shape = 2
+[node name="宣言标签" type="Label" parent="内容区/我的队伍"]
+layout_mode = 0
+offset_left = 8
+offset_top = 298
+offset_right = 73
+offset_bottom = 314
+text = "队伍宣言"
+theme_override_colors/font_color = Color(1.000000, 0.568627, 0.000000, 1.0)
+horizontal_alignment = 0
+[node name="宣言输入" type="LineEdit" parent="内容区/我的队伍"]
+layout_mode = 0
+offset_left = 68
+offset_top = 297
+offset_right = 421
+offset_bottom = 319
+max_length = 9
+[node name="修改宣言钮" type="Button" parent="内容区/我的队伍"]
+layout_mode = 0
+offset_left = 422
+offset_top = 297
+offset_right = 483
+offset_bottom = 319
+focus_mode = 0
+text = "修改宣言"
+[node name="自我退队" type="Button" parent="内容区/我的队伍"]
+layout_mode = 0
+offset_left = 34
+offset_top = 333
+offset_right = 95
+offset_bottom = 355
+focus_mode = 0
+text = "自我退队"
+[node name="添加成员" type="Button" parent="内容区/我的队伍"]
+layout_mode = 0
+offset_left = 121
+offset_top = 333
+offset_right = 182
+offset_bottom = 355
+focus_mode = 0
+text = "添加成员"
+[node name="自建队伍" type="Button" parent="内容区/我的队伍"]
+layout_mode = 0
+offset_left = 208
+offset_top = 333
+offset_right = 269
+offset_bottom = 355
+focus_mode = 0
+text = "自建队伍"
+[node name="任命队长" type="Button" parent="内容区/我的队伍"]
+layout_mode = 0
+offset_left = 208
+offset_top = 333
+offset_right = 269
+offset_bottom = 355
+focus_mode = 0
+text = "任命队长"
+visible = false
+[node name="请离队伍" type="Button" parent="内容区/我的队伍"]
+layout_mode = 0
+offset_left = 295
+offset_top = 333
+offset_right = 356
+offset_bottom = 355
+focus_mode = 0
+text = "请离队伍"
+[node name="查看资料" type="Button" parent="内容区/我的队伍"]
+layout_mode = 0
+offset_left = 382
+offset_top = 333
+offset_right = 443
+offset_bottom = 355
+focus_mode = 0
+text = "查看资料"
+[node name="附近队伍" type="Control" parent="内容区"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 489
+offset_bottom = 356
+visible = false
+[node name="底板" type="NinePatchRect" parent="内容区/附近队伍"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 489
+offset_bottom = 326
+texture = ExtResource("t2")
+patch_margin_left = 8
+patch_margin_top = 7
+patch_margin_right = 7
+patch_margin_bottom = 7
+mouse_filter = 2
+[node name="左皮" type="Control" parent="内容区/附近队伍"]
+layout_mode = 0
+offset_left = 3
+offset_top = 26
+offset_right = 300
+offset_bottom = 295
+[node name="底" type="NinePatchRect" parent="内容区/附近队伍/左皮"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 297
+offset_bottom = 269
+texture = ExtResource("t2")
+patch_margin_left = 8
+patch_margin_top = 7
+patch_margin_right = 7
+patch_margin_bottom = 7
+mouse_filter = 2
+[node name="顶线" type="TextureRect" parent="内容区/附近队伍/左皮"]
+layout_mode = 0
+offset_left = 3
+offset_top = 25
+offset_right = 294
+offset_bottom = 27
+texture = ExtResource("t5")
+stretch_mode = 0
+mouse_filter = 2
+[node name="斑马1" type="NinePatchRect" parent="内容区/附近队伍/左皮"]
+layout_mode = 0
+offset_left = 3
+offset_top = 47
+offset_right = 294
+offset_bottom = 71
+texture = ExtResource("t6")
+patch_margin_left = 0
+patch_margin_top = 0
+patch_margin_right = 0
+patch_margin_bottom = 0
+mouse_filter = 2
+[node name="斑马2" type="NinePatchRect" parent="内容区/附近队伍/左皮"]
+layout_mode = 0
+offset_left = 3
+offset_top = 91
+offset_right = 294
+offset_bottom = 115
+texture = ExtResource("t6")
+patch_margin_left = 0
+patch_margin_top = 0
+patch_margin_right = 0
+patch_margin_bottom = 0
+mouse_filter = 2
+[node name="斑马3" type="NinePatchRect" parent="内容区/附近队伍/左皮"]
+layout_mode = 0
+offset_left = 3
+offset_top = 135
+offset_right = 294
+offset_bottom = 159
+texture = ExtResource("t6")
+patch_margin_left = 0
+patch_margin_top = 0
+patch_margin_right = 0
+patch_margin_bottom = 0
+mouse_filter = 2
+[node name="斑马4" type="NinePatchRect" parent="内容区/附近队伍/左皮"]
+layout_mode = 0
+offset_left = 3
+offset_top = 179
+offset_right = 294
+offset_bottom = 203
+texture = ExtResource("t6")
+patch_margin_left = 0
+patch_margin_top = 0
+patch_margin_right = 0
+patch_margin_bottom = 0
+mouse_filter = 2
+[node name="斑马5" type="NinePatchRect" parent="内容区/附近队伍/左皮"]
+layout_mode = 0
+offset_left = 3
+offset_top = 223
+offset_right = 294
+offset_bottom = 247
+texture = ExtResource("t6")
+patch_margin_left = 0
+patch_margin_top = 0
+patch_margin_right = 0
+patch_margin_bottom = 0
+mouse_filter = 2
+[node name="右皮" type="Control" parent="内容区/附近队伍"]
+layout_mode = 0
+offset_left = 301
+offset_top = 26
+offset_right = 486
+offset_bottom = 295
+[node name="底" type="NinePatchRect" parent="内容区/附近队伍/右皮"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 185
+offset_bottom = 269
+texture = ExtResource("t2")
+patch_margin_left = 8
+patch_margin_top = 7
+patch_margin_right = 7
+patch_margin_bottom = 7
+mouse_filter = 2
+[node name="顶线" type="TextureRect" parent="内容区/附近队伍/右皮"]
+layout_mode = 0
+offset_left = 3
+offset_top = 25
+offset_right = 182
+offset_bottom = 27
+texture = ExtResource("t5")
+stretch_mode = 0
+mouse_filter = 2
+[node name="斑马1" type="NinePatchRect" parent="内容区/附近队伍/右皮"]
+layout_mode = 0
+offset_left = 3
+offset_top = 47
+offset_right = 182
+offset_bottom = 71
+texture = ExtResource("t6")
+patch_margin_left = 0
+patch_margin_top = 0
+patch_margin_right = 0
+patch_margin_bottom = 0
+mouse_filter = 2
+[node name="斑马2" type="NinePatchRect" parent="内容区/附近队伍/右皮"]
+layout_mode = 0
+offset_left = 3
+offset_top = 91
+offset_right = 182
+offset_bottom = 115
+texture = ExtResource("t6")
+patch_margin_left = 0
+patch_margin_top = 0
+patch_margin_right = 0
+patch_margin_bottom = 0
+mouse_filter = 2
+[node name="斑马3" type="NinePatchRect" parent="内容区/附近队伍/右皮"]
+layout_mode = 0
+offset_left = 3
+offset_top = 135
+offset_right = 182
+offset_bottom = 159
+texture = ExtResource("t6")
+patch_margin_left = 0
+patch_margin_top = 0
+patch_margin_right = 0
+patch_margin_bottom = 0
+mouse_filter = 2
+[node name="左表题" type="Label" parent="内容区/附近队伍"]
+layout_mode = 0
+offset_left = 94
+offset_top = 8
+offset_right = 196
+offset_bottom = 24
+text = "当前地图队伍列表"
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="右表题" type="Label" parent="内容区/附近队伍"]
+layout_mode = 0
+offset_left = 370
+offset_top = 8
+offset_right = 426
+offset_bottom = 24
+text = "队伍成员"
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="表头1" type="Label" parent="内容区/附近队伍"]
+layout_mode = 0
+offset_left = 6
+offset_top = 30
+offset_right = 136
+offset_bottom = 50
+text = "队伍宣言"
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 1
+[node name="表头2" type="Label" parent="内容区/附近队伍"]
+layout_mode = 0
+offset_left = 138
+offset_top = 30
+offset_right = 218
+offset_bottom = 50
+text = "队长"
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 1
+[node name="表头3" type="Label" parent="内容区/附近队伍"]
+layout_mode = 0
+offset_left = 220
+offset_top = 30
+offset_right = 260
+offset_bottom = 50
+text = "等级"
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 1
+[node name="表头4" type="Label" parent="内容区/附近队伍"]
+layout_mode = 0
+offset_left = 262
+offset_top = 30
+offset_right = 302
+offset_bottom = 50
+text = "人数"
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 1
+[node name="表头5" type="Label" parent="内容区/附近队伍"]
+layout_mode = 0
+offset_left = 301
+offset_top = 30
+offset_right = 381
+offset_bottom = 50
+text = "队员名称"
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 1
+[node name="表头6" type="Label" parent="内容区/附近队伍"]
+layout_mode = 0
+offset_left = 383
+offset_top = 30
+offset_right = 423
+offset_bottom = 50
+text = "等级"
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 1
+[node name="表头7" type="Label" parent="内容区/附近队伍"]
+layout_mode = 0
+offset_left = 425
+offset_top = 30
+offset_right = 490
+offset_bottom = 50
+text = "职业"
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 1
+[node name="表头线1" type="TextureRect" parent="内容区/附近队伍"]
+layout_mode = 0
+offset_left = 136
+offset_top = 32
+offset_right = 138
+offset_bottom = 52
+texture = ExtResource("t7")
+stretch_mode = 0
+mouse_filter = 2
+[node name="表头线2" type="TextureRect" parent="内容区/附近队伍"]
+layout_mode = 0
+offset_left = 218
+offset_top = 32
+offset_right = 220
+offset_bottom = 52
+texture = ExtResource("t7")
+stretch_mode = 0
+mouse_filter = 2
+[node name="表头线3" type="TextureRect" parent="内容区/附近队伍"]
+layout_mode = 0
+offset_left = 260
+offset_top = 32
+offset_right = 262
+offset_bottom = 52
+texture = ExtResource("t7")
+stretch_mode = 0
+mouse_filter = 2
+[node name="表头线4" type="TextureRect" parent="内容区/附近队伍"]
+layout_mode = 0
+offset_left = 381
+offset_top = 32
+offset_right = 383
+offset_bottom = 52
+texture = ExtResource("t7")
+stretch_mode = 0
+mouse_filter = 2
+[node name="表头线5" type="TextureRect" parent="内容区/附近队伍"]
+layout_mode = 0
+offset_left = 423
+offset_top = 32
+offset_right = 425
+offset_bottom = 52
+texture = ExtResource("t7")
+stretch_mode = 0
+mouse_filter = 2
+[node name="队伍行1" type="Button" parent="内容区/附近队伍"]
+layout_mode = 0
+offset_left = 5
+offset_top = 53
+offset_right = 298
+offset_bottom = 75
+theme_type_variation = &"OrigBlankButton"
+focus_mode = 0
+text = ""
+text = ""
+[node name="宣言" type="Label" parent="内容区/附近队伍/队伍行1"]
+layout_mode = 0
+offset_left = 5
+offset_top = 0
+offset_right = 127
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="队长" type="Label" parent="内容区/附近队伍/队伍行1"]
+layout_mode = 0
+offset_left = 130
+offset_top = 0
+offset_right = 210
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="等级" type="Label" parent="内容区/附近队伍/队伍行1"]
+layout_mode = 0
+offset_left = 210
+offset_top = 0
+offset_right = 250
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 1
+[node name="人数" type="Label" parent="内容区/附近队伍/队伍行1"]
+layout_mode = 0
+offset_left = 250
+offset_top = 0
+offset_right = 290
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 1
+[node name="选中底" type="NinePatchRect" parent="内容区/附近队伍/队伍行1"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 293
+offset_bottom = 22
+texture = ExtResource("t3")
+patch_margin_left = 7
+patch_margin_top = 5
+patch_margin_right = 8
+patch_margin_bottom = 6
+mouse_filter = 2
+visible = false
+[node name="队伍行2" type="Button" parent="内容区/附近队伍"]
+layout_mode = 0
+offset_left = 5
+offset_top = 75
+offset_right = 298
+offset_bottom = 97
+theme_type_variation = &"OrigBlankButton"
+focus_mode = 0
+text = ""
+text = ""
+[node name="宣言" type="Label" parent="内容区/附近队伍/队伍行2"]
+layout_mode = 0
+offset_left = 5
+offset_top = 0
+offset_right = 127
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="队长" type="Label" parent="内容区/附近队伍/队伍行2"]
+layout_mode = 0
+offset_left = 130
+offset_top = 0
+offset_right = 210
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="等级" type="Label" parent="内容区/附近队伍/队伍行2"]
+layout_mode = 0
+offset_left = 210
+offset_top = 0
+offset_right = 250
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 1
+[node name="人数" type="Label" parent="内容区/附近队伍/队伍行2"]
+layout_mode = 0
+offset_left = 250
+offset_top = 0
+offset_right = 290
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 1
+[node name="选中底" type="NinePatchRect" parent="内容区/附近队伍/队伍行2"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 293
+offset_bottom = 22
+texture = ExtResource("t3")
+patch_margin_left = 7
+patch_margin_top = 5
+patch_margin_right = 8
+patch_margin_bottom = 6
+mouse_filter = 2
+visible = false
+[node name="队伍行3" type="Button" parent="内容区/附近队伍"]
+layout_mode = 0
+offset_left = 5
+offset_top = 97
+offset_right = 298
+offset_bottom = 119
+theme_type_variation = &"OrigBlankButton"
+focus_mode = 0
+text = ""
+text = ""
+[node name="宣言" type="Label" parent="内容区/附近队伍/队伍行3"]
+layout_mode = 0
+offset_left = 5
+offset_top = 0
+offset_right = 127
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="队长" type="Label" parent="内容区/附近队伍/队伍行3"]
+layout_mode = 0
+offset_left = 130
+offset_top = 0
+offset_right = 210
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="等级" type="Label" parent="内容区/附近队伍/队伍行3"]
+layout_mode = 0
+offset_left = 210
+offset_top = 0
+offset_right = 250
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 1
+[node name="人数" type="Label" parent="内容区/附近队伍/队伍行3"]
+layout_mode = 0
+offset_left = 250
+offset_top = 0
+offset_right = 290
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 1
+[node name="选中底" type="NinePatchRect" parent="内容区/附近队伍/队伍行3"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 293
+offset_bottom = 22
+texture = ExtResource("t3")
+patch_margin_left = 7
+patch_margin_top = 5
+patch_margin_right = 8
+patch_margin_bottom = 6
+mouse_filter = 2
+visible = false
+[node name="队伍行4" type="Button" parent="内容区/附近队伍"]
+layout_mode = 0
+offset_left = 5
+offset_top = 119
+offset_right = 298
+offset_bottom = 141
+theme_type_variation = &"OrigBlankButton"
+focus_mode = 0
+text = ""
+text = ""
+[node name="宣言" type="Label" parent="内容区/附近队伍/队伍行4"]
+layout_mode = 0
+offset_left = 5
+offset_top = 0
+offset_right = 127
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="队长" type="Label" parent="内容区/附近队伍/队伍行4"]
+layout_mode = 0
+offset_left = 130
+offset_top = 0
+offset_right = 210
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="等级" type="Label" parent="内容区/附近队伍/队伍行4"]
+layout_mode = 0
+offset_left = 210
+offset_top = 0
+offset_right = 250
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 1
+[node name="人数" type="Label" parent="内容区/附近队伍/队伍行4"]
+layout_mode = 0
+offset_left = 250
+offset_top = 0
+offset_right = 290
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 1
+[node name="选中底" type="NinePatchRect" parent="内容区/附近队伍/队伍行4"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 293
+offset_bottom = 22
+texture = ExtResource("t3")
+patch_margin_left = 7
+patch_margin_top = 5
+patch_margin_right = 8
+patch_margin_bottom = 6
+mouse_filter = 2
+visible = false
+[node name="队伍行5" type="Button" parent="内容区/附近队伍"]
+layout_mode = 0
+offset_left = 5
+offset_top = 141
+offset_right = 298
+offset_bottom = 163
+theme_type_variation = &"OrigBlankButton"
+focus_mode = 0
+text = ""
+text = ""
+[node name="宣言" type="Label" parent="内容区/附近队伍/队伍行5"]
+layout_mode = 0
+offset_left = 5
+offset_top = 0
+offset_right = 127
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="队长" type="Label" parent="内容区/附近队伍/队伍行5"]
+layout_mode = 0
+offset_left = 130
+offset_top = 0
+offset_right = 210
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="等级" type="Label" parent="内容区/附近队伍/队伍行5"]
+layout_mode = 0
+offset_left = 210
+offset_top = 0
+offset_right = 250
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 1
+[node name="人数" type="Label" parent="内容区/附近队伍/队伍行5"]
+layout_mode = 0
+offset_left = 250
+offset_top = 0
+offset_right = 290
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 1
+[node name="选中底" type="NinePatchRect" parent="内容区/附近队伍/队伍行5"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 293
+offset_bottom = 22
+texture = ExtResource("t3")
+patch_margin_left = 7
+patch_margin_top = 5
+patch_margin_right = 8
+patch_margin_bottom = 6
+mouse_filter = 2
+visible = false
+[node name="队伍行6" type="Button" parent="内容区/附近队伍"]
+layout_mode = 0
+offset_left = 5
+offset_top = 163
+offset_right = 298
+offset_bottom = 185
+theme_type_variation = &"OrigBlankButton"
+focus_mode = 0
+text = ""
+text = ""
+[node name="宣言" type="Label" parent="内容区/附近队伍/队伍行6"]
+layout_mode = 0
+offset_left = 5
+offset_top = 0
+offset_right = 127
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="队长" type="Label" parent="内容区/附近队伍/队伍行6"]
+layout_mode = 0
+offset_left = 130
+offset_top = 0
+offset_right = 210
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="等级" type="Label" parent="内容区/附近队伍/队伍行6"]
+layout_mode = 0
+offset_left = 210
+offset_top = 0
+offset_right = 250
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 1
+[node name="人数" type="Label" parent="内容区/附近队伍/队伍行6"]
+layout_mode = 0
+offset_left = 250
+offset_top = 0
+offset_right = 290
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 1
+[node name="选中底" type="NinePatchRect" parent="内容区/附近队伍/队伍行6"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 293
+offset_bottom = 22
+texture = ExtResource("t3")
+patch_margin_left = 7
+patch_margin_top = 5
+patch_margin_right = 8
+patch_margin_bottom = 6
+mouse_filter = 2
+visible = false
+[node name="队伍行7" type="Button" parent="内容区/附近队伍"]
+layout_mode = 0
+offset_left = 5
+offset_top = 185
+offset_right = 298
+offset_bottom = 207
+theme_type_variation = &"OrigBlankButton"
+focus_mode = 0
+text = ""
+text = ""
+[node name="宣言" type="Label" parent="内容区/附近队伍/队伍行7"]
+layout_mode = 0
+offset_left = 5
+offset_top = 0
+offset_right = 127
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="队长" type="Label" parent="内容区/附近队伍/队伍行7"]
+layout_mode = 0
+offset_left = 130
+offset_top = 0
+offset_right = 210
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="等级" type="Label" parent="内容区/附近队伍/队伍行7"]
+layout_mode = 0
+offset_left = 210
+offset_top = 0
+offset_right = 250
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 1
+[node name="人数" type="Label" parent="内容区/附近队伍/队伍行7"]
+layout_mode = 0
+offset_left = 250
+offset_top = 0
+offset_right = 290
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 1
+[node name="选中底" type="NinePatchRect" parent="内容区/附近队伍/队伍行7"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 293
+offset_bottom = 22
+texture = ExtResource("t3")
+patch_margin_left = 7
+patch_margin_top = 5
+patch_margin_right = 8
+patch_margin_bottom = 6
+mouse_filter = 2
+visible = false
+[node name="队伍行8" type="Button" parent="内容区/附近队伍"]
+layout_mode = 0
+offset_left = 5
+offset_top = 207
+offset_right = 298
+offset_bottom = 229
+theme_type_variation = &"OrigBlankButton"
+focus_mode = 0
+text = ""
+text = ""
+[node name="宣言" type="Label" parent="内容区/附近队伍/队伍行8"]
+layout_mode = 0
+offset_left = 5
+offset_top = 0
+offset_right = 127
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="队长" type="Label" parent="内容区/附近队伍/队伍行8"]
+layout_mode = 0
+offset_left = 130
+offset_top = 0
+offset_right = 210
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="等级" type="Label" parent="内容区/附近队伍/队伍行8"]
+layout_mode = 0
+offset_left = 210
+offset_top = 0
+offset_right = 250
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 1
+[node name="人数" type="Label" parent="内容区/附近队伍/队伍行8"]
+layout_mode = 0
+offset_left = 250
+offset_top = 0
+offset_right = 290
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 1
+[node name="选中底" type="NinePatchRect" parent="内容区/附近队伍/队伍行8"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 293
+offset_bottom = 22
+texture = ExtResource("t3")
+patch_margin_left = 7
+patch_margin_top = 5
+patch_margin_right = 8
+patch_margin_bottom = 6
+mouse_filter = 2
+visible = false
+[node name="队伍行9" type="Button" parent="内容区/附近队伍"]
+layout_mode = 0
+offset_left = 5
+offset_top = 229
+offset_right = 298
+offset_bottom = 251
+theme_type_variation = &"OrigBlankButton"
+focus_mode = 0
+text = ""
+text = ""
+[node name="宣言" type="Label" parent="内容区/附近队伍/队伍行9"]
+layout_mode = 0
+offset_left = 5
+offset_top = 0
+offset_right = 127
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="队长" type="Label" parent="内容区/附近队伍/队伍行9"]
+layout_mode = 0
+offset_left = 130
+offset_top = 0
+offset_right = 210
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="等级" type="Label" parent="内容区/附近队伍/队伍行9"]
+layout_mode = 0
+offset_left = 210
+offset_top = 0
+offset_right = 250
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 1
+[node name="人数" type="Label" parent="内容区/附近队伍/队伍行9"]
+layout_mode = 0
+offset_left = 250
+offset_top = 0
+offset_right = 290
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 1
+[node name="选中底" type="NinePatchRect" parent="内容区/附近队伍/队伍行9"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 293
+offset_bottom = 22
+texture = ExtResource("t3")
+patch_margin_left = 7
+patch_margin_top = 5
+patch_margin_right = 8
+patch_margin_bottom = 6
+mouse_filter = 2
+visible = false
+[node name="队伍行10" type="Button" parent="内容区/附近队伍"]
+layout_mode = 0
+offset_left = 5
+offset_top = 251
+offset_right = 298
+offset_bottom = 273
+theme_type_variation = &"OrigBlankButton"
+focus_mode = 0
+text = ""
+text = ""
+[node name="宣言" type="Label" parent="内容区/附近队伍/队伍行10"]
+layout_mode = 0
+offset_left = 5
+offset_top = 0
+offset_right = 127
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="队长" type="Label" parent="内容区/附近队伍/队伍行10"]
+layout_mode = 0
+offset_left = 130
+offset_top = 0
+offset_right = 210
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="等级" type="Label" parent="内容区/附近队伍/队伍行10"]
+layout_mode = 0
+offset_left = 210
+offset_top = 0
+offset_right = 250
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 1
+[node name="人数" type="Label" parent="内容区/附近队伍/队伍行10"]
+layout_mode = 0
+offset_left = 250
+offset_top = 0
+offset_right = 290
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 1
+[node name="选中底" type="NinePatchRect" parent="内容区/附近队伍/队伍行10"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 293
+offset_bottom = 22
+texture = ExtResource("t3")
+patch_margin_left = 7
+patch_margin_top = 5
+patch_margin_right = 8
+patch_margin_bottom = 6
+mouse_filter = 2
+visible = false
+[node name="队伍行11" type="Button" parent="内容区/附近队伍"]
+layout_mode = 0
+offset_left = 5
+offset_top = 273
+offset_right = 298
+offset_bottom = 295
+theme_type_variation = &"OrigBlankButton"
+focus_mode = 0
+text = ""
+text = ""
+[node name="宣言" type="Label" parent="内容区/附近队伍/队伍行11"]
+layout_mode = 0
+offset_left = 5
+offset_top = 0
+offset_right = 127
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="队长" type="Label" parent="内容区/附近队伍/队伍行11"]
+layout_mode = 0
+offset_left = 130
+offset_top = 0
+offset_right = 210
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="等级" type="Label" parent="内容区/附近队伍/队伍行11"]
+layout_mode = 0
+offset_left = 210
+offset_top = 0
+offset_right = 250
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 1
+[node name="人数" type="Label" parent="内容区/附近队伍/队伍行11"]
+layout_mode = 0
+offset_left = 250
+offset_top = 0
+offset_right = 290
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 1
+[node name="选中底" type="NinePatchRect" parent="内容区/附近队伍/队伍行11"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 293
+offset_bottom = 22
+texture = ExtResource("t3")
+patch_margin_left = 7
+patch_margin_top = 5
+patch_margin_right = 8
+patch_margin_bottom = 6
+mouse_filter = 2
+visible = false
+[node name="成员行1" type="Control" parent="内容区/附近队伍"]
+layout_mode = 0
+offset_left = 303
+offset_top = 53
+offset_right = 484
+offset_bottom = 75
+[node name="名称" type="Label" parent="内容区/附近队伍/成员行1"]
+layout_mode = 0
+offset_left = 5
+offset_top = 0
+offset_right = 85
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="等级" type="Label" parent="内容区/附近队伍/成员行1"]
+layout_mode = 0
+offset_left = 85
+offset_top = 0
+offset_right = 125
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="职业" type="Label" parent="内容区/附近队伍/成员行1"]
+layout_mode = 0
+offset_left = 125
+offset_top = 0
+offset_right = 190
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="成员行2" type="Control" parent="内容区/附近队伍"]
+layout_mode = 0
+offset_left = 303
+offset_top = 75
+offset_right = 484
+offset_bottom = 97
+[node name="名称" type="Label" parent="内容区/附近队伍/成员行2"]
+layout_mode = 0
+offset_left = 5
+offset_top = 0
+offset_right = 85
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="等级" type="Label" parent="内容区/附近队伍/成员行2"]
+layout_mode = 0
+offset_left = 85
+offset_top = 0
+offset_right = 125
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="职业" type="Label" parent="内容区/附近队伍/成员行2"]
+layout_mode = 0
+offset_left = 125
+offset_top = 0
+offset_right = 190
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="成员行3" type="Control" parent="内容区/附近队伍"]
+layout_mode = 0
+offset_left = 303
+offset_top = 97
+offset_right = 484
+offset_bottom = 119
+[node name="名称" type="Label" parent="内容区/附近队伍/成员行3"]
+layout_mode = 0
+offset_left = 5
+offset_top = 0
+offset_right = 85
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="等级" type="Label" parent="内容区/附近队伍/成员行3"]
+layout_mode = 0
+offset_left = 85
+offset_top = 0
+offset_right = 125
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="职业" type="Label" parent="内容区/附近队伍/成员行3"]
+layout_mode = 0
+offset_left = 125
+offset_top = 0
+offset_right = 190
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="成员行4" type="Control" parent="内容区/附近队伍"]
+layout_mode = 0
+offset_left = 303
+offset_top = 119
+offset_right = 484
+offset_bottom = 141
+[node name="名称" type="Label" parent="内容区/附近队伍/成员行4"]
+layout_mode = 0
+offset_left = 5
+offset_top = 0
+offset_right = 85
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="等级" type="Label" parent="内容区/附近队伍/成员行4"]
+layout_mode = 0
+offset_left = 85
+offset_top = 0
+offset_right = 125
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="职业" type="Label" parent="内容区/附近队伍/成员行4"]
+layout_mode = 0
+offset_left = 125
+offset_top = 0
+offset_right = 190
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="成员行5" type="Control" parent="内容区/附近队伍"]
+layout_mode = 0
+offset_left = 303
+offset_top = 141
+offset_right = 484
+offset_bottom = 163
+[node name="名称" type="Label" parent="内容区/附近队伍/成员行5"]
+layout_mode = 0
+offset_left = 5
+offset_top = 0
+offset_right = 85
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="等级" type="Label" parent="内容区/附近队伍/成员行5"]
+layout_mode = 0
+offset_left = 85
+offset_top = 0
+offset_right = 125
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="职业" type="Label" parent="内容区/附近队伍/成员行5"]
+layout_mode = 0
+offset_left = 125
+offset_top = 0
+offset_right = 190
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="成员行6" type="Control" parent="内容区/附近队伍"]
+layout_mode = 0
+offset_left = 303
+offset_top = 163
+offset_right = 484
+offset_bottom = 185
+[node name="名称" type="Label" parent="内容区/附近队伍/成员行6"]
+layout_mode = 0
+offset_left = 5
+offset_top = 0
+offset_right = 85
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="等级" type="Label" parent="内容区/附近队伍/成员行6"]
+layout_mode = 0
+offset_left = 85
+offset_top = 0
+offset_right = 125
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="职业" type="Label" parent="内容区/附近队伍/成员行6"]
+layout_mode = 0
+offset_left = 125
+offset_top = 0
+offset_right = 190
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="分页条" type="Control" parent="内容区/附近队伍"]
+layout_mode = 0
+offset_left = 89
+offset_top = 298
+offset_right = 213
+offset_bottom = 316
+[node name="钮首" type="TextureRect" parent="内容区/附近队伍/分页条"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 18
+offset_bottom = 13
+texture = ExtResource("t8")
+stretch_mode = 1
+mouse_filter = 2
+[node name="位首" type="Control" parent="内容区/附近队伍/分页条"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 18
+offset_bottom = 13
+[node name="钮上" type="TextureRect" parent="内容区/附近队伍/分页条"]
+layout_mode = 0
+offset_left = 18
+offset_top = 0
+offset_right = 33
+offset_bottom = 13
+texture = ExtResource("t9")
+stretch_mode = 1
+mouse_filter = 2
+[node name="位上" type="Control" parent="内容区/附近队伍/分页条"]
+layout_mode = 0
+offset_left = 18
+offset_top = 0
+offset_right = 33
+offset_bottom = 13
+[node name="钮下" type="TextureRect" parent="内容区/附近队伍/分页条"]
+layout_mode = 0
+offset_left = 61
+offset_top = 0
+offset_right = 76
+offset_bottom = 13
+texture = ExtResource("t10")
+stretch_mode = 1
+mouse_filter = 2
+[node name="位下" type="Control" parent="内容区/附近队伍/分页条"]
+layout_mode = 0
+offset_left = 61
+offset_top = 0
+offset_right = 76
+offset_bottom = 13
+[node name="钮末" type="TextureRect" parent="内容区/附近队伍/分页条"]
+layout_mode = 0
+offset_left = 76
+offset_top = 0
+offset_right = 94
+offset_bottom = 13
+texture = ExtResource("t11")
+stretch_mode = 1
+mouse_filter = 2
+[node name="位末" type="Control" parent="内容区/附近队伍/分页条"]
+layout_mode = 0
+offset_left = 76
+offset_top = 0
+offset_right = 94
+offset_bottom = 13
+[node name="刷新列表钮" type="Button" parent="内容区/附近队伍"]
+layout_mode = 0
+offset_left = 110
+offset_top = 333
+offset_right = 171
+offset_bottom = 355
+focus_mode = 0
+text = "刷新列表"
+[node name="申请入队钮" type="Button" parent="内容区/附近队伍"]
+layout_mode = 0
+offset_left = 352
+offset_top = 333
+offset_right = 413
+offset_bottom = 355
+focus_mode = 0
+text = "申请入队"
+[node name="附近玩家" type="Control" parent="内容区"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 489
+offset_bottom = 356
+visible = false
+[node name="底板" type="NinePatchRect" parent="内容区/附近玩家"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 489
+offset_bottom = 326
+texture = ExtResource("t2")
+patch_margin_left = 8
+patch_margin_top = 7
+patch_margin_right = 7
+patch_margin_bottom = 7
+mouse_filter = 2
+[node name="皮" type="Control" parent="内容区/附近玩家"]
+layout_mode = 0
+offset_left = 3
+offset_top = 30
+offset_right = 486
+offset_bottom = 299
+[node name="底" type="NinePatchRect" parent="内容区/附近玩家/皮"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 483
+offset_bottom = 269
+texture = ExtResource("t2")
+patch_margin_left = 8
+patch_margin_top = 7
+patch_margin_right = 7
+patch_margin_bottom = 7
+mouse_filter = 2
+[node name="顶线" type="TextureRect" parent="内容区/附近玩家/皮"]
+layout_mode = 0
+offset_left = 3
+offset_top = 25
+offset_right = 480
+offset_bottom = 27
+texture = ExtResource("t5")
+stretch_mode = 0
+mouse_filter = 2
+[node name="斑马1" type="NinePatchRect" parent="内容区/附近玩家/皮"]
+layout_mode = 0
+offset_left = 3
+offset_top = 47
+offset_right = 480
+offset_bottom = 71
+texture = ExtResource("t6")
+patch_margin_left = 0
+patch_margin_top = 0
+patch_margin_right = 0
+patch_margin_bottom = 0
+mouse_filter = 2
+[node name="斑马2" type="NinePatchRect" parent="内容区/附近玩家/皮"]
+layout_mode = 0
+offset_left = 3
+offset_top = 91
+offset_right = 480
+offset_bottom = 115
+texture = ExtResource("t6")
+patch_margin_left = 0
+patch_margin_top = 0
+patch_margin_right = 0
+patch_margin_bottom = 0
+mouse_filter = 2
+[node name="斑马3" type="NinePatchRect" parent="内容区/附近玩家/皮"]
+layout_mode = 0
+offset_left = 3
+offset_top = 135
+offset_right = 480
+offset_bottom = 159
+texture = ExtResource("t6")
+patch_margin_left = 0
+patch_margin_top = 0
+patch_margin_right = 0
+patch_margin_bottom = 0
+mouse_filter = 2
+[node name="斑马4" type="NinePatchRect" parent="内容区/附近玩家/皮"]
+layout_mode = 0
+offset_left = 3
+offset_top = 179
+offset_right = 480
+offset_bottom = 203
+texture = ExtResource("t6")
+patch_margin_left = 0
+patch_margin_top = 0
+patch_margin_right = 0
+patch_margin_bottom = 0
+mouse_filter = 2
+[node name="斑马5" type="NinePatchRect" parent="内容区/附近玩家/皮"]
+layout_mode = 0
+offset_left = 3
+offset_top = 223
+offset_right = 480
+offset_bottom = 247
+texture = ExtResource("t6")
+patch_margin_left = 0
+patch_margin_top = 0
+patch_margin_right = 0
+patch_margin_bottom = 0
+mouse_filter = 2
+[node name="搜索标签" type="Label" parent="内容区/附近玩家"]
+layout_mode = 0
+offset_left = 6
+offset_top = 6
+offset_right = 260
+offset_bottom = 22
+text = "你可以搜索当前地图中的未组队的玩家"
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 2
+[node name="关键词" type="LineEdit" parent="内容区/附近玩家"]
+layout_mode = 0
+offset_left = 260
+offset_top = 6
+offset_right = 408
+offset_bottom = 28
+max_length = 20
+[node name="搜索钮" type="Button" parent="内容区/附近玩家"]
+layout_mode = 0
+offset_left = 408
+offset_top = 6
+offset_right = 430
+offset_bottom = 28
+theme_type_variation = &"OrigBlankButton"
+icon = ExtResource("t12")
+focus_mode = 0
+text = ""
+text = ""
+[node name="表头1" type="Label" parent="内容区/附近玩家"]
+layout_mode = 0
+offset_left = 10
+offset_top = 33
+offset_right = 120
+offset_bottom = 53
+text = "名字"
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 1
+[node name="表头2" type="Label" parent="内容区/附近玩家"]
+layout_mode = 0
+offset_left = 122
+offset_top = 33
+offset_right = 162
+offset_bottom = 53
+text = "等级"
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 1
+[node name="表头3" type="Label" parent="内容区/附近玩家"]
+layout_mode = 0
+offset_left = 164
+offset_top = 33
+offset_right = 264
+offset_bottom = 53
+text = "职业"
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 1
+[node name="表头4" type="Label" parent="内容区/附近玩家"]
+layout_mode = 0
+offset_left = 266
+offset_top = 33
+offset_right = 376
+offset_bottom = 53
+text = "家族"
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 1
+[node name="表头5" type="Label" parent="内容区/附近玩家"]
+layout_mode = 0
+offset_left = 378
+offset_top = 33
+offset_right = 488
+offset_bottom = 53
+text = "称号"
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 1
+[node name="表头线1" type="TextureRect" parent="内容区/附近玩家"]
+layout_mode = 0
+offset_left = 120
+offset_top = 35
+offset_right = 122
+offset_bottom = 55
+texture = ExtResource("t7")
+stretch_mode = 0
+mouse_filter = 2
+[node name="表头线2" type="TextureRect" parent="内容区/附近玩家"]
+layout_mode = 0
+offset_left = 162
+offset_top = 35
+offset_right = 164
+offset_bottom = 55
+texture = ExtResource("t7")
+stretch_mode = 0
+mouse_filter = 2
+[node name="表头线3" type="TextureRect" parent="内容区/附近玩家"]
+layout_mode = 0
+offset_left = 264
+offset_top = 35
+offset_right = 266
+offset_bottom = 55
+texture = ExtResource("t7")
+stretch_mode = 0
+mouse_filter = 2
+[node name="表头线4" type="TextureRect" parent="内容区/附近玩家"]
+layout_mode = 0
+offset_left = 376
+offset_top = 35
+offset_right = 378
+offset_bottom = 55
+texture = ExtResource("t7")
+stretch_mode = 0
+mouse_filter = 2
+[node name="玩家行1" type="Button" parent="内容区/附近玩家"]
+layout_mode = 0
+offset_left = 5
+offset_top = 57
+offset_right = 484
+offset_bottom = 78
+theme_type_variation = &"OrigBlankButton"
+focus_mode = 0
+text = ""
+text = ""
+[node name="名字" type="Label" parent="内容区/附近玩家/玩家行1"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 115
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="等级" type="Label" parent="内容区/附近玩家/玩家行1"]
+layout_mode = 0
+offset_left = 115
+offset_top = 0
+offset_right = 155
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="职业" type="Label" parent="内容区/附近玩家/玩家行1"]
+layout_mode = 0
+offset_left = 155
+offset_top = 0
+offset_right = 255
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="家族" type="Label" parent="内容区/附近玩家/玩家行1"]
+layout_mode = 0
+offset_left = 255
+offset_top = 0
+offset_right = 365
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="称号" type="Label" parent="内容区/附近玩家/玩家行1"]
+layout_mode = 0
+offset_left = 365
+offset_top = 0
+offset_right = 475
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="选中底" type="NinePatchRect" parent="内容区/附近玩家/玩家行1"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 479
+offset_bottom = 21
+texture = ExtResource("t3")
+patch_margin_left = 7
+patch_margin_top = 5
+patch_margin_right = 8
+patch_margin_bottom = 6
+mouse_filter = 2
+visible = false
+[node name="玩家行2" type="Button" parent="内容区/附近玩家"]
+layout_mode = 0
+offset_left = 5
+offset_top = 79
+offset_right = 484
+offset_bottom = 100
+theme_type_variation = &"OrigBlankButton"
+focus_mode = 0
+text = ""
+text = ""
+[node name="名字" type="Label" parent="内容区/附近玩家/玩家行2"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 115
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="等级" type="Label" parent="内容区/附近玩家/玩家行2"]
+layout_mode = 0
+offset_left = 115
+offset_top = 0
+offset_right = 155
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="职业" type="Label" parent="内容区/附近玩家/玩家行2"]
+layout_mode = 0
+offset_left = 155
+offset_top = 0
+offset_right = 255
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="家族" type="Label" parent="内容区/附近玩家/玩家行2"]
+layout_mode = 0
+offset_left = 255
+offset_top = 0
+offset_right = 365
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="称号" type="Label" parent="内容区/附近玩家/玩家行2"]
+layout_mode = 0
+offset_left = 365
+offset_top = 0
+offset_right = 475
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="选中底" type="NinePatchRect" parent="内容区/附近玩家/玩家行2"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 479
+offset_bottom = 21
+texture = ExtResource("t3")
+patch_margin_left = 7
+patch_margin_top = 5
+patch_margin_right = 8
+patch_margin_bottom = 6
+mouse_filter = 2
+visible = false
+[node name="玩家行3" type="Button" parent="内容区/附近玩家"]
+layout_mode = 0
+offset_left = 5
+offset_top = 101
+offset_right = 484
+offset_bottom = 122
+theme_type_variation = &"OrigBlankButton"
+focus_mode = 0
+text = ""
+text = ""
+[node name="名字" type="Label" parent="内容区/附近玩家/玩家行3"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 115
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="等级" type="Label" parent="内容区/附近玩家/玩家行3"]
+layout_mode = 0
+offset_left = 115
+offset_top = 0
+offset_right = 155
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="职业" type="Label" parent="内容区/附近玩家/玩家行3"]
+layout_mode = 0
+offset_left = 155
+offset_top = 0
+offset_right = 255
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="家族" type="Label" parent="内容区/附近玩家/玩家行3"]
+layout_mode = 0
+offset_left = 255
+offset_top = 0
+offset_right = 365
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="称号" type="Label" parent="内容区/附近玩家/玩家行3"]
+layout_mode = 0
+offset_left = 365
+offset_top = 0
+offset_right = 475
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="选中底" type="NinePatchRect" parent="内容区/附近玩家/玩家行3"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 479
+offset_bottom = 21
+texture = ExtResource("t3")
+patch_margin_left = 7
+patch_margin_top = 5
+patch_margin_right = 8
+patch_margin_bottom = 6
+mouse_filter = 2
+visible = false
+[node name="玩家行4" type="Button" parent="内容区/附近玩家"]
+layout_mode = 0
+offset_left = 5
+offset_top = 123
+offset_right = 484
+offset_bottom = 144
+theme_type_variation = &"OrigBlankButton"
+focus_mode = 0
+text = ""
+text = ""
+[node name="名字" type="Label" parent="内容区/附近玩家/玩家行4"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 115
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="等级" type="Label" parent="内容区/附近玩家/玩家行4"]
+layout_mode = 0
+offset_left = 115
+offset_top = 0
+offset_right = 155
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="职业" type="Label" parent="内容区/附近玩家/玩家行4"]
+layout_mode = 0
+offset_left = 155
+offset_top = 0
+offset_right = 255
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="家族" type="Label" parent="内容区/附近玩家/玩家行4"]
+layout_mode = 0
+offset_left = 255
+offset_top = 0
+offset_right = 365
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="称号" type="Label" parent="内容区/附近玩家/玩家行4"]
+layout_mode = 0
+offset_left = 365
+offset_top = 0
+offset_right = 475
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="选中底" type="NinePatchRect" parent="内容区/附近玩家/玩家行4"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 479
+offset_bottom = 21
+texture = ExtResource("t3")
+patch_margin_left = 7
+patch_margin_top = 5
+patch_margin_right = 8
+patch_margin_bottom = 6
+mouse_filter = 2
+visible = false
+[node name="玩家行5" type="Button" parent="内容区/附近玩家"]
+layout_mode = 0
+offset_left = 5
+offset_top = 145
+offset_right = 484
+offset_bottom = 166
+theme_type_variation = &"OrigBlankButton"
+focus_mode = 0
+text = ""
+text = ""
+[node name="名字" type="Label" parent="内容区/附近玩家/玩家行5"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 115
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="等级" type="Label" parent="内容区/附近玩家/玩家行5"]
+layout_mode = 0
+offset_left = 115
+offset_top = 0
+offset_right = 155
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="职业" type="Label" parent="内容区/附近玩家/玩家行5"]
+layout_mode = 0
+offset_left = 155
+offset_top = 0
+offset_right = 255
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="家族" type="Label" parent="内容区/附近玩家/玩家行5"]
+layout_mode = 0
+offset_left = 255
+offset_top = 0
+offset_right = 365
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="称号" type="Label" parent="内容区/附近玩家/玩家行5"]
+layout_mode = 0
+offset_left = 365
+offset_top = 0
+offset_right = 475
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="选中底" type="NinePatchRect" parent="内容区/附近玩家/玩家行5"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 479
+offset_bottom = 21
+texture = ExtResource("t3")
+patch_margin_left = 7
+patch_margin_top = 5
+patch_margin_right = 8
+patch_margin_bottom = 6
+mouse_filter = 2
+visible = false
+[node name="玩家行6" type="Button" parent="内容区/附近玩家"]
+layout_mode = 0
+offset_left = 5
+offset_top = 167
+offset_right = 484
+offset_bottom = 188
+theme_type_variation = &"OrigBlankButton"
+focus_mode = 0
+text = ""
+text = ""
+[node name="名字" type="Label" parent="内容区/附近玩家/玩家行6"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 115
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="等级" type="Label" parent="内容区/附近玩家/玩家行6"]
+layout_mode = 0
+offset_left = 115
+offset_top = 0
+offset_right = 155
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="职业" type="Label" parent="内容区/附近玩家/玩家行6"]
+layout_mode = 0
+offset_left = 155
+offset_top = 0
+offset_right = 255
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="家族" type="Label" parent="内容区/附近玩家/玩家行6"]
+layout_mode = 0
+offset_left = 255
+offset_top = 0
+offset_right = 365
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="称号" type="Label" parent="内容区/附近玩家/玩家行6"]
+layout_mode = 0
+offset_left = 365
+offset_top = 0
+offset_right = 475
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="选中底" type="NinePatchRect" parent="内容区/附近玩家/玩家行6"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 479
+offset_bottom = 21
+texture = ExtResource("t3")
+patch_margin_left = 7
+patch_margin_top = 5
+patch_margin_right = 8
+patch_margin_bottom = 6
+mouse_filter = 2
+visible = false
+[node name="玩家行7" type="Button" parent="内容区/附近玩家"]
+layout_mode = 0
+offset_left = 5
+offset_top = 189
+offset_right = 484
+offset_bottom = 210
+theme_type_variation = &"OrigBlankButton"
+focus_mode = 0
+text = ""
+text = ""
+[node name="名字" type="Label" parent="内容区/附近玩家/玩家行7"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 115
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="等级" type="Label" parent="内容区/附近玩家/玩家行7"]
+layout_mode = 0
+offset_left = 115
+offset_top = 0
+offset_right = 155
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="职业" type="Label" parent="内容区/附近玩家/玩家行7"]
+layout_mode = 0
+offset_left = 155
+offset_top = 0
+offset_right = 255
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="家族" type="Label" parent="内容区/附近玩家/玩家行7"]
+layout_mode = 0
+offset_left = 255
+offset_top = 0
+offset_right = 365
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="称号" type="Label" parent="内容区/附近玩家/玩家行7"]
+layout_mode = 0
+offset_left = 365
+offset_top = 0
+offset_right = 475
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="选中底" type="NinePatchRect" parent="内容区/附近玩家/玩家行7"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 479
+offset_bottom = 21
+texture = ExtResource("t3")
+patch_margin_left = 7
+patch_margin_top = 5
+patch_margin_right = 8
+patch_margin_bottom = 6
+mouse_filter = 2
+visible = false
+[node name="玩家行8" type="Button" parent="内容区/附近玩家"]
+layout_mode = 0
+offset_left = 5
+offset_top = 211
+offset_right = 484
+offset_bottom = 232
+theme_type_variation = &"OrigBlankButton"
+focus_mode = 0
+text = ""
+text = ""
+[node name="名字" type="Label" parent="内容区/附近玩家/玩家行8"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 115
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="等级" type="Label" parent="内容区/附近玩家/玩家行8"]
+layout_mode = 0
+offset_left = 115
+offset_top = 0
+offset_right = 155
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="职业" type="Label" parent="内容区/附近玩家/玩家行8"]
+layout_mode = 0
+offset_left = 155
+offset_top = 0
+offset_right = 255
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="家族" type="Label" parent="内容区/附近玩家/玩家行8"]
+layout_mode = 0
+offset_left = 255
+offset_top = 0
+offset_right = 365
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="称号" type="Label" parent="内容区/附近玩家/玩家行8"]
+layout_mode = 0
+offset_left = 365
+offset_top = 0
+offset_right = 475
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="选中底" type="NinePatchRect" parent="内容区/附近玩家/玩家行8"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 479
+offset_bottom = 21
+texture = ExtResource("t3")
+patch_margin_left = 7
+patch_margin_top = 5
+patch_margin_right = 8
+patch_margin_bottom = 6
+mouse_filter = 2
+visible = false
+[node name="玩家行9" type="Button" parent="内容区/附近玩家"]
+layout_mode = 0
+offset_left = 5
+offset_top = 233
+offset_right = 484
+offset_bottom = 254
+theme_type_variation = &"OrigBlankButton"
+focus_mode = 0
+text = ""
+text = ""
+[node name="名字" type="Label" parent="内容区/附近玩家/玩家行9"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 115
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="等级" type="Label" parent="内容区/附近玩家/玩家行9"]
+layout_mode = 0
+offset_left = 115
+offset_top = 0
+offset_right = 155
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="职业" type="Label" parent="内容区/附近玩家/玩家行9"]
+layout_mode = 0
+offset_left = 155
+offset_top = 0
+offset_right = 255
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="家族" type="Label" parent="内容区/附近玩家/玩家行9"]
+layout_mode = 0
+offset_left = 255
+offset_top = 0
+offset_right = 365
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="称号" type="Label" parent="内容区/附近玩家/玩家行9"]
+layout_mode = 0
+offset_left = 365
+offset_top = 0
+offset_right = 475
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="选中底" type="NinePatchRect" parent="内容区/附近玩家/玩家行9"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 479
+offset_bottom = 21
+texture = ExtResource("t3")
+patch_margin_left = 7
+patch_margin_top = 5
+patch_margin_right = 8
+patch_margin_bottom = 6
+mouse_filter = 2
+visible = false
+[node name="玩家行10" type="Button" parent="内容区/附近玩家"]
+layout_mode = 0
+offset_left = 5
+offset_top = 255
+offset_right = 484
+offset_bottom = 276
+theme_type_variation = &"OrigBlankButton"
+focus_mode = 0
+text = ""
+text = ""
+[node name="名字" type="Label" parent="内容区/附近玩家/玩家行10"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 115
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="等级" type="Label" parent="内容区/附近玩家/玩家行10"]
+layout_mode = 0
+offset_left = 115
+offset_top = 0
+offset_right = 155
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="职业" type="Label" parent="内容区/附近玩家/玩家行10"]
+layout_mode = 0
+offset_left = 155
+offset_top = 0
+offset_right = 255
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="家族" type="Label" parent="内容区/附近玩家/玩家行10"]
+layout_mode = 0
+offset_left = 255
+offset_top = 0
+offset_right = 365
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="称号" type="Label" parent="内容区/附近玩家/玩家行10"]
+layout_mode = 0
+offset_left = 365
+offset_top = 0
+offset_right = 475
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="选中底" type="NinePatchRect" parent="内容区/附近玩家/玩家行10"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 479
+offset_bottom = 21
+texture = ExtResource("t3")
+patch_margin_left = 7
+patch_margin_top = 5
+patch_margin_right = 8
+patch_margin_bottom = 6
+mouse_filter = 2
+visible = false
+[node name="玩家行11" type="Button" parent="内容区/附近玩家"]
+layout_mode = 0
+offset_left = 5
+offset_top = 277
+offset_right = 484
+offset_bottom = 298
+theme_type_variation = &"OrigBlankButton"
+focus_mode = 0
+text = ""
+text = ""
+[node name="名字" type="Label" parent="内容区/附近玩家/玩家行11"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 115
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="等级" type="Label" parent="内容区/附近玩家/玩家行11"]
+layout_mode = 0
+offset_left = 115
+offset_top = 0
+offset_right = 155
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="职业" type="Label" parent="内容区/附近玩家/玩家行11"]
+layout_mode = 0
+offset_left = 155
+offset_top = 0
+offset_right = 255
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="家族" type="Label" parent="内容区/附近玩家/玩家行11"]
+layout_mode = 0
+offset_left = 255
+offset_top = 0
+offset_right = 365
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="称号" type="Label" parent="内容区/附近玩家/玩家行11"]
+layout_mode = 0
+offset_left = 365
+offset_top = 0
+offset_right = 475
+offset_bottom = 20
+text = ""
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1.0)
+horizontal_alignment = 0
+[node name="选中底" type="NinePatchRect" parent="内容区/附近玩家/玩家行11"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 479
+offset_bottom = 21
+texture = ExtResource("t3")
+patch_margin_left = 7
+patch_margin_top = 5
+patch_margin_right = 8
+patch_margin_bottom = 6
+mouse_filter = 2
+visible = false
+[node name="刷新列表钮" type="Button" parent="内容区/附近玩家"]
+layout_mode = 0
+offset_left = 8
+offset_top = 333
+offset_right = 69
+offset_bottom = 355
+focus_mode = 0
+text = "刷新列表"
+[node name="查看资料钮" type="Button" parent="内容区/附近玩家"]
+layout_mode = 0
+offset_left = 321
+offset_top = 333
+offset_right = 382
+offset_bottom = 355
+focus_mode = 0
+text = "查看资料"
+[node name="邀请组队钮" type="Button" parent="内容区/附近玩家"]
+layout_mode = 0
+offset_left = 408
+offset_top = 333
+offset_right = 469
+offset_bottom = 355
+focus_mode = 0
+text = "邀请组队"
+[node name="我的羁绊" type="Control" parent="内容区"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 489
+offset_bottom = 356
+visible = false
+[node name="酒宴列表" type="Control" parent="内容区"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 489
+offset_bottom = 356
+visible = false

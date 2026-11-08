@@ -1,0 +1,265 @@
+[gd_scene format=3]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/装备强化/箭头.png" id="箭头_tex"]
+
+; 原版「装备打造」窗的**精炼**页（`EquipBaiLianPanel.as` 的 `createChildren()`，`:164-255`）。
+;
+; 和前几个专属面板一样，它是**整块换掉左栏**的面板（`EquipStrengthWindow.as` 的 case 6），
+; `setSize(350, **349**)` —— 比内容区（316）高，**从窗口 y=58 一直铺到窗口底边 407**。
+; 所以下面坐标是面板局部，面板自己在窗口 (5,58)。
+;
+; 落点全部逐行算自 `createChildren()`，CONTENT_GAP=8、BORDER_GAP=5：
+;   丢弃盒   (8, 8) 83x175（`ItemDropBox()` —— **不带 resultCell**，与洗附加属性页同款）
+;     盒内：dropBtn x=(83-61)/2=11 y=10；itemCell 居中 y=37；arrow 紧随其后
+;   说明     (99, 8) 244x76  —— ⚠️ 精炼页是 **`_descBox`（VBox，gap 5）**，
+;            说明与注意是**两件**，不像洗附加属性页挤在一个 TextArea 里；
+;            x = itemBox.x + itemBox.width + CONTENT_GAP = 8+83+8 = **99**
+;            （洗附加属性页是 `_propBox.x + 3` = 94，两页**不一样**，别抄错）
+;   注意     (99, 89) 244x94（= 8 + 76 + 5）
+;   标签     (8, 187) 334x20（MGlowLabel，色 16748800 = #FF9100，居中）
+;   材料框   (8, 211) 334x99
+;     ├ 材料一 (5,5) 60x64（`_caiLiao1 = new ItemCaiLiaoBox(true)` —— 带「购买」）
+;     ├ 选择锻造项 (85, 30) 宽64 ── `_caiLiao1.x + 60 + 20`
+;     ├ 精炼项下拉 (151, 30) 宽105 ── 逐字 = "提升附加属性,提升强化星级".split(",")
+;     ├ 锻造成功率 (85, 53) 宽64 ── `_selectTypeLabel.y + 23`
+;     ├ 成功率条   (150, 57) 100x11（`MBarExpF`）
+;     │    ⚠️ 这些是**算出来的视觉落点**，不是 AS3 里那句 `_ratioMbar.x = 105`：
+;     │    MBarExpF(symbol167) 自己 167x16，里面 barBg 摆在符号 x=**45**、y=3，
+;     │    `width = 100` 之后 barBg 就是 (45,3) 100x11。105+45 = **150**、54+3 = **57**。
+;     │    它和洗附加属性页**无关**（那页没有条）。
+;     ├ 成功率文本 (152, 57) 宽100 ── 符号里那个 `tf`（符号 x=47,y=3），显示 "7/100"
+;     ├ 自动精炼至满属性 (90, 75) 宽120（AS3 写死的中文，语言表里没有）
+;     └ 勾选后点击精炼   (210, 75) ── `_autoToFullCheckBox.x + 120`，色 65280 = #00FF00
+;   精炼     x=50     宽37（`btn_width_two`），y = 349-22-5 = 322
+;   自动精炼 x=239    宽61（`btn_width_four`，= 350-61-50），y 同上
+;
+; ⚠️ 两个按钮都是 `BaseUtil.getButton`（`MButtonF`），**是面板自建的**（`_jingLianBtn` /
+; `_autoJingLianBtn`）—— 不是窗口那个 `_strengthBtn`。所以接线要接这两个，
+; 并把窗口根上那个藏起来（同洗附加属性页 / 刻印页的规矩，见 §3.18.14）。
+
+[node name="原版装备精炼页" type="Control"]
+custom_minimum_size = Vector2(350, 349)
+
+[node name="放入装备" type="Button" parent="."]
+offset_left = 19.0
+offset_top = 18.0
+offset_right = 80.0
+offset_bottom = 40.0
+text = "放入装备"
+
+[node name="装备格" type="TextureRect" parent="."]
+offset_left = 29.0
+offset_top = 45.0
+offset_right = 69.0
+offset_bottom = 85.0
+mouse_filter = 2
+
+[node name="装备图标" type="TextureRect" parent="装备格"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+mouse_filter = 2
+
+[node name="箭头" type="TextureRect" parent="."]
+offset_left = 42.0
+offset_top = 85.0
+offset_right = 56.0
+offset_bottom = 173.0
+mouse_filter = 2
+texture = ExtResource("箭头_tex")
+
+; `_descTextField`（VBox 第 0 件，244x76）—— 文案 `EQUIPBAILIAN_OP_DESC`
+[node name="说明" type="RichTextLabel" parent="."]
+offset_left = 99.0
+offset_top = 8.0
+offset_right = 343.0
+offset_bottom = 84.0
+bbcode_enabled = true
+scroll_active = false
+mouse_filter = 2
+
+; `_attentionTextField`（VBox 第 1 件，244x94）—— 文案随下拉项切换
+; （`EQUIPBAILIAN_TISHENG_SHUXING_DESC` / `EQUIPBAILIAN_TISHENG_XINGSHU_DESC`）
+[node name="注意" type="RichTextLabel" parent="."]
+offset_left = 99.0
+offset_top = 89.0
+offset_right = 343.0
+offset_bottom = 183.0
+bbcode_enabled = true
+scroll_active = false
+mouse_filter = 2
+
+; `_label`，文案 `EQUIPBAILIAN_PROMPT`
+[node name="标签" type="Label" parent="."]
+offset_left = 8.0
+offset_top = 187.0
+offset_right = 342.0
+offset_bottom = 207.0
+horizontal_alignment = 1
+mouse_filter = 2
+
+[node name="材料框" type="Panel" parent="."]
+offset_left = 8.0
+offset_top = 211.0
+offset_right = 342.0
+offset_bottom = 310.0
+
+[node name="材料一" type="Control" parent="材料框"]
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 65.0
+offset_bottom = 69.0
+
+[node name="材料名" type="Label" parent="材料框/材料一"]
+offset_right = 60.0
+offset_bottom = 16.0
+horizontal_alignment = 1
+
+[node name="材料格" type="TextureRect" parent="材料框/材料一"]
+offset_left = 10.0
+offset_top = 20.0
+offset_right = 50.0
+offset_bottom = 60.0
+mouse_filter = 2
+
+[node name="材料图标" type="TextureRect" parent="材料框/材料一/材料格"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+mouse_filter = 2
+
+[node name="材料数量" type="Label" parent="材料框/材料一/材料格"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -22.0
+offset_top = -14.0
+offset_right = -1.0
+offset_bottom = -1.0
+grow_horizontal = 0
+grow_vertical = 0
+
+; `ItemCaiLiaoBox(true)` 的 `_showBuyBtn` —— 这一页的购买按钮在
+[node name="购买" type="Button" parent="材料框/材料一"]
+offset_left = 11.0
+offset_top = 63.0
+offset_right = 48.0
+offset_bottom = 85.0
+text = "购买"
+
+; `_selectTypeLabel` = `EQUIPBAILIAN_SELECTED_LABEL`（"选择锻造项"），色 `UIConfig.UI_ZHONG_SE`
+[node name="选择锻造项" type="Label" parent="材料框"]
+offset_left = 85.0
+offset_top = 30.0
+offset_right = 149.0
+offset_bottom = 50.0
+mouse_filter = 2
+
+; `_comboBox` = `EQUIPBAILIAN_JINGLIAN_TYPE`.split(",") —— 下标 0 附加属性 / 1 强化星级
+[node name="精炼项" type="OptionButton" parent="材料框"]
+offset_left = 151.0
+offset_top = 30.0
+offset_right = 256.0
+offset_bottom = 50.0
+
+; `_ratioLabel` = `EQUIPBAILIAN_SUCCESS_LABEL`（"锻造成功率"）
+[node name="锻造成功率" type="Label" parent="材料框"]
+offset_left = 85.0
+offset_top = 53.0
+offset_right = 149.0
+offset_bottom = 73.0
+mouse_filter = 2
+
+; `_ratioMbar`（`MBarExpF`，showTitle=false 且 label 被 removeChild）—— 只有条 + 文字。
+; ⚠️ 这里**不用 ProgressBar**：原版 `MBar.setData` 是**遮罩显影**，不是九宫格拉伸 ——
+; 它把整幅 `bar`（122 宽）左移，透过固定的 `maskMc`（符号 x=48、宽 94）露出左边一截。
+; 换成 ProgressBar 的话，7% 时九宫格会把填充图左边那 4px 圆角当"左帽"画出来，
+; 只剩 1px 且发暗的绿（原版是 2px 亮绿）—— 2026-09-23 并排图逐列量出来的。
+; 所以这里拆成"槽 + 取区域的填充"，几何照符号算：
+;   槽   = barBg  符号(45,3) 100x11 → 材料框局部 (150,57)
+;   填充 = maskMc 符号(48,6)  94x5  → 材料框局部 (153,60)，宽度按比例取
+[node name="成功率条" type="Control" parent="材料框"]
+offset_left = 150.0
+offset_top = 57.0
+offset_right = 250.0
+offset_bottom = 68.0
+mouse_filter = 2
+
+[node name="槽" type="TextureRect" parent="材料框/成功率条"]
+offset_right = 100.0
+offset_bottom = 11.0
+expand_mode = 1
+stretch_mode = 1
+mouse_filter = 2
+
+; ⚠️ `expand_mode = 1`（IGNORE_SIZE）必须开着 —— 不然贴图（122 宽）会把控件的最小尺寸顶成 122，
+; 设多少 size 都没用。取区域走 `AtlasTexture`（`TextureRect` **没有** `region_rect`，
+; 那是 `Sprite2D` 的属性；写错了只会静默报一句 assignment 错误、然后整段刷新中断）。
+[node name="填充" type="TextureRect" parent="材料框/成功率条"]
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 9.0
+offset_bottom = 8.0
+expand_mode = 1
+stretch_mode = 1
+mouse_filter = 2
+
+; 符号里那个 `tf`：位置在条上、宽 100，显示 "当前/100"
+[node name="成功率文本" type="Label" parent="材料框"]
+offset_left = 152.0
+offset_top = 57.0
+offset_right = 252.0
+offset_bottom = 75.0
+horizontal_alignment = 1
+mouse_filter = 2
+
+; AS3 里**写死的中文**（`:232`），语言表里没有这两条
+[node name="自动精炼至满属性" type="CheckBox" parent="材料框"]
+offset_left = 90.0
+offset_top = 75
+offset_right = 210.0
+offset_bottom = 94
+text = "自动精炼至满属性"
+
+[node name="勾选后点击精炼" type="Label" parent="材料框"]
+offset_left = 210.0
+offset_top = 75.0
+offset_right = 310.0
+offset_bottom = 93.0
+mouse_filter = 2
+
+; `EQUIPBAILIAN_JINGLIAN_BUTTON` = "精炼"，x 写死 50、宽 btn_width_two(37)
+[node name="精炼" type="Button" parent="."]
+offset_left = 50.0
+offset_top = 322.0
+offset_right = 87.0
+offset_bottom = 344.0
+text = "精炼"
+
+; `EQUIPBAILIAN_AUTO_JINGLIAN_BUTTON` = "自动精炼"，x = 350-61-50 = 239、宽 btn_width_four(61)
+[node name="自动精炼" type="Button" parent="."]
+offset_left = 239.0
+offset_top = 322.0
+offset_right = 300.0
+offset_bottom = 344.0
+text = "自动精炼"

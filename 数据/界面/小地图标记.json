@@ -1,0 +1,504 @@
+{
+  "说明": "小地图标记元件的锚点表。生成物，别手改；改逻辑请改 开发工具/出小地图标记表.py。",
+  "真值": {
+    "元件库": "Effect_mapHelper.swf（钉 2.2.3优化版，不按 V2.6 分发版）",
+    "元件库路径": "<原版目录>/www/act_web_nya_208_isolated/swf/Effect/Effect_mapHelper.swf",
+    "元件库md5": "fbc53e2c9687889930d9e68b7b49dba9",
+    "注册点": "SmallMapHelper.as:129-138 className→new MCFromDatDefine+addChild；SmallMapWindow.as:857-858 只钉这个 MovieClip 的 x/y = 元件注册点 ⇒ 锚点只能从 SWF 形状框读，不能按 PNG 尺寸推",
+    "标记点": "SmallMapWindow.as:857-858 setMcPosition：x=(世界x+miniMap.centerX)/16，y=(世界y+miniMap.centerY)/16",
+    "缩略图": "PicTool.as:470-478 getMiniMap（width/height/centerX/centerY/scale||8）+ SmallMapWindow.as:1442 image.scale = scale/16 ⇒ 显示尺寸 = miniMap.width/16 × height/16",
+    "画序": "SmallMapWindow.as:1043-1050 _mapPanel 的 addChild 序：图 → NPC → 他人 → 怪 → 传送点 → 旗 → 自己（自己最上）",
+    "视口": "SmallMapWindow.as:55-61 MAX/MIN_WIDTH=143、MAX/MIN_HEIGHT=124；:1036-1037 视口左上角 = content_bg + (4,4)",
+    "滚动": "SmallMapWindow.as:444-469 setPlayerPosition：只在玩家越过 1/5 与 4/5 两条线时挪面板，挪完 Math.round；:1078-1094 图比视口小就居中且不滚",
+    "隐藏": "PicTool.as:456-459 info.hideMinimap==1 ⇒ getMiniMap 返回 null ⇒ Client.as:8508-8511 整块小地图不显示",
+    "怪物档位": "SmallMapHelper.as:74-86 getMobMC(名, mobInfo.boss)：0 普通 / 1 首领 / 2 精英（SmallMapHandler.as:199-206）"
+  },
+  "视口": {
+    "宽": 143,
+    "高": 124,
+    "内缩": [
+      4,
+      4
+    ]
+  },
+  "标记": {
+    "minimap_endnpc_skin": {
+      "锚点": [
+        -7,
+        -37
+      ],
+      "形状框": [
+        -7.45,
+        -37.0,
+        9.55,
+        0.05
+      ],
+      "精灵": 22,
+      "位图": [
+        "10x12",
+        "17x25"
+      ],
+      "出处": "Effect_mapHelper.swf DefineSprite#22 的 shapeBounds（Xmin,Ymin = 贴图左上角相对标记点）",
+      "贴图": "res://素材/特效/Effect_mapHelper/minimap_endnpc_skin/1.png",
+      "图宽": 17,
+      "图高": 38,
+      "用途": "NPC 的任务可交（黄「?」）。SmallMapHelper.as:28 CLASS_NPC_END_SKIN ← getNPCMC():54 case QUEST_CAN_COMPLETE"
+    },
+    "minimap_flag_blueSkin": {
+      "锚点": [
+        -4,
+        -17
+      ],
+      "形状框": [
+        -4.0,
+        -17.0,
+        5.0,
+        0.0
+      ],
+      "精灵": 67,
+      "位图": [
+        "9x17"
+      ],
+      "出处": "Effect_mapHelper.swf DefineSprite#67 的 shapeBounds（Xmin,Ymin = 贴图左上角相对标记点）",
+      "贴图": "res://素材/特效/Effect_mapHelper/minimap_flag_blueSkin/1.png",
+      "图宽": 9,
+      "图高": 17,
+      "用途": "战场蓝旗。SmallMapHandler.as:218"
+    },
+    "minimap_flag_redSkin": {
+      "锚点": [
+        -4,
+        -17
+      ],
+      "形状框": [
+        -4.0,
+        -17.0,
+        5.0,
+        0.0
+      ],
+      "精灵": 64,
+      "位图": [
+        "9x17"
+      ],
+      "出处": "Effect_mapHelper.swf DefineSprite#64 的 shapeBounds（Xmin,Ymin = 贴图左上角相对标记点）",
+      "贴图": "res://素材/特效/Effect_mapHelper/minimap_flag_redSkin/1.png",
+      "图宽": 9,
+      "图高": 17,
+      "用途": "战场红旗。SmallMapHandler.as:215 → getMCFromClassName()"
+    },
+    "minimap_flag_yellowSkin": {
+      "锚点": [
+        -4,
+        -17
+      ],
+      "形状框": [
+        -4.0,
+        -17.0,
+        5.0,
+        0.0
+      ],
+      "精灵": 70,
+      "位图": [
+        "9x17"
+      ],
+      "出处": "Effect_mapHelper.swf DefineSprite#70 的 shapeBounds（Xmin,Ymin = 贴图左上角相对标记点）",
+      "贴图": "res://素材/特效/Effect_mapHelper/minimap_flag_yellowSkin/1.png",
+      "图宽": 9,
+      "图高": 17,
+      "用途": "战场黄旗。SmallMapHandler.as:221"
+    },
+    "minimap_friend_skin": {
+      "锚点": [
+        -5,
+        -12
+      ],
+      "形状框": [
+        -5.0,
+        -12.0,
+        5.0,
+        0.0
+      ],
+      "精灵": 6,
+      "位图": [
+        "10x12"
+      ],
+      "出处": "Effect_mapHelper.swf DefineSprite#6 的 shapeBounds（Xmin,Ymin = 贴图左上角相对标记点）",
+      "贴图": "res://素材/特效/Effect_mapHelper/minimap_friend_skin/1.png",
+      "图宽": 10,
+      "图高": 12,
+      "用途": "好友。SmallMapHelper.as:14 CLASS_FRIEND_SKIN ← getFriendMC():116"
+    },
+    "minimap_mobBoss_skin": {
+      "锚点": [
+        -7,
+        -14
+      ],
+      "形状框": [
+        -7.0,
+        -14.0,
+        7.0,
+        0.0
+      ],
+      "精灵": 58,
+      "位图": [
+        "14x14"
+      ],
+      "出处": "Effect_mapHelper.swf DefineSprite#58 的 shapeBounds（Xmin,Ymin = 贴图左上角相对标记点）",
+      "贴图": "res://素材/特效/Effect_mapHelper/minimap_mobBoss_skin/1.png",
+      "图宽": 14,
+      "图高": 14,
+      "用途": "首领。SmallMapHelper.as:18 CLASS_MOB_BOSS_SKIN ← getMobMC():83 case 1"
+    },
+    "minimap_mobJingYing_skin": {
+      "锚点": [
+        -7,
+        -14
+      ],
+      "形状框": [
+        -7.0,
+        -14.0,
+        7.0,
+        0.0
+      ],
+      "精灵": 55,
+      "位图": [
+        "14x14"
+      ],
+      "出处": "Effect_mapHelper.swf DefineSprite#55 的 shapeBounds（Xmin,Ymin = 贴图左上角相对标记点）",
+      "贴图": "res://素材/特效/Effect_mapHelper/minimap_mobJingYing_skin/1.png",
+      "图宽": 14,
+      "图高": 14,
+      "用途": "精英怪。SmallMapHelper.as:20 CLASS_MOB_JINGYING_SKIN ← getMobMC():85 case 2"
+    },
+    "minimap_mob_skin": {
+      "锚点": [
+        -6,
+        -13
+      ],
+      "形状框": [
+        -5.5,
+        -13.0,
+        5.5,
+        0.0
+      ],
+      "精灵": 61,
+      "位图": [
+        "11x13"
+      ],
+      "出处": "Effect_mapHelper.swf DefineSprite#61 的 shapeBounds（Xmin,Ymin = 贴图左上角相对标记点）",
+      "贴图": "res://素材/特效/Effect_mapHelper/minimap_mob_skin/1.png",
+      "图宽": 11,
+      "图高": 13,
+      "用途": "普通怪。SmallMapHelper.as:16 CLASS_MOB_SKIN ← getMobMC():81 case 0（:87 default 也回这张）"
+    },
+    "minimap_npc1_skin": {
+      "锚点": [
+        -8,
+        -17
+      ],
+      "形状框": [
+        -7.5,
+        -17.0,
+        8.55,
+        1.0
+      ],
+      "精灵": 52,
+      "位图": [
+        "15x17"
+      ],
+      "出处": "Effect_mapHelper.swf DefineSprite#52 的 shapeBounds（Xmin,Ymin = 贴图左上角相对标记点）",
+      "状态": "死链，不导",
+      "为什么": "SmallMapHelper.as:60 的 `param3>0 && param3<=8` 分支才用；而唯一的 NPC 生成点 Client.as:6474-6477 把 funcType 写死成 0 ⇒ 原版运行期永远取不到这 8 枚",
+      "用途": "funcType 1..8 那族（运行期取不到，见 为什么）"
+    },
+    "minimap_npc2_skin": {
+      "锚点": [
+        -6,
+        -14
+      ],
+      "形状框": [
+        -6.0,
+        -14.0,
+        6.0,
+        1.0
+      ],
+      "精灵": 49,
+      "位图": [
+        "12x14"
+      ],
+      "出处": "Effect_mapHelper.swf DefineSprite#49 的 shapeBounds（Xmin,Ymin = 贴图左上角相对标记点）",
+      "状态": "死链，不导",
+      "为什么": "SmallMapHelper.as:60 的 `param3>0 && param3<=8` 分支才用；而唯一的 NPC 生成点 Client.as:6474-6477 把 funcType 写死成 0 ⇒ 原版运行期永远取不到这 8 枚",
+      "用途": "funcType 1..8 那族（运行期取不到，见 为什么）"
+    },
+    "minimap_npc3_skin": {
+      "锚点": [
+        -7,
+        -12
+      ],
+      "形状框": [
+        -6.5,
+        -12.15,
+        6.6,
+        0.0
+      ],
+      "精灵": 46,
+      "位图": [
+        "13x12"
+      ],
+      "出处": "Effect_mapHelper.swf DefineSprite#46 的 shapeBounds（Xmin,Ymin = 贴图左上角相对标记点）",
+      "状态": "死链，不导",
+      "为什么": "SmallMapHelper.as:60 的 `param3>0 && param3<=8` 分支才用；而唯一的 NPC 生成点 Client.as:6474-6477 把 funcType 写死成 0 ⇒ 原版运行期永远取不到这 8 枚",
+      "用途": "funcType 1..8 那族（运行期取不到，见 为什么）"
+    },
+    "minimap_npc4_skin": {
+      "锚点": [
+        -9,
+        -15
+      ],
+      "形状框": [
+        -8.7,
+        -15.0,
+        8.5,
+        0.1
+      ],
+      "精灵": 43,
+      "位图": [
+        "17x15"
+      ],
+      "出处": "Effect_mapHelper.swf DefineSprite#43 的 shapeBounds（Xmin,Ymin = 贴图左上角相对标记点）",
+      "状态": "死链，不导",
+      "为什么": "SmallMapHelper.as:60 的 `param3>0 && param3<=8` 分支才用；而唯一的 NPC 生成点 Client.as:6474-6477 把 funcType 写死成 0 ⇒ 原版运行期永远取不到这 8 枚",
+      "用途": "funcType 1..8 那族（运行期取不到，见 为什么）"
+    },
+    "minimap_npc5_skin": {
+      "锚点": [
+        -9,
+        -12
+      ],
+      "形状框": [
+        -8.7,
+        -12.0,
+        8.5,
+        0.1
+      ],
+      "精灵": 40,
+      "位图": [
+        "17x12"
+      ],
+      "出处": "Effect_mapHelper.swf DefineSprite#40 的 shapeBounds（Xmin,Ymin = 贴图左上角相对标记点）",
+      "状态": "死链，不导",
+      "为什么": "SmallMapHelper.as:60 的 `param3>0 && param3<=8` 分支才用；而唯一的 NPC 生成点 Client.as:6474-6477 把 funcType 写死成 0 ⇒ 原版运行期永远取不到这 8 枚",
+      "用途": "funcType 1..8 那族（运行期取不到，见 为什么）"
+    },
+    "minimap_npc6_skin": {
+      "锚点": [
+        -7,
+        -12
+      ],
+      "形状框": [
+        -6.55,
+        -12.3,
+        6.5,
+        0.0
+      ],
+      "精灵": 37,
+      "位图": [
+        "13x12"
+      ],
+      "出处": "Effect_mapHelper.swf DefineSprite#37 的 shapeBounds（Xmin,Ymin = 贴图左上角相对标记点）",
+      "状态": "死链，不导",
+      "为什么": "SmallMapHelper.as:60 的 `param3>0 && param3<=8` 分支才用；而唯一的 NPC 生成点 Client.as:6474-6477 把 funcType 写死成 0 ⇒ 原版运行期永远取不到这 8 枚",
+      "用途": "funcType 1..8 那族（运行期取不到，见 为什么）"
+    },
+    "minimap_npc7_skin": {
+      "锚点": [
+        -6,
+        -13
+      ],
+      "形状框": [
+        -5.75,
+        -13.0,
+        6.25,
+        0.15
+      ],
+      "精灵": 34,
+      "位图": [
+        "11x13"
+      ],
+      "出处": "Effect_mapHelper.swf DefineSprite#34 的 shapeBounds（Xmin,Ymin = 贴图左上角相对标记点）",
+      "状态": "死链，不导",
+      "为什么": "SmallMapHelper.as:60 的 `param3>0 && param3<=8` 分支才用；而唯一的 NPC 生成点 Client.as:6474-6477 把 funcType 写死成 0 ⇒ 原版运行期永远取不到这 8 枚",
+      "用途": "funcType 1..8 那族（运行期取不到，见 为什么）"
+    },
+    "minimap_npc8_skin": {
+      "锚点": [
+        -6,
+        -13
+      ],
+      "形状框": [
+        -5.75,
+        -13.0,
+        5.5,
+        0.15
+      ],
+      "精灵": 31,
+      "位图": [
+        "11x13"
+      ],
+      "出处": "Effect_mapHelper.swf DefineSprite#31 的 shapeBounds（Xmin,Ymin = 贴图左上角相对标记点）",
+      "状态": "死链，不导",
+      "为什么": "SmallMapHelper.as:60 的 `param3>0 && param3<=8` 分支才用；而唯一的 NPC 生成点 Client.as:6474-6477 把 funcType 写死成 0 ⇒ 原版运行期永远取不到这 8 枚",
+      "用途": "funcType 1..8 那族（运行期取不到，见 为什么）"
+    },
+    "minimap_npc_skin": {
+      "锚点": [
+        -5,
+        -12
+      ],
+      "形状框": [
+        -5.05,
+        -12.05,
+        5.0,
+        0.0
+      ],
+      "精灵": 18,
+      "位图": [
+        "10x12"
+      ],
+      "出处": "Effect_mapHelper.swf DefineSprite#18 的 shapeBounds（Xmin,Ymin = 贴图左上角相对标记点）",
+      "贴图": "res://素材/特效/Effect_mapHelper/minimap_npc_skin/1.png",
+      "图宽": 11,
+      "图高": 13,
+      "用途": "NPC（无任务态）。SmallMapHelper.as:22 CLASS_NPC_SKIN ← getNPCMC():62 default 分支"
+    },
+    "minimap_party_skin": {
+      "锚点": [
+        -5,
+        -12
+      ],
+      "形状框": [
+        -5.1,
+        -12.15,
+        5.0,
+        0.0
+      ],
+      "精灵": 15,
+      "位图": [
+        "10x12"
+      ],
+      "出处": "Effect_mapHelper.swf DefineSprite#15 的 shapeBounds（Xmin,Ymin = 贴图左上角相对标记点）",
+      "贴图": "res://素材/特效/Effect_mapHelper/minimap_party_skin/1.png",
+      "图宽": 11,
+      "图高": 13,
+      "用途": "队友。SmallMapHelper.as:30 CLASS_PARTY_SKIN ← getPartyMemMC():73"
+    },
+    "minimap_partymaster_skin": {
+      "锚点": [
+        -5,
+        -22
+      ],
+      "形状框": [
+        -5.1,
+        -22.0,
+        5.05,
+        0.0
+      ],
+      "精灵": 9,
+      "位图": [
+        "10x12"
+      ],
+      "出处": "Effect_mapHelper.swf DefineSprite#9 的 shapeBounds（Xmin,Ymin = 贴图左上角相对标记点）",
+      "贴图": "res://素材/特效/Effect_mapHelper/minimap_partymaster_skin/1.png",
+      "图宽": 11,
+      "图高": 22,
+      "用途": "队长（头顶黄「+」）。SmallMapHelper.as:32 CLASS_PARTYMASTER_SKIN ← getPartyMasterMC():68"
+    },
+    "minimap_portal_skin": {
+      "锚点": [
+        -6,
+        -18
+      ],
+      "形状框": [
+        -6.05,
+        -18.0,
+        5.95,
+        1.0
+      ],
+      "精灵": 3,
+      "位图": [
+        "12x19"
+      ],
+      "出处": "Effect_mapHelper.swf DefineSprite#3 的 shapeBounds（Xmin,Ymin = 贴图左上角相对标记点）",
+      "贴图": "res://素材/特效/Effect_mapHelper/minimap_portal_skin/1.png",
+      "图宽": 12,
+      "图高": 19,
+      "用途": "传送点。SmallMapHelper.as:10 CLASS_PORTAL_SKIN ← getDoorMC():121；门表来自 Client.as:8515 getPortalsByFilter({pt:2})"
+    },
+    "minimap_questing_skin": {
+      "锚点": [
+        -8,
+        -36
+      ],
+      "形状框": [
+        -7.95,
+        -36.2,
+        9.1,
+        0.05
+      ],
+      "精灵": 28,
+      "位图": [
+        "10x12",
+        "17x25"
+      ],
+      "出处": "Effect_mapHelper.swf DefineSprite#28 的 shapeBounds（Xmin,Ymin = 贴图左上角相对标记点）",
+      "贴图": "res://素材/特效/Effect_mapHelper/minimap_questing_skin/1.png",
+      "图宽": 18,
+      "图高": 37,
+      "用途": "NPC 的任务进行中（灰「?」）。SmallMapHelper.as:26 CLASS_NPC_IN_PROGRESS ← getNPCMC():56 case QUEST_IN_PROGRESS"
+    },
+    "minimap_startnpc_skin": {
+      "锚点": [
+        -8,
+        -37
+      ],
+      "形状框": [
+        -8.15,
+        -37.05,
+        8.85,
+        0.0
+      ],
+      "精灵": 25,
+      "位图": [
+        "10x12",
+        "17x25"
+      ],
+      "出处": "Effect_mapHelper.swf DefineSprite#25 的 shapeBounds（Xmin,Ymin = 贴图左上角相对标记点）",
+      "贴图": "res://素材/特效/Effect_mapHelper/minimap_startnpc_skin/1.png",
+      "图宽": 17,
+      "图高": 38,
+      "用途": "NPC 有任务可接（头顶黄「!」）。SmallMapHelper.as:24 CLASS_NPC_START_SKIN ← getNPCMC():52 case QUEST_CAN_START"
+    },
+    "minimap_user_skin": {
+      "锚点": [
+        -5,
+        -12
+      ],
+      "形状框": [
+        -5.0,
+        -12.0,
+        5.0,
+        0.0
+      ],
+      "精灵": 12,
+      "位图": [
+        "10x12"
+      ],
+      "出处": "Effect_mapHelper.swf DefineSprite#12 的 shapeBounds（Xmin,Ymin = 贴图左上角相对标记点）",
+      "贴图": "res://素材/特效/Effect_mapHelper/minimap_user_skin/1.png",
+      "图宽": 10,
+      "图高": 12,
+      "用途": "自己。SmallMapHelper.as:12 CLASS_USER_SKIN ← getCharMC():111；SmallMapWindow.as:1052 挂在 charContainer（画序最上）"
+    }
+  }
+}

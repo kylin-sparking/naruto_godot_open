@@ -1,0 +1,222 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/意志背包/装备盘.png" id="1_equip"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/意志背包/意志格.png" id="2_cell"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/意志背包/意志值.png" id="3_value"]
+[ext_resource type="Texture2D" path="res://素材/角色动画/玩家/木叶忍者_00000001/Char_00000001.swf_12_Char_00000001_stand_0_body.png" id="4_char"]
+
+[node name="原版意志背包内容" type="Control"]
+custom_minimum_size = Vector2(663, 381)
+
+[node name="内容框" type="Panel" parent="."]
+offset_left = 8.0
+offset_top = 9.0
+offset_right = 655.0
+offset_bottom = 351.0
+
+[node name="拖动提示" type="Label" parent="."]
+offset_left = 38.0
+offset_top = 19.0
+offset_right = 511.0
+offset_bottom = 37.0
+text = "意志可直接拖动放置于人物身上"
+
+[node name="意志值图标" type="TextureRect" parent="."]
+offset_left = 507.0
+offset_top = 18.0
+offset_right = 536.0
+offset_bottom = 48.0
+texture = ExtResource("3_value")
+mouse_filter = 2
+
+[node name="意志值" type="LineEdit" parent="."]
+offset_left = 522.0
+offset_top = 23.0
+offset_right = 647.0
+offset_bottom = 44.0
+text = "0"
+editable = false
+alignment = 1
+
+[node name="背包意志" type="GridContainer" parent="."]
+offset_left = 16.0
+offset_top = 50.0
+offset_right = 356.0
+offset_bottom = 321.0
+columns = 5
+theme_override_constants/h_separation = 5
+theme_override_constants/v_separation = 5
+
+[node name="意志01" type="TextureRect" parent="背包意志"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("2_cell")
+[node name="意志02" type="TextureRect" parent="背包意志"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("2_cell")
+[node name="意志03" type="TextureRect" parent="背包意志"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("2_cell")
+[node name="意志04" type="TextureRect" parent="背包意志"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("2_cell")
+[node name="意志05" type="TextureRect" parent="背包意志"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("2_cell")
+[node name="意志06" type="TextureRect" parent="背包意志"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("2_cell")
+[node name="意志07" type="TextureRect" parent="背包意志"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("2_cell")
+[node name="意志08" type="TextureRect" parent="背包意志"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("2_cell")
+[node name="意志09" type="TextureRect" parent="背包意志"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("2_cell")
+[node name="意志10" type="TextureRect" parent="背包意志"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("2_cell")
+[node name="意志11" type="TextureRect" parent="背包意志"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("2_cell")
+[node name="意志12" type="TextureRect" parent="背包意志"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("2_cell")
+[node name="意志13" type="TextureRect" parent="背包意志"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("2_cell")
+[node name="意志14" type="TextureRect" parent="背包意志"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("2_cell")
+[node name="意志15" type="TextureRect" parent="背包意志"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("2_cell")
+[node name="意志16" type="TextureRect" parent="背包意志"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("2_cell")
+[node name="意志17" type="TextureRect" parent="背包意志"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("2_cell")
+[node name="意志18" type="TextureRect" parent="背包意志"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("2_cell")
+[node name="意志19" type="TextureRect" parent="背包意志"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("2_cell")
+[node name="意志20" type="TextureRect" parent="背包意志"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("2_cell")
+
+[node name="装备区域" type="Control" parent="."]
+offset_left = 391.0
+offset_top = 82.0
+offset_right = 621.0
+offset_bottom = 312.0
+
+[node name="装备盘" type="TextureRect" parent="装备区域"]
+offset_right = 230.0
+offset_bottom = 230.0
+texture = ExtResource("1_equip")
+mouse_filter = 2
+
+[node name="人物" type="TextureRect" parent="装备区域"]
+offset_left = 80.0
+offset_top = 53.0
+offset_right = 150.0
+offset_bottom = 176.0
+texture = ExtResource("4_char")
+expand_mode = 1
+stretch_mode = 5
+mouse_filter = 2
+
+[node name="装备意志1" type="TextureRect" parent="装备区域"]
+offset_left = -29.0
+offset_top = 81.0
+offset_right = 35.0
+offset_bottom = 145.0
+texture = ExtResource("2_cell")
+[node name="装备意志2" type="TextureRect" parent="装备区域"]
+offset_left = -4.0
+offset_top = 1.0
+offset_right = 60.0
+offset_bottom = 65.0
+texture = ExtResource("2_cell")
+[node name="装备意志3" type="TextureRect" parent="装备区域"]
+offset_left = 80.0
+offset_top = -30.0
+offset_right = 144.0
+offset_bottom = 34.0
+texture = ExtResource("2_cell")
+[node name="装备意志4" type="TextureRect" parent="装备区域"]
+offset_left = 165.0
+offset_top = 1.0
+offset_right = 229.0
+offset_bottom = 65.0
+texture = ExtResource("2_cell")
+[node name="装备意志5" type="TextureRect" parent="装备区域"]
+offset_left = 195.0
+offset_top = 81.0
+offset_right = 259.0
+offset_bottom = 145.0
+texture = ExtResource("2_cell")
+[node name="装备意志6" type="TextureRect" parent="装备区域"]
+offset_left = 165.0
+offset_top = 161.0
+offset_right = 229.0
+offset_bottom = 225.0
+texture = ExtResource("2_cell")
+[node name="装备意志7" type="TextureRect" parent="装备区域"]
+offset_left = 80.0
+offset_top = 196.0
+offset_right = 144.0
+offset_bottom = 260.0
+texture = ExtResource("2_cell")
+[node name="装备意志8" type="TextureRect" parent="装备区域"]
+offset_left = -4.0
+offset_top = 161.0
+offset_right = 60.0
+offset_bottom = 225.0
+texture = ExtResource("2_cell")
+
+[node name="意志介绍" type="Button" parent="."]
+offset_left = 538.0
+offset_top = 321.0
+offset_right = 648.0
+offset_bottom = 341.0
+flat = true
+text = "[意志介绍]"
+
+[node name="一键合成" type="Button" parent="."]
+offset_left = 80.0
+offset_top = 354.0
+offset_right = 223.0
+offset_bottom = 376.0
+text = "一键合成背包内全部意志"
+
+[node name="前往学习" type="Button" parent="."]
+offset_left = 440.0
+offset_top = 354.0
+offset_right = 522.0
+offset_bottom = 376.0
+text = "前往学习意志"

@@ -1,0 +1,7 @@
+[gd_resource type="Theme" format=3 uid="uid://ct8tkmscbk125"]
+
+[ext_resource type="FontFile" uid="uid://bn03t3hn8jr3d" path="res://素材/界面/simsun_原版.ttf" id="1_bnusw"]
+
+[resource]
+default_font = ExtResource("1_bnusw")
+default_font_size = 12

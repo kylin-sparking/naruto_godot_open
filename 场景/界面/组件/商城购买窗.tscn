@@ -1,0 +1,325 @@
+[gd_scene load_steps=8 format=3]
+
+; 原版商城**购买弹窗** —— `com/mxw/uifl/biguan/BuyEqpWindow.as`（518 行）。
+;
+; 来源：`CashItemCell` 的购买按钮派发 `CashShopWindowEvent.BUY_FROM_LIST`
+; （`CashItemCell.as:175-177`）→ `CashShopWindow2.__buyItem`（`:444-451`）
+; → `new BuyEqpWindow(); setData(param1.data); setLocationCenter(); PopUpMananger.centerWindow(this,true)`。
+;
+; 版式出自 `newBackground()`（`:484-509`）/ `init()`（`:260-330`）/ `newBtn()`（`:132-180`）
+; / `newMLabel()`（`:358-383`）/ `dolayout()`（`:97-110`），坐标是**窗局部**：
+;   background   MWindow_background  @ (0,0)  206x284   ← 拉到 206x284（符号自然 275x325）
+;   _background2 MYellow_background  @ (6,39) 194x216
+;   物品格(原为 BiguanLingfuCell)     @ (11,39)
+;   _box(说明框) Box                 @ (11,88) 185x52，内含 sayItem 180x50 绿字 #00ff00
+;   分隔线 LineHPicF ×3              @ (11,87) / (11,140) / (11,224)，都是 180x2
+;   buyTypeLabel  BUYEQP_WINDOW_BUY_TYPE 橙 @ (11,144) 65x18
+;   buyCoundTf    BUYEQP_WINDOW_BUY_COUNT 橙 @ (11,164) 65x18
+;   consumableTf  BUYEQP_WINDOW_CONSUMABLE 橙 @ (11,184) 65x18
+;   balanceTf     "" 橙 @ (11,204) 113x18   （文案由 setBuyInfo 填 BUYEQPWINDOW_BALANCE_TF_TEXT）
+;   lackBalanceTf "" 红 @ (11,227) 180x18    （余额不足提示）
+;   ybCheckBox  MCheckBoxF @ (71,145) 默认选中；ljCheckBox @ (118,145) 默认隐藏
+;   ybIcon      MIconGoldYuanBaoF @ (93,148)；ljIcon = QUAN_ICON @ (140,148) 默认隐藏
+;   buyCoundBg  MTextInput_background @ (91,165) 50x21；buyCound 输入 @ (93,166) 46x18 居中
+;   minusBtn MMinusBtnF @ (71,165) 18x18；addBtn MPlusBtnF @ (143,165) 18x18
+;   consumableCoundBg MTextInput_background @ (77,185) 56x21；总值文字 @ (71,186) 居中
+;   zhanghaoYuE（账号余额数值）@ (126,205) 60x18
+;   buyBtn MButtonF y=256 宽 btn_width_two=37；payBtn（充值）同 y、同宽
+; ⚠️ **payBtn 本工程已删**（2026-10-18 用户要求：商城里不留任何充值按键，有意偏离原版）。
+;        原版两颗并排居中（`newBtn():158-159`），现在只剩「购买」一颗 ⇒ 由 `商城购买窗.gd::_排购买()`
+;        按**按钮自身宽**居中。
+;
+; ⚠️ 拖动是**有意偏离原版**（用户 2026-11-01 要求购买窗能自由拖动）：
+;    `BuyEqpWindow.as:279` 构造里 `startDragY = -1`，原版这扇窗拖不动、位置由
+;    `PopUpMananger.centerWindow` 钉在舞台中央。本工程让根 Control 吃鼠标（STOP），
+;    `商城购买窗.gd::_on_drag_input` 只认顶部 29px（`MWindow.as:229` 拖动区高）。
+;
+; ⚠️ 那条 y=224 的分隔线**超出 216 高的黄底**（黄底 39..255），但**在窗内**（窗高 284）。
+;    `BuyEqpWindow.tscn` 里照画 —— 它落在「购买总价」与「账号余额」之间，是有用的分隔。
+;    （另注：`BuyAndSaleItemWindow` 那边**没有**分隔线，别混。）
+;
+; ⚠️ `setMLabel()`（`:114-120`）是 `param1.y = param3`，**没有** MLabel 那层 -2 ——
+;    所以这里 offset_top 直接写 AS3 的 144/164/184/204/227。
+
+[ext_resource type="Script" path="res://脚本/界面/组件/商城购买窗.gd" id="1_win"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/火影币.png" id="2_yb"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/商城/券.png" id="3_quan"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/关闭按钮.png" id="4_close"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/增加按钮.png" id="5_plus"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/减少按钮.png" id="6_minus"]
+[ext_resource type="Script" path="res://脚本/界面/组件/原版三态钮.gd" id="9_三态"]
+
+[node name="商城购买窗" type="Control"]
+visible = false
+offset_right = 206.0
+offset_bottom = 284.0
+mouse_filter = 0
+script = ExtResource("1_win")
+
+[node name="框" type="Panel" parent="."]
+offset_right = 206.0
+offset_bottom = 284.0
+mouse_filter = 2
+theme_type_variation = &"OrigWindowFrame"
+
+; `init()` 里 `titleTextFieldY = 3`（不是 MWindow 默认的 5）
+[node name="标题" type="Label" parent="."]
+offset_top = 3.0
+offset_right = 206.0
+offset_bottom = 21.0
+mouse_filter = 2
+theme_type_variation = &"OrigWindowTitle"
+horizontal_alignment = 1
+text = "购买道具"
+
+[node name="关闭" type="Button" parent="."]
+offset_left = 179.0
+offset_top = 4.0
+offset_right = 204.0
+offset_bottom = 28.0
+focus_mode = 0
+flat = true
+icon = ExtResource("4_close")
+script = ExtResource("9_三态")
+mouse_default_cursor_shape = 2
+
+[node name="黄底" type="Panel" parent="."]
+offset_left = 6.0
+offset_top = 39.0
+offset_right = 200.0
+offset_bottom = 255.0
+mouse_filter = 2
+theme_type_variation = &"OrigContentPanel"
+
+; 原版是 `BiguanLingfuCell`（闭关灵符格，展示商品图标+名称+单价）。
+; 这里用通用物品格 + 名称/单价两个标签表达同一件事（网格来源见 §3.49）。
+[node name="物品格" type="Panel" parent="."]
+offset_left = 11.0
+offset_top = 39.0
+offset_right = 51.0
+offset_bottom = 79.0
+mouse_filter = 2
+theme_type_variation = &"OrigItemSlot"
+
+[node name="图标" type="TextureRect" parent="物品格"]
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 37.0
+offset_bottom = 37.0
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="商品名" type="Label" parent="."]
+offset_left = 55.0
+offset_top = 42.0
+offset_right = 165.0
+offset_bottom = 60.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.117647, 0.560784, 1, 1)
+theme_override_font_sizes/font_size = 12
+text = "—"
+
+[node name="商品单价" type="Label" parent="."]
+offset_left = 55.0
+offset_top = 60.0
+offset_right = 165.0
+offset_bottom = 78.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = ""
+
+; `_box`（`:360-373`）：185x52 的说明框，正文 180x50 绿字 #00ff00
+[node name="说明" type="RichTextLabel" parent="."]
+offset_left = 11.0
+offset_top = 88.0
+offset_right = 196.0
+offset_bottom = 140.0
+mouse_filter = 2
+bbcode_enabled = true
+scroll_active = false
+theme_override_constants/line_separation = 2
+
+[node name="分隔线1" type="HSeparator" parent="."]
+offset_left = 11.0
+offset_top = 87.0
+offset_right = 191.0
+offset_bottom = 89.0
+mouse_filter = 2
+
+[node name="分隔线2" type="HSeparator" parent="."]
+offset_left = 11.0
+offset_top = 140.0
+offset_right = 191.0
+offset_bottom = 142.0
+mouse_filter = 2
+
+[node name="分隔线3" type="HSeparator" parent="."]
+offset_left = 11.0
+offset_top = 224.0
+offset_right = 191.0
+offset_bottom = 226.0
+mouse_filter = 2
+
+; 标签文字色 `UIConfig.UI_ORANGE` = 0xFF8B00；MLabel 默认字号 12
+[node name="购买方式标签" type="Label" parent="."]
+offset_left = 11.0
+offset_top = 144.0
+offset_right = 76.0
+offset_bottom = 162.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 0.545098, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "购买方式："
+
+[node name="购买数量标签" type="Label" parent="."]
+offset_left = 11.0
+offset_top = 164.0
+offset_right = 76.0
+offset_bottom = 182.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 0.545098, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "购买数量："
+
+[node name="购买总价标签" type="Label" parent="."]
+offset_left = 11.0
+offset_top = 184.0
+offset_right = 76.0
+offset_bottom = 202.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 0.545098, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "购买总价："
+
+[node name="余额标签" type="Label" parent="."]
+offset_left = 11.0
+offset_top = 204.0
+offset_right = 124.0
+offset_bottom = 222.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 0.545098, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = ""
+
+[node name="余额不足" type="Label" parent="."]
+offset_left = 11.0
+offset_top = 227.0
+offset_right = 191.0
+offset_bottom = 245.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = ""
+
+[node name="元宝勾选" type="CheckBox" parent="."]
+offset_left = 71.0
+offset_top = 145
+offset_right = 89.0
+offset_bottom = 164
+focus_mode = 0
+button_pressed = true
+
+[node name="券勾选" type="CheckBox" parent="."]
+visible = false
+offset_left = 118.0
+offset_top = 145
+offset_right = 136.0
+offset_bottom = 164
+focus_mode = 0
+
+[node name="元宝图标" type="TextureRect" parent="."]
+offset_left = 93.0
+offset_top = 148.0
+offset_right = 112.0
+offset_bottom = 161.0
+mouse_filter = 2
+texture = ExtResource("2_yb")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="券图标" type="TextureRect" parent="."]
+visible = false
+offset_left = 140.0
+offset_top = 148.0
+offset_right = 159.0
+offset_bottom = 161.0
+mouse_filter = 2
+texture = ExtResource("3_quan")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="数量底" type="Panel" parent="."]
+offset_left = 91.0
+offset_top = 165.0
+offset_right = 141.0
+offset_bottom = 186.0
+mouse_filter = 2
+theme_type_variation = &"OrigInputBox"
+
+[node name="数量" type="LineEdit" parent="."]
+offset_left = 93.0
+offset_top = 166.0
+offset_right = 139.0
+offset_bottom = 184.0
+theme_override_font_sizes/font_size = 12
+alignment = 1
+text = "1"
+
+[node name="减" type="Button" parent="."]
+offset_left = 71.0
+offset_top = 165.0
+offset_right = 89.0
+offset_bottom = 183.0
+focus_mode = 0
+theme_type_variation = &"OrigBlankButton"
+icon = ExtResource("6_minus")
+script = ExtResource("9_三态")
+mouse_default_cursor_shape = 2
+
+[node name="加" type="Button" parent="."]
+offset_left = 143.0
+offset_top = 165.0
+offset_right = 161.0
+offset_bottom = 183.0
+focus_mode = 0
+theme_type_variation = &"OrigBlankButton"
+icon = ExtResource("5_plus")
+script = ExtResource("9_三态")
+mouse_default_cursor_shape = 2
+
+[node name="总价底" type="Panel" parent="."]
+offset_left = 77.0
+offset_top = 185.0
+offset_right = 133.0
+offset_bottom = 206.0
+mouse_filter = 2
+theme_type_variation = &"OrigInputBox"
+
+[node name="总价" type="Label" parent="."]
+offset_left = 77.0
+offset_top = 186.0
+offset_right = 133.0
+offset_bottom = 204.0
+mouse_filter = 2
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+text = "0"
+
+[node name="账号余额" type="Label" parent="."]
+offset_left = 126.0
+offset_top = 205.0
+offset_right = 186.0
+offset_bottom = 223.0
+mouse_filter = 2
+theme_override_font_sizes/font_size = 12
+text = ""
+
+[node name="购买" type="Button" parent="."]
+offset_left = 46.0
+offset_top = 256.0
+offset_right = 83.0
+offset_bottom = 278.0
+focus_mode = 0
+text = "购买"

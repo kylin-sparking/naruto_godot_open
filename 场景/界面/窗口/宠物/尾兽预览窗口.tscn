@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/宠物/宠物装备面板.png" id="1_petbg"]
+
+[node name="原版尾兽预览内容" type="Control"]
+custom_minimum_size = Vector2(400, 360)
+
+[node name="图底" type="NinePatchRect" parent="."]
+offset_left = 4.0
+offset_top = 26.0
+offset_right = 380.0
+offset_bottom = 306.0
+mouse_filter = 2
+texture = ExtResource("1_petbg")
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="模型位" type="Control" parent="."]
+offset_left = 192.0
+offset_top = 277.0
+mouse_filter = 2

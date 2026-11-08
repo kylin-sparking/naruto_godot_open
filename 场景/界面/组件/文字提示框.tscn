@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://脚本/界面/组件/文字提示框.gd" id="1_tip"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/提示框底.png" id="2_bg"]
+
+; 原版提示框是**悬停时才 new 出来**的（`MToolTip.as:94-106 showTip` → 挂进 stage，
+; `:37-47 closeTip` → ROLL_OUT 就 removeChild），所以默认可见是错的
+; （2026-09-22 实测：背包页常驻的装备提示框在没人悬停时糊在窗口左上角）。
+; 底图必须用 `提示框底.png`：它与元件图
+; `原版源码/元件图/sprites/DefineSprite_699_ToolTip_background_ToolTip_background/1.png`
+; **逐像素相同**；同目录的 `提示框.png` 是另一次导出，有 5110 个像素不相同，别混用。
+[node name="文字提示框" type="Control"]
+visible = false
+mouse_filter = 2
+script = ExtResource("1_tip")
+
+[node name="底" type="TextureRect" parent="."]
+offset_right = 100.0
+offset_bottom = 28.0
+mouse_filter = 2
+texture = ExtResource("2_bg")
+expand_mode = 1
+
+[node name="文字" type="RichTextLabel" parent="."]
+offset_left = 7.0
+offset_top = 7.0
+offset_right = 107.0
+offset_bottom = 26.0
+mouse_filter = 2
+bbcode_enabled = true
+text = "[color=#ffffff]占位[/color]"
+scroll_active = false
+autowrap_mode = 3
+theme_override_constants/line_separation = 7
+theme_override_font_sizes/normal_font_size = 12

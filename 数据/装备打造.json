@@ -1,0 +1,4508 @@
+{
+ "KunChong": {
+  "attr": {
+   "1310001": {
+    "attribute": "maxhp:130,137,156,195",
+    "pic": "UISwf_KunChong1_ItemIcon"
+   },
+   "1310002": {
+    "attribute": "maxmp:38,40,46,57",
+    "pic": "UISwf_KunChong2_ItemIcon"
+   },
+   "1310003": {
+    "attribute": "avd:28,29,33,42",
+    "pic": "UISwf_KunChong3_ItemIcon"
+   },
+   "1310004": {
+    "attribute": "bsk:10,11,12,15",
+    "pic": "UISwf_KunChong4_ItemIcon"
+   },
+   "1310005": {
+    "attribute": "def:24,26,29,36",
+    "pic": "UISwf_KunChong5_ItemIcon"
+   },
+   "1310006": {
+    "attribute": "atk:30,32,36,45",
+    "pic": "UISwf_KunChong6_ItemIcon"
+   }
+  },
+  "guarantee": {
+   "guaranteeId": 16000136,
+   "levelCanUse": 11
+  },
+  "help": {
+   "helpItemId": 16000137,
+   "maxHelpCnt": 9,
+   "probUp": 3
+  },
+  "needMoneyFactor": {
+   "0": 100,
+   "1": 105,
+   "2": 120,
+   "3": 150
+  },
+  "reqLevel": 40,
+  "strength": {
+   "0": {
+    "addRatio": 0,
+    "failResult": 0,
+    "needMoney": 0,
+    "ratio": 100
+   },
+   "1": {
+    "addRatio": 30,
+    "failResult": 0,
+    "needMoney": 100000,
+    "ratio": 100
+   },
+   "10": {
+    "addRatio": 480,
+    "failResult": 2,
+    "needMoney": 190000,
+    "ratio": 41
+   },
+   "11": {
+    "addRatio": 800,
+    "failResult": 3,
+    "needMoney": 200000,
+    "ratio": 34
+   },
+   "12": {
+    "addRatio": 1200,
+    "failResult": 3,
+    "needMoney": 210000,
+    "ratio": 28
+   },
+   "13": {
+    "addRatio": 1600,
+    "failResult": 3,
+    "needMoney": 220000,
+    "ratio": 21
+   },
+   "14": {
+    "addRatio": 2000,
+    "failResult": 3,
+    "needMoney": 230000,
+    "ratio": 17
+   },
+   "15": {
+    "addRatio": 2800,
+    "failResult": 3,
+    "needMoney": 240000,
+    "ratio": 14
+   },
+   "16": {
+    "addRatio": 4000,
+    "failResult": 3,
+    "needMoney": 250000,
+    "ratio": 10
+   },
+   "17": {
+    "addRatio": 5400,
+    "failResult": 3,
+    "needMoney": 260000,
+    "ratio": 6
+   },
+   "18": {
+    "addRatio": 7000,
+    "failResult": 3,
+    "needMoney": 270000,
+    "ratio": 4
+   },
+   "19": {
+    "addRatio": 9000,
+    "failResult": 3,
+    "needMoney": 280000,
+    "ratio": 2
+   },
+   "2": {
+    "addRatio": 60,
+    "failResult": 0,
+    "needMoney": 110000,
+    "ratio": 100
+   },
+   "3": {
+    "addRatio": 110,
+    "failResult": 0,
+    "needMoney": 120000,
+    "ratio": 100
+   },
+   "4": {
+    "addRatio": 150,
+    "failResult": 1,
+    "needMoney": 130000,
+    "ratio": 95
+   },
+   "5": {
+    "addRatio": 190,
+    "failResult": 1,
+    "needMoney": 140000,
+    "ratio": 90
+   },
+   "6": {
+    "addRatio": 240,
+    "failResult": 1,
+    "needMoney": 150000,
+    "ratio": 80
+   },
+   "7": {
+    "addRatio": 290,
+    "failResult": 1,
+    "needMoney": 160000,
+    "ratio": 75
+   },
+   "8": {
+    "addRatio": 340,
+    "failResult": 2,
+    "needMoney": 170000,
+    "ratio": 62
+   },
+   "9": {
+    "addRatio": 400,
+    "failResult": 2,
+    "needMoney": 180000,
+    "ratio": 54
+   }
+  }
+ },
+ "avatar": {
+  "pet": {
+   "type": "atkspeed",
+   "value": 10
+  },
+  "player": {
+   "type": "atkspeed",
+   "value": 10
+  }
+ },
+ "basic": {
+  "EquipA": {
+   "stage1": {
+    "attribute": 35,
+    "endure": 150
+   },
+   "stage2": {
+    "attribute": 116,
+    "endure": 180
+   },
+   "stage3": {
+    "attribute": 216,
+    "endure": 210
+   },
+   "stage4": {
+    "attribute": 315,
+    "endure": 240
+   },
+   "stage5": {
+    "attribute": 414,
+    "endure": 270
+   },
+   "stage6": {
+    "attribute": 514,
+    "endure": 300
+   },
+   "stage7": {
+    "attribute": 615,
+    "endure": 330
+   },
+   "type": "atk"
+  },
+  "EquipB": {
+   "stage1": {
+    "attribute": 8,
+    "endure": 150
+   },
+   "stage2": {
+    "attribute": 28,
+    "endure": 180
+   },
+   "stage3": {
+    "attribute": 51,
+    "endure": 210
+   },
+   "stage4": {
+    "attribute": 74,
+    "endure": 240
+   },
+   "stage5": {
+    "attribute": 97,
+    "endure": 270
+   },
+   "stage6": {
+    "attribute": 119,
+    "endure": 300
+   },
+   "stage7": {
+    "attribute": 155,
+    "endure": 330
+   },
+   "type": "atk"
+  },
+  "EquipC": {
+   "stage1": {
+    "attribute": 23,
+    "endure": 150
+   },
+   "stage2": {
+    "attribute": 76,
+    "endure": 180
+   },
+   "stage3": {
+    "attribute": 128,
+    "endure": 210
+   },
+   "stage4": {
+    "attribute": 181,
+    "endure": 240
+   },
+   "stage5": {
+    "attribute": 234,
+    "endure": 270
+   },
+   "stage6": {
+    "attribute": 287,
+    "endure": 300
+   },
+   "stage7": {
+    "attribute": 360,
+    "endure": 330
+   },
+   "type": "def"
+  },
+  "EquipD": {
+   "stage1": {
+    "attribute": 7,
+    "endure": 150
+   },
+   "stage2": {
+    "attribute": 21,
+    "endure": 180
+   },
+   "stage3": {
+    "attribute": 36,
+    "endure": 210
+   },
+   "stage4": {
+    "attribute": 50,
+    "endure": 240
+   },
+   "stage5": {
+    "attribute": 64,
+    "endure": 270
+   },
+   "stage6": {
+    "attribute": 79,
+    "endure": 300
+   },
+   "stage7": {
+    "attribute": 115,
+    "endure": 330
+   },
+   "type": "def"
+  },
+  "EquipE": {
+   "stage1": {
+    "attribute": 7,
+    "endure": 150
+   },
+   "stage2": {
+    "attribute": 21,
+    "endure": 180
+   },
+   "stage3": {
+    "attribute": 36,
+    "endure": 210
+   },
+   "stage4": {
+    "attribute": 50,
+    "endure": 240
+   },
+   "stage5": {
+    "attribute": 64,
+    "endure": 270
+   },
+   "stage6": {
+    "attribute": 79,
+    "endure": 300
+   },
+   "stage7": {
+    "attribute": 115,
+    "endure": 330
+   },
+   "type": "def"
+  },
+  "EquipF": {
+   "stage1": {
+    "attribute": 7,
+    "endure": 150
+   },
+   "stage2": {
+    "attribute": 21,
+    "endure": 180
+   },
+   "stage3": {
+    "attribute": 36,
+    "endure": 210
+   },
+   "stage4": {
+    "attribute": 50,
+    "endure": 240
+   },
+   "stage5": {
+    "attribute": 64,
+    "endure": 270
+   },
+   "stage6": {
+    "attribute": 79,
+    "endure": 300
+   },
+   "stage7": {
+    "attribute": 115,
+    "endure": 330
+   },
+   "type": "def"
+  },
+  "EquipG": {
+   "stage1": {
+    "attribute": 15,
+    "endure": 150
+   },
+   "stage2": {
+    "attribute": 25,
+    "endure": 180
+   },
+   "stage3": {
+    "attribute": 38,
+    "endure": 210
+   },
+   "stage4": {
+    "attribute": 55,
+    "endure": 240
+   },
+   "stage5": {
+    "attribute": 75,
+    "endure": 270
+   },
+   "stage6": {
+    "attribute": 100,
+    "endure": 300
+   },
+   "stage7": {
+    "attribute": 140,
+    "endure": 330
+   },
+   "type": "bsk"
+  },
+  "EquipH": {
+   "stage1": {
+    "attribute": 22,
+    "endure": 150
+   },
+   "stage2": {
+    "attribute": 107,
+    "endure": 180
+   },
+   "stage3": {
+    "attribute": 192,
+    "endure": 210
+   },
+   "stage4": {
+    "attribute": 277,
+    "endure": 240
+   },
+   "stage5": {
+    "attribute": 362,
+    "endure": 270
+   },
+   "stage6": {
+    "attribute": 447,
+    "endure": 300
+   },
+   "stage7": {
+    "attribute": 550,
+    "endure": 330
+   },
+   "type": "avd"
+  },
+  "EquipI": {
+   "stage1": {
+    "attribute": 6,
+    "endure": 150
+   },
+   "stage2": {
+    "attribute": 18,
+    "endure": 180
+   },
+   "stage3": {
+    "attribute": 34,
+    "endure": 210
+   },
+   "stage4": {
+    "attribute": 49,
+    "endure": 240
+   },
+   "stage5": {
+    "attribute": 64,
+    "endure": 270
+   },
+   "stage6": {
+    "attribute": 80,
+    "endure": 300
+   },
+   "stage7": {
+    "attribute": 110,
+    "endure": 330
+   },
+   "type": "atk"
+  },
+  "EquipJ": {
+   "stage1": {
+    "attribute": 6,
+    "endure": 150
+   },
+   "stage2": {
+    "attribute": 18,
+    "endure": 180
+   },
+   "stage3": {
+    "attribute": 34,
+    "endure": 210
+   },
+   "stage4": {
+    "attribute": 49,
+    "endure": 240
+   },
+   "stage5": {
+    "attribute": 64,
+    "endure": 270
+   },
+   "stage6": {
+    "attribute": 80,
+    "endure": 300
+   },
+   "stage7": {
+    "attribute": 110,
+    "endure": 330
+   },
+   "type": "atk"
+  },
+  "EquipK": {
+   "stage1": {
+    "attribute": 105,
+    "endure": 150
+   },
+   "stage2": {
+    "attribute": 525,
+    "endure": 180
+   },
+   "stage3": {
+    "attribute": 945,
+    "endure": 210
+   },
+   "stage4": {
+    "attribute": 1365,
+    "endure": 240
+   },
+   "stage5": {
+    "attribute": 1785,
+    "endure": 270
+   },
+   "stage6": {
+    "attribute": 2205,
+    "endure": 300
+   },
+   "stage7": {
+    "attribute": 2880,
+    "endure": 330
+   },
+   "type": "maxhp"
+  },
+  "EquipL": {
+   "stage1": {
+    "attribute": 43,
+    "endure": 150
+   },
+   "stage2": {
+    "attribute": 213,
+    "endure": 180
+   },
+   "stage3": {
+    "attribute": 383,
+    "endure": 210
+   },
+   "stage4": {
+    "attribute": 553,
+    "endure": 240
+   },
+   "stage5": {
+    "attribute": 723,
+    "endure": 270
+   },
+   "stage6": {
+    "attribute": 893,
+    "endure": 300
+   },
+   "stage7": {
+    "attribute": 1043,
+    "endure": 330
+   },
+   "type": "maxmp"
+  },
+  "EquipS1": {
+   "stage1": {
+    "attribute": 10,
+    "endure": -1
+   },
+   "stage2": {
+    "attribute": 20,
+    "endure": -1
+   },
+   "stage3": {
+    "attribute": 30,
+    "endure": -1
+   },
+   "stage4": {
+    "attribute": 40,
+    "endure": -1
+   },
+   "stage5": {
+    "attribute": 50,
+    "endure": -1
+   },
+   "stage6": {
+    "attribute": 60,
+    "endure": -1
+   },
+   "stage7": {
+    "attribute": 60,
+    "endure": -1
+   },
+   "type": "atk"
+  },
+  "PetA": {
+   "stage1": {
+    "attribute": 4,
+    "endure": -1
+   },
+   "stage2": {
+    "attribute": 10,
+    "endure": -1
+   },
+   "stage3": {
+    "attribute": 16,
+    "endure": -1
+   },
+   "stage4": {
+    "attribute": 22,
+    "endure": -1
+   },
+   "stage5": {
+    "attribute": 28,
+    "endure": -1
+   },
+   "stage6": {
+    "attribute": 33,
+    "endure": -1
+   },
+   "stage7": {
+    "attribute": 55,
+    "endure": -1
+   },
+   "type": "def"
+  },
+  "PetB": {
+   "stage1": {
+    "attribute": 6,
+    "endure": -1
+   },
+   "stage2": {
+    "attribute": 12,
+    "endure": -1
+   },
+   "stage3": {
+    "attribute": 19,
+    "endure": -1
+   },
+   "stage4": {
+    "attribute": 26,
+    "endure": -1
+   },
+   "stage5": {
+    "attribute": 33,
+    "endure": -1
+   },
+   "stage6": {
+    "attribute": 40,
+    "endure": -1
+   },
+   "stage7": {
+    "attribute": 60,
+    "endure": -1
+   },
+   "type": "atk"
+  },
+  "PetC": {
+   "stage1": {
+    "attribute": 6,
+    "endure": -1
+   },
+   "stage2": {
+    "attribute": 12,
+    "endure": -1
+   },
+   "stage3": {
+    "attribute": 19,
+    "endure": -1
+   },
+   "stage4": {
+    "attribute": 26,
+    "endure": -1
+   },
+   "stage5": {
+    "attribute": 33,
+    "endure": -1
+   },
+   "stage6": {
+    "attribute": 40,
+    "endure": -1
+   },
+   "stage7": {
+    "attribute": 65,
+    "endure": -1
+   },
+   "type": "avd"
+  },
+  "PetD": {
+   "stage1": {
+    "attribute": 5,
+    "endure": -1
+   },
+   "stage2": {
+    "attribute": 8,
+    "endure": -1
+   },
+   "stage3": {
+    "attribute": 12,
+    "endure": -1
+   },
+   "stage4": {
+    "attribute": 16,
+    "endure": -1
+   },
+   "stage5": {
+    "attribute": 20,
+    "endure": -1
+   },
+   "stage6": {
+    "attribute": 24,
+    "endure": -1
+   },
+   "stage7": {
+    "attribute": 50,
+    "endure": -1
+   },
+   "type": "bsk"
+  }
+ },
+ "born": {
+  "EquipA": {
+   "needItemCnt": 2,
+   "prob": 25
+  },
+  "EquipB": {
+   "needItemCnt": 2,
+   "prob": 25
+  },
+  "EquipC": {
+   "needItemCnt": 2,
+   "prob": 25
+  },
+  "EquipD": {
+   "needItemCnt": 2,
+   "prob": 25
+  },
+  "EquipE": {
+   "needItemCnt": 2,
+   "prob": 25
+  },
+  "EquipF": {
+   "needItemCnt": 2,
+   "prob": 25
+  },
+  "EquipG": {
+   "needItemCnt": 2,
+   "prob": 25
+  },
+  "EquipH": {
+   "needItemCnt": 2,
+   "prob": 25
+  },
+  "EquipI": {
+   "needItemCnt": 2,
+   "prob": 25
+  },
+  "EquipJ": {
+   "needItemCnt": 2,
+   "prob": 25
+  },
+  "EquipK": {
+   "needItemCnt": 2,
+   "prob": 25
+  },
+  "EquipL": {
+   "needItemCnt": 2,
+   "prob": 25
+  },
+  "PetA": {
+   "needItemCnt": 1,
+   "prob": 25
+  },
+  "PetB": {
+   "needItemCnt": 1,
+   "prob": 25
+  },
+  "PetC": {
+   "needItemCnt": 1,
+   "prob": 25
+  },
+  "PetD": {
+   "needItemCnt": 1,
+   "prob": 25
+  },
+  "needItemId": 16000033,
+  "needMoney": {
+   "stage1": 500,
+   "stage2": 2000,
+   "stage3": 4500,
+   "stage4": 8000,
+   "stage5": 12500,
+   "stage6": 18000,
+   "stage7": 24500
+  }
+ },
+ "carve": {
+  "req": {
+   "stage1": {
+    "keepItemCnt": 1,
+    "keepItemId": 16000021,
+    "needItemCnt": 4,
+    "needItemId": 16000035,
+    "needMoney": 100000,
+    "prob": 25
+   },
+   "stage2": {
+    "keepItemCnt": 1,
+    "keepItemId": 16000021,
+    "needItemCnt": 4,
+    "needItemId": 16000035,
+    "needMoney": 100000,
+    "prob": 25
+   },
+   "stage3": {
+    "keepItemCnt": 1,
+    "keepItemId": 16000021,
+    "needItemCnt": 4,
+    "needItemId": 16000035,
+    "needMoney": 100000,
+    "prob": 25
+   },
+   "stage4": {
+    "keepItemCnt": 1,
+    "keepItemId": 16000021,
+    "needItemCnt": 4,
+    "needItemId": 16000035,
+    "needMoney": 100000,
+    "prob": 25
+   },
+   "stage5": {
+    "keepItemCnt": 1,
+    "keepItemId": 16000021,
+    "needItemCnt": 4,
+    "needItemId": 16000035,
+    "needMoney": 100000,
+    "prob": 25
+   },
+   "stage6": {
+    "keepItemCnt": 1,
+    "keepItemId": 16000021,
+    "needItemCnt": 4,
+    "needItemId": 16000035,
+    "needMoney": 100000,
+    "prob": 25
+   },
+   "stage7": {
+    "keepItemCnt": 1,
+    "keepItemId": 16000021,
+    "needItemCnt": 4,
+    "needItemId": 16000035,
+    "needMoney": 100000,
+    "prob": 25
+   }
+  },
+  "value": {
+   "1": {
+    "name": "守鹤秘印",
+    "type": "ATK_RATE",
+    "value_max": 5,
+    "value_min": 1
+   },
+   "2": {
+    "name": "猫又秘印",
+    "type": "DAMAGE_REFLECT",
+    "value_max": 4,
+    "value_min": 1
+   },
+   "3": {
+    "name": "鼠蛟秘印",
+    "type": "IGNORE_DEF",
+    "value_max": 5,
+    "value_min": 1
+   },
+   "4": {
+    "name": "矶怃秘印",
+    "type": "DAMAGE_REDUCE",
+    "value_max": 4,
+    "value_min": 1
+   }
+  }
+ },
+ "changeAptitude": {
+  "apt1": {
+   "needItemCnt": 1,
+   "needMoney": 2500,
+   "prob": 100
+  },
+  "apt2": {
+   "needItemCnt": 2,
+   "needMoney": 5000,
+   "prob": 90
+  },
+  "apt3": {
+   "needItemCnt": 3,
+   "needMoney": 7500,
+   "prob": 80
+  },
+  "apt4": {
+   "needItemCnt": 4,
+   "needMoney": 10000,
+   "prob": 70
+  },
+  "helpItemId": 16000015,
+  "maxHelpCnt": 9,
+  "needItemId": 16000018,
+  "probUp": 10
+ },
+ "changeTaleAttribute": {
+  "needItemCnt": 1,
+  "needItemId": 15028001
+ },
+ "changeToOrange": {
+  "EquipA": {
+   "needItemCnt": 80
+  },
+  "EquipB": {
+   "needItemCnt": 60
+  },
+  "EquipC": {
+   "needItemCnt": 80
+  },
+  "EquipD": {
+   "needItemCnt": 60
+  },
+  "EquipE": {
+   "needItemCnt": 50
+  },
+  "EquipF": {
+   "needItemCnt": 50
+  },
+  "EquipG": {
+   "needItemCnt": 40
+  },
+  "EquipH": {
+   "needItemCnt": 40
+  },
+  "EquipI": {
+   "needItemCnt": 30
+  },
+  "EquipJ": {
+   "needItemCnt": 30
+  },
+  "EquipK": {
+   "needItemCnt": 20
+  },
+  "EquipL": {
+   "needItemCnt": 20
+  },
+  "PetA": {
+   "needItemCnt": 30
+  },
+  "PetB": {
+   "needItemCnt": 30
+  },
+  "PetC": {
+   "needItemCnt": 30
+  },
+  "PetD": {
+   "needItemCnt": 30
+  },
+  "needItemId": 15029001
+ },
+ "crash": {
+  "needItemId": 16000029,
+  "needMoney": 0,
+  "prob": 100
+ },
+ "forgeAdditive": {
+  "needItemCnt": 1,
+  "needItemId": 15028002,
+  "prob": 25,
+  "ratio0": {
+   "prob": 60,
+   "valuFrom": 1,
+   "valueTo": 1
+  },
+  "ratio1": {
+   "prob": 30,
+   "valuFrom": 2,
+   "valueTo": 2
+  },
+  "ratio2": {
+   "prob": 10,
+   "valuFrom": 3,
+   "valueTo": 3
+  }
+ },
+ "huiZhangStageUp": {
+  "1410001": {
+   "needItemCnt": 1,
+   "needItemId": 13200000
+  },
+  "1410002": {
+   "needItemCnt": 1,
+   "needItemId": 13200001
+  },
+  "1410003": {
+   "needItemCnt": 1,
+   "needItemId": 13200002
+  },
+  "1410004": {
+   "needItemCnt": 1,
+   "needItemId": 13200003
+  },
+  "1410005": {
+   "needItemCnt": 1,
+   "needItemId": 13200004
+  },
+  "1410006": {
+   "needItemCnt": 1,
+   "needItemId": 13200005
+  },
+  "1410007": {
+   "needItemCnt": 1,
+   "needItemId": 13200006
+  },
+  "1410008": {
+   "needItemCnt": 1,
+   "needItemId": 13200007
+  },
+  "1410009": {
+   "needItemCnt": 1,
+   "needItemId": 13200008
+  },
+  "1410010": {
+   "needItemCnt": 1,
+   "needItemId": 13200009
+  }
+ },
+ "inlay": {
+  "EquipA": "atk",
+  "EquipB": "atk",
+  "EquipC": "def",
+  "EquipD": "def",
+  "EquipE": "def",
+  "EquipF": "def",
+  "EquipG": "maxhp;atkspeed;bsk;avd",
+  "EquipH": "maxhp;atkspeed;bsk;avd",
+  "EquipI": "maxhp;atkspeed;bsk;avd",
+  "EquipJ": "maxhp;atkspeed;bsk;avd",
+  "EquipK": "maxhp;atkspeed;bsk;avd",
+  "EquipL": "maxhp;atkspeed;bsk;avd",
+  "PetA": "atk;def;maxhp;atkspeed;bsk;avd",
+  "PetB": "atk;def;maxhp;atkspeed;bsk;avd",
+  "PetC": "atk;def;maxhp;atkspeed;bsk;avd",
+  "PetD": "atk;def;maxhp;atkspeed;bsk;avd"
+ },
+ "jade": {
+  "change": {
+   "level1": {
+    "needMoney": 1000,
+    "prob": 70
+   },
+   "level10": {
+    "needMoney": 1000,
+    "prob": 70
+   },
+   "level11": {
+    "needMoney": 1000,
+    "prob": 70
+   },
+   "level12": {
+    "needMoney": 1000,
+    "prob": 70
+   },
+   "level13": {
+    "needMoney": 1000,
+    "prob": 70
+   },
+   "level14": {
+    "needMoney": 1000,
+    "prob": 70
+   },
+   "level15": {
+    "needMoney": 1000,
+    "prob": 70
+   },
+   "level2": {
+    "needMoney": 1000,
+    "prob": 70
+   },
+   "level3": {
+    "needMoney": 1000,
+    "prob": 70
+   },
+   "level4": {
+    "needMoney": 1000,
+    "prob": 70
+   },
+   "level5": {
+    "needMoney": 1000,
+    "prob": 70
+   },
+   "level6": {
+    "needMoney": 1000,
+    "prob": 70
+   },
+   "level7": {
+    "needMoney": 1000,
+    "prob": 70
+   },
+   "level8": {
+    "needMoney": 1000,
+    "prob": 70
+   },
+   "level9": {
+    "needMoney": 1000,
+    "prob": 70
+   }
+  },
+  "merge": {
+   "level10": {
+    "needItemCnt": 1,
+    "needItemId": 16000031,
+    "prob": 40
+   },
+   "level11": {
+    "needItemCnt": 1,
+    "needItemId": 16000031,
+    "prob": 35
+   },
+   "level12": {
+    "needItemCnt": 1,
+    "needItemId": 16000031,
+    "prob": 30
+   },
+   "level13": {
+    "needItemCnt": 1,
+    "needItemId": 16000031,
+    "prob": 30
+   },
+   "level14": {
+    "needItemCnt": 1,
+    "needItemId": 16000031,
+    "prob": 30
+   },
+   "level15": {
+    "needItemCnt": 1,
+    "needItemId": 16000031,
+    "prob": 30
+   },
+   "level2": {
+    "needItemCnt": 1,
+    "needItemId": 16000031,
+    "prob": 100
+   },
+   "level3": {
+    "needItemCnt": 1,
+    "needItemId": 16000031,
+    "prob": 90
+   },
+   "level4": {
+    "needItemCnt": 1,
+    "needItemId": 16000031,
+    "prob": 80
+   },
+   "level5": {
+    "needItemCnt": 1,
+    "needItemId": 16000031,
+    "prob": 70
+   },
+   "level6": {
+    "needItemCnt": 1,
+    "needItemId": 16000031,
+    "prob": 60
+   },
+   "level7": {
+    "needItemCnt": 1,
+    "needItemId": 16000031,
+    "prob": 55
+   },
+   "level8": {
+    "needItemCnt": 1,
+    "needItemId": 16000031,
+    "prob": 50
+   },
+   "level9": {
+    "needItemCnt": 1,
+    "needItemId": 16000031,
+    "prob": 45
+   }
+  }
+ },
+ "merge": {
+  "level10": {
+   "needMoney": 1382400,
+   "prob": 40
+  },
+  "level2": {
+   "needMoney": 800,
+   "prob": 80
+  },
+  "level3": {
+   "needMoney": 3200,
+   "prob": 70
+  },
+  "level4": {
+   "needMoney": 12800,
+   "prob": 60
+  },
+  "level5": {
+   "needMoney": 51200,
+   "prob": 50
+  },
+  "level6": {
+   "needMoney": 204800,
+   "prob": 40
+  },
+  "level7": {
+   "needMoney": 409600,
+   "prob": 40
+  },
+  "level8": {
+   "needMoney": 614400,
+   "prob": 40
+  },
+  "level9": {
+   "needMoney": 921600,
+   "prob": 40
+  }
+ },
+ "naijiu": {
+  "deathLoseProb": 10,
+  "repair": {
+   "stage1": {
+    "normalLose": 10,
+    "normalPrice": 1,
+    "specialPrice": 3
+   },
+   "stage2": {
+    "normalLose": 10,
+    "normalPrice": 4,
+    "specialPrice": 12
+   },
+   "stage3": {
+    "normalLose": 10,
+    "normalPrice": 12,
+    "specialPrice": 36
+   },
+   "stage4": {
+    "normalLose": 10,
+    "normalPrice": 20,
+    "specialPrice": 60
+   },
+   "stage5": {
+    "normalLose": 10,
+    "normalPrice": 32,
+    "specialPrice": 96
+   },
+   "stage6": {
+    "normalLose": 10,
+    "normalPrice": 50,
+    "specialPrice": 150
+   },
+   "stage7": {
+    "normalLose": 10,
+    "normalPrice": 74,
+    "specialPrice": 222
+   }
+  }
+ },
+ "plus": {
+  "addcnt": {
+   "helpItemId": 16000015,
+   "maxHelpCnt": 9,
+   "need": {
+    "stage1": {
+     "needMoney": 2500,
+     "plus1": {
+      "needItemCnt": 0,
+      "prob": 0
+     },
+     "plus2": {
+      "needItemCnt": 1,
+      "prob": 80
+     },
+     "plus3": {
+      "needItemCnt": 1,
+      "prob": 40
+     },
+     "plus4": {
+      "needItemCnt": 1,
+      "prob": 30
+     },
+     "plus5": {
+      "needItemCnt": 1,
+      "prob": 20
+     },
+     "plus6": {
+      "needItemCnt": 1,
+      "prob": 0
+     }
+    },
+    "stage2": {
+     "needMoney": 5000,
+     "plus1": {
+      "needItemCnt": 0,
+      "prob": 0
+     },
+     "plus2": {
+      "needItemCnt": 1,
+      "prob": 80
+     },
+     "plus3": {
+      "needItemCnt": 1,
+      "prob": 40
+     },
+     "plus4": {
+      "needItemCnt": 1,
+      "prob": 30
+     },
+     "plus5": {
+      "needItemCnt": 1,
+      "prob": 20
+     },
+     "plus6": {
+      "needItemCnt": 2,
+      "prob": 0
+     }
+    },
+    "stage3": {
+     "needMoney": 7500,
+     "plus1": {
+      "needItemCnt": 0,
+      "prob": 0
+     },
+     "plus2": {
+      "needItemCnt": 1,
+      "prob": 80
+     },
+     "plus3": {
+      "needItemCnt": 1,
+      "prob": 40
+     },
+     "plus4": {
+      "needItemCnt": 1,
+      "prob": 30
+     },
+     "plus5": {
+      "needItemCnt": 2,
+      "prob": 20
+     },
+     "plus6": {
+      "needItemCnt": 3,
+      "prob": 0
+     }
+    },
+    "stage4": {
+     "needMoney": 10000,
+     "plus1": {
+      "needItemCnt": 0,
+      "prob": 0
+     },
+     "plus2": {
+      "needItemCnt": 1,
+      "prob": 80
+     },
+     "plus3": {
+      "needItemCnt": 1,
+      "prob": 40
+     },
+     "plus4": {
+      "needItemCnt": 2,
+      "prob": 30
+     },
+     "plus5": {
+      "needItemCnt": 3,
+      "prob": 20
+     },
+     "plus6": {
+      "needItemCnt": 4,
+      "prob": 0
+     }
+    },
+    "stage5": {
+     "needMoney": 12500,
+     "plus1": {
+      "needItemCnt": 0,
+      "prob": 0
+     },
+     "plus2": {
+      "needItemCnt": 1,
+      "prob": 80
+     },
+     "plus3": {
+      "needItemCnt": 2,
+      "prob": 40
+     },
+     "plus4": {
+      "needItemCnt": 3,
+      "prob": 30
+     },
+     "plus5": {
+      "needItemCnt": 4,
+      "prob": 20
+     },
+     "plus6": {
+      "needItemCnt": 5,
+      "prob": 0
+     }
+    },
+    "stage6": {
+     "needMoney": 15000,
+     "plus1": {
+      "needItemCnt": 0,
+      "prob": 0
+     },
+     "plus2": {
+      "needItemCnt": 2,
+      "prob": 80
+     },
+     "plus3": {
+      "needItemCnt": 3,
+      "prob": 40
+     },
+     "plus4": {
+      "needItemCnt": 4,
+      "prob": 30
+     },
+     "plus5": {
+      "needItemCnt": 5,
+      "prob": 20
+     },
+     "plus6": {
+      "needItemCnt": 6,
+      "prob": 0
+     }
+    },
+    "stage7": {
+     "needMoney": 17500,
+     "plus1": {
+      "needItemCnt": 0,
+      "prob": 0
+     },
+     "plus2": {
+      "needItemCnt": 3,
+      "prob": 80
+     },
+     "plus3": {
+      "needItemCnt": 4,
+      "prob": 40
+     },
+     "plus4": {
+      "needItemCnt": 5,
+      "prob": 30
+     },
+     "plus5": {
+      "needItemCnt": 6,
+      "prob": 20
+     },
+     "plus6": {
+      "needItemCnt": 7,
+      "prob": 0
+     }
+    }
+   },
+   "needItemId": 16000034
+  },
+  "fullone": {
+   "needItemId": 15024001
+  },
+  "stage1": {
+   "EquipA": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 4,
+     "valueTo": 7
+    },
+    "1": {
+     "type": "bsk",
+     "valueFrom": 2,
+     "valueTo": 8
+    },
+    "2": {
+     "type": "maxmp",
+     "valueFrom": 10,
+     "valueTo": 15
+    }
+   },
+   "EquipB": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 4,
+     "valueTo": 7
+    },
+    "1": {
+     "type": "bsk",
+     "valueFrom": 2,
+     "valueTo": 8
+    },
+    "2": {
+     "type": "maxmp",
+     "valueFrom": 10,
+     "valueTo": 15
+    }
+   },
+   "EquipC": {
+    "0": {
+     "type": "def",
+     "valueFrom": 4,
+     "valueTo": 7
+    },
+    "1": {
+     "type": "avd",
+     "valueFrom": 10,
+     "valueTo": 15
+    },
+    "2": {
+     "type": "maxhp",
+     "valueFrom": 20,
+     "valueTo": 29
+    },
+    "3": {
+     "type": "maxmp",
+     "valueFrom": 10,
+     "valueTo": 15
+    }
+   },
+   "EquipD": {
+    "0": {
+     "type": "def",
+     "valueFrom": 4,
+     "valueTo": 7
+    },
+    "1": {
+     "type": "avd",
+     "valueFrom": 10,
+     "valueTo": 15
+    },
+    "2": {
+     "type": "maxhp",
+     "valueFrom": 20,
+     "valueTo": 29
+    },
+    "3": {
+     "type": "maxmp",
+     "valueFrom": 10,
+     "valueTo": 15
+    }
+   },
+   "EquipE": {
+    "0": {
+     "type": "def",
+     "valueFrom": 4,
+     "valueTo": 7
+    },
+    "1": {
+     "type": "avd",
+     "valueFrom": 10,
+     "valueTo": 15
+    },
+    "2": {
+     "type": "maxhp",
+     "valueFrom": 20,
+     "valueTo": 29
+    },
+    "3": {
+     "type": "maxmp",
+     "valueFrom": 10,
+     "valueTo": 15
+    }
+   },
+   "EquipF": {
+    "0": {
+     "type": "def",
+     "valueFrom": 4,
+     "valueTo": 7
+    },
+    "1": {
+     "type": "avd",
+     "valueFrom": 10,
+     "valueTo": 15
+    },
+    "2": {
+     "type": "maxhp",
+     "valueFrom": 20,
+     "valueTo": 29
+    },
+    "3": {
+     "type": "maxmp",
+     "valueFrom": 10,
+     "valueTo": 15
+    }
+   },
+   "EquipG": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 4,
+     "valueTo": 10
+    },
+    "1": {
+     "type": "def",
+     "valueFrom": 4,
+     "valueTo": 7
+    },
+    "2": {
+     "type": "bsk",
+     "valueFrom": 2,
+     "valueTo": 11
+    },
+    "3": {
+     "type": "maxhp",
+     "valueFrom": 20,
+     "valueTo": 29
+    }
+   },
+   "EquipH": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 4,
+     "valueTo": 7
+    },
+    "1": {
+     "type": "def",
+     "valueFrom": 4,
+     "valueTo": 7
+    },
+    "2": {
+     "type": "avd",
+     "valueFrom": 2,
+     "valueTo": 11
+    },
+    "3": {
+     "type": "maxhp",
+     "valueFrom": 20,
+     "valueTo": 29
+    }
+   },
+   "EquipI": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 4,
+     "valueTo": 7
+    },
+    "1": {
+     "type": "bsk",
+     "valueFrom": 2,
+     "valueTo": 11
+    },
+    "2": {
+     "type": "avd",
+     "valueFrom": 10,
+     "valueTo": 15
+    },
+    "3": {
+     "type": "maxhp",
+     "valueFrom": 20,
+     "valueTo": 29
+    }
+   },
+   "EquipJ": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 4,
+     "valueTo": 7
+    },
+    "1": {
+     "type": "bsk",
+     "valueFrom": 2,
+     "valueTo": 11
+    },
+    "2": {
+     "type": "avd",
+     "valueFrom": 10,
+     "valueTo": 15
+    },
+    "3": {
+     "type": "maxhp",
+     "valueFrom": 20,
+     "valueTo": 29
+    }
+   },
+   "EquipK": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 4,
+     "valueTo": 7
+    },
+    "1": {
+     "type": "bsk",
+     "valueFrom": 2,
+     "valueTo": 11
+    },
+    "2": {
+     "type": "avd",
+     "valueFrom": 10,
+     "valueTo": 15
+    },
+    "3": {
+     "type": "maxhp",
+     "valueFrom": 20,
+     "valueTo": 29
+    }
+   },
+   "EquipL": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 4,
+     "valueTo": 7
+    },
+    "1": {
+     "type": "def",
+     "valueFrom": 4,
+     "valueTo": 7
+    },
+    "2": {
+     "type": "maxhp",
+     "valueFrom": 20,
+     "valueTo": 29
+    }
+   },
+   "EquipS1": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 10,
+     "valueTo": 10
+    }
+   },
+   "PetA": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 2,
+     "valueTo": 7
+    },
+    "1": {
+     "type": "def",
+     "valueFrom": 2,
+     "valueTo": 7
+    },
+    "2": {
+     "type": "bsk",
+     "valueFrom": 2,
+     "valueTo": 22
+    },
+    "3": {
+     "type": "avd",
+     "valueFrom": 3,
+     "valueTo": 6
+    }
+   },
+   "PetB": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 2,
+     "valueTo": 7
+    },
+    "1": {
+     "type": "def",
+     "valueFrom": 2,
+     "valueTo": 7
+    },
+    "2": {
+     "type": "bsk",
+     "valueFrom": 2,
+     "valueTo": 22
+    },
+    "3": {
+     "type": "avd",
+     "valueFrom": 3,
+     "valueTo": 6
+    }
+   },
+   "PetC": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 2,
+     "valueTo": 7
+    },
+    "1": {
+     "type": "def",
+     "valueFrom": 2,
+     "valueTo": 7
+    },
+    "2": {
+     "type": "bsk",
+     "valueFrom": 2,
+     "valueTo": 22
+    },
+    "3": {
+     "type": "avd",
+     "valueFrom": 3,
+     "valueTo": 6
+    }
+   },
+   "PetD": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 2,
+     "valueTo": 7
+    },
+    "1": {
+     "type": "def",
+     "valueFrom": 2,
+     "valueTo": 7
+    },
+    "2": {
+     "type": "bsk",
+     "valueFrom": 2,
+     "valueTo": 22
+    },
+    "3": {
+     "type": "avd",
+     "valueFrom": 3,
+     "valueTo": 6
+    }
+   }
+  },
+  "stage2": {
+   "EquipA": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 6,
+     "valueTo": 18
+    },
+    "1": {
+     "type": "bsk",
+     "valueFrom": 3,
+     "valueTo": 11
+    },
+    "2": {
+     "type": "maxmp",
+     "valueFrom": 15,
+     "valueTo": 41
+    }
+   },
+   "EquipB": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 6,
+     "valueTo": 18
+    },
+    "1": {
+     "type": "bsk",
+     "valueFrom": 3,
+     "valueTo": 11
+    },
+    "2": {
+     "type": "maxmp",
+     "valueFrom": 15,
+     "valueTo": 41
+    }
+   },
+   "EquipC": {
+    "0": {
+     "type": "def",
+     "valueFrom": 6,
+     "valueTo": 18
+    },
+    "1": {
+     "type": "avd",
+     "valueFrom": 15,
+     "valueTo": 41
+    },
+    "2": {
+     "type": "maxhp",
+     "valueFrom": 31,
+     "valueTo": 84
+    },
+    "3": {
+     "type": "maxmp",
+     "valueFrom": 15,
+     "valueTo": 41
+    }
+   },
+   "EquipD": {
+    "0": {
+     "type": "def",
+     "valueFrom": 6,
+     "valueTo": 18
+    },
+    "1": {
+     "type": "avd",
+     "valueFrom": 15,
+     "valueTo": 41
+    },
+    "2": {
+     "type": "maxhp",
+     "valueFrom": 31,
+     "valueTo": 81
+    },
+    "3": {
+     "type": "maxmp",
+     "valueFrom": 15,
+     "valueTo": 41
+    }
+   },
+   "EquipE": {
+    "0": {
+     "type": "def",
+     "valueFrom": 6,
+     "valueTo": 18
+    },
+    "1": {
+     "type": "avd",
+     "valueFrom": 15,
+     "valueTo": 41
+    },
+    "2": {
+     "type": "maxhp",
+     "valueFrom": 31,
+     "valueTo": 84
+    },
+    "3": {
+     "type": "maxmp",
+     "valueFrom": 15,
+     "valueTo": 41
+    }
+   },
+   "EquipF": {
+    "0": {
+     "type": "def",
+     "valueFrom": 6,
+     "valueTo": 18
+    },
+    "1": {
+     "type": "avd",
+     "valueFrom": 15,
+     "valueTo": 41
+    },
+    "2": {
+     "type": "maxhp",
+     "valueFrom": 31,
+     "valueTo": 84
+    },
+    "3": {
+     "type": "maxmp",
+     "valueFrom": 15,
+     "valueTo": 41
+    }
+   },
+   "EquipG": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 6,
+     "valueTo": 18
+    },
+    "1": {
+     "type": "def",
+     "valueFrom": 6,
+     "valueTo": 18
+    },
+    "2": {
+     "type": "bsk",
+     "valueFrom": 4,
+     "valueTo": 17
+    },
+    "3": {
+     "type": "maxhp",
+     "valueFrom": 31,
+     "valueTo": 84
+    }
+   },
+   "EquipH": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 6,
+     "valueTo": 18
+    },
+    "1": {
+     "type": "def",
+     "valueFrom": 6,
+     "valueTo": 18
+    },
+    "2": {
+     "type": "avd",
+     "valueFrom": 15,
+     "valueTo": 41
+    },
+    "3": {
+     "type": "maxhp",
+     "valueFrom": 31,
+     "valueTo": 84
+    }
+   },
+   "EquipI": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 6,
+     "valueTo": 18
+    },
+    "1": {
+     "type": "bsk",
+     "valueFrom": 4,
+     "valueTo": 17
+    },
+    "2": {
+     "type": "avd",
+     "valueFrom": 15,
+     "valueTo": 41
+    },
+    "3": {
+     "type": "maxhp",
+     "valueFrom": 31,
+     "valueTo": 84
+    }
+   },
+   "EquipJ": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 6,
+     "valueTo": 18
+    },
+    "1": {
+     "type": "bsk",
+     "valueFrom": 4,
+     "valueTo": 17
+    },
+    "2": {
+     "type": "avd",
+     "valueFrom": 15,
+     "valueTo": 41
+    },
+    "3": {
+     "type": "maxhp",
+     "valueFrom": 31,
+     "valueTo": 84
+    }
+   },
+   "EquipK": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 6,
+     "valueTo": 18
+    },
+    "1": {
+     "type": "bsk",
+     "valueFrom": 4,
+     "valueTo": 17
+    },
+    "2": {
+     "type": "avd",
+     "valueFrom": 15,
+     "valueTo": 41
+    },
+    "3": {
+     "type": "maxhp",
+     "valueFrom": 31,
+     "valueTo": 84
+    }
+   },
+   "EquipL": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 6,
+     "valueTo": 18
+    },
+    "1": {
+     "type": "def",
+     "valueFrom": 6,
+     "valueTo": 18
+    },
+    "2": {
+     "type": "maxhp",
+     "valueFrom": 31,
+     "valueTo": 84
+    }
+   },
+   "EquipS1": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 20,
+     "valueTo": 20
+    },
+    "1": {
+     "type": "def",
+     "valueFrom": 20,
+     "valueTo": 20
+    }
+   },
+   "PetA": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 4,
+     "valueTo": 15
+    },
+    "1": {
+     "type": "def",
+     "valueFrom": 3,
+     "valueTo": 11
+    },
+    "2": {
+     "type": "bsk",
+     "valueFrom": 4,
+     "valueTo": 22
+    },
+    "3": {
+     "type": "avd",
+     "valueFrom": 5,
+     "valueTo": 15
+    }
+   },
+   "PetB": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 4,
+     "valueTo": 15
+    },
+    "1": {
+     "type": "def",
+     "valueFrom": 3,
+     "valueTo": 11
+    },
+    "2": {
+     "type": "bsk",
+     "valueFrom": 4,
+     "valueTo": 22
+    },
+    "3": {
+     "type": "avd",
+     "valueFrom": 5,
+     "valueTo": 15
+    }
+   },
+   "PetC": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 4,
+     "valueTo": 15
+    },
+    "1": {
+     "type": "def",
+     "valueFrom": 3,
+     "valueTo": 11
+    },
+    "2": {
+     "type": "bsk",
+     "valueFrom": 4,
+     "valueTo": 22
+    },
+    "3": {
+     "type": "avd",
+     "valueFrom": 5,
+     "valueTo": 15
+    }
+   },
+   "PetD": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 4,
+     "valueTo": 15
+    },
+    "1": {
+     "type": "def",
+     "valueFrom": 3,
+     "valueTo": 11
+    },
+    "2": {
+     "type": "bsk",
+     "valueFrom": 4,
+     "valueTo": 22
+    },
+    "3": {
+     "type": "avd",
+     "valueFrom": 5,
+     "valueTo": 15
+    }
+   }
+  },
+  "stage3": {
+   "EquipA": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 10,
+     "valueTo": 29
+    },
+    "1": {
+     "type": "bsk",
+     "valueFrom": 6,
+     "valueTo": 11
+    },
+    "2": {
+     "type": "maxmp",
+     "valueFrom": 24,
+     "valueTo": 70
+    }
+   },
+   "EquipB": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 10,
+     "valueTo": 19
+    },
+    "1": {
+     "type": "bsk",
+     "valueFrom": 6,
+     "valueTo": 11
+    },
+    "2": {
+     "type": "maxmp",
+     "valueFrom": 24,
+     "valueTo": 70
+    }
+   },
+   "EquipC": {
+    "0": {
+     "type": "def",
+     "valueFrom": 10,
+     "valueTo": 29
+    },
+    "1": {
+     "type": "avd",
+     "valueFrom": 24,
+     "valueTo": 70
+    },
+    "2": {
+     "type": "maxhp",
+     "valueFrom": 49,
+     "valueTo": 139
+    },
+    "3": {
+     "type": "maxmp",
+     "valueFrom": 24,
+     "valueTo": 70
+    }
+   },
+   "EquipD": {
+    "0": {
+     "type": "def",
+     "valueFrom": 10,
+     "valueTo": 29
+    },
+    "1": {
+     "type": "avd",
+     "valueFrom": 24,
+     "valueTo": 70
+    },
+    "2": {
+     "type": "maxhp",
+     "valueFrom": 49,
+     "valueTo": 139
+    },
+    "3": {
+     "type": "maxmp",
+     "valueFrom": 24,
+     "valueTo": 70
+    }
+   },
+   "EquipE": {
+    "0": {
+     "type": "def",
+     "valueFrom": 10,
+     "valueTo": 29
+    },
+    "1": {
+     "type": "avd",
+     "valueFrom": 24,
+     "valueTo": 70
+    },
+    "2": {
+     "type": "maxhp",
+     "valueFrom": 49,
+     "valueTo": 139
+    },
+    "3": {
+     "type": "maxmp",
+     "valueFrom": 24,
+     "valueTo": 70
+    }
+   },
+   "EquipF": {
+    "0": {
+     "type": "def",
+     "valueFrom": 10,
+     "valueTo": 29
+    },
+    "1": {
+     "type": "avd",
+     "valueFrom": 24,
+     "valueTo": 70
+    },
+    "2": {
+     "type": "maxhp",
+     "valueFrom": 49,
+     "valueTo": 139
+    },
+    "3": {
+     "type": "maxmp",
+     "valueFrom": 24,
+     "valueTo": 70
+    }
+   },
+   "EquipG": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 10,
+     "valueTo": 29
+    },
+    "1": {
+     "type": "def",
+     "valueFrom": 10,
+     "valueTo": 29
+    },
+    "2": {
+     "type": "bsk",
+     "valueFrom": 7,
+     "valueTo": 21
+    },
+    "3": {
+     "type": "maxhp",
+     "valueFrom": 49,
+     "valueTo": 139
+    }
+   },
+   "EquipH": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 10,
+     "valueTo": 29
+    },
+    "1": {
+     "type": "def",
+     "valueFrom": 10,
+     "valueTo": 29
+    },
+    "2": {
+     "type": "avd",
+     "valueFrom": 24,
+     "valueTo": 70
+    },
+    "3": {
+     "type": "maxhp",
+     "valueFrom": 49,
+     "valueTo": 139
+    }
+   },
+   "EquipI": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 10,
+     "valueTo": 29
+    },
+    "1": {
+     "type": "bsk",
+     "valueFrom": 7,
+     "valueTo": 21
+    },
+    "2": {
+     "type": "avd",
+     "valueFrom": 24,
+     "valueTo": 70
+    },
+    "3": {
+     "type": "maxhp",
+     "valueFrom": 49,
+     "valueTo": 139
+    }
+   },
+   "EquipJ": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 10,
+     "valueTo": 29
+    },
+    "1": {
+     "type": "bsk",
+     "valueFrom": 7,
+     "valueTo": 21
+    },
+    "2": {
+     "type": "avd",
+     "valueFrom": 24,
+     "valueTo": 70
+    },
+    "3": {
+     "type": "maxhp",
+     "valueFrom": 49,
+     "valueTo": 139
+    }
+   },
+   "EquipK": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 10,
+     "valueTo": 29
+    },
+    "1": {
+     "type": "bsk",
+     "valueFrom": 7,
+     "valueTo": 21
+    },
+    "2": {
+     "type": "avd",
+     "valueFrom": 24,
+     "valueTo": 70
+    },
+    "3": {
+     "type": "maxhp",
+     "valueFrom": 49,
+     "valueTo": 139
+    }
+   },
+   "EquipL": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 10,
+     "valueTo": 29
+    },
+    "1": {
+     "type": "def",
+     "valueFrom": 10,
+     "valueTo": 29
+    },
+    "2": {
+     "type": "maxhp",
+     "valueFrom": 49,
+     "valueTo": 139
+    }
+   },
+   "EquipS1": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 30,
+     "valueTo": 30
+    },
+    "1": {
+     "type": "def",
+     "valueFrom": 30,
+     "valueTo": 30
+    },
+    "2": {
+     "type": "maxhp",
+     "valueFrom": 60,
+     "valueTo": 60
+    }
+   },
+   "PetA": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 7,
+     "valueTo": 21
+    },
+    "1": {
+     "type": "def",
+     "valueFrom": 6,
+     "valueTo": 18
+    },
+    "2": {
+     "type": "bsk",
+     "valueFrom": 7,
+     "valueTo": 22
+    },
+    "3": {
+     "type": "avd",
+     "valueFrom": 8,
+     "valueTo": 21
+    }
+   },
+   "PetB": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 7,
+     "valueTo": 21
+    },
+    "1": {
+     "type": "def",
+     "valueFrom": 6,
+     "valueTo": 18
+    },
+    "2": {
+     "type": "bsk",
+     "valueFrom": 7,
+     "valueTo": 22
+    },
+    "3": {
+     "type": "avd",
+     "valueFrom": 8,
+     "valueTo": 21
+    }
+   },
+   "PetC": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 7,
+     "valueTo": 21
+    },
+    "1": {
+     "type": "def",
+     "valueFrom": 6,
+     "valueTo": 18
+    },
+    "2": {
+     "type": "bsk",
+     "valueFrom": 7,
+     "valueTo": 22
+    },
+    "3": {
+     "type": "avd",
+     "valueFrom": 8,
+     "valueTo": 21
+    }
+   },
+   "PetD": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 7,
+     "valueTo": 21
+    },
+    "1": {
+     "type": "def",
+     "valueFrom": 6,
+     "valueTo": 18
+    },
+    "2": {
+     "type": "bsk",
+     "valueFrom": 7,
+     "valueTo": 22
+    },
+    "3": {
+     "type": "avd",
+     "valueFrom": 8,
+     "valueTo": 21
+    }
+   }
+  },
+  "stage4": {
+   "EquipA": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 14,
+     "valueTo": 42
+    },
+    "1": {
+     "type": "bsk",
+     "valueFrom": 7,
+     "valueTo": 17
+    },
+    "2": {
+     "type": "maxmp",
+     "valueFrom": 35,
+     "valueTo": 99
+    }
+   },
+   "EquipB": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 14,
+     "valueTo": 22
+    },
+    "1": {
+     "type": "bsk",
+     "valueFrom": 7,
+     "valueTo": 17
+    },
+    "2": {
+     "type": "maxmp",
+     "valueFrom": 35,
+     "valueTo": 99
+    }
+   },
+   "EquipC": {
+    "0": {
+     "type": "def",
+     "valueFrom": 13,
+     "valueTo": 42
+    },
+    "1": {
+     "type": "avd",
+     "valueFrom": 35,
+     "valueTo": 99
+    },
+    "2": {
+     "type": "maxhp",
+     "valueFrom": 69,
+     "valueTo": 196
+    },
+    "3": {
+     "type": "maxmp",
+     "valueFrom": 35,
+     "valueTo": 99
+    }
+   },
+   "EquipD": {
+    "0": {
+     "type": "def",
+     "valueFrom": 13,
+     "valueTo": 42
+    },
+    "1": {
+     "type": "avd",
+     "valueFrom": 35,
+     "valueTo": 99
+    },
+    "2": {
+     "type": "maxhp",
+     "valueFrom": 69,
+     "valueTo": 196
+    },
+    "3": {
+     "type": "maxmp",
+     "valueFrom": 35,
+     "valueTo": 99
+    }
+   },
+   "EquipE": {
+    "0": {
+     "type": "def",
+     "valueFrom": 13,
+     "valueTo": 42
+    },
+    "1": {
+     "type": "avd",
+     "valueFrom": 35,
+     "valueTo": 99
+    },
+    "2": {
+     "type": "maxhp",
+     "valueFrom": 69,
+     "valueTo": 196
+    },
+    "3": {
+     "type": "maxmp",
+     "valueFrom": 35,
+     "valueTo": 99
+    }
+   },
+   "EquipF": {
+    "0": {
+     "type": "def",
+     "valueFrom": 13,
+     "valueTo": 42
+    },
+    "1": {
+     "type": "avd",
+     "valueFrom": 35,
+     "valueTo": 99
+    },
+    "2": {
+     "type": "maxhp",
+     "valueFrom": 69,
+     "valueTo": 196
+    },
+    "3": {
+     "type": "maxmp",
+     "valueFrom": 35,
+     "valueTo": 99
+    }
+   },
+   "EquipG": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 14,
+     "valueTo": 42
+    },
+    "1": {
+     "type": "def",
+     "valueFrom": 13,
+     "valueTo": 42
+    },
+    "2": {
+     "type": "bsk",
+     "valueFrom": 10,
+     "valueTo": 29
+    },
+    "3": {
+     "type": "maxhp",
+     "valueFrom": 69,
+     "valueTo": 196
+    }
+   },
+   "EquipH": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 14,
+     "valueTo": 42
+    },
+    "1": {
+     "type": "def",
+     "valueFrom": 13,
+     "valueTo": 42
+    },
+    "2": {
+     "type": "avd",
+     "valueFrom": 35,
+     "valueTo": 99
+    },
+    "3": {
+     "type": "maxhp",
+     "valueFrom": 69,
+     "valueTo": 196
+    }
+   },
+   "EquipI": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 14,
+     "valueTo": 42
+    },
+    "1": {
+     "type": "bsk",
+     "valueFrom": 10,
+     "valueTo": 29
+    },
+    "2": {
+     "type": "avd",
+     "valueFrom": 35,
+     "valueTo": 99
+    },
+    "3": {
+     "type": "maxhp",
+     "valueFrom": 69,
+     "valueTo": 196
+    }
+   },
+   "EquipJ": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 14,
+     "valueTo": 42
+    },
+    "1": {
+     "type": "bsk",
+     "valueFrom": 10,
+     "valueTo": 29
+    },
+    "2": {
+     "type": "avd",
+     "valueFrom": 35,
+     "valueTo": 99
+    },
+    "3": {
+     "type": "maxhp",
+     "valueFrom": 69,
+     "valueTo": 196
+    }
+   },
+   "EquipK": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 14,
+     "valueTo": 42
+    },
+    "1": {
+     "type": "bsk",
+     "valueFrom": 10,
+     "valueTo": 29
+    },
+    "2": {
+     "type": "avd",
+     "valueFrom": 35,
+     "valueTo": 99
+    },
+    "3": {
+     "type": "maxhp",
+     "valueFrom": 69,
+     "valueTo": 196
+    }
+   },
+   "EquipL": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 14,
+     "valueTo": 42
+    },
+    "1": {
+     "type": "def",
+     "valueFrom": 13,
+     "valueTo": 42
+    },
+    "2": {
+     "type": "maxhp",
+     "valueFrom": 69,
+     "valueTo": 196
+    }
+   },
+   "EquipS1": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 40,
+     "valueTo": 40
+    },
+    "1": {
+     "type": "def",
+     "valueFrom": 40,
+     "valueTo": 40
+    },
+    "2": {
+     "type": "avd",
+     "valueFrom": 40,
+     "valueTo": 40
+    },
+    "3": {
+     "type": "maxhp",
+     "valueFrom": 80,
+     "valueTo": 80
+    }
+   },
+   "PetA": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 10,
+     "valueTo": 29
+    },
+    "1": {
+     "type": "def",
+     "valueFrom": 10,
+     "valueTo": 26
+    },
+    "2": {
+     "type": "bsk",
+     "valueFrom": 10,
+     "valueTo": 30
+    },
+    "3": {
+     "type": "avd",
+     "valueFrom": 10,
+     "valueTo": 29
+    }
+   },
+   "PetB": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 10,
+     "valueTo": 29
+    },
+    "1": {
+     "type": "def",
+     "valueFrom": 10,
+     "valueTo": 26
+    },
+    "2": {
+     "type": "bsk",
+     "valueFrom": 10,
+     "valueTo": 30
+    },
+    "3": {
+     "type": "avd",
+     "valueFrom": 10,
+     "valueTo": 29
+    }
+   },
+   "PetC": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 10,
+     "valueTo": 29
+    },
+    "1": {
+     "type": "def",
+     "valueFrom": 10,
+     "valueTo": 26
+    },
+    "2": {
+     "type": "bsk",
+     "valueFrom": 10,
+     "valueTo": 30
+    },
+    "3": {
+     "type": "avd",
+     "valueFrom": 10,
+     "valueTo": 29
+    }
+   },
+   "PetD": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 10,
+     "valueTo": 29
+    },
+    "1": {
+     "type": "def",
+     "valueFrom": 10,
+     "valueTo": 26
+    },
+    "2": {
+     "type": "bsk",
+     "valueFrom": 10,
+     "valueTo": 30
+    },
+    "3": {
+     "type": "avd",
+     "valueFrom": 10,
+     "valueTo": 29
+    }
+   }
+  },
+  "stage5": {
+   "EquipA": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 18,
+     "valueTo": 54
+    },
+    "1": {
+     "type": "bsk",
+     "valueFrom": 9,
+     "valueTo": 17
+    },
+    "2": {
+     "type": "maxmp",
+     "valueFrom": 45,
+     "valueTo": 127
+    }
+   },
+   "EquipB": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 18,
+     "valueTo": 54
+    },
+    "1": {
+     "type": "bsk",
+     "valueFrom": 9,
+     "valueTo": 17
+    },
+    "2": {
+     "type": "maxmp",
+     "valueFrom": 45,
+     "valueTo": 127
+    }
+   },
+   "EquipC": {
+    "0": {
+     "type": "def",
+     "valueFrom": 16,
+     "valueTo": 54
+    },
+    "1": {
+     "type": "avd",
+     "valueFrom": 45,
+     "valueTo": 127
+    },
+    "2": {
+     "type": "maxhp",
+     "valueFrom": 89,
+     "valueTo": 251
+    },
+    "3": {
+     "type": "maxmp",
+     "valueFrom": 45,
+     "valueTo": 127
+    }
+   },
+   "EquipD": {
+    "0": {
+     "type": "def",
+     "valueFrom": 16,
+     "valueTo": 54
+    },
+    "1": {
+     "type": "avd",
+     "valueFrom": 45,
+     "valueTo": 127
+    },
+    "2": {
+     "type": "maxhp",
+     "valueFrom": 89,
+     "valueTo": 251
+    },
+    "3": {
+     "type": "maxmp",
+     "valueFrom": 45,
+     "valueTo": 127
+    }
+   },
+   "EquipE": {
+    "0": {
+     "type": "def",
+     "valueFrom": 16,
+     "valueTo": 54
+    },
+    "1": {
+     "type": "avd",
+     "valueFrom": 45,
+     "valueTo": 127
+    },
+    "2": {
+     "type": "maxhp",
+     "valueFrom": 89,
+     "valueTo": 251
+    },
+    "3": {
+     "type": "maxmp",
+     "valueFrom": 45,
+     "valueTo": 127
+    }
+   },
+   "EquipF": {
+    "0": {
+     "type": "def",
+     "valueFrom": 16,
+     "valueTo": 54
+    },
+    "1": {
+     "type": "avd",
+     "valueFrom": 45,
+     "valueTo": 127
+    },
+    "2": {
+     "type": "maxhp",
+     "valueFrom": 89,
+     "valueTo": 251
+    },
+    "3": {
+     "type": "maxmp",
+     "valueFrom": 45,
+     "valueTo": 127
+    }
+   },
+   "EquipG": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 18,
+     "valueTo": 54
+    },
+    "1": {
+     "type": "def",
+     "valueFrom": 16,
+     "valueTo": 54
+    },
+    "2": {
+     "type": "bsk",
+     "valueFrom": 13,
+     "valueTo": 33
+    },
+    "3": {
+     "type": "maxhp",
+     "valueFrom": 89,
+     "valueTo": 251
+    }
+   },
+   "EquipH": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 18,
+     "valueTo": 54
+    },
+    "1": {
+     "type": "def",
+     "valueFrom": 16,
+     "valueTo": 54
+    },
+    "2": {
+     "type": "avd",
+     "valueFrom": 45,
+     "valueTo": 127
+    },
+    "3": {
+     "type": "maxhp",
+     "valueFrom": 89,
+     "valueTo": 251
+    }
+   },
+   "EquipI": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 18,
+     "valueTo": 54
+    },
+    "1": {
+     "type": "bsk",
+     "valueFrom": 13,
+     "valueTo": 33
+    },
+    "2": {
+     "type": "avd",
+     "valueFrom": 45,
+     "valueTo": 127
+    },
+    "3": {
+     "type": "maxhp",
+     "valueFrom": 89,
+     "valueTo": 251
+    }
+   },
+   "EquipJ": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 18,
+     "valueTo": 54
+    },
+    "1": {
+     "type": "bsk",
+     "valueFrom": 13,
+     "valueTo": 33
+    },
+    "2": {
+     "type": "avd",
+     "valueFrom": 45,
+     "valueTo": 127
+    },
+    "3": {
+     "type": "maxhp",
+     "valueFrom": 89,
+     "valueTo": 251
+    }
+   },
+   "EquipK": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 18,
+     "valueTo": 54
+    },
+    "1": {
+     "type": "bsk",
+     "valueFrom": 13,
+     "valueTo": 33
+    },
+    "2": {
+     "type": "avd",
+     "valueFrom": 45,
+     "valueTo": 127
+    },
+    "3": {
+     "type": "maxhp",
+     "valueFrom": 89,
+     "valueTo": 251
+    }
+   },
+   "EquipL": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 18,
+     "valueTo": 54
+    },
+    "1": {
+     "type": "def",
+     "valueFrom": 16,
+     "valueTo": 54
+    },
+    "2": {
+     "type": "maxhp",
+     "valueFrom": 89,
+     "valueTo": 251
+    }
+   },
+   "EquipS1": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 50,
+     "valueTo": 50
+    },
+    "1": {
+     "type": "def",
+     "valueFrom": 50,
+     "valueTo": 50
+    },
+    "2": {
+     "type": "avd",
+     "valueFrom": 50,
+     "valueTo": 50
+    },
+    "3": {
+     "type": "bsk",
+     "valueFrom": 50,
+     "valueTo": 50
+    },
+    "4": {
+     "type": "maxhp",
+     "valueFrom": 100,
+     "valueTo": 100
+    }
+   },
+   "PetA": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 13,
+     "valueTo": 35
+    },
+    "1": {
+     "type": "def",
+     "valueFrom": 13,
+     "valueTo": 33
+    },
+    "2": {
+     "type": "bsk",
+     "valueFrom": 13,
+     "valueTo": 30
+    },
+    "3": {
+     "type": "avd",
+     "valueFrom": 13,
+     "valueTo": 35
+    }
+   },
+   "PetB": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 13,
+     "valueTo": 35
+    },
+    "1": {
+     "type": "def",
+     "valueFrom": 13,
+     "valueTo": 33
+    },
+    "2": {
+     "type": "bsk",
+     "valueFrom": 13,
+     "valueTo": 30
+    },
+    "3": {
+     "type": "avd",
+     "valueFrom": 13,
+     "valueTo": 35
+    }
+   },
+   "PetC": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 13,
+     "valueTo": 35
+    },
+    "1": {
+     "type": "def",
+     "valueFrom": 13,
+     "valueTo": 33
+    },
+    "2": {
+     "type": "bsk",
+     "valueFrom": 13,
+     "valueTo": 30
+    },
+    "3": {
+     "type": "avd",
+     "valueFrom": 13,
+     "valueTo": 35
+    }
+   },
+   "PetD": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 13,
+     "valueTo": 35
+    },
+    "1": {
+     "type": "def",
+     "valueFrom": 13,
+     "valueTo": 33
+    },
+    "2": {
+     "type": "bsk",
+     "valueFrom": 13,
+     "valueTo": 30
+    },
+    "3": {
+     "type": "avd",
+     "valueFrom": 13,
+     "valueTo": 35
+    }
+   }
+  },
+  "stage6": {
+   "EquipA": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 22,
+     "valueTo": 66
+    },
+    "1": {
+     "type": "bsk",
+     "valueFrom": 11,
+     "valueTo": 23
+    },
+    "2": {
+     "type": "maxmp",
+     "valueFrom": 55,
+     "valueTo": 155
+    }
+   },
+   "EquipB": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 22,
+     "valueTo": 66
+    },
+    "1": {
+     "type": "bsk",
+     "valueFrom": 11,
+     "valueTo": 23
+    },
+    "2": {
+     "type": "maxmp",
+     "valueFrom": 55,
+     "valueTo": 155
+    }
+   },
+   "EquipC": {
+    "0": {
+     "type": "def",
+     "valueFrom": 19,
+     "valueTo": 66
+    },
+    "1": {
+     "type": "avd",
+     "valueFrom": 55,
+     "valueTo": 155
+    },
+    "2": {
+     "type": "maxhp",
+     "valueFrom": 109,
+     "valueTo": 306
+    },
+    "3": {
+     "type": "maxmp",
+     "valueFrom": 55,
+     "valueTo": 155
+    }
+   },
+   "EquipD": {
+    "0": {
+     "type": "def",
+     "valueFrom": 19,
+     "valueTo": 66
+    },
+    "1": {
+     "type": "avd",
+     "valueFrom": 55,
+     "valueTo": 155
+    },
+    "2": {
+     "type": "maxhp",
+     "valueFrom": 109,
+     "valueTo": 306
+    },
+    "3": {
+     "type": "maxmp",
+     "valueFrom": 55,
+     "valueTo": 155
+    }
+   },
+   "EquipE": {
+    "0": {
+     "type": "def",
+     "valueFrom": 19,
+     "valueTo": 66
+    },
+    "1": {
+     "type": "avd",
+     "valueFrom": 55,
+     "valueTo": 155
+    },
+    "2": {
+     "type": "maxhp",
+     "valueFrom": 109,
+     "valueTo": 306
+    },
+    "3": {
+     "type": "maxmp",
+     "valueFrom": 55,
+     "valueTo": 155
+    }
+   },
+   "EquipF": {
+    "0": {
+     "type": "def",
+     "valueFrom": 19,
+     "valueTo": 66
+    },
+    "1": {
+     "type": "avd",
+     "valueFrom": 55,
+     "valueTo": 155
+    },
+    "2": {
+     "type": "maxhp",
+     "valueFrom": 109,
+     "valueTo": 306
+    },
+    "3": {
+     "type": "maxmp",
+     "valueFrom": 55,
+     "valueTo": 155
+    }
+   },
+   "EquipG": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 22,
+     "valueTo": 66
+    },
+    "1": {
+     "type": "def",
+     "valueFrom": 19,
+     "valueTo": 66
+    },
+    "2": {
+     "type": "bsk",
+     "valueFrom": 16,
+     "valueTo": 37
+    },
+    "3": {
+     "type": "maxhp",
+     "valueFrom": 109,
+     "valueTo": 306
+    }
+   },
+   "EquipH": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 22,
+     "valueTo": 66
+    },
+    "1": {
+     "type": "def",
+     "valueFrom": 19,
+     "valueTo": 66
+    },
+    "2": {
+     "type": "avd",
+     "valueFrom": 55,
+     "valueTo": 155
+    },
+    "3": {
+     "type": "maxhp",
+     "valueFrom": 109,
+     "valueTo": 306
+    }
+   },
+   "EquipI": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 22,
+     "valueTo": 66
+    },
+    "1": {
+     "type": "bsk",
+     "valueFrom": 16,
+     "valueTo": 37
+    },
+    "2": {
+     "type": "avd",
+     "valueFrom": 55,
+     "valueTo": 155
+    },
+    "3": {
+     "type": "maxhp",
+     "valueFrom": 109,
+     "valueTo": 306
+    }
+   },
+   "EquipJ": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 22,
+     "valueTo": 66
+    },
+    "1": {
+     "type": "bsk",
+     "valueFrom": 16,
+     "valueTo": 37
+    },
+    "2": {
+     "type": "avd",
+     "valueFrom": 55,
+     "valueTo": 155
+    },
+    "3": {
+     "type": "maxhp",
+     "valueFrom": 109,
+     "valueTo": 306
+    }
+   },
+   "EquipK": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 22,
+     "valueTo": 66
+    },
+    "1": {
+     "type": "bsk",
+     "valueFrom": 16,
+     "valueTo": 37
+    },
+    "2": {
+     "type": "avd",
+     "valueFrom": 55,
+     "valueTo": 155
+    },
+    "3": {
+     "type": "maxhp",
+     "valueFrom": 109,
+     "valueTo": 306
+    }
+   },
+   "EquipL": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 22,
+     "valueTo": 66
+    },
+    "1": {
+     "type": "def",
+     "valueFrom": 19,
+     "valueTo": 66
+    },
+    "2": {
+     "type": "maxhp",
+     "valueFrom": 109,
+     "valueTo": 306
+    }
+   },
+   "EquipS1": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 100,
+     "valueTo": 100
+    },
+    "1": {
+     "type": "def",
+     "valueFrom": 100,
+     "valueTo": 100
+    },
+    "2": {
+     "type": "avd",
+     "valueFrom": 100,
+     "valueTo": 100
+    },
+    "3": {
+     "type": "bsk",
+     "valueFrom": 100,
+     "valueTo": 100
+    },
+    "4": {
+     "type": "maxhp",
+     "valueFrom": 1000,
+     "valueTo": 1000
+    }
+   },
+   "PetA": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 16,
+     "valueTo": 41
+    },
+    "1": {
+     "type": "def",
+     "valueFrom": 16,
+     "valueTo": 40
+    },
+    "2": {
+     "type": "bsk",
+     "valueFrom": 16,
+     "valueTo": 38
+    },
+    "3": {
+     "type": "avd",
+     "valueFrom": 16,
+     "valueTo": 41
+    }
+   },
+   "PetB": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 16,
+     "valueTo": 41
+    },
+    "1": {
+     "type": "def",
+     "valueFrom": 16,
+     "valueTo": 40
+    },
+    "2": {
+     "type": "bsk",
+     "valueFrom": 16,
+     "valueTo": 38
+    },
+    "3": {
+     "type": "avd",
+     "valueFrom": 16,
+     "valueTo": 41
+    }
+   },
+   "PetC": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 16,
+     "valueTo": 41
+    },
+    "1": {
+     "type": "def",
+     "valueFrom": 16,
+     "valueTo": 40
+    },
+    "2": {
+     "type": "bsk",
+     "valueFrom": 16,
+     "valueTo": 38
+    },
+    "3": {
+     "type": "avd",
+     "valueFrom": 16,
+     "valueTo": 41
+    }
+   },
+   "PetD": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 16,
+     "valueTo": 41
+    },
+    "1": {
+     "type": "def",
+     "valueFrom": 16,
+     "valueTo": 40
+    },
+    "2": {
+     "type": "bsk",
+     "valueFrom": 16,
+     "valueTo": 38
+    },
+    "3": {
+     "type": "avd",
+     "valueFrom": 16,
+     "valueTo": 41
+    }
+   }
+  },
+  "stage7": {
+   "EquipA": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 27,
+     "valueTo": 81
+    },
+    "1": {
+     "type": "bsk",
+     "valueFrom": 14,
+     "valueTo": 29
+    },
+    "2": {
+     "type": "maxmp",
+     "valueFrom": 68,
+     "valueTo": 190
+    }
+   },
+   "EquipB": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 27,
+     "valueTo": 81
+    },
+    "1": {
+     "type": "bsk",
+     "valueFrom": 14,
+     "valueTo": 29
+    },
+    "2": {
+     "type": "maxmp",
+     "valueFrom": 68,
+     "valueTo": 190
+    }
+   },
+   "EquipC": {
+    "0": {
+     "type": "def",
+     "valueFrom": 24,
+     "valueTo": 81
+    },
+    "1": {
+     "type": "avd",
+     "valueFrom": 68,
+     "valueTo": 190
+    },
+    "2": {
+     "type": "maxhp",
+     "valueFrom": 133,
+     "valueTo": 374
+    },
+    "3": {
+     "type": "maxmp",
+     "valueFrom": 68,
+     "valueTo": 190
+    }
+   },
+   "EquipD": {
+    "0": {
+     "type": "def",
+     "valueFrom": 24,
+     "valueTo": 81
+    },
+    "1": {
+     "type": "avd",
+     "valueFrom": 68,
+     "valueTo": 190
+    },
+    "2": {
+     "type": "maxhp",
+     "valueFrom": 133,
+     "valueTo": 374
+    },
+    "3": {
+     "type": "maxmp",
+     "valueFrom": 68,
+     "valueTo": 190
+    }
+   },
+   "EquipE": {
+    "0": {
+     "type": "def",
+     "valueFrom": 24,
+     "valueTo": 81
+    },
+    "1": {
+     "type": "avd",
+     "valueFrom": 68,
+     "valueTo": 190
+    },
+    "2": {
+     "type": "maxhp",
+     "valueFrom": 133,
+     "valueTo": 374
+    },
+    "3": {
+     "type": "maxmp",
+     "valueFrom": 68,
+     "valueTo": 190
+    }
+   },
+   "EquipF": {
+    "0": {
+     "type": "def",
+     "valueFrom": 24,
+     "valueTo": 81
+    },
+    "1": {
+     "type": "avd",
+     "valueFrom": 68,
+     "valueTo": 190
+    },
+    "2": {
+     "type": "maxhp",
+     "valueFrom": 133,
+     "valueTo": 374
+    },
+    "3": {
+     "type": "maxmp",
+     "valueFrom": 68,
+     "valueTo": 190
+    }
+   },
+   "EquipG": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 27,
+     "valueTo": 81
+    },
+    "1": {
+     "type": "def",
+     "valueFrom": 24,
+     "valueTo": 81
+    },
+    "2": {
+     "type": "bsk",
+     "valueFrom": 20,
+     "valueTo": 46
+    },
+    "3": {
+     "type": "maxhp",
+     "valueFrom": 133,
+     "valueTo": 374
+    }
+   },
+   "EquipH": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 27,
+     "valueTo": 81
+    },
+    "1": {
+     "type": "def",
+     "valueFrom": 24,
+     "valueTo": 81
+    },
+    "2": {
+     "type": "avd",
+     "valueFrom": 68,
+     "valueTo": 190
+    },
+    "3": {
+     "type": "maxhp",
+     "valueFrom": 133,
+     "valueTo": 374
+    }
+   },
+   "EquipI": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 27,
+     "valueTo": 81
+    },
+    "1": {
+     "type": "bsk",
+     "valueFrom": 20,
+     "valueTo": 46
+    },
+    "2": {
+     "type": "avd",
+     "valueFrom": 68,
+     "valueTo": 190
+    },
+    "3": {
+     "type": "maxhp",
+     "valueFrom": 133,
+     "valueTo": 374
+    }
+   },
+   "EquipJ": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 27,
+     "valueTo": 81
+    },
+    "1": {
+     "type": "bsk",
+     "valueFrom": 20,
+     "valueTo": 46
+    },
+    "2": {
+     "type": "avd",
+     "valueFrom": 68,
+     "valueTo": 190
+    },
+    "3": {
+     "type": "maxhp",
+     "valueFrom": 133,
+     "valueTo": 374
+    }
+   },
+   "EquipK": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 27,
+     "valueTo": 81
+    },
+    "1": {
+     "type": "bsk",
+     "valueFrom": 20,
+     "valueTo": 46
+    },
+    "2": {
+     "type": "avd",
+     "valueFrom": 68,
+     "valueTo": 190
+    },
+    "3": {
+     "type": "maxhp",
+     "valueFrom": 133,
+     "valueTo": 374
+    }
+   },
+   "EquipL": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 27,
+     "valueTo": 81
+    },
+    "1": {
+     "type": "def",
+     "valueFrom": 24,
+     "valueTo": 81
+    },
+    "2": {
+     "type": "maxhp",
+     "valueFrom": 133,
+     "valueTo": 374
+    }
+   },
+   "EquipS1": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 100,
+     "valueTo": 100
+    },
+    "1": {
+     "type": "def",
+     "valueFrom": 100,
+     "valueTo": 100
+    },
+    "2": {
+     "type": "avd",
+     "valueFrom": 100,
+     "valueTo": 100
+    },
+    "3": {
+     "type": "bsk",
+     "valueFrom": 100,
+     "valueTo": 100
+    },
+    "4": {
+     "type": "maxhp",
+     "valueFrom": 1000,
+     "valueTo": 1000
+    }
+   },
+   "PetA": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 20,
+     "valueTo": 51
+    },
+    "1": {
+     "type": "def",
+     "valueFrom": 20,
+     "valueTo": 49
+    },
+    "2": {
+     "type": "bsk",
+     "valueFrom": 20,
+     "valueTo": 47
+    },
+    "3": {
+     "type": "avd",
+     "valueFrom": 20,
+     "valueTo": 51
+    }
+   },
+   "PetB": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 20,
+     "valueTo": 51
+    },
+    "1": {
+     "type": "def",
+     "valueFrom": 20,
+     "valueTo": 49
+    },
+    "2": {
+     "type": "bsk",
+     "valueFrom": 20,
+     "valueTo": 47
+    },
+    "3": {
+     "type": "avd",
+     "valueFrom": 20,
+     "valueTo": 51
+    }
+   },
+   "PetC": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 20,
+     "valueTo": 51
+    },
+    "1": {
+     "type": "def",
+     "valueFrom": 20,
+     "valueTo": 49
+    },
+    "2": {
+     "type": "bsk",
+     "valueFrom": 20,
+     "valueTo": 47
+    },
+    "3": {
+     "type": "avd",
+     "valueFrom": 20,
+     "valueTo": 51
+    }
+   },
+   "PetD": {
+    "0": {
+     "type": "atk",
+     "valueFrom": 20,
+     "valueTo": 51
+    },
+    "1": {
+     "type": "def",
+     "valueFrom": 20,
+     "valueTo": 49
+    },
+    "2": {
+     "type": "bsk",
+     "valueFrom": 20,
+     "valueTo": 47
+    },
+    "3": {
+     "type": "avd",
+     "valueFrom": 20,
+     "valueTo": 51
+    }
+   }
+  },
+  "washvalue": {
+   "need": {
+    "stage1": {
+     "needMoney": 2500,
+     "plus1": {
+      "needItemCnt": 0
+     },
+     "plus2": {
+      "needItemCnt": 1
+     },
+     "plus3": {
+      "needItemCnt": 1
+     },
+     "plus4": {
+      "needItemCnt": 1
+     },
+     "plus5": {
+      "needItemCnt": 1
+     },
+     "plus6": {
+      "needItemCnt": 1
+     }
+    },
+    "stage2": {
+     "needMoney": 5000,
+     "plus1": {
+      "needItemCnt": 0
+     },
+     "plus2": {
+      "needItemCnt": 1
+     },
+     "plus3": {
+      "needItemCnt": 1
+     },
+     "plus4": {
+      "needItemCnt": 1
+     },
+     "plus5": {
+      "needItemCnt": 1
+     },
+     "plus6": {
+      "needItemCnt": 2
+     }
+    },
+    "stage3": {
+     "needMoney": 7500,
+     "plus1": {
+      "needItemCnt": 0
+     },
+     "plus2": {
+      "needItemCnt": 1
+     },
+     "plus3": {
+      "needItemCnt": 1
+     },
+     "plus4": {
+      "needItemCnt": 1
+     },
+     "plus5": {
+      "needItemCnt": 2
+     },
+     "plus6": {
+      "needItemCnt": 3
+     }
+    },
+    "stage4": {
+     "needMoney": 10000,
+     "plus1": {
+      "needItemCnt": 0
+     },
+     "plus2": {
+      "needItemCnt": 1
+     },
+     "plus3": {
+      "needItemCnt": 1
+     },
+     "plus4": {
+      "needItemCnt": 2
+     },
+     "plus5": {
+      "needItemCnt": 3
+     },
+     "plus6": {
+      "needItemCnt": 4
+     }
+    },
+    "stage5": {
+     "needMoney": 12500,
+     "plus1": {
+      "needItemCnt": 0
+     },
+     "plus2": {
+      "needItemCnt": 1
+     },
+     "plus3": {
+      "needItemCnt": 2
+     },
+     "plus4": {
+      "needItemCnt": 3
+     },
+     "plus5": {
+      "needItemCnt": 4
+     },
+     "plus6": {
+      "needItemCnt": 5
+     }
+    },
+    "stage6": {
+     "needMoney": 15000,
+     "plus1": {
+      "needItemCnt": 0
+     },
+     "plus2": {
+      "needItemCnt": 2
+     },
+     "plus3": {
+      "needItemCnt": 3
+     },
+     "plus4": {
+      "needItemCnt": 4
+     },
+     "plus5": {
+      "needItemCnt": 5
+     },
+     "plus6": {
+      "needItemCnt": 6
+     }
+    },
+    "stage7": {
+     "needMoney": 17500,
+     "plus1": {
+      "needItemCnt": 0
+     },
+     "plus2": {
+      "needItemCnt": 3
+     },
+     "plus3": {
+      "needItemCnt": 4
+     },
+     "plus4": {
+      "needItemCnt": 5
+     },
+     "plus5": {
+      "needItemCnt": 6
+     },
+     "plus6": {
+      "needItemCnt": 7
+     }
+    }
+   },
+   "needItemId": 16000034,
+   "rateDes": 35,
+   "rateInc": 50,
+   "rateSame": 15
+  }
+ },
+ "resetStrength": {
+  "stage1": {
+   "helpItemId": 16000015,
+   "maxHelpCnt": 9,
+   "needItemCnt": 1,
+   "needItemId": 16000017,
+   "needMoney": 5000,
+   "prob": 100
+  },
+  "stage2": {
+   "helpItemId": 16000015,
+   "maxHelpCnt": 9,
+   "needItemCnt": 2,
+   "needItemId": 16000017,
+   "needMoney": 10000,
+   "prob": 95
+  },
+  "stage3": {
+   "helpItemId": 16000015,
+   "maxHelpCnt": 9,
+   "needItemCnt": 3,
+   "needItemId": 16000017,
+   "needMoney": 15000,
+   "prob": 90
+  },
+  "stage4": {
+   "helpItemId": 16000015,
+   "maxHelpCnt": 9,
+   "needItemCnt": 4,
+   "needItemId": 16000017,
+   "needMoney": 20000,
+   "prob": 85
+  },
+  "stage5": {
+   "helpItemId": 16000015,
+   "maxHelpCnt": 9,
+   "needItemCnt": 5,
+   "needItemId": 16000017,
+   "needMoney": 25000,
+   "prob": 50
+  },
+  "stage6": {
+   "helpItemId": 16000015,
+   "maxHelpCnt": 9,
+   "needItemCnt": 6,
+   "needItemId": 16000017,
+   "needMoney": 30000,
+   "prob": 40
+  },
+  "stage7": {
+   "helpItemId": 16000015,
+   "maxHelpCnt": 9,
+   "needItemCnt": 6,
+   "needItemId": 16000017,
+   "needMoney": 30000,
+   "prob": 30
+  }
+ },
+ "special": {
+  "inlay": {
+   "stage1": {
+    "count": 1
+   },
+   "stage2": {
+    "count": 2
+   },
+   "stage3": {
+    "count": 3
+   },
+   "stage4": {
+    "count": 4
+   },
+   "stage5": {
+    "count": 5
+   },
+   "stage6": {
+    "count": 6
+   }
+  },
+  "stageup": {
+   "stage2": {
+    "needMoney": 100000,
+    "prob": 50
+   },
+   "stage3": {
+    "needMoney": 1000000,
+    "prob": 50
+   },
+   "stage4": {
+    "needMoney": 10000000,
+    "prob": 50
+   },
+   "stage5": {
+    "needMoney": 100000000,
+    "prob": 50
+   },
+   "stage6": {
+    "needMoney": 1000000000.0,
+    "prob": 100
+   }
+  }
+ },
+ "stageup": {
+  "stage2": {
+   "helpItemId": 16000015,
+   "keepAptitudeItemCnt": 0,
+   "keepAptitudeItemId": 16000021,
+   "keepStrengthItemCnt": 0,
+   "keepStrengthItemId": 16000020,
+   "maxHelpCnt": 9,
+   "needItemCnt": 1,
+   "needItemId": 16000019,
+   "needMoney": 10000,
+   "prob": 60,
+   "probLoseAptitude": 10,
+   "probLoseStrength": 10
+  },
+  "stage3": {
+   "helpItemId": 16000015,
+   "keepAptitudeItemCnt": 0,
+   "keepAptitudeItemId": 16000021,
+   "keepStrengthItemCnt": 0,
+   "keepStrengthItemId": 16000020,
+   "maxHelpCnt": 9,
+   "needItemCnt": 2,
+   "needItemId": 16000019,
+   "needMoney": 10000,
+   "prob": 30,
+   "probLoseAptitude": 10,
+   "probLoseStrength": 10
+  },
+  "stage4": {
+   "helpItemId": 16000015,
+   "keepAptitudeItemCnt": 1,
+   "keepAptitudeItemId": 16000021,
+   "keepStrengthItemCnt": 1,
+   "keepStrengthItemId": 16000020,
+   "maxHelpCnt": 9,
+   "needItemCnt": 3,
+   "needItemId": 16000019,
+   "needMoney": 10000,
+   "prob": 10,
+   "probLoseAptitude": 10,
+   "probLoseStrength": 10
+  },
+  "stage5": {
+   "helpItemId": 16000015,
+   "keepAptitudeItemCnt": 1,
+   "keepAptitudeItemId": 16000021,
+   "keepStrengthItemCnt": 1,
+   "keepStrengthItemId": 16000020,
+   "maxHelpCnt": 9,
+   "needItemCnt": 5,
+   "needItemId": 16000019,
+   "needMoney": 10000,
+   "prob": 10,
+   "probLoseAptitude": 10,
+   "probLoseStrength": 10
+  },
+  "stage6": {
+   "helpItemId": 16000015,
+   "keepAptitudeItemCnt": 1,
+   "keepAptitudeItemId": 16000021,
+   "keepStrengthItemCnt": 1,
+   "keepStrengthItemId": 16000020,
+   "maxHelpCnt": 9,
+   "needItemCnt": 5,
+   "needItemId": 16000019,
+   "needMoney": 10000,
+   "prob": 5,
+   "probLoseAptitude": 10,
+   "probLoseStrength": 10
+  }
+ },
+ "stageup120": {
+  "stage": {
+   "needItem": {
+    "itemId": 16000122,
+    "upPercent": 25
+   },
+   "needItemAlternative": {
+    "itemId": 16000123,
+    "upPercent": 25
+   },
+   "stage120": 7,
+   "thresholdForUseAlternative": 75
+  }
+ },
+ "strength": {
+  "level1": {
+   "addRatio": 13,
+   "helpItemId": 16000015,
+   "maxHelpCnt": 0,
+   "needItemCnt": 1,
+   "needItemId": 16000016,
+   "needMoney": 0,
+   "prob": 100
+  },
+  "level10": {
+   "addRatio": 300,
+   "helpItemId": 16000015,
+   "maxHelpCnt": 0,
+   "needItemCnt": 180,
+   "needItemId": 16000016,
+   "needMoney": 0,
+   "prob": 25
+  },
+  "level11": {
+   "addRatio": 365,
+   "helpItemId": 0,
+   "maxHelpCnt": 0,
+   "needItemCnt": 1,
+   "needItemId": 15028002,
+   "needMoney": 0,
+   "prob": 25
+  },
+  "level2": {
+   "addRatio": 25,
+   "helpItemId": 16000015,
+   "maxHelpCnt": 0,
+   "needItemCnt": 2,
+   "needItemId": 16000016,
+   "needMoney": 0,
+   "prob": 90
+  },
+  "level3": {
+   "addRatio": 50,
+   "helpItemId": 16000015,
+   "maxHelpCnt": 0,
+   "needItemCnt": 5,
+   "needItemId": 16000016,
+   "needMoney": 0,
+   "prob": 80
+  },
+  "level4": {
+   "addRatio": 60,
+   "helpItemId": 16000015,
+   "maxHelpCnt": 0,
+   "needItemCnt": 10,
+   "needItemId": 16000016,
+   "needMoney": 0,
+   "prob": 70
+  },
+  "level5": {
+   "addRatio": 88,
+   "helpItemId": 16000015,
+   "maxHelpCnt": 0,
+   "needItemCnt": 20,
+   "needItemId": 16000016,
+   "needMoney": 0,
+   "prob": 60
+  },
+  "level6": {
+   "addRatio": 114,
+   "helpItemId": 16000015,
+   "maxHelpCnt": 0,
+   "needItemCnt": 40,
+   "needItemId": 16000016,
+   "needMoney": 0,
+   "prob": 50
+  },
+  "level7": {
+   "addRatio": 150,
+   "helpItemId": 16000015,
+   "maxHelpCnt": 0,
+   "needItemCnt": 60,
+   "needItemId": 16000016,
+   "needMoney": 0,
+   "prob": 40
+  },
+  "level8": {
+   "addRatio": 188,
+   "helpItemId": 16000015,
+   "maxHelpCnt": 0,
+   "needItemCnt": 80,
+   "needItemId": 16000016,
+   "needMoney": 0,
+   "prob": 35
+  },
+  "level9": {
+   "addRatio": 235,
+   "helpItemId": 16000015,
+   "maxHelpCnt": 0,
+   "needItemCnt": 120,
+   "needItemId": 16000016,
+   "needMoney": 0,
+   "prob": 30
+  }
+ },
+ "taleAttributes": {
+  "0": {
+   "type": "atk",
+   "valueFrom": 50,
+   "valueTo": 100
+  },
+  "1": {
+   "type": "def",
+   "valueFrom": 50,
+   "valueTo": 100
+  },
+  "2": {
+   "type": "maxhp",
+   "valueFrom": 200,
+   "valueTo": 500
+  },
+  "3": {
+   "type": "maxmp",
+   "valueFrom": 200,
+   "valueTo": 500
+  },
+  "4": {
+   "type": "wlkspeed",
+   "valueFrom": 1,
+   "valueTo": 2
+  },
+  "5": {
+   "type": "atkspeed",
+   "valueFrom": 10,
+   "valueTo": 20
+  },
+  "6": {
+   "type": "damage_reduce",
+   "valueFrom": 1,
+   "valueTo": 1
+  },
+  "7": {
+   "type": "damage_reflect",
+   "valueFrom": 1,
+   "valueTo": 1
+  },
+  "8": {
+   "type": "atk_rate",
+   "valueFrom": 1,
+   "valueTo": 1
+  },
+  "9": {
+   "type": "ignore_def",
+   "valueFrom": 1,
+   "valueTo": 1
+  }
+ },
+ "taozhuang": {
+  "dengjie": {
+   "0": {
+    "type": "maxmp",
+    "valueProb": 5
+   },
+   "1": {
+    "type": "avd",
+    "valueProb": 5
+   }
+  },
+  "manrong": {
+   "0": {
+    "type": "atk"
+   },
+   "1": {
+    "type": "maxmp"
+   }
+  },
+  "manxin": {
+   "0": {
+    "type": "atk"
+   },
+   "1": {
+    "type": "def"
+   }
+  },
+  "quanzi": {
+   "0": {
+    "type": "bsk"
+   },
+   "1": {
+    "type": "maxhp"
+   }
+  },
+  "values": {
+   "1": 0.1,
+   "10": 3.4,
+   "11": 4.2,
+   "12": 5,
+   "2": 0.2,
+   "3": 0.4,
+   "4": 0.6,
+   "5": 0.9,
+   "6": 1.2,
+   "7": 1.6,
+   "8": 2.1,
+   "9": 2.7
+  }
+ }
+}

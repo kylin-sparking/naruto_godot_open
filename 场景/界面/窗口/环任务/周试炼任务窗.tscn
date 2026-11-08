@@ -1,0 +1,190 @@
+[gd_scene load_steps=21 format=3]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/子面板.png" id="t1"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/横向分隔线.png" id="t2"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/环任务/降难度钮.png" id="t3"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/环任务/降难度钮_悬停.png" id="t4"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/环任务/降难度钮_按下.png" id="t5"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/环任务/提回报钮.png" id="t6"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/环任务/提回报钮_悬停.png" id="t7"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/环任务/提回报钮_按下.png" id="t8"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/环任务/开始任务钮.png" id="t9"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/环任务/开始任务钮_悬停.png" id="t10"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/环任务/开始任务钮_按下.png" id="t11"]
+
+[sub_resource type="StyleBoxTexture" id="sb1_n"]
+texture = ExtResource("t3")
+
+[sub_resource type="StyleBoxTexture" id="sb1_h"]
+texture = ExtResource("t4")
+
+[sub_resource type="StyleBoxTexture" id="sb1_p"]
+texture = ExtResource("t5")
+
+[sub_resource type="StyleBoxTexture" id="sb2_n"]
+texture = ExtResource("t6")
+
+[sub_resource type="StyleBoxTexture" id="sb2_h"]
+texture = ExtResource("t7")
+
+[sub_resource type="StyleBoxTexture" id="sb2_p"]
+texture = ExtResource("t8")
+
+[sub_resource type="StyleBoxTexture" id="sb3_n"]
+texture = ExtResource("t9")
+
+[sub_resource type="StyleBoxTexture" id="sb3_h"]
+texture = ExtResource("t10")
+
+[sub_resource type="StyleBoxTexture" id="sb3_p"]
+texture = ExtResource("t11")
+
+[node name="原版周试炼任务内容" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 355
+offset_bottom = 338.0
+
+[node name="说明" type="RichTextLabel" parent="."]
+text = ""
+scroll_active = false
+bbcode_enabled = true
+autowrap_mode = 3
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 6
+layout_mode = 0
+offset_left = 8.0
+offset_top = 9.0
+offset_right = 371.0
+offset_bottom = 99.0
+
+[node name="数据底板" type="NinePatchRect" parent="."]
+texture = ExtResource("t1")
+patch_margin_left = 8
+patch_margin_right = 7
+patch_margin_top = 7
+patch_margin_bottom = 7
+layout_mode = 0
+offset_left = 12.0
+offset_top = 79.0
+offset_right = 343.0
+offset_bottom = 224.0
+
+[node name="追踪槽" type="Control" parent="."]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 17.0
+offset_top = 84.0
+offset_right = 338.0
+offset_bottom = 84.0
+
+[node name="奖励文本" type="RichTextLabel" parent="."]
+text = ""
+scroll_active = false
+bbcode_enabled = true
+autowrap_mode = 3
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 6
+layout_mode = 0
+offset_left = 8.0
+offset_top = 139.0
+offset_right = 347.0
+offset_bottom = 151.0
+
+[node name="分隔线" type="TextureRect" parent="."]
+texture = ExtResource("t2")
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 0
+layout_mode = 0
+offset_left = 12.0
+offset_top = 139.0
+offset_right = 343.0
+offset_bottom = 141.0
+
+[node name="特殊奖励文本" type="RichTextLabel" parent="."]
+text = ""
+scroll_active = false
+bbcode_enabled = true
+autowrap_mode = 3
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 6
+layout_mode = 0
+offset_left = 8.0
+offset_top = 224.0
+offset_right = 347.0
+offset_bottom = 232.0
+
+[node name="奖励格槽" type="Control" parent="."]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 8.0
+offset_top = 151.0
+offset_right = 8.0
+offset_bottom = 151.0
+
+[node name="特殊格槽" type="Control" parent="."]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 8.0
+offset_top = 232.0
+offset_right = 8.0
+offset_bottom = 232.0
+
+[node name="降难度钮" type="Button" parent="."]
+theme_override_styles/normal = SubResource("sb1_n")
+theme_override_styles/hover = SubResource("sb1_h")
+theme_override_styles/pressed = SubResource("sb1_p")
+text = "降低任务难度"
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+layout_mode = 0
+offset_left = 253.0
+offset_top = 109.0
+offset_right = 335.0
+offset_bottom = 131.0
+
+[node name="提回报钮" type="Button" parent="."]
+theme_override_styles/normal = SubResource("sb2_n")
+theme_override_styles/hover = SubResource("sb2_h")
+theme_override_styles/pressed = SubResource("sb2_p")
+text = "提升奖励回报"
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+layout_mode = 0
+offset_left = 253.0
+offset_top = 194.0
+offset_right = 335.0
+offset_bottom = 216.0
+
+[node name="开始任务钮" type="Button" parent="."]
+theme_override_styles/normal = SubResource("sb3_n")
+theme_override_styles/hover = SubResource("sb3_h")
+theme_override_styles/pressed = SubResource("sb3_p")
+text = "开始任务"
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+layout_mode = 0
+offset_left = 150.5
+offset_top = 311.0
+offset_right = 204.5
+offset_bottom = 333.0

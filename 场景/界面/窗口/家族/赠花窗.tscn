@@ -1,0 +1,795 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/内容面板.png" id="t1"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/子面板.png" id="t2"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/物品格.png" id="t3"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/好友/钮底37.png" id="t4"]
+
+[node name="原版赠花内容" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 550.0
+offset_bottom = 386.0
+
+[node name="内容底" type="NinePatchRect" parent="."]
+mouse_filter = 2
+texture = ExtResource("t1")
+patch_margin_left = 11
+patch_margin_right = 10
+patch_margin_top = 10
+patch_margin_bottom = 11
+layout_mode = 0
+offset_left = 8.0
+offset_top = 1.0
+offset_right = 542.0
+offset_bottom = 376.0
+
+[node name="右栏底" type="NinePatchRect" parent="."]
+mouse_filter = 2
+texture = ExtResource("t2")
+patch_margin_left = 8
+patch_margin_right = 7
+patch_margin_top = 7
+patch_margin_bottom = 7
+layout_mode = 0
+offset_left = 162.0
+offset_top = 6.0
+offset_right = 536.0
+offset_bottom = 371.0
+
+[node name="立绘框" type="Control" parent="."]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 13.0
+offset_top = 6.0
+offset_right = 159.0
+offset_bottom = 214.0
+
+[node name="档案底" type="NinePatchRect" parent="."]
+mouse_filter = 2
+texture = ExtResource("t2")
+patch_margin_left = 8
+patch_margin_right = 7
+patch_margin_top = 7
+patch_margin_bottom = 7
+layout_mode = 0
+offset_left = 13.0
+offset_top = 214.0
+offset_right = 160.0
+offset_bottom = 284.0
+
+[node name="档案文字" type="RichTextLabel" parent="."]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 15.0
+offset_top = 219.0
+offset_right = 162.0
+offset_bottom = 279.0
+bbcode_enabled = true
+scroll_active = false
+autowrap_mode = 3
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 4
+
+[node name="说明底" type="NinePatchRect" parent="."]
+mouse_filter = 2
+texture = ExtResource("t2")
+patch_margin_left = 8
+patch_margin_right = 7
+patch_margin_top = 7
+patch_margin_bottom = 7
+layout_mode = 0
+offset_left = 13.0
+offset_top = 286.0
+offset_right = 160.0
+offset_bottom = 371.0
+
+[node name="说明文字" type="RichTextLabel" parent="."]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 15.0
+offset_top = 291.0
+offset_right = 162.0
+offset_bottom = 386.0
+bbcode_enabled = true
+scroll_active = false
+autowrap_mode = 3
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 2
+
+[node name="收花统计" type="Label" parent="."]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 167.0
+offset_top = 11.0
+offset_right = 531.0
+offset_bottom = 31.0
+theme_override_colors/font_color = Color(1, 0.941176, 0, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+text_overrun_behavior = 3
+
+[node name="记录_0" type="Control" parent="."]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 178.0
+offset_top = 38.0
+offset_right = 478.0
+offset_bottom = 68.0
+
+[node name="底" type="NinePatchRect" parent="记录_0"]
+mouse_filter = 2
+texture = ExtResource("t2")
+patch_margin_left = 8
+patch_margin_right = 7
+patch_margin_top = 7
+patch_margin_bottom = 7
+layout_mode = 0
+offset_right = 300.0
+offset_bottom = 30.0
+
+[node name="内容" type="RichTextLabel" parent="记录_0"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 195.0
+offset_bottom = 25.0
+bbcode_enabled = true
+scroll_active = false
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 12
+
+[node name="加为好友" type="Label" parent="记录_0"]
+layout_mode = 0
+offset_left = 202.0
+offset_top = 5.0
+offset_right = 262.0
+offset_bottom = 25.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "加为好友"
+horizontal_alignment = 1
+
+[node name="回赠" type="Label" parent="记录_0"]
+layout_mode = 0
+offset_left = 262.0
+offset_top = 5.0
+offset_right = 302.0
+offset_bottom = 25.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "回赠"
+horizontal_alignment = 1
+
+[node name="时间" type="Label" parent="记录_0"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 303.0
+offset_top = 5.0
+offset_right = 364.0
+offset_bottom = 25.0
+theme_override_colors/font_color = Color(1, 0.941176, 0, 1)
+theme_override_font_sizes/font_size = 12
+text_overrun_behavior = 3
+
+[node name="记录_1" type="Control" parent="."]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 178.0
+offset_top = 68.0
+offset_right = 478.0
+offset_bottom = 98.0
+
+[node name="底" type="NinePatchRect" parent="记录_1"]
+mouse_filter = 2
+texture = ExtResource("t2")
+patch_margin_left = 8
+patch_margin_right = 7
+patch_margin_top = 7
+patch_margin_bottom = 7
+layout_mode = 0
+offset_right = 300.0
+offset_bottom = 30.0
+
+[node name="内容" type="RichTextLabel" parent="记录_1"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 195.0
+offset_bottom = 25.0
+bbcode_enabled = true
+scroll_active = false
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 12
+
+[node name="加为好友" type="Label" parent="记录_1"]
+layout_mode = 0
+offset_left = 202.0
+offset_top = 5.0
+offset_right = 262.0
+offset_bottom = 25.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "加为好友"
+horizontal_alignment = 1
+
+[node name="回赠" type="Label" parent="记录_1"]
+layout_mode = 0
+offset_left = 262.0
+offset_top = 5.0
+offset_right = 302.0
+offset_bottom = 25.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "回赠"
+horizontal_alignment = 1
+
+[node name="时间" type="Label" parent="记录_1"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 303.0
+offset_top = 5.0
+offset_right = 364.0
+offset_bottom = 25.0
+theme_override_colors/font_color = Color(1, 0.941176, 0, 1)
+theme_override_font_sizes/font_size = 12
+text_overrun_behavior = 3
+
+[node name="记录_2" type="Control" parent="."]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 178.0
+offset_top = 98.0
+offset_right = 478.0
+offset_bottom = 128.0
+
+[node name="底" type="NinePatchRect" parent="记录_2"]
+mouse_filter = 2
+texture = ExtResource("t2")
+patch_margin_left = 8
+patch_margin_right = 7
+patch_margin_top = 7
+patch_margin_bottom = 7
+layout_mode = 0
+offset_right = 300.0
+offset_bottom = 30.0
+
+[node name="内容" type="RichTextLabel" parent="记录_2"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 195.0
+offset_bottom = 25.0
+bbcode_enabled = true
+scroll_active = false
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 12
+
+[node name="加为好友" type="Label" parent="记录_2"]
+layout_mode = 0
+offset_left = 202.0
+offset_top = 5.0
+offset_right = 262.0
+offset_bottom = 25.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "加为好友"
+horizontal_alignment = 1
+
+[node name="回赠" type="Label" parent="记录_2"]
+layout_mode = 0
+offset_left = 262.0
+offset_top = 5.0
+offset_right = 302.0
+offset_bottom = 25.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "回赠"
+horizontal_alignment = 1
+
+[node name="时间" type="Label" parent="记录_2"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 303.0
+offset_top = 5.0
+offset_right = 364.0
+offset_bottom = 25.0
+theme_override_colors/font_color = Color(1, 0.941176, 0, 1)
+theme_override_font_sizes/font_size = 12
+text_overrun_behavior = 3
+
+[node name="记录_3" type="Control" parent="."]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 178.0
+offset_top = 128.0
+offset_right = 478.0
+offset_bottom = 158.0
+
+[node name="底" type="NinePatchRect" parent="记录_3"]
+mouse_filter = 2
+texture = ExtResource("t2")
+patch_margin_left = 8
+patch_margin_right = 7
+patch_margin_top = 7
+patch_margin_bottom = 7
+layout_mode = 0
+offset_right = 300.0
+offset_bottom = 30.0
+
+[node name="内容" type="RichTextLabel" parent="记录_3"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 195.0
+offset_bottom = 25.0
+bbcode_enabled = true
+scroll_active = false
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 12
+
+[node name="加为好友" type="Label" parent="记录_3"]
+layout_mode = 0
+offset_left = 202.0
+offset_top = 5.0
+offset_right = 262.0
+offset_bottom = 25.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "加为好友"
+horizontal_alignment = 1
+
+[node name="回赠" type="Label" parent="记录_3"]
+layout_mode = 0
+offset_left = 262.0
+offset_top = 5.0
+offset_right = 302.0
+offset_bottom = 25.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "回赠"
+horizontal_alignment = 1
+
+[node name="时间" type="Label" parent="记录_3"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 303.0
+offset_top = 5.0
+offset_right = 364.0
+offset_bottom = 25.0
+theme_override_colors/font_color = Color(1, 0.941176, 0, 1)
+theme_override_font_sizes/font_size = 12
+text_overrun_behavior = 3
+
+[node name="记录_4" type="Control" parent="."]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 178.0
+offset_top = 158.0
+offset_right = 478.0
+offset_bottom = 188.0
+
+[node name="底" type="NinePatchRect" parent="记录_4"]
+mouse_filter = 2
+texture = ExtResource("t2")
+patch_margin_left = 8
+patch_margin_right = 7
+patch_margin_top = 7
+patch_margin_bottom = 7
+layout_mode = 0
+offset_right = 300.0
+offset_bottom = 30.0
+
+[node name="内容" type="RichTextLabel" parent="记录_4"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 195.0
+offset_bottom = 25.0
+bbcode_enabled = true
+scroll_active = false
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 12
+
+[node name="加为好友" type="Label" parent="记录_4"]
+layout_mode = 0
+offset_left = 202.0
+offset_top = 5.0
+offset_right = 262.0
+offset_bottom = 25.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "加为好友"
+horizontal_alignment = 1
+
+[node name="回赠" type="Label" parent="记录_4"]
+layout_mode = 0
+offset_left = 262.0
+offset_top = 5.0
+offset_right = 302.0
+offset_bottom = 25.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "回赠"
+horizontal_alignment = 1
+
+[node name="时间" type="Label" parent="记录_4"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 303.0
+offset_top = 5.0
+offset_right = 364.0
+offset_bottom = 25.0
+theme_override_colors/font_color = Color(1, 0.941176, 0, 1)
+theme_override_font_sizes/font_size = 12
+text_overrun_behavior = 3
+
+[node name="花格_0" type="Control" parent="."]
+layout_mode = 0
+offset_left = 170.0
+offset_top = 206.0
+offset_right = 350.0
+offset_bottom = 286.0
+
+[node name="底" type="NinePatchRect" parent="花格_0"]
+mouse_filter = 2
+texture = ExtResource("t2")
+patch_margin_left = 8
+patch_margin_right = 7
+patch_margin_top = 7
+patch_margin_bottom = 7
+layout_mode = 0
+offset_right = 180.0
+offset_bottom = 80.0
+
+[node name="物品格" type="NinePatchRect" parent="花格_0"]
+mouse_filter = 2
+texture = ExtResource("t3")
+patch_margin_left = 9
+patch_margin_right = 6
+patch_margin_top = 9
+patch_margin_bottom = 6
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 48.0
+offset_bottom = 48.0
+
+[node name="图标" type="TextureRect" parent="花格_0"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 46.0
+offset_bottom = 46.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="赠送钮" type="TextureButton" parent="花格_0"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 50.0
+offset_right = 47.0
+offset_bottom = 72.0
+focus_mode = 0
+ignore_texture_size = true
+stretch_mode = 1
+texture_normal = ExtResource("t4")
+metadata/skin = "res://素材/界面/原版窗口/好友/钮底37"
+mouse_default_cursor_shape = 2
+
+[node name="文字" type="Label" parent="花格_0/赠送钮"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+vertical_alignment = 1
+text = "赠送"
+
+[node name="描述" type="RichTextLabel" parent="花格_0"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 48.0
+offset_top = 4.0
+offset_right = 178.0
+offset_bottom = 79.0
+bbcode_enabled = true
+scroll_active = false
+autowrap_mode = 3
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 4
+
+[node name="角标" type="Label" parent="花格_0"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 10.0
+offset_top = 30.0
+offset_right = 50.0
+offset_bottom = 50.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+text_overrun_behavior = 3
+
+[node name="购买钮" type="TextureButton" parent="花格_0"]
+layout_mode = 0
+offset_left = 123.0
+offset_top = 50.0
+offset_right = 160.0
+offset_bottom = 72.0
+focus_mode = 0
+ignore_texture_size = true
+stretch_mode = 1
+texture_normal = ExtResource("t4")
+metadata/skin = "res://素材/界面/原版窗口/好友/钮底37"
+mouse_default_cursor_shape = 2
+
+[node name="文字" type="Label" parent="花格_0/购买钮"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+vertical_alignment = 1
+text = "购买"
+
+[node name="花格_1" type="Control" parent="."]
+layout_mode = 0
+offset_left = 350.0
+offset_top = 206.0
+offset_right = 530.0
+offset_bottom = 286.0
+
+[node name="底" type="NinePatchRect" parent="花格_1"]
+mouse_filter = 2
+texture = ExtResource("t2")
+patch_margin_left = 8
+patch_margin_right = 7
+patch_margin_top = 7
+patch_margin_bottom = 7
+layout_mode = 0
+offset_right = 180.0
+offset_bottom = 80.0
+
+[node name="物品格" type="NinePatchRect" parent="花格_1"]
+mouse_filter = 2
+texture = ExtResource("t3")
+patch_margin_left = 9
+patch_margin_right = 6
+patch_margin_top = 9
+patch_margin_bottom = 6
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 48.0
+offset_bottom = 48.0
+
+[node name="图标" type="TextureRect" parent="花格_1"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 46.0
+offset_bottom = 46.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="赠送钮" type="TextureButton" parent="花格_1"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 50.0
+offset_right = 47.0
+offset_bottom = 72.0
+focus_mode = 0
+ignore_texture_size = true
+stretch_mode = 1
+texture_normal = ExtResource("t4")
+metadata/skin = "res://素材/界面/原版窗口/好友/钮底37"
+mouse_default_cursor_shape = 2
+
+[node name="文字" type="Label" parent="花格_1/赠送钮"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+vertical_alignment = 1
+text = "赠送"
+
+[node name="描述" type="RichTextLabel" parent="花格_1"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 48.0
+offset_top = 4.0
+offset_right = 178.0
+offset_bottom = 79.0
+bbcode_enabled = true
+scroll_active = false
+autowrap_mode = 3
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 4
+
+[node name="角标" type="Label" parent="花格_1"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 10.0
+offset_top = 30.0
+offset_right = 50.0
+offset_bottom = 50.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+text_overrun_behavior = 3
+
+[node name="购买钮" type="TextureButton" parent="花格_1"]
+layout_mode = 0
+offset_left = 123.0
+offset_top = 50.0
+offset_right = 160.0
+offset_bottom = 72.0
+focus_mode = 0
+ignore_texture_size = true
+stretch_mode = 1
+texture_normal = ExtResource("t4")
+metadata/skin = "res://素材/界面/原版窗口/好友/钮底37"
+mouse_default_cursor_shape = 2
+
+[node name="文字" type="Label" parent="花格_1/购买钮"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+vertical_alignment = 1
+text = "购买"
+
+[node name="花格_2" type="Control" parent="."]
+layout_mode = 0
+offset_left = 170.0
+offset_top = 286.0
+offset_right = 350.0
+offset_bottom = 366.0
+
+[node name="底" type="NinePatchRect" parent="花格_2"]
+mouse_filter = 2
+texture = ExtResource("t2")
+patch_margin_left = 8
+patch_margin_right = 7
+patch_margin_top = 7
+patch_margin_bottom = 7
+layout_mode = 0
+offset_right = 180.0
+offset_bottom = 80.0
+
+[node name="物品格" type="NinePatchRect" parent="花格_2"]
+mouse_filter = 2
+texture = ExtResource("t3")
+patch_margin_left = 9
+patch_margin_right = 6
+patch_margin_top = 9
+patch_margin_bottom = 6
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 48.0
+offset_bottom = 48.0
+
+[node name="图标" type="TextureRect" parent="花格_2"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 46.0
+offset_bottom = 46.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="赠送钮" type="TextureButton" parent="花格_2"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 50.0
+offset_right = 47.0
+offset_bottom = 72.0
+focus_mode = 0
+ignore_texture_size = true
+stretch_mode = 1
+texture_normal = ExtResource("t4")
+metadata/skin = "res://素材/界面/原版窗口/好友/钮底37"
+mouse_default_cursor_shape = 2
+
+[node name="文字" type="Label" parent="花格_2/赠送钮"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+vertical_alignment = 1
+text = "赠送"
+
+[node name="描述" type="RichTextLabel" parent="花格_2"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 48.0
+offset_top = 4.0
+offset_right = 178.0
+offset_bottom = 79.0
+bbcode_enabled = true
+scroll_active = false
+autowrap_mode = 3
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 4
+
+[node name="角标" type="Label" parent="花格_2"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 10.0
+offset_top = 30.0
+offset_right = 50.0
+offset_bottom = 50.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+text_overrun_behavior = 3
+
+[node name="购买钮" type="TextureButton" parent="花格_2"]
+layout_mode = 0
+offset_left = 123.0
+offset_top = 50.0
+offset_right = 160.0
+offset_bottom = 72.0
+focus_mode = 0
+ignore_texture_size = true
+stretch_mode = 1
+texture_normal = ExtResource("t4")
+metadata/skin = "res://素材/界面/原版窗口/好友/钮底37"
+mouse_default_cursor_shape = 2
+
+[node name="文字" type="Label" parent="花格_2/购买钮"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+vertical_alignment = 1
+text = "购买"

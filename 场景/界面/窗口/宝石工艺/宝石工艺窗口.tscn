@@ -1,0 +1,599 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://脚本/界面/组件/宝石放入格.gd" id="1_drop"]
+
+; 原版宝石工艺窗（`StoneWindow.as` 332×399 三页签 + `StoneCompositeWindow.as` 合成页）。
+; 坐标 = 页面局部 = AS3 窗口局部 − (0, 标题栏 29)：
+;   tabBar 窗口(10,38) → 页(10,9)；contentBox 窗口(5,58) 322×308 → 页(5,29)；
+;   开始合成 窗口(332-61-5, 399-22-5)=(266,372) → 页(266,343)。
+; 合成页内几何全取 `StoneCompositeWindow.createChildren`（相对 contentBox）：
+;   desc (8,8) 308×75；itemDropBox (8,87) 83×214（dropBtn w=btn_width_four=61 居中 y10、
+;   itemCell 40×40 y37、arrow y77 h87、resultCell y164）；resultLabel (95,87) 30×70；
+;   boxBox (125,87) 200×65：3 个 ItemCaiLiaoBox 56×64 横 gap=5（x=0/61/122），内部 label 上 20、
+;   itemCell 40×40 (8,20)；fuDesc (95,167) 220×40；resultText (95,207) 220×94（MPane、padH4）。
+; 文案逐字取 `en_US$message_properties.as`：EQUIP_STONE_COMPOSITE_DESCS_1/2/3、
+;   EQUIP_STONE_TEXTS_1..4（合成结果/成 功/退 还/剩 余）、TAB_NAMES_1..3、
+;   DROP_ITEM_BTN_NAMES_1/2（放入宝石/取出宝石）、STONE_LOAGING 见代码、EQUIP_STONE_LUCKY_DESC。
+; 页签宽度：原版 `TabButtonBar` 按文字自然宽、gap=1（4 字 55 / 7 字 103 / 6 字 87，与实测一致）。
+[node name="原版宝石工艺内容" type="Control"]
+custom_minimum_size = Vector2(332, 370)
+mouse_filter = 2
+
+[node name="分页" type="Control" parent="."]
+offset_left = 10.0
+offset_top = 9.0
+offset_right = 247.0
+offset_bottom = 31.0
+
+[node name="宝石合成" type="Button" parent="分页"]
+offset_right = 55.0
+offset_bottom = 22.0
+toggle_mode = true
+text = "宝石合成"
+
+[node name="宝石镶嵌与摘除" type="Button" parent="分页"]
+offset_left = 56.0
+offset_right = 159.0
+offset_bottom = 22.0
+toggle_mode = true
+text = "宝石镶嵌与摘除"
+
+[node name="宝石幸运合成" type="Button" parent="分页"]
+offset_left = 160.0
+offset_right = 247.0
+offset_bottom = 22.0
+toggle_mode = true
+text = "宝石幸运合成"
+
+[node name="内容框" type="Panel" parent="."]
+offset_left = 5.0
+offset_top = 29.0
+offset_right = 327.0
+offset_bottom = 337.0
+
+[node name="宝石合成页" type="Control" parent="内容框"]
+layout_mode = 0
+offset_right = 322.0
+offset_bottom = 308.0
+
+[node name="合成说明" type="RichTextLabel" parent="内容框/宝石合成页"]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 316.0
+offset_bottom = 83.0
+mouse_filter = 2
+bbcode_enabled = true
+text = "[color=#ffffff]请将你需要合成的宝石放入宝石框
+每三颗同类低级宝石可以合成一颗高级宝石[/color]
+[color=#0081ff]合成成功则三颗低级宝石消失，获得一颗高级宝石
+合成失败则回收两颗宝石，退还一颗宝石[/color]"
+
+[node name="放入宝石区" type="Panel" parent="内容框/宝石合成页"]
+offset_left = 8.0
+offset_top = 87.0
+offset_right = 91.0
+offset_bottom = 301.0
+
+[node name="放入宝石" type="Button" parent="内容框/宝石合成页/放入宝石区"]
+offset_left = 11.0
+offset_top = 10.0
+offset_right = 72.0
+offset_bottom = 32.0
+text = "放入宝石"
+
+[node name="原宝石格" type="Button" parent="内容框/宝石合成页/放入宝石区"]
+offset_left = 21.0
+offset_top = 37.0
+offset_right = 61.0
+offset_bottom = 77.0
+focus_mode = 0
+expand_icon = false
+script = ExtResource("1_drop")
+
+[node name="数量" type="Label" parent="内容框/宝石合成页/放入宝石区/原宝石格"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 24.0
+offset_right = 38.0
+offset_bottom = 40.0
+horizontal_alignment = 2
+
+[node name="方向箭头" type="Label" parent="内容框/宝石合成页/放入宝石区"]
+offset_left = 21.0
+offset_top = 77.0
+offset_right = 61.0
+offset_bottom = 164.0
+text = "↓
+↓
+↓"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="合成宝石格" type="Control" parent="内容框/宝石合成页/放入宝石区"]
+offset_left = 21.0
+offset_top = 164.0
+offset_right = 61.0
+offset_bottom = 204.0
+
+[node name="底" type="TextureRect" parent="内容框/宝石合成页/放入宝石区/合成宝石格"]
+offset_right = 40.0
+offset_bottom = 40.0
+expand_mode = 1
+mouse_filter = 2
+
+[node name="图标" type="TextureRect" parent="内容框/宝石合成页/放入宝石区/合成宝石格"]
+offset_right = 40.0
+offset_bottom = 40.0
+expand_mode = 1
+stretch_mode = 6
+mouse_filter = 2
+
+[node name="合成结果" type="Label" parent="内容框/宝石合成页"]
+offset_left = 95.0
+offset_top = 87.0
+offset_right = 125.0
+offset_bottom = 157.0
+text = "合
+成
+结
+果"
+horizontal_alignment = 1
+
+[node name="结果格" type="Control" parent="内容框/宝石合成页"]
+offset_left = 125.0
+offset_top = 87.0
+offset_right = 325.0
+offset_bottom = 152.0
+
+[node name="成功" type="Control" parent="内容框/宝石合成页/结果格"]
+offset_right = 56.0
+offset_bottom = 64.0
+
+[node name="标签" type="Label" parent="内容框/宝石合成页/结果格/成功"]
+offset_right = 56.0
+offset_bottom = 20.0
+text = "成  功"
+horizontal_alignment = 1
+
+[node name="物品格" type="Control" parent="内容框/宝石合成页/结果格/成功"]
+offset_left = 8.0
+offset_top = 20.0
+offset_right = 48.0
+offset_bottom = 60.0
+
+[node name="底" type="TextureRect" parent="内容框/宝石合成页/结果格/成功/物品格"]
+offset_right = 40.0
+offset_bottom = 40.0
+expand_mode = 1
+mouse_filter = 2
+
+[node name="图标" type="TextureRect" parent="内容框/宝石合成页/结果格/成功/物品格"]
+offset_right = 40.0
+offset_bottom = 40.0
+expand_mode = 1
+stretch_mode = 6
+mouse_filter = 2
+
+[node name="数量" type="Label" parent="内容框/宝石合成页/结果格/成功/物品格"]
+offset_left = 1.0
+offset_top = 24.0
+offset_right = 38.0
+offset_bottom = 40.0
+horizontal_alignment = 2
+
+[node name="退还" type="Control" parent="内容框/宝石合成页/结果格"]
+offset_left = 61.0
+offset_right = 117.0
+offset_bottom = 64.0
+
+[node name="标签" type="Label" parent="内容框/宝石合成页/结果格/退还"]
+offset_right = 56.0
+offset_bottom = 20.0
+text = "退  还"
+horizontal_alignment = 1
+
+[node name="物品格" type="Control" parent="内容框/宝石合成页/结果格/退还"]
+offset_left = 8.0
+offset_top = 20.0
+offset_right = 48.0
+offset_bottom = 60.0
+
+[node name="底" type="TextureRect" parent="内容框/宝石合成页/结果格/退还/物品格"]
+offset_right = 40.0
+offset_bottom = 40.0
+expand_mode = 1
+mouse_filter = 2
+
+[node name="图标" type="TextureRect" parent="内容框/宝石合成页/结果格/退还/物品格"]
+offset_right = 40.0
+offset_bottom = 40.0
+expand_mode = 1
+stretch_mode = 6
+mouse_filter = 2
+
+[node name="数量" type="Label" parent="内容框/宝石合成页/结果格/退还/物品格"]
+offset_left = 1.0
+offset_top = 24.0
+offset_right = 38.0
+offset_bottom = 40.0
+horizontal_alignment = 2
+
+[node name="剩余" type="Control" parent="内容框/宝石合成页/结果格"]
+offset_left = 122.0
+offset_right = 178.0
+offset_bottom = 64.0
+
+[node name="标签" type="Label" parent="内容框/宝石合成页/结果格/剩余"]
+offset_right = 56.0
+offset_bottom = 20.0
+text = "剩  余"
+horizontal_alignment = 1
+
+[node name="物品格" type="Control" parent="内容框/宝石合成页/结果格/剩余"]
+offset_left = 8.0
+offset_top = 20.0
+offset_right = 48.0
+offset_bottom = 60.0
+
+[node name="底" type="TextureRect" parent="内容框/宝石合成页/结果格/剩余/物品格"]
+offset_right = 40.0
+offset_bottom = 40.0
+expand_mode = 1
+mouse_filter = 2
+
+[node name="图标" type="TextureRect" parent="内容框/宝石合成页/结果格/剩余/物品格"]
+offset_right = 40.0
+offset_bottom = 40.0
+expand_mode = 1
+stretch_mode = 6
+mouse_filter = 2
+
+[node name="数量" type="Label" parent="内容框/宝石合成页/结果格/剩余/物品格"]
+offset_left = 1.0
+offset_top = 24.0
+offset_right = 38.0
+offset_bottom = 40.0
+horizontal_alignment = 2
+
+[node name="附加说明" type="RichTextLabel" parent="内容框/宝石合成页"]
+offset_left = 95.0
+offset_top = 167.0
+offset_right = 315.0
+offset_bottom = 207.0
+mouse_filter = 2
+bbcode_enabled = true
+text = "[color=#00ff00]十品宝石为最高品级宝石
+宝石可以镶嵌到装备中提高属性[/color]"
+
+[node name="结果说明区" type="Panel" parent="内容框/宝石合成页"]
+offset_left = 95.0
+offset_top = 207.0
+offset_right = 315.0
+offset_bottom = 301.0
+
+[node name="结果说明" type="RichTextLabel" parent="内容框/宝石合成页/结果说明区"]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 216.0
+offset_bottom = 90.0
+mouse_filter = 2
+bbcode_enabled = true
+text = ""
+
+[node name="镶嵌摘除页" type="Control" parent="内容框"]
+visible = false
+layout_mode = 0
+offset_right = 322.0
+offset_bottom = 308.0
+
+[node name="帮助图位置" type="Control" parent="内容框/镶嵌摘除页"]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 139.0
+offset_bottom = 174.0
+mouse_filter = 2
+
+[node name="操作说明" type="RichTextLabel" parent="内容框/镶嵌摘除页"]
+offset_left = 139.0
+offset_top = 8.0
+offset_right = 317.0
+offset_bottom = 148.0
+mouse_filter = 2
+bbcode_enabled = true
+text = "[color=#ff9100]宝石镶嵌与摘除说明：[/color]
+[color=#ffffff]1：在背包中找到你要镶嵌宝石的装备
+2：滑鼠点击该装备弹出操作功能表
+3：选择[/color][color=#0081ff]“宝石镶嵌”[/color][color=#ffffff]选择[/color]"
+
+[node name="免费说明" type="RichTextLabel" parent="内容框/镶嵌摘除页"]
+offset_left = 8.0
+offset_top = 174.0
+offset_right = 315.0
+offset_bottom = 214.0
+mouse_filter = 2
+bbcode_enabled = true
+text = "[color=#ff9100]宝石镶嵌与宝石摘除不消耗任何金币或精华，且成功率为100%，你可以随时更换宝石。[/color]"
+
+[node name="成就说明区" type="Panel" parent="内容框/镶嵌摘除页"]
+offset_left = 8.0
+offset_top = 212.0
+offset_right = 314.0
+offset_bottom = 300.0
+
+[node name="成就说明" type="RichTextLabel" parent="内容框/镶嵌摘除页/成就说明区"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 302.0
+offset_bottom = 84.0
+mouse_filter = 2
+bbcode_enabled = true
+text = "[color=#ffffff]当你合成出一颗六级宝石时将启动成就：
+宝石合成【六品】奖励生命：+2，点券+2
+
+当你为一件装备镶嵌五颗宝石时启动成就：
+宝石镶嵌【满融】奖励生命：+2，点券+2[/color]"
+
+[node name="幸运合成页" type="Control" parent="内容框"]
+visible = false
+layout_mode = 0
+offset_right = 322.0
+offset_bottom = 308.0
+
+[node name="幸运说明" type="RichTextLabel" parent="内容框/幸运合成页"]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 316.0
+offset_bottom = 78.0
+mouse_filter = 2
+bbcode_enabled = true
+text = "[color=#ff9100]每次合成3个同级宝石，可使用【宝石幸运符】提升成功率
+每张幸运符增加3%成功率，最多可使用20张
+合成失败将退还1个宝石[/color]"
+
+[node name="放入宝石区" type="Panel" parent="内容框/幸运合成页"]
+offset_left = 8.0
+offset_top = 87.0
+offset_right = 91.0
+offset_bottom = 301.0
+
+[node name="放入宝石" type="Button" parent="内容框/幸运合成页/放入宝石区"]
+offset_left = 11.0
+offset_top = 10.0
+offset_right = 72.0
+offset_bottom = 32.0
+text = "放入宝石"
+
+[node name="原宝石格" type="Button" parent="内容框/幸运合成页/放入宝石区"]
+offset_left = 21.0
+offset_top = 37.0
+offset_right = 61.0
+offset_bottom = 77.0
+focus_mode = 0
+expand_icon = false
+script = ExtResource("1_drop")
+
+[node name="数量" type="Label" parent="内容框/幸运合成页/放入宝石区/原宝石格"]
+offset_left = 1.0
+offset_top = 24.0
+offset_right = 38.0
+offset_bottom = 40.0
+
+[node name="方向箭头" type="Label" parent="内容框/幸运合成页/放入宝石区"]
+offset_left = 21.0
+offset_top = 77.0
+offset_right = 61.0
+offset_bottom = 164.0
+text = "↓
+↓
+↓"
+horizontal_alignment = 1
+
+[node name="合成宝石格" type="Control" parent="内容框/幸运合成页/放入宝石区"]
+offset_left = 21.0
+offset_top = 164.0
+offset_right = 61.0
+offset_bottom = 204.0
+
+[node name="底" type="TextureRect" parent="内容框/幸运合成页/放入宝石区/合成宝石格"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="图标" type="TextureRect" parent="内容框/幸运合成页/放入宝石区/合成宝石格"]
+offset_right = 40.0
+offset_bottom = 40.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="合成结果" type="Label" parent="内容框/幸运合成页"]
+offset_left = 95.0
+offset_top = 87.0
+offset_right = 125.0
+offset_bottom = 151.0
+text = "合
+成
+结
+果"
+
+[node name="结果格" type="Control" parent="内容框/幸运合成页"]
+offset_left = 125.0
+offset_top = 87.0
+offset_right = 305.0
+offset_bottom = 152.0
+
+[node name="成功" type="Control" parent="内容框/幸运合成页/结果格"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 56.0
+offset_bottom = 64.0
+
+[node name="标签" type="Label" parent="内容框/幸运合成页/结果格/成功"]
+offset_right = 56.0
+offset_bottom = 20.0
+text = "成  功"
+horizontal_alignment = 1
+
+[node name="物品格" type="Control" parent="内容框/幸运合成页/结果格/成功"]
+offset_left = 8.0
+offset_top = 20.0
+offset_right = 48.0
+offset_bottom = 60.0
+
+[node name="底" type="TextureRect" parent="内容框/幸运合成页/结果格/成功/物品格"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="图标" type="TextureRect" parent="内容框/幸运合成页/结果格/成功/物品格"]
+offset_right = 40.0
+offset_bottom = 40.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="数量" type="Label" parent="内容框/幸运合成页/结果格/成功/物品格"]
+offset_left = 1.0
+offset_top = 24.0
+offset_right = 38.0
+offset_bottom = 40.0
+
+[node name="退还" type="Control" parent="内容框/幸运合成页/结果格"]
+offset_left = 61.0
+offset_top = 0.0
+offset_right = 117.0
+offset_bottom = 64.0
+
+[node name="标签" type="Label" parent="内容框/幸运合成页/结果格/退还"]
+offset_right = 56.0
+offset_bottom = 20.0
+text = "退  还"
+horizontal_alignment = 1
+
+[node name="物品格" type="Control" parent="内容框/幸运合成页/结果格/退还"]
+offset_left = 8.0
+offset_top = 20.0
+offset_right = 48.0
+offset_bottom = 60.0
+
+[node name="底" type="TextureRect" parent="内容框/幸运合成页/结果格/退还/物品格"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="图标" type="TextureRect" parent="内容框/幸运合成页/结果格/退还/物品格"]
+offset_right = 40.0
+offset_bottom = 40.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="数量" type="Label" parent="内容框/幸运合成页/结果格/退还/物品格"]
+offset_left = 1.0
+offset_top = 24.0
+offset_right = 38.0
+offset_bottom = 40.0
+
+[node name="剩余" type="Control" parent="内容框/幸运合成页/结果格"]
+offset_left = 122.0
+offset_top = 0.0
+offset_right = 178.0
+offset_bottom = 64.0
+
+[node name="标签" type="Label" parent="内容框/幸运合成页/结果格/剩余"]
+offset_right = 56.0
+offset_bottom = 20.0
+text = "剩  余"
+horizontal_alignment = 1
+
+[node name="物品格" type="Control" parent="内容框/幸运合成页/结果格/剩余"]
+offset_left = 8.0
+offset_top = 20.0
+offset_right = 48.0
+offset_bottom = 60.0
+
+[node name="底" type="TextureRect" parent="内容框/幸运合成页/结果格/剩余/物品格"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="图标" type="TextureRect" parent="内容框/幸运合成页/结果格/剩余/物品格"]
+offset_right = 40.0
+offset_bottom = 40.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="数量" type="Label" parent="内容框/幸运合成页/结果格/剩余/物品格"]
+offset_left = 1.0
+offset_top = 24.0
+offset_right = 38.0
+offset_bottom = 40.0
+
+[node name="幸运符格" type="Control" parent="内容框/幸运合成页"]
+offset_left = 95.0
+offset_top = 158.0
+offset_right = 151.0
+offset_bottom = 222.0
+
+[node name="标签" type="Label" parent="内容框/幸运合成页/幸运符格"]
+offset_right = 56.0
+offset_bottom = 20.0
+text = "幸运符"
+horizontal_alignment = 1
+
+[node name="物品格" type="Control" parent="内容框/幸运合成页/幸运符格"]
+offset_left = 8.0
+offset_top = 20.0
+offset_right = 48.0
+offset_bottom = 60.0
+
+[node name="底" type="TextureRect" parent="内容框/幸运合成页/幸运符格/物品格"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="图标" type="TextureRect" parent="内容框/幸运合成页/幸运符格/物品格"]
+offset_right = 40.0
+offset_bottom = 40.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="数量" type="Label" parent="内容框/幸运合成页/幸运符格/物品格"]
+offset_left = 1.0
+offset_top = 24.0
+offset_right = 38.0
+offset_bottom = 40.0
+
+[node name="使用幸运符" type="CheckBox" parent="内容框/幸运合成页"]
+offset_left = 155.0
+offset_top = 180
+offset_right = 255.0
+offset_bottom = 199
+text = "本次操作使用"
+
+[node name="幸运符数量" type="OptionButton" parent="内容框/幸运合成页"]
+offset_left = 257.0
+offset_top = 176.0
+offset_right = 299.0
+offset_bottom = 198.0
+
+[node name="张" type="Label" parent="内容框/幸运合成页"]
+offset_left = 301.0
+offset_top = 180.0
+offset_right = 317.0
+offset_bottom = 196.0
+text = "张"
+
+[node name="结果说明区" type="Panel" parent="内容框/幸运合成页"]
+offset_left = 95.0
+offset_top = 232.0
+offset_right = 315.0
+offset_bottom = 292.0
+
+[node name="结果说明" type="RichTextLabel" parent="内容框/幸运合成页/结果说明区"]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 216.0
+offset_bottom = 56.0
+mouse_filter = 2
+bbcode_enabled = true
+
+[node name="开始合成" type="Button" parent="."]
+offset_left = 266.0
+offset_top = 343.0
+offset_right = 327.0
+offset_bottom = 365.0
+text = "开始合成"

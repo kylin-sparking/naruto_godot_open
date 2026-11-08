@@ -1,0 +1,1551 @@
+[gd_scene load_steps=11 format=3]
+; 原版「神秘商店」窗内容 —— `com/mxw/uifl/controls/mystery/MysteryWindow.as` + `MysteryCell.as`。
+; 逐件真值 = `真值/窗口/神秘商店.md`。⚠ 本场景坐标是**页坐标** = AS3 外框坐标 − (0,29)
+; （`数据/界面/窗口尺寸.json` 写了 `整框: true` ⇒ 宿主把 `_content` 摆在窗口 (0,29)）。
+;
+; MysteryWindow.as:62-85 —— _paneSkin = MPane_background @ 外框(13,43) 249x316；
+;   12 格 = 2 列 x 6 行，格 x = c*120 + pane.x + BORDER_GAP(5) ⇒ 外框 18 / 138，
+;   格 y = r*(50+1) + pane.y + 5 ⇒ 外框 48 + 51r。**不是 13 起步**（第一版量错过一次）。
+; MysteryCell.as:40-77 —— 格底 120x50、_itemCell (4,5) 40x40、名称 (44,4) 70x20、
+;   币图 (46,27)、价格 (46+29=75, 25) 45x20。币图容器宽 **29** = 券(x=10)+19，
+;   不是 30 —— 价格的 x 按**双币那个容器**算，切单一币种时原版也不跟着挪。
+; MysteryWindow.as:86-115 —— 底部四件全在外框 y=367 那一行：
+;   倒计时 x=8 w=128、花费 x=136 w=55、币图标 x=191 y=370 **只有元宝一枚**（`:102-103`
+;   造了券、摆了 x=10，却**没 addChild** ⇒ 容器宽 = 19 不是 29；照抄，见真值 §①-⚠）、
+;   刷新钮 x=191+19+8=**218** 宽 37。
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/内容面板.png" id="t1"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/子面板.png" id="t2"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/元宝币.png" id="t3"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/商城/券.png" id="t4"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/洗点/确定钮.png" id="t5"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/洗点/确定钮_悬停.png" id="t6"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/洗点/确定钮_按下.png" id="t7"]
+
+[sub_resource type="StyleBoxTexture" id="sb_w37_n"]
+texture = ExtResource("t5")
+
+[sub_resource type="StyleBoxTexture" id="sb_w37_h"]
+texture = ExtResource("t6")
+
+[sub_resource type="StyleBoxTexture" id="sb_w37_p"]
+texture = ExtResource("t7")
+
+[node name="原版神秘商店内容" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+mouse_filter = 2
+offset_right = 275.0
+offset_bottom = 365.0
+
+[node name="内容底" type="NinePatchRect" parent="."]
+mouse_filter = 2
+texture = ExtResource("t1")
+patch_margin_left = 11
+patch_margin_right = 10
+patch_margin_top = 10
+patch_margin_bottom = 11
+layout_mode = 0
+offset_left = 8.0
+offset_top = 9.0
+offset_right = 267.0
+offset_bottom = 335.0
+
+[node name="大底板" type="NinePatchRect" parent="."]
+mouse_filter = 2
+texture = ExtResource("t2")
+patch_margin_left = 8
+patch_margin_right = 7
+patch_margin_top = 7
+patch_margin_bottom = 7
+layout_mode = 0
+offset_left = 13.0
+offset_top = 14.0
+offset_right = 262.0
+offset_bottom = 330.0
+
+[node name="格0" type="Control" parent="."]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 18.0
+offset_top = 19.0
+offset_right = 138.0
+offset_bottom = 69.0
+[node name="格底" type="Panel" parent="格0"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 120.0
+offset_bottom = 50.0
+
+[node name="物品格" type="Button" parent="格0"]
+focus_mode = 0
+theme_type_variation = &"OrigItemSlotButton"
+mouse_default_cursor_shape = 2
+layout_mode = 0
+offset_left = 4.0
+offset_top = 5.0
+offset_right = 44.0
+offset_bottom = 45.0
+
+[node name="图标" type="TextureRect" parent="格0/物品格"]
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+visible = false
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 37.0
+offset_bottom = 37.0
+
+[node name="名称" type="Label" parent="格0"]
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+text_overrun_behavior = 3
+mouse_filter = 2
+text = ""
+layout_mode = 0
+offset_left = 44.0
+offset_top = 4.0
+offset_right = 114.0
+offset_bottom = 24.0
+
+[node name="元宝图" type="TextureRect" parent="格0"]
+texture = ExtResource("t3")
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+visible = false
+layout_mode = 0
+offset_left = 46.0
+offset_top = 27.0
+offset_right = 65.0
+offset_bottom = 40.0
+
+[node name="券图" type="TextureRect" parent="格0"]
+texture = ExtResource("t4")
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+visible = false
+layout_mode = 0
+offset_left = 46.0
+offset_top = 27.0
+offset_right = 65.0
+offset_bottom = 40.0
+
+[node name="双币" type="Control" parent="格0"]
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 46.0
+offset_top = 27.0
+offset_right = 75.0
+offset_bottom = 40.0
+
+[node name="双币元宝" type="TextureRect" parent="格0/双币"]
+texture = ExtResource("t3")
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 19.0
+offset_bottom = 13.0
+
+[node name="双币券" type="TextureRect" parent="格0/双币"]
+texture = ExtResource("t4")
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+layout_mode = 0
+offset_left = 10.0
+offset_top = 0.0
+offset_right = 29.0
+offset_bottom = 13.0
+
+[node name="价格" type="Label" parent="格0"]
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+text_overrun_behavior = 3
+mouse_filter = 2
+text = ""
+layout_mode = 0
+offset_left = 75.0
+offset_top = 25.0
+offset_right = 120.0
+offset_bottom = 45.0
+
+
+[node name="格1" type="Control" parent="."]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 138.0
+offset_top = 19.0
+offset_right = 258.0
+offset_bottom = 69.0
+[node name="格底" type="Panel" parent="格1"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 120.0
+offset_bottom = 50.0
+
+[node name="物品格" type="Button" parent="格1"]
+focus_mode = 0
+theme_type_variation = &"OrigItemSlotButton"
+mouse_default_cursor_shape = 2
+layout_mode = 0
+offset_left = 4.0
+offset_top = 5.0
+offset_right = 44.0
+offset_bottom = 45.0
+
+[node name="图标" type="TextureRect" parent="格1/物品格"]
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+visible = false
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 37.0
+offset_bottom = 37.0
+
+[node name="名称" type="Label" parent="格1"]
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+text_overrun_behavior = 3
+mouse_filter = 2
+text = ""
+layout_mode = 0
+offset_left = 44.0
+offset_top = 4.0
+offset_right = 114.0
+offset_bottom = 24.0
+
+[node name="元宝图" type="TextureRect" parent="格1"]
+texture = ExtResource("t3")
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+visible = false
+layout_mode = 0
+offset_left = 46.0
+offset_top = 27.0
+offset_right = 65.0
+offset_bottom = 40.0
+
+[node name="券图" type="TextureRect" parent="格1"]
+texture = ExtResource("t4")
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+visible = false
+layout_mode = 0
+offset_left = 46.0
+offset_top = 27.0
+offset_right = 65.0
+offset_bottom = 40.0
+
+[node name="双币" type="Control" parent="格1"]
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 46.0
+offset_top = 27.0
+offset_right = 75.0
+offset_bottom = 40.0
+
+[node name="双币元宝" type="TextureRect" parent="格1/双币"]
+texture = ExtResource("t3")
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 19.0
+offset_bottom = 13.0
+
+[node name="双币券" type="TextureRect" parent="格1/双币"]
+texture = ExtResource("t4")
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+layout_mode = 0
+offset_left = 10.0
+offset_top = 0.0
+offset_right = 29.0
+offset_bottom = 13.0
+
+[node name="价格" type="Label" parent="格1"]
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+text_overrun_behavior = 3
+mouse_filter = 2
+text = ""
+layout_mode = 0
+offset_left = 75.0
+offset_top = 25.0
+offset_right = 120.0
+offset_bottom = 45.0
+
+
+[node name="格2" type="Control" parent="."]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 18.0
+offset_top = 70.0
+offset_right = 138.0
+offset_bottom = 120.0
+[node name="格底" type="Panel" parent="格2"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 120.0
+offset_bottom = 50.0
+
+[node name="物品格" type="Button" parent="格2"]
+focus_mode = 0
+theme_type_variation = &"OrigItemSlotButton"
+mouse_default_cursor_shape = 2
+layout_mode = 0
+offset_left = 4.0
+offset_top = 5.0
+offset_right = 44.0
+offset_bottom = 45.0
+
+[node name="图标" type="TextureRect" parent="格2/物品格"]
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+visible = false
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 37.0
+offset_bottom = 37.0
+
+[node name="名称" type="Label" parent="格2"]
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+text_overrun_behavior = 3
+mouse_filter = 2
+text = ""
+layout_mode = 0
+offset_left = 44.0
+offset_top = 4.0
+offset_right = 114.0
+offset_bottom = 24.0
+
+[node name="元宝图" type="TextureRect" parent="格2"]
+texture = ExtResource("t3")
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+visible = false
+layout_mode = 0
+offset_left = 46.0
+offset_top = 27.0
+offset_right = 65.0
+offset_bottom = 40.0
+
+[node name="券图" type="TextureRect" parent="格2"]
+texture = ExtResource("t4")
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+visible = false
+layout_mode = 0
+offset_left = 46.0
+offset_top = 27.0
+offset_right = 65.0
+offset_bottom = 40.0
+
+[node name="双币" type="Control" parent="格2"]
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 46.0
+offset_top = 27.0
+offset_right = 75.0
+offset_bottom = 40.0
+
+[node name="双币元宝" type="TextureRect" parent="格2/双币"]
+texture = ExtResource("t3")
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 19.0
+offset_bottom = 13.0
+
+[node name="双币券" type="TextureRect" parent="格2/双币"]
+texture = ExtResource("t4")
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+layout_mode = 0
+offset_left = 10.0
+offset_top = 0.0
+offset_right = 29.0
+offset_bottom = 13.0
+
+[node name="价格" type="Label" parent="格2"]
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+text_overrun_behavior = 3
+mouse_filter = 2
+text = ""
+layout_mode = 0
+offset_left = 75.0
+offset_top = 25.0
+offset_right = 120.0
+offset_bottom = 45.0
+
+
+[node name="格3" type="Control" parent="."]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 138.0
+offset_top = 70.0
+offset_right = 258.0
+offset_bottom = 120.0
+[node name="格底" type="Panel" parent="格3"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 120.0
+offset_bottom = 50.0
+
+[node name="物品格" type="Button" parent="格3"]
+focus_mode = 0
+theme_type_variation = &"OrigItemSlotButton"
+mouse_default_cursor_shape = 2
+layout_mode = 0
+offset_left = 4.0
+offset_top = 5.0
+offset_right = 44.0
+offset_bottom = 45.0
+
+[node name="图标" type="TextureRect" parent="格3/物品格"]
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+visible = false
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 37.0
+offset_bottom = 37.0
+
+[node name="名称" type="Label" parent="格3"]
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+text_overrun_behavior = 3
+mouse_filter = 2
+text = ""
+layout_mode = 0
+offset_left = 44.0
+offset_top = 4.0
+offset_right = 114.0
+offset_bottom = 24.0
+
+[node name="元宝图" type="TextureRect" parent="格3"]
+texture = ExtResource("t3")
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+visible = false
+layout_mode = 0
+offset_left = 46.0
+offset_top = 27.0
+offset_right = 65.0
+offset_bottom = 40.0
+
+[node name="券图" type="TextureRect" parent="格3"]
+texture = ExtResource("t4")
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+visible = false
+layout_mode = 0
+offset_left = 46.0
+offset_top = 27.0
+offset_right = 65.0
+offset_bottom = 40.0
+
+[node name="双币" type="Control" parent="格3"]
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 46.0
+offset_top = 27.0
+offset_right = 75.0
+offset_bottom = 40.0
+
+[node name="双币元宝" type="TextureRect" parent="格3/双币"]
+texture = ExtResource("t3")
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 19.0
+offset_bottom = 13.0
+
+[node name="双币券" type="TextureRect" parent="格3/双币"]
+texture = ExtResource("t4")
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+layout_mode = 0
+offset_left = 10.0
+offset_top = 0.0
+offset_right = 29.0
+offset_bottom = 13.0
+
+[node name="价格" type="Label" parent="格3"]
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+text_overrun_behavior = 3
+mouse_filter = 2
+text = ""
+layout_mode = 0
+offset_left = 75.0
+offset_top = 25.0
+offset_right = 120.0
+offset_bottom = 45.0
+
+
+[node name="格4" type="Control" parent="."]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 18.0
+offset_top = 121.0
+offset_right = 138.0
+offset_bottom = 171.0
+[node name="格底" type="Panel" parent="格4"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 120.0
+offset_bottom = 50.0
+
+[node name="物品格" type="Button" parent="格4"]
+focus_mode = 0
+theme_type_variation = &"OrigItemSlotButton"
+mouse_default_cursor_shape = 2
+layout_mode = 0
+offset_left = 4.0
+offset_top = 5.0
+offset_right = 44.0
+offset_bottom = 45.0
+
+[node name="图标" type="TextureRect" parent="格4/物品格"]
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+visible = false
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 37.0
+offset_bottom = 37.0
+
+[node name="名称" type="Label" parent="格4"]
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+text_overrun_behavior = 3
+mouse_filter = 2
+text = ""
+layout_mode = 0
+offset_left = 44.0
+offset_top = 4.0
+offset_right = 114.0
+offset_bottom = 24.0
+
+[node name="元宝图" type="TextureRect" parent="格4"]
+texture = ExtResource("t3")
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+visible = false
+layout_mode = 0
+offset_left = 46.0
+offset_top = 27.0
+offset_right = 65.0
+offset_bottom = 40.0
+
+[node name="券图" type="TextureRect" parent="格4"]
+texture = ExtResource("t4")
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+visible = false
+layout_mode = 0
+offset_left = 46.0
+offset_top = 27.0
+offset_right = 65.0
+offset_bottom = 40.0
+
+[node name="双币" type="Control" parent="格4"]
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 46.0
+offset_top = 27.0
+offset_right = 75.0
+offset_bottom = 40.0
+
+[node name="双币元宝" type="TextureRect" parent="格4/双币"]
+texture = ExtResource("t3")
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 19.0
+offset_bottom = 13.0
+
+[node name="双币券" type="TextureRect" parent="格4/双币"]
+texture = ExtResource("t4")
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+layout_mode = 0
+offset_left = 10.0
+offset_top = 0.0
+offset_right = 29.0
+offset_bottom = 13.0
+
+[node name="价格" type="Label" parent="格4"]
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+text_overrun_behavior = 3
+mouse_filter = 2
+text = ""
+layout_mode = 0
+offset_left = 75.0
+offset_top = 25.0
+offset_right = 120.0
+offset_bottom = 45.0
+
+
+[node name="格5" type="Control" parent="."]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 138.0
+offset_top = 121.0
+offset_right = 258.0
+offset_bottom = 171.0
+[node name="格底" type="Panel" parent="格5"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 120.0
+offset_bottom = 50.0
+
+[node name="物品格" type="Button" parent="格5"]
+focus_mode = 0
+theme_type_variation = &"OrigItemSlotButton"
+mouse_default_cursor_shape = 2
+layout_mode = 0
+offset_left = 4.0
+offset_top = 5.0
+offset_right = 44.0
+offset_bottom = 45.0
+
+[node name="图标" type="TextureRect" parent="格5/物品格"]
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+visible = false
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 37.0
+offset_bottom = 37.0
+
+[node name="名称" type="Label" parent="格5"]
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+text_overrun_behavior = 3
+mouse_filter = 2
+text = ""
+layout_mode = 0
+offset_left = 44.0
+offset_top = 4.0
+offset_right = 114.0
+offset_bottom = 24.0
+
+[node name="元宝图" type="TextureRect" parent="格5"]
+texture = ExtResource("t3")
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+visible = false
+layout_mode = 0
+offset_left = 46.0
+offset_top = 27.0
+offset_right = 65.0
+offset_bottom = 40.0
+
+[node name="券图" type="TextureRect" parent="格5"]
+texture = ExtResource("t4")
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+visible = false
+layout_mode = 0
+offset_left = 46.0
+offset_top = 27.0
+offset_right = 65.0
+offset_bottom = 40.0
+
+[node name="双币" type="Control" parent="格5"]
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 46.0
+offset_top = 27.0
+offset_right = 75.0
+offset_bottom = 40.0
+
+[node name="双币元宝" type="TextureRect" parent="格5/双币"]
+texture = ExtResource("t3")
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 19.0
+offset_bottom = 13.0
+
+[node name="双币券" type="TextureRect" parent="格5/双币"]
+texture = ExtResource("t4")
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+layout_mode = 0
+offset_left = 10.0
+offset_top = 0.0
+offset_right = 29.0
+offset_bottom = 13.0
+
+[node name="价格" type="Label" parent="格5"]
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+text_overrun_behavior = 3
+mouse_filter = 2
+text = ""
+layout_mode = 0
+offset_left = 75.0
+offset_top = 25.0
+offset_right = 120.0
+offset_bottom = 45.0
+
+
+[node name="格6" type="Control" parent="."]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 18.0
+offset_top = 172.0
+offset_right = 138.0
+offset_bottom = 222.0
+[node name="格底" type="Panel" parent="格6"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 120.0
+offset_bottom = 50.0
+
+[node name="物品格" type="Button" parent="格6"]
+focus_mode = 0
+theme_type_variation = &"OrigItemSlotButton"
+mouse_default_cursor_shape = 2
+layout_mode = 0
+offset_left = 4.0
+offset_top = 5.0
+offset_right = 44.0
+offset_bottom = 45.0
+
+[node name="图标" type="TextureRect" parent="格6/物品格"]
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+visible = false
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 37.0
+offset_bottom = 37.0
+
+[node name="名称" type="Label" parent="格6"]
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+text_overrun_behavior = 3
+mouse_filter = 2
+text = ""
+layout_mode = 0
+offset_left = 44.0
+offset_top = 4.0
+offset_right = 114.0
+offset_bottom = 24.0
+
+[node name="元宝图" type="TextureRect" parent="格6"]
+texture = ExtResource("t3")
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+visible = false
+layout_mode = 0
+offset_left = 46.0
+offset_top = 27.0
+offset_right = 65.0
+offset_bottom = 40.0
+
+[node name="券图" type="TextureRect" parent="格6"]
+texture = ExtResource("t4")
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+visible = false
+layout_mode = 0
+offset_left = 46.0
+offset_top = 27.0
+offset_right = 65.0
+offset_bottom = 40.0
+
+[node name="双币" type="Control" parent="格6"]
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 46.0
+offset_top = 27.0
+offset_right = 75.0
+offset_bottom = 40.0
+
+[node name="双币元宝" type="TextureRect" parent="格6/双币"]
+texture = ExtResource("t3")
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 19.0
+offset_bottom = 13.0
+
+[node name="双币券" type="TextureRect" parent="格6/双币"]
+texture = ExtResource("t4")
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+layout_mode = 0
+offset_left = 10.0
+offset_top = 0.0
+offset_right = 29.0
+offset_bottom = 13.0
+
+[node name="价格" type="Label" parent="格6"]
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+text_overrun_behavior = 3
+mouse_filter = 2
+text = ""
+layout_mode = 0
+offset_left = 75.0
+offset_top = 25.0
+offset_right = 120.0
+offset_bottom = 45.0
+
+
+[node name="格7" type="Control" parent="."]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 138.0
+offset_top = 172.0
+offset_right = 258.0
+offset_bottom = 222.0
+[node name="格底" type="Panel" parent="格7"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 120.0
+offset_bottom = 50.0
+
+[node name="物品格" type="Button" parent="格7"]
+focus_mode = 0
+theme_type_variation = &"OrigItemSlotButton"
+mouse_default_cursor_shape = 2
+layout_mode = 0
+offset_left = 4.0
+offset_top = 5.0
+offset_right = 44.0
+offset_bottom = 45.0
+
+[node name="图标" type="TextureRect" parent="格7/物品格"]
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+visible = false
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 37.0
+offset_bottom = 37.0
+
+[node name="名称" type="Label" parent="格7"]
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+text_overrun_behavior = 3
+mouse_filter = 2
+text = ""
+layout_mode = 0
+offset_left = 44.0
+offset_top = 4.0
+offset_right = 114.0
+offset_bottom = 24.0
+
+[node name="元宝图" type="TextureRect" parent="格7"]
+texture = ExtResource("t3")
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+visible = false
+layout_mode = 0
+offset_left = 46.0
+offset_top = 27.0
+offset_right = 65.0
+offset_bottom = 40.0
+
+[node name="券图" type="TextureRect" parent="格7"]
+texture = ExtResource("t4")
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+visible = false
+layout_mode = 0
+offset_left = 46.0
+offset_top = 27.0
+offset_right = 65.0
+offset_bottom = 40.0
+
+[node name="双币" type="Control" parent="格7"]
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 46.0
+offset_top = 27.0
+offset_right = 75.0
+offset_bottom = 40.0
+
+[node name="双币元宝" type="TextureRect" parent="格7/双币"]
+texture = ExtResource("t3")
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 19.0
+offset_bottom = 13.0
+
+[node name="双币券" type="TextureRect" parent="格7/双币"]
+texture = ExtResource("t4")
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+layout_mode = 0
+offset_left = 10.0
+offset_top = 0.0
+offset_right = 29.0
+offset_bottom = 13.0
+
+[node name="价格" type="Label" parent="格7"]
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+text_overrun_behavior = 3
+mouse_filter = 2
+text = ""
+layout_mode = 0
+offset_left = 75.0
+offset_top = 25.0
+offset_right = 120.0
+offset_bottom = 45.0
+
+
+[node name="格8" type="Control" parent="."]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 18.0
+offset_top = 223.0
+offset_right = 138.0
+offset_bottom = 273.0
+[node name="格底" type="Panel" parent="格8"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 120.0
+offset_bottom = 50.0
+
+[node name="物品格" type="Button" parent="格8"]
+focus_mode = 0
+theme_type_variation = &"OrigItemSlotButton"
+mouse_default_cursor_shape = 2
+layout_mode = 0
+offset_left = 4.0
+offset_top = 5.0
+offset_right = 44.0
+offset_bottom = 45.0
+
+[node name="图标" type="TextureRect" parent="格8/物品格"]
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+visible = false
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 37.0
+offset_bottom = 37.0
+
+[node name="名称" type="Label" parent="格8"]
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+text_overrun_behavior = 3
+mouse_filter = 2
+text = ""
+layout_mode = 0
+offset_left = 44.0
+offset_top = 4.0
+offset_right = 114.0
+offset_bottom = 24.0
+
+[node name="元宝图" type="TextureRect" parent="格8"]
+texture = ExtResource("t3")
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+visible = false
+layout_mode = 0
+offset_left = 46.0
+offset_top = 27.0
+offset_right = 65.0
+offset_bottom = 40.0
+
+[node name="券图" type="TextureRect" parent="格8"]
+texture = ExtResource("t4")
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+visible = false
+layout_mode = 0
+offset_left = 46.0
+offset_top = 27.0
+offset_right = 65.0
+offset_bottom = 40.0
+
+[node name="双币" type="Control" parent="格8"]
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 46.0
+offset_top = 27.0
+offset_right = 75.0
+offset_bottom = 40.0
+
+[node name="双币元宝" type="TextureRect" parent="格8/双币"]
+texture = ExtResource("t3")
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 19.0
+offset_bottom = 13.0
+
+[node name="双币券" type="TextureRect" parent="格8/双币"]
+texture = ExtResource("t4")
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+layout_mode = 0
+offset_left = 10.0
+offset_top = 0.0
+offset_right = 29.0
+offset_bottom = 13.0
+
+[node name="价格" type="Label" parent="格8"]
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+text_overrun_behavior = 3
+mouse_filter = 2
+text = ""
+layout_mode = 0
+offset_left = 75.0
+offset_top = 25.0
+offset_right = 120.0
+offset_bottom = 45.0
+
+
+[node name="格9" type="Control" parent="."]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 138.0
+offset_top = 223.0
+offset_right = 258.0
+offset_bottom = 273.0
+[node name="格底" type="Panel" parent="格9"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 120.0
+offset_bottom = 50.0
+
+[node name="物品格" type="Button" parent="格9"]
+focus_mode = 0
+theme_type_variation = &"OrigItemSlotButton"
+mouse_default_cursor_shape = 2
+layout_mode = 0
+offset_left = 4.0
+offset_top = 5.0
+offset_right = 44.0
+offset_bottom = 45.0
+
+[node name="图标" type="TextureRect" parent="格9/物品格"]
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+visible = false
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 37.0
+offset_bottom = 37.0
+
+[node name="名称" type="Label" parent="格9"]
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+text_overrun_behavior = 3
+mouse_filter = 2
+text = ""
+layout_mode = 0
+offset_left = 44.0
+offset_top = 4.0
+offset_right = 114.0
+offset_bottom = 24.0
+
+[node name="元宝图" type="TextureRect" parent="格9"]
+texture = ExtResource("t3")
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+visible = false
+layout_mode = 0
+offset_left = 46.0
+offset_top = 27.0
+offset_right = 65.0
+offset_bottom = 40.0
+
+[node name="券图" type="TextureRect" parent="格9"]
+texture = ExtResource("t4")
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+visible = false
+layout_mode = 0
+offset_left = 46.0
+offset_top = 27.0
+offset_right = 65.0
+offset_bottom = 40.0
+
+[node name="双币" type="Control" parent="格9"]
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 46.0
+offset_top = 27.0
+offset_right = 75.0
+offset_bottom = 40.0
+
+[node name="双币元宝" type="TextureRect" parent="格9/双币"]
+texture = ExtResource("t3")
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 19.0
+offset_bottom = 13.0
+
+[node name="双币券" type="TextureRect" parent="格9/双币"]
+texture = ExtResource("t4")
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+layout_mode = 0
+offset_left = 10.0
+offset_top = 0.0
+offset_right = 29.0
+offset_bottom = 13.0
+
+[node name="价格" type="Label" parent="格9"]
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+text_overrun_behavior = 3
+mouse_filter = 2
+text = ""
+layout_mode = 0
+offset_left = 75.0
+offset_top = 25.0
+offset_right = 120.0
+offset_bottom = 45.0
+
+
+[node name="格10" type="Control" parent="."]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 18.0
+offset_top = 274.0
+offset_right = 138.0
+offset_bottom = 324.0
+[node name="格底" type="Panel" parent="格10"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 120.0
+offset_bottom = 50.0
+
+[node name="物品格" type="Button" parent="格10"]
+focus_mode = 0
+theme_type_variation = &"OrigItemSlotButton"
+mouse_default_cursor_shape = 2
+layout_mode = 0
+offset_left = 4.0
+offset_top = 5.0
+offset_right = 44.0
+offset_bottom = 45.0
+
+[node name="图标" type="TextureRect" parent="格10/物品格"]
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+visible = false
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 37.0
+offset_bottom = 37.0
+
+[node name="名称" type="Label" parent="格10"]
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+text_overrun_behavior = 3
+mouse_filter = 2
+text = ""
+layout_mode = 0
+offset_left = 44.0
+offset_top = 4.0
+offset_right = 114.0
+offset_bottom = 24.0
+
+[node name="元宝图" type="TextureRect" parent="格10"]
+texture = ExtResource("t3")
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+visible = false
+layout_mode = 0
+offset_left = 46.0
+offset_top = 27.0
+offset_right = 65.0
+offset_bottom = 40.0
+
+[node name="券图" type="TextureRect" parent="格10"]
+texture = ExtResource("t4")
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+visible = false
+layout_mode = 0
+offset_left = 46.0
+offset_top = 27.0
+offset_right = 65.0
+offset_bottom = 40.0
+
+[node name="双币" type="Control" parent="格10"]
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 46.0
+offset_top = 27.0
+offset_right = 75.0
+offset_bottom = 40.0
+
+[node name="双币元宝" type="TextureRect" parent="格10/双币"]
+texture = ExtResource("t3")
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 19.0
+offset_bottom = 13.0
+
+[node name="双币券" type="TextureRect" parent="格10/双币"]
+texture = ExtResource("t4")
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+layout_mode = 0
+offset_left = 10.0
+offset_top = 0.0
+offset_right = 29.0
+offset_bottom = 13.0
+
+[node name="价格" type="Label" parent="格10"]
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+text_overrun_behavior = 3
+mouse_filter = 2
+text = ""
+layout_mode = 0
+offset_left = 75.0
+offset_top = 25.0
+offset_right = 120.0
+offset_bottom = 45.0
+
+
+[node name="格11" type="Control" parent="."]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 138.0
+offset_top = 274.0
+offset_right = 258.0
+offset_bottom = 324.0
+[node name="格底" type="Panel" parent="格11"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 120.0
+offset_bottom = 50.0
+
+[node name="物品格" type="Button" parent="格11"]
+focus_mode = 0
+theme_type_variation = &"OrigItemSlotButton"
+mouse_default_cursor_shape = 2
+layout_mode = 0
+offset_left = 4.0
+offset_top = 5.0
+offset_right = 44.0
+offset_bottom = 45.0
+
+[node name="图标" type="TextureRect" parent="格11/物品格"]
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+visible = false
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 37.0
+offset_bottom = 37.0
+
+[node name="名称" type="Label" parent="格11"]
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+text_overrun_behavior = 3
+mouse_filter = 2
+text = ""
+layout_mode = 0
+offset_left = 44.0
+offset_top = 4.0
+offset_right = 114.0
+offset_bottom = 24.0
+
+[node name="元宝图" type="TextureRect" parent="格11"]
+texture = ExtResource("t3")
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+visible = false
+layout_mode = 0
+offset_left = 46.0
+offset_top = 27.0
+offset_right = 65.0
+offset_bottom = 40.0
+
+[node name="券图" type="TextureRect" parent="格11"]
+texture = ExtResource("t4")
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+visible = false
+layout_mode = 0
+offset_left = 46.0
+offset_top = 27.0
+offset_right = 65.0
+offset_bottom = 40.0
+
+[node name="双币" type="Control" parent="格11"]
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 46.0
+offset_top = 27.0
+offset_right = 75.0
+offset_bottom = 40.0
+
+[node name="双币元宝" type="TextureRect" parent="格11/双币"]
+texture = ExtResource("t3")
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 19.0
+offset_bottom = 13.0
+
+[node name="双币券" type="TextureRect" parent="格11/双币"]
+texture = ExtResource("t4")
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+layout_mode = 0
+offset_left = 10.0
+offset_top = 0.0
+offset_right = 29.0
+offset_bottom = 13.0
+
+[node name="价格" type="Label" parent="格11"]
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+text_overrun_behavior = 3
+mouse_filter = 2
+text = ""
+layout_mode = 0
+offset_left = 75.0
+offset_top = 25.0
+offset_right = 120.0
+offset_bottom = 45.0
+
+
+[node name="倒计时" type="Label" parent="."]
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+text_overrun_behavior = 3
+mouse_filter = 2
+text = ""
+layout_mode = 0
+offset_left = 8.0
+offset_top = 338.0
+offset_right = 136.0
+offset_bottom = 363.0
+
+[node name="花费" type="RichTextLabel" parent="."]
+bbcode_enabled = true
+scroll_active = false
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/outline_size = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+text = ""
+layout_mode = 0
+offset_left = 136.0
+offset_top = 338.0
+offset_right = 191.0
+offset_bottom = 358.0
+
+[node name="币标" type="Control" parent="."]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 191.0
+offset_top = 341.0
+offset_right = 210.0
+offset_bottom = 354.0
+
+[node name="币标元宝" type="TextureRect" parent="币标"]
+texture = ExtResource("t3")
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 19.0
+offset_bottom = 13.0
+
+[node name="刷新钮" type="Button" parent="."]
+theme_override_styles/normal = SubResource("sb_w37_n")
+theme_override_styles/hover = SubResource("sb_w37_h")
+theme_override_styles/pressed = SubResource("sb_w37_p")
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_font_sizes/font_size = 12
+text = "刷新"
+horizontal_alignment = 1
+mouse_default_cursor_shape = 2
+layout_mode = 0
+offset_left = 218.0
+offset_top = 338.0
+offset_right = 255.0
+offset_bottom = 360.0
+

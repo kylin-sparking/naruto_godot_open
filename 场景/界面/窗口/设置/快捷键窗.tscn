@@ -1,0 +1,5475 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="Script" path="res://脚本/界面/窗口/设置/快捷键窗.gd" id="1_script"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/设置/键位列表底.png" id="r1"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/设置/键位格底.png" id="r2"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/设置/图标底板.png" id="r3"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/设置/键位列表格.png" id="r4"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/设置/钮底.png" id="r5"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/设置/钮底选中.png" id="r6"]
+
+
+
+[node name="原版快速键内容" type="Control"]
+custom_minimum_size = Vector2(765, 426)
+script = ExtResource("1_script")
+窗名 = "快捷键"
+
+[node name="九宫列表底" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 0
+offset_top = 316.0
+offset_right = 765
+offset_bottom = 426.0
+texture = ExtResource("r1")
+patch_margin_left = 21
+patch_margin_top = 16
+patch_margin_right = 21
+patch_margin_bottom = 19
+
+[node name="格escCell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 19.0
+offset_right = 54.0
+offset_bottom = 59.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 2
+metadata/key = "esc"
+metadata/canset = false
+
+[node name="字escCell" type="Label" parent="格escCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "ESC"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(0.8235294117647058, 0.8235294117647058, 0.8235294117647058, 1)
+mouse_filter = 2
+
+[node name="格f1Cell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 81.0
+offset_top = 19.0
+offset_right = 121.0
+offset_bottom = 59.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 2
+metadata/key = "f1"
+metadata/canset = false
+
+[node name="字f1Cell" type="Label" parent="格f1Cell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "F1"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(0.8235294117647058, 0.8235294117647058, 0.8235294117647058, 1)
+mouse_filter = 2
+
+[node name="格f2Cell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 123.0
+offset_top = 19.0
+offset_right = 163.0
+offset_bottom = 59.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 2
+metadata/key = "f2"
+metadata/canset = false
+
+[node name="字f2Cell" type="Label" parent="格f2Cell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "F2"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(0.8235294117647058, 0.8235294117647058, 0.8235294117647058, 1)
+mouse_filter = 2
+
+[node name="格f3Cell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 165.0
+offset_top = 19.0
+offset_right = 205.0
+offset_bottom = 59.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 2
+metadata/key = "f3"
+metadata/canset = false
+
+[node name="字f3Cell" type="Label" parent="格f3Cell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "F3"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(0.8235294117647058, 0.8235294117647058, 0.8235294117647058, 1)
+mouse_filter = 2
+
+[node name="格f4Cell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 19.0
+offset_right = 247.0
+offset_bottom = 59.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 2
+metadata/key = "f4"
+metadata/canset = false
+
+[node name="字f4Cell" type="Label" parent="格f4Cell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "F4"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(0.8235294117647058, 0.8235294117647058, 0.8235294117647058, 1)
+mouse_filter = 2
+
+[node name="格f5Cell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 263.0
+offset_top = 19.0
+offset_right = 303.0
+offset_bottom = 59.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 2
+metadata/key = "f5"
+metadata/canset = false
+
+[node name="字f5Cell" type="Label" parent="格f5Cell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "F5"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(0.8235294117647058, 0.8235294117647058, 0.8235294117647058, 1)
+mouse_filter = 2
+
+[node name="格f6Cell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 305.0
+offset_top = 19.0
+offset_right = 345.0
+offset_bottom = 59.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 2
+metadata/key = "f6"
+metadata/canset = false
+
+[node name="字f6Cell" type="Label" parent="格f6Cell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "F6"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(0.8235294117647058, 0.8235294117647058, 0.8235294117647058, 1)
+mouse_filter = 2
+
+[node name="格f7Cell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 347.0
+offset_top = 19.0
+offset_right = 387.0
+offset_bottom = 59.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 2
+metadata/key = "f7"
+metadata/canset = false
+
+[node name="字f7Cell" type="Label" parent="格f7Cell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "F7"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(0.8235294117647058, 0.8235294117647058, 0.8235294117647058, 1)
+mouse_filter = 2
+
+[node name="格f8Cell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 389.0
+offset_top = 19.0
+offset_right = 429.0
+offset_bottom = 59.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 2
+metadata/key = "f8"
+metadata/canset = false
+
+[node name="字f8Cell" type="Label" parent="格f8Cell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "F8"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(0.8235294117647058, 0.8235294117647058, 0.8235294117647058, 1)
+mouse_filter = 2
+
+[node name="格f9Cell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 444.0
+offset_top = 19.0
+offset_right = 484.0
+offset_bottom = 59.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 2
+metadata/key = "f9"
+metadata/canset = false
+
+[node name="字f9Cell" type="Label" parent="格f9Cell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "F9"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(0.8235294117647058, 0.8235294117647058, 0.8235294117647058, 1)
+mouse_filter = 2
+
+[node name="格f10Cell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 486.0
+offset_top = 19.0
+offset_right = 526.0
+offset_bottom = 59.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 2
+metadata/key = "f10"
+metadata/canset = false
+
+[node name="字f10Cell" type="Label" parent="格f10Cell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "F10"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(0.8235294117647058, 0.8235294117647058, 0.8235294117647058, 1)
+mouse_filter = 2
+
+[node name="格f11Cell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 528.0
+offset_top = 19.0
+offset_right = 568.0
+offset_bottom = 59.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 2
+metadata/key = "f11"
+metadata/canset = false
+
+[node name="字f11Cell" type="Label" parent="格f11Cell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "F11"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(0.8235294117647058, 0.8235294117647058, 0.8235294117647058, 1)
+mouse_filter = 2
+
+[node name="格f12Cell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 570.0
+offset_top = 19.0
+offset_right = 610.0
+offset_bottom = 59.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 2
+metadata/key = "f12"
+metadata/canset = false
+
+[node name="字f12Cell" type="Label" parent="格f12Cell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "F12"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(0.8235294117647058, 0.8235294117647058, 0.8235294117647058, 1)
+mouse_filter = 2
+
+[node name="格pscCell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 627.0
+offset_top = 19.0
+offset_right = 667.0
+offset_bottom = 59.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 2
+metadata/key = "psc"
+metadata/canset = false
+
+[node name="字pscCell" type="Label" parent="格pscCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "Psc"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(0.8235294117647058, 0.8235294117647058, 0.8235294117647058, 1)
+mouse_filter = 2
+
+[node name="格slkCell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 669.0
+offset_top = 19.0
+offset_right = 709.0
+offset_bottom = 59.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 2
+metadata/key = "slk"
+metadata/canset = false
+
+[node name="字slkCell" type="Label" parent="格slkCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "Slk"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(0.8235294117647058, 0.8235294117647058, 0.8235294117647058, 1)
+mouse_filter = 2
+
+[node name="格brkCell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 711.0
+offset_top = 19.0
+offset_right = 751.0
+offset_bottom = 59.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 2
+metadata/key = "brk"
+metadata/canset = false
+
+[node name="字brkCell" type="Label" parent="格brkCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "Brk"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(0.8235294117647058, 0.8235294117647058, 0.8235294117647058, 1)
+mouse_filter = 2
+
+[node name="格graveAccentCell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 66.0
+offset_right = 54.0
+offset_bottom = 106.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 0
+metadata/key = "graveAccent"
+metadata/canset = true
+
+[node name="牌" type="TextureRect" parent="格graveAccentCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="格graveAccentCell/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = "切换目标"
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="字graveAccentCell" type="Label" parent="格graveAccentCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "`"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(1, 0.6235294117647059, 0.2588235294117647, 1)
+mouse_filter = 2
+
+[node name="格num1Cell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 66.0
+offset_right = 96.0
+offset_bottom = 106.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 0
+metadata/key = "num1"
+metadata/canset = true
+
+[node name="牌" type="TextureRect" parent="格num1Cell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="格num1Cell/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = "\n攻击"
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="字num1Cell" type="Label" parent="格num1Cell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "1"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(1, 0.6235294117647059, 0.2588235294117647, 1)
+mouse_filter = 2
+
+[node name="格num2Cell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 98.0
+offset_top = 66.0
+offset_right = 138.0
+offset_bottom = 106.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 0
+metadata/key = "num2"
+metadata/canset = true
+
+[node name="牌" type="TextureRect" parent="格num2Cell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+visible = false
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="格num2Cell/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = ""
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="字num2Cell" type="Label" parent="格num2Cell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "2"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(1, 0.6235294117647059, 0.2588235294117647, 1)
+mouse_filter = 2
+
+[node name="格num3Cell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 140.0
+offset_top = 66.0
+offset_right = 180.0
+offset_bottom = 106.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 0
+metadata/key = "num3"
+metadata/canset = true
+
+[node name="牌" type="TextureRect" parent="格num3Cell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+visible = false
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="格num3Cell/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = ""
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="字num3Cell" type="Label" parent="格num3Cell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "3"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(1, 0.6235294117647059, 0.2588235294117647, 1)
+mouse_filter = 2
+
+[node name="格num4Cell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 182.0
+offset_top = 66.0
+offset_right = 222.0
+offset_bottom = 106.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 0
+metadata/key = "num4"
+metadata/canset = true
+
+[node name="牌" type="TextureRect" parent="格num4Cell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+visible = false
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="格num4Cell/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = ""
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="字num4Cell" type="Label" parent="格num4Cell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "4"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(1, 0.6235294117647059, 0.2588235294117647, 1)
+mouse_filter = 2
+
+[node name="格num5Cell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 224.0
+offset_top = 66.0
+offset_right = 264.0
+offset_bottom = 106.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 0
+metadata/key = "num5"
+metadata/canset = true
+
+[node name="牌" type="TextureRect" parent="格num5Cell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+visible = false
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="格num5Cell/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = ""
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="字num5Cell" type="Label" parent="格num5Cell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "5"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(1, 0.6235294117647059, 0.2588235294117647, 1)
+mouse_filter = 2
+
+[node name="格num6Cell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 266.0
+offset_top = 66.0
+offset_right = 306.0
+offset_bottom = 106.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 0
+metadata/key = "num6"
+metadata/canset = true
+
+[node name="牌" type="TextureRect" parent="格num6Cell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+visible = false
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="格num6Cell/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = ""
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="字num6Cell" type="Label" parent="格num6Cell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "6"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(1, 0.6235294117647059, 0.2588235294117647, 1)
+mouse_filter = 2
+
+[node name="格num7Cell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 308.0
+offset_top = 66.0
+offset_right = 348.0
+offset_bottom = 106.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 0
+metadata/key = "num7"
+metadata/canset = true
+
+[node name="牌" type="TextureRect" parent="格num7Cell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+visible = false
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="格num7Cell/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = ""
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="字num7Cell" type="Label" parent="格num7Cell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "7"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(1, 0.6235294117647059, 0.2588235294117647, 1)
+mouse_filter = 2
+
+[node name="格num8Cell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 350.0
+offset_top = 66.0
+offset_right = 390.0
+offset_bottom = 106.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 0
+metadata/key = "num8"
+metadata/canset = true
+
+[node name="牌" type="TextureRect" parent="格num8Cell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+visible = false
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="格num8Cell/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = ""
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="字num8Cell" type="Label" parent="格num8Cell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "8"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(1, 0.6235294117647059, 0.2588235294117647, 1)
+mouse_filter = 2
+
+[node name="格num9Cell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 392.0
+offset_top = 66.0
+offset_right = 432.0
+offset_bottom = 106.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 0
+metadata/key = "num9"
+metadata/canset = true
+
+[node name="牌" type="TextureRect" parent="格num9Cell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+visible = false
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="格num9Cell/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = ""
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="字num9Cell" type="Label" parent="格num9Cell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "9"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(1, 0.6235294117647059, 0.2588235294117647, 1)
+mouse_filter = 2
+
+[node name="格num0Cell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 434.0
+offset_top = 66.0
+offset_right = 474.0
+offset_bottom = 106.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 0
+metadata/key = "num0"
+metadata/canset = true
+
+[node name="牌" type="TextureRect" parent="格num0Cell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+visible = false
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="格num0Cell/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = ""
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="字num0Cell" type="Label" parent="格num0Cell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "0"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(1, 0.6235294117647059, 0.2588235294117647, 1)
+mouse_filter = 2
+
+[node name="格minusCell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 476.0
+offset_top = 66.0
+offset_right = 516.0
+offset_bottom = 106.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 0
+metadata/key = "minus"
+metadata/canset = true
+
+[node name="牌" type="TextureRect" parent="格minusCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+visible = false
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="格minusCell/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = ""
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="字minusCell" type="Label" parent="格minusCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "-"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(1, 0.6235294117647059, 0.2588235294117647, 1)
+mouse_filter = 2
+
+[node name="格equalsCell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 518.0
+offset_top = 66.0
+offset_right = 558.0
+offset_bottom = 106.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 0
+metadata/key = "equals"
+metadata/canset = true
+
+[node name="牌" type="TextureRect" parent="格equalsCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+visible = false
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="格equalsCell/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = ""
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="字equalsCell" type="Label" parent="格equalsCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "="
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(1, 0.6235294117647059, 0.2588235294117647, 1)
+mouse_filter = 2
+
+[node name="格bkspCell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 560.0
+offset_top = 66.0
+offset_right = 610.0
+offset_bottom = 106.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 2
+metadata/key = "bksp"
+metadata/canset = false
+
+[node name="字bkspCell" type="Label" parent="格bkspCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 50
+offset_bottom = 18
+text = "Bksp"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(0.8235294117647058, 0.8235294117647058, 0.8235294117647058, 1)
+mouse_filter = 2
+
+[node name="格insCell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 627.0
+offset_top = 66.0
+offset_right = 667.0
+offset_bottom = 106.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 0
+metadata/key = "ins"
+metadata/canset = true
+
+[node name="牌" type="TextureRect" parent="格insCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+visible = false
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="格insCell/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = ""
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="字insCell" type="Label" parent="格insCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "Ins"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(1, 0.6235294117647059, 0.2588235294117647, 1)
+mouse_filter = 2
+
+[node name="格hmCell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 669.0
+offset_top = 66.0
+offset_right = 709.0
+offset_bottom = 106.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 0
+metadata/key = "hm"
+metadata/canset = true
+
+[node name="牌" type="TextureRect" parent="格hmCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+visible = false
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="格hmCell/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = ""
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="字hmCell" type="Label" parent="格hmCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "Hm"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(1, 0.6235294117647059, 0.2588235294117647, 1)
+mouse_filter = 2
+
+[node name="格pupCell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 711.0
+offset_top = 66.0
+offset_right = 751.0
+offset_bottom = 106.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 0
+metadata/key = "pup"
+metadata/canset = true
+
+[node name="牌" type="TextureRect" parent="格pupCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+visible = false
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="格pupCell/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = ""
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="字pupCell" type="Label" parent="格pupCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "Pup"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(1, 0.6235294117647059, 0.2588235294117647, 1)
+mouse_filter = 2
+
+[node name="格tabCell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 108.0
+offset_right = 64.0
+offset_bottom = 148.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 0
+metadata/key = "tab"
+metadata/canset = true
+
+[node name="牌" type="TextureRect" parent="格tabCell"]
+layout_mode = 0
+offset_left = 7
+offset_top = 2
+offset_right = 43
+offset_bottom = 38
+visible = false
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="格tabCell/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = ""
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="字tabCell" type="Label" parent="格tabCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 50
+offset_bottom = 18
+text = "Tab"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(1, 0.6235294117647059, 0.2588235294117647, 1)
+mouse_filter = 2
+
+[node name="格qCell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 108.0
+offset_right = 106.0
+offset_bottom = 148.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 0
+metadata/key = "q"
+metadata/canset = true
+
+[node name="牌" type="TextureRect" parent="格qCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="格qCell/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = "\n任务"
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="字qCell" type="Label" parent="格qCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "Q"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(1, 0.6235294117647059, 0.2588235294117647, 1)
+mouse_filter = 2
+
+[node name="格wCell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 108.0
+offset_top = 108.0
+offset_right = 148.0
+offset_bottom = 148.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 0
+metadata/key = "w"
+metadata/canset = true
+
+[node name="牌" type="TextureRect" parent="格wCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="格wCell/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = "通灵附身"
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="字wCell" type="Label" parent="格wCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "W"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(1, 0.6235294117647059, 0.2588235294117647, 1)
+mouse_filter = 2
+
+[node name="格eCell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 108.0
+offset_right = 190.0
+offset_bottom = 148.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 0
+metadata/key = "e"
+metadata/canset = true
+
+[node name="牌" type="TextureRect" parent="格eCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="格eCell/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = "遮罩造型"
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="字eCell" type="Label" parent="格eCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "E"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(1, 0.6235294117647059, 0.2588235294117647, 1)
+mouse_filter = 2
+
+[node name="格rCell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 108.0
+offset_right = 232.0
+offset_bottom = 148.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 0
+metadata/key = "r"
+metadata/canset = true
+
+[node name="牌" type="TextureRect" parent="格rCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="格rCell/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = "缩放聊天"
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="字rCell" type="Label" parent="格rCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "R"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(1, 0.6235294117647059, 0.2588235294117647, 1)
+mouse_filter = 2
+
+[node name="格tCell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 234.0
+offset_top = 108.0
+offset_right = 274.0
+offset_bottom = 148.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 0
+metadata/key = "t"
+metadata/canset = true
+
+[node name="牌" type="TextureRect" parent="格tCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="格tCell/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = "\n组队"
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="字tCell" type="Label" parent="格tCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "T"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(1, 0.6235294117647059, 0.2588235294117647, 1)
+mouse_filter = 2
+
+[node name="格yCell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 276.0
+offset_top = 108.0
+offset_right = 316.0
+offset_bottom = 148.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 0
+metadata/key = "y"
+metadata/canset = true
+
+[node name="牌" type="TextureRect" parent="格yCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="格yCell/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = "音乐开关"
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="字yCell" type="Label" parent="格yCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "Y"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(1, 0.6235294117647059, 0.2588235294117647, 1)
+mouse_filter = 2
+
+[node name="格uCell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 318.0
+offset_top = 108.0
+offset_right = 358.0
+offset_bottom = 148.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 0
+metadata/key = "u"
+metadata/canset = true
+
+[node name="牌" type="TextureRect" parent="格uCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+visible = false
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="格uCell/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = ""
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="字uCell" type="Label" parent="格uCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "U"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(1, 0.6235294117647059, 0.2588235294117647, 1)
+mouse_filter = 2
+
+[node name="格iCell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 360.0
+offset_top = 108.0
+offset_right = 400.0
+offset_bottom = 148.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 0
+metadata/key = "i"
+metadata/canset = true
+
+[node name="牌" type="TextureRect" parent="格iCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="格iCell/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = "遮罩名字"
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="字iCell" type="Label" parent="格iCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "I"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(1, 0.6235294117647059, 0.2588235294117647, 1)
+mouse_filter = 2
+
+[node name="格oCell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 402.0
+offset_top = 108.0
+offset_right = 442.0
+offset_bottom = 148.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 0
+metadata/key = "o"
+metadata/canset = true
+
+[node name="牌" type="TextureRect" parent="格oCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="格oCell/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = "\n商城"
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="字oCell" type="Label" parent="格oCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "O"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(1, 0.6235294117647059, 0.2588235294117647, 1)
+mouse_filter = 2
+
+[node name="格pCell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 444.0
+offset_top = 108.0
+offset_right = 484.0
+offset_bottom = 148.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 0
+metadata/key = "p"
+metadata/canset = true
+
+[node name="牌" type="TextureRect" parent="格pCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+visible = false
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="格pCell/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = ""
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="字pCell" type="Label" parent="格pCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "P"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(1, 0.6235294117647059, 0.2588235294117647, 1)
+mouse_filter = 2
+
+[node name="格squareBracketsLeftCell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 486.0
+offset_top = 108.0
+offset_right = 526.0
+offset_bottom = 148.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 0
+metadata/key = "squareBracketsLeft"
+metadata/canset = true
+
+[node name="牌" type="TextureRect" parent="格squareBracketsLeftCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+visible = false
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="格squareBracketsLeftCell/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = ""
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="字squareBracketsLeftCell" type="Label" parent="格squareBracketsLeftCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "["
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(1, 0.6235294117647059, 0.2588235294117647, 1)
+mouse_filter = 2
+
+[node name="格squareBracketsRightCell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 528.0
+offset_top = 108.0
+offset_right = 568.0
+offset_bottom = 148.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 0
+metadata/key = "squareBracketsRight"
+metadata/canset = true
+
+[node name="牌" type="TextureRect" parent="格squareBracketsRightCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+visible = false
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="格squareBracketsRightCell/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = ""
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="字squareBracketsRightCell" type="Label" parent="格squareBracketsRightCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "]"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(1, 0.6235294117647059, 0.2588235294117647, 1)
+mouse_filter = 2
+
+[node name="格backslashCell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 570.0
+offset_top = 108.0
+offset_right = 610.0
+offset_bottom = 148.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 0
+metadata/key = "backslash"
+metadata/canset = true
+
+[node name="牌" type="TextureRect" parent="格backslashCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+visible = false
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="格backslashCell/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = ""
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="字backslashCell" type="Label" parent="格backslashCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "\\\\"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(1, 0.6235294117647059, 0.2588235294117647, 1)
+mouse_filter = 2
+
+[node name="格delCell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 627.0
+offset_top = 108.0
+offset_right = 667.0
+offset_bottom = 148.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 0
+metadata/key = "del"
+metadata/canset = true
+
+[node name="牌" type="TextureRect" parent="格delCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+visible = false
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="格delCell/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = ""
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="字delCell" type="Label" parent="格delCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "Del"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(1, 0.6235294117647059, 0.2588235294117647, 1)
+mouse_filter = 2
+
+[node name="格endCell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 669.0
+offset_top = 108.0
+offset_right = 709.0
+offset_bottom = 148.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 0
+metadata/key = "end"
+metadata/canset = true
+
+[node name="牌" type="TextureRect" parent="格endCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+visible = false
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="格endCell/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = ""
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="字endCell" type="Label" parent="格endCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "End"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(1, 0.6235294117647059, 0.2588235294117647, 1)
+mouse_filter = 2
+
+[node name="格pdnCell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 711.0
+offset_top = 108.0
+offset_right = 751.0
+offset_bottom = 148.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 0
+metadata/key = "pdn"
+metadata/canset = true
+
+[node name="牌" type="TextureRect" parent="格pdnCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+visible = false
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="格pdnCell/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = ""
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="字pdnCell" type="Label" parent="格pdnCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "Pdn"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(1, 0.6235294117647059, 0.2588235294117647, 1)
+mouse_filter = 2
+
+[node name="格lockCell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 150.0
+offset_right = 91.0
+offset_bottom = 190.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 2
+metadata/key = "lock"
+metadata/canset = false
+
+[node name="字lockCell" type="Label" parent="格lockCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 77
+offset_bottom = 18
+text = "Lock"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(0.8235294117647058, 0.8235294117647058, 0.8235294117647058, 1)
+mouse_filter = 2
+
+[node name="格aCell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 92.95
+offset_top = 150.0
+offset_right = 132.95
+offset_bottom = 190.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 0
+metadata/key = "a"
+metadata/canset = true
+
+[node name="牌" type="TextureRect" parent="格aCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="格aCell/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = "修行经验"
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="字aCell" type="Label" parent="格aCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "A"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(1, 0.6235294117647059, 0.2588235294117647, 1)
+mouse_filter = 2
+
+[node name="格sCell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 134.95
+offset_top = 150.0
+offset_right = 174.95
+offset_bottom = 190.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 0
+metadata/key = "s"
+metadata/canset = true
+
+[node name="牌" type="TextureRect" parent="格sCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="格sCell/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = "系统设置"
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="字sCell" type="Label" parent="格sCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "S"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(1, 0.6235294117647059, 0.2588235294117647, 1)
+mouse_filter = 2
+
+[node name="格dCell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 176.95
+offset_top = 150.0
+offset_right = 216.95
+offset_bottom = 190.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 0
+metadata/key = "d"
+metadata/canset = true
+
+[node name="牌" type="TextureRect" parent="格dCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="格dCell/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = "角色成就"
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="字dCell" type="Label" parent="格dCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "D"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(1, 0.6235294117647059, 0.2588235294117647, 1)
+mouse_filter = 2
+
+[node name="格fCell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 218.95
+offset_top = 150.0
+offset_right = 258.95
+offset_bottom = 190.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 0
+metadata/key = "f"
+metadata/canset = true
+
+[node name="牌" type="TextureRect" parent="格fCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="格fCell/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = "\n好友"
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="字fCell" type="Label" parent="格fCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "F"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(1, 0.6235294117647059, 0.2588235294117647, 1)
+mouse_filter = 2
+
+[node name="格gCell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 260.95
+offset_top = 150.0
+offset_right = 300.95
+offset_bottom = 190.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 0
+metadata/key = "g"
+metadata/canset = true
+
+[node name="牌" type="TextureRect" parent="格gCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="格gCell/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = "\n家族"
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="字gCell" type="Label" parent="格gCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "G"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(1, 0.6235294117647059, 0.2588235294117647, 1)
+mouse_filter = 2
+
+[node name="格hCell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 302.95
+offset_top = 150.0
+offset_right = 342.95
+offset_bottom = 190.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 0
+metadata/key = "h"
+metadata/canset = true
+
+[node name="牌" type="TextureRect" parent="格hCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="格hCell/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = "自动挂机"
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="字hCell" type="Label" parent="格hCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "H"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(1, 0.6235294117647059, 0.2588235294117647, 1)
+mouse_filter = 2
+
+[node name="格jCell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 344.95
+offset_top = 150.0
+offset_right = 384.95
+offset_bottom = 190.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 0
+metadata/key = "j"
+metadata/canset = true
+
+[node name="牌" type="TextureRect" parent="格jCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="格jCell/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = "挂机设置"
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="字jCell" type="Label" parent="格jCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "J"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(1, 0.6235294117647059, 0.2588235294117647, 1)
+mouse_filter = 2
+
+[node name="格kCell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 386.95
+offset_top = 150.0
+offset_right = 426.95
+offset_bottom = 190.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 0
+metadata/key = "k"
+metadata/canset = true
+
+[node name="牌" type="TextureRect" parent="格kCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="格kCell/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = "　排行榜"
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="字kCell" type="Label" parent="格kCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "K"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(1, 0.6235294117647059, 0.2588235294117647, 1)
+mouse_filter = 2
+
+[node name="格lCell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 428.95
+offset_top = 150.0
+offset_right = 468.95
+offset_bottom = 190.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 0
+metadata/key = "l"
+metadata/canset = true
+
+[node name="牌" type="TextureRect" parent="格lCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+visible = false
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="格lCell/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = ""
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="字lCell" type="Label" parent="格lCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "L"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(1, 0.6235294117647059, 0.2588235294117647, 1)
+mouse_filter = 2
+
+[node name="格semicolonCell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 470.95
+offset_top = 150.0
+offset_right = 510.95
+offset_bottom = 190.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 0
+metadata/key = "semicolon"
+metadata/canset = true
+
+[node name="牌" type="TextureRect" parent="格semicolonCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+visible = false
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="格semicolonCell/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = ""
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="字semicolonCell" type="Label" parent="格semicolonCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = ";"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(1, 0.6235294117647059, 0.2588235294117647, 1)
+mouse_filter = 2
+
+[node name="格apostropheCell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 513.0
+offset_top = 150.0
+offset_right = 553.0
+offset_bottom = 190.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 0
+metadata/key = "apostrophe"
+metadata/canset = true
+
+[node name="牌" type="TextureRect" parent="格apostropheCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+visible = false
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="格apostropheCell/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = ""
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="字apostropheCell" type="Label" parent="格apostropheCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "\\'"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(1, 0.6235294117647059, 0.2588235294117647, 1)
+mouse_filter = 2
+
+[node name="格enterCell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 555.0
+offset_top = 150.0
+offset_right = 610.0
+offset_bottom = 190.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 2
+metadata/key = "enter"
+metadata/canset = false
+
+[node name="字enterCell" type="Label" parent="格enterCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 55
+offset_bottom = 18
+text = "Enter"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(0.8235294117647058, 0.8235294117647058, 0.8235294117647058, 1)
+mouse_filter = 2
+
+[node name="格shiftLeftCell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 192.0
+offset_right = 101.0
+offset_bottom = 232.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 2
+metadata/key = "shiftLeft"
+metadata/canset = false
+
+[node name="字shiftLeftCell" type="Label" parent="格shiftLeftCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 87
+offset_bottom = 18
+text = "Shift"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(0.8235294117647058, 0.8235294117647058, 0.8235294117647058, 1)
+mouse_filter = 2
+
+[node name="格zCell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 103.0
+offset_top = 192.0
+offset_right = 143.0
+offset_bottom = 232.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 0
+metadata/key = "z"
+metadata/canset = true
+
+[node name="牌" type="TextureRect" parent="格zCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="格zCell/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = "\n捡取"
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="字zCell" type="Label" parent="格zCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "Z"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(1, 0.6235294117647059, 0.2588235294117647, 1)
+mouse_filter = 2
+
+[node name="格xCell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 145.0
+offset_top = 192.0
+offset_right = 185.0
+offset_bottom = 232.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 0
+metadata/key = "x"
+metadata/canset = true
+
+[node name="牌" type="TextureRect" parent="格xCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="格xCell/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = "\n打坐"
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="字xCell" type="Label" parent="格xCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "X"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(1, 0.6235294117647059, 0.2588235294117647, 1)
+mouse_filter = 2
+
+[node name="格cCell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 187.0
+offset_top = 192.0
+offset_right = 227.0
+offset_bottom = 232.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 0
+metadata/key = "c"
+metadata/canset = true
+
+[node name="牌" type="TextureRect" parent="格cCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="格cCell/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = "\n人物"
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="字cCell" type="Label" parent="格cCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "C"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(1, 0.6235294117647059, 0.2588235294117647, 1)
+mouse_filter = 2
+
+[node name="格vCell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 229.0
+offset_top = 192.0
+offset_right = 269.0
+offset_bottom = 232.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 0
+metadata/key = "v"
+metadata/canset = true
+
+[node name="牌" type="TextureRect" parent="格vCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="格vCell/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = "\n忍术"
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="字vCell" type="Label" parent="格vCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "V"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(1, 0.6235294117647059, 0.2588235294117647, 1)
+mouse_filter = 2
+
+[node name="格bCell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 271.0
+offset_top = 192.0
+offset_right = 311.0
+offset_bottom = 232.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 0
+metadata/key = "b"
+metadata/canset = true
+
+[node name="牌" type="TextureRect" parent="格bCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="格bCell/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = "\n背包"
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="字bCell" type="Label" parent="格bCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "B"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(1, 0.6235294117647059, 0.2588235294117647, 1)
+mouse_filter = 2
+
+[node name="格nCell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 313.0
+offset_top = 192.0
+offset_right = 353.0
+offset_bottom = 232.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 0
+metadata/key = "n"
+metadata/canset = true
+
+[node name="牌" type="TextureRect" parent="格nCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="格nCell/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = "\n宠物"
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="字nCell" type="Label" parent="格nCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "N"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(1, 0.6235294117647059, 0.2588235294117647, 1)
+mouse_filter = 2
+
+[node name="格mCell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 355.0
+offset_top = 192.0
+offset_right = 395.0
+offset_bottom = 232.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 0
+metadata/key = "m"
+metadata/canset = true
+
+[node name="牌" type="TextureRect" parent="格mCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="格mCell/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = "世界地图"
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="字mCell" type="Label" parent="格mCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "M"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(1, 0.6235294117647059, 0.2588235294117647, 1)
+mouse_filter = 2
+
+[node name="格commaCell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 397.0
+offset_top = 192.0
+offset_right = 437.0
+offset_bottom = 232.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 0
+metadata/key = "comma"
+metadata/canset = true
+
+[node name="牌" type="TextureRect" parent="格commaCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="格commaCell/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = "\n拔旗"
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="字commaCell" type="Label" parent="格commaCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = ","
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(1, 0.6235294117647059, 0.2588235294117647, 1)
+mouse_filter = 2
+
+[node name="格fullStopCell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 439.0
+offset_top = 192.0
+offset_right = 479.0
+offset_bottom = 232.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 0
+metadata/key = "fullStop"
+metadata/canset = true
+
+[node name="牌" type="TextureRect" parent="格fullStopCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+visible = false
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="格fullStopCell/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = ""
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="字fullStopCell" type="Label" parent="格fullStopCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "."
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(1, 0.6235294117647059, 0.2588235294117647, 1)
+mouse_filter = 2
+
+[node name="格solidusCell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 481.0
+offset_top = 192.0
+offset_right = 521.0
+offset_bottom = 232.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 2
+metadata/key = "solidus"
+metadata/canset = false
+
+[node name="字solidusCell" type="Label" parent="格solidusCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "/"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(0.8235294117647058, 0.8235294117647058, 0.8235294117647058, 1)
+mouse_filter = 2
+
+[node name="格shiftRightCell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 523.0
+offset_top = 192.0
+offset_right = 610.0
+offset_bottom = 232.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 2
+metadata/key = "shiftRight"
+metadata/canset = false
+
+[node name="字shiftRightCell" type="Label" parent="格shiftRightCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 87
+offset_bottom = 18
+text = "Shift"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(0.8235294117647058, 0.8235294117647058, 0.8235294117647058, 1)
+mouse_filter = 2
+
+[node name="格arrowUpCell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 669.0
+offset_top = 192.0
+offset_right = 709.0
+offset_bottom = 232.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 0
+metadata/key = "arrowUp"
+metadata/canset = true
+
+[node name="牌" type="TextureRect" parent="格arrowUpCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="格arrowUpCell/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = "上"
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="字arrowUpCell" type="Label" parent="格arrowUpCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "∧"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(1, 0.6235294117647059, 0.2588235294117647, 1)
+mouse_filter = 2
+
+[node name="格ctrlLeftCell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 234.0
+offset_right = 74.0
+offset_bottom = 274.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 0
+metadata/key = "ctrlLeft"
+metadata/canset = true
+
+[node name="牌" type="TextureRect" parent="格ctrlLeftCell"]
+layout_mode = 0
+offset_left = 12
+offset_top = 2
+offset_right = 48
+offset_bottom = 38
+visible = false
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="格ctrlLeftCell/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = ""
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="字ctrlLeftCell" type="Label" parent="格ctrlLeftCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 60
+offset_bottom = 18
+text = "Ctrl"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(1, 0.6235294117647059, 0.2588235294117647, 1)
+mouse_filter = 2
+
+[node name="格windowCell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 76.0
+offset_top = 234.0
+offset_right = 136.0
+offset_bottom = 274.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 2
+metadata/key = "window"
+metadata/canset = false
+
+[node name="字windowCell" type="Label" parent="格windowCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 60
+offset_bottom = 18
+text = "-"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(0.8235294117647058, 0.8235294117647058, 0.8235294117647058, 1)
+mouse_filter = 2
+
+[node name="格altLeftCell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 138.0
+offset_top = 234.0
+offset_right = 198.0
+offset_bottom = 274.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 2
+metadata/key = "altLeft"
+metadata/canset = false
+
+[node name="字altLeftCell" type="Label" parent="格altLeftCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 60
+offset_bottom = 18
+text = "Alt"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(0.8235294117647058, 0.8235294117647058, 0.8235294117647058, 1)
+mouse_filter = 2
+
+[node name="格spaceCell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 234.0
+offset_right = 424.0
+offset_bottom = 274.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 0
+metadata/key = "space"
+metadata/canset = true
+
+[node name="牌" type="TextureRect" parent="格spaceCell"]
+layout_mode = 0
+offset_left = 94
+offset_top = 2
+offset_right = 130
+offset_bottom = 38
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="格spaceCell/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = "\n跳跃"
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="字spaceCell" type="Label" parent="格spaceCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 224
+offset_bottom = 18
+text = "Space"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(1, 0.6235294117647059, 0.2588235294117647, 1)
+mouse_filter = 2
+
+[node name="格altRightCell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 426.0
+offset_top = 234.0
+offset_right = 486.0
+offset_bottom = 274.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 2
+metadata/key = "altRight"
+metadata/canset = false
+
+[node name="字altRightCell" type="Label" parent="格altRightCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 60
+offset_bottom = 18
+text = "Alt"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(0.8235294117647058, 0.8235294117647058, 0.8235294117647058, 1)
+mouse_filter = 2
+
+[node name="格menuCell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 488.0
+offset_top = 234.0
+offset_right = 548.0
+offset_bottom = 274.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 2
+metadata/key = "menu"
+metadata/canset = false
+
+[node name="字menuCell" type="Label" parent="格menuCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 60
+offset_bottom = 18
+text = "-"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(0.8235294117647058, 0.8235294117647058, 0.8235294117647058, 1)
+mouse_filter = 2
+
+[node name="格ctrlRightCell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 550.0
+offset_top = 234.0
+offset_right = 610.0
+offset_bottom = 274.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 0
+metadata/key = "ctrlRight"
+metadata/canset = true
+
+[node name="牌" type="TextureRect" parent="格ctrlRightCell"]
+layout_mode = 0
+offset_left = 12
+offset_top = 2
+offset_right = 48
+offset_bottom = 38
+visible = false
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="格ctrlRightCell/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = ""
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="字ctrlRightCell" type="Label" parent="格ctrlRightCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 60
+offset_bottom = 18
+text = "Ctrl"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(1, 0.6235294117647059, 0.2588235294117647, 1)
+mouse_filter = 2
+
+[node name="格arrowLeftCell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 627.0
+offset_top = 235.0
+offset_right = 667.0
+offset_bottom = 275.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 0
+metadata/key = "arrowLeft"
+metadata/canset = true
+
+[node name="牌" type="TextureRect" parent="格arrowLeftCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="格arrowLeftCell/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = "左"
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="字arrowLeftCell" type="Label" parent="格arrowLeftCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "＜"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(1, 0.6235294117647059, 0.2588235294117647, 1)
+mouse_filter = 2
+
+[node name="格arrowDownCell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 669.0
+offset_top = 235.0
+offset_right = 709.0
+offset_bottom = 275.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 0
+metadata/key = "arrowDown"
+metadata/canset = true
+
+[node name="牌" type="TextureRect" parent="格arrowDownCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="格arrowDownCell/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = "下"
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="字arrowDownCell" type="Label" parent="格arrowDownCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "∨"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(1, 0.6235294117647059, 0.2588235294117647, 1)
+mouse_filter = 2
+
+[node name="格arrowRightCell" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 711.0
+offset_top = 235.0
+offset_right = 751.0
+offset_bottom = 275.0
+texture = ExtResource("r2")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 8
+patch_margin_bottom = 10
+mouse_filter = 0
+metadata/key = "arrowRight"
+metadata/canset = true
+
+[node name="牌" type="TextureRect" parent="格arrowRightCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="格arrowRightCell/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = "右"
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="字arrowRightCell" type="Label" parent="格arrowRightCell"]
+layout_mode = 0
+offset_left = 2
+offset_top = 3
+offset_right = 40
+offset_bottom = 18
+text = "＞"
+theme_override_font_sizes/font_size = 11
+font_flags = 2
+theme_override_colors/font_color = Color(1, 0.6235294117647059, 0.2588235294117647, 1)
+mouse_filter = 2
+
+[node name="列格0" type="Control" parent="."]
+layout_mode = 0
+offset_left = 24
+offset_top = 330.0
+offset_right = 64
+offset_bottom = 370.0
+mouse_filter = 0
+metadata/slot = 0
+
+[node name="底" type="TextureRect" parent="列格0"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 40
+offset_bottom = 40
+texture = ExtResource("r4")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌" type="TextureRect" parent="列格0"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="列格0/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = "\n人物"
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="列格1" type="Control" parent="."]
+layout_mode = 0
+offset_left = 66
+offset_top = 330.0
+offset_right = 106
+offset_bottom = 370.0
+mouse_filter = 0
+metadata/slot = 1
+
+[node name="底" type="TextureRect" parent="列格1"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 40
+offset_bottom = 40
+texture = ExtResource("r4")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌" type="TextureRect" parent="列格1"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="列格1/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = "\n背包"
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="列格2" type="Control" parent="."]
+layout_mode = 0
+offset_left = 108
+offset_top = 330.0
+offset_right = 148
+offset_bottom = 370.0
+mouse_filter = 0
+metadata/slot = 2
+
+[node name="底" type="TextureRect" parent="列格2"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 40
+offset_bottom = 40
+texture = ExtResource("r4")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌" type="TextureRect" parent="列格2"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="列格2/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = "\n忍术"
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="列格3" type="Control" parent="."]
+layout_mode = 0
+offset_left = 150
+offset_top = 330.0
+offset_right = 190
+offset_bottom = 370.0
+mouse_filter = 0
+metadata/slot = 3
+
+[node name="底" type="TextureRect" parent="列格3"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 40
+offset_bottom = 40
+texture = ExtResource("r4")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌" type="TextureRect" parent="列格3"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="列格3/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = "\n宠物"
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="列格4" type="Control" parent="."]
+layout_mode = 0
+offset_left = 192
+offset_top = 330.0
+offset_right = 232
+offset_bottom = 370.0
+mouse_filter = 0
+metadata/slot = 4
+
+[node name="底" type="TextureRect" parent="列格4"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 40
+offset_bottom = 40
+texture = ExtResource("r4")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌" type="TextureRect" parent="列格4"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="列格4/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = "\n任务"
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="列格5" type="Control" parent="."]
+layout_mode = 0
+offset_left = 234
+offset_top = 330.0
+offset_right = 274
+offset_bottom = 370.0
+mouse_filter = 0
+metadata/slot = 5
+
+[node name="底" type="TextureRect" parent="列格5"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 40
+offset_bottom = 40
+texture = ExtResource("r4")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌" type="TextureRect" parent="列格5"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="列格5/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = "\n组队"
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="列格6" type="Control" parent="."]
+layout_mode = 0
+offset_left = 276
+offset_top = 330.0
+offset_right = 316
+offset_bottom = 370.0
+mouse_filter = 0
+metadata/slot = 6
+
+[node name="底" type="TextureRect" parent="列格6"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 40
+offset_bottom = 40
+texture = ExtResource("r4")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌" type="TextureRect" parent="列格6"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="列格6/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = "\n好友"
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="列格7" type="Control" parent="."]
+layout_mode = 0
+offset_left = 318
+offset_top = 330.0
+offset_right = 358
+offset_bottom = 370.0
+mouse_filter = 0
+metadata/slot = 7
+
+[node name="底" type="TextureRect" parent="列格7"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 40
+offset_bottom = 40
+texture = ExtResource("r4")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌" type="TextureRect" parent="列格7"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="列格7/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = "\n家族"
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="列格8" type="Control" parent="."]
+layout_mode = 0
+offset_left = 360
+offset_top = 330.0
+offset_right = 400
+offset_bottom = 370.0
+mouse_filter = 0
+metadata/slot = 8
+
+[node name="底" type="TextureRect" parent="列格8"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 40
+offset_bottom = 40
+texture = ExtResource("r4")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌" type="TextureRect" parent="列格8"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="列格8/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = "\n商城"
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="列格9" type="Control" parent="."]
+layout_mode = 0
+offset_left = 402
+offset_top = 330.0
+offset_right = 442
+offset_bottom = 370.0
+mouse_filter = 0
+metadata/slot = 9
+
+[node name="底" type="TextureRect" parent="列格9"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 40
+offset_bottom = 40
+texture = ExtResource("r4")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌" type="TextureRect" parent="列格9"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="列格9/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = "系统设置"
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="列格10" type="Control" parent="."]
+layout_mode = 0
+offset_left = 444
+offset_top = 330.0
+offset_right = 484
+offset_bottom = 370.0
+mouse_filter = 0
+metadata/slot = 10
+
+[node name="底" type="TextureRect" parent="列格10"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 40
+offset_bottom = 40
+texture = ExtResource("r4")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌" type="TextureRect" parent="列格10"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="列格10/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = "世界地图"
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="列格11" type="Control" parent="."]
+layout_mode = 0
+offset_left = 486
+offset_top = 330.0
+offset_right = 526
+offset_bottom = 370.0
+mouse_filter = 0
+metadata/slot = 11
+
+[node name="底" type="TextureRect" parent="列格11"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 40
+offset_bottom = 40
+texture = ExtResource("r4")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌" type="TextureRect" parent="列格11"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="列格11/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = "遮罩造型"
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="列格12" type="Control" parent="."]
+layout_mode = 0
+offset_left = 528
+offset_top = 330.0
+offset_right = 568
+offset_bottom = 370.0
+mouse_filter = 0
+metadata/slot = 12
+
+[node name="底" type="TextureRect" parent="列格12"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 40
+offset_bottom = 40
+texture = ExtResource("r4")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌" type="TextureRect" parent="列格12"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="列格12/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = "遮罩名字"
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="列格13" type="Control" parent="."]
+layout_mode = 0
+offset_left = 570
+offset_top = 330.0
+offset_right = 610
+offset_bottom = 370.0
+mouse_filter = 0
+metadata/slot = 13
+
+[node name="底" type="TextureRect" parent="列格13"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 40
+offset_bottom = 40
+texture = ExtResource("r4")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌" type="TextureRect" parent="列格13"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="列格13/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = "音乐开关"
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="列格14" type="Control" parent="."]
+layout_mode = 0
+offset_left = 612
+offset_top = 330.0
+offset_right = 652
+offset_bottom = 370.0
+mouse_filter = 0
+metadata/slot = 14
+
+[node name="底" type="TextureRect" parent="列格14"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 40
+offset_bottom = 40
+texture = ExtResource("r4")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌" type="TextureRect" parent="列格14"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="列格14/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = "修行经验"
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="列格15" type="Control" parent="."]
+layout_mode = 0
+offset_left = 654
+offset_top = 330.0
+offset_right = 694
+offset_bottom = 370.0
+mouse_filter = 0
+metadata/slot = 15
+
+[node name="底" type="TextureRect" parent="列格15"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 40
+offset_bottom = 40
+texture = ExtResource("r4")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌" type="TextureRect" parent="列格15"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="列格15/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = "挂机设置"
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="列格16" type="Control" parent="."]
+layout_mode = 0
+offset_left = 696
+offset_top = 330.0
+offset_right = 736
+offset_bottom = 370.0
+mouse_filter = 0
+metadata/slot = 16
+
+[node name="底" type="TextureRect" parent="列格16"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 40
+offset_bottom = 40
+texture = ExtResource("r4")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌" type="TextureRect" parent="列格16"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="列格16/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = "　排行榜"
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="列格17" type="Control" parent="."]
+layout_mode = 0
+offset_left = 24
+offset_top = 372.0
+offset_right = 64
+offset_bottom = 412.0
+mouse_filter = 0
+metadata/slot = 17
+
+[node name="底" type="TextureRect" parent="列格17"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 40
+offset_bottom = 40
+texture = ExtResource("r4")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌" type="TextureRect" parent="列格17"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="列格17/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = "角色成就"
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="列格18" type="Control" parent="."]
+layout_mode = 0
+offset_left = 66
+offset_top = 372.0
+offset_right = 106
+offset_bottom = 412.0
+mouse_filter = 0
+metadata/slot = 18
+
+[node name="底" type="TextureRect" parent="列格18"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 40
+offset_bottom = 40
+texture = ExtResource("r4")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌" type="TextureRect" parent="列格18"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="列格18/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = "缩放聊天"
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="列格19" type="Control" parent="."]
+layout_mode = 0
+offset_left = 108
+offset_top = 372.0
+offset_right = 148
+offset_bottom = 412.0
+mouse_filter = 0
+metadata/slot = 19
+
+[node name="底" type="TextureRect" parent="列格19"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 40
+offset_bottom = 40
+texture = ExtResource("r4")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌" type="TextureRect" parent="列格19"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="列格19/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = "切换目标"
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="列格20" type="Control" parent="."]
+layout_mode = 0
+offset_left = 150
+offset_top = 372.0
+offset_right = 190
+offset_bottom = 412.0
+mouse_filter = 0
+metadata/slot = 20
+
+[node name="底" type="TextureRect" parent="列格20"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 40
+offset_bottom = 40
+texture = ExtResource("r4")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌" type="TextureRect" parent="列格20"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="列格20/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = "\n捡取"
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="列格21" type="Control" parent="."]
+layout_mode = 0
+offset_left = 192
+offset_top = 372.0
+offset_right = 232
+offset_bottom = 412.0
+mouse_filter = 0
+metadata/slot = 21
+
+[node name="底" type="TextureRect" parent="列格21"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 40
+offset_bottom = 40
+texture = ExtResource("r4")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌" type="TextureRect" parent="列格21"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="列格21/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = "\n跳跃"
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="列格22" type="Control" parent="."]
+layout_mode = 0
+offset_left = 234
+offset_top = 372.0
+offset_right = 274
+offset_bottom = 412.0
+mouse_filter = 0
+metadata/slot = 22
+
+[node name="底" type="TextureRect" parent="列格22"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 40
+offset_bottom = 40
+texture = ExtResource("r4")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌" type="TextureRect" parent="列格22"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="列格22/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = "\n打坐"
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="列格23" type="Control" parent="."]
+layout_mode = 0
+offset_left = 276
+offset_top = 372.0
+offset_right = 316
+offset_bottom = 412.0
+mouse_filter = 0
+metadata/slot = 23
+
+[node name="底" type="TextureRect" parent="列格23"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 40
+offset_bottom = 40
+texture = ExtResource("r4")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌" type="TextureRect" parent="列格23"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="列格23/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = "自动挂机"
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="列格24" type="Control" parent="."]
+layout_mode = 0
+offset_left = 318
+offset_top = 372.0
+offset_right = 358
+offset_bottom = 412.0
+mouse_filter = 0
+metadata/slot = 24
+
+[node name="底" type="TextureRect" parent="列格24"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 40
+offset_bottom = 40
+texture = ExtResource("r4")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌" type="TextureRect" parent="列格24"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="列格24/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = "通灵附身"
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="列格25" type="Control" parent="."]
+layout_mode = 0
+offset_left = 360
+offset_top = 372.0
+offset_right = 400
+offset_bottom = 412.0
+mouse_filter = 0
+metadata/slot = 25
+
+[node name="底" type="TextureRect" parent="列格25"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 40
+offset_bottom = 40
+texture = ExtResource("r4")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌" type="TextureRect" parent="列格25"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="列格25/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = "上"
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="列格26" type="Control" parent="."]
+layout_mode = 0
+offset_left = 402
+offset_top = 372.0
+offset_right = 442
+offset_bottom = 412.0
+mouse_filter = 0
+metadata/slot = 26
+
+[node name="底" type="TextureRect" parent="列格26"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 40
+offset_bottom = 40
+texture = ExtResource("r4")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌" type="TextureRect" parent="列格26"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="列格26/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = "下"
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="列格27" type="Control" parent="."]
+layout_mode = 0
+offset_left = 444
+offset_top = 372.0
+offset_right = 484
+offset_bottom = 412.0
+mouse_filter = 0
+metadata/slot = 27
+
+[node name="底" type="TextureRect" parent="列格27"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 40
+offset_bottom = 40
+texture = ExtResource("r4")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌" type="TextureRect" parent="列格27"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="列格27/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = "左"
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="列格28" type="Control" parent="."]
+layout_mode = 0
+offset_left = 486
+offset_top = 372.0
+offset_right = 526
+offset_bottom = 412.0
+mouse_filter = 0
+metadata/slot = 28
+
+[node name="底" type="TextureRect" parent="列格28"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 40
+offset_bottom = 40
+texture = ExtResource("r4")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌" type="TextureRect" parent="列格28"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="列格28/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = "右"
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="列格29" type="Control" parent="."]
+layout_mode = 0
+offset_left = 528
+offset_top = 372.0
+offset_right = 568
+offset_bottom = 412.0
+mouse_filter = 0
+metadata/slot = 29
+
+[node name="底" type="TextureRect" parent="列格29"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 40
+offset_bottom = 40
+texture = ExtResource("r4")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌" type="TextureRect" parent="列格29"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="列格29/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = "\n攻击"
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="列格30" type="Control" parent="."]
+layout_mode = 0
+offset_left = 570
+offset_top = 372.0
+offset_right = 610
+offset_bottom = 412.0
+mouse_filter = 0
+metadata/slot = 30
+
+[node name="底" type="TextureRect" parent="列格30"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 40
+offset_bottom = 40
+texture = ExtResource("r4")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌" type="TextureRect" parent="列格30"]
+layout_mode = 0
+offset_left = 2
+offset_top = 2
+offset_right = 38
+offset_bottom = 38
+texture = ExtResource("r3")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="牌字" type="Label" parent="列格30/牌"]
+layout_mode = 0
+offset_left = 5
+offset_top = 5
+offset_right = 36
+offset_bottom = 36
+text = "\n拔旗"
+horizontal_alignment = 2
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+font_flags = 2
+mouse_filter = 2
+
+[node name="列格31" type="Control" parent="."]
+layout_mode = 0
+offset_left = 612
+offset_top = 372.0
+offset_right = 652
+offset_bottom = 412.0
+mouse_filter = 0
+metadata/slot = 31
+
+[node name="底" type="TextureRect" parent="列格31"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 40
+offset_bottom = 40
+texture = ExtResource("r4")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="列格32" type="Control" parent="."]
+layout_mode = 0
+offset_left = 654
+offset_top = 372.0
+offset_right = 694
+offset_bottom = 412.0
+mouse_filter = 0
+metadata/slot = 32
+
+[node name="底" type="TextureRect" parent="列格32"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 40
+offset_bottom = 40
+texture = ExtResource("r4")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="列格33" type="Control" parent="."]
+layout_mode = 0
+offset_left = 696
+offset_top = 372.0
+offset_right = 736
+offset_bottom = 412.0
+mouse_filter = 0
+metadata/slot = 33
+
+[node name="底" type="TextureRect" parent="列格33"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 40
+offset_bottom = 40
+texture = ExtResource("r4")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="钮确定" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 515
+offset_top = 288.0
+offset_right = 547
+offset_bottom = 310.0
+texture_normal = ExtResource("r5")
+ignore_texture_size = true
+stretch_mode = 0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+metadata/skin = "res://素材/界面/原版窗口/设置/钮底"
+metadata/act = "快捷键:确定"
+
+[node name="字确定" type="Label" parent="钮确定"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 32
+offset_bottom = 22
+text = "确定"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+mouse_filter = 2
+
+[node name="钮取消" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 552
+offset_top = 288.0
+offset_right = 584
+offset_bottom = 310.0
+texture_normal = ExtResource("r5")
+ignore_texture_size = true
+stretch_mode = 0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+metadata/skin = "res://素材/界面/原版窗口/设置/钮底"
+metadata/act = "快捷键:取消"
+
+[node name="字取消" type="Label" parent="钮取消"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 32
+offset_bottom = 22
+text = "取消"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+mouse_filter = 2
+
+[node name="钮全部重置" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 638
+offset_top = 288.0
+offset_right = 692
+offset_bottom = 310.0
+texture_normal = ExtResource("r5")
+ignore_texture_size = true
+stretch_mode = 0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+metadata/skin = "res://素材/界面/原版窗口/设置/钮底"
+metadata/act = "快捷键:全部重置"
+
+[node name="字全部重置" type="Label" parent="钮全部重置"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 54
+offset_bottom = 22
+text = "全部重置"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+mouse_filter = 2
+
+[node name="钮全部消除" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 697
+offset_top = 288.0
+offset_right = 751
+offset_bottom = 310.0
+texture_normal = ExtResource("r5")
+ignore_texture_size = true
+stretch_mode = 0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+metadata/skin = "res://素材/界面/原版窗口/设置/钮底"
+metadata/act = "快捷键:全部消除"
+
+[node name="字全部消除" type="Label" parent="钮全部消除"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 54
+offset_bottom = 22
+text = "全部消除"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+mouse_filter = 2
+
+[node name="钮方案1" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 14
+offset_top = 288.0
+offset_right = 86
+offset_bottom = 310.0
+texture_normal = ExtResource("r6")
+ignore_texture_size = true
+stretch_mode = 0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+metadata/skin = "res://素材/界面/原版窗口/设置/钮底选中"
+metadata/act = "快捷键:方案1"
+
+[node name="字方案1" type="Label" parent="钮方案1"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 72
+offset_bottom = 22
+text = "方案1(空)"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+mouse_filter = 2
+
+[node name="钮方案2" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 89
+offset_top = 288.0
+offset_right = 161
+offset_bottom = 310.0
+texture_normal = ExtResource("r5")
+ignore_texture_size = true
+stretch_mode = 0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+metadata/skin = "res://素材/界面/原版窗口/设置/钮底"
+metadata/act = "快捷键:方案2"
+
+[node name="字方案2" type="Label" parent="钮方案2"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 72
+offset_bottom = 22
+text = "方案2(空)"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+mouse_filter = 2
+
+[node name="钮方案3" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 164
+offset_top = 288.0
+offset_right = 236
+offset_bottom = 310.0
+texture_normal = ExtResource("r5")
+ignore_texture_size = true
+stretch_mode = 0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+metadata/skin = "res://素材/界面/原版窗口/设置/钮底"
+metadata/act = "快捷键:方案3"
+
+[node name="字方案3" type="Label" parent="钮方案3"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 72
+offset_bottom = 22
+text = "方案3(空)"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+mouse_filter = 2
+
+[node name="钮方案4" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 239
+offset_top = 288.0
+offset_right = 311
+offset_bottom = 310.0
+texture_normal = ExtResource("r5")
+ignore_texture_size = true
+stretch_mode = 0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+metadata/skin = "res://素材/界面/原版窗口/设置/钮底"
+metadata/act = "快捷键:方案4"
+
+[node name="字方案4" type="Label" parent="钮方案4"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 72
+offset_bottom = 22
+text = "方案4(空)"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+mouse_filter = 2
+
+[node name="钮方案5" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 314
+offset_top = 288.0
+offset_right = 386
+offset_bottom = 310.0
+texture_normal = ExtResource("r5")
+ignore_texture_size = true
+stretch_mode = 0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+metadata/skin = "res://素材/界面/原版窗口/设置/钮底"
+metadata/act = "快捷键:方案5"
+
+[node name="字方案5" type="Label" parent="钮方案5"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 72
+offset_bottom = 22
+text = "方案5(空)"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+mouse_filter = 2
+
+[node name="钮保存方案" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 392
+offset_top = 288.0
+offset_right = 464
+offset_bottom = 310.0
+texture_normal = ExtResource("r5")
+ignore_texture_size = true
+stretch_mode = 0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+metadata/skin = "res://素材/界面/原版窗口/设置/钮底"
+metadata/act = "快捷键:保存方案"
+
+[node name="字保存方案" type="Label" parent="钮保存方案"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 72
+offset_bottom = 22
+text = "保存方案"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+mouse_filter = 2

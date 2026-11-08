@@ -1,0 +1,321 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/横向分隔线.png" id="1_line"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/宠物/宠物装备面板.png" id="2_petbg"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/经验条槽.png" id="3_slot"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/经验条填充.png" id="3_fill"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/复选框未选.png" id="4_chk_off"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/复选框选中.png" id="5_chk_on"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/物品格.png" id="6_grid"]
+
+[node name="宠物进阶页" type="Control"]
+custom_minimum_size = Vector2(388, 354)
+
+[node name="分隔线_0" type="TextureRect" parent="."]
+offset_top = 18.0
+offset_right = 388.0
+offset_bottom = 20.0
+mouse_filter = 2
+texture = ExtResource("1_line")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="标题" type="Label" parent="."]
+offset_top = -2.0
+offset_right = 388.0
+offset_bottom = 18.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "你当前通灵兽："
+
+[node name="图底" type="TextureRect" parent="."]
+offset_left = 7.0
+offset_top = 24.0
+offset_right = 227.0
+offset_bottom = 134.0
+mouse_filter = 2
+texture = ExtResource("2_petbg")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="模型位" type="Control" parent="."]
+offset_left = 120.0
+offset_top = 120.0
+mouse_filter = 2
+
+[node name="流程" type="RichTextLabel" parent="."]
+offset_left = 236.0
+offset_top = 24.0
+offset_right = 391.0
+offset_bottom = 124.0
+mouse_filter = 2
+bbcode_enabled = true
+scroll_active = false
+
+[node name="分隔线_1" type="TextureRect" parent="."]
+offset_top = 135.0
+offset_right = 388.0
+offset_bottom = 137.0
+mouse_filter = 2
+texture = ExtResource("1_line")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="说明" type="Label" parent="."]
+offset_top = 140.0
+offset_right = 388.0
+offset_bottom = 175.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.941, 0.502, 0, 1)
+autowrap_mode = 2
+text = "在进行通灵兽进阶操作时，若使用“记忆符”作为辅助道具则可确保通灵兽在进行进阶操作时其品级、悟性和技能保持不变"
+
+[node name="分隔线_2" type="TextureRect" parent="."]
+offset_top = 176.0
+offset_right = 388.0
+offset_bottom = 178.0
+mouse_filter = 2
+texture = ExtResource("1_line")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="祝福标签" type="Label" parent="."]
+offset_top = 183.0
+offset_right = 124.0
+offset_bottom = 201.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "进阶成功几率祝福值："
+
+[node name="祝福条" type="Control" parent="."]
+offset_left = 118.0
+offset_top = 186.0
+offset_right = 286.0
+offset_bottom = 197.0
+[node name="底" type="TextureRect" parent="祝福条"]
+offset_right = 168.0
+offset_bottom = 11.0
+mouse_filter = 2
+texture = ExtResource("3_slot")
+expand_mode = 1
+stretch_mode = 0
+[node name="裁剪" type="Control" parent="祝福条"]
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 165.0
+offset_bottom = 8.0
+mouse_filter = 2
+clip_contents = true
+[node name="填充" type="TextureRect" parent="祝福条/裁剪"]
+offset_left = -171.0
+offset_top = -3.0
+offset_right = -3.0
+offset_bottom = 8.0
+mouse_filter = 2
+texture = ExtResource("3_fill")
+expand_mode = 1
+stretch_mode = 0
+[node name="值" type="Label" parent="祝福条"]
+offset_left = 2.0
+offset_right = 170.0
+offset_bottom = 18.0
+mouse_filter = 2
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "0/1000"
+horizontal_alignment = 1
+
+[node name="提示" type="Button" parent="."]
+offset_left = 291.0
+offset_top = 183.0
+offset_right = 321.0
+offset_bottom = 205.0
+focus_mode = 0
+text = "提示"
+
+[node name="祝福说明" type="RichTextLabel" parent="."]
+offset_top = 205.0
+offset_right = 388.0
+offset_bottom = 225.0
+mouse_filter = 2
+bbcode_enabled = true
+scroll_active = false
+
+[node name="分隔线_3" type="TextureRect" parent="."]
+offset_top = 225.0
+offset_right = 388.0
+offset_bottom = 227.0
+mouse_filter = 2
+texture = ExtResource("1_line")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="进阶符格" type="Control" parent="."]
+offset_left = 16.0
+offset_top = 224.0
+offset_right = 61.0
+offset_bottom = 312.0
+[node name="名" type="Label" parent="进阶符格"]
+offset_right = 45.0
+offset_bottom = 20.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 0.569, 0, 1)
+text = "进阶符"
+horizontal_alignment = 1
+[node name="底" type="TextureRect" parent="进阶符格"]
+offset_left = 2.5
+offset_top = 20.0
+offset_right = 42.5
+offset_bottom = 60.0
+mouse_filter = 2
+texture = ExtResource("6_grid")
+expand_mode = 1
+stretch_mode = 0
+[node name="图标" type="TextureRect" parent="进阶符格"]
+offset_left = 5.5
+offset_top = 23.0
+offset_right = 39.5
+offset_bottom = 57.0
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+[node name="数量" type="Label" parent="进阶符格"]
+offset_left = 2.5
+offset_top = 40.0
+offset_right = 42.5
+offset_bottom = 60.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "0"
+horizontal_alignment = 2
+[node name="购买" type="Button" parent="进阶符格"]
+offset_left = 4.0
+offset_top = 63.0
+offset_right = 41.0
+offset_bottom = 85.0
+focus_mode = 0
+text = "购买"
+
+[node name="记忆符格" type="Control" parent="."]
+offset_left = 92.0
+offset_top = 224.0
+offset_right = 137.0
+offset_bottom = 312.0
+[node name="名" type="Label" parent="记忆符格"]
+offset_right = 45.0
+offset_bottom = 20.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 0.569, 0, 1)
+text = "记忆符"
+horizontal_alignment = 1
+[node name="底" type="TextureRect" parent="记忆符格"]
+offset_left = 2.5
+offset_top = 20.0
+offset_right = 42.5
+offset_bottom = 60.0
+mouse_filter = 2
+texture = ExtResource("6_grid")
+expand_mode = 1
+stretch_mode = 0
+[node name="图标" type="TextureRect" parent="记忆符格"]
+offset_left = 5.5
+offset_top = 23.0
+offset_right = 39.5
+offset_bottom = 57.0
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+[node name="数量" type="Label" parent="记忆符格"]
+offset_left = 2.5
+offset_top = 40.0
+offset_right = 42.5
+offset_bottom = 60.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "0"
+horizontal_alignment = 2
+[node name="购买" type="Button" parent="记忆符格"]
+offset_left = 4.0
+offset_top = 63.0
+offset_right = 41.0
+offset_bottom = 85.0
+focus_mode = 0
+text = "购买"
+
+[node name="消耗" type="RichTextLabel" parent="."]
+offset_left = 200.0
+offset_top = 244.0
+offset_right = 380.0
+offset_bottom = 264.0
+mouse_filter = 2
+bbcode_enabled = true
+scroll_active = false
+text = "本次操作消耗金币 ：0"
+
+[node name="成功率" type="RichTextLabel" parent="."]
+offset_left = 200.0
+offset_top = 260.0
+offset_right = 380.0
+offset_bottom = 280.0
+mouse_filter = 2
+bbcode_enabled = true
+scroll_active = false
+text = "本次操作成功几率 ：0%"
+
+[node name="用记忆符" type="Button" parent="."]
+offset_left = 180.0
+offset_top = 285.0
+offset_right = 391.0
+offset_bottom = 305.0
+focus_mode = 0
+[node name="框" type="TextureRect" parent="用记忆符"]
+offset_top = 1.0
+offset_right = 19.0
+offset_bottom = 20.0
+mouse_filter = 2
+texture = ExtResource("4_chk_off")
+expand_mode = 1
+stretch_mode = 4
+[node name="文本" type="Label" parent="用记忆符"]
+offset_left = 22.0
+offset_right = 211.0
+offset_bottom = 20.0
+mouse_filter = 2
+text = "本次操作使用记忆符"
+
+[node name="失败后继续" type="Button" parent="."]
+offset_left = 232.0
+offset_top = 317.0
+offset_right = 322.0
+offset_bottom = 339.0
+focus_mode = 0
+[node name="框" type="TextureRect" parent="失败后继续"]
+offset_top = 1.0
+offset_right = 19.0
+offset_bottom = 20.0
+mouse_filter = 2
+texture = ExtResource("4_chk_off")
+expand_mode = 1
+stretch_mode = 4
+[node name="文本" type="Label" parent="失败后继续"]
+offset_left = 22.0
+offset_right = 100.0
+offset_bottom = 20.0
+mouse_filter = 2
+text = "失败后自动继续"
+
+[node name="开始提升" type="Button" parent="."]
+offset_left = 332.0
+offset_top = 317.0
+offset_right = 386.0
+offset_bottom = 339.0
+focus_mode = 0
+text = "开始提升"
+
+[node name="分隔线_4" type="TextureRect" parent="."]
+offset_top = 311.0
+offset_right = 388.0
+offset_bottom = 313.0
+mouse_filter = 2
+texture = ExtResource("1_line")
+expand_mode = 1
+stretch_mode = 0

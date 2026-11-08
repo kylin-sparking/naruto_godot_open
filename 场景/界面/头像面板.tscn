@@ -1,0 +1,1010 @@
+[gd_scene format=3 uid="uid://cljvh16hyncgd"]
+
+[ext_resource type="Script" uid="uid://bqck6f6fjv07b" path="res://脚本/界面/头像面板.gd" id="1_yinqn"]
+[ext_resource type="Texture2D" uid="uid://brxhbaxkxwlky" path="res://素材/界面/通用界面/hud_411.png" id="2_fe17b"]
+[ext_resource type="Texture2D" uid="uid://bogj26hp3an3u" path="res://素材/角色动画/玩家/木叶忍者_00000001/Char_00000001.swf_42_Char_00000001_info_portrait.png" id="3_ym2v1"]
+[ext_resource type="Texture2D" uid="uid://cu2wlsshop51h" path="res://素材/界面/通用界面/UISwf_FriendIcon.swf_414.png" id="4_q1he1"]
+[ext_resource type="Texture2D" uid="uid://d1es6auqf5fb" path="res://素材/界面/通用界面/UISwf_FriendIcon.swf_417.png" id="5_1tjc5"]
+[ext_resource type="Texture2D" uid="uid://bkjyma8ib24hy" path="res://素材/界面/通用界面/UISwf_FriendIcon.swf_421.png" id="6_1g3h5"]
+[ext_resource type="Texture2D" uid="uid://c7ug065afufw2" path="res://素材/界面/通用界面/UISwf_FriendIcon.swf_425.png" id="7_fo8el"]
+[ext_resource type="Texture2D" uid="uid://045gpxcagvrj" path="res://素材/界面/通用界面/UISwf_FriendIcon.swf_749.png" id="8_npfdp"]
+[ext_resource type="Texture2D" uid="uid://dixyuso1h2466" path="res://素材/界面/通用界面/UISwf_Text.swf_52.png" id="9_vve5j"]
+[ext_resource type="Texture2D" uid="uid://dn10uqn6p6ljv" path="res://素材/界面/通用界面/UISwf_Text.swf_49.png" id="11_gl33g"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/头像面板/模式_普通.png" id="12_pkup"]
+[ext_resource type="Texture2D" uid="uid://citwdfdvn0y7o" path="res://素材/界面/原版窗口/组队/队长标.png" id="13_dzb"]
+[ext_resource type="Texture2D" uid="uid://di7bjmclkyo6e" path="res://素材/状态图标/Buff_System_0/Buff_System_0_icon.png" id="16_261ac"]
+[ext_resource type="Texture2D" uid="uid://dya22vf81wg8j" path="res://素材/状态图标/Buff_System_1/Buff_System_1_icon.png" id="17_e3xdf"]
+[ext_resource type="Texture2D" uid="uid://c77i15gsj53k2" path="res://素材/状态图标/Buff_Weather_0/Buff_Weather_0_icon.png" id="18_akbvl"]
+[ext_resource type="Texture2D" uid="uid://bqa3j7sdge5j7" path="res://素材/状态图标/Buff_Weather_1/Buff_Weather_1_icon.png" id="19_q7xui"]
+[ext_resource type="Texture2D" uid="uid://lgmupyryl23g" path="res://素材/状态图标/Buff_Weather_2/Buff_Weather_2_icon.png" id="20_yuavh"]
+[ext_resource type="Texture2D" uid="uid://djkfjjumkgxlo" path="res://素材/状态图标/Buff_Weather_3/Buff_Weather_3_icon.png" id="21_vpb1s"]
+[ext_resource type="PackedScene" path="res://场景/界面/组件/物品菜单.tscn" id="22_tmenu"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/目标信息/头像圆框.png" id="23_ring"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/目标信息/底板.png" id="24_plate"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/目标信息/条底板.png" id="25_barbg"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/目标信息/血条填充.png" id="26_hpfl"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/目标信息/蓝条填充.png" id="27_mpfl"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/目标信息/钮_查看资料.png" id="28_binfo"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/目标信息/钮_交易.png" id="29_btrade"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/目标信息/钮_加好友.png" id="30_bfriend"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/目标信息/钮_组队.png" id="31_btroop"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/目标信息/钮_私聊.png" id="32_bwhisp"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/目标信息/钮_菜单.png" id="33_bmenu"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/状态格底.png" id="30_tilebuff"]
+[ext_resource type="Shader" path="res://脚本/界面/组件/冷却扇形.gdshader" id="31_coolshader"]
+[sub_resource type="ShaderMaterial" id="BuffMat1"]
+shader = ExtResource("31_coolshader")
+shader_parameter/progress = 0.0
+shader_parameter/corner = 5.0
+shader_parameter/cover_alpha = 0.4
+
+[sub_resource type="ShaderMaterial" id="BuffMat2"]
+shader = ExtResource("31_coolshader")
+shader_parameter/progress = 0.0
+shader_parameter/corner = 5.0
+shader_parameter/cover_alpha = 0.4
+
+[sub_resource type="ShaderMaterial" id="BuffMat3"]
+shader = ExtResource("31_coolshader")
+shader_parameter/progress = 0.0
+shader_parameter/corner = 5.0
+shader_parameter/cover_alpha = 0.4
+
+[sub_resource type="ShaderMaterial" id="BuffMat4"]
+shader = ExtResource("31_coolshader")
+shader_parameter/progress = 0.0
+shader_parameter/corner = 5.0
+shader_parameter/cover_alpha = 0.4
+
+[sub_resource type="ShaderMaterial" id="BuffMat5"]
+shader = ExtResource("31_coolshader")
+shader_parameter/progress = 0.0
+shader_parameter/corner = 5.0
+shader_parameter/cover_alpha = 0.4
+
+[sub_resource type="ShaderMaterial" id="BuffMat6"]
+shader = ExtResource("31_coolshader")
+shader_parameter/progress = 0.0
+shader_parameter/corner = 5.0
+shader_parameter/cover_alpha = 0.4
+
+[sub_resource type="ShaderMaterial" id="BuffMat7"]
+shader = ExtResource("31_coolshader")
+shader_parameter/progress = 0.0
+shader_parameter/corner = 5.0
+shader_parameter/cover_alpha = 0.4
+
+[sub_resource type="ShaderMaterial" id="BuffMat8"]
+shader = ExtResource("31_coolshader")
+shader_parameter/progress = 0.0
+shader_parameter/corner = 5.0
+shader_parameter/cover_alpha = 0.4
+
+[sub_resource type="ShaderMaterial" id="BuffMat9"]
+shader = ExtResource("31_coolshader")
+shader_parameter/progress = 0.0
+shader_parameter/corner = 5.0
+shader_parameter/cover_alpha = 0.4
+
+[sub_resource type="ShaderMaterial" id="BuffMat10"]
+shader = ExtResource("31_coolshader")
+shader_parameter/progress = 0.0
+shader_parameter/corner = 5.0
+shader_parameter/cover_alpha = 0.4
+
+[sub_resource type="ShaderMaterial" id="BuffMat11"]
+shader = ExtResource("31_coolshader")
+shader_parameter/progress = 0.0
+shader_parameter/corner = 5.0
+shader_parameter/cover_alpha = 0.4
+
+[sub_resource type="ShaderMaterial" id="BuffMat12"]
+shader = ExtResource("31_coolshader")
+shader_parameter/progress = 0.0
+shader_parameter/corner = 5.0
+shader_parameter/cover_alpha = 0.4
+
+[sub_resource type="ShaderMaterial" id="BuffMat13"]
+shader = ExtResource("31_coolshader")
+shader_parameter/progress = 0.0
+shader_parameter/corner = 5.0
+shader_parameter/cover_alpha = 0.4
+
+[sub_resource type="ShaderMaterial" id="BuffMat14"]
+shader = ExtResource("31_coolshader")
+shader_parameter/progress = 0.0
+shader_parameter/corner = 5.0
+shader_parameter/cover_alpha = 0.4
+
+[sub_resource type="ShaderMaterial" id="BuffMat15"]
+shader = ExtResource("31_coolshader")
+shader_parameter/progress = 0.0
+shader_parameter/corner = 5.0
+shader_parameter/cover_alpha = 0.4
+
+[sub_resource type="ShaderMaterial" id="BuffMat16"]
+shader = ExtResource("31_coolshader")
+shader_parameter/progress = 0.0
+shader_parameter/corner = 5.0
+shader_parameter/cover_alpha = 0.4
+
+[sub_resource type="ShaderMaterial" id="BuffMat17"]
+shader = ExtResource("31_coolshader")
+shader_parameter/progress = 0.0
+shader_parameter/corner = 5.0
+shader_parameter/cover_alpha = 0.4
+
+[sub_resource type="ShaderMaterial" id="BuffMat18"]
+shader = ExtResource("31_coolshader")
+shader_parameter/progress = 0.0
+shader_parameter/corner = 5.0
+shader_parameter/cover_alpha = 0.4
+
+[node name="头像面板" type="CanvasLayer" unique_id=517169387]
+layer = 300
+script = ExtResource("1_yinqn")
+
+[node name="头像区域" type="Control" parent="." unique_id=2039853881]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -4.0
+offset_right = 1.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="角色状态" type="TextureRect" parent="头像区域" unique_id=1388156837]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 264.0
+offset_bottom = 77.0
+mouse_filter = 2
+texture = ExtResource("2_fe17b")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Portrait" type="TextureRect" parent="头像区域/角色状态" unique_id=1462404486]
+layout_mode = 0
+offset_right = 74.0
+offset_bottom = 73.0
+mouse_filter = 2
+texture = ExtResource("3_ym2v1")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="StatusName" type="Label" parent="头像区域/角色状态" unique_id=2135495373]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 3.0
+offset_right = 179.0
+offset_bottom = 21.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_font_sizes/font_size = 13
+
+[node name="StatusLevel" type="Label" parent="头像区域/角色状态" unique_id=450643771]
+layout_mode = 0
+offset_left = 174.0
+offset_top = 3.0
+offset_right = 219.0
+offset_bottom = 21.0
+theme_override_colors/font_color = Color(1, 0.82, 0.12, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_font_sizes/font_size = 13
+
+[node name="HpBarBackground" type="TextureRect" parent="头像区域/角色状态" unique_id=1041955961]
+layout_mode = 0
+offset_left = 71.0
+offset_top = 26.0
+offset_right = 209.0
+offset_bottom = 41.0
+mouse_filter = 2
+texture = ExtResource("4_q1he1")
+
+[node name="HpBar" type="TextureProgressBar" parent="头像区域/角色状态" unique_id=1179571654]
+layout_mode = 0
+offset_left = 71.0
+offset_top = 26.0
+offset_right = 209.0
+offset_bottom = 41.0
+value = 100.0
+texture_progress = ExtResource("5_1tjc5")
+
+[node name="MpBarBackground" type="TextureRect" parent="头像区域/角色状态" unique_id=654428421]
+layout_mode = 0
+offset_left = 71.0
+offset_top = 41.0
+offset_right = 209.0
+offset_bottom = 57.0
+mouse_filter = 2
+texture = ExtResource("4_q1he1")
+
+[node name="MpBar" type="TextureProgressBar" parent="头像区域/角色状态" unique_id=934591934]
+layout_mode = 0
+offset_left = 71.0
+offset_top = 41.0
+offset_right = 209.0
+offset_bottom = 57.0
+value = 100.0
+texture_progress = ExtResource("6_1g3h5")
+
+[node name="HpBarDecoration" type="TextureRect" parent="头像区域/角色状态" unique_id=1831192739]
+layout_mode = 0
+offset_left = 177.0
+offset_top = 29.0
+offset_right = 186.0
+offset_bottom = 39.0
+mouse_filter = 2
+texture = ExtResource("7_fo8el")
+
+[node name="AutoCombatSettings" type="Control" parent="头像区域/角色状态" unique_id=76437155]
+anchors_preset = 0
+offset_left = 62.0
+offset_top = 55.0
+offset_right = 132.0
+offset_bottom = 77.0
+
+[node name="HangLabel" type="TextureRect" parent="头像区域/角色状态/AutoCombatSettings" unique_id=542057530]
+layout_mode = 0
+offset_left = -19.0
+offset_top = -3.0
+offset_right = 69.0
+offset_bottom = 19.0
+mouse_filter = 2
+texture = ExtResource("8_npfdp")
+
+[node name="HangLabelText" type="Label" parent="头像区域/角色状态/AutoCombatSettings/HangLabel" unique_id=530857238]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 2.0
+offset_right = 79.0
+offset_bottom = 22.0
+theme_override_colors/font_color = Color(1, 0.82, 0.2, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_font_sizes/font_size = 12
+text = "挂机设置"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="UnderBarButtons" type="HBoxContainer" parent="头像区域/角色状态" unique_id=418739903]
+layout_mode = 0
+offset_left = 132.0
+offset_top = 50.0
+offset_right = 254.0
+offset_bottom = 85.0
+theme_override_constants/separation = 1
+
+[node name="ExchangeButton" type="TextureButton" parent="头像区域/角色状态/UnderBarButtons" unique_id=1172304581]
+custom_minimum_size = Vector2(23, 23)
+layout_mode = 2
+tooltip_text = "兑换"
+texture_normal = ExtResource("9_vve5j")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="CheckInButton" type="TextureButton" parent="头像区域/角色状态/UnderBarButtons" unique_id=1960590484]
+custom_minimum_size = Vector2(23, 23)
+layout_mode = 2
+tooltip_text = "每日签到"
+texture_normal = ExtResource("11_gl33g")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="StatusToggle" type="TextureButton" parent="头像区域/角色状态" unique_id=198722314]
+layout_mode = 0
+offset_left = 0.0
+offset_top = 64.0
+offset_right = 23.0
+offset_bottom = 87.0
+tooltip_text = "当前模式：普通
+不会对任何人造成伤害
+点击后可更改PK模式"
+toggle_mode = false
+mouse_default_cursor_shape = 12
+texture_normal = ExtResource("12_pkup")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="MpBarDecoration" type="TextureRect" parent="头像区域/角色状态" unique_id=1711746886]
+layout_mode = 0
+offset_left = 129.0
+offset_top = 43.0
+offset_right = 136.0
+offset_bottom = 54.0
+mouse_filter = 2
+texture = ExtResource("7_fo8el")
+
+[node name="队长标" type="TextureRect" parent="头像区域/角色状态" unique_id=1971350842]
+visible = false
+layout_mode = 0
+offset_left = 210.0
+offset_top = 38.0
+offset_right = 243.0
+offset_bottom = 55.0
+mouse_filter = 2
+texture = ExtResource("13_dzb")
+
+[node name="选中人物信息" type="Control" parent="头像区域"]
+visible = false
+layout_mode = 0
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -116.0
+offset_top = 4.0
+offset_right = 116.0
+offset_bottom = 66.0
+grow_horizontal = 2
+mouse_filter = 2
+z_index = 1
+
+[node name="头像框" type="TextureRect" parent="头像区域/选中人物信息"]
+layout_mode = 0
+offset_right = 62.0
+offset_bottom = 62.0
+mouse_filter = 0
+texture = ExtResource("23_ring")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="头像" type="TextureRect" parent="头像区域/选中人物信息"]
+layout_mode = 0
+offset_right = 62.0
+offset_bottom = 62.0
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 4
+
+[node name="底板" type="TextureRect" parent="头像区域/选中人物信息"]
+layout_mode = 0
+offset_left = 38.0
+offset_right = 232.0
+offset_bottom = 21.0
+mouse_filter = 2
+texture = ExtResource("24_plate")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="名字" type="Label" parent="头像区域/选中人物信息"]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 4.0
+offset_right = 182.0
+offset_bottom = 20.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+vertical_alignment = 1
+text_overrun_behavior = 3
+
+[node name="等级" type="Label" parent="头像区域/选中人物信息"]
+layout_mode = 0
+offset_left = 182.0
+offset_top = 4.0
+offset_right = 228.0
+offset_bottom = 20.0
+theme_override_colors/font_color = Color(1, 0.8, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+vertical_alignment = 1
+text_overrun_behavior = 3
+
+[node name="血条底" type="TextureRect" parent="头像区域/选中人物信息"]layout_mode = 0
+offset_left = 62.0
+offset_top = 21.0
+offset_right = 175.0
+offset_bottom = 33.0
+mouse_filter = 2
+texture = ExtResource("25_barbg")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="血条" type="TextureProgressBar" parent="头像区域/选中人物信息"]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 23.0
+offset_right = 172.0
+offset_bottom = 30.0
+mouse_filter = 2
+max_value = 1.0
+step = 0.001
+value = 1.0
+texture_progress = ExtResource("26_hpfl")
+
+[node name="血字" type="Label" parent="头像区域/选中人物信息"]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 22.0
+offset_right = 175.0
+offset_bottom = 40.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 10
+horizontal_alignment = 1
+vertical_alignment = 0
+
+[node name="蓝条底" type="TextureRect" parent="头像区域/选中人物信息"]layout_mode = 0
+offset_left = 62.0
+offset_top = 33.0
+offset_right = 175.0
+offset_bottom = 45.0
+mouse_filter = 2
+texture = ExtResource("25_barbg")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="蓝条" type="TextureProgressBar" parent="头像区域/选中人物信息"]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 35.0
+offset_right = 172.0
+offset_bottom = 42.0
+mouse_filter = 2
+max_value = 1.0
+step = 0.001
+value = 1.0
+texture_progress = ExtResource("27_mpfl")
+
+[node name="蓝字" type="Label" parent="头像区域/选中人物信息"]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 34.0
+offset_right = 175.0
+offset_bottom = 52.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 10
+horizontal_alignment = 1
+vertical_alignment = 0
+
+[node name="钮_查看资料" type="TextureButton" parent="头像区域/选中人物信息"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 43.0
+offset_right = 73.0
+offset_bottom = 61.0
+mouse_default_cursor_shape = 2
+focus_mode = 0
+texture_normal = ExtResource("28_binfo")
+stretch_mode = 0
+
+[node name="钮_交易" type="TextureButton" parent="头像区域/选中人物信息"]
+layout_mode = 0
+offset_left = 73.0
+offset_top = 42.0
+offset_right = 90.0
+offset_bottom = 60.0
+mouse_default_cursor_shape = 2
+focus_mode = 0
+texture_normal = ExtResource("29_btrade")
+stretch_mode = 0
+
+[node name="钮_加好友" type="TextureButton" parent="头像区域/选中人物信息"]
+layout_mode = 0
+offset_left = 90.0
+offset_top = 42.0
+offset_right = 107.0
+offset_bottom = 60.0
+mouse_default_cursor_shape = 2
+focus_mode = 0
+texture_normal = ExtResource("30_bfriend")
+stretch_mode = 0
+
+[node name="钮_组队" type="TextureButton" parent="头像区域/选中人物信息"]
+layout_mode = 0
+offset_left = 107.0
+offset_top = 42.0
+offset_right = 124.0
+offset_bottom = 60.0
+mouse_default_cursor_shape = 2
+focus_mode = 0
+texture_normal = ExtResource("31_btroop")
+stretch_mode = 0
+
+[node name="钮_私聊" type="TextureButton" parent="头像区域/选中人物信息"]
+layout_mode = 0
+offset_left = 124.0
+offset_top = 42.0
+offset_right = 141.0
+offset_bottom = 60.0
+mouse_default_cursor_shape = 2
+focus_mode = 0
+texture_normal = ExtResource("32_bwhisp")
+stretch_mode = 0
+
+[node name="钮_菜单" type="TextureButton" parent="头像区域/选中人物信息"]
+layout_mode = 0
+offset_left = 141.0
+offset_top = 42.0
+offset_right = 175.0
+offset_bottom = 60.0
+mouse_default_cursor_shape = 2
+focus_mode = 0
+texture_normal = ExtResource("33_bmenu")
+stretch_mode = 0
+
+[node name="目标菜单" parent="头像区域/选中人物信息" instance=ExtResource("22_tmenu")]
+visible = false
+offset_left = 141.0
+offset_top = 60.0
+offset_right = 141.0
+offset_bottom = 60.0
+
+[node name="状态效果" type="GridContainer" parent="头像区域" unique_id=418359759]
+layout_mode = 0
+offset_left = 259.0
+offset_top = 4.0
+offset_right = 720.0
+offset_bottom = 127.0
+mouse_filter = 2
+columns = 6
+theme_override_constants/h_separation = 1
+theme_override_constants/v_separation = 1
+
+[node name="Buff1" type="TextureRect" parent="头像区域/状态效果" unique_id=683796323]
+visible = false
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("30_tilebuff")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="图标" type="TextureRect" parent="头像区域/状态效果/Buff1"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 0
+
+[node name="扇形" type="ColorRect" parent="头像区域/状态效果/Buff1"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+material = SubResource("BuffMat1")
+
+[node name="Buff2" type="TextureRect" parent="头像区域/状态效果" unique_id=1336394061]
+visible = false
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("30_tilebuff")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="图标" type="TextureRect" parent="头像区域/状态效果/Buff2"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 0
+
+[node name="扇形" type="ColorRect" parent="头像区域/状态效果/Buff2"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+material = SubResource("BuffMat2")
+
+[node name="Buff3" type="TextureRect" parent="头像区域/状态效果" unique_id=669318441]
+visible = false
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("30_tilebuff")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="图标" type="TextureRect" parent="头像区域/状态效果/Buff3"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 0
+
+[node name="扇形" type="ColorRect" parent="头像区域/状态效果/Buff3"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+material = SubResource("BuffMat3")
+
+[node name="Buff4" type="TextureRect" parent="头像区域/状态效果" unique_id=1754210298]
+visible = false
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("30_tilebuff")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="图标" type="TextureRect" parent="头像区域/状态效果/Buff4"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 0
+
+[node name="扇形" type="ColorRect" parent="头像区域/状态效果/Buff4"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+material = SubResource("BuffMat4")
+
+[node name="Buff5" type="TextureRect" parent="头像区域/状态效果" unique_id=1177780825]
+visible = false
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("30_tilebuff")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="图标" type="TextureRect" parent="头像区域/状态效果/Buff5"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 0
+
+[node name="扇形" type="ColorRect" parent="头像区域/状态效果/Buff5"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+material = SubResource("BuffMat5")
+
+[node name="Buff6" type="TextureRect" parent="头像区域/状态效果" unique_id=2081730058]
+visible = false
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("30_tilebuff")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="图标" type="TextureRect" parent="头像区域/状态效果/Buff6"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 0
+
+[node name="扇形" type="ColorRect" parent="头像区域/状态效果/Buff6"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+material = SubResource("BuffMat6")
+
+[node name="Buff7" type="TextureRect" parent="头像区域/状态效果"]
+visible = false
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("30_tilebuff")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="图标" type="TextureRect" parent="头像区域/状态效果/Buff7"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 0
+
+[node name="扇形" type="ColorRect" parent="头像区域/状态效果/Buff7"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+material = SubResource("BuffMat7")
+
+[node name="Buff8" type="TextureRect" parent="头像区域/状态效果"]
+visible = false
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("30_tilebuff")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="图标" type="TextureRect" parent="头像区域/状态效果/Buff8"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 0
+
+[node name="扇形" type="ColorRect" parent="头像区域/状态效果/Buff8"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+material = SubResource("BuffMat8")
+
+[node name="Buff9" type="TextureRect" parent="头像区域/状态效果"]
+visible = false
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("30_tilebuff")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="图标" type="TextureRect" parent="头像区域/状态效果/Buff9"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 0
+
+[node name="扇形" type="ColorRect" parent="头像区域/状态效果/Buff9"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+material = SubResource("BuffMat9")
+
+[node name="Buff10" type="TextureRect" parent="头像区域/状态效果"]
+visible = false
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("30_tilebuff")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="图标" type="TextureRect" parent="头像区域/状态效果/Buff10"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 0
+
+[node name="扇形" type="ColorRect" parent="头像区域/状态效果/Buff10"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+material = SubResource("BuffMat10")
+
+[node name="Buff11" type="TextureRect" parent="头像区域/状态效果"]
+visible = false
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("30_tilebuff")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="图标" type="TextureRect" parent="头像区域/状态效果/Buff11"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 0
+
+[node name="扇形" type="ColorRect" parent="头像区域/状态效果/Buff11"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+material = SubResource("BuffMat11")
+
+[node name="Buff12" type="TextureRect" parent="头像区域/状态效果"]
+visible = false
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("30_tilebuff")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="图标" type="TextureRect" parent="头像区域/状态效果/Buff12"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 0
+
+[node name="扇形" type="ColorRect" parent="头像区域/状态效果/Buff12"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+material = SubResource("BuffMat12")
+
+[node name="Buff13" type="TextureRect" parent="头像区域/状态效果"]
+visible = false
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("30_tilebuff")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="图标" type="TextureRect" parent="头像区域/状态效果/Buff13"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 0
+
+[node name="扇形" type="ColorRect" parent="头像区域/状态效果/Buff13"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+material = SubResource("BuffMat13")
+
+[node name="Buff14" type="TextureRect" parent="头像区域/状态效果"]
+visible = false
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("30_tilebuff")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="图标" type="TextureRect" parent="头像区域/状态效果/Buff14"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 0
+
+[node name="扇形" type="ColorRect" parent="头像区域/状态效果/Buff14"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+material = SubResource("BuffMat14")
+
+[node name="Buff15" type="TextureRect" parent="头像区域/状态效果"]
+visible = false
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("30_tilebuff")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="图标" type="TextureRect" parent="头像区域/状态效果/Buff15"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 0
+
+[node name="扇形" type="ColorRect" parent="头像区域/状态效果/Buff15"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+material = SubResource("BuffMat15")
+
+[node name="Buff16" type="TextureRect" parent="头像区域/状态效果"]
+visible = false
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("30_tilebuff")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="图标" type="TextureRect" parent="头像区域/状态效果/Buff16"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 0
+
+[node name="扇形" type="ColorRect" parent="头像区域/状态效果/Buff16"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+material = SubResource("BuffMat16")
+
+[node name="Buff17" type="TextureRect" parent="头像区域/状态效果"]
+visible = false
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("30_tilebuff")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="图标" type="TextureRect" parent="头像区域/状态效果/Buff17"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 0
+
+[node name="扇形" type="ColorRect" parent="头像区域/状态效果/Buff17"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+material = SubResource("BuffMat17")
+
+[node name="Buff18" type="TextureRect" parent="头像区域/状态效果"]
+visible = false
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("30_tilebuff")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="图标" type="TextureRect" parent="头像区域/状态效果/Buff18"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 0
+
+[node name="扇形" type="ColorRect" parent="头像区域/状态效果/Buff18"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+material = SubResource("BuffMat18")
+

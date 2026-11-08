@@ -1,0 +1,158 @@
+{
+ "符号": "SystemConfigWindowF",
+ "tag": 543,
+ "件": {
+  "background": [
+   530,
+   "KeyboardFrameMWindow_background",
+   0.0,
+   0.0,
+   1.5381775,
+   1.0761566
+  ],
+  "closeBtn": [
+   535,
+   "KeyboardFrameMWindowCloseBtnF",
+   382.8,
+   8.0,
+   1.0,
+   1.0
+  ],
+  "titleTextField": [
+   536,
+   "",
+   156.0,
+   10.4,
+   1.0,
+   1.0
+  ],
+  "tabBtn1": [
+   541,
+   "SystemConfigWindowMTabButtonF",
+   16.0,
+   44.0,
+   1.0,
+   1.0
+  ],
+  "tabBtn2": [
+   541,
+   "SystemConfigWindowMTabButtonF",
+   64.0,
+   44.0,
+   1.0,
+   1.0
+  ],
+  "hideOtherCharPicCheckBox": [
+   542,
+   "KeyboardFrameMCheckBoxF",
+   20.0,
+   74.0,
+   1.0,
+   1.0
+  ],
+  "hideOtherCharNameCheckBox": [
+   542,
+   "KeyboardFrameMCheckBoxF",
+   20.0,
+   168.0,
+   1.0,
+   1.0
+  ],
+  "hideZhenPingCheckBox": [
+   542,
+   "KeyboardFrameMCheckBoxF",
+   20.0,
+   262.0,
+   1.0,
+   1.0
+  ],
+  "hideXinTiaoCheckBox": [
+   542,
+   "KeyboardFrameMCheckBoxF",
+   20.0,
+   310.0,
+   1.0,
+   1.0
+  ],
+  "hideQuestTrackerWindowCheckBox": [
+   542,
+   "KeyboardFrameMCheckBoxF",
+   20.0,
+   357.0,
+   1.0,
+   1.0
+  ],
+  "hideTroopHPPaneCheckBox": [
+   542,
+   "KeyboardFrameMCheckBoxF",
+   20.0,
+   383.0,
+   1.0,
+   1.0
+  ],
+  "closeMapMusicCheckBox": [
+   542,
+   "KeyboardFrameMCheckBoxF",
+   222.0,
+   74.0,
+   1.0,
+   1.0
+  ],
+  "closeActionMusicCheckBox": [
+   542,
+   "KeyboardFrameMCheckBoxF",
+   222.0,
+   121.0,
+   1.0,
+   1.0
+  ],
+  "forbidWhisperCheckBox": [
+   542,
+   "KeyboardFrameMCheckBoxF",
+   222.0,
+   168.0,
+   1.0,
+   1.0
+  ],
+  "forbidAddFriendCheckBox": [
+   542,
+   "KeyboardFrameMCheckBoxF",
+   222.0,
+   214.0,
+   1.0,
+   1.0
+  ],
+  "forbidTradeInviteCheckBox": [
+   542,
+   "KeyboardFrameMCheckBoxF",
+   222.0,
+   263.0,
+   1.0,
+   1.0
+  ],
+  "forbidFamilyInviteCheckBox": [
+   542,
+   "KeyboardFrameMCheckBoxF",
+   222.0,
+   309.0,
+   1.0,
+   1.0
+  ],
+  "forbidTroopInviteCheckBox": [
+   542,
+   "KeyboardFrameMCheckBoxF",
+   222.0,
+   335.95,
+   1.0,
+   1.0
+  ],
+  "hideOtherSkillEffectCheckBox": [
+   542,
+   "KeyboardFrameMCheckBoxF",
+   20.0,
+   212.0,
+   1.0,
+   1.0
+  ]
+ }
+}

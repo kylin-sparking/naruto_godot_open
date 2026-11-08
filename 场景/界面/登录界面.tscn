@@ -1,0 +1,322 @@
+[gd_scene format=3 uid="uid://dgf78pvkrf1je"]
+
+[ext_resource type="Script" uid="uid://dcwu5m8u35knb" path="res://脚本/界面/登录界面.gd" id="1_launcher"]
+[ext_resource type="PackedScene" path="res://场景/界面/选角窗.tscn" id="2_selector"]
+
+[node name="登录器" type="Control" unique_id=263291515]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_launcher")
+
+[node name="背景" type="VideoStreamPlayer" parent="." unique_id=2006056718]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="暗化" type="ColorRect" parent="." unique_id=600728016]
+modulate = Color(1, 1, 1, 0.4)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.02, 0.02, 0.06, 1)
+
+[node name="登录卡片" type="Panel" parent="." unique_id=146189402]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -384.0
+offset_top = -195.0
+offset_right = -44.0
+offset_bottom = 195.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="标题" type="Label" parent="登录卡片" unique_id=1874551755]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 16.0
+offset_right = 320.0
+offset_bottom = 52.0
+theme_override_colors/font_color = Color(1, 0.87, 0.55, 1)
+theme_override_font_sizes/font_size = 26
+text = "账号登录"
+horizontal_alignment = 1
+
+[node name="标题分隔" type="ColorRect" parent="登录卡片" unique_id=77226588]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 56.0
+offset_right = 320.0
+offset_bottom = 57.0
+color = Color(0.91, 0.72, 0.3, 0.3)
+
+[node name="账号标签" type="Label" parent="登录卡片" unique_id=1565106657]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 62.0
+offset_right = 320.0
+offset_bottom = 80.0
+text = "账号"
+
+[node name="账号输入" type="LineEdit" parent="登录卡片" unique_id=1929506930]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 86.0
+offset_right = 320.0
+offset_bottom = 116.0
+placeholder_text = "请输入账号"
+
+[node name="账号箭头" type="Button" parent="登录卡片/账号输入" unique_id=1977450667]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -32.0
+offset_top = 3.0
+offset_right = -3.0
+offset_bottom = -3.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0.91, 0.72, 0.3, 1)
+theme_override_colors/font_pressed_color = Color(0.62, 0.47, 0.16, 1)
+theme_override_colors/font_hover_color = Color(1, 0.87, 0.55, 1)
+theme_override_font_sizes/font_size = 13
+text = "▼"
+flat = true
+
+[node name="账号菜单" type="PopupMenu" parent="登录卡片/账号输入" unique_id=908125956]
+
+[node name="密码标签" type="Label" parent="登录卡片" unique_id=1190337136]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 126.0
+offset_right = 320.0
+offset_bottom = 144.0
+text = "密码"
+
+[node name="密码输入" type="LineEdit" parent="登录卡片" unique_id=1312682166]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 150.0
+offset_right = 320.0
+offset_bottom = 180.0
+placeholder_text = "请输入密码"
+secret = true
+
+[node name="记住密码" type="CheckBox" parent="登录卡片" unique_id=1711898183]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 190
+offset_right = 320.0
+offset_bottom = 209
+button_pressed = true
+text = "记住账号密码"
+
+[node name="登录按钮" type="Button" parent="登录卡片" unique_id=1839003619]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 232.0
+offset_right = 320.0
+offset_bottom = 270.0
+theme_override_font_sizes/font_size = 19
+text = "进入游戏"
+
+[node name="注册按钮" type="Button" parent="登录卡片" unique_id=214902498]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 280.0
+offset_right = 320.0
+offset_bottom = 310.0
+theme_override_colors/font_color = Color(0.91, 0.72, 0.3, 1)
+theme_override_colors/font_hover_color = Color(1, 0.87, 0.55, 1)
+theme_override_font_sizes/font_size = 15
+text = "没有账号？注册账号"
+flat = true
+
+[node name="状态文字" type="Label" parent="登录卡片" unique_id=1664278205]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 322.0
+offset_right = 320.0
+offset_bottom = 378.0
+theme_override_colors/font_color = Color(0.85, 0.88, 1, 1)
+theme_override_font_sizes/font_size = 15
+autowrap_mode = 3
+
+[node name="音乐按钮" type="Button" parent="." unique_id=1671904745]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -58.0
+offset_top = 12.0
+offset_right = -18.0
+offset_bottom = 52.0
+grow_horizontal = 0
+tooltip_text = "背景音乐开关"
+icon_alignment = 1
+expand_icon = true
+
+[node name="BGM" type="AudioStreamPlayer" parent="." unique_id=613879711]
+volume_db = -8.0
+
+[node name="页脚" type="Label" parent="." unique_id=2009511718]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = -30.0
+offset_right = -140.0
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.72, 0.62, 0.42, 1)
+theme_override_font_sizes/font_size = 14
+text = "火影世界"
+
+[node name="注册弹窗" type="Control" parent="." unique_id=1510263299]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="遮罩" type="ColorRect" parent="注册弹窗" unique_id=986828310]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.6)
+
+[node name="面板" type="Panel" parent="注册弹窗" unique_id=547654082]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -180.0
+offset_top = -190.0
+offset_right = 180.0
+offset_bottom = 190.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="标题" type="Label" parent="注册弹窗/面板" unique_id=1887325359]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 16.0
+offset_right = 340.0
+offset_bottom = 52.0
+theme_override_colors/font_color = Color(1, 0.87, 0.55, 1)
+theme_override_font_sizes/font_size = 26
+text = "注册账号"
+horizontal_alignment = 1
+
+[node name="标题分隔" type="ColorRect" parent="注册弹窗/面板" unique_id=531535091]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 56.0
+offset_right = 340.0
+offset_bottom = 57.0
+color = Color(0.91, 0.72, 0.3, 0.3)
+
+[node name="账号标签" type="Label" parent="注册弹窗/面板" unique_id=1383195883]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 62.0
+offset_right = 340.0
+offset_bottom = 80.0
+text = "账号（至少 4 个字符）"
+
+[node name="账号输入" type="LineEdit" parent="注册弹窗/面板" unique_id=234683570]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 86.0
+offset_right = 340.0
+offset_bottom = 116.0
+placeholder_text = "请输入新账号"
+
+[node name="密码标签" type="Label" parent="注册弹窗/面板" unique_id=379583662]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 126.0
+offset_right = 340.0
+offset_bottom = 144.0
+text = "密码（至少 6 个字符）"
+
+[node name="密码输入" type="LineEdit" parent="注册弹窗/面板" unique_id=773883850]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 150.0
+offset_right = 340.0
+offset_bottom = 180.0
+placeholder_text = "请输入密码"
+secret = true
+
+[node name="确认标签" type="Label" parent="注册弹窗/面板" unique_id=283369100]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 190.0
+offset_right = 340.0
+offset_bottom = 208.0
+text = "确认密码"
+
+[node name="确认输入" type="LineEdit" parent="注册弹窗/面板" unique_id=1064478619]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 214.0
+offset_right = 340.0
+offset_bottom = 244.0
+placeholder_text = "请再输入一次密码"
+secret = true
+
+[node name="提示文字" type="Label" parent="注册弹窗/面板" unique_id=509163882]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 252.0
+offset_right = 340.0
+offset_bottom = 288.0
+theme_override_colors/font_color = Color(1, 0.55, 0.45, 1)
+theme_override_font_sizes/font_size = 15
+autowrap_mode = 3
+
+[node name="提交按钮" type="Button" parent="注册弹窗/面板" unique_id=284602407]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 298.0
+offset_right = 175.0
+offset_bottom = 336.0
+theme_override_font_sizes/font_size = 17
+text = "提交注册"
+
+[node name="取消按钮" type="Button" parent="注册弹窗/面板" unique_id=1368000277]
+layout_mode = 0
+offset_left = 185.0
+offset_top = 298.0
+offset_right = 340.0
+offset_bottom = 336.0
+theme_override_colors/font_color = Color(0.91, 0.72, 0.3, 1)
+theme_override_colors/font_hover_color = Color(1, 0.87, 0.55, 1)
+theme_override_font_sizes/font_size = 17
+text = "返回登录"
+flat = true
+
+[node name="选角窗" parent="." unique_id=835358689 instance=ExtResource("2_selector")]
+visible = false
+layout_mode = 1

@@ -1,0 +1,188 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/内容面板.png" id="t1"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/物品格.png" id="t2"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/横向分隔线.png" id="t3"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/好友/钮底54.png" id="t4"]
+
+[node name="原版家族邀请内容" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 264.0
+offset_bottom = 136.0
+
+[node name="内容底" type="NinePatchRect" parent="."]
+mouse_filter = 2
+texture = ExtResource("t1")
+patch_margin_left = 11
+patch_margin_right = 10
+patch_margin_top = 10
+patch_margin_bottom = 11
+layout_mode = 0
+offset_left = 8.0
+offset_top = 9.0
+offset_right = 256.0
+offset_bottom = 106.0
+
+[node name="同意钮" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 117.0
+offset_top = 109.0
+offset_right = 171.0
+offset_bottom = 131.0
+focus_mode = 0
+ignore_texture_size = true
+stretch_mode = 1
+texture_normal = ExtResource("t4")
+metadata/skin = "res://素材/界面/原版窗口/好友/钮底54"
+mouse_default_cursor_shape = 2
+
+[node name="文字" type="Label" parent="同意钮"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_font_sizes/font_size = 12
+text = "同意加入"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="拒绝钮" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 181.0
+offset_top = 109.0
+offset_right = 211.0
+offset_bottom = 131.0
+focus_mode = 0
+ignore_texture_size = true
+stretch_mode = 1
+texture_normal = ExtResource("t4")
+metadata/skin = "res://素材/界面/原版窗口/好友/钮底30"
+mouse_default_cursor_shape = 2
+
+[node name="文字" type="Label" parent="拒绝钮"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_font_sizes/font_size = 12
+text = "拒绝"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="查看资料钮" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 109.0
+offset_right = 107.0
+offset_bottom = 131.0
+focus_mode = 0
+ignore_texture_size = true
+stretch_mode = 1
+texture_normal = ExtResource("t4")
+metadata/skin = "res://素材/界面/原版窗口/好友/钮底54"
+mouse_default_cursor_shape = 2
+
+[node name="文字" type="Label" parent="查看资料钮"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_font_sizes/font_size = 12
+text = "查看资料"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="头像格" type="NinePatchRect" parent="."]
+mouse_filter = 2
+texture = ExtResource("t2")
+patch_margin_left = 9
+patch_margin_right = 6
+patch_margin_top = 9
+patch_margin_bottom = 6
+layout_mode = 0
+offset_left = 16.0
+offset_top = 17.0
+offset_right = 56.0
+offset_bottom = 57.0
+
+[node name="头像" type="TextureRect" parent="头像格"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 4
+
+[node name="族长名" type="Label" parent="."]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 17.0
+offset_right = 202.0
+offset_bottom = 35.0
+theme_override_colors/font_color = Color(0.117647, 0.564706, 1, 1)
+theme_override_font_sizes/font_size = 12
+text_overrun_behavior = 3
+
+[node name="等级职业" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 202.0
+offset_top = 17.0
+offset_right = 250.0
+offset_bottom = 55.0
+mouse_filter = 2
+bbcode_enabled = true
+scroll_active = false
+autowrap_mode = 3
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 6
+text = ""
+
+[node name="族名" type="Label" parent="."]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 35.0
+offset_right = 202.0
+offset_bottom = 53.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+text_overrun_behavior = 3
+
+[node name="分隔线" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 61.0
+offset_right = 253.0
+offset_bottom = 63.0
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 0
+texture = ExtResource("t3")
+
+[node name="正文" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 67.0
+offset_right = 248.0
+offset_bottom = 101.0
+mouse_filter = 2
+bbcode_enabled = true
+scroll_active = false
+autowrap_mode = 3
+theme_override_colors/default_color = Color(1, 0.627451, 0, 1)
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 2
+text = ""

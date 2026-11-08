@@ -1,0 +1,99 @@
+{
+ "_说明": [
+  "**这份夹具是门自造的，不是服务端捕获**（区别于 `兑换商店_夹具.json`：那份逐行取自 2.2.3 捕获目录）。",
+  "理由：这两扇要的字段（order/finishCount/difiiculty/richDegree/simpleEncourge/encouragEx/encourageItems/remainSeconds/status/endNpcId）**只有服务端 444 的任务信息帧才有**，而本工程一条协议都没发（用户 2026-10-05 只点头做窗，没点头接协议）⇒ 没有真帧可取。",
+  "字段名**逐条对** `BasicQuestInfoData.as:8-70` 的 public var（`difiiculty` 是原版的拼错，照抄不改），所以哪天真接上 444，把解出来的字典直接喂 `渲染(宿主, 场景, 数)` 就行，页面里没有第二条读取路径。",
+  "**2026-10-05 按用户实机截图改过一轮形状**：`require` / `simpleEncourge` / `encouragEx` 是服务端给的**HTML 片段**（带 `<font color>` 与结尾 `<br/>`），控制器一律过 `确认弹.文案转BBCode` 再塞进文本件 —— 实机那四行「任务目标：/杀怪：×××(0/650)/任务奖励：/经验值 …」的换行是 require 自己带的，不是模板补的。",
+  "`日环.encourageItems = [{id:0,count:0}]` 是**故意的**：走原版 `ImgUtil.getImg(ImgType.Etc,\"flower\")` 那一支（`RefreshDailyQuestWindow.as:446-452`），映射查到 = `Etc.json items.flower.itemid` **16000143 玫瑰花**，且 `count<=0 ⇒ getDisableFilter()` 灰化 ⇒ 与实机图那颗灰掉的 0 号格同一形状。",
+  "`周.encourageItems` 给满 10 枚也是故意的：原版折行判据 `x > 331` 在第 8 枚之后才触发，少于 9 枚量不到「折行后 x 回 24、y 加 45」那一支（⚠ 第 8 枚本身会溢出底板 34px，原版就这么摆）。",
+  "物品号一律从 `数据/界面/兑换商店_夹具.json` 里挑（那些号在读者的物品表/图标索引里保证解得出），门里另有一条断言钉着：`游戏数据.item_icon_path(号) != \"\"` ⇒ 换个工程如果图标解析不出就会红。"
+ ],
+ "_出处": {
+  "日环字段消费": "RefreshDailyQuestWindow.as:262-306（次数 :290-297 / 星 :276-283 / 鼓励 :271-280 / 格 :437-455 / 秒 :240-257,:288-292）",
+  "周字段消费": "DailyQuestWindow.as:215-286（说明 :169-188 / 追踪 :227-232 / 奖励 :233-236 / 特殊 :237-239 / 格子 :240-285）",
+  "玫瑰花 itemid": "真值文档/GameData/Etc.json → items.flower.itemid = 16000143（原版 ImgUtil.getImg(ImgType.Etc,\"flower\")）"
+ },
+ "日环": {
+  "questId": 8001,
+  "questType": "daily",
+  "order": 3,
+  "totalOrder": 20,
+  "finishCount": 1,
+  "status": 1,
+  "difiiculty": 2,
+  "richDegree": 4,
+  "require": "杀怪：<font color='#00ff00'>屠戮不死鸟</font><font color='#ff0000'>(0/650)</font><br/>",
+  "simpleEncourge": "经验值 129220357",
+  "encourageItems": [
+   {
+    "id": 0,
+    "count": 0
+   }
+  ],
+  "remainSeconds": 125,
+  "endNpcId": 27
+ },
+ "周": {
+  "questId": 8002,
+  "questType": "weekly",
+  "order": 12,
+  "totalOrder": 100,
+  "finishCount": 7,
+  "status": 2,
+  "difiiculty": 3,
+  "richDegree": 6,
+  "require": "收集：<font color='#00ff00'>木叶密卷</font><font color='#ff0000'>(2/3)</font><br/>",
+  "simpleEncourge": "经验值 5200、铜币 1500",
+  "encouragEx": "<font color='#00ff00'>精华 2</font>、忍魂 1",
+  "encourageItems": [
+   {
+    "id": 1210252,
+    "count": 3
+   },
+   {
+    "id": 1210208,
+    "count": 1
+   },
+   {
+    "id": 16000106,
+    "count": 4
+   },
+   {
+    "id": 2050012,
+    "count": 2
+   },
+   {
+    "id": 2050010,
+    "count": 8
+   },
+   {
+    "id": 1210211,
+    "count": 9
+   },
+   {
+    "id": 1210209,
+    "count": 5
+   },
+   {
+    "id": 2050013,
+    "count": 6
+   },
+   {
+    "id": 2050015,
+    "count": 7
+   },
+   {
+    "id": 1210242,
+    "count": 11
+   }
+  ],
+  "encourageItemsEx": [
+   {
+    "id": 16000143,
+    "count": 1
+   }
+  ],
+  "remainSeconds": 0,
+  "endNpcId": 27
+ }
+}

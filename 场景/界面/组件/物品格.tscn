@@ -1,0 +1,58 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://脚本/界面/组件/物品格.gd" id="1_slot"]
+[ext_resource type="Script" path="res://脚本/界面/组件/品质流光.gd" id="2_glow"]
+
+[node name="物品格" type="Button"]
+custom_minimum_size = Vector2(40, 40)
+offset_right = 40.0
+offset_bottom = 40.0
+focus_mode = 0
+flat = false
+; 原版 MCell.setIcon（MCell.as:66-70）：图标按原尺寸居中摆放。
+; 物品图标都是 34x34，所以在 40x40 的格子里落在 (3,3)、四周留 3px。
+; 不能用 expand_icon = true —— Godot 会把图标拉伸填满整个按钮（34→40），
+; 实机看就是图标顶满/吃掉边框（用户 2026-09-20 报的）。
+expand_icon = false
+icon_alignment = 1
+theme_type_variation = &"OrigItemSlotButton"
+script = ExtResource("1_slot")
+
+[node name="数量" type="Label" parent="."]
+; 几何/字号真值 `ItemWindowCell.as:54-62`：`tf.x=1, tf.y=24, width=37, height=16,
+; autoSize=TextFieldAutoSize.RIGHT` —— ⚠️ Flash 的 `RIGHT` 是**右边界固定、文字往左长**
+; （不是"左锚点往右长"，我 2026-10-02 先读反过一次、把数字挪去了左下，被用户的并排实机图
+; `对比图/背包对比.png` 逮回：原版数量在**右下**、绑定锁在左下）。右边界 = x + width = 1+37 = 38。
+; `_loc1_.size = 12`（**12 不是 9**；裸 `new TextField()` 显式写的 size，见记忆
+; 「Flash 文字搬进 Godot 的两条固定换算」——上一轮只改对了这一条）。
+; 左界取 1（不是 20）：这样 4 位数（"9999"）从 38 往左长也不会被左边切掉。
+; 白字 + 黑发光（`getGlowFilter(0)`≈2px 描边）由 `configure_label` 统一给，不在此重复。
+offset_left = 1.0
+offset_top = 24.0
+offset_right = 38.0
+offset_bottom = 40.0
+mouse_filter = 2
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+
+; 装备品质覆盖层两件套 —— 背包里放的是装备时才会亮。
+; 出处 `ItemWindowCell.showIcon`（`:237-267`）：资质框 addChild 在 (-1,-1)、42x42，
+; 流光（紫/橙两档 + 灵气装）在其后 addChild 在 (3,3)、35x35（裁掉原始 117x115 的空边）。
+; 两张几何与 `装备格.tscn` 完全相同（原版两处就是同一段代码的两种写法）。
+; 显示条件与贴图都由 `可拖拽格.设置品质()` 按 `数据/装备品质.json` 现算，
+; 所以场景里恒为 `visible = false`：空格子/非装备在任何时候都不该有框，编辑器与运行时一致。
+[node name="资质框" type="TextureRect" parent="."]
+visible = false
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 41.0
+offset_bottom = 41.0
+mouse_filter = 2
+
+; AnimatedSprite2D 原点在中心；裁后的 35x35 注册点 = 环左上角 = 图标左上角，
+; 原版 (3,3) → position = (3 + 35/2, 3 + 35/2) = (20.5, 20.5)。
+[node name="流光" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(20.5, 20.5)
+script = ExtResource("2_glow")
+

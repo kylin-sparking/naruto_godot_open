@@ -1,0 +1,292 @@
+[gd_scene load_steps=15 format=3]
+
+[ext_resource type="Script" path="res://脚本/界面/窗口/家族/家族子窗.gd" id="1_script"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/家族/盒底.png" id="t1"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/输入框.png" id="t2"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/金币.png" id="t3"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/横向分隔线.png" id="t4"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/输入框.png" id="t5"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/家族/减号钮.png" id="t6"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/家族/加号钮.png" id="t7"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/家族/最大钮.png" id="t8"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/家族/钮底37.png" id="t9"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/家族/钮底37.png" id="t10"]
+
+
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/家族/钮底61.png" id="t11"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty1"]
+
+
+
+[node name="家族金币窗" type="Control"]
+custom_minimum_size = Vector2(260, 176)
+script = ExtResource("1_script")
+窗名 = "家族金币窗"
+
+[node name="盒" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 255.0
+offset_bottom = 106.0
+mouse_filter = 2
+texture = ExtResource("t1")
+patch_margin_left = 8
+patch_margin_top = 7
+patch_margin_right = 7
+patch_margin_bottom = 7
+
+[node name="标签余额名" type="Label" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 5.0
+offset_right = 247.0
+offset_bottom = 24.0
+mouse_filter = 2
+text = "你的背包中拥有的金币："
+theme_override_colors/font_color = Color(1.0, 0.4980392156862745, 0.0, 1)
+vertical_alignment = 1
+clip_text = true
+
+[node name="输入余额底" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 67.0
+offset_top = 29.0
+offset_right = 192.0
+offset_bottom = 50.0
+mouse_filter = 2
+texture = ExtResource("t2")
+patch_margin_left = 6
+patch_margin_top = 5
+patch_margin_right = 7
+patch_margin_bottom = 6
+
+[node name="输入余额" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 67.0
+offset_top = 29.0
+offset_right = 192.0
+offset_bottom = 50.0
+placeholder_text = ""
+theme_override_styles/normal = SubResource("StyleBoxEmpty1")
+theme_override_styles/focus = SubResource("StyleBoxEmpty1")
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.0, 1.0, 0.0, 1)
+text = ""
+max_length = 12
+
+[node name="图金币" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 31.0
+offset_right = 86.0
+offset_bottom = 48.0
+mouse_filter = 2
+texture = ExtResource("t3")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="线" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 53.0
+offset_right = 250.0
+offset_bottom = 55.0
+mouse_filter = 2
+texture = ExtResource("t4")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="标签捐献名" type="Label" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 53.0
+offset_right = 247.0
+offset_bottom = 72.0
+mouse_filter = 2
+text = "你希望贡献多少到族贡仓库？"
+vertical_alignment = 1
+clip_text = true
+
+[node name="输入捐献底" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 67.0
+offset_top = 77.0
+offset_right = 192.0
+offset_bottom = 98.0
+mouse_filter = 2
+texture = ExtResource("t5")
+patch_margin_left = 6
+patch_margin_top = 5
+patch_margin_right = 7
+patch_margin_bottom = 6
+
+[node name="输入捐献" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 67.0
+offset_top = 77.0
+offset_right = 192.0
+offset_bottom = 98.0
+placeholder_text = ""
+theme_override_styles/normal = SubResource("StyleBoxEmpty1")
+theme_override_styles/focus = SubResource("StyleBoxEmpty1")
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.0, 1.0, 0.0, 1)
+text = ""
+max_length = 12
+
+[node name="钮减" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 78.0
+offset_right = 65.0
+offset_bottom = 96.0
+texture_normal = ExtResource("t6")
+expand_mode = 1
+stretch_mode = 0
+focus_mode = 0
+ignore_texture_size = true
+metadata/skin = "res://素材/界面/原版窗口/家族/减号钮"
+metadata/act = "减"
+
+[node name="Label" type="Label" parent="钮减"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+text = ""
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="钮加" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 194.0
+offset_top = 77.0
+offset_right = 212.0
+offset_bottom = 95.0
+texture_normal = ExtResource("t7")
+expand_mode = 1
+stretch_mode = 0
+focus_mode = 0
+ignore_texture_size = true
+metadata/skin = "res://素材/界面/原版窗口/家族/加号钮"
+metadata/act = "加"
+
+[node name="Label" type="Label" parent="钮加"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+text = ""
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="钮最大" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 214.0
+offset_top = 77.0
+offset_right = 241.0
+offset_bottom = 95.0
+texture_normal = ExtResource("t8")
+expand_mode = 1
+stretch_mode = 0
+focus_mode = 0
+ignore_texture_size = true
+metadata/skin = "res://素材/界面/原版窗口/家族/最大钮"
+metadata/act = "最大"
+
+[node name="Label" type="Label" parent="钮最大"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+text = ""
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="文本说明" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 108.0
+offset_right = 255.0
+offset_bottom = 142.0
+mouse_filter = 2
+theme_override_constants/line_separation = 2
+theme_override_font_sizes/normal_font_size = 12
+theme_override_colors/default_color = Color(1.0, 0.4980392156862745, 0.0, 1)
+bbcode_enabled = true
+text = "每捐献30万金币增加贡献值1\n每次贡献不得少于10000金币"
+scroll_active = false
+
+[node name="钮确定" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 149.0
+offset_right = 113.0
+offset_bottom = 171.0
+texture_normal = ExtResource("t11")
+expand_mode = 1
+stretch_mode = 0
+focus_mode = 0
+ignore_texture_size = true
+metadata/skin = "res://素材/界面/原版窗口/家族/钮底61"
+metadata/act = "确定"
+
+[node name="Label" type="Label" parent="钮确定"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+text = "确定"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="钮取消" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 171.0
+offset_top = 149.0
+offset_right = 232.0
+offset_bottom = 171.0
+texture_normal = ExtResource("t11")
+expand_mode = 1
+stretch_mode = 0
+focus_mode = 0
+ignore_texture_size = true
+metadata/skin = "res://素材/界面/原版窗口/家族/钮底61"
+metadata/act = "取消"
+
+[node name="Label" type="Label" parent="钮取消"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+text = "取消"
+horizontal_alignment = 1
+vertical_alignment = 1

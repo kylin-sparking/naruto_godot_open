@@ -1,0 +1,2102 @@
+[gd_scene format=3 uid="uid://bw85w3hxailvd"]
+
+[ext_resource type="Texture2D" uid="uid://b2byyf3icmmbn" path="res://素材/界面/原版窗口/人物/结印/新结印阵.png" id="1_300nx"]
+[ext_resource type="Script" uid="uid://b8ghoqcu7wvk1" path="res://素材/界面/原版窗口/人物/结印/脚本/结印切换.gd" id="1_eyepv"]
+[ext_resource type="Texture2D" uid="uid://crknililr31df" path="res://素材/界面/原版窗口/人物/结印/印式01.png" id="2_eyepv"]
+[ext_resource type="Texture2D" uid="uid://uxeq4m3ya21y" path="res://素材/界面/原版窗口/人物/结印/印式03.png" id="2_seal01"]
+[ext_resource type="Texture2D" uid="uid://rd7gkjntvirs" path="res://素材/界面/原版窗口/人物/结印/指针.png" id="3_dvgv0"]
+[ext_resource type="Texture2D" uid="uid://b560nc0gvgorw" path="res://素材/界面/原版窗口/人物/结印/印式02.png" id="3_mkb0m"]
+[ext_resource type="Texture2D" uid="uid://ia2i8s2f8igr" path="res://素材/界面/原版窗口/人物/结印/印式04.png" id="3_seal02"]
+[ext_resource type="Texture2D" uid="uid://7uxs4pm611wm" path="res://素材/界面/原版窗口/人物/结印/印式05.png" id="4_seal03"]
+[ext_resource type="Texture2D" uid="uid://6phlbk2praew" path="res://素材/界面/原版窗口/人物/结印/印式06.png" id="5_seal04"]
+[ext_resource type="Texture2D" uid="uid://bcllx5ny17j60" path="res://素材/界面/原版窗口/人物/结印/印式07.png" id="6_seal05"]
+[ext_resource type="Texture2D" uid="uid://ciup0pegj3in3" path="res://素材/界面/原版窗口/人物/结印/印式08.png" id="7_seal06"]
+[ext_resource type="Texture2D" uid="uid://bk37rifwegya3" path="res://素材/界面/原版窗口/人物/结印/印式09.png" id="8_seal07"]
+[ext_resource type="Texture2D" uid="uid://0bwvai0i86vh" path="res://素材/界面/原版窗口/人物/结印/印式10.png" id="9_seal08"]
+[ext_resource type="Texture2D" uid="uid://dy2tdo0crg7bw" path="res://素材/界面/原版窗口/人物/结印/印式11.png" id="10_seal09"]
+[ext_resource type="Texture2D" uid="uid://cfoa2xhkfp4eh" path="res://素材/界面/原版窗口/人物/结印/印式12.png" id="11_seal10"]
+[ext_resource type="Texture2D" uid="uid://dqevimbqk0ac0" path="res://素材/界面/原版窗口/人物/结印/印式13.png" id="12_seal11"]
+[ext_resource type="Texture2D" uid="uid://b4pdr0rs4nv47" path="res://素材/界面/原版窗口/人物/结印/印式14.png" id="13_seal12"]
+[ext_resource type="Theme" path="res://素材/界面/原版窗口/人物/结印/宋体文字/结印字体.tres" id="17_p3ueq"]
+[ext_resource type="Script" uid="uid://df2ktcrpritqc" path="res://素材/界面/原版窗口/人物/结印/脚本/提升结印阶数弹窗滑动动画.gd" id="18_85ulq"]
+[ext_resource type="Texture2D" uid="uid://bk6j435w5f2ub" path="res://素材/界面/原版窗口/人物/结印/结印子面板.png" id="19_yuvlk"]
+[ext_resource type="Texture2D" uid="uid://eh5d2wvlvs8k" path="res://素材/界面/原版窗口/人物/结印/印buff图标/印1.png" id="20_85ulq"]
+[ext_resource type="Texture2D" uid="uid://bvqra72lso8qo" path="res://素材/界面/原版窗口/人物/结印/结印关闭按钮.png" id="20_c72if"]
+[ext_resource type="Texture2D" uid="uid://dbg3uw1sw3vl1" path="res://素材/界面/原版窗口/人物/结印/印buff图标/印2.png" id="21_buff2"]
+[ext_resource type="Texture2D" uid="uid://da7m5vp8srwsr" path="res://素材/界面/原版窗口/人物/结印/印buff图标/印3.png" id="21_buff3"]
+[ext_resource type="Texture2D" uid="uid://d33add7im05a3" path="res://素材/界面/原版窗口/人物/结印/印buff图标/印4.png" id="21_buff4"]
+[ext_resource type="Texture2D" uid="uid://bej5dwbyihj0t" path="res://素材/界面/原版窗口/人物/结印/印buff图标/印5.png" id="21_buff5"]
+[ext_resource type="Texture2D" uid="uid://oqiuks81seim" path="res://素材/界面/原版窗口/人物/结印/印buff图标/印6.png" id="21_buff6"]
+[ext_resource type="Texture2D" uid="uid://djdjx1d8iccd3" path="res://素材/界面/原版窗口/人物/结印/印buff图标/印7.png" id="21_buff7"]
+[ext_resource type="Texture2D" uid="uid://cqr2brbdp713a" path="res://素材/界面/原版窗口/人物/结印/印buff图标/印8.png" id="21_buff8"]
+[ext_resource type="Texture2D" uid="uid://dxux0uh5k8qcc" path="res://素材/界面/原版窗口/人物/结印/印buff图标/印9.png" id="21_buff9"]
+[ext_resource type="Texture2D" uid="uid://42uaieyc5m84" path="res://素材/界面/原版窗口/人物/结印/印buff图标/印10.png" id="21_buff10"]
+[ext_resource type="Texture2D" uid="uid://l70plmxso7ws" path="res://素材/界面/原版窗口/人物/结印/印buff图标/印11.png" id="21_buff11"]
+[ext_resource type="Texture2D" uid="uid://nmmrhlc4q5o3" path="res://素材/界面/原版窗口/人物/结印/印buff图标/印12.png" id="21_buff12"]
+[ext_resource type="Script" path="res://素材/界面/原版窗口/人物/结印/脚本/结印指针跟随.gd" id="22_ptr"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_10tuq"]
+texture = ExtResource("19_yuvlk")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3tw1y"]
+
+[sub_resource type="Animation" id="Animation_kgnyq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(5, 228)]
+}
+
+[sub_resource type="Animation" id="Animation_aev27"]
+resource_name = "滑出"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(5, 700), Vector2(5, 228)]
+}
+
+[sub_resource type="Animation" id="Animation_7qqn1"]
+resource_name = "滑入"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(5, 228), Vector2(5, 700)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mbuhd"]
+_data = {
+&"RESET": SubResource("Animation_kgnyq"),
+&"滑入": SubResource("Animation_aev27"),
+&"滑出": SubResource("Animation_7qqn1")
+}
+
+[node name="结印内容" type="Control" unique_id=882775837 node_paths=PackedStringArray("seal_button_group")]
+custom_minimum_size = Vector2(421, 367)
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_eyepv")
+seal_button_group = NodePath("印式按钮")
+
+[node name="结印阵" type="TextureRect" parent="." unique_id=1655092472]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 413.0
+offset_bottom = 292.0
+mouse_filter = 2
+texture = ExtResource("1_300nx")
+expand_mode = 1
+
+[node name="时间指针" type="Control" parent="结印阵" unique_id=2140462532]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="结印指针" type="TextureRect" parent="结印阵/时间指针" unique_id=1531161127]
+layout_mode = 0
+offset_left = 92.0
+offset_top = 123.0
+offset_right = 212.0
+offset_bottom = 163.0
+texture = ExtResource("3_dvgv0")
+stretch_mode = 5
+script = ExtResource("22_ptr")
+
+[node name="印式按钮" type="Control" parent="." unique_id=496383066]
+anchors_preset = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 413.0
+offset_bottom = 292.0
+
+[node name="印1" type="Control" parent="印式按钮" unique_id=603571030]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="默认手势框" type="TextureRect" parent="印式按钮/印1" unique_id=273520383]
+layout_mode = 0
+offset_left = 175.0
+offset_top = 3.0
+offset_right = 222.0
+offset_bottom = 50.0
+texture = ExtResource("2_eyepv")
+
+[node name="选中手势框" type="TextureRect" parent="印式按钮/印1" unique_id=1325867106]
+layout_mode = 0
+offset_left = 175.0
+offset_top = 3.0
+offset_right = 222.0
+offset_bottom = 50.0
+texture = ExtResource("3_mkb0m")
+
+[node name="印式01" type="TextureButton" parent="印式按钮/印1" unique_id=1195850322]
+layout_mode = 0
+offset_left = 175.65
+offset_top = 0.6500001
+offset_right = 222.65
+offset_bottom = 47.65
+tooltip_text = "子"
+texture_normal = ExtResource("2_seal01")
+
+[node name="数值容器" type="Control" parent="印式按钮/印1" unique_id=139711119]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="生命" type="ProgressBar" parent="印式按钮/印1/数值容器" unique_id=769476978]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 308.0
+offset_right = 182.0
+offset_bottom = 323.0
+show_percentage = false
+
+[node name="生命值" type="Label" parent="印式按钮/印1/数值容器" unique_id=1154257160]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 308.0
+offset_right = 182.0
+offset_bottom = 323.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "生命 0/900"
+horizontal_alignment = 1
+
+[node name="攻击" type="ProgressBar" parent="印式按钮/印1/数值容器" unique_id=1046425291]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 308.0
+offset_right = 367.0
+offset_bottom = 323.0
+show_percentage = false
+
+[node name="攻击值" type="Label" parent="印式按钮/印1/数值容器" unique_id=1831656117]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 308.0
+offset_right = 367.0
+offset_bottom = 323.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "攻击 0/300"
+horizontal_alignment = 1
+
+[node name="查克拉" type="ProgressBar" parent="印式按钮/印1/数值容器" unique_id=776441097]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 326.0
+offset_right = 182.0
+offset_bottom = 341.0
+show_percentage = false
+
+[node name="查克拉值" type="Label" parent="印式按钮/印1/数值容器" unique_id=690371601]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 326.0
+offset_right = 182.0
+offset_bottom = 341.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "查克拉 0/150"
+horizontal_alignment = 1
+
+[node name="防御" type="ProgressBar" parent="印式按钮/印1/数值容器" unique_id=581090869]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 326.0
+offset_right = 367.0
+offset_bottom = 341.0
+show_percentage = false
+
+[node name="防御值" type="Label" parent="印式按钮/印1/数值容器" unique_id=1703394749]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 326.0
+offset_right = 367.0
+offset_bottom = 341.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "防御 0/100"
+horizontal_alignment = 1
+
+[node name="印2" type="Control" parent="印式按钮" unique_id=174857997]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="默认手势框" type="TextureRect" parent="印式按钮/印2" unique_id=1400667669]
+layout_mode = 0
+offset_left = 237.0
+offset_top = 19.0
+offset_right = 284.0
+offset_bottom = 66.0
+texture = ExtResource("2_eyepv")
+
+[node name="选中手势框" type="TextureRect" parent="印式按钮/印2" unique_id=655313124]
+visible = false
+layout_mode = 0
+offset_left = 237.0
+offset_top = 19.0
+offset_right = 284.0
+offset_bottom = 66.0
+texture = ExtResource("3_mkb0m")
+
+[node name="印式02" type="TextureButton" parent="印式按钮/印2" unique_id=686935389]
+layout_mode = 0
+offset_left = 236.25
+offset_top = 19.5
+offset_right = 283.25
+offset_bottom = 66.5
+tooltip_text = "丑"
+texture_normal = ExtResource("3_seal02")
+
+[node name="数值容器" type="Control" parent="印式按钮/印2" unique_id=2064678140]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="生命" type="ProgressBar" parent="印式按钮/印2/数值容器" unique_id=43470787]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 308.0
+offset_right = 182.0
+offset_bottom = 323.0
+show_percentage = false
+
+[node name="生命值" type="Label" parent="印式按钮/印2/数值容器" unique_id=1884148353]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 308.0
+offset_right = 182.0
+offset_bottom = 323.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "生命 0/1350"
+horizontal_alignment = 1
+
+[node name="攻击" type="ProgressBar" parent="印式按钮/印2/数值容器" unique_id=1226449767]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 308.0
+offset_right = 367.0
+offset_bottom = 323.0
+show_percentage = false
+
+[node name="攻击值" type="Label" parent="印式按钮/印2/数值容器" unique_id=402733742]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 308.0
+offset_right = 367.0
+offset_bottom = 323.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "攻击 0/450"
+horizontal_alignment = 1
+
+[node name="查克拉" type="ProgressBar" parent="印式按钮/印2/数值容器" unique_id=1286013293]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 326.0
+offset_right = 182.0
+offset_bottom = 341.0
+show_percentage = false
+
+[node name="查克拉值" type="Label" parent="印式按钮/印2/数值容器" unique_id=1309591629]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 326.0
+offset_right = 182.0
+offset_bottom = 341.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "查克拉 0/225"
+horizontal_alignment = 1
+
+[node name="防御" type="ProgressBar" parent="印式按钮/印2/数值容器" unique_id=1582760313]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 326.0
+offset_right = 367.0
+offset_bottom = 341.0
+show_percentage = false
+
+[node name="防御值" type="Label" parent="印式按钮/印2/数值容器" unique_id=647392027]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 326.0
+offset_right = 367.0
+offset_bottom = 341.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "防御 0/150"
+horizontal_alignment = 1
+
+[node name="印3" type="Control" parent="印式按钮" unique_id=1976183192]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="默认手势框" type="TextureRect" parent="印式按钮/印3" unique_id=577122639]
+layout_mode = 0
+offset_left = 281.0
+offset_top = 62.0
+offset_right = 328.0
+offset_bottom = 109.0
+texture = ExtResource("2_eyepv")
+
+[node name="选中手势框" type="TextureRect" parent="印式按钮/印3" unique_id=402689849]
+visible = false
+layout_mode = 0
+offset_left = 281.0
+offset_top = 62.0
+offset_right = 328.0
+offset_bottom = 109.0
+texture = ExtResource("3_mkb0m")
+
+[node name="印式03" type="TextureButton" parent="印式按钮/印3" unique_id=902933138]
+layout_mode = 0
+offset_left = 280.5
+offset_top = 60.5
+offset_right = 327.5
+offset_bottom = 107.5
+tooltip_text = "寅"
+texture_normal = ExtResource("4_seal03")
+
+[node name="数值容器" type="Control" parent="印式按钮/印3" unique_id=1267807713]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="生命" type="ProgressBar" parent="印式按钮/印3/数值容器" unique_id=368922513]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 308.0
+offset_right = 182.0
+offset_bottom = 323.0
+show_percentage = false
+
+[node name="生命值" type="Label" parent="印式按钮/印3/数值容器" unique_id=750798336]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 308.0
+offset_right = 182.0
+offset_bottom = 323.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "生命 0/1650"
+horizontal_alignment = 1
+
+[node name="攻击" type="ProgressBar" parent="印式按钮/印3/数值容器" unique_id=1819903503]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 308.0
+offset_right = 367.0
+offset_bottom = 323.0
+show_percentage = false
+
+[node name="攻击值" type="Label" parent="印式按钮/印3/数值容器" unique_id=603008917]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 308.0
+offset_right = 367.0
+offset_bottom = 323.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "攻击 0/550"
+horizontal_alignment = 1
+
+[node name="查克拉" type="ProgressBar" parent="印式按钮/印3/数值容器" unique_id=1344036483]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 326.0
+offset_right = 182.0
+offset_bottom = 341.0
+show_percentage = false
+
+[node name="查克拉值" type="Label" parent="印式按钮/印3/数值容器" unique_id=1155069148]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 326.0
+offset_right = 182.0
+offset_bottom = 341.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "查克拉 0/275"
+horizontal_alignment = 1
+
+[node name="防御" type="ProgressBar" parent="印式按钮/印3/数值容器" unique_id=1849285842]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 326.0
+offset_right = 367.0
+offset_bottom = 341.0
+show_percentage = false
+
+[node name="防御值" type="Label" parent="印式按钮/印3/数值容器" unique_id=850929402]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 326.0
+offset_right = 367.0
+offset_bottom = 341.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "防御 0/185"
+horizontal_alignment = 1
+
+[node name="印4" type="Control" parent="印式按钮" unique_id=586325609]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="默认手势框" type="TextureRect" parent="印式按钮/印4" unique_id=1250001348]
+layout_mode = 0
+offset_left = 298.0
+offset_top = 110.0
+offset_right = 345.0
+offset_bottom = 157.0
+texture = ExtResource("2_eyepv")
+
+[node name="选中手势框" type="TextureRect" parent="印式按钮/印4" unique_id=953076215]
+visible = false
+layout_mode = 0
+offset_left = 298.0
+offset_top = 110.0
+offset_right = 345.0
+offset_bottom = 157.0
+texture = ExtResource("3_mkb0m")
+
+[node name="印式04" type="TextureButton" parent="印式按钮/印4" unique_id=1510506188]
+layout_mode = 0
+offset_left = 296.45
+offset_top = 113.2
+offset_right = 343.45
+offset_bottom = 160.2
+tooltip_text = "卯"
+texture_normal = ExtResource("5_seal04")
+
+[node name="数值容器" type="Control" parent="印式按钮/印4" unique_id=163207845]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="生命" type="ProgressBar" parent="印式按钮/印4/数值容器" unique_id=1765022885]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 308.0
+offset_right = 182.0
+offset_bottom = 323.0
+show_percentage = false
+
+[node name="生命值" type="Label" parent="印式按钮/印4/数值容器" unique_id=652781788]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 308.0
+offset_right = 182.0
+offset_bottom = 323.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "生命 0/2700"
+horizontal_alignment = 1
+
+[node name="攻击" type="ProgressBar" parent="印式按钮/印4/数值容器" unique_id=1609339911]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 308.0
+offset_right = 367.0
+offset_bottom = 323.0
+show_percentage = false
+
+[node name="攻击值" type="Label" parent="印式按钮/印4/数值容器" unique_id=355475182]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 308.0
+offset_right = 367.0
+offset_bottom = 323.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "攻击 0/900"
+horizontal_alignment = 1
+
+[node name="查克拉" type="ProgressBar" parent="印式按钮/印4/数值容器" unique_id=588629567]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 326.0
+offset_right = 182.0
+offset_bottom = 341.0
+show_percentage = false
+
+[node name="查克拉值" type="Label" parent="印式按钮/印4/数值容器" unique_id=1416092610]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 326.0
+offset_right = 182.0
+offset_bottom = 341.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "查克拉 0/450"
+horizontal_alignment = 1
+
+[node name="防御" type="ProgressBar" parent="印式按钮/印4/数值容器" unique_id=1050122607]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 326.0
+offset_right = 367.0
+offset_bottom = 341.0
+show_percentage = false
+
+[node name="防御值" type="Label" parent="印式按钮/印4/数值容器" unique_id=395449411]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 326.0
+offset_right = 367.0
+offset_bottom = 341.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "防御 0/300"
+horizontal_alignment = 1
+
+[node name="印5" type="Control" parent="印式按钮" unique_id=864845080]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="默认手势框" type="TextureRect" parent="印式按钮/印5" unique_id=672491721]
+layout_mode = 0
+offset_left = 284.0
+offset_top = 173.0
+offset_right = 331.0
+offset_bottom = 220.0
+texture = ExtResource("2_eyepv")
+
+[node name="选中手势框" type="TextureRect" parent="印式按钮/印5" unique_id=356665716]
+visible = false
+layout_mode = 0
+offset_left = 284.0
+offset_top = 173.0
+offset_right = 331.0
+offset_bottom = 220.0
+texture = ExtResource("3_mkb0m")
+
+[node name="印式05" type="TextureButton" parent="印式按钮/印5" unique_id=1377119869]
+layout_mode = 0
+offset_left = 283.7
+offset_top = 172.85
+offset_right = 330.7
+offset_bottom = 219.85
+tooltip_text = "辰"
+texture_normal = ExtResource("6_seal05")
+
+[node name="数值容器" type="Control" parent="印式按钮/印5" unique_id=500756254]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="生命" type="ProgressBar" parent="印式按钮/印5/数值容器" unique_id=1580679387]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 308.0
+offset_right = 182.0
+offset_bottom = 323.0
+show_percentage = false
+
+[node name="生命值" type="Label" parent="印式按钮/印5/数值容器" unique_id=1168225192]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 308.0
+offset_right = 182.0
+offset_bottom = 323.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "生命 0/3000"
+horizontal_alignment = 1
+
+[node name="攻击" type="ProgressBar" parent="印式按钮/印5/数值容器" unique_id=77462544]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 308.0
+offset_right = 367.0
+offset_bottom = 323.0
+show_percentage = false
+
+[node name="攻击值" type="Label" parent="印式按钮/印5/数值容器" unique_id=2142745131]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 308.0
+offset_right = 367.0
+offset_bottom = 323.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "攻击 0/1000"
+horizontal_alignment = 1
+
+[node name="查克拉" type="ProgressBar" parent="印式按钮/印5/数值容器" unique_id=1078315581]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 326.0
+offset_right = 182.0
+offset_bottom = 341.0
+show_percentage = false
+
+[node name="查克拉值" type="Label" parent="印式按钮/印5/数值容器" unique_id=1919598495]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 326.0
+offset_right = 182.0
+offset_bottom = 341.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "查克拉 0/500"
+horizontal_alignment = 1
+
+[node name="防御" type="ProgressBar" parent="印式按钮/印5/数值容器" unique_id=1996760711]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 326.0
+offset_right = 367.0
+offset_bottom = 341.0
+show_percentage = false
+
+[node name="防御值" type="Label" parent="印式按钮/印5/数值容器" unique_id=1874122991]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 326.0
+offset_right = 367.0
+offset_bottom = 341.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "防御 0/335"
+horizontal_alignment = 1
+
+[node name="印6" type="Control" parent="印式按钮" unique_id=2054538354]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="默认手势框" type="TextureRect" parent="印式按钮/印6" unique_id=1283151049]
+layout_mode = 0
+offset_left = 244.0
+offset_top = 219.0
+offset_right = 291.0
+offset_bottom = 266.0
+texture = ExtResource("2_eyepv")
+
+[node name="选中手势框" type="TextureRect" parent="印式按钮/印6" unique_id=746007639]
+visible = false
+layout_mode = 0
+offset_left = 244.0
+offset_top = 219.0
+offset_right = 291.0
+offset_bottom = 266.0
+texture = ExtResource("3_mkb0m")
+
+[node name="印式06" type="TextureButton" parent="印式按钮/印6" unique_id=1185689523]
+layout_mode = 0
+offset_left = 243.7
+offset_top = 217.55
+offset_right = 290.7
+offset_bottom = 264.55
+tooltip_text = "巳"
+texture_normal = ExtResource("7_seal06")
+
+[node name="数值容器" type="Control" parent="印式按钮/印6" unique_id=1424490150]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="生命" type="ProgressBar" parent="印式按钮/印6/数值容器" unique_id=1243549611]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 308.0
+offset_right = 182.0
+offset_bottom = 323.0
+show_percentage = false
+
+[node name="生命值" type="Label" parent="印式按钮/印6/数值容器" unique_id=161112775]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 308.0
+offset_right = 182.0
+offset_bottom = 323.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "生命 0/5000"
+horizontal_alignment = 1
+
+[node name="攻击" type="ProgressBar" parent="印式按钮/印6/数值容器" unique_id=1230419706]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 308.0
+offset_right = 367.0
+offset_bottom = 323.0
+show_percentage = false
+
+[node name="攻击值" type="Label" parent="印式按钮/印6/数值容器" unique_id=1038186910]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 308.0
+offset_right = 367.0
+offset_bottom = 323.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "攻击 0/1670"
+horizontal_alignment = 1
+
+[node name="查克拉" type="ProgressBar" parent="印式按钮/印6/数值容器" unique_id=1034148713]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 326.0
+offset_right = 182.0
+offset_bottom = 341.0
+show_percentage = false
+
+[node name="查克拉值" type="Label" parent="印式按钮/印6/数值容器" unique_id=336904443]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 326.0
+offset_right = 182.0
+offset_bottom = 341.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "查克拉 0/850"
+horizontal_alignment = 1
+
+[node name="防御" type="ProgressBar" parent="印式按钮/印6/数值容器" unique_id=1257614268]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 326.0
+offset_right = 367.0
+offset_bottom = 341.0
+show_percentage = false
+
+[node name="防御值" type="Label" parent="印式按钮/印6/数值容器" unique_id=1265509661]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 326.0
+offset_right = 367.0
+offset_bottom = 341.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "防御 0/555"
+horizontal_alignment = 1
+
+[node name="印7" type="Control" parent="印式按钮" unique_id=44812845]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="默认手势框" type="TextureRect" parent="印式按钮/印7" unique_id=113465075]
+layout_mode = 0
+offset_left = 181.0
+offset_top = 240.0
+offset_right = 228.0
+offset_bottom = 287.0
+texture = ExtResource("2_eyepv")
+
+[node name="选中手势框" type="TextureRect" parent="印式按钮/印7" unique_id=1055959873]
+visible = false
+layout_mode = 0
+offset_left = 181.0
+offset_top = 240.0
+offset_right = 228.0
+offset_bottom = 287.0
+texture = ExtResource("3_mkb0m")
+
+[node name="印式07" type="TextureButton" parent="印式按钮/印7" unique_id=946792532]
+layout_mode = 0
+offset_left = 180.8
+offset_top = 240.65
+offset_right = 227.8
+offset_bottom = 287.65
+tooltip_text = "午"
+texture_normal = ExtResource("8_seal07")
+
+[node name="数值容器" type="Control" parent="印式按钮/印7" unique_id=486969759]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="生命" type="ProgressBar" parent="印式按钮/印7/数值容器" unique_id=2121787797]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 308.0
+offset_right = 182.0
+offset_bottom = 323.0
+show_percentage = false
+
+[node name="生命值" type="Label" parent="印式按钮/印7/数值容器" unique_id=1760511093]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 308.0
+offset_right = 182.0
+offset_bottom = 323.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "生命 0/5300"
+horizontal_alignment = 1
+
+[node name="攻击" type="ProgressBar" parent="印式按钮/印7/数值容器" unique_id=2025499886]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 308.0
+offset_right = 367.0
+offset_bottom = 323.0
+show_percentage = false
+
+[node name="攻击值" type="Label" parent="印式按钮/印7/数值容器" unique_id=1033999767]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 308.0
+offset_right = 367.0
+offset_bottom = 323.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "攻击 0/1770"
+horizontal_alignment = 1
+
+[node name="查克拉" type="ProgressBar" parent="印式按钮/印7/数值容器" unique_id=767178873]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 326.0
+offset_right = 182.0
+offset_bottom = 341.0
+show_percentage = false
+
+[node name="查克拉值" type="Label" parent="印式按钮/印7/数值容器" unique_id=257597893]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 326.0
+offset_right = 182.0
+offset_bottom = 341.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "查克拉 0/900"
+horizontal_alignment = 1
+
+[node name="防御" type="ProgressBar" parent="印式按钮/印7/数值容器" unique_id=187508889]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 326.0
+offset_right = 367.0
+offset_bottom = 341.0
+show_percentage = false
+
+[node name="防御值" type="Label" parent="印式按钮/印7/数值容器" unique_id=1416088418]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 326.0
+offset_right = 367.0
+offset_bottom = 341.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "防御 0/590"
+horizontal_alignment = 1
+
+[node name="印8" type="Control" parent="印式按钮" unique_id=1608044228]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="默认手势框" type="TextureRect" parent="印式按钮/印8" unique_id=1160845624]
+layout_mode = 0
+offset_left = 113.0
+offset_top = 222.0
+offset_right = 160.0
+offset_bottom = 269.0
+texture = ExtResource("2_eyepv")
+
+[node name="选中手势框" type="TextureRect" parent="印式按钮/印8" unique_id=49127090]
+visible = false
+layout_mode = 0
+offset_left = 113.0
+offset_top = 222.0
+offset_right = 160.0
+offset_bottom = 269.0
+texture = ExtResource("3_mkb0m")
+
+[node name="印式08" type="TextureButton" parent="印式按钮/印8" unique_id=1541216753]
+layout_mode = 0
+offset_left = 112.75
+offset_top = 222.8
+offset_right = 159.75
+offset_bottom = 269.8
+tooltip_text = "未"
+texture_normal = ExtResource("9_seal08")
+
+[node name="数值容器" type="Control" parent="印式按钮/印8" unique_id=196564769]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="生命" type="ProgressBar" parent="印式按钮/印8/数值容器" unique_id=902850000]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 308.0
+offset_right = 182.0
+offset_bottom = 323.0
+show_percentage = false
+
+[node name="生命值" type="Label" parent="印式按钮/印8/数值容器" unique_id=1396812558]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 308.0
+offset_right = 182.0
+offset_bottom = 323.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "生命 0/7700"
+horizontal_alignment = 1
+
+[node name="攻击" type="ProgressBar" parent="印式按钮/印8/数值容器" unique_id=224914227]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 308.0
+offset_right = 367.0
+offset_bottom = 323.0
+show_percentage = false
+
+[node name="攻击值" type="Label" parent="印式按钮/印8/数值容器" unique_id=455858364]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 308.0
+offset_right = 367.0
+offset_bottom = 323.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "攻击 0/2570"
+horizontal_alignment = 1
+
+[node name="查克拉" type="ProgressBar" parent="印式按钮/印8/数值容器" unique_id=454090429]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 326.0
+offset_right = 182.0
+offset_bottom = 341.0
+show_percentage = false
+
+[node name="查克拉值" type="Label" parent="印式按钮/印8/数值容器" unique_id=2019320575]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 326.0
+offset_right = 182.0
+offset_bottom = 341.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "查克拉 0/1300"
+horizontal_alignment = 1
+
+[node name="防御" type="ProgressBar" parent="印式按钮/印8/数值容器" unique_id=499430251]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 326.0
+offset_right = 367.0
+offset_bottom = 341.0
+show_percentage = false
+
+[node name="防御值" type="Label" parent="印式按钮/印8/数值容器" unique_id=1300927733]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 326.0
+offset_right = 367.0
+offset_bottom = 341.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "防御 0/555"
+horizontal_alignment = 1
+
+[node name="印9" type="Control" parent="印式按钮" unique_id=146639602]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="默认手势框" type="TextureRect" parent="印式按钮/印9" unique_id=828201907]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 174.0
+offset_right = 116.0
+offset_bottom = 221.0
+texture = ExtResource("2_eyepv")
+
+[node name="选中手势框" type="TextureRect" parent="印式按钮/印9" unique_id=1096018904]
+visible = false
+layout_mode = 0
+offset_left = 69.0
+offset_top = 174.0
+offset_right = 116.0
+offset_bottom = 221.0
+texture = ExtResource("3_mkb0m")
+
+[node name="印式09" type="TextureButton" parent="印式按钮/印9" unique_id=827180917]
+layout_mode = 0
+offset_left = 69.75
+offset_top = 173.85
+offset_right = 116.75
+offset_bottom = 220.85
+tooltip_text = "申"
+texture_normal = ExtResource("10_seal09")
+
+[node name="数值容器" type="Control" parent="印式按钮/印9" unique_id=1421071347]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="生命" type="ProgressBar" parent="印式按钮/印9/数值容器" unique_id=1741209881]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 308.0
+offset_right = 182.0
+offset_bottom = 323.0
+show_percentage = false
+
+[node name="生命值" type="Label" parent="印式按钮/印9/数值容器" unique_id=1001095177]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 308.0
+offset_right = 182.0
+offset_bottom = 323.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "生命 0/8150"
+horizontal_alignment = 1
+
+[node name="攻击" type="ProgressBar" parent="印式按钮/印9/数值容器" unique_id=531539737]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 308.0
+offset_right = 367.0
+offset_bottom = 323.0
+show_percentage = false
+
+[node name="攻击值" type="Label" parent="印式按钮/印9/数值容器" unique_id=67809210]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 308.0
+offset_right = 367.0
+offset_bottom = 323.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "攻击 0/2720"
+horizontal_alignment = 1
+
+[node name="查克拉" type="ProgressBar" parent="印式按钮/印9/数值容器" unique_id=1753630526]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 326.0
+offset_right = 182.0
+offset_bottom = 341.0
+show_percentage = false
+
+[node name="查克拉值" type="Label" parent="印式按钮/印9/数值容器" unique_id=1733606950]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 326.0
+offset_right = 182.0
+offset_bottom = 341.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "查克拉 0/1400"
+horizontal_alignment = 1
+
+[node name="防御" type="ProgressBar" parent="印式按钮/印9/数值容器" unique_id=2059192027]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 326.0
+offset_right = 367.0
+offset_bottom = 341.0
+show_percentage = false
+
+[node name="防御值" type="Label" parent="印式按钮/印9/数值容器" unique_id=1112795719]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 326.0
+offset_right = 367.0
+offset_bottom = 341.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "防御 0/905"
+horizontal_alignment = 1
+
+[node name="印10" type="Control" parent="印式按钮" unique_id=1012409308]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="默认手势框" type="TextureRect" parent="印式按钮/印10" unique_id=1797600514]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 114.0
+offset_right = 102.0
+offset_bottom = 161.0
+texture = ExtResource("2_eyepv")
+
+[node name="选中手势框" type="TextureRect" parent="印式按钮/印10" unique_id=529668661]
+visible = false
+layout_mode = 0
+offset_left = 55.0
+offset_top = 114.0
+offset_right = 102.0
+offset_bottom = 161.0
+texture = ExtResource("3_mkb0m")
+
+[node name="印式10" type="TextureButton" parent="印式按钮/印10" unique_id=1393141369]
+layout_mode = 0
+offset_left = 54.9
+offset_top = 114.55
+offset_right = 101.9
+offset_bottom = 161.55
+tooltip_text = "酉"
+texture_normal = ExtResource("11_seal10")
+
+[node name="数值容器" type="Control" parent="印式按钮/印10" unique_id=374432846]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="生命" type="ProgressBar" parent="印式按钮/印10/数值容器" unique_id=187237174]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 308.0
+offset_right = 182.0
+offset_bottom = 323.0
+show_percentage = false
+
+[node name="生命值" type="Label" parent="印式按钮/印10/数值容器" unique_id=1245151209]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 308.0
+offset_right = 182.0
+offset_bottom = 323.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "生命 0/13200"
+horizontal_alignment = 1
+
+[node name="攻击" type="ProgressBar" parent="印式按钮/印10/数值容器" unique_id=735572538]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 308.0
+offset_right = 367.0
+offset_bottom = 323.0
+show_percentage = false
+
+[node name="攻击值" type="Label" parent="印式按钮/印10/数值容器" unique_id=1098050295]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 308.0
+offset_right = 367.0
+offset_bottom = 323.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "攻击 0/4400"
+horizontal_alignment = 1
+
+[node name="查克拉" type="ProgressBar" parent="印式按钮/印10/数值容器" unique_id=1856154369]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 326.0
+offset_right = 182.0
+offset_bottom = 341.0
+show_percentage = false
+
+[node name="查克拉值" type="Label" parent="印式按钮/印10/数值容器" unique_id=1487049859]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 326.0
+offset_right = 182.0
+offset_bottom = 341.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "查克拉 0/2250"
+horizontal_alignment = 1
+
+[node name="防御" type="ProgressBar" parent="印式按钮/印10/数值容器" unique_id=1428957327]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 326.0
+offset_right = 367.0
+offset_bottom = 341.0
+show_percentage = false
+
+[node name="防御值" type="Label" parent="印式按钮/印10/数值容器" unique_id=1031441065]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 326.0
+offset_right = 367.0
+offset_bottom = 341.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "防御 0/1465"
+horizontal_alignment = 1
+
+[node name="印11" type="Control" parent="印式按钮" unique_id=1672470444]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="默认手势框" type="TextureRect" parent="印式按钮/印11" unique_id=1719682843]
+layout_mode = 0
+offset_left = 71.0
+offset_top = 58.0
+offset_right = 118.0
+offset_bottom = 105.0
+texture = ExtResource("2_eyepv")
+
+[node name="选中手势框" type="TextureRect" parent="印式按钮/印11" unique_id=1645805684]
+visible = false
+layout_mode = 0
+offset_left = 71.0
+offset_top = 58.0
+offset_right = 118.0
+offset_bottom = 105.0
+texture = ExtResource("3_mkb0m")
+
+[node name="印式11" type="TextureButton" parent="印式按钮/印11" unique_id=1557831865]
+layout_mode = 0
+offset_left = 72.55
+offset_top = 58.7
+offset_right = 119.55
+offset_bottom = 105.7
+tooltip_text = "戌"
+texture_normal = ExtResource("12_seal11")
+
+[node name="数值容器" type="Control" parent="印式按钮/印11" unique_id=1512160294]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="生命" type="ProgressBar" parent="印式按钮/印11/数值容器" unique_id=822589134]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 308.0
+offset_right = 182.0
+offset_bottom = 323.0
+show_percentage = false
+
+[node name="生命值" type="Label" parent="印式按钮/印11/数值容器" unique_id=1745998559]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 308.0
+offset_right = 182.0
+offset_bottom = 323.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "生命 0/18600"
+horizontal_alignment = 1
+
+[node name="攻击" type="ProgressBar" parent="印式按钮/印11/数值容器" unique_id=264791924]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 308.0
+offset_right = 367.0
+offset_bottom = 323.0
+show_percentage = false
+
+[node name="攻击值" type="Label" parent="印式按钮/印11/数值容器" unique_id=1229840110]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 308.0
+offset_right = 367.0
+offset_bottom = 323.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "攻击 0/6200"
+horizontal_alignment = 1
+
+[node name="查克拉" type="ProgressBar" parent="印式按钮/印11/数值容器" unique_id=495890499]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 326.0
+offset_right = 182.0
+offset_bottom = 341.0
+show_percentage = false
+
+[node name="查克拉值" type="Label" parent="印式按钮/印11/数值容器" unique_id=1256992483]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 326.0
+offset_right = 182.0
+offset_bottom = 341.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "查克拉 0/3150"
+horizontal_alignment = 1
+
+[node name="防御" type="ProgressBar" parent="印式按钮/印11/数值容器" unique_id=446483428]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 326.0
+offset_right = 367.0
+offset_bottom = 341.0
+show_percentage = false
+
+[node name="防御值" type="Label" parent="印式按钮/印11/数值容器" unique_id=1496936795]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 326.0
+offset_right = 367.0
+offset_bottom = 341.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "防御 0/2065"
+horizontal_alignment = 1
+
+[node name="印12" type="Control" parent="印式按钮" unique_id=566045224]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="默认手势框" type="TextureRect" parent="印式按钮/印12" unique_id=1233714532]
+layout_mode = 0
+offset_left = 115.0
+offset_top = 18.0
+offset_right = 162.0
+offset_bottom = 65.0
+texture = ExtResource("2_eyepv")
+
+[node name="选中手势框" type="TextureRect" parent="印式按钮/印12" unique_id=514405181]
+visible = false
+layout_mode = 0
+offset_left = 115.0
+offset_top = 18.0
+offset_right = 162.0
+offset_bottom = 65.0
+texture = ExtResource("3_mkb0m")
+
+[node name="印式12" type="TextureButton" parent="印式按钮/印12" unique_id=337180227]
+layout_mode = 0
+offset_left = 114.8
+offset_top = 17.7
+offset_right = 161.8
+offset_bottom = 64.7
+tooltip_text = "亥"
+texture_normal = ExtResource("13_seal12")
+
+[node name="数值容器" type="Control" parent="印式按钮/印12" unique_id=1429624324]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="生命" type="ProgressBar" parent="印式按钮/印12/数值容器" unique_id=1489046829]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 308.0
+offset_right = 182.0
+offset_bottom = 323.0
+show_percentage = false
+
+[node name="生命值" type="Label" parent="印式按钮/印12/数值容器" unique_id=1344664935]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 308.0
+offset_right = 182.0
+offset_bottom = 323.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "生命 0/24000"
+horizontal_alignment = 1
+
+[node name="攻击" type="ProgressBar" parent="印式按钮/印12/数值容器" unique_id=884876866]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 308.0
+offset_right = 367.0
+offset_bottom = 323.0
+show_percentage = false
+
+[node name="攻击值" type="Label" parent="印式按钮/印12/数值容器" unique_id=2062007854]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 308.0
+offset_right = 367.0
+offset_bottom = 323.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "攻击 0/8000"
+horizontal_alignment = 1
+
+[node name="查克拉" type="ProgressBar" parent="印式按钮/印12/数值容器" unique_id=34307472]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 326.0
+offset_right = 182.0
+offset_bottom = 341.0
+show_percentage = false
+
+[node name="查克拉值" type="Label" parent="印式按钮/印12/数值容器" unique_id=1457415108]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 326.0
+offset_right = 182.0
+offset_bottom = 341.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "查克拉 0/4000"
+horizontal_alignment = 1
+
+[node name="防御" type="ProgressBar" parent="印式按钮/印12/数值容器" unique_id=779388467]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 326.0
+offset_right = 367.0
+offset_bottom = 341.0
+show_percentage = false
+
+[node name="防御值" type="Label" parent="印式按钮/印12/数值容器" unique_id=958067503]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 326.0
+offset_right = 367.0
+offset_bottom = 341.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "防御 0/2665"
+horizontal_alignment = 1
+
+[node name="属性标题" type="Label" parent="." unique_id=1776663087]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 293.0
+offset_right = 415.0
+offset_bottom = 311.0
+theme_override_colors/font_color = Color(0.9607843, 0.91764706, 0.8392157, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "人物属性加成："
+
+[node name="提升结印" type="Button" parent="." unique_id=911147882]
+layout_mode = 0
+offset_left = 170.0
+offset_top = 346.0
+offset_right = 250.0
+offset_bottom = 367.0
+text = "提升结印"
+
+[node name="提升结印阶数弹窗" type="Control" parent="." unique_id=334124968]
+clip_contents = true
+anchors_preset = 0
+offset_left = 5.0
+offset_top = 228.0
+offset_right = 412.0
+offset_bottom = 368.0
+theme = ExtResource("17_p3ueq")
+script = ExtResource("18_85ulq")
+
+[node name="子页面底图" type="Panel" parent="提升结印阶数弹窗" unique_id=911533198]
+layout_mode = 0
+offset_top = 1.0
+offset_right = 407.0
+offset_bottom = 140.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_10tuq")
+
+[node name="叠加用为了没那么透明" type="Panel" parent="提升结印阶数弹窗/子页面底图" unique_id=264036789]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 1.0
+offset_right = 406.0
+offset_bottom = 138.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_10tuq")
+
+[node name="叠加用为了没那么透明2" type="Panel" parent="提升结印阶数弹窗/子页面底图" unique_id=307071195]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 1.0
+offset_right = 407.0
+offset_bottom = 139.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_10tuq")
+
+[node name="底图" type="TextureRect" parent="提升结印阶数弹窗" unique_id=1343990042]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 1.0
+offset_right = 408.0
+offset_bottom = 140.0
+texture = ExtResource("19_yuvlk")
+expand_mode = 1
+
+[node name="界面标题" type="Label" parent="提升结印阶数弹窗" unique_id=208519466]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 5.0
+offset_right = 56.0
+offset_bottom = 18.0
+theme_override_colors/font_color = Color(0.9607843, 0.91764706, 0.8392157, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "结印说明："
+
+[node name="详细介绍" type="Label" parent="提升结印阶数弹窗" unique_id=1624802183]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 29.0
+offset_right = 417.0
+offset_bottom = 68.0
+theme_override_colors/font_color = Color(0.9607843, 0.91764706, 0.8392157, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "忍者忍术手式，也称为结印手势。指的是忍者在发动忍术中前使用的手法。忍
+者在发动忍术时，会先做结印，结印需要以平静的心来保证结印的正确性，
+并要有塾练的技巧才能把炼出来的查克拉转化成“术释放出来。"
+
+[node name="消耗需求说明" type="Label" parent="提升结印阶数弹窗" unique_id=843810054]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 81.0
+offset_right = 222.0
+offset_bottom = 107.0
+theme_override_colors/font_color = Color(0.9607843, 0.91764706, 0.8392157, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "训练前提：等级达到70
+训练消耗：消耗查克拉精华1000"
+
+[node name="提升熟练度标题" type="Label" parent="提升结印阶数弹窗" unique_id=1129299768]
+layout_mode = 0
+offset_left = 179.0
+offset_top = 82.0
+offset_right = 239.0
+offset_bottom = 99.0
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "提升熟练度"
+
+[node name="印1阶段" type="Control" parent="提升结印阶数弹窗" unique_id=1660169347]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="熟练度进度条" type="ProgressBar" parent="提升结印阶数弹窗/印1阶段" unique_id=391667928]
+layout_mode = 0
+offset_left = 243.0
+offset_top = 82.0
+offset_right = 403.0
+offset_bottom = 95.0
+show_percentage = false
+
+[node name="熟练度值数值" type="Label" parent="提升结印阶数弹窗/印1阶段/熟练度进度条" unique_id=1977035040]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 2.0
+offset_right = 105.0
+offset_bottom = 15.0
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "0/600"
+
+[node name="印1buff" type="TextureRect" parent="提升结印阶数弹窗/印1阶段" unique_id=1618614957]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 72.0
+offset_right = 50.0
+offset_bottom = 112.0
+texture = ExtResource("20_85ulq")
+
+[node name="印2阶段" type="Control" parent="提升结印阶数弹窗" unique_id=1312333254]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="熟练度进度条" type="ProgressBar" parent="提升结印阶数弹窗/印2阶段" unique_id=2100000021]
+layout_mode = 0
+offset_left = 243.0
+offset_top = 82.0
+offset_right = 403.0
+offset_bottom = 95.0
+show_percentage = false
+
+[node name="熟练度值数值" type="Label" parent="提升结印阶数弹窗/印2阶段/熟练度进度条" unique_id=2100000022]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 2.0
+offset_right = 105.0
+offset_bottom = 15.0
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "0/1500"
+
+[node name="印2buff" type="TextureRect" parent="提升结印阶数弹窗/印2阶段" unique_id=2100000023]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 72.0
+offset_right = 50.0
+offset_bottom = 112.0
+texture = ExtResource("21_buff2")
+
+[node name="印3阶段" type="Control" parent="提升结印阶数弹窗" unique_id=1406909985]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="熟练度进度条" type="ProgressBar" parent="提升结印阶数弹窗/印3阶段" unique_id=2100000031]
+layout_mode = 0
+offset_left = 243.0
+offset_top = 82.0
+offset_right = 403.0
+offset_bottom = 95.0
+show_percentage = false
+
+[node name="熟练度值数值" type="Label" parent="提升结印阶数弹窗/印3阶段/熟练度进度条" unique_id=2100000032]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 2.0
+offset_right = 105.0
+offset_bottom = 15.0
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "0/4000"
+
+[node name="印3buff" type="TextureRect" parent="提升结印阶数弹窗/印3阶段" unique_id=2100000033]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 72.0
+offset_right = 50.0
+offset_bottom = 112.0
+texture = ExtResource("21_buff3")
+
+[node name="印4阶段" type="Control" parent="提升结印阶数弹窗" unique_id=1372033260]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="熟练度进度条" type="ProgressBar" parent="提升结印阶数弹窗/印4阶段" unique_id=2100000041]
+layout_mode = 0
+offset_left = 243.0
+offset_top = 82.0
+offset_right = 403.0
+offset_bottom = 95.0
+show_percentage = false
+
+[node name="熟练度值数值" type="Label" parent="提升结印阶数弹窗/印4阶段/熟练度进度条" unique_id=2100000042]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 2.0
+offset_right = 105.0
+offset_bottom = 15.0
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "0/6500"
+
+[node name="印4buff" type="TextureRect" parent="提升结印阶数弹窗/印4阶段" unique_id=2100000043]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 72.0
+offset_right = 50.0
+offset_bottom = 112.0
+texture = ExtResource("21_buff4")
+
+[node name="印5阶段" type="Control" parent="提升结印阶数弹窗" unique_id=1166681349]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="熟练度进度条" type="ProgressBar" parent="提升结印阶数弹窗/印5阶段" unique_id=2100000051]
+layout_mode = 0
+offset_left = 243.0
+offset_top = 82.0
+offset_right = 403.0
+offset_bottom = 95.0
+show_percentage = false
+
+[node name="熟练度值数值" type="Label" parent="提升结印阶数弹窗/印5阶段/熟练度进度条" unique_id=2100000052]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 2.0
+offset_right = 105.0
+offset_bottom = 15.0
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "0/9000"
+
+[node name="印5buff" type="TextureRect" parent="提升结印阶数弹窗/印5阶段" unique_id=2100000053]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 72.0
+offset_right = 50.0
+offset_bottom = 112.0
+texture = ExtResource("21_buff5")
+
+[node name="印6阶段" type="Control" parent="提升结印阶数弹窗" unique_id=769898843]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="熟练度进度条" type="ProgressBar" parent="提升结印阶数弹窗/印6阶段" unique_id=2100000061]
+layout_mode = 0
+offset_left = 243.0
+offset_top = 82.0
+offset_right = 403.0
+offset_bottom = 95.0
+show_percentage = false
+
+[node name="熟练度值数值" type="Label" parent="提升结印阶数弹窗/印6阶段/熟练度进度条" unique_id=2100000062]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 2.0
+offset_right = 105.0
+offset_bottom = 15.0
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "0/12000"
+
+[node name="印6buff" type="TextureRect" parent="提升结印阶数弹窗/印6阶段" unique_id=2100000063]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 72.0
+offset_right = 50.0
+offset_bottom = 112.0
+texture = ExtResource("21_buff6")
+
+[node name="印7阶段" type="Control" parent="提升结印阶数弹窗" unique_id=1731519516]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="熟练度进度条" type="ProgressBar" parent="提升结印阶数弹窗/印7阶段" unique_id=2100000071]
+layout_mode = 0
+offset_left = 243.0
+offset_top = 82.0
+offset_right = 403.0
+offset_bottom = 95.0
+show_percentage = false
+
+[node name="熟练度值数值" type="Label" parent="提升结印阶数弹窗/印7阶段/熟练度进度条" unique_id=2100000072]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 2.0
+offset_right = 105.0
+offset_bottom = 15.0
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "0/15000"
+
+[node name="印7buff" type="TextureRect" parent="提升结印阶数弹窗/印7阶段" unique_id=2100000073]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 72.0
+offset_right = 50.0
+offset_bottom = 112.0
+texture = ExtResource("21_buff7")
+
+[node name="印8阶段" type="Control" parent="提升结印阶数弹窗" unique_id=1378656939]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="熟练度进度条" type="ProgressBar" parent="提升结印阶数弹窗/印8阶段" unique_id=2100000081]
+layout_mode = 0
+offset_left = 243.0
+offset_top = 82.0
+offset_right = 403.0
+offset_bottom = 95.0
+show_percentage = false
+
+[node name="熟练度值数值" type="Label" parent="提升结印阶数弹窗/印8阶段/熟练度进度条" unique_id=2100000082]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 2.0
+offset_right = 105.0
+offset_bottom = 15.0
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "0/18000"
+
+[node name="印8buff" type="TextureRect" parent="提升结印阶数弹窗/印8阶段" unique_id=2100000083]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 72.0
+offset_right = 50.0
+offset_bottom = 112.0
+texture = ExtResource("21_buff8")
+
+[node name="印9阶段" type="Control" parent="提升结印阶数弹窗" unique_id=2014009082]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="熟练度进度条" type="ProgressBar" parent="提升结印阶数弹窗/印9阶段" unique_id=2100000091]
+layout_mode = 0
+offset_left = 243.0
+offset_top = 82.0
+offset_right = 403.0
+offset_bottom = 95.0
+show_percentage = false
+
+[node name="熟练度值数值" type="Label" parent="提升结印阶数弹窗/印9阶段/熟练度进度条" unique_id=2100000092]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 2.0
+offset_right = 105.0
+offset_bottom = 15.0
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "0/25000"
+
+[node name="印9buff" type="TextureRect" parent="提升结印阶数弹窗/印9阶段" unique_id=2100000093]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 72.0
+offset_right = 50.0
+offset_bottom = 112.0
+texture = ExtResource("21_buff9")
+
+[node name="印10阶段" type="Control" parent="提升结印阶数弹窗" unique_id=68956913]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="熟练度进度条" type="ProgressBar" parent="提升结印阶数弹窗/印10阶段" unique_id=2100000101]
+layout_mode = 0
+offset_left = 243.0
+offset_top = 82.0
+offset_right = 403.0
+offset_bottom = 95.0
+show_percentage = false
+
+[node name="熟练度值数值" type="Label" parent="提升结印阶数弹窗/印10阶段/熟练度进度条" unique_id=2100000102]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 2.0
+offset_right = 105.0
+offset_bottom = 15.0
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "0/36000"
+
+[node name="印10buff" type="TextureRect" parent="提升结印阶数弹窗/印10阶段" unique_id=2100000103]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 72.0
+offset_right = 50.0
+offset_bottom = 112.0
+texture = ExtResource("21_buff10")
+
+[node name="印11阶段" type="Control" parent="提升结印阶数弹窗" unique_id=1867511899]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="熟练度进度条" type="ProgressBar" parent="提升结印阶数弹窗/印11阶段" unique_id=2100000111]
+layout_mode = 0
+offset_left = 243.0
+offset_top = 82.0
+offset_right = 403.0
+offset_bottom = 95.0
+show_percentage = false
+
+[node name="熟练度值数值" type="Label" parent="提升结印阶数弹窗/印11阶段/熟练度进度条" unique_id=2100000112]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 2.0
+offset_right = 105.0
+offset_bottom = 15.0
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "0/42000"
+
+[node name="印11buff" type="TextureRect" parent="提升结印阶数弹窗/印11阶段" unique_id=2100000113]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 72.0
+offset_right = 50.0
+offset_bottom = 112.0
+texture = ExtResource("21_buff11")
+
+[node name="印12阶段" type="Control" parent="提升结印阶数弹窗" unique_id=406343459]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="熟练度进度条" type="ProgressBar" parent="提升结印阶数弹窗/印12阶段" unique_id=2100000121]
+layout_mode = 0
+offset_left = 243.0
+offset_top = 82.0
+offset_right = 403.0
+offset_bottom = 95.0
+show_percentage = false
+
+[node name="熟练度值数值" type="Label" parent="提升结印阶数弹窗/印12阶段/熟练度进度条" unique_id=2100000122]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 2.0
+offset_right = 105.0
+offset_bottom = 15.0
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "0/50000"
+
+[node name="印12buff" type="TextureRect" parent="提升结印阶数弹窗/印12阶段" unique_id=2100000123]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 72.0
+offset_right = 50.0
+offset_bottom = 112.0
+texture = ExtResource("21_buff12")
+
+[node name="开始提升按钮" type="Button" parent="提升结印阶数弹窗" unique_id=1903776919]
+layout_mode = 0
+offset_left = 61.0
+offset_top = 115.0
+offset_right = 116.0
+offset_bottom = 135.0
+text = "开始提升"
+
+[node name="自动提升按钮" type="Button" parent="提升结印阶数弹窗" unique_id=849469878]
+layout_mode = 0
+offset_left = 282.0
+offset_top = 115.0
+offset_right = 337.0
+offset_bottom = 135.0
+text = "自动提升"
+
+[node name="关闭按钮" type="Button" parent="提升结印阶数弹窗" unique_id=392343780]
+custom_minimum_size = Vector2(25, 24)
+layout_mode = 0
+offset_left = 380.0
+offset_top = 3.0
+offset_right = 405.0
+offset_bottom = 27.0
+tooltip_text = "关闭"
+focus_mode = 0
+theme_override_colors/icon_normal_color = Color(0.82, 0.82, 0.82, 1)
+theme_override_colors/icon_pressed_color = Color(1, 0.85, 0.6, 1)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3tw1y")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_3tw1y")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_3tw1y")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3tw1y")
+icon = ExtResource("20_c72if")
+flat = true
+
+[node name="滑出动画" type="AnimationPlayer" parent="提升结印阶数弹窗" unique_id=550378961]
+libraries/ = SubResource("AnimationLibrary_mbuhd")
+
+[connection signal="pressed" from="提升结印" to="提升结印阶数弹窗" method="open_popup"]
+[connection signal="pressed" from="提升结印阶数弹窗/关闭按钮" to="提升结印阶数弹窗" method="_on_close_button_pressed"]

@@ -1,0 +1,100 @@
+[gd_scene load_steps=3 format=3]
+
+; 原版 NPC 商店的商品格 —— `com/mxw/uifl/controls/cell/ShopWindowCell.as`（207 行）。
+;
+; 尺寸 **110x41** 不是源码里的常数，是**子件包围盒**推出来的（`init()` `:67-109`）：
+;   itemIcon  MGrid_background @ (0,0) 40x40
+;   coinBg    MTextInput_background @ (41,20) 69x21   → 右沿 110
+;   coinMc    MIconGoldCoinF @ (42,22) 17x17
+;   itemName  TextField @ (41,3) 63x16（autoSize=LEFT，实际宽随文字）
+;   itemPrice TextField @ (61,23) 46x16（同上）
+; 最右是 coinBg 的 41+69 = **110**，最下是 coinBg 的 20+21 = **41**。
+; `ShopWindow2.initCellCount()`（`:279-313`）就是拿这两个数排网格的：
+;   列 x = 6 / width+6 = 116（hgap=6）   行 y = 3 / height+3 的倍数 = 3/44/88/132…（vgap=3）
+;
+; ⚠️ 名称与价格是**裸 TextField**（不是 MLabel），所以字号取 `_loc1_` 那个 TextFormat 的
+;    **12**、颜色白、带 `BaseUtil.getGlowFilter(0)` 描边 —— **没有** MLabel 的 -2/+2 换算。
+;
+; 文字规则：白字 + 黑描边 3 由主题兜住，场景里不写 override。
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/金币.png" id="1_coin"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/禁装.png" id="2_forbid"]
+
+[node name="商店商品格" type="Button"]
+custom_minimum_size = Vector2(110, 41)
+offset_right = 110.0
+offset_bottom = 41.0
+focus_mode = 0
+theme_type_variation = &"OrigBlankButton"
+
+; ShopWindowCell.as:70-73 —— itemIcon = MGrid_background @ (0,0)，40x40
+[node name="物品格" type="Panel" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+theme_type_variation = &"OrigItemSlot"
+
+; ShopWindowCell.as:130-133 —— `_loc1_.x = (itemIcon.width - _loc1_.width)/2`，34x34 图标落在 (3,3)
+[node name="图标" type="TextureRect" parent="物品格"]
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 37.0
+offset_bottom = 37.0
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+
+; ShopWindowCell.as:150-157 —— ForbiddenIconF（符号 #708，11x11）：
+;   x = itemIcon.x + 3 = 3，y = itemIcon.y + height - h - 3 = 0 + 40 - 11 - 3 = 26
+; 条件 `isFitMe()`（`ItemData.as:302-315`）：`reqJob == 0 || reqJob == 自己职业` 且 `level >= reqLevel`。
+; 由 `功能窗口.gd::_布置商店商品格()` 按 `数据/物品装备元数据.json` 的 required_job 现算。
+[node name="禁装" type="TextureRect" parent="."]
+visible = false
+offset_left = 3.0
+offset_top = 26.0
+offset_right = 14.0
+offset_bottom = 37.0
+mouse_filter = 2
+texture = ExtResource("2_forbid")
+expand_mode = 1
+stretch_mode = 5
+
+; ShopWindowCell.as:74-79 —— coinBg = MTextInput_background @ (41,20) 69x21
+[node name="价格底" type="Panel" parent="."]
+offset_left = 41.0
+offset_top = 20.0
+offset_right = 110.0
+offset_bottom = 41.0
+mouse_filter = 2
+theme_type_variation = &"OrigInputBox"
+
+; ShopWindowCell.as:80-83 —— coinMc = MIconGoldCoinF @ (42,22)，17x17
+[node name="金币图标" type="TextureRect" parent="."]
+offset_left = 42.0
+offset_top = 22.0
+offset_right = 59.0
+offset_bottom = 39.0
+mouse_filter = 2
+texture = ExtResource("1_coin")
+expand_mode = 1
+stretch_mode = 5
+
+; ShopWindowCell.as:87-97 —— itemName @ (41,3) 63x16；TextFormat 字号 12、白色
+[node name="名称" type="Label" parent="."]
+offset_left = 41.0
+offset_top = 3.0
+offset_right = 104.0
+offset_bottom = 19.0
+mouse_filter = 2
+theme_override_font_sizes/font_size = 12
+text = "商品"
+
+; ShopWindowCell.as:98-108 —— itemPrice @ (61,23) 46x16
+[node name="价格" type="Label" parent="."]
+offset_left = 61.0
+offset_top = 23.0
+offset_right = 107.0
+offset_bottom = 39.0
+mouse_filter = 2
+theme_override_font_sizes/font_size = 12
+text = "0"

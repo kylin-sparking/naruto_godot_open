@@ -1,0 +1,881 @@
+﻿{
+  "_说明": "原版窗口几何表。事实来源为反编译 AS3 的 UIWindow(w, h, drawContentBg) 与 MWindow 子类。",
+  "_字段": {
+    "as3": "对应 AS3 类名。空串表示该窗口在原版由 MWindow 无参构造、尺寸取自 SWF 底图，此处的值是按客户端现有实现保留的既有值。",
+    "宽": "窗口外框宽（背景拉伸目标）",
+    "高": "窗口外框高",
+    "内容底": "UIWindow 的第三个构造参数 drawContentBg。true 时在 (8, 38) 画 窗口内底，尺寸 (宽-16, 高-68)",
+    "小背景": "MWindow._isSmallBackground。true 时标题 y=3、用小窗口边框。注：反编译全库无一个类设为 true，故全表皆 false，保留字段仅为对齐 AS3 结构",
+    "标题": "标题栏文字",
+    "底图": "可选。覆盖默认 窗口边框/小窗口边框 的专属底图路径",
+    "整框": "可选，默认 false。false 时页面容器摆在 AS3 内容区原点 (8, 38)，尺寸 (宽-16, 高-68)——绝大多数页的 .tscn 是以内容区左上角为 (0,0) 画的。true 时容器铺满外框、原点 (0,0)，用于当初照外框坐标画、根节点宽度即外框宽且子节点自带边距的少数页",
+    "原点": "可选。给页面容器的原点（窗口局部）。用于整个窗口 1:1 移植的页（AS3 坐标就是窗口局部、含外框那圈），例如背包/仓库是 [0,0]。不给则按 整框/内容区(8,38) 的既有规则。"
+  },
+  "人物": {
+    "as3": "BaseCharWindow",
+    "宽": 517,
+    "高": 440,
+    "内容底": false,
+    "小背景": false,
+    "标题": "人物属性"
+  },
+  "人物属性看别人": {
+    "as3": "CharOtherWindow2",
+    "宽": 517,
+    "高": 440,
+    "内容底": false,
+    "小背景": false,
+    "标题": "人物属性",
+    "_说明": "点中别人 → 顶栏「查看信息」→ 开这一扇。与自己的那扇同一个 BaseCharWindow 尺寸（517×440，内容底 false），只多一个标题；真值见 真值/窗口/人物属性_看别人.md §②。"
+  },
+  "角色改名": {
+    "as3": "char/ChangeNameWindow",
+    "宽": 300,
+    "高": 320,
+    "内容底": true,
+    "小背景": false,
+    "标题": "角色改名",
+    "整框": true,
+    "_说明": "2026-10-15 新增。`UIWindow(300,320,true)`（`ChangeNameWindow.as:54`）⇒ 外壳在 (8,38) 画 284×252 的内容底（`功能窗口:666-676` 同一个公式），页内直接子件最小 y = 19（卡格 = `_contentBg.y+10` = AS3 48，减拖动区 29）⇒ `整框: true`。标题是**两态**：自己那态是 `:65` 的字面量「角色改名」，看别人那态被 `setOtherPlayerMode:126` 改成「<名字> 的历史名字」⇒ 页渲染时调 `功能窗口.设置标题()`。入口两条（同一颗「改」，`CharPane.as:321-331` 按 `_isMyself` 分岔）：① 自己 ⇒ 开窗 + 发 `2330:10`（原版 `show():59-69` 里 `refreshData():251-256` 就是这两件事）；② 对方 ⇒ 只发 `2330:12:<名>`，**开窗的是回帧**（`窗口管理._on_改名回帧`）。别人模式藏七件（`:90-117`，**取消钮不藏**）、历史名那两行整体上移 82（`:120/124`）。逐件真值 = `真值/窗口/人物属性_改钮.md`。"
+  },
+  "背包": {
+    "as3": "ItemWindow2（原版 super(275, 394)；用户口径 90 格/页 = 10 列 x 9 行、一屏全露 ⇒ 453×556、格 40x40、格区不滚，有意偏离）",
+    "宽": 453,
+    "高": 556,
+    "内容底": false,
+    "小背景": false,
+    "标题": "背包",
+    "原点": [
+      0,
+      0
+    ]
+  },
+  "忍术": {
+    "as3": "",
+    "宽": 462,
+    "高": 466,
+    "内容底": false,
+    "小背景": false,
+    "标题": "忍术",
+    "底图": "res://素材/界面/原版窗口/忍术/忍术窗口底图.png"
+  },
+  "宠物": {
+    "as3": "PetWindow",
+    "宽": 444,
+    "高": 408,
+    "内容底": false,
+    "小背景": false,
+    "标题": "我的通灵兽"
+  },
+  "任务": {
+    "as3": "MQuestionWindow",
+    "宽": 524,
+    "高": 396,
+    "内容底": false,
+    "小背景": false,
+    "标题": "任务",
+    "_原点注": "MQuestionWindow.as:71 `super(WIDTH,HEIGHT)` = 524x396 是**窗口**尺寸；:197-202 的 _frontBackground(MYellow_background) 直接挂在窗口上、坐标是窗口局部 (5,36) 514x327。新场景 1:1 抄的就是这套窗口局部坐标（根 524x396、黄底在 (5,36)），所以容器原点必须是 [0,0]，否则整页再被推 (8,38)、底部溢出 38px",
+    "原点": [
+      0,
+      0
+    ],
+    "整框": true,
+    "_说明": "2026-10-04 补 整框: true 并把直接挂在根上的件整体抬 −29。根因同 NPC商店/NPC仓库：这张 .tscn 是按**外框坐标**烘的（最上一层件 y≈36~38 = 标题栏之下），以前没标 整框 ⇒ 宿主按 整框=false 又偏移 (8,38) 并把容器缩成 (宽−16)×(高−68) ⇒ 整页往右下顶、底部掉出框外。标了 整框 ⇒ 容器原点 (0,29)、尺寸 宽×(高−29)，与场景坐标系一致。出处 MQuestionWindow。"
+  },
+  "组队": {
+    "as3": "TroopWindow2",
+    "宽": 515,
+    "高": 432,
+    "内容底": false,
+    "小背景": false,
+    "标题": "组队",
+    "整框": true,
+    "_说明": "2026-10-24 补 整框:true —— TroopWindow2.as:111-114 自绘 MYellow_background 摆 (8,38)，直接子件最小 y=38 ⇒ 按工程口径必须整框（页局部 y = 窗口局部 − 29）。宽 515 / 高 432 = dolayout:397-403 的解算值（宽=489+26、高=356+63+13）。"
+  },
+  "好友": {
+    "as3": "FriendWindow2",
+    "宽": 295,
+    "高": 370,
+    "内容底": false,
+    "小背景": false,
+    "标题": "好　友",
+    "_标题注": "原版用制表位分隔两字，Godot Label 不保留该间距，故用全角空格保持原视觉"
+  },
+  "家族": {
+    "as3": "FamillyWindow",
+    "宽": 617,
+    "高": 390,
+    "内容底": true,
+    "小背景": false,
+    "标题": "家族"
+  },
+  "商城": {
+    "as3": "CashShopWindow2",
+    "宽": 640,
+    "高": 420,
+    "内容底": false,
+    "小背景": false,
+    "标题": "商城",
+    "原点": [
+      0,
+      0
+    ],
+    "_说明": "2026-09-26 更正两处：①as3 原写 ExchangeShopWindow（那是兑换商店），活着的商城是 CashShopWindow2（UIConfig.CASH_SHOP_WINDOW2_F → UIMain2 的窗口表）。②高原写 423 —— 那是 CashShopWindow2.as:249-252 重写的 get height()，只给窗口管理器居中用；真正画出来的外框是 background.height = 420（MWindow_background 符号 #3 自然尺寸 275x325，被拉到 640x420）。用 423 会比原版高出 3px 边框。加 原点[0,0] 是因为本页场景按 AS3 窗口局部坐标画（内容背景在 (6,38)、页签在 y=44）。"
+  },
+  "设置": {
+    "as3": "SystemConfigWindow.as:120-215,466-536,752-757 + 时间轴 tag 543",
+    "宽": 423,
+    "高": 424,
+    "内容底": false,
+    "小背景": false,
+    "标题": "系统设置",
+    "底图": "res://素材/界面/原版窗口/设置/系统设置底图.png",
+    "整框": true,
+    "_整框注": "SystemConfigWindow 是时间轴整窗 1:1（423×424，MYellow 在窗口 (6,39)）⇒ 页面容器走整框原点 (0,拖动区高 29)，页面局部 = 窗口坐标 − (0,29)。真值 game-client/真值/窗口/设置.md §1。"
+  },
+  "闭关经验": {
+    "as3": "",
+    "宽": 267,
+    "高": 274,
+    "内容底": false,
+    "小背景": false,
+    "标题": "修行设定与收益",
+    "原点": [
+      0,
+      0
+    ],
+    "_说明": "原版点主界面「修行」会同时弹出本窗口与「领取修行收益」。本窗口在原版里是纯展示：`ShouyiWindow.as:86-94` 造了那颗「领取」钮但 `:94` 明写 visible=false ⇒ 工程里也藏着（节点留着、运行期强制不可见）。两扇真同开见 `窗口管理.成对伴随`。件位按 AS3 窗口局部坐标画 ⇒ 原点必须是 [0,0]（与「领取修行收益」同口径）。"
+  },
+  "领取修行收益": {
+    "as3": "LingquBiguanShouyi.as:224-226 background.width=267 background.height=218",
+    "宽": 267,
+    "高": 218,
+    "内容底": false,
+    "小背景": false,
+    "标题": "领取修行收益",
+    "原点": [
+      0,
+      0
+    ],
+    "_说明": "2026-10-20 按 AS3 字面改回 267×218（旧值 250×312 是照真机参照 测试/基线/原版界面/原版_修行收益.png 量出来的，不是原版）。原点[0,0] 是因为 场景/界面/窗口/闭关/领取修行收益.tscn 整个场景按 **AS3 窗口局部坐标**画（`cellBackground` 就在窗口 (6,39)，`iocnContaier` 在 (21,94)），页内不再二次换算。成对摆位见 真值/窗口/修行收益.md §① `UIMain2.as:3159-3185`：左=本表的「闭关经验」(267×274)、右=这一扇，中间 1px，整对 535 宽水平居中。"
+  },
+  "挂机": {
+    "as3": "GuaJiSettingWindow.as:166 super(664,492,true)",
+    "宽": 664,
+    "高": 492,
+    "内容底": true,
+    "小背景": false,
+    "标题": "智能托管打怪设置"
+  },
+  "地图信息": {
+    "as3": "WorldMap2",
+    "宽": 769,
+    "高": 492,
+    "内容底": false,
+    "小背景": false,
+    "标题": "世界地图",
+    "整框": true
+  },
+  "排行榜": {
+    "as3": "RankWindow2",
+    "宽": 620,
+    "高": 385,
+    "内容底": true,
+    "小背景": false,
+    "标题": "排行榜"
+  },
+  "兑换": {
+    "as3": "DuiHuanWindow",
+    "宽": 420,
+    "高": 150,
+    "内容底": true,
+    "小背景": false,
+    "标题": "礼品",
+    "整框": true,
+    "_高注": "整框页恒满足 高 - 拖动区高(29) = 页面根高；本页根高 121，故 高 = 150。原先写 250 会在下方留出约 100px 空边框"
+  },
+  "活动": {
+    "as3": "ActivityWindow",
+    "宽": 610,
+    "高": 440,
+    "内容底": false,
+    "小背景": false,
+    "标题": "活动"
+  },
+  "活跃度": {
+    "as3": "ActivityTaskWindow",
+    "宽": 715,
+    "高": 500,
+    "内容底": false,
+    "小背景": false,
+    "标题": "活跃度",
+    "原点": [
+      0,
+      0
+    ]
+  },
+  "信息": {
+    "as3": "SelectInfoWindow",
+    "宽": 600,
+    "高": 500,
+    "内容底": false,
+    "小背景": false,
+    "标题": "信息"
+  },
+  "签到": {
+    "as3": "",
+    "宽": 500,
+    "高": 410,
+    "内容底": false,
+    "小背景": false,
+    "标题": "开心有礼"
+  },
+  "福利": {
+    "as3": "",
+    "宽": 500,
+    "高": 410,
+    "内容底": false,
+    "小背景": false,
+    "标题": "开心有礼"
+  },
+  "藏宝图": {
+    "as3": "",
+    "宽": 357,
+    "高": 338,
+    "内容底": false,
+    "小背景": false,
+    "标题": "亲热天堂",
+    "整框": true
+  },
+  "挖矿": {
+    "as3": "StoneWindow",
+    "宽": 332,
+    "高": 399,
+    "内容底": false,
+    "小背景": false,
+    "标题": "宝石工艺",
+    "整框": true
+  },
+  "宝石镶嵌": {
+    "as3": "StoneCarryWindow",
+    "宽": 254,
+    "高": 204,
+    "内容底": false,
+    "小背景": false,
+    "标题": "宝石镶嵌与取出",
+    "整框": true,
+    "原点": [
+      0,
+      0
+    ]
+  },
+  "首领": {
+    "as3": "",
+    "宽": 573,
+    "高": 324,
+    "内容底": false,
+    "小背景": false,
+    "标题": "BOSS刷新信息",
+    "整框": true
+  },
+  "装备强化": {
+    "as3": "EquipStrengthWindow",
+    "宽": 664,
+    "高": 407,
+    "内容底": true,
+    "小背景": false,
+    "标题": "装备打造",
+    "整框": true,
+    "原点": [
+      0,
+      0
+    ],
+    "_说明": "2026-09-22 更正：原来记的是 EquipJinJieWindow（super(360,407,true)，那是**另一个窗**），活着的「装备打造」是 EquipStrengthWindow（:107 super(664,407)，:325 标题 = EQUIP_STRENGTH_WINDOW_TITLE）。由 UIConfig.EQUIP_STRENGTH_WINDOW → showEquipStrengthWindow() 打开。"
+  },
+  "技能书": {
+    "as3": "JiNengCompositeWindow",
+    "宽": 340,
+    "高": 381,
+    "内容底": false,
+    "小背景": false,
+    "标题": "秘笈合成",
+    "整框": true
+  },
+  "遗址": {
+    "as3": "YiZhiPackWindow",
+    "宽": 663,
+    "高": 548,
+    "内容底": false,
+    "小背景": false,
+    "标题": "意志背包",
+    "整框": true,
+    "_说明": "2026-10-03 按真值改：原先写 410 是拿旧手摆版 `遗址窗口.tscn`（根 663×381）凑的。真值是 `YiZhiPackWindow.as:75` 的 `super(663,548,true)` ⇒ 页面根 663×**519**（=548−29，整框）。`内容底` 改 false：AS3 那份 `_contentBg`（`UIWindow.as:36-39,62-66` = (8,38) 647×480）**已经烘在页里**（`外框黄底`），宿主再画一层就是两张 alpha≈213 的 MYellow 叠色，像素门会整片判红。详见 `真值/窗口/意志.md` §2。"
+  },
+  "意志学习": {
+    "as3": "YiZhiStudyWindow",
+    "宽": 772,
+    "高": 564,
+    "内容底": false,
+    "小背景": false,
+    "标题": "意志学习",
+    "整框": true,
+    "_说明": "2026-10-03 补 `整框: true`：量具 `截意志学习页.gd` 的表头写明「场景 y = 窗口 y − 29」⇒ 容器原点必须是 (0,29)；缺这条时页面根 772×535 被摆到 (8,38)，整页右下各偏 8/38px。`内容底` 保持 false（本页自绘 MYellow 8,38 756×518，`YiZhiStudyWindow.as:183-188`）。"
+  },
+  "NPC商店": {
+    "as3": "ShopWindow2",
+    "宽": 275,
+    "高": 325,
+    "内容底": false,
+    "小背景": false,
+    "标题": "交易",
+    "原点": [
+      0,
+      0
+    ],
+    "_说明": "2026-10-04 补 整框: true 并把页面里所有直接子件 y 抬 −29（根高 325→296）。根因：这张 .tscn 一直是按**外框坐标**烘的（内容背景 (6,40) 263×251 = ShopWindow2.as:164-169 的 background2），而这条以前没标 整框 ⇒ 宿主按 整框=false 又偏移了一次 (8,38) 并把容器缩到 259×257 ⇒ 整页往右下顶、右侧滚动条压在窗框上、底部四枚钮掉到框外（用户 2026-10-04 抓到「滑动条位置不对，应该在商店里面」）。标了 整框 ⇒ 容器原点 (0,29)、尺寸 = 外框宽 × (高−29)，与场景坐标系一致。",
+    "整框": true
+  },
+  "NPC仓库": {
+    "as3": "StorageWindow2",
+    "宽": 275,
+    "高": 394,
+    "内容底": false,
+    "小背景": false,
+    "标题": "仓库",
+    "整框": true,
+    "_说明": "2026-10-05 收口（小樱那枚「打开仓库」）：**删掉了 `原点: [0,0]`**。根因不是当年记的「整框漏标」——那一半 10-04 已经补了（件全抬 −29、根高 394→365），但 `原点` 这一键留着：`功能窗口.gd:644` 是 `if 规格.has(\"原点\")` **优先于** `整框` ⇒ 容器被打回 (0,0)，于是**抬过的整页又比原版高 29px**；而 `分页` 下的 10 枚孙件（9 枚页签 + 扩充）当年漏抬，反而恰好等于 AS3 的 y=46 ⇒ 两道错互相抵消，`窗口布局体检` 对这一页 0 报告、门全绿（与 卡片套册 `_说明` 记的同一条坑：不许写 `原点`）。本轮把孙件也抬 −29（46..68 → 17..39）并删键，两边对齐。⚠ 另一处更正：本窗内容底是 `StorageWindow2.as:138-143` 的 `cellBackground = new MYellow_background()` 摆 **(6,39) 263×349**（旧 `_说明` 写的 263×251 是 **NPC商店** 那张的数，串了）；`super(275,394)` 是**两参** ⇒ UIWindow 不画底 ⇒ `内容底: false` 仍然对，页面自己烘，宿主不许再垫。"
+  },
+  "副本": {
+    "as3": "CopyWindow",
+    "宽": 570,
+    "高": 283,
+    "内容底": false,
+    "小背景": false,
+    "标题": "副本传送",
+    "整框": true,
+    "_说明": "2026-10-03 两处一起改对：① 标题原先写「挑战副本」是**自造**，真值是 `CopyWindow.as:138` 的 `CN.COPY_WINDOW_TITLE` = 语言表 `副本传送`（「挑战副本」是纲手菜单项 `COPY_JINRU` 那类串，别混）。② 缺 `整框: true` ⇒ 页面容器被摆到 (8,38)、尺寸 (554,215)，而本页 92 个节点全是**按 570×283 外框坐标**烘的 ⇒ 整页右下各偏 8/38px、右边 8px 被裁。几何门按页面根相对量，所以它照样绿 —— 这条是「门全绿≠摆对位置」的现行实例。"
+  },
+  "忍者传承": {
+    "as3": "CardWindow/BaoXiang/LiaoLiMadeWindow/Heal",
+    "宽": 620,
+    "高": 460,
+    "内容底": true,
+    "小背景": false,
+    "标题": "忍者传承"
+  },
+  "通灵驯养": {
+    "as3": "PetStudyWindow",
+    "宽": 410,
+    "高": 408,
+    "内容底": false,
+    "小背景": false,
+    "标题": "通灵驯养"
+  },
+  "尾兽预览": {
+    "as3": "RongHunYuLanWindow",
+    "宽": 400,
+    "高": 360,
+    "内容底": false,
+    "小背景": false,
+    "标题": "尾兽真实效果预览"
+  },
+  "快捷键": {
+    "as3": "KeyboardFrame.as:73-143（时间轴 background(530) 765×345；KF:128 列表条设成 110 高 ⇒ 窗高 455）",
+    "宽": 765,
+    "高": 455,
+    "内容底": false,
+    "小背景": false,
+    "整框": true,
+    "标题": "快速键设置",
+    "_标题出处": "KEYBOARD_TITLE（KF:78）",
+    "_整框注": "页面 = 整窗 − 拖动区高 29 ⇒ 765×426，坐标直接吃 快捷键_时间轴.json。宽取 765 不是 770：时间轴 background 原生 275×394 拉 2.7818604×0.87564087 = 765×345，KF:120 的 `resetBtn.x = background.width − 14 − 54` 也以 765 为右界。"
+  },
+  "意志介绍": {
+    "as3": "YiZhiIntroduceWindow",
+    "宽": 455,
+    "高": 430,
+    "内容底": false,
+    "小背景": false,
+    "标题": "意志介绍",
+    "整框": true,
+    "_说明": "2026-10-03 新增（原来整条不在表里 ⇒ `意志介绍窗口.tscn` 打开就是回落尺寸）。`YiZhiIntroduceWindow.as:20` = `super(455,430,false)` ⇒ 页面根 455×**401**。⚠ 本页的内容底是 `createChildren:27-32` **手搓**的，高 = `_height − CONTENT_GAP − 38` = **384**，不是 `UIWindow.drawWindowLayout` 的 `h−68`；入口 = 意志背包页 `[意志介绍]`（`YiZhiPackWindow.as:408-411` reverseDisplay ⇒ 再点收起）。"
+  },
+  "精英副本": {
+    "as3": "EliteCopyWindow",
+    "宽": 500,
+    "高": 426,
+    "内容底": false,
+    "小背景": false,
+    "标题": "精英副本",
+    "整框": true,
+    "_说明": "2026-10-03 新增。`EliteCopyWindow.as:57` = `super(500,426)`、`:383` 标题 = `ELITECOPY_WINDOW_TITLE`「精英副本」。`整框: true`：页面根 500×397 按**外框坐标**烘（内容底 (5,39)、子面板 (11,65)），容器原点必须是 (0,29)，否则整页右下各偏 8/38px。入口 = 纲手对话窗「挑战精英副本」→ 服务端 `NpcMenuAction.ELITE_COPY=30`。"
+  },
+  "忍具兑换": {
+    "as3": "renJu/RenJuDuiHuanWindow",
+    "宽": 420,
+    "高": 250,
+    "内容底": false,
+    "小背景": false,
+    "标题": "忍具兑换",
+    "整框": true,
+    "_说明": "2026-10-04 新增（木叶村 NPC 批次）。`RenJuDuiHuanWindow.as:20-22` = `super(420,250,true)` —— 第三参 true ⇒ `UIWindow.as:36-39/:62-65` 自己画 `MYellow_background` 内容底 `(8,38)`、尺寸 `404×182`；⇒ 页面内容底落 `(8,9)`（整框 −29）。标题 `:39` **硬编码「忍具兑换」没有语言键**。入口 = 活动大使（模板 59）菜单第三行「兑换忍具」= `RENJU_EXCHANGE=28`。`内容底: false` ⇒ 宿主不许再垫一块 MPane（页里已烘）。"
+  },
+  "十拳剑兑换": {
+    "as3": "lingQi/DuiHuanWindow",
+    "宽": 420,
+    "高": 250,
+    "内容底": false,
+    "小背景": false,
+    "标题": "十拳剑",
+    "整框": true,
+    "_说明": "2026-10-04 新增。`DuiHuanWindow.as:29` = `super(420,250,true)`；标题 `:35` = 语言键 `EQUIPMENT_EQUIP_LINGQI` = **「十拳剑」**（不是「兑换十拳剑」—— 后者是纲手/活动大使**菜单行**的文字）。入口 = 活动大使（模板 59）菜单第二行「兑换十拳剑」= `TOTSUKA_EXCHANGE=25`。碎片编号 **从 0 起**（`:71` `DUIHUAN_SUIPIAN + _loc4_`，_loc4_ = 0..5）。"
+  },
+  "卡片套册": {
+    "as3": "guwan/GuwanshoujiWindow",
+    "宽": 534,
+    "高": 384,
+    "内容底": false,
+    "小背景": false,
+    "标题": "卡片套册收集",
+    "整框": true,
+    "_说明": "2026-10-04 深夜新增（鹿丸「卡片套册收集」= CARD_COLLECTION=8）。尺寸出处不是 super：`GuwanshoujiWindow.as:195-197` 把 `background`（MWindow_background）**显式拉成 534×384** ⇒ 窗口就是这个尺寸。场景按**外框坐标**烘（内容底 (6,39)），直接挂根的件最小 y=39 ⇒ 必须 `整框: true`（容器原点 (0,29)、尺寸 宽×(高−29)），口径同 NPC商店/NPC仓库/忍具兑换。`内容底: false` ⇒ 宿主不许再垫一块 MYellow（页里已烘）。⚠ 这里**不许写 `原点`**：`功能窗口.gd:621` 是 `if 规格.has(\"原点\")` —— 有这一键就**盖掉** 整框页默认的容器原点 (0,29)，整页上抬 29px ⇒ 进度条的「底」撞进关闭钮（`窗口布局体检` 报「压关闭 卡片套册 撞上 底」+「越界 上-10」，2026-10-04 实测）。只留 `整框: true`。"
+  },
+  "兑换商店": {
+    "as3": "exchangeShop/ExchangeShopWindow",
+    "宽": 720,
+    "高": 540,
+    "内容底": false,
+    "小背景": false,
+    "标题": "兑换商店",
+    "整框": true,
+    "_说明": "2026-10-04 深夜新增（伊鲁卡=模板 11，菜单第一行「变身卡与道具兑换」= 动作 9 ITEM_EXCHANGE）。尺寸出自 `ExchangeShopWindow.as:61` `super(720,540)`（**两参** ⇒ UIWindow 不画内容底），但 `:171-176` 自己 `addChild(new MYellow_background())` 在 (6,39) 708×496 ⇒ 页面已烘内容底、`内容底: false` 不许宿主再垫。`整框: true` ⇒ 容器原点 (0,29)、高 540−29。⚠ **不许写 `原点`**（一键就盖掉整框默认，整页上抬 29 撞关闭钮 —— 卡片套册那条同因）。标题是语言键 `EXCHANGE_SHOP_WINDOW_TITLE`=「兑换商店」（message_properties.as:830），**不是**菜单行文字「变身卡与道具兑换」。"
+  },
+  "变身卡属性互换": {
+    "as3": "UIMain2 内联 _swapWindow",
+    "宽": 420,
+    "高": 395,
+    "内容底": false,
+    "小背景": false,
+    "标题": "变身卡属性互换",
+    "整框": true,
+    "_说明": "2026-10-04 深夜新增（伊鲁卡菜单第二行「变身卡属性交换」= 动作 31 TRANSFORM_CARD_SWAP）。`UIMain2.as:581-582` `_loc3_ = 特殊?495:395; new UIWindow(420,_loc3_,true)` —— 第三参 true ⇒ UIWindow 自己画内容底 (8,38) 404×(高−68) ⇒ 页面按**外框坐标**烘、`整框: true`。标题 `:583` **硬写中文字面**「变身卡属性互换」（菜单行写的是「变身卡属性交换」，两个都对、别互改）。**双实现已择一**：另有一版 `equip/TransformCardSwapWindow` `super(280,200,true)`，但 2.2.3 客户端动作 31/32 的 handler 走 UIMain2 内联这一版 ⇒ 280×200 那版不建。⚠ 这扇与背包**成对摆位**（`:694-697`），要接 `窗口管理.伴随背包`。"
+  },
+  "变身卡特性互换": {
+    "as3": "UIMain2 内联 _swapWindow(特殊)",
+    "宽": 420,
+    "高": 495,
+    "内容底": false,
+    "小背景": false,
+    "标题": "变身卡特性属性互换",
+    "整框": true,
+    "_说明": "2026-10-04 深夜新增（伊鲁卡菜单第三行「变身卡特殊属性交换」= 动作 32 TRANSFORM_CARD_SPECIAL_SWAP）⇒ `showTransformCardSwapWindowByMode(true)`。与「变身卡属性互换」同一个 builder，只差：高 495、标题「变身卡特性属性互换」、说明文案、`_loc4_` 310→410（分隔线二/费用格/数量行/确认钮整体下移 100）、多四件「A/B 卡特性属性」标签与文本框（`:641-659`）。两模**互斥**：`:569-577` 已开着同一模再点 = 关窗。"
+  },
+  "日环任务": {
+    "as3": "component/RefreshDailyQuestWindow",
+    "宽": 355,
+    "高": 407,
+    "内容底": true,
+    "小背景": false,
+    "标题": "木叶警所环式任务",
+    "整框": true,
+    "_说明": "2026-10-05 新增（宇智波富岳=模板 27，328 帧 selection 段第一行「每日环任务」= 任务 8001 / type=daily）。`RefreshDailyQuestWindow.as:75` `super(355,407,true)` ⇒ 第三参 true ⇒ UIWindow 自画内容底 (8,38) 339×339 ⇒ 页面按**外框坐标**烘、`整框: true`。⚠ 2026-10-05 返工：这一键原先误写成 false ⇒ 宿主没垫 `MYellow_background`（`UIWindow.as:34-40` 的 `if(param1)`），整窗露出地图背景、看着像没底 —— **第三参 true 就必须 `内容底: true`**，两者是同一件事。标题 `:169` = `CN.DAILY_QUSET_WINDOW_TITLE`(`message_properties.as:669`)，**与周试炼那扇同一个标题**。⚠ 不许写 `原点`（一键就盖掉整框默认 ⇒ 整页上抬 29 撞关闭钮，卡片套册同因）。入口不是服务菜单而是 selection 行：原版发 `57:3:8001` 等 `42:1` 回帧才开（`QuestDataManager.as:278-282`）⇒ 本轮只本地直开、不发协议。"
+  },
+  "周试炼任务": {
+    "as3": "component/DailyQuestWindow",
+    "宽": 355,
+    "高": 367,
+    "内容底": true,
+    "小背景": false,
+    "标题": "木叶警所环式任务",
+    "整框": true,
+    "_说明": "2026-10-05 新增（富岳第二行「周试炼任务」= 任务 8002 / type=weekly，lv≥35）。⚠ **类名叫 `DailyQuestWindow` 但它是周试炼那一支**：分流在 `QuestDataManager.as:284-288`（`WEEKLY_QUEST` → `DAILY_QUEST_WINDOW`），注册名 `UIConfig.as:606` ⇒ 别按类名把它当日环。`DailyQuestWindow.as:49` `super(355,367,true)` ⇒ 内容底 (8,38) 339×299、`整框: true`。⚠ 2026-10-05 返工：`内容底` 原先误写成 false（同 日环任务 那一笔）⇒ 宿主没垫 `MYellow_background`，整窗露出地图背景。与日环那扇**没有共用 builder**（两个类、件完全不同），只有标题相同。"
+  },
+  "勾玉炼制": {
+    "as3": "equip/YuLianJinJieWindow",
+    "宽": 360,
+    "高": 407,
+    "内容底": false,
+    "小背景": false,
+    "标题": "玉链勾玉打造",
+    "整框": true,
+    "_说明": "2026-10-05 新增（静音 00000019「勾玉炼制」= 动作 17 JADE，服务端 `fake_flash_server.py:10936` 给这行、`:51877-51880` 回 `SHOW_NPC_PANEL:<object_id>:7`，客户端 `Client.as:5894/5921-5923` case 7 → `UIMain2.as:3848-3866`）。`YuLianJinJieWindow.as:38` `super(360,407,false)` ⇒ **第三参 false，UIWindow 不画内容底**；但 `:147-152` 类里自己 `new MUIComponent()` 当 `_contentBg`、`setSkin(MYellow_background)`、摆 `(BORDER_GAP=5, tabBar.y+20=58)`、尺寸 `(宽−10=350, 高−91=316)` ⇒ **页面自烘黄底**、这一键必须留 false（宿主再垫 = 两块 MYellow 叠起来比原版更不透明；判据同 兑换商店/卡片套册，见 真值/窗口/木叶村NPC.md §5j①）。⚠ 标题 **2026-11-02 用户要求偏离 AS3**：原版 `:142` = `YU_LIAN_JIN_JIE_WINDOW_TITLE` =「玉链进阶」（`message_properties.as:2624`），用户认为该名不够准确，改成「**玉链勾玉打造**」；菜单行「勾玉炼制」、NPC 称号「勾玉指导员」两个词照旧，三者仍是三个词。`整框: true` ⇒ 容器原点 (0,29)、页面按外框坐标烘；⚠ 这里**不许写 `原点`**（`功能窗口.gd:644` 的 `has(\"原点\")` 优先于 `整框` ⇒ 整页偏 29px，NPC仓库 那条刚栽过）。开窗走 `centerTwoWindow(勾玉窗, ITEM_WINDOW2_F)` ⇒ **要连背包成对摆位**，已加进 `窗口管理.gd:86` 的 `伴随背包`。"
+  },
+  "护送任务": {
+    "as3": "husong/HuSongQuestWindow",
+    "宽": 578,
+    "高": 342,
+    "内容底": true,
+    "内容底顶": 30,
+    "小背景": false,
+    "标题": "护送任务",
+    "整框": true,
+    "_说明": "2026-10-05 新增（油女志乃 00000023「护送」= 模板 23）。`HuSongQuestWindow.as:62` `super(578,342,true)` ⇒ 第三参 true ⇒ **宿主画内容底**（判据那条：第三参 true 且类里没再 new MYellow）；但 `:114` `setContentBgPos(UIConfig.CONTENT_GAP, 30)` 把它从 `UIWindow.as:37-38` 的默认 (8,38) 抬到 **(8,30)** ⇒ 这条必须带 `内容底顶: 30`，`功能窗口.gd` 的那段现在读这个键（不读就是低 8px 的黄底）。标题 = `:63` `HUSONG_WINDOW_TITLE`「护送任务」——⚠ 与 `HuSongNoticeWindow.as:19` **同一个语言键**，两扇标题一模一样。`整框: true` ⇒ 容器原点 (0,29)、页面按外框坐标烘；**这里不许写 `原点`**（`功能窗口.gd:650` 的 `has(\"原点\")` 优先于 `整框` ⇒ 整页偏 29px，NPC仓库 那条刚栽过）。入口不是服务菜单：本地服务端 `NPC_SERVICE_MENUS` 里没有 23，志乃的对话只有「离开」；原版那一跳是 `QuestDialog.as:106-112` 的 **selection 链接行**（`text == -1` 且 `_huSongQuestStats == 未接取` ⇒ 直接 `HuSongQuestManager.showHuSongQuestWindow(loopid, total)`，**不发帧**），服务端侧 `_escort_start_npc_id()`（`fake_flash_server.py:34641`）取 quest 8100 的 start_npc_id、兜底 **23** ⇒ 志乃就是护送发起人。"
+  },
+  "护送提示": {
+    "as3": "husong/HuSongNoticeWindow",
+    "宽": 300,
+    "高": 170,
+    "内容底": true,
+    "内容底顶": 30,
+    "小背景": false,
+    "标题": "护送任务",
+    "整框": true,
+    "_说明": "2026-10-06 新增（护送族第二扇 = 双倍活动提示弹）。`HuSongNoticeWindow.as:18` `super(300,170,true)` ⇒ 第三参 true ⇒ 宿主画内容底；`:26` `setContentBgPos(CONTENT_GAP,30)` ⇒ 与主窗**同一个底顶 30**（用默认 38 会低 8px）。标题 = `:19` 与主窗**同一个语言键** HUSONG_WINDOW_TITLE ⇒ 两扇都叫「护送任务」。`整框: true` ⇒ 容器原点 (0,29)；这里**不许写 `原点`**（`功能窗口.gd:650` 的 has(\"原点\") 优先于整框）。⚠ 入口**不是 NPC 菜单行、也不是任务行**：原版是踩到地上那枚护送标记 —— `HuSongQuestManager.as:609-613` `huSongIconHandler` → `UIMain2.as:5365-5368` `reverseDisplay(HUSONGNOTICE_WINDOW)`（再点一次收起）⇒ SPEC 里那格 `入口` 把两边写清，门的「做了窗就要有入口」走豁免分支（写空话/缺行号直接红）。护送标记本体是 MIXIN 2325 状态帧驱动的世界物件 ⇒ 未接（待点头），本版只能按页名开。"
+  },
+  "跨服频道": {
+    "as3": "kuafu/KuaFuChannelWindow",
+    "宽": 595,
+    "高": 451,
+    "内容底": true,
+    "小背景": false,
+    "标题": "选择跨服频道",
+    "整框": true,
+    "_说明": "2026-10-06 新增（漩涡鸣人 `00000012`，模板 12，动作值 18 `WAR`）。⚠ **高是 451 不是构造函数的 414**：`KuaFuChannelWindow.as:39` 是 `super(595,414,true)`，但 `initWindow:208-216` → `setData` → `_list.numChildren == 0` ⇒ `createChannels():205` 末尾调 `newView()`，而 `newView:65` 第一句就是 `setSize(595,451)` ⇒ 玩家看到的稳态是 451；`UIWindow.setSize:50-55` → `drawWindowLayout:57-67` 把内容底重算成 579×383。**不写 `内容底顶`** —— 这扇不调 `setContentBgPos`，底顶就是 `UIWindow.as:37-38` 的 38（护送那两扇才用那条新键）。标题 = `:250` `KUAFU_CHANNEL_TITLE`「选择跨服频道」—— ⚠ **与菜单行文字「跨服忍界大战」不是一个词**（口径同 勾玉炼制「玉链进阶」）。`整框: true` ⇒ 容器原点 (0,29)、页面按外框坐标烘；这里不许写 `原点`。入口：服务端 `:51881-51882` 把这一行转成 `handle_war_panel_action(\"1825:0\")` ⇒ 回 `1825:0:…` 列表帧才由 `KuaFuManager.onWarPanel_warServerInfo:516-527` 开窗 ⇒ 属「收到回帧才开」那一族（同 副本 819/817）；本工程本地直开、不发帧。"
+  },
+  "生命料理": {
+    "as3": "equip/LiaoLiMadeWindow",
+    "宽": 241,
+    "高": 319,
+    "内容底": true,
+    "小背景": false,
+    "标题": "神 秘 料 理",
+    "整框": true,
+    "_说明": "2026-10-06 新增（阿凯 `00000020`，模板 20，称号「生命の料理」，菜单行「生命料理」= 动作值 15 `COOKING`）。`LiaoLiMadeWindow.as:56-59` `super(241,319,true)` ⇒ 第三参 true ⇒ **宿主画内容底**（类里没有再 new MYellow，判据同 护送/跨服）；**没有 `setContentBgPos`** ⇒ 底顶就是 `UIWindow.as:36-38` 的 (8,38)，尺寸 `宽−16=225 × 高−68=251`（`drawWindowLayout:57-66`）。全链**没有 `setSize`/改 `_width/_height`** ⇒ 构造那一格 == 稳态 241×319（不像 跨服 那扇有 414/451 那一坑）。标题 = `:308` `LIAOLIMADEWINDOW_TITLE` =「**神 秘 料 理**」（`message_properties.as:3307`，三字之间各一个**半角**空格）—— ⚠ 菜单行写「生命料理」、NPC 称号写「生命の料理」、窗标题写「神 秘 料 理」，**三个词不是一回事**，别互相顶掉（口径同 勾玉炼制）。`整框: true` ⇒ 容器原点 (0,29)、页面按外框坐标烘；**不许写 `原点`**。入口：服务端 `fake_flash_server.py:51872-51873` 对动作 15 **只回 `1822:1:0`**（`BUFF_HECHENG`，常量 `:749/:919`）⇒ 客户端 `Client.as:10695-10698 onBuffHeCheng_showPanel` → `UIMain2.as:3928-3940 showLiaoLiWindow()`，那里 `centerTwoWindow(LIAO_LI_MADE_WINDOW, ITEM_WINDOW2_F)` ⇒ **要连背包成对摆位**（已加进 `窗口管理.gd` 的 `伴随背包`）；`:3930` 第一句是 `if (inKuaFuBattle()) return`（跨服战斗中不开，本地无此态 ⇒ 不移植）。"
+  },
+  "洗点": {
+    "as3": "washPoint/WashPointWindow",
+    "宽": 275,
+    "高": 324,
+    "内容底": false,
+    "小背景": false,
+    "标题": "洗点",
+    "整框": true,
+    "_说明": "2026-10-06 新增（三代火影 `00000022`，模板 22，称号「洗点大师」，菜单行「重置潜能点」= 动作值 26 `WASH_POINT`）。⚠ **`MWindow` 族**：`WashPointWindow.as:73-77` `super(); init();`（`MWindow.as:65` 无参）⇒ **没有 UIWindow 的第三参可抄**；尺寸唯一来源 `:265-266` `background.width = 275; height = 324`；内容底是 `:272-277` 手工 `new MYellow_background()` 摆 (6,**39**) 263×251 ⇒ `内容底: false`（宿主再垫 = 两块黄底叠加更不透明，口径同 勾玉炼制）。标题 `:102` = `CN.WASH_POINT`「洗点」—— ⚠ 菜单行写「重置潜能点」，两个词别互相顶掉。入口链（逐条，服务端行号出自**钉住的** `2.2.3优化版/HYSJ/tools/fake_flash_server.py`，md5 前缀 399d5f55 —— ⚠ 机器上另有一份 `nya-go/fake_flash_server.py`（md5 4f94592d）行号不同，别混）： `:1140` 枚举 `WASH_POINT = 26`、`:10938` 菜单表 `22: ((\"重置潜能点\", WASH_POINT),)`、`:51873-51876` 派发 ⇒ 回 `1332:<npc对象id>:4`（`SHOW_NPC_PANEL`，panelId **4**）⇒ 客户端 `Client.as:5894 onShowNpcTriggerPanel` 的 `:5908-5910 case 4: setDOShow(UIConfig.WASH_POINT_WINDOW_F, true)`（`UIConfig.as:568` 类名反射建窗）。⚠ **走 `setDOShow`、没有 `centerTwoWindow` ⇒ 不连背包**（与 生命料理/徽章打造 正相反，行为门钉这一条）。`整框: true` ⇒ 不许写 `原点`。发帧面：`REWASH_AP = 83`（`SendOpCodes.as:80`）4×`writeShort`，服务端 `:686` 枚举、`:11657` 注册、`:12400` 解码、`:34475-34529` 处理（校验/扣卷/回 34 帧 + 通知）⇒ **本机确实在处理**，本工程未点头 ⇒ 只回显。"
+  },
+  "洗点确认": {
+    "as3": "washPoint/WashPointConfrimWindow",
+    "宽": 240,
+    "高": 198,
+    "内容底": false,
+    "小背景": true,
+    "标题": "洗点",
+    "整框": true,
+    "_说明": "2026-10-06 新增（洗点族的第二扇 = 点「开始洗点」弹出的确认弹）。⚠ 类名拼写照抄原版 `Confrim`（不是 Confirm）。同样 `MWindow` 族、`super()` 无参 ⇒ 尺寸来源 `:76-78` `background.width = 240; height = 169`（`MWindowSmall_background` charId 767 ⇒ 工程「小窗口边框」，`小背景: true`）；内容底 = `:82-87` 手工 MYellow `(6,30) 228×105` ⇒ `内容底: false`。⚠ **169 只是「空文案」那一格**：`setData:61-72` 运行期按两段 `textHeight` 重排并**改窗高** ⇒ 控制器必须照同一条公式重算（烘构造值只为编辑器可见）。标题与主窗**同一个语言键** `CN.WASH_POINT`。弹层 = `PopUpMananger.centerWindow(w, true)` ⇒ 居中 + 遮罩、点遮罩=取消。入口不是 NPC：`WashPointWindow.as:240-247 __onOkClick` 本地 new + setData + 居中 ⇒ SPEC 用 `入口` 那格声明。｜⚠ **高 198 是稳态、不是构造值**（2026-10-06 自查）：`setData:61-72` 运行期按两段 textHeight 重排并`background.height = okBtn.y + 22 + 5` ⇒ 3 行 + 2 行那一格算出 171+22+5 = **198**（构造那格 169 只在两段文本为空时成立，而「开始洗点」的钮在总和为 0 时是禁用的 ⇒ 玩家永远看不到 169）。口径同 `跨服频道` 的 414→451。⇒ 控制器**不需要**运行期改窗高，外壳直接按 198 建。"
+  },
+  "徽章打造": {
+    "as3": "beastBadge/BeastBadgeWindow",
+    "宽": 340,
+    "高": 400,
+    "内容底": false,
+    "小背景": false,
+    "标题": "徽章打造合成",
+    "整框": true,
+    "_说明": "2026-10-06 新增（木叶丸 `00000032`，模板 32，称号「徽章打造」，菜单行「徽章打造」= 动作值 13 `BADGE`）。`BeastBadgeWindow.as:33` `super(340,400,**false**)` ⇒ **UIWindow 不画内容底**；`:147-152` 类里自己 `new MYellow_background()` 摆 `(BORDER_GAP=5, 60)` 尺寸 `宽−10=330 × 高−90=310` ⇒ `内容底: false`（宿主再垫 = 两块黄底叠加，口径同 勾玉炼制/洗点）。全链无 `setSize` ⇒ 340×400 是稳态。标题 `:139` = `BEASTBADGE_WINDOW_TITTLE`「徽章打造合成」（⚠ 键名拼错 TITTLE 照抄）—— 菜单行「徽章打造」、页签「打造石合成 / 徽章强化」是四个不同的词。⚠ 层序：`:146` tabBar **早于** `:152` 内容底 ⇒ 页签与底顶重叠那 2px 由底压页签（原版如此，别改 addChild 序）。入口链（服务端行号出自**钉住的** `2.2.3优化版/HYSJ/tools/fake_flash_server.py`，md5 前缀 399d5f55）：`:1127` 枚举 `BADGE = 13`、`:10941` 菜单表 `32: ((\"徽章打造\", BADGE),)`、`:51862-51865` 派发 ⇒ 回 `1332:<npc对象id>:11`（panelId **11**）⇒ 客户端 `Client.as:5894` 的 `:5935-5937 case 11: API.ui.content.showBeastBadgeCreateWindow()` ⇒ `UIMain2.as:4547-4565`：已开着就 `deleteTwoWindow(BEASTBADGE_CREATE_WINDOW, ITEM_WINDOW2_F)`（**成对关**），否则 `centerTwoWindow(...)` + `init()` ⇒ **连背包成对开/成对关**（已加进 `窗口管理.gd` 的 `伴随背包`）。⚠ 方法名叫 `showBeastBadgeCreate**Window**`，类却是 `UIConfig.as:558` `BEASTBADGE_CREATE_WINDOW = \"…beastBadge.BeastBadgeWindow\"` ⇒ 别照方法名去找文件。第二入口：背包右键「合成」(石头)/「强化」(徽章) ⇒ `ItemWindow2.as:786-790 / 813-816` → `UIMain2.as:5676-5688 showBeastBadgeCreateWindowWithData(tab, item)`（也成对、带参投料）。`整框: true` ⇒ 不许写 `原点`。"
+  },
+  "装备修复": {
+    "as3": "EquipRepairWindow",
+    "宽": 360,
+    "高": 407,
+    "内容底": true,
+    "小背景": false,
+    "标题": "装备打造",
+    "整框": true,
+    "原点": [
+      0,
+      0
+    ],
+    "_说明": "2026-10-11 新增。EquipRepairWindow super(360,407)（:70），标题 = EQUIP_STRENGTH_WINDOW_TITLE（:266）与打造窗同名。页面 = 整个窗口（整框 true、原点 [0,0]），坐标见 开发工具/生成装备修复场景.py 头注。"
+  },
+  "梦幻属性符": {
+    "as3": "MengHuanPropResetWindow",
+    "宽": 360,
+    "高": 432,
+    "内容底": false,
+    "小背景": false,
+    "标题": "梦幻属性符",
+    "整框": true,
+    "原点": [
+      0,
+      0
+    ],
+    "_说明": "2026-11-03 新增（用户报「背包梦幻属性符不能直接使用」）。入口 = 背包双击/使用梦幻属性符（`ItemWindow2.as:953-967 useItem` 的 `if(id == StringTool.getMengHuanFuId())` 支，id 取自 `plus.fullone.needItemId` = 15024001）⇒ `UIMain2.as:5651-5664 showMengHuanPropRestWindow` 先 `centerTwoWindow(MENG_HUAN_PROP_RESET_WINDOW, ITEM_WINDOW2_F)` 再 `showPropPanle(符)` ⇒ **连背包成对开**，已加进 `窗口管理.伴随背包`。`MengHuanPropResetWindow.as:70` `super(360,432)`（第三参缺省 false ⇒ UIWindow 不画内容底），`:246-256` 类里自己 new `MYellow_background` 摆 `(BORDER_GAP=5, tabBar.y+20=58)` 尺寸 `(宽−10=350, 高−91=341)` ⇒ `内容底: false`（宿主再垫 = 两块黄底叠加，口径同 勾玉炼制/竞技场英雄榜）。整页按**窗口局部**坐标烘（`原点 [0,0]`），逐件算式见 `开发工具/生成梦幻属性符场景.py` 头注。标题 = `MENGHUANPROPRESETWINDOW_TITLE`「梦幻属性符」（`message_properties.as:85`）。"
+  },
+  "橙装打造": {
+    "as3": "YellowEquipLianZhiWindow",
+    "宽": 376,
+    "高": 407,
+    "内容底": false,
+    "小背景": false,
+    "标题": "装备打造",
+    "整框": true,
+    "原点": [
+      0,
+      0
+    ],
+    "_说明": "2026-11-04 新增（用户报「传说装备打造石功能未实装、点击显示是材料或人物物品」）。入口 = 背包双击「传说装备打造石」/「传说精炼石」（`ItemWindow2.as:979-988`：`isItemCanDaZao/isItemCanJingLian` ⇒ `showYellowEquipLianZhiWindow(0/1)`）⇒ `UIMain2.as:3961-3981` 先 `centerTwoWindow(YELLOWEQUIP_LIANZHI_WINDOW, ITEM_WINDOW2_F)` 再 `init(tab)` ⇒ **连背包成对开**，已加进 `窗口管理.伴随背包`。`YellowEquipLianZhiWindow.as:71` `super(376,407)`（第三参缺省 false ⇒ UIWindow 不画内容底），`:341-346` 类里自己 new `MYellow_background` 摆 `(BORDER_GAP=5, tabBar.y+20=58)` 尺寸 `(宽−10=366, 高−91=316)` ⇒ `内容底: false`。整页按**窗口局部**坐标烘（`原点 [0,0]`），逐件算式见 `开发工具/生成橙装打造场景.py` 头注。标题 = `EQUIP_STRENGTH_WINDOW_TITLE`「装备打造」（`message_properties.as:1327`）。"
+  },
+  "洗练": {
+    "as3": "XiLianWindow",
+    "宽": 520,
+    "高": 345,
+    "内容底": true,
+    "小背景": false,
+    "标题": "洗炼",
+    "整框": true,
+    "原点": [
+      0,
+      0
+    ],
+    "_说明": "2026-10-11 新增。`super(520,345,true)`（第三参 = `_drawContentBg`）、三扇 createChildren 逐行相同；坐标见 开发工具/生成灵器炼制场景.py 头注。"
+  },
+  "灵化": {
+    "as3": "LingHuaWindow",
+    "宽": 520,
+    "高": 345,
+    "内容底": true,
+    "小背景": false,
+    "标题": "灵化",
+    "整框": true,
+    "原点": [
+      0,
+      0
+    ],
+    "_说明": "2026-10-11 新增。`super(520,345,true)`（第三参 = `_drawContentBg`）、三扇 createChildren 逐行相同；坐标见 开发工具/生成灵器炼制场景.py 头注。"
+  },
+  "开光": {
+    "as3": "KaiGuangWindow",
+    "宽": 520,
+    "高": 345,
+    "内容底": true,
+    "小背景": false,
+    "标题": "开光",
+    "整框": true,
+    "原点": [
+      0,
+      0
+    ],
+    "_说明": "2026-10-11 新增。`super(520,345,true)`（第三参 = `_drawContentBg`）、三扇 createChildren 逐行相同；坐标见 开发工具/生成灵器炼制场景.py 头注。"
+  },
+  "开光人具": {
+    "as3": "RenJuKaiGuangWindow",
+    "宽": 520,
+    "高": 345,
+    "内容底": true,
+    "小背景": false,
+    "标题": "开光",
+    "整框": true,
+    "原点": [
+      0,
+      0
+    ],
+    "_说明": "2026-10-11 新增：忍具（人具）那支与本尊版式相同（`RenJuKaiGuangWindow` super(520,345,true)），只是发 RENJU 2082 子命令 0；材料配置**回落到** Etc.LingQi.kaiguang（RenJuManager.as:94-99）。"
+  },
+  "心法": {
+    "宽": 275,
+    "高": 295,
+    "整框": true,
+    "标题": "修炼心法",
+    "出处": "XinfaWindow.as:253-255 `background.width=275; height=295`（`super()` 无参 ⇒ 尺寸由这张背景给）。⚠ `整框` 必须 true：直接子件最小 y = 39（黄底板 `:261-263`）落在 36~40 那一档 ⇒ 标 false 会整页偏 29 像素而几何门照样全绿（工程老坑）。"
+  },
+  "双修邀请": {
+    "as3": "controls/YaoqingShuangxiuWindow",
+    "宽": 280,
+    "高": 224,
+    "内容底": false,
+    "小背景": false,
+    "标题": "双修打坐",
+    "整框": true,
+    "_说明": "2026-10-15 新增。`MWindow` 族、`super()` 无参 ⇒ 尺寸唯一来源 `:166-168` `background.width = 280; height = 224`（`MWindow_background` tag3 ⇒ 工程「窗口边框」，`小背景: false`）。内容底是 `:174-178` 手工 `MYellow_background` 摆 (6,**39**) 268×151 ⇒ `内容底: false`。⚠ `整框: true` 判据：直接子件最小 y = 39（黄底板）落在 36~40 那一档 ⇒ 标 false 会整页偏 29 像素而几何门照样全绿（工程老坑）。标题 = `CN.YAOQING_SHUANGXIU_WINDOW_TITLE`「双修打坐」。弹层 = 原版由 `HealHandler` 建窗并挂 PopUpMananger ⇒ 居中，故进 `窗口管理.居中弹`。触发不是点钮：服务端 `1288:2:<邀请者号>` 到本端才开（消费者在 窗口管理.gd）。"
+  },
+  "家族邀请": {
+    "as3": "uifl/base/controls/MPromptWindow",
+    "宽": 264,
+    "高": 165,
+    "内容底": false,
+    "小背景": false,
+    "标题": "邀请入族",
+    "整框": true,
+    "_说明": "2026-10-17 新增（族邀那一行 = 被邀方点头顶托盘那格开出来的确认窗）。逐件真值：真值/窗口/家族邀请窗.md。宽唯一来源 = `popupHasPlayerInfoWindow:114` 用**无参构造** ⇒ 默认 `(264, 215)`（`MPromptWindow.as:49-52`），而高是**算出来的**：`:233` `setSize(_width, 正文.y + 正文.height + 35)` = `96 + 34 + 35 = 165`（正文 22 字在 232 宽里折 2 行 ⇒ 盒高 `15×2+4 = 34`）⇒ 写死 215 会把那三颗钮顶到窗外。内容底 = `UIWindow.as:36-39,64-65` 的 MYellow_background `(8,38,248,97)` ⇒ 页局部 `(8,9)`。⚠ `整框: true` 判据：直接子件最小 y = 9（黄底板）之上没有别的件，页根顶就是外框内 `(0,29)`。标题 = `FAMILLY_MANAGER_YAOQING_RUZU`「邀请入族」（`FamillyManager.inviteHandler:235-239` 传的第三参）。弹层 = `PopUpMananger.centerWindow(_, false)`（`:127`）⇒ 居中但**不带全屏遮罩**，进 `窗口管理.居中弹`、不进模态。"
+  },
+  "羁绊申请": {
+    "as3": "com/mxw/uifl/controls/spousal/ProposalWindow",
+    "宽": 388,
+    "高": 475,
+    "内容底": false,
+    "小背景": false,
+    "标题": "发起羁绊",
+    "整框": true,
+    "_说明": "2026-10-17 新增（菜单「羁绊」那一行 = 求婚窗，两档共用一扇）。逐件真值：真值/窗口/求婚窗.md。宽 = `ProposalWindow.newBackground:172-174` 里写死的 `background.width = 388`（唯一来源，不是量出来的）。高是**算出来的**：`background2.height = background3.height + 82`（`:182`，`background3.height` 在 `:180` 写死 320）= 320 + 82 = 402；`background.height = background2.height + 73`（`:183`）= 402 + 73 = **475**。⇒ 页根 = 388×446（整框:true，容器原点 (0,29)）。⚠ 三颗钮在 y=447（`:199` `background2.y + height + 5`），把高写小会把钮顶到窗外。标题两档不同（发起羁绊 / 羁绊确认，`:56/64`）⇒ 表里这条只当默认档，另一档由 `求婚窗.渲染` 调 `功能窗口.设置标题` 改写。`内容底:false` = 这页自己画 MYellow(内容面板.png) 在 (6,11) 376×402，外壳那张黄底不能再叠第二遍。"
+  },
+  "赠花": {
+    "as3": "uifl/controls/marry/MarryZengHuaWindow",
+    "宽": 550,
+    "高": 415,
+    "内容底": false,
+    "小背景": false,
+    "标题": "赠花",
+    "整框": true,
+    "_说明": "2026-10-24 新增（#88 / 原报修 #263：目标信息条菜单「赠花」那一行的落地窗）。逐件真值：真值/窗口/赠花窗.md。宽与高唯一来源 = `super(550, 415, true)`（`MarryZengHuaWindow.as:45`），不是量出来的。⚠ 这一扇是 **UIWindow 不是 MWindow** ⇒ 内容底原点不是 (8,38)：`:94` `setContentBgPos(8, 30)`、`:228` 又把高改成 `_height − 40 = 375` ⇒ 黄底 = 页局部 (8,1)。`整框: true` 判据 = 直接子件最小 y = 30（黄底板），页根 = 550×386 = 415 − 29。`内容底: false` = 这页自己画那张 MYellow，外壳不能再叠第二遍。标题 = `CN.ZENGHUA_WINDOW_TITLE`「赠花」（`:46` `title = LangUtil.get(...)`）。开窗的不是点菜单：`openMarryZengHuaWindow:184-197` 只存「对面是谁」四项并发 `94:6`，**回帧 `58:2` 到才 `setDOShow`**（`receiveRefreshFlowerWindow:338`）⇒ 消费者在 窗口管理._on_花档帧。"
+  },
+  "随身摊位": {
+    "as3": "controls/stall/StallWindow",
+    "宽": 277,
+    "高": 437,
+    "内容底": false,
+    "小背景": false,
+    "标题": "随身摊位",
+    "整框": true,
+    "_说明": "2026-10-15 新增（目标信息条菜单「看摊」的落地窗）。`UIWindow` 族 ⇒ 尺寸唯一来源 `super(277,437,true)`（`StallWindow.as:85`）。⚠ **内容底板不是整窗**：`UIWindow.as:36-39`+`:64-65` 的 `MYellow_background` 是 (8,38)、`宽 = 277−16 = 261`、`高 = 437−68 = 369` ⇒ 本页所有宽度的基数都是 **261**，不是 277（`_listBg = 261−10 = 251`、`_list = 251−16 = 235`）。真值第一版按 277 算过 ⇒ 逐件差 16 像素，已在 `真值/窗口/随身摊位窗.md` §⓪ 钉住。`整框: true` 判据 = 直接子件最小 y = 38。标题 = `STALL_WINDOW_TITLE`「随身摊位」。入口 = 服务端 `1296:1:` 那一帧（消费者 `窗口管理._on_stall_state`）⇒ 不进底栏、也不进 `居中弹`（原版是普通可拖窗）。页根高 408 = 437 − 29（`功能窗口.gd:653` 整框那一支把 `_content` 摆到 (0,29)）。"
+  },
+  "神秘商店": {
+    "as3": "controls/mystery/MysteryWindow",
+    "宽": 275,
+    "高": 394,
+    "内容底": true,
+    "小背景": false,
+    "标题": "神秘商店",
+    "整框": true,
+    "_说明": "2026-10-19 新增（#45 神秘商店）。`MysteryWindow.as:40` `super(275,394,true)` ⇒ 第三参 true ⇒ **宿主画内容底**（`UIWindow.drawSkin:27-33` 的 `MYellow_background`，类里没有 `setContentBgPos` ⇒ 底顶就是 `:31-32` 的 (8,38)，尺寸 `drawWindowLayout:62-65` 的 宽−16=259 × 高−68=326）；全链**没有 `setSize`** ⇒ 构造那一格 == 稳态 275×394。标题 = `:130` `LangUtil.get(\"MYSTERY_WINDOW_TITLE\")` =「神秘商店」（`en_US$message_properties.as:2232`）。`整框: true` ⇒ 容器原点 (0,29)、页面按外框坐标减 29 烘（页根 275×365；`倒计时` 那条 `:93` 写的是 `_height - 27` = 外框 367 ⇒ 页面 338）。⚠ **不许写 `原点`**（口径同 生命料理/随身摊位）。入口链路：背包底部那颗「神秘商店」（`ItemWindow2.as:311/:1763 openMysteryHandler`）⇒ `MysteryManager.requestOpenMystery()` ⇒ `client.requestSecretShopOpen()` = NPC_SHOP **动作 6**，**点下去不开窗**（那条链全文没有一句 showWindow）；开窗的是服务端回帧 `324:` ⇒ `后端连接._handle_secret_shop_text` → `mystery_shop_received` → `窗口管理._on_mystery_shop` → `打开(\"神秘商店\")`。等级 < 25 时服务端只发一句系统聊天、不发 324（`fake_flash_server.py` 动作 6/8 那道闸）⇒ 点了没窗是原语义。`窗口管理.伴随背包` 已登记这扇：`MysteryManager.as:44` 没窗时走的正是 `centerTwoWindow(MYSTERY_WINDOW, ITEM_WINDOW2_F)` ⇒ 要连背包成对摆位。"
+  },
+  "摊位列表": {
+    "as3": "controls/stall/StallListWindow",
+    "宽": 474,
+    "高": 378,
+    "内容底": true,
+    "小背景": false,
+    "标题": "摊位列表",
+    "整框": true,
+    "_说明": "2026-10-20 新增（#47 摊位列表）。`StallListWindow.as:94` `super(474,378,true)` ⇒ 第三参 true ⇒ 宿主画内容底（(8,38)、458×310 = 宽−16 / 高−68）；全链没有 `setSize` ⇒ 构造那一格 == 稳态。标题 = `:219` `STALL_LIST_WINDOW_TITLE`「摊位列表」（`en_US$message_properties.as:977`）。`整框: true` ⇒ 容器原点 (0,29)、页面按外框坐标减 29 烘（页根 474×349；列表 y = 外框 69 ⇒ 页 40）。⚠ **不许写 `原点`**（口径同 神秘商店/随身摊位）。入口链路是**点击开窗**、不是回帧开窗（与 神秘商店/药店 那一族正相反）：背包底部那颗「摊位列表」（`ItemWindow2.as:1547-1557 viewStallListHandler`，钮挂在 `:1774`）**本身就是开关**：`if (stallListWindow) setDOShow(...,false) else showStallListWindow()` ⇒ 同页再点一次收起，正对着 `窗口管理.打开或收起`；开窗走 `UIMain2.as:4568-4576 showStallListWindow()` = `setDOShow(STALL_LIST_WINDOW,true)` + `init()`，而 `init():152-156` 全文一句 `loadPage(0)` ⇒ 开窗那一刻发 `1296:0:0:11`。回帧 `1296:0:<总数>:<行表>` 由 `StallDataManager.as:88-94` 分给 `if (stallListWindow) setPageData(...)` ⇒ 窗没开就什么都不做，所以 `窗口管理._on_stall_list` **不许**调 `打开`。不在 `伴随背包`（那里只有 `setDOShow` 一句，没有 `centerTwoWindow`）、不在 `居中弹`（原版是可拖的普通窗）。⚠ 原版入口第一句 `KuaFuManager.inKuaFuBattle()` 闸（跨服战场里点它直接 return）本工程**没有跨服战场状态** ⇒ 没接，属已知缺口，不是漏译。"
+  },
+  "摊位购买": {
+    "as3": "controls/stall/StallUpShelfWindow",
+    "宽": 166,
+    "高": 186,
+    "内容底": false,
+    "小背景": false,
+    "标题": "物品购买",
+    "整框": true,
+    "_说明": "2026-10-15 新增（摊位窗里点「购买」弹出的确认弹）。`UIWindow` 族 ⇒ 尺寸来源 `super(166,186,true)`（`StallUpShelfWindow.as:69`）；内容底 (8,38) **150×118**（同一个 `UIWindow` 公式：166−16、186−68）。标题按档变：购买档 `STALL_UPSHELF_WINDOW_TITEL`「物品购买」（`:92`），上架档 = `STALL_UP_SHELF_BUTTON_NAME`「物品上架」（`:136`，另立一条「摊位上架」在外）。⚠ 同一个类两档共用 ⇒ 「确定」钮文字也是运行期数据（`:91` `SHOP_BUY`「购买」/ `:135`「上架」），场景里烘的是购买档。弹层 = `PopUpMananger.centerWindow(this,true)`（`:83`）⇒ 进 `窗口管理.居中弹`。入口 = 摊位窗里点「购买」（`StallWindow.as:593-604` 先开这扇、在这扇里比余额才发 `1296:7:`）。"
+  },
+  "摊位上架": {
+    "as3": "controls/stall/StallUpShelfWindow",
+    "宽": 166,
+    "高": 186,
+    "内容底": false,
+    "小背景": false,
+    "标题": "物品上架",
+    "整框": true,
+    "_说明": "2026-10-19 新增（摊主档：点「物品上架」进模式、再点背包里的一件 ⇒ 开这一扇填两个价）。**与「摊位购买」是同一个 AS3 类、同一张 `.tscn`**，只差 `_operation`（`StallUpShelfWindow.as:130-152`）：上架档钮文字「上架」（`:135`）、标题「物品上架」（`:136`）、两个价栏 `enableInput = true`（`:152`）。尺寸/边距那条账与「摊位购买」逐字相同 ⇒ 两档共用 `购买确认窗.gd` 的 `矩形` 表。弹层同族 `PopUpMananger.centerWindow(this,true)`（`:83`）⇒ 进 `窗口管理.居中弹`。入口 = `摊位窗.背包落一件`（原版 `UIConfig.dropValidateFun = showUpShelfWindow`，`StallWindow.as:624` + `ItemWindow2.as:440-444`）⇒ 发的是 `1296:4:`。"
+  },
+  "交易": {
+    "as3": "controls/TradeWindow2",
+    "宽": 321,
+    "高": 483,
+    "内容底": false,
+    "小背景": false,
+    "标题": "交易",
+    "整框": true,
+    "_说明": "2026-10-15 新增（邀请托盘里点「交易邀请」那格、确认后服务端回 `335:22` 才开的窗）。`MWindow` 族 ⇒ 尺寸唯一来源是**手动设的底图**：`TradeWindow2.as:470-473` `background = new MWindow_background(); width = 321; height = 483`（不是 `UIWindow` 的 `super(w,h)`，所以本表这一条没有 `内容底` 可推）。⚠ `整框: true` 的判据 = 直接子件最小 y = 39（`background2`，`:479-480`）落在 36~40 那一段；页局部 y = AS3 y − 29 ⇒ **页根 321×454**。标题 = `TRADE_WINDOW_TITLE`「交易」（`:167`），和窗里那颗确认钮**同一个键**（`:375`）。入口不是按钮：`窗口管理._on_trade_started`；且原版 `setTradeWindowVisible()`（`UIMain2.as:4884-4892`）是 `centerTwoWindow(交易, 背包)` ⇒ 已登记进 `窗口管理.伴随背包`。逐件真值 = `真值/窗口/交易与邀请托盘.md` §①②③④⑤⑥。"
+  },
+  "二级密码说明": {
+    "as3": "uifl/controls/twoPassword/TwoPasswordSayWindow",
+    "宽": 384,
+    "高": 382,
+    "内容底": false,
+    "小背景": false,
+    "标题": "二级密码说明",
+    "整框": true,
+    "_说明": "2026-10-20 新增（#48 二级密码，六窗之「说明」）。`TwoPasswordSayWindow.as:29` `super(384,382)` **没传第三参** ⇒ `UIWindow.as:28-44` 不画 `_contentBg` ⇒ `内容底: false`，页里自己 `new MYellow_background()`（底2）+ `new MPane_background()`（底3）。高 382 是 `doLayout:81-82` `setSize(background.width,  setPassword.y + 22 + 5)` 跑完的**稳态**（= 40 + 底2高310 + 5 + 22 + 5），不是拍的。标题 = `:83` `TWOPASSWORD_SAY_WINDOW_TITLE`「二级密码说明」（`en_US$message_properties.as:3283`）。`整框: true` ⇒ 容器原点 (0,29)、页面按外框坐标减 29 摆（页根 384×353）。⚠ **不许写 `原点`**（口径同 神秘商店/摊位列表）。入口 = 背包底部那颗「二级密码」（`ItemWindow2.as:722-729 mouseClickTwoPassword`）⇒ `queryFirstTime()` = 上行 0，**点它一扇窗都不开**；开窗的是回帧 2（`Client.as:1569-1576 onSecondLevelPassword_isFirstTimeResult` → `reverseDisplay(SAY)`）⇒ 和 神秘商店/随身药店 同一族，和 摊位列表 正相反。首钮文字随 `类型` 换（`updateView:41`），「解除锁定」「修改密码」两枚的 enabled 也全看 `类型`（`:39-40`）。不在 `伴随背包`（全链没有 `centerTwoWindow`）、不在 `居中弹`（普通可拖窗）。逐件真值 = `真值/窗口/二级密码.md` §②「二级密码说明」。"
+  },
+  "二级密码设置": {
+    "as3": "uifl/controls/twoPassword/SetPasswordPane1",
+    "宽": 270,
+    "高": 340,
+    "内容底": false,
+    "小背景": false,
+    "标题": "二级密码设置嚮导",
+    "整框": true,
+    "_说明": "2026-10-20 新增（#48，六窗之「一格 = 设密码」）。`SetPasswordPane1.as:45` `super(270,340)` ⇒ 三参没传 ⇒ `内容底: false`，底2/底3 页里自己画（`:100-105`，底2 高**写死 260**）⇒ 外框 340 = 40+260+5+22+13。页根 270×311（减拖动区 29）。⚠ 标题走的是 **`SEPPASSWORDPANE_3_TITLE`「二级密码设置嚮导」**（`:210` / 语言表 `:964`）—— 键名在三格那族里，一格照抄，属原版的串门，**照译不改**。入口 = 说明窗首钮在 `类型 != 1` 那一支 `reverseDisplay(SET PASSWORD_PANE1)`（`TwoPasswordSayWindow:58`）⇒ 点击开窗、不是回帧开窗；另一条开腿是回帧 0 失败?不是 —— 回帧 0（`passwordReusltFirstTime`）开的是**二格**。两枚输入 `displayAsPassword` + `maxChars 14`，「下一步」的闸 = 两枚**都 ≥ minChars(6)** 才 enabled（`:62-72`）。逐件真值 = `真值/窗口/二级密码.md` §②「二级密码设置」。"
+  },
+  "二级密码资料": {
+    "as3": "uifl/controls/twoPassword/SetPasswordPane2",
+    "宽": 270,
+    "高": 340,
+    "内容底": false,
+    "小背景": false,
+    "标题": "二级密码说明",
+    "整框": true,
+    "_说明": "2026-10-20 新增（#48，六窗之「二格 = 联系方式」）。`SetPasswordPane2.as:54` `super(270,340)` ⇒ 同一格形状：`内容底: false`、底2 (6,40) 258×260、底3 (11,45) 248×250、页根 270×311。⚠ 标题 = `:160` `LangUtil.get(\"TWOPASSWORD_SAY_WINDOW_TITLE\")` =「二级密码说明」—— **二格用的还是说明窗那个键**，原版就这么摆，照译（所以这一条的 `标题` 和「二级密码说明」一字不差，不是写错）。入口 = 回帧 0 且 `结果 == 1` ⇒ `reverseDisplay(PANE2)`（`Client.as:5305-5311`）；失败那条腿**原文是空的**（一帧不弹、一扇不开），本工程照抄。三行 y 由 `:87` 的 `底3.y + 67 = 112` 钉死、步长 23+10。下一步的闸 = **邮箱正则**（`:183`），不过只弹一句、一帧不发。手机/QQ 的 `restrict` 只收数字（`:138/:140`）。逐件真值 = `真值/窗口/二级密码.md` §②「二级密码资料」。"
+  },
+  "二级密码问题": {
+    "as3": "uifl/controls/twoPassword/SetPasswordPane3",
+    "宽": 315,
+    "高": 340,
+    "内容底": false,
+    "小背景": false,
+    "标题": "二级密码设置嚮导",
+    "整框": true,
+    "_说明": "2026-10-20 新增（#48，六窗之「三格 = 密保问题」，**三档共用这一扇**）。`SetPasswordPane3.as:66` `super(315,340)` ⇒ `内容底: false`、底2 303×260、底3 293×250（`:222-227`）、页根 315×311。标题起于 `SEPPASSWORDPANE_3_TITLE`「二级密码设置嚮导」；⚠ `updateView(Type3):173` 会把 `title` **直接改成 `SEPPASSWORDPANE_3_TITLE_2`「二级密码删除」**且再没改回来 ⇒ 进过删除档之后这扇窗的标题**永久**是「二级密码删除」（端口 = `二级密码窗.三格删过` 那份 static）。开腿三条，全由服务端推进来：回帧 3（`contactResult`，**结果号读都不读**）⇒ Type1；回帧 1（`QAResult == 1`）⇒ 原地 `updateView(Type2)`；回帧 5（`Questions`）⇒ `reverseDisplay` + `updateView(Type3)` 落删除档。`_loc1_ = int((315−98)/3) = 72`（不是 70）。逐件真值 + 三档矩阵 = `真值/窗口/二级密码.md` §②「二级密码问题」。"
+  },
+  "二级密码修改": {
+    "as3": "uifl/controls/twoPassword/UpdatePasswordWindow",
+    "宽": 315,
+    "高": 344,
+    "内容底": false,
+    "小背景": false,
+    "标题": "二级密码修改",
+    "整框": true,
+    "_说明": "2026-10-20 新增（#48，六窗之「改密」）。`UpdatePasswordWindow.as:53` `super(315,344)` ⇒ `内容底: false`；这一扇是六窗里唯一**两块子面板**的：底3 (11,45) 293×**92**、底4 (11,142) 293×**164**（`:66-71`）⇒ 页根 315×315（344−29）。标题 = `:166` `UPDATEPASSWORD_WINDOW_TITLE`（语言表 `:729`）。⚠ **三枚输入框 x = 90 不是 96**：`:74` 原文 `background3.x + (background3.width − oldPasBg.width) >> 1`，AS3 里 `+` 绑得比 `>>` 紧 ⇒ `(11+170)>>1 = 90`，比真居中偏左 6px —— **照抄别修**。入口 = 说明窗「修改密码」发上行 9 ⇒ 回帧 10（`requestModifyPasswordResult`，带剩余次数）`reverseDisplay(UPDATEPASSWORD_WINDOW)`；改密成功/失败都由回帧 6 决定关不关窗（发送腿**不关窗** `:191`）。两枚新密码都 ≥6 才亮「修改」。逐件真值 = `真值/窗口/二级密码.md` §②「二级密码修改」。"
+  },
+  "二级密码解锁": {
+    "as3": "uifl/controls/twoPassword/UnchainLookWindow",
+    "宽": 270,
+    "高": 225,
+    "内容底": false,
+    "小背景": false,
+    "标题": "解除锁定",
+    "整框": true,
+    "_说明": "2026-10-20 新增（#48，六窗之「解锁」，**居中弹**）。`UnchainLookWindow.as:39` `super(270,225)` ⇒ `内容底: false`；底2 (6,40) 258×**146**、底3 (11,45) 248×136 ⇒ 页根 270×196。标题 = `:141` `UNCHAINLOOK_BTN_TEXT`「解除锁定」（语言表 `:34`）。这一扇在 `窗口管理.居中弹` 表里：`showUnchainLookWindow`（`UIMain2.as:5690-5698`）= `removeWindow` + `centerWindow(createWindow(...), true)` ⇒ **每次都重建 + 正中央 + 带遮罩**，不吃错开也不回填旧位置。开腿两条：说明窗「解除锁定」钮（`:122-126`，**不发帧**）与回帧 7 `requestPassword`（服务端登录进锁定态主动要密码）。关窗走**被重写过的** `onCloseBtnClick:42-49`：先清输入再 remove ⇒ 这一扇的草稿**不留**（和 Pane2/Pane3 那两族正相反）。正文那条 `UNCHAINLOOK_WINDOW_TEXT_1` 带 `size=\"16\"`，`输入确认弹.文案转BBCode` 处理不了 ⇒ 端口摘掉 size 属性 + 整枚标签字号 16。逐件真值 = `真值/窗口/二级密码.md` §②「二级密码解锁」。"
+  },
+  "竞技场": {
+    "as3": "pvp/PvpWindow",
+    "宽": 770,
+    "高": 567,
+    "内容底": false,
+    "小背景": false,
+    "标题": "竞技场",
+    "整框": true,
+    "_说明": "2026-10-23 新增（活跃度「竞技场」那一行 + 小地图那颗钮，同一道 30 级闸）。`PvpWindow.as:67` `super(770,567,false)` ⇒ 第三参 false，但 `createChildren:102-107` 自己 new 了一块 MYellow_background 摆 (8,38)、尺寸 (宽-16, 高-38-8=521)（比 UIWindow 标准的高-68=499 高 22px）⇒ `内容底: false`（宿主再垫 = 两块黄底叠加，口径同 洗点/勾玉炼制）。★ 那块黄底被 `UISwf_PvpBg_Skin`(750x516 @10,40) 整个盖住 ⇒ 页面里不再画它，视觉零差。标题 = `:101` `PVP_JINGJICHANG`「竞技场」。`整框: true` ⇒ 容器原点 (0,29)、**不许写 `原点`**。开窗即发上行 `2306:0`（`initView:280-285`），面板在那一帧回来之前一直 visible=false。逐件坐标与元件天然尺寸：`真值/窗口/竞技场.md` §11。"
+  },
+  "竞技场英雄榜": {
+    "as3": "pvp/PvpRankWindow",
+    "宽": 380,
+    "高": 400,
+    "内容底": false,
+    "小背景": false,
+    "标题": "英雄榜",
+    "整框": true,
+    "_说明": "2026-10-24 新增（主窗左下「查看英雄榜」那一行）。`PvpRankWindow.as:19` `super(380,400,false)`是 `UIWindow` 那一支，`createChildren:31-36` 自己 new 了一块 `MYellow_background` 摆 (8,38)、尺寸 (宽−16, 高−38−8=354) ⇒ `内容底: false`（宿主再垫 = 两块黄底叠加，口径同 竞技场/洗点）。★ 与主窗不同：**这块黄底上面没有整幅底图盖住** ⇒ 页面里要真的画它（`竞技场英雄榜.tscn` 的 `内容底`）。标题 = `:33` `PVP_YINGXIONGBANG`「英雄榜」。`整框: true` ⇒ 容器原点 (0,29)、**不许写 `原点`**，页面局部 y = AS3 y − 29。逐件坐标与四列色：`真值/窗口/竞技场.md` §15。开窗即发上行 `2306:4`（原版 `showPvpRankWindow:88-96` 是 reverseDisplay 之后 `if(窗)` 才查 ⇒ 第一次点也发）。"
+  },
+  "附身宠物": {
+    "as3": "controls/pet/SuiShenPet",
+    "宽": 193,
+    "高": 190,
+    "内容底": false,
+    "小背景": true,
+    "标题": "附身宠物",
+    "整框": true,
+    "_说明": "2026-11-08 新增（#218 C2：摊主「宠物列表」与交易窗「宠物列表」共用的选宠窗）。`MWindow` 族 ⇒ 尺寸来自手动设的底图：`SuiShenPet.as:51-53` `background = new MWindowSmall_background(); width = 193; height = 190`（小背景 ⇒ 关闭钮 y=4、标题 y=2，`:67-68`）。`整框: true` ⇒ 容器原点 (0,29)、页根 193×161；列表底 `MYellow_background` @ (6,30) 183×126（`:55-59`）、列表 @ (8,34) 175×115（`:91-94`）、三钮 y=162（`:84`）、查看/上架/取消 x=6/78/150（`:70-88`）。标题 = `SUISHENPET_TITLE`「附身宠物」：**同一个类**在交易档（`JIAOYI_TYPE`）与摆摊档（`BAITAN_TYPE`）标题都一样，只是「上架」那颗发出的东西不同（交易 ⇒ `119:18`，摆摊 ⇒ `1296:5`，由 `selectedPetHandler` 分流）。入口不是回帧：摆摊 `StallWindow.as:627-647`、交易 `TradeWindow2.as:591` 都是点「宠物列表」直接开；摆位也由入口那侧按「左够就左、否则右」摆（`StallWindow.as:640-646`）。逐件真值 = `真值/窗口/随身摊位窗.md` §⑩ 与 `真值/窗口/交易与邀请托盘.md`。"
+  },
+  "货币上架": {
+    "as3": "controls/stall/UpShelfMoneyWindow",
+    "宽": 251,
+    "高": 168,
+    "内容底": false,
+    "小背景": false,
+    "标题": "货币上架",
+    "整框": true,
+    "_说明": "2026-11-08 新增（#218 C2：摊主「货币上架」那颗钮开的窗）。`UIWindow` 族 ⇒ 尺寸唯一来源 `super(251,168,false)`（`UpShelfMoneyWindow.as:60`，第三参 false = 不垫内容底）。黄底由窗自己画：`background2 = new MYellow_background()`、宽 = 251−12 = 239、x=6、y=39、高由 `:297` 反推 124（`:118-120` + `:273-297`）⇒ 尺寸表 `内容底: false`。标题 = `STALLUPSHELFWINDOW_TITLE`「货币上架」（`:121`）。`整框: true` ⇒ 容器原点 (0,29)、页根 251×139。上行 = `1296:8:<是否金币>:<金币数>:<元宝数>`（`:94` → `StallProcessor.as:210-228` action 8）。入口 = 摊位窗第 2 页签的「货币上架」钮（`StallWindow.as:648-671`，先数 10 条上限才开窗），开窗走 `setData():259-269` 复位成「卖金币」；摆位与附身宠物同一条（左够就左、否则右）。逐件真值 = `真值/窗口/随身摊位窗.md` §⑩。"
+  }
+
+}

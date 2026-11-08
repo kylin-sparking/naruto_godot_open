@@ -1,0 +1,1080 @@
+[gd_scene load_steps=11 format=3]
+
+[ext_resource type="PackedScene" path="res://场景/界面/组件/宠物条目.tscn" id="1_pet"]
+[ext_resource type="PackedScene" path="res://场景/界面/组件/装备提示框.tscn" id="9_tip"]
+[ext_resource type="PackedScene" path="res://场景/界面/组件/扩容窗口.tscn" id="8_enlarge"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/横向分隔线.png" id="2_line"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/宠物/宠物装备面板.png" id="3_panel"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/物品格.png" id="4_cell"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/经验条槽.png" id="5_bar"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/经验条填充.png" id="6_fill"]
+
+[ext_resource type="Script" path="res://脚本/界面/组件/宠物装备格.gd" id="7_petcell"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_flat"]
+
+[node name="原版宠物窗口内容" type="Control"]
+custom_minimum_size = Vector2(424, 362)
+
+[node name="内容底" type="Panel" parent="."]
+offset_left = -3.0
+offset_top = -6.0
+offset_right = 431.0
+offset_bottom = 365.0
+mouse_filter = 2
+
+[node name="列表底板" type="Panel" parent="."]
+offset_top = 2.0
+offset_left = 5.0
+offset_right = 182.0
+offset_bottom = 138.0
+
+[node name="携带数量" type="Label" parent="."]
+offset_left = 14.0
+offset_top = 3.0
+offset_right = 174.0
+offset_bottom = 21.0
+text = "携带数量 0 / 0"
+horizontal_alignment = 1
+
+[node name="携带分隔线" type="TextureRect" parent="."]
+offset_left = 7.0
+offset_top = 22.0
+offset_right = 180.0
+offset_bottom = 24.0
+mouse_filter = 2
+texture = ExtResource("2_line")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="列表滚动" type="ScrollContainer" parent="."]
+offset_left = 7.0
+offset_top = 24.0
+offset_right = 175.0
+offset_bottom = 134.0
+horizontal_scroll_mode = 0
+
+[node name="宠物列表" type="VBoxContainer" parent="列表滚动"]
+custom_minimum_size = Vector2(153, 0)
+offset_right = 153.0
+offset_bottom = 242.0
+theme_override_constants/separation = 0
+
+[node name="宠物条目_0" parent="列表滚动/宠物列表" instance=ExtResource("1_pet")]
+[node name="宠物条目_1" parent="列表滚动/宠物列表" instance=ExtResource("1_pet")]
+[node name="宠物条目_2" parent="列表滚动/宠物列表" instance=ExtResource("1_pet")]
+[node name="宠物条目_3" parent="列表滚动/宠物列表" instance=ExtResource("1_pet")]
+[node name="宠物条目_4" parent="列表滚动/宠物列表" instance=ExtResource("1_pet")]
+[node name="宠物条目_5" parent="列表滚动/宠物列表" instance=ExtResource("1_pet")]
+[node name="宠物条目_6" parent="列表滚动/宠物列表" instance=ExtResource("1_pet")]
+[node name="宠物条目_7" parent="列表滚动/宠物列表" instance=ExtResource("1_pet")]
+[node name="宠物条目_8" parent="列表滚动/宠物列表" instance=ExtResource("1_pet")]
+[node name="宠物条目_9" parent="列表滚动/宠物列表" instance=ExtResource("1_pet")]
+[node name="扩展兽栏" parent="列表滚动/宠物列表" instance=ExtResource("1_pet")]
+
+[node name="属性底板" type="Panel" parent="."]
+offset_left = 5.0
+offset_top = 143.0
+offset_right = 182.0
+offset_bottom = 313.0
+
+[node name="空提示" type="RichTextLabel" parent="属性底板"]
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 172.0
+offset_bottom = 165.0
+mouse_filter = 2
+theme_override_colors/default_color = Color(1, 0.941, 0, 1)
+bbcode_enabled = true
+text = "[color=#fff000]　　　附身通灵兽作用[/color]
+[color=#00ff00]将提升主人的攻击、防御、暴击、闪避、攻击速度及移动速度，但是附身通灵兽无法使用战斗类技能[/color]
+[color=#fff000]　　　出战通灵兽作用[/color]
+[color=#1e90ff]将会跟随在主人身旁一起战斗，出战时该通灵兽所有战斗技能可用[/color]"
+scroll_active = false
+
+[node name="属性" type="Control" parent="属性底板"]
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 152.0
+offset_bottom = 125.0
+
+[node name="行_0" type="Control" parent="属性底板/属性"]
+offset_right = 147.0
+offset_bottom = 15.0
+[node name="名" type="Label" parent="属性底板/属性/行_0"]
+offset_right = 90.0
+offset_bottom = 15.0
+theme_override_colors/font_color = Color(1, 0.388, 0.02, 1)
+text = "增加主人生命值"
+[node name="值" type="Label" parent="属性底板/属性/行_0"]
+offset_left = 90.0
+offset_right = 126.0
+offset_bottom = 15.0
+theme_override_colors/font_color = Color(1, 0.639, 0.02, 1)
+text = "0"
+horizontal_alignment = 1
+[node name="绿" type="Label" parent="属性底板/属性/行_0"]
+offset_left = 130.0
+offset_right = 170.0
+offset_bottom = 15.0
+theme_override_colors/font_color = Color(0, 0.494, 0.024, 1)
+text = "+0"
+
+[node name="行_1" type="Control" parent="属性底板/属性"]
+offset_top = 15.0
+offset_right = 147.0
+offset_bottom = 30.0
+[node name="名" type="Label" parent="属性底板/属性/行_1"]
+offset_right = 90.0
+offset_bottom = 15.0
+theme_override_colors/font_color = Color(1, 0.388, 0.02, 1)
+text = "增加主人查克拉"
+[node name="值" type="Label" parent="属性底板/属性/行_1"]
+offset_left = 90.0
+offset_right = 126.0
+offset_bottom = 15.0
+theme_override_colors/font_color = Color(1, 0.639, 0.02, 1)
+text = "0"
+horizontal_alignment = 1
+[node name="绿" type="Label" parent="属性底板/属性/行_1"]
+offset_left = 130.0
+offset_right = 170.0
+offset_bottom = 15.0
+theme_override_colors/font_color = Color(0, 0.494, 0.024, 1)
+text = "+0"
+
+[node name="行_2" type="Control" parent="属性底板/属性"]
+offset_top = 30.0
+offset_right = 147.0
+offset_bottom = 45.0
+[node name="名" type="Label" parent="属性底板/属性/行_2"]
+offset_right = 90.0
+offset_bottom = 15.0
+theme_override_colors/font_color = Color(1, 0.388, 0.02, 1)
+text = "增加主人攻击"
+[node name="值" type="Label" parent="属性底板/属性/行_2"]
+offset_left = 90.0
+offset_right = 126.0
+offset_bottom = 15.0
+theme_override_colors/font_color = Color(1, 0.639, 0.02, 1)
+text = "0"
+horizontal_alignment = 1
+[node name="绿" type="Label" parent="属性底板/属性/行_2"]
+offset_left = 130.0
+offset_right = 170.0
+offset_bottom = 15.0
+theme_override_colors/font_color = Color(0, 0.494, 0.024, 1)
+text = "+0"
+
+[node name="行_3" type="Control" parent="属性底板/属性"]
+offset_top = 45.0
+offset_right = 147.0
+offset_bottom = 60.0
+[node name="名" type="Label" parent="属性底板/属性/行_3"]
+offset_right = 90.0
+offset_bottom = 15.0
+theme_override_colors/font_color = Color(1, 0.388, 0.02, 1)
+text = "增加主人防御"
+[node name="值" type="Label" parent="属性底板/属性/行_3"]
+offset_left = 90.0
+offset_right = 126.0
+offset_bottom = 15.0
+theme_override_colors/font_color = Color(1, 0.639, 0.02, 1)
+text = "0"
+horizontal_alignment = 1
+[node name="绿" type="Label" parent="属性底板/属性/行_3"]
+offset_left = 130.0
+offset_right = 170.0
+offset_bottom = 15.0
+theme_override_colors/font_color = Color(0, 0.494, 0.024, 1)
+text = "+0"
+
+[node name="行_4" type="Control" parent="属性底板/属性"]
+offset_top = 60.0
+offset_right = 147.0
+offset_bottom = 75.0
+[node name="名" type="Label" parent="属性底板/属性/行_4"]
+offset_right = 90.0
+offset_bottom = 15.0
+theme_override_colors/font_color = Color(1, 0.388, 0.02, 1)
+text = "增加主人暴击"
+[node name="值" type="Label" parent="属性底板/属性/行_4"]
+offset_left = 90.0
+offset_right = 126.0
+offset_bottom = 15.0
+theme_override_colors/font_color = Color(1, 0.639, 0.02, 1)
+text = "0"
+horizontal_alignment = 1
+[node name="绿" type="Label" parent="属性底板/属性/行_4"]
+offset_left = 130.0
+offset_right = 170.0
+offset_bottom = 15.0
+theme_override_colors/font_color = Color(0, 0.494, 0.024, 1)
+text = "+0"
+
+[node name="行_5" type="Control" parent="属性底板/属性"]
+offset_top = 75.0
+offset_right = 147.0
+offset_bottom = 90.0
+[node name="名" type="Label" parent="属性底板/属性/行_5"]
+offset_right = 90.0
+offset_bottom = 15.0
+theme_override_colors/font_color = Color(1, 0.388, 0.02, 1)
+text = "增加主人闪避"
+[node name="值" type="Label" parent="属性底板/属性/行_5"]
+offset_left = 90.0
+offset_right = 126.0
+offset_bottom = 15.0
+theme_override_colors/font_color = Color(1, 0.639, 0.02, 1)
+text = "0"
+horizontal_alignment = 1
+[node name="绿" type="Label" parent="属性底板/属性/行_5"]
+offset_left = 130.0
+offset_right = 170.0
+offset_bottom = 15.0
+theme_override_colors/font_color = Color(0, 0.494, 0.024, 1)
+text = "+0"
+
+[node name="行_6" type="Control" parent="属性底板/属性"]
+offset_top = 90.0
+offset_right = 147.0
+offset_bottom = 105.0
+[node name="名" type="Label" parent="属性底板/属性/行_6"]
+offset_right = 90.0
+offset_bottom = 15.0
+theme_override_colors/font_color = Color(1, 0.388, 0.02, 1)
+text = "增加主人攻速"
+[node name="值" type="Label" parent="属性底板/属性/行_6"]
+offset_left = 90.0
+offset_right = 126.0
+offset_bottom = 15.0
+theme_override_colors/font_color = Color(1, 0.639, 0.02, 1)
+text = "0"
+horizontal_alignment = 1
+[node name="绿" type="Label" parent="属性底板/属性/行_6"]
+offset_left = 130.0
+offset_right = 170.0
+offset_bottom = 15.0
+theme_override_colors/font_color = Color(0, 0.494, 0.024, 1)
+text = "+0"
+
+[node name="行_7" type="Control" parent="属性底板/属性"]
+offset_top = 105.0
+offset_right = 147.0
+offset_bottom = 120.0
+[node name="名" type="Label" parent="属性底板/属性/行_7"]
+offset_right = 90.0
+offset_bottom = 15.0
+theme_override_colors/font_color = Color(1, 0.388, 0.02, 1)
+text = "增加主人移速"
+[node name="值" type="Label" parent="属性底板/属性/行_7"]
+offset_left = 90.0
+offset_right = 126.0
+offset_bottom = 15.0
+theme_override_colors/font_color = Color(1, 0.639, 0.02, 1)
+text = "0"
+horizontal_alignment = 1
+[node name="绿" type="Label" parent="属性底板/属性/行_7"]
+offset_left = 130.0
+offset_right = 170.0
+offset_bottom = 15.0
+theme_override_colors/font_color = Color(0, 0.494, 0.024, 1)
+text = "+0"
+
+[node name="装备面板" type="TextureRect" parent="."]
+offset_top = 2.0
+offset_left = 187.0
+offset_right = 423.0
+offset_bottom = 110.0
+mouse_filter = 2
+texture = ExtResource("3_panel")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="装备槽_1" type="Button" parent="."]
+script = ExtResource("7_petcell")
+offset_left = 195.0
+offset_top = 12.0
+offset_right = 235.0
+offset_bottom = 52.0
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_flat")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_flat")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_flat")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_flat")
+[node name="格" type="TextureRect" parent="装备槽_1"]
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+texture = ExtResource("4_cell")
+[node name="图标" type="TextureRect" parent="装备槽_1"]
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 37.0
+offset_bottom = 37.0
+mouse_filter = 2
+stretch_mode = 6
+[node name="槽名" type="Label" parent="装备槽_1"]
+offset_top = 3.0
+offset_right = 37.0
+offset_bottom = 37.0
+mouse_filter = 2
+text = "兽铠"
+horizontal_alignment = 1
+
+[node name="装备槽_4" type="Button" parent="."]
+script = ExtResource("7_petcell")
+offset_left = 195.0
+offset_top = 56.0
+offset_right = 235.0
+offset_bottom = 96.0
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_flat")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_flat")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_flat")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_flat")
+[node name="格" type="TextureRect" parent="装备槽_4"]
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+texture = ExtResource("4_cell")
+[node name="图标" type="TextureRect" parent="装备槽_4"]
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 37.0
+offset_bottom = 37.0
+mouse_filter = 2
+stretch_mode = 6
+[node name="槽名" type="Label" parent="装备槽_4"]
+offset_top = 3.0
+offset_right = 37.0
+offset_bottom = 37.0
+mouse_filter = 2
+text = "兽盔"
+horizontal_alignment = 1
+
+[node name="装备槽_5" type="Button" parent="."]
+script = ExtResource("7_petcell")
+offset_left = 240.0
+offset_top = 56.0
+offset_right = 280.0
+offset_bottom = 96.0
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_flat")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_flat")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_flat")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_flat")
+[node name="格" type="TextureRect" parent="装备槽_5"]
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+texture = ExtResource("4_cell")
+[node name="图标" type="TextureRect" parent="装备槽_5"]
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 37.0
+offset_bottom = 37.0
+mouse_filter = 2
+stretch_mode = 6
+[node name="槽名" type="Label" parent="装备槽_5"]
+offset_top = 3.0
+offset_right = 37.0
+offset_bottom = 37.0
+mouse_filter = 2
+text = "变身"
+horizontal_alignment = 1
+
+[node name="装备槽_3" type="Button" parent="."]
+script = ExtResource("7_petcell")
+offset_left = 375.0
+offset_top = 12.0
+offset_right = 415.0
+offset_bottom = 52.0
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_flat")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_flat")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_flat")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_flat")
+[node name="格" type="TextureRect" parent="装备槽_3"]
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+texture = ExtResource("4_cell")
+[node name="图标" type="TextureRect" parent="装备槽_3"]
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 37.0
+offset_bottom = 37.0
+mouse_filter = 2
+stretch_mode = 6
+[node name="槽名" type="Label" parent="装备槽_3"]
+offset_top = 3.0
+offset_right = 37.0
+offset_bottom = 37.0
+mouse_filter = 2
+text = "兽符"
+horizontal_alignment = 1
+
+[node name="装备槽_2" type="Button" parent="."]
+script = ExtResource("7_petcell")
+offset_left = 375.0
+offset_top = 56.0
+offset_right = 415.0
+offset_bottom = 96.0
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_flat")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_flat")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_flat")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_flat")
+[node name="格" type="TextureRect" parent="装备槽_2"]
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+texture = ExtResource("4_cell")
+[node name="图标" type="TextureRect" parent="装备槽_2"]
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 37.0
+offset_bottom = 37.0
+mouse_filter = 2
+stretch_mode = 6
+[node name="槽名" type="Label" parent="装备槽_2"]
+offset_top = 3.0
+offset_right = 37.0
+offset_bottom = 37.0
+mouse_filter = 2
+text = "兽爪"
+horizontal_alignment = 1
+
+[node name="模型观赏" type="Control" parent="."]
+offset_left = 297.0
+offset_top = 82.0
+
+[node name="梦幻条" type="Control" parent="."]
+offset_left = 242.0
+offset_top = 95.0
+offset_right = 356.0
+offset_bottom = 106.0
+mouse_filter = 2
+[node name="底" type="TextureRect" parent="梦幻条"]
+offset_right = 114.0
+offset_bottom = 11.0
+mouse_filter = 2
+texture = ExtResource("5_bar")
+expand_mode = 1
+stretch_mode = 0
+[node name="裁剪" type="Control" parent="梦幻条"]
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 111.0
+offset_bottom = 8.0
+mouse_filter = 2
+clip_contents = true
+[node name="填充" type="TextureRect" parent="梦幻条/裁剪"]
+offset_left = -117.0
+offset_top = -3.0
+offset_right = -3.0
+offset_bottom = 8.0
+mouse_filter = 2
+texture = ExtResource("6_fill")
+expand_mode = 1
+stretch_mode = 0
+[node name="值" type="Label" parent="梦幻条"]
+offset_left = 2.0
+offset_right = 116.0
+offset_bottom = 18.0
+mouse_filter = 2
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "0/100"
+horizontal_alignment = 1
+[node name="名称标题" type="Label" parent="."]
+offset_left = 192.0
+offset_top = 112.0
+offset_right = 222.0
+offset_bottom = 128.0
+theme_override_colors/font_color = Color(0.78, 0.6, 0.47, 1)
+text = "名称"
+horizontal_alignment = 1
+
+[node name="名称" type="Label" parent="."]
+offset_left = 227.0
+offset_top = 110.0
+offset_right = 310.0
+offset_bottom = 128.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+clip_text = true
+
+[node name="改名" type="LinkButton" parent="."]
+offset_left = 312.0
+offset_top = 112.0
+offset_right = 347.0
+offset_bottom = 128.0
+focus_mode = 0
+text = "改名"
+
+[node name="等级标题" type="Label" parent="."]
+offset_left = 347.0
+offset_top = 112.0
+offset_right = 377.0
+offset_bottom = 128.0
+theme_override_colors/font_color = Color(0.78, 0.6, 0.47, 1)
+text = "等级"
+horizontal_alignment = 1
+
+[node name="等级" type="Label" parent="."]
+offset_left = 382.0
+offset_top = 112.0
+offset_right = 426.0
+offset_bottom = 128.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+
+[node name="品级标题" type="LinkButton" parent="."]
+offset_left = 192.0
+offset_top = 128.0
+offset_right = 222.0
+offset_bottom = 144.0
+focus_mode = 0
+theme_override_colors/font_color = Color(0.78, 0.6, 0.47, 1)
+text = "品级"
+
+[node name="品级" type="Label" parent="."]
+offset_left = 227.0
+offset_top = 128.0
+offset_right = 264.0
+offset_bottom = 144.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+
+[node name="悟性标题" type="LinkButton" parent="."]
+offset_left = 272.0
+offset_top = 128.0
+offset_right = 302.0
+offset_bottom = 144.0
+focus_mode = 0
+theme_override_colors/font_color = Color(0.78, 0.6, 0.47, 1)
+text = "悟性"
+
+[node name="悟性" type="Label" parent="."]
+offset_left = 307.0
+offset_top = 128.0
+offset_right = 342.0
+offset_bottom = 144.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+
+[node name="价值标题" type="Label" parent="."]
+offset_left = 347.0
+offset_top = 128.0
+offset_right = 377.0
+offset_bottom = 144.0
+theme_override_colors/font_color = Color(0.78, 0.6, 0.47, 1)
+text = "价值"
+horizontal_alignment = 1
+
+[node name="价值" type="Label" parent="."]
+offset_left = 382.0
+offset_top = 128.0
+offset_right = 426.0
+offset_bottom = 144.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+
+[node name="附身" type="Button" parent="."]
+offset_left = 192.0
+offset_top = 152.0
+offset_right = 229.0
+offset_bottom = 174.0
+focus_mode = 0
+text = "附身"
+
+[node name="驯养" type="Button" parent="."]
+offset_left = 249.0
+offset_top = 152.0
+offset_right = 286.0
+offset_bottom = 174.0
+focus_mode = 0
+text = "驯养"
+
+[node name="出战" type="Button" parent="."]
+offset_left = 306.0
+offset_top = 152.0
+offset_right = 343.0
+offset_bottom = 174.0
+focus_mode = 0
+text = "出战"
+
+[node name="放生" type="Button" parent="."]
+offset_left = 363.0
+offset_top = 152.0
+offset_right = 400.0
+offset_bottom = 174.0
+focus_mode = 0
+text = "放生"
+
+[node name="经验标题" type="Label" parent="."]
+offset_left = 190.0
+offset_top = 186.0
+offset_right = 240.0
+offset_bottom = 202.0
+theme_override_colors/font_color = Color(0.78, 0.6, 0.47, 1)
+text = "经  验"
+horizontal_alignment = 1
+
+[node name="经验条" type="Control" parent="."]
+offset_left = 247.0
+offset_top = 189.0
+offset_right = 415.0
+offset_bottom = 200.0
+mouse_filter = 2
+[node name="底" type="TextureRect" parent="经验条"]
+offset_right = 168.0
+offset_bottom = 11.0
+mouse_filter = 2
+texture = ExtResource("5_bar")
+expand_mode = 1
+stretch_mode = 0
+[node name="裁剪" type="Control" parent="经验条"]
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 165.0
+offset_bottom = 8.0
+mouse_filter = 2
+clip_contents = true
+[node name="填充" type="TextureRect" parent="经验条/裁剪"]
+offset_left = -171.0
+offset_top = -3.0
+offset_right = -3.0
+offset_bottom = 8.0
+mouse_filter = 2
+texture = ExtResource("6_fill")
+expand_mode = 1
+stretch_mode = 0
+[node name="值" type="Label" parent="经验条"]
+offset_left = 2.0
+offset_right = 170.0
+offset_bottom = 18.0
+mouse_filter = 2
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "0/0"
+horizontal_alignment = 1
+[node name="分隔线一" type="TextureRect" parent="."]
+offset_left = 187.0
+offset_top = 177.0
+offset_right = 423.0
+offset_bottom = 179.0
+mouse_filter = 2
+texture = ExtResource("2_line")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="分隔线二" type="TextureRect" parent="."]
+offset_left = 187.0
+offset_top = 217.0
+offset_right = 423.0
+offset_bottom = 219.0
+mouse_filter = 2
+texture = ExtResource("2_line")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="总值标题" type="Label" parent="."]
+offset_left = 188.0
+offset_top = 219.0
+offset_right = 278.0
+offset_bottom = 233.0
+theme_override_font_sizes/font_size = 12
+text = "成长潜力总值："
+
+[node name="总值" type="Label" parent="."]
+offset_left = 278.0
+offset_top = 217.0
+offset_right = 362.0
+offset_bottom = 235.0
+theme_override_colors/font_color = Color(0.890196, 0.843137, 0.505882, 1)
+text = "0"
+
+[node name="攻击潜力标题" type="LinkButton" parent="."]
+offset_left = 190.0
+offset_top = 234.0
+offset_right = 248.0
+offset_bottom = 250.0
+focus_mode = 0
+theme_override_colors/font_color = Color(0.004, 0.643, 0.031, 1)
+text = "攻击潜力"
+
+[node name="攻击潜力条" type="Control" parent="."]
+offset_left = 247.0
+offset_top = 237.0
+offset_right = 415.0
+offset_bottom = 248.0
+mouse_filter = 2
+[node name="底" type="TextureRect" parent="攻击潜力条"]
+offset_right = 168.0
+offset_bottom = 11.0
+mouse_filter = 2
+texture = ExtResource("5_bar")
+expand_mode = 1
+stretch_mode = 0
+[node name="裁剪" type="Control" parent="攻击潜力条"]
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 165.0
+offset_bottom = 8.0
+mouse_filter = 2
+clip_contents = true
+[node name="填充" type="TextureRect" parent="攻击潜力条/裁剪"]
+offset_left = -171.0
+offset_top = -3.0
+offset_right = -3.0
+offset_bottom = 8.0
+mouse_filter = 2
+texture = ExtResource("6_fill")
+expand_mode = 1
+stretch_mode = 0
+[node name="值" type="Label" parent="攻击潜力条"]
+offset_left = 2.0
+offset_right = 170.0
+offset_bottom = 18.0
+mouse_filter = 2
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "0/0"
+horizontal_alignment = 1
+[node name="防御潜力标题" type="LinkButton" parent="."]
+offset_left = 190.0
+offset_top = 252.0
+offset_right = 248.0
+offset_bottom = 268.0
+focus_mode = 0
+theme_override_colors/font_color = Color(0.004, 0.643, 0.031, 1)
+text = "防御潜力"
+
+[node name="防御潜力条" type="Control" parent="."]
+offset_left = 247.0
+offset_top = 257.0
+offset_right = 415.0
+offset_bottom = 268.0
+mouse_filter = 2
+[node name="底" type="TextureRect" parent="防御潜力条"]
+offset_right = 168.0
+offset_bottom = 11.0
+mouse_filter = 2
+texture = ExtResource("5_bar")
+expand_mode = 1
+stretch_mode = 0
+[node name="裁剪" type="Control" parent="防御潜力条"]
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 165.0
+offset_bottom = 8.0
+mouse_filter = 2
+clip_contents = true
+[node name="填充" type="TextureRect" parent="防御潜力条/裁剪"]
+offset_left = -171.0
+offset_top = -3.0
+offset_right = -3.0
+offset_bottom = 8.0
+mouse_filter = 2
+texture = ExtResource("6_fill")
+expand_mode = 1
+stretch_mode = 0
+[node name="值" type="Label" parent="防御潜力条"]
+offset_left = 2.0
+offset_right = 170.0
+offset_bottom = 18.0
+mouse_filter = 2
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "0/0"
+horizontal_alignment = 1
+[node name="灵巧潜力标题" type="LinkButton" parent="."]
+offset_left = 190.0
+offset_top = 270.0
+offset_right = 248.0
+offset_bottom = 286.0
+focus_mode = 0
+theme_override_colors/font_color = Color(0.004, 0.643, 0.031, 1)
+text = "灵巧潜力"
+
+[node name="灵巧潜力条" type="Control" parent="."]
+offset_left = 247.0
+offset_top = 277.0
+offset_right = 415.0
+offset_bottom = 288.0
+mouse_filter = 2
+[node name="底" type="TextureRect" parent="灵巧潜力条"]
+offset_right = 168.0
+offset_bottom = 11.0
+mouse_filter = 2
+texture = ExtResource("5_bar")
+expand_mode = 1
+stretch_mode = 0
+[node name="裁剪" type="Control" parent="灵巧潜力条"]
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 165.0
+offset_bottom = 8.0
+mouse_filter = 2
+clip_contents = true
+[node name="填充" type="TextureRect" parent="灵巧潜力条/裁剪"]
+offset_left = -171.0
+offset_top = -3.0
+offset_right = -3.0
+offset_bottom = 8.0
+mouse_filter = 2
+texture = ExtResource("6_fill")
+expand_mode = 1
+stretch_mode = 0
+[node name="值" type="Label" parent="灵巧潜力条"]
+offset_left = 2.0
+offset_right = 170.0
+offset_bottom = 18.0
+mouse_filter = 2
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "0/0"
+horizontal_alignment = 1
+[node name="健体潜力标题" type="LinkButton" parent="."]
+offset_left = 190.0
+offset_top = 288.0
+offset_right = 248.0
+offset_bottom = 304.0
+focus_mode = 0
+theme_override_colors/font_color = Color(0.004, 0.643, 0.031, 1)
+text = "健体潜力"
+
+[node name="健体潜力条" type="Control" parent="."]
+offset_left = 247.0
+offset_top = 297.0
+offset_right = 415.0
+offset_bottom = 308.0
+mouse_filter = 2
+[node name="底" type="TextureRect" parent="健体潜力条"]
+offset_right = 168.0
+offset_bottom = 11.0
+mouse_filter = 2
+texture = ExtResource("5_bar")
+expand_mode = 1
+stretch_mode = 0
+[node name="裁剪" type="Control" parent="健体潜力条"]
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 165.0
+offset_bottom = 8.0
+mouse_filter = 2
+clip_contents = true
+[node name="填充" type="TextureRect" parent="健体潜力条/裁剪"]
+offset_left = -171.0
+offset_top = -3.0
+offset_right = -3.0
+offset_bottom = 8.0
+mouse_filter = 2
+texture = ExtResource("6_fill")
+expand_mode = 1
+stretch_mode = 0
+[node name="值" type="Label" parent="健体潜力条"]
+offset_left = 2.0
+offset_right = 170.0
+offset_bottom = 18.0
+mouse_filter = 2
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "0/0"
+horizontal_alignment = 1
+[node name="分隔线三" type="TextureRect" parent="."]
+offset_left = 187.0
+offset_top = 309.0
+offset_right = 423.0
+offset_bottom = 311.0
+mouse_filter = 2
+texture = ExtResource("2_line")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="技能栏" type="Control" parent="."]
+offset_left = 5.0
+offset_top = 318.0
+offset_right = 389.0
+offset_bottom = 358.0
+
+[node name="技能格_0" type="Button" parent="技能栏"]
+offset_right = 40.0
+offset_bottom = 40.0
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_flat")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_flat")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_flat")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_flat")
+[node name="格" type="TextureRect" parent="技能栏/技能格_0"]
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+texture = ExtResource("4_cell")
+[node name="图标" type="TextureRect" parent="技能栏/技能格_0"]
+offset_left = 6.0
+offset_top = 6.0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+stretch_mode = 6
+
+[node name="技能格_1" type="Button" parent="技能栏"]
+offset_left = 48.0
+offset_right = 88.0
+offset_bottom = 40.0
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_flat")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_flat")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_flat")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_flat")
+[node name="格" type="TextureRect" parent="技能栏/技能格_1"]
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+texture = ExtResource("4_cell")
+[node name="图标" type="TextureRect" parent="技能栏/技能格_1"]
+offset_left = 6.0
+offset_top = 6.0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+stretch_mode = 6
+
+[node name="技能格_2" type="Button" parent="技能栏"]
+offset_left = 96.0
+offset_right = 136.0
+offset_bottom = 40.0
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_flat")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_flat")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_flat")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_flat")
+[node name="格" type="TextureRect" parent="技能栏/技能格_2"]
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+texture = ExtResource("4_cell")
+[node name="图标" type="TextureRect" parent="技能栏/技能格_2"]
+offset_left = 6.0
+offset_top = 6.0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+stretch_mode = 6
+
+[node name="技能格_3" type="Button" parent="技能栏"]
+offset_left = 144.0
+offset_right = 184.0
+offset_bottom = 40.0
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_flat")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_flat")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_flat")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_flat")
+[node name="格" type="TextureRect" parent="技能栏/技能格_3"]
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+texture = ExtResource("4_cell")
+[node name="图标" type="TextureRect" parent="技能栏/技能格_3"]
+offset_left = 6.0
+offset_top = 6.0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+stretch_mode = 6
+
+[node name="技能格_4" type="Button" parent="技能栏"]
+offset_left = 192.0
+offset_right = 232.0
+offset_bottom = 40.0
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_flat")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_flat")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_flat")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_flat")
+[node name="格" type="TextureRect" parent="技能栏/技能格_4"]
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+texture = ExtResource("4_cell")
+[node name="图标" type="TextureRect" parent="技能栏/技能格_4"]
+offset_left = 6.0
+offset_top = 6.0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+stretch_mode = 6
+
+[node name="技能格_5" type="Button" parent="技能栏"]
+offset_left = 240.0
+offset_right = 280.0
+offset_bottom = 40.0
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_flat")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_flat")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_flat")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_flat")
+[node name="格" type="TextureRect" parent="技能栏/技能格_5"]
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+texture = ExtResource("4_cell")
+[node name="图标" type="TextureRect" parent="技能栏/技能格_5"]
+offset_left = 6.0
+offset_top = 6.0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+stretch_mode = 6
+
+[node name="技能格_6" type="Button" parent="技能栏"]
+offset_left = 288.0
+offset_right = 328.0
+offset_bottom = 40.0
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_flat")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_flat")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_flat")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_flat")
+[node name="格" type="TextureRect" parent="技能栏/技能格_6"]
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+texture = ExtResource("4_cell")
+[node name="图标" type="TextureRect" parent="技能栏/技能格_6"]
+offset_left = 6.0
+offset_top = 6.0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+stretch_mode = 6
+
+[node name="技能格_7" type="Button" parent="技能栏"]
+offset_left = 336.0
+offset_right = 376.0
+offset_bottom = 40.0
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_flat")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_flat")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_flat")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_flat")
+[node name="格" type="TextureRect" parent="技能栏/技能格_7"]
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+texture = ExtResource("4_cell")
+[node name="图标" type="TextureRect" parent="技能栏/技能格_7"]
+offset_left = 6.0
+offset_top = 6.0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+stretch_mode = 6
+
+[node name="扩容窗口" parent="." instance=ExtResource("8_enlarge")]
+
+; 装备格的悬停提示框（原版 `SimpleItemCell.setItemData` 结尾 `MToolTipItem.createToolTip`，
+; `SimpleItemCell.as:220`）。必须挂在**页面根**、且排在最后：前面的 `装备面板` 等节点会
+; 盖住它，挂进 `装备面板` 里又会被它的尺寸裁掉。默认隐藏，与 `人物窗口.tscn` 同写法。
+[node name="装备提示框" parent="." instance=ExtResource("9_tip")]
+visible = false

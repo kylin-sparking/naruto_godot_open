@@ -1,0 +1,450 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/内容面板.png" id="t1"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/子面板.png" id="t2"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/物品格.png" id="t3"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/好友/钮底61.png" id="t4"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/好友/钮底37.png" id="t5"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/好友/钮底70.png" id="t6"]
+
+[node name="原版求婚内容" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 388.0
+offset_bottom = 446.0
+
+[node name="内容底" type="NinePatchRect" parent="."]
+mouse_filter = 2
+texture = ExtResource("t1")
+patch_margin_left = 11
+patch_margin_right = 10
+patch_margin_top = 10
+patch_margin_bottom = 11
+layout_mode = 0
+offset_left = 6.0
+offset_top = 11.0
+offset_right = 382.0
+offset_bottom = 413.0
+
+[node name="子底" type="NinePatchRect" parent="."]
+mouse_filter = 2
+texture = ExtResource("t2")
+patch_margin_left = 8
+patch_margin_right = 7
+patch_margin_top = 7
+patch_margin_bottom = 7
+layout_mode = 0
+offset_left = 11.0
+offset_top = 82.0
+offset_right = 377.0
+offset_bottom = 402.0
+
+[node name="头像格" type="NinePatchRect" parent="."]
+mouse_filter = 2
+texture = ExtResource("t3")
+patch_margin_left = 9
+patch_margin_right = 6
+patch_margin_top = 9
+patch_margin_bottom = 6
+layout_mode = 0
+offset_left = 30.0
+offset_top = 26.0
+offset_right = 84.0
+offset_bottom = 80.0
+
+[node name="头像" type="TextureRect" parent="头像格"]
+expand_mode = 1
+stretch_mode = 4
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 51.0
+offset_bottom = 51.0
+
+[node name="名字" type="Label" parent="."]
+layout_mode = 0
+offset_left = 94.0
+offset_top = 16.0
+offset_right = 194.0
+offset_bottom = 36.0
+theme_override_colors/font_color = Color(0.117647, 0.564706, 1, 1)
+theme_override_font_sizes/font_size = 12
+text_overrun_behavior = 3
+
+[node name="等级" type="Label" parent="."]
+layout_mode = 0
+offset_left = 194.0
+offset_top = 16.0
+offset_right = 294.0
+offset_bottom = 36.0
+theme_override_colors/font_color = Color(0.117647, 0.564706, 1, 1)
+theme_override_font_sizes/font_size = 12
+text_overrun_behavior = 3
+
+[node name="职业" type="Label" parent="."]
+layout_mode = 0
+offset_left = 94.0
+offset_top = 39.0
+offset_right = 194.0
+offset_bottom = 59.0
+theme_override_colors/font_color = Color(0.117647, 0.564706, 1, 1)
+theme_override_font_sizes/font_size = 12
+text_overrun_behavior = 3
+
+[node name="家族" type="Label" parent="."]
+layout_mode = 0
+offset_left = 194.0
+offset_top = 39.0
+offset_right = 294.0
+offset_bottom = 59.0
+theme_override_colors/font_color = Color(0.117647, 0.564706, 1, 1)
+theme_override_font_sizes/font_size = 12
+text_overrun_behavior = 3
+
+[node name="心意提示" type="Label" parent="."]
+layout_mode = 0
+offset_left = 94.0
+offset_top = 62.0
+offset_right = 394.0
+offset_bottom = 82.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
+text_overrun_behavior = 3
+
+[node name="说明白字" type="Label" parent="."]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 84.0
+offset_right = 395.0
+offset_bottom = 104.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+text_overrun_behavior = 3
+
+[node name="对戒格" type="NinePatchRect" parent="."]
+mouse_filter = 2
+texture = ExtResource("t3")
+patch_margin_left = 9
+patch_margin_right = 6
+patch_margin_top = 9
+patch_margin_bottom = 6
+layout_mode = 0
+offset_left = 21.0
+offset_top = 136.0
+offset_right = 61.0
+offset_bottom = 176.0
+
+[node name="对戒图" type="TextureRect" parent="对戒格"]
+expand_mode = 1
+stretch_mode = 3
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="能力1" type="NinePatchRect" parent="."]
+mouse_filter = 2
+texture = ExtResource("t3")
+patch_margin_left = 9
+patch_margin_right = 6
+patch_margin_top = 9
+patch_margin_bottom = 6
+layout_mode = 0
+offset_left = 93.0
+offset_top = 136.0
+offset_right = 133.0
+offset_bottom = 176.0
+
+[node name="图" type="TextureRect" parent="能力1"]
+expand_mode = 1
+stretch_mode = 3
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="层字" type="Label" parent="能力1"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 24.0
+offset_right = 38.0
+offset_bottom = 38.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+
+[node name="能力2" type="NinePatchRect" parent="."]
+mouse_filter = 2
+texture = ExtResource("t3")
+patch_margin_left = 9
+patch_margin_right = 6
+patch_margin_top = 9
+patch_margin_bottom = 6
+layout_mode = 0
+offset_left = 140.0
+offset_top = 136.0
+offset_right = 180.0
+offset_bottom = 176.0
+
+[node name="图" type="TextureRect" parent="能力2"]
+expand_mode = 1
+stretch_mode = 3
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="层字" type="Label" parent="能力2"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 24.0
+offset_right = 38.0
+offset_bottom = 38.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+
+[node name="效果1" type="NinePatchRect" parent="."]
+mouse_filter = 2
+texture = ExtResource("t3")
+patch_margin_left = 9
+patch_margin_right = 6
+patch_margin_top = 9
+patch_margin_bottom = 6
+layout_mode = 0
+offset_left = 198.0
+offset_top = 136.0
+offset_right = 238.0
+offset_bottom = 176.0
+
+[node name="图" type="TextureRect" parent="效果1"]
+expand_mode = 1
+stretch_mode = 3
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="效果2" type="NinePatchRect" parent="."]
+mouse_filter = 2
+texture = ExtResource("t3")
+patch_margin_left = 9
+patch_margin_right = 6
+patch_margin_top = 9
+patch_margin_bottom = 6
+layout_mode = 0
+offset_left = 245.0
+offset_top = 136.0
+offset_right = 285.0
+offset_bottom = 176.0
+
+[node name="图" type="TextureRect" parent="效果2"]
+expand_mode = 1
+stretch_mode = 3
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="放入钮" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 292.0
+offset_top = 131.0
+offset_right = 362.0
+offset_bottom = 153.0
+focus_mode = 0
+ignore_texture_size = true
+stretch_mode = 1
+texture_normal = ExtResource("t6")
+metadata/skin = "res://素材/界面/原版窗口/好友/钮底70"
+mouse_default_cursor_shape = 2
+
+[node name="文字" type="Label" parent="放入钮"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+vertical_alignment = 1
+text = "放入羁绊戒"
+
+[node name="购买钮" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 292.0
+offset_top = 158.0
+offset_right = 362.0
+offset_bottom = 180.0
+focus_mode = 0
+ignore_texture_size = true
+stretch_mode = 1
+texture_normal = ExtResource("t6")
+metadata/skin = "res://素材/界面/原版窗口/好友/钮底70"
+mouse_default_cursor_shape = 2
+
+[node name="文字" type="Label" parent="购买钮"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+vertical_alignment = 1
+text = "购买羁绊戒"
+
+[node name="羁绊戒指标" type="Label" parent="."]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 106.0
+offset_right = 71.0
+offset_bottom = 124.0
+theme_override_colors/font_color = Color(1, 0.941176, 0, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+text_overrun_behavior = 3
+text = "羁绊戒指"
+
+[node name="戒指能力标" type="Label" parent="."]
+layout_mode = 0
+offset_left = 106.5
+offset_top = 106.0
+offset_right = 166.5
+offset_bottom = 124.0
+theme_override_colors/font_color = Color(1, 0.941176, 0, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+text_overrun_behavior = 3
+text = "戒指能力"
+
+[node name="佩戴效果标" type="Label" parent="."]
+layout_mode = 0
+offset_left = 211.5
+offset_top = 106.0
+offset_right = 271.5
+offset_bottom = 124.0
+theme_override_colors/font_color = Color(1, 0.941176, 0, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+text_overrun_behavior = 3
+text = "佩戴效果"
+
+[node name="结后句" type="Label" parent="."]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 179.0
+offset_right = 362.0
+offset_bottom = 199.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
+text_overrun_behavior = 3
+text = "建立羁绊后的你们可以："
+
+[node name="说明框" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 199.0
+offset_right = 395.0
+offset_bottom = 396.0
+mouse_filter = 2
+bbcode_enabled = true
+scroll_active = false
+autowrap_mode = 3
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 3
+text = "[color=#00ff00]【同生共死】：建立羁绊后您可以与TA一起练级
+          组队练级将获得额外的经验加成，与双倍经验符叠加
+【魂牵梦萦】：建立羁绊后您可以与TA一起双修
+          共同双修将可以获得查克拉精华修炼速度提升的效果
+[/color][color=#fff000]【不离不弃】：对方可以对您使用本忍术。忍术效果：
+          让您在生命为0时，立即恢复1000以上血量
+          免除一次死亡惩罚，并且获得3秒钟的无敌时间
+【生死与共】：可以让您获得此忍术的使用能力。忍术效果：
+          可以令您将查克拉聚集并一次性迸发，造成巨大伤害
+[/color][color=#1e90ff]【如影随形】：您可以随时随地传送到对方身边
+【惺惺相惜】：您的羁绊使用药品时，您也获得加成
+【羁绊对戒】：属性加成，将让您变得更加强大[/color]"
+
+[node name="查看资料钮" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 54.25
+offset_top = 418.0
+offset_right = 115.25
+offset_bottom = 440.0
+focus_mode = 0
+ignore_texture_size = true
+stretch_mode = 1
+texture_normal = ExtResource("t4")
+metadata/skin = "res://素材/界面/原版窗口/好友/钮底61"
+mouse_default_cursor_shape = 2
+
+[node name="文字" type="Label" parent="查看资料钮"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+vertical_alignment = 1
+text = "查看信息"
+
+[node name="主钮" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 163.5
+offset_top = 418.0
+offset_right = 224.5
+offset_bottom = 440.0
+focus_mode = 0
+ignore_texture_size = true
+stretch_mode = 1
+texture_normal = ExtResource("t4")
+metadata/skin = "res://素材/界面/原版窗口/好友/钮底61"
+mouse_default_cursor_shape = 2
+
+[node name="文字" type="Label" parent="主钮"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+vertical_alignment = 1
+text = "建立羁绊"
+
+[node name="次钮" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 284.75
+offset_top = 418.0
+offset_right = 321.75
+offset_bottom = 440.0
+focus_mode = 0
+ignore_texture_size = true
+stretch_mode = 1
+texture_normal = ExtResource("t5")
+metadata/skin = "res://素材/界面/原版窗口/好友/钮底37"
+mouse_default_cursor_shape = 2
+
+[node name="文字" type="Label" parent="次钮"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+vertical_alignment = 1
+text = "关闭"

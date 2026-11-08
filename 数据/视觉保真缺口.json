@@ -1,0 +1,42 @@
+[
+  {
+	"id": "mob-dogs-4000000-4000015",
+	"category": "怪物动画",
+	"targets": "4000000-4000015",
+	"status": "closed",
+	"substitute": "GameData info.petLink=101-104 对应的宠物动画",
+	"reason": "2026-10-20 核对原版 GameData.dat：这 16 个 Mob 条目**只有 info.petLink**（按 aptitude 1-4 分别指向 101/102/103/104），原版就没给它们自身动画段 —— 借宠物动画是**原版设计**，不是工程缺陷。工程 `数据/怪物动画索引.json` 的 16 条 link 值已逐条与原版核对一致（resolution=petLink），呈现与原版相同。"
+  },
+  {
+	"id": "mob-dogs-4000016-4000017",
+	"category": "怪物动画",
+	"targets": "4000016-4000017",
+	"status": "open",
+	"substitute": "GameData info.petLink=104 对应的宠物动画",
+	"reason": "原版 Mob 条目**有**动画段定义（swfName=Mob_4000016/4000017，含 stand/move/attack1），但这俩 swf 在原版分发目录里就不存在（在 `www/act_web_nya_208_isolated/_analysis_missing_swfname.txt` 的 1748 个缺 swf 名单内，原版客户端自身也播不出）⇒ 工程 petLink-fallback 与原版实际呈现一致。待原版补回这两个 swf 后再复刻（届时只需给这两条改 resolution=link 并导帧）。"
+  },
+  {
+	"id": "offline-pet-first-dog-placeholder",
+	"category": "离线示例界面",
+	"targets": "pets[00000101].icon",
+	"status": "closed",
+	"substitute": "res://素材/宠物/忍犬/一阶忍犬.png",
+	"reason": "2026-10-20 换成原版真身：`swf/Pet/Pet_00000101.swf` 的 `Pet_00000101_info_portrait`（62×62 RGBA，直解产物，ffdec 缺失后用 `开发工具/swf位图直解.py` 解）。占位备份在 `.scratch/占位图备份_20261020/一阶忍犬_占位.png`。另：本条原 targets 里的 `skills[利齿].icon` 已不存在——离线示例宠物的 skills 现在只有 id/name/level/master_level 四个字段，无 icon 引用。"
+  },
+  {
+	"id": "local-item-placeholder-icons",
+	"category": "物品图标",
+	"targets": "（原 5 个占位已删除）",
+	"status": "closed",
+	"substitute": "无——离线示例物品改走物品表真 id 的 icon_class 链路",
+	"reason": "2026-10-20 核实：这 5 张占位图**全工程零引用**（`_item()` 底层 `GAME_DATA.item(id)`，图标走 `物品.json` 的 icon_class → `数据/物品图标索引.json` → `素材/物品/原版/<分类>/`，2650 条索引全部在盘上）。且原版物品表 2699 条里没有同名物品（这些名字是 9-21 工程初建时的本地演示发明）⇒ 无原版真身可补，占位已删除（备份 `.scratch/占位图备份_20261020/物品/`）。离线示例的物品展示本来就是原版图标，不依赖这些占位。"
+  },
+  {
+	"id": "local-skill-placeholder-icons",
+	"category": "技能图标",
+	"targets": "（原 4 个占位已删除）",
+	"status": "closed",
+	"substitute": "无——离线示例技能改走技能素材索引的原版链路",
+	"reason": "2026-10-20 换成原版真身：这 4 个 id（0001001/0001002/0001003/0002000）+ 技能书目录的 1003001、1002001、1001001 共 7 处 icon 全部改指 `数据/技能素材索引.json` 的标准路径（`技能.json` 的 icon_class → `素材/技能/<组>/skill/<Swf名>_1_<类名>.png`，957 条索引全部在盘上，34×34）；同时删掉 4 处 name 覆盖，真名从 `数据/技能.json` 透出（0001001=查克拉强化 / 0001002=仙法·聚气 / 0001003=仙法·查克拉守护 / 0002000=吸血）。占位备份在 `.scratch/占位图备份_20261020/技能/`。⚠️ `数据/技能.json` 与 `数据/技能文案.json` 对 0002000 的名字不一致（吸血/潜影蛇手，原版 String.Skill 为潜影蛇手）——属数据表历史分歧，留待单独核，本轮不改数据表。"
+  }
+]

@@ -1,0 +1,137 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/首领/头像背景.png" id="1_frame"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/首领/水木.png" id="2_portrait"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/首领/星级.png" id="3_star"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/首领/半星.png" id="4_half"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/首领/前往挑战.png" id="5_kill"]
+
+[node name="首领卡片" type="Panel"]
+custom_minimum_size = Vector2(183, 250)
+offset_right = 183.0
+offset_bottom = 250.0
+
+[node name="头像背景" type="NinePatchRect" parent="."]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 179.0
+offset_bottom = 122.0
+texture = ExtResource("1_frame")
+patch_margin_left = 19
+patch_margin_top = 15
+patch_margin_right = 22
+patch_margin_bottom = 15
+mouse_filter = 2
+
+[node name="形象" type="TextureRect" parent="."]
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 178.0
+offset_bottom = 121.0
+texture = ExtResource("2_portrait")
+expand_mode = 1
+stretch_mode = 5
+mouse_filter = 2
+
+[node name="名称" type="Label" parent="."]
+offset_left = 9.0
+offset_top = 125.0
+offset_right = 174.0
+offset_bottom = 143.0
+
+[node name="类型" type="Label" parent="."]
+offset_left = 149.0
+offset_top = 125.0
+offset_right = 179.0
+offset_bottom = 143.0
+horizontal_alignment = 2
+
+[node name="信息背景" type="Panel" parent="."]
+offset_left = 4.0
+offset_top = 146.0
+offset_right = 179.0
+offset_bottom = 245.0
+
+[node name="等级标签" type="Label" parent="."]
+offset_left = 14.0
+offset_top = 151.0
+offset_right = 74.0
+offset_bottom = 169.0
+text = "等　　级："
+[node name="等级" type="Label" parent="."]
+offset_left = 72.0
+offset_top = 151.0
+offset_right = 142.0
+offset_bottom = 169.0
+
+[node name="地图标签" type="Label" parent="."]
+offset_left = 14.0
+offset_top = 172.0
+offset_right = 74.0
+offset_bottom = 190.0
+text = "刷新地图："
+[node name="地图" type="Label" parent="."]
+offset_left = 72.0
+offset_top = 172.0
+offset_right = 142.0
+offset_bottom = 190.0
+
+[node name="时间标签" type="Label" parent="."]
+offset_left = 14.0
+offset_top = 193.0
+offset_right = 74.0
+offset_bottom = 211.0
+text = "刷新时间："
+[node name="时间" type="Label" parent="."]
+offset_left = 72.0
+offset_top = 193.0
+offset_right = 142.0
+offset_bottom = 211.0
+
+[node name="爆率标签" type="Label" parent="."]
+offset_left = 14.0
+offset_top = 214.0
+offset_right = 74.0
+offset_bottom = 232.0
+text = "爆率说明："
+
+[node name="星级" type="HBoxContainer" parent="."]
+offset_left = 72.0
+offset_top = 218.0
+offset_right = 114.0
+offset_bottom = 231.0
+theme_override_constants/separation = 0
+[node name="星1" type="TextureRect" parent="星级"]
+custom_minimum_size = Vector2(14, 13)
+layout_mode = 2
+texture = ExtResource("3_star")
+[node name="星2" type="TextureRect" parent="星级"]
+custom_minimum_size = Vector2(14, 13)
+layout_mode = 2
+texture = ExtResource("3_star")
+[node name="星3" type="TextureRect" parent="星级"]
+custom_minimum_size = Vector2(14, 13)
+layout_mode = 2
+texture = ExtResource("3_star")
+[node name="星4" type="TextureRect" parent="星级"]
+custom_minimum_size = Vector2(14, 13)
+layout_mode = 2
+texture = ExtResource("3_star")
+[node name="星5" type="TextureRect" parent="星级"]
+custom_minimum_size = Vector2(14, 13)
+layout_mode = 2
+texture = ExtResource("3_star")
+[node name="星6" type="TextureRect" parent="星级"]
+custom_minimum_size = Vector2(14, 13)
+layout_mode = 2
+texture = ExtResource("3_star")
+
+[node name="挑战" type="TextureButton" parent="."]
+offset_left = 149.0
+offset_top = 170.0
+offset_right = 171.0
+offset_bottom = 192.0
+texture_normal = ExtResource("5_kill")
+ignore_texture_size = true
+stretch_mode = 0
+tooltip_text = "前往挑战"

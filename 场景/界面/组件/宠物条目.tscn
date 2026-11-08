@@ -1,0 +1,63 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/选中条1.png" id="1_sel"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/宠物/状态_附.png" id="2_fu"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/宠物/状态_战斗.png" id="3_fight"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_flat"]
+
+[node name="宠物条目" type="Button"]
+custom_minimum_size = Vector2(153, 22)
+offset_right = 153.0
+offset_bottom = 22.0
+focus_mode = 0
+button_mask = 3
+theme_override_styles/normal = SubResource("StyleBoxEmpty_flat")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_flat")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_flat")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_flat")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_flat")
+
+[node name="选中条" type="TextureRect" parent="."]
+visible = false
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 154.0
+offset_bottom = 22.0
+mouse_filter = 2
+texture = ExtResource("1_sel")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="状态" type="TextureRect" parent="."]
+visible = false
+offset_left = 8.0
+offset_top = 2.0
+offset_right = 27.0
+offset_bottom = 21.0
+mouse_filter = 2
+texture = ExtResource("2_fu")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="名字" type="Label" parent="."]
+offset_left = 25.0
+offset_top = 2.0
+offset_right = 130.0
+offset_bottom = 22.0
+mouse_filter = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "通灵兽"
+clip_text = true
+
+[node name="等级" type="Label" parent="."]
+offset_left = 130.0
+offset_top = 2.0
+offset_right = 155.0
+offset_bottom = 22.0
+mouse_filter = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "1"
+alignment = 1

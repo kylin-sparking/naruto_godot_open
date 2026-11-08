@@ -1,0 +1,148 @@
+[gd_scene load_steps=9 format=3]
+
+[ext_resource type="Script" path="res://脚本/界面/窗口/家族/家族子窗.gd" id="1_script"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/家族/盒底.png" id="t1"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/家族/端帽左.png" id="t2"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/家族/端帽右.png" id="t3"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/横向分隔线.png" id="t4"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/家族/钮底37.png" id="t5"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/家族/钮底37.png" id="t6"]
+
+
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/家族/钮底61.png" id="t7"]
+
+[node name="家族升级窗" type="Control"]
+custom_minimum_size = Vector2(162, 232)
+script = ExtResource("1_script")
+窗名 = "家族升级窗"
+
+[node name="盒升级消耗" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 19.0
+offset_right = 157.0
+offset_bottom = 197.0
+mouse_filter = 2
+texture = ExtResource("t1")
+patch_margin_left = 8
+patch_margin_top = 7
+patch_margin_right = 7
+patch_margin_bottom = 7
+
+[node name="端帽左" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 5.0
+offset_right = 52.0
+offset_bottom = 27.0
+mouse_filter = 2
+texture = ExtResource("t2")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="端帽右" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 5.0
+offset_right = 137.0
+offset_bottom = 27.0
+mouse_filter = 2
+texture = ExtResource("t3")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="标题升级消耗" type="Label" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 0.0
+offset_right = 157.0
+offset_bottom = 18.0
+mouse_filter = 2
+horizontal_alignment = 1
+text = "升级消耗"
+vertical_alignment = 1
+clip_text = true
+
+[node name="文本升级说明" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 19.0
+offset_right = 157.0
+offset_bottom = 197.0
+mouse_filter = 2
+theme_override_constants/line_separation = 2
+theme_override_font_sizes/normal_font_size = 12
+theme_override_colors/default_color = Color(1.0, 0.592156862745098, 0.25098039215686274, 1)
+bbcode_enabled = true
+text = "[color=#ff9100]金　币：[/color][color=#ffffff]　☆[/color][br][color=#ff9100]春の书：[/color][color=#ffffff]　●[/color][br][color=#ff9100]夏の书：[/color][color=#ffffff]　◇[/color][br][color=#ff9100]秋の书：[/color][color=#ffffff]　◆[/color][br][color=#ff9100]冬の书：[/color][color=#ffffff]　★[/color][br][br][color=#00ff00]家族升级之后家徽也将升级，更高级的家徽将获得更多的属性加成[/color]"
+scroll_active = false
+
+[node name="线" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 111.0
+offset_right = 146.0
+offset_bottom = 113.0
+mouse_filter = 2
+texture = ExtResource("t4")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="钮确定" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 205.0
+offset_right = 93.0
+offset_bottom = 227.0
+texture_normal = ExtResource("t7")
+expand_mode = 1
+stretch_mode = 0
+focus_mode = 0
+ignore_texture_size = true
+metadata/skin = "res://素材/界面/原版窗口/家族/钮底61"
+metadata/act = "确定"
+
+[node name="Label" type="Label" parent="钮确定"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+text = "确定"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="钮取消" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 93.0
+offset_top = 205.0
+offset_right = 154.0
+offset_bottom = 227.0
+texture_normal = ExtResource("t7")
+expand_mode = 1
+stretch_mode = 0
+focus_mode = 0
+ignore_texture_size = true
+metadata/skin = "res://素材/界面/原版窗口/家族/钮底61"
+metadata/act = "取消"
+
+[node name="Label" type="Label" parent="钮取消"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+text = "取消"
+horizontal_alignment = 1
+vertical_alignment = 1

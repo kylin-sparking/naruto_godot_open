@@ -1,0 +1,16 @@
+{
+ "_说明": "商城页签真值。原版 CashShopWindow2.as:171-191 从 GameData 的 String/ShangCheng.yuanbao.tab0..tab19 顺序读，遇到缺号停；末尾若没有「荣誉类」再追加一个（语言表 CASHSHOP_RONGYU）。**数组下标就是发给服务端 432 包的 categoryId**（CashShopWindow2.as:149/570），勿另立一套枚举。「荣誉类」是面板页签：点它显示 RongYuPanel 荣誉积分面板、**不发商品请求**（:129-138）。配套生成器：开发工具/导出商城分页.py。",
+ "_来源": "GameData.dat → String/ShangCheng → yuanbao",
+ "页签": [
+  "常用类",
+  "药品类",
+  "通灵类",
+  "装备类",
+  "宝石类",
+  "羁绊类",
+  "活动类",
+  "福利类",
+  "荣誉类"
+ ],
+ "荣誉页签名": "荣誉类"
+}

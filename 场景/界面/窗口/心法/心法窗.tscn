@@ -1,0 +1,217 @@
+[gd_scene load_steps=14 format=3]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/内容面板.png" id="t1"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/子面板.png" id="t2"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/技能面板/技能格底板.png" id="t3"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/心法/下拉箭头钮_展开.png" id="t4"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/心法/确定钮.png" id="t5"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/心法/确定钮_悬停.png" id="t6"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/心法/确定钮_按下.png" id="t7"]
+
+[sub_resource type="StyleBoxTexture" id="sb1_n"]
+texture = ExtResource("t5")
+
+[sub_resource type="StyleBoxTexture" id="sb1_h"]
+texture = ExtResource("t6")
+
+[sub_resource type="StyleBoxTexture" id="sb1_p"]
+texture = ExtResource("t7")
+
+[sub_resource type="StyleBoxTexture" id="sb2_n"]
+texture = ExtResource("t5")
+
+[sub_resource type="StyleBoxTexture" id="sb2_h"]
+texture = ExtResource("t6")
+
+[sub_resource type="StyleBoxTexture" id="sb2_p"]
+texture = ExtResource("t7")
+
+[node name="原版心法窗内容" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 275
+offset_bottom = 266.0
+
+[node name="内容底" type="NinePatchRect" parent="."]
+texture = ExtResource("t1")
+patch_margin_left = 11
+patch_margin_right = 10
+patch_margin_top = 10
+patch_margin_bottom = 11
+layout_mode = 0
+offset_left = 6.0
+offset_top = 10.0
+offset_right = 269.0
+offset_bottom = 231.0
+
+[node name="子面板" type="NinePatchRect" parent="."]
+texture = ExtResource("t2")
+patch_margin_left = 8
+patch_margin_right = 7
+patch_margin_top = 7
+patch_margin_bottom = 7
+layout_mode = 0
+offset_left = 11.0
+offset_top = 61.0
+offset_right = 264.0
+offset_bottom = 225.0
+
+[node name="说明盒" type="Control" parent="."]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 262.0
+offset_bottom = 60.0
+
+[node name="说明文" type="RichTextLabel" parent="说明盒"]
+text = "[color=#00ff00]打坐时你不但获得经验与查克拉精华收益，\n还可以选择修炼一种心法，增加熟练度[/color]"
+scroll_active = false
+bbcode_enabled = true
+autowrap_mode = 3
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 6
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 242.0
+offset_bottom = 40.0
+
+[node name="选中心法盒" type="Control" parent="."]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 20.0
+offset_top = 80.0
+offset_right = 88.0
+offset_bottom = 116.0
+
+[node name="选中心法文" type="RichTextLabel" parent="选中心法盒"]
+text = "[color=#ffffff]请在本处选\n择一种心法[/color]"
+scroll_active = false
+bbcode_enabled = true
+autowrap_mode = 3
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 6
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 68.0
+offset_bottom = 36.0
+
+[node name="温馨提示盒" type="Control" parent="."]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 20.0
+offset_top = 130.0
+offset_right = 262.0
+offset_bottom = 226.0
+
+[node name="温馨提示文" type="RichTextLabel" parent="温馨提示盒"]
+text = "[color=#ff9100]温馨提示：[/color]\n[color=#ffffff]当[color=#1e90ff][u]忍术或心法熟练度[/u][/color]提高后，那麽在提升忍\n术和心法的层数时所需要的查克拉精华就会\n数量减少；当你的查克拉数量很足时，也可\n以选直接强行提升忍术和心法的层数[/color]"
+scroll_active = false
+bbcode_enabled = true
+autowrap_mode = 3
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 6
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 242.0
+offset_bottom = 96.0
+
+[node name="主格" type="NinePatchRect" parent="."]
+texture = ExtResource("t3")
+patch_margin_left = 0
+patch_margin_right = 0
+patch_margin_top = 0
+patch_margin_bottom = 0
+layout_mode = 0
+offset_left = 92.0
+offset_top = 77.0
+offset_right = 132.0
+offset_bottom = 117.0
+
+[node name="心法名" type="Label" parent="."]
+text = ""
+theme_override_colors/font_color = Color(1.000000, 0.941176, 0.000000, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 154.0
+offset_top = 76.0
+offset_right = 262.0
+offset_bottom = 94.0
+
+[node name="心法层数" type="Label" parent="."]
+text = ""
+theme_override_colors/font_color = Color(1.000000, 0.568627, 0.000000, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 154.0
+offset_top = 98.0
+offset_right = 262.0
+offset_bottom = 116.0
+
+[node name="选择心法钮" type="TextureRect" parent="."]
+texture = ExtResource("t4")
+mouse_filter = 2
+layout_mode = 0
+offset_left = 133.0
+offset_top = 96.0
+offset_right = 154.0
+offset_bottom = 117.0
+
+[node name="心法列表" type="ScrollContainer" parent="."]
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 1
+layout_mode = 0
+offset_left = 92.0
+offset_top = 117.0
+offset_right = 149.0
+offset_bottom = 207.0
+
+[node name="心法列表_内容" type="Control" parent="心法列表"]
+mouse_filter = 2
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 162.0
+custom_minimum_size = Vector2(40.0, 162.0)
+
+[node name="确定钮" type="Button" parent="."]
+theme_override_styles/normal = SubResource("sb1_n")
+theme_override_styles/hover = SubResource("sb1_h")
+theme_override_styles/pressed = SubResource("sb1_p")
+text = "确定"
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+layout_mode = 0
+offset_left = 45.0
+offset_top = 238.0
+offset_right = 106.0
+offset_bottom = 260.0
+
+[node name="取消钮" type="Button" parent="."]
+theme_override_styles/normal = SubResource("sb2_n")
+theme_override_styles/hover = SubResource("sb2_h")
+theme_override_styles/pressed = SubResource("sb2_p")
+text = "取消"
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+layout_mode = 0
+offset_left = 180.0
+offset_top = 238.0
+offset_right = 241.0
+offset_bottom = 260.0

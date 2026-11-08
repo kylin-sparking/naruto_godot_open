@@ -1,0 +1,1675 @@
+[gd_scene format=3 uid="uid://m3ttgajux2me"]
+
+[ext_resource type="Script" uid="uid://d0reu1v88430y" path="res://素材/界面/原版窗口/人物/轮回六道/脚本/轮回六道切换.gd" id="1_0oopf"]
+[ext_resource type="Texture2D" uid="uid://de1ft0wkwl5a2" path="res://素材/界面/原版窗口/通用控件/窗口内底.png" id="1_d70h5"]
+[ext_resource type="Texture2D" uid="uid://m223t2kwp31l" path="res://素材/界面/原版窗口/人物/轮回六道/轮回阶段01.png" id="1_stage1"]
+[ext_resource type="Material" uid="uid://bo3btla6w10ss" path="res://素材/界面/原版窗口/人物/轮回六道/脚本/red_outline_material.tres" id="2_q44hb"]
+[ext_resource type="Texture2D" uid="uid://d2sh4ifxcsv3b" path="res://素材/界面/原版窗口/人物/轮回六道/轮回阶段02.png" id="2_stage2"]
+[ext_resource type="Texture2D" uid="uid://bh12cxsukprvw" path="res://素材/界面/原版窗口/人物/轮回六道/轮回阶段03.png" id="3_stage3"]
+[ext_resource type="Texture2D" uid="uid://c3jbo2lowvj0v" path="res://素材/界面/原版窗口/人物/轮回六道/轮回阶段04.png" id="4_stage4"]
+[ext_resource type="Texture2D" uid="uid://d0uqmo2r1ijgs" path="res://素材/界面/原版窗口/人物/轮回六道/轮回阶段05.png" id="5_stage5"]
+[ext_resource type="Texture2D" uid="uid://b7kqcy2lnlwp" path="res://素材/界面/原版窗口/人物/轮回六道/轮回阶段06.png" id="6_stage6"]
+[ext_resource type="Texture2D" uid="uid://krgloa6k8tb1" path="res://素材/界面/原版窗口/人物/轮回六道/轮回阶段07.png" id="7_stage7"]
+[ext_resource type="Texture2D" uid="uid://bmgo2h76ltj8y" path="res://素材/界面/原版窗口/人物/轮回六道/轮回阶段08.png" id="8_stage8"]
+[ext_resource type="Texture2D" uid="uid://v8ognv0kia5f" path="res://素材/界面/原版窗口/通用控件/输入框.png" id="10_input"]
+[ext_resource type="Texture2D" uid="uid://dl4xga2p6osfl" path="res://素材/界面/原版窗口/人物/轮回六道/切换按钮/左.png" id="11_fr2nx"]
+[ext_resource type="Texture2D" uid="uid://dkil44jd6c66y" path="res://素材/界面/原版窗口/通用控件/横向分隔线.png" id="11_lxu7f"]
+[ext_resource type="Texture2D" uid="uid://kyh0ucqb3kv2" path="res://素材/界面/原版窗口/人物/轮回六道/切换按钮/右.png" id="12_4esrw"]
+[ext_resource type="Texture2D" uid="uid://c07nktjm1kq0k" path="res://素材/界面/原版窗口/忍术/忍术格底.png" id="12_fr2nx"]
+[ext_resource type="Texture2D" uid="uid://kqub6jwx3y78" path="res://素材/界面/原版窗口/人物/轮回六道/轮回技能/轮回·灵魂吞噬.png" id="13_4esrw"]
+[ext_resource type="Texture2D" uid="uid://dh3hhmfvvd8ww" path="res://素材/界面/原版窗口/人物/轮回六道/轮回技能/轮回·阿修罗形态.png" id="14_0oopf"]
+[ext_resource type="Texture2D" uid="uid://m507s4c12u35" path="res://素材/界面/原版窗口/通用控件/子面板.png" id="15_hsvo6"]
+[ext_resource type="Texture2D" uid="uid://ds47pm6y0crhb" path="res://素材/界面/原版窗口/人物/轮回六道/轮回技能/轮回·吞噬.png" id="15_q44hb"]
+[ext_resource type="Texture2D" uid="uid://cph7d2pabe2o0" path="res://素材/界面/原版窗口/人物/轮回六道/轮回技能/轮回·判决.png" id="16_kbgva"]
+[ext_resource type="Texture2D" uid="uid://ccuqfbq1ojlyd" path="res://素材/界面/原版窗口/人物/轮回六道/轮回技能/轮回万象天引.png" id="17_o05tc"]
+[ext_resource type="Theme" uid="uid://ct8tkmscbk125" path="res://素材/界面/原版窗口/人物/柔拳/宋体文字/柔拳字体.tres" id="23_4eap0"]
+[ext_resource type="Script" uid="uid://0r3qydqi2wvt" path="res://素材/界面/原版窗口/人物/轮回六道/脚本/提升轮回阶数弹窗滑动动画.gd" id="24_m6oo8"]
+[ext_resource type="Texture2D" uid="uid://cekem2xi8fg11" path="res://素材/界面/原版窗口/人物/轮回六道/轮回灵符/轮回灵符.png" id="25_10ffx"]
+[ext_resource type="Texture2D" uid="uid://ch54qb4s25og5" path="res://素材/界面/原版窗口/通用控件/关闭按钮.png" id="26_tcg2f"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_10tuq"]
+texture = ExtResource("1_d70h5")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5qsg1"]
+texture = ExtResource("10_input")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_unfhj"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vmuoe"]
+texture = ExtResource("12_4esrw")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0oopf"]
+texture = ExtResource("15_hsvo6")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tsux6"]
+texture = ExtResource("12_fr2nx")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hjo3m"]
+
+[sub_resource type="Animation" id="Animation_kgnyq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(5, 228)]
+}
+
+[sub_resource type="Animation" id="Animation_aev27"]
+resource_name = "滑出"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(5, 700), Vector2(5, 228)]
+}
+
+[sub_resource type="Animation" id="Animation_7qqn1"]
+resource_name = "滑入"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(5, 228), Vector2(5, 700)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t0ue5"]
+_data = {
+&"RESET": SubResource("Animation_kgnyq"),
+&"滑入": SubResource("Animation_aev27"),
+&"滑出": SubResource("Animation_7qqn1")
+}
+
+[node name="轮回六道内容" type="Control" unique_id=187987040 node_paths=PackedStringArray("stage_sprites", "attribute_panel_group", "prev_button", "next_button")]
+custom_minimum_size = Vector2(421, 367)
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_0oopf")
+stage_sprites = [NodePath("阶段资源/六道开启"), NodePath("阶段资源/阶段1天道"), NodePath("阶段资源/阶段2畜生道"), NodePath("阶段资源/阶段3人间道"), NodePath("阶段资源/阶段4修罗道"), NodePath("阶段资源/阶段5饿鬼道"), NodePath("阶段资源/阶段6地狱道"), NodePath("阶段资源/阶段7外道")]
+attribute_panel_group = NodePath("属性面板/阶段数值容器")
+prev_button = NodePath("上一页")
+next_button = NodePath("下一页")
+red_outline_material = ExtResource("2_q44hb")
+
+[node name="底图" type="Panel" parent="." unique_id=2075719673]
+layout_mode = 0
+offset_right = 419.0
+offset_bottom = 357.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_10tuq")
+
+[node name="说明" type="Label" parent="." unique_id=1964166573]
+custom_minimum_size = Vector2(150, 160)
+layout_mode = 0
+offset_left = 20
+offset_top = 7
+offset_right = 170
+offset_bottom = 167
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "如波纹般扩展，忍术起源之
+秘！轮回六道拥有像神话一
+样的能力，即能创造一切，
+亦能极尽破坏。
+通过收集野外boss或等级不
+弱于自己的其他玩家死亡时
+产生的轮回精魄，来修炼轮
+回六道。
+注：每个玩家每天只能产生
+一个轮回精魄。"
+autowrap_mode = 2
+
+[node name="输入框" type="Panel" parent="." unique_id=1522181386]
+layout_mode = 0
+offset_left = 45
+offset_top = 169
+offset_right = 145
+offset_bottom = 191
+theme_override_styles/panel = SubResource("StyleBoxTexture_5qsg1")
+
+[node name="阶段资源" type="Control" parent="." unique_id=1107393588]
+offset_bottom = 367
+offset_top = 0
+anchors_preset = 0
+offset_left = 0
+offset_right = 421
+
+[node name="底图" type="Panel" parent="阶段资源" unique_id=1919480857]
+layout_mode = 0
+offset_left = 178
+offset_top = 5
+offset_right = 418
+offset_bottom = 213
+
+[node name="六道开启" type="TextureRect" parent="阶段资源" unique_id=1891399039]
+layout_mode = 0
+offset_left = 181
+offset_top = 8
+offset_right = 414
+offset_bottom = 209
+texture = ExtResource("7_stage7")
+
+[node name="阶段7外道" type="TextureRect" parent="阶段资源" unique_id=1259362151]
+layout_mode = 0
+offset_left = 181
+offset_top = 8
+offset_right = 414
+offset_bottom = 209
+texture = ExtResource("8_stage8")
+
+[node name="阶段6地狱道" type="TextureRect" parent="阶段资源" unique_id=1163682904]
+layout_mode = 0
+offset_left = 181
+offset_top = 8
+offset_right = 414
+offset_bottom = 209
+texture = ExtResource("6_stage6")
+
+[node name="阶段5饿鬼道" type="TextureRect" parent="阶段资源" unique_id=826172369]
+layout_mode = 0
+offset_left = 181
+offset_top = 8
+offset_right = 414
+offset_bottom = 209
+texture = ExtResource("2_stage2")
+
+[node name="阶段4修罗道" type="TextureRect" parent="阶段资源" unique_id=278545356]
+layout_mode = 0
+offset_left = 181
+offset_top = 8
+offset_right = 414
+offset_bottom = 209
+texture = ExtResource("3_stage3")
+
+[node name="阶段3人间道" type="TextureRect" parent="阶段资源" unique_id=713635439]
+layout_mode = 0
+offset_left = 181
+offset_top = 8
+offset_right = 414
+offset_bottom = 209
+texture = ExtResource("1_stage1")
+
+[node name="阶段2畜生道" type="TextureRect" parent="阶段资源" unique_id=226762519]
+layout_mode = 0
+offset_left = 181
+offset_top = 8
+offset_right = 414
+offset_bottom = 209
+texture = ExtResource("5_stage5")
+
+[node name="阶段1天道" type="TextureRect" parent="阶段资源" unique_id=1796044909]
+layout_mode = 0
+offset_left = 181
+offset_top = 8
+offset_right = 414
+offset_bottom = 209
+texture = ExtResource("4_stage4")
+
+[node name="上一页" type="TextureButton" parent="." unique_id=1910106737]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 169.0
+offset_right = 42.0
+offset_bottom = 192.0
+texture_normal = ExtResource("11_fr2nx")
+stretch_mode = 0
+mouse_default_cursor_shape = 2
+
+[node name="下一页" type="TextureButton" parent="." unique_id=10227317]
+layout_mode = 0
+offset_left = 147.0
+offset_top = 169.0
+offset_right = 167.0
+offset_bottom = 192.0
+texture_normal = ExtResource("12_4esrw")
+stretch_mode = 0
+mouse_default_cursor_shape = 2
+
+[node name="提升轮回六道" type="Button" parent="." unique_id=698570594]
+custom_minimum_size = Vector2(82, 22)
+layout_mode = 0
+offset_left = 53
+offset_top = 191
+offset_right = 135
+offset_bottom = 213
+text = "提升六道阶数"
+
+[node name="属性面板" type="Panel" parent="." unique_id=537927952]
+layout_mode = 0
+offset_left = 3
+offset_top = 213
+offset_right = 419
+offset_bottom = 362
+theme_override_styles/panel = SubResource("StyleBoxTexture_0oopf")
+
+[node name="分隔线" type="TextureRect" parent="属性面板" unique_id=558205309]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 0
+offset_left = 3.0
+offset_top = 90.0
+offset_right = 409.0
+offset_bottom = 92.0
+mouse_filter = 2
+texture = ExtResource("11_lxu7f")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="阶段数值容器" type="Control" parent="属性面板" unique_id=1105567174]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="六道开启阶段" type="Control" parent="属性面板/阶段数值容器" unique_id=504573974]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="当前属性" type="RichTextLabel" parent="属性面板/阶段数值容器/六道开启阶段" unique_id=859023383]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 8.0
+offset_right = 406.0
+offset_bottom = 27.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 2
+bbcode_enabled = true
+text = "[color=#e88300]轮回[/color][color=#29b7ff]【六道开启】[/color][color=#e88300]带来的属性加成：[/color]"
+scroll_active = false
+
+[node name="当前忍术" type="RichTextLabel" parent="属性面板/阶段数值容器/六道开启阶段" unique_id=1556102997]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 50.0
+offset_right = 405.0
+offset_bottom = 69.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 2
+bbcode_enabled = true
+text = "[color=#e88300]轮回[/color][color=#29b7ff]【六道开启】[/color][color=#e88300]带来的属性加成：[/color]"
+scroll_active = false
+
+[node name="属性列表" type="HBoxContainer" parent="属性面板/阶段数值容器/六道开启阶段" unique_id=2063497119]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 27.0
+offset_right = 391.0
+offset_bottom = 50.0
+theme_override_constants/separation = 25
+
+[node name="攻击数值" type="Label" parent="属性面板/阶段数值容器/六道开启阶段/属性列表" unique_id=1625474892]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "攻击：46"
+
+[node name="防御数值" type="Label" parent="属性面板/阶段数值容器/六道开启阶段/属性列表" unique_id=315384622]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "防御：23"
+
+[node name="闪避数值" type="Label" parent="属性面板/阶段数值容器/六道开启阶段/属性列表" unique_id=555324453]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "闪避：0"
+
+[node name="暴击数值" type="Label" parent="属性面板/阶段数值容器/六道开启阶段/属性列表" unique_id=2114091005]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "暴击：10"
+
+[node name="生命值数值" type="Label" parent="属性面板/阶段数值容器/六道开启阶段/属性列表" unique_id=495044318]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "生命值：234"
+
+[node name="忍术加成列表" type="HBoxContainer" parent="属性面板/阶段数值容器/六道开启阶段" unique_id=1988279291]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 68.0
+offset_right = 391.0
+offset_bottom = 91.0
+theme_override_constants/separation = 30
+
+[node name="职业忍术" type="Label" parent="属性面板/阶段数值容器/六道开启阶段/忍术加成列表" unique_id=1883400573]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "职业忍术：0"
+
+[node name="世界忍术" type="Label" parent="属性面板/阶段数值容器/六道开启阶段/忍术加成列表" unique_id=1998133292]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "世界忍术：0"
+
+[node name="阶段名称" type="Label" parent="属性面板/阶段数值容器/六道开启阶段" unique_id=1950083323]
+layout_mode = 0
+offset_left = 45.0
+offset_top = -44.0
+offset_right = 139.0
+offset_bottom = -22.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "六道开启"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="进度" type="ProgressBar" parent="属性面板/阶段数值容器/六道开启阶段" unique_id=1373592813]
+layout_mode = 0
+offset_left = 195
+offset_top = -23.0
+offset_right = 395.0
+offset_bottom = -12.0
+show_percentage = false
+
+[node name="进度值" type="Label" parent="属性面板/阶段数值容器/六道开启阶段" unique_id=83746127]
+layout_mode = 0
+offset_left = 195
+offset_top = -24.0
+offset_right = 395.0
+offset_bottom = -11.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "0/60"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="天道阶段" type="Control" parent="属性面板/阶段数值容器" unique_id=1460137069]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="当前属性" type="RichTextLabel" parent="属性面板/阶段数值容器/天道阶段" unique_id=1437005524]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 8.0
+offset_right = 406.0
+offset_bottom = 27.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 2
+bbcode_enabled = true
+text = "[color=#e88300]轮回[/color][color=#29b7ff]【天道】[/color][color=#e88300]带来的属性加成：[/color]"
+scroll_active = false
+
+[node name="当前忍术" type="RichTextLabel" parent="属性面板/阶段数值容器/天道阶段" unique_id=1398999798]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 50.0
+offset_right = 406.0
+offset_bottom = 69.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 2
+bbcode_enabled = true
+text = "[color=#e88300]轮回[/color][color=#29b7ff]【天道】[/color][color=#e88300]带来的属性加成：[/color]"
+scroll_active = false
+
+[node name="属性列表" type="HBoxContainer" parent="属性面板/阶段数值容器/天道阶段" unique_id=316099601]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 27.0
+offset_right = 391.0
+offset_bottom = 50.0
+theme_override_constants/separation = 25
+
+[node name="攻击数值" type="Label" parent="属性面板/阶段数值容器/天道阶段/属性列表" unique_id=1452145197]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "攻击：93"
+
+[node name="防御数值" type="Label" parent="属性面板/阶段数值容器/天道阶段/属性列表" unique_id=1968620787]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "防御：46"
+
+[node name="闪避数值" type="Label" parent="属性面板/阶段数值容器/天道阶段/属性列表" unique_id=973535858]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "闪避：0"
+
+[node name="暴击数值" type="Label" parent="属性面板/阶段数值容器/天道阶段/属性列表" unique_id=1848116033]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "暴击：20"
+
+[node name="生命值数值" type="Label" parent="属性面板/阶段数值容器/天道阶段/属性列表" unique_id=870495442]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "生命值：486"
+
+[node name="忍术加成列表" type="HBoxContainer" parent="属性面板/阶段数值容器/天道阶段" unique_id=66703303]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 68.0
+offset_right = 391.0
+offset_bottom = 91.0
+theme_override_constants/separation = 30
+
+[node name="职业忍术" type="Label" parent="属性面板/阶段数值容器/天道阶段/忍术加成列表" unique_id=1016772701]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "职业忍术：0"
+
+[node name="世界忍术" type="Label" parent="属性面板/阶段数值容器/天道阶段/忍术加成列表" unique_id=913785227]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "世界忍术：0"
+
+[node name="阶段名称" type="Label" parent="属性面板/阶段数值容器/天道阶段" unique_id=2043191644]
+layout_mode = 0
+offset_left = 45.0
+offset_top = -44.0
+offset_right = 139.0
+offset_bottom = -22.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "天道"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="进度" type="ProgressBar" parent="属性面板/阶段数值容器/天道阶段" unique_id=836701169]
+layout_mode = 0
+offset_left = 195
+offset_top = -23.0
+offset_right = 395.0
+offset_bottom = -12.0
+show_percentage = false
+
+[node name="进度值" type="Label" parent="属性面板/阶段数值容器/天道阶段" unique_id=710821991]
+layout_mode = 0
+offset_left = 195
+offset_top = -24.0
+offset_right = 395.0
+offset_bottom = -11.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "0/135"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="畜生道阶段" type="Control" parent="属性面板/阶段数值容器" unique_id=1840060230]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="当前属性" type="RichTextLabel" parent="属性面板/阶段数值容器/畜生道阶段" unique_id=1455912898]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 8.0
+offset_right = 406.0
+offset_bottom = 27.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 2
+bbcode_enabled = true
+text = "[color=#e88300]轮回[/color][color=#29b7ff]【畜生道】[/color][color=#e88300]带来的属性加成：[/color]"
+scroll_active = false
+
+[node name="当前忍术" type="RichTextLabel" parent="属性面板/阶段数值容器/畜生道阶段" unique_id=83640193]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 50.0
+offset_right = 406.0
+offset_bottom = 69.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 2
+bbcode_enabled = true
+text = "[color=#e88300]轮回[/color][color=#29b7ff]【畜生道】[/color][color=#e88300]带来的属性加成：[/color]"
+scroll_active = false
+
+[node name="属性列表" type="HBoxContainer" parent="属性面板/阶段数值容器/畜生道阶段" unique_id=698628474]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 27.0
+offset_right = 391.0
+offset_bottom = 50.0
+theme_override_constants/separation = 25
+
+[node name="攻击数值" type="Label" parent="属性面板/阶段数值容器/畜生道阶段/属性列表" unique_id=1495842903]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "攻击：187"
+
+[node name="防御数值" type="Label" parent="属性面板/阶段数值容器/畜生道阶段/属性列表" unique_id=1104612010]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "防御：93"
+
+[node name="闪避数值" type="Label" parent="属性面板/阶段数值容器/畜生道阶段/属性列表" unique_id=642700704]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "闪避：0"
+
+[node name="暴击数值" type="Label" parent="属性面板/阶段数值容器/畜生道阶段/属性列表" unique_id=2050371592]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "暴击：30"
+
+[node name="生命值数值" type="Label" parent="属性面板/阶段数值容器/畜生道阶段/属性列表" unique_id=448110134]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "生命值：937"
+
+[node name="忍术加成列表" type="HBoxContainer" parent="属性面板/阶段数值容器/畜生道阶段" unique_id=1388411391]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 68.0
+offset_right = 391.0
+offset_bottom = 91.0
+theme_override_constants/separation = 30
+
+[node name="职业忍术" type="Label" parent="属性面板/阶段数值容器/畜生道阶段/忍术加成列表" unique_id=565781649]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "职业忍术：0"
+
+[node name="世界忍术" type="Label" parent="属性面板/阶段数值容器/畜生道阶段/忍术加成列表" unique_id=1124501241]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "世界忍术：0"
+
+[node name="阶段名称" type="Label" parent="属性面板/阶段数值容器/畜生道阶段" unique_id=1611227164]
+layout_mode = 0
+offset_left = 45.0
+offset_top = -44.0
+offset_right = 139.0
+offset_bottom = -22.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "畜生道"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="进度" type="ProgressBar" parent="属性面板/阶段数值容器/畜生道阶段" unique_id=1637336243]
+layout_mode = 0
+offset_left = 195
+offset_top = -23.0
+offset_right = 395.0
+offset_bottom = -12.0
+show_percentage = false
+
+[node name="进度值" type="Label" parent="属性面板/阶段数值容器/畜生道阶段" unique_id=1059731147]
+layout_mode = 0
+offset_left = 195
+offset_top = -24.0
+offset_right = 395.0
+offset_bottom = -11.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "0/225"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="人间道阶段" type="Control" parent="属性面板/阶段数值容器" unique_id=1180026389]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="当前属性" type="RichTextLabel" parent="属性面板/阶段数值容器/人间道阶段" unique_id=1062031662]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 8.0
+offset_right = 406.0
+offset_bottom = 27.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 2
+bbcode_enabled = true
+text = "[color=#e88300]轮回[/color][color=#29b7ff]【人间道】[/color][color=#e88300]带来的属性加成：[/color]"
+scroll_active = false
+
+[node name="当前忍术" type="RichTextLabel" parent="属性面板/阶段数值容器/人间道阶段" unique_id=1915843012]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 50.0
+offset_right = 406.0
+offset_bottom = 69.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 2
+bbcode_enabled = true
+text = "[color=#e88300]轮回[/color][color=#29b7ff]【人间道】[/color][color=#e88300]带来的属性加成：[/color]"
+scroll_active = false
+
+[node name="属性列表" type="HBoxContainer" parent="属性面板/阶段数值容器/人间道阶段" unique_id=1755248273]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 27.0
+offset_right = 391.0
+offset_bottom = 50.0
+theme_override_constants/separation = 25
+
+[node name="攻击数值" type="Label" parent="属性面板/阶段数值容器/人间道阶段/属性列表" unique_id=924285809]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "攻击：375"
+
+[node name="防御数值" type="Label" parent="属性面板/阶段数值容器/人间道阶段/属性列表" unique_id=1160564907]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "防御：187"
+
+[node name="闪避数值" type="Label" parent="属性面板/阶段数值容器/人间道阶段/属性列表" unique_id=1479141032]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "闪避：25"
+
+[node name="暴击数值" type="Label" parent="属性面板/阶段数值容器/人间道阶段/属性列表" unique_id=1850470721]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "暴击：40"
+
+[node name="生命值数值" type="Label" parent="属性面板/阶段数值容器/人间道阶段/属性列表" unique_id=1523359655]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "生命值：1875"
+
+[node name="忍术加成列表" type="HBoxContainer" parent="属性面板/阶段数值容器/人间道阶段" unique_id=881402525]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 68.0
+offset_right = 391.0
+offset_bottom = 91.0
+theme_override_constants/separation = 30
+
+[node name="职业忍术" type="Label" parent="属性面板/阶段数值容器/人间道阶段/忍术加成列表" unique_id=1415646141]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "职业忍术：0"
+
+[node name="世界忍术" type="Label" parent="属性面板/阶段数值容器/人间道阶段/忍术加成列表" unique_id=259209536]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "世界忍术：0"
+
+[node name="阶段名称" type="Label" parent="属性面板/阶段数值容器/人间道阶段" unique_id=456616104]
+layout_mode = 0
+offset_left = 45.0
+offset_top = -44.0
+offset_right = 139.0
+offset_bottom = -22.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "人间道"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="进度" type="ProgressBar" parent="属性面板/阶段数值容器/人间道阶段" unique_id=146705989]
+layout_mode = 0
+offset_left = 195
+offset_top = -23.0
+offset_right = 395.0
+offset_bottom = -12.0
+show_percentage = false
+
+[node name="进度值" type="Label" parent="属性面板/阶段数值容器/人间道阶段" unique_id=810678112]
+layout_mode = 0
+offset_left = 195
+offset_top = -24.0
+offset_right = 395.0
+offset_bottom = -11.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "0/330"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="修罗道阶段" type="Control" parent="属性面板/阶段数值容器" unique_id=1284173686]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="当前属性" type="RichTextLabel" parent="属性面板/阶段数值容器/修罗道阶段" unique_id=703827467]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 8.0
+offset_right = 406.0
+offset_bottom = 27.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 2
+bbcode_enabled = true
+text = "[color=#e88300]轮回[/color][color=#29b7ff]【修罗道】[/color][color=#e88300]带来的属性加成：[/color]"
+scroll_active = false
+
+[node name="当前忍术" type="RichTextLabel" parent="属性面板/阶段数值容器/修罗道阶段" unique_id=2052062507]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 50.0
+offset_right = 406.0
+offset_bottom = 69.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 2
+bbcode_enabled = true
+text = "[color=#e88300]轮回[/color][color=#29b7ff]【修罗道】[/color][color=#e88300]带来的属性加成：[/color]"
+scroll_active = false
+
+[node name="属性列表" type="HBoxContainer" parent="属性面板/阶段数值容器/修罗道阶段" unique_id=1122018823]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 27.0
+offset_right = 391.0
+offset_bottom = 50.0
+theme_override_constants/separation = 25
+
+[node name="攻击数值" type="Label" parent="属性面板/阶段数值容器/修罗道阶段/属性列表" unique_id=172462325]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "攻击：750"
+
+[node name="防御数值" type="Label" parent="属性面板/阶段数值容器/修罗道阶段/属性列表" unique_id=915036391]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "防御：375"
+
+[node name="闪避数值" type="Label" parent="属性面板/阶段数值容器/修罗道阶段/属性列表" unique_id=2047209275]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "闪避：50"
+
+[node name="暴击数值" type="Label" parent="属性面板/阶段数值容器/修罗道阶段/属性列表" unique_id=1068524961]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "暴击：50"
+
+[node name="生命值数值" type="Label" parent="属性面板/阶段数值容器/修罗道阶段/属性列表" unique_id=346816335]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "生命值：3750"
+
+[node name="忍术加成列表" type="HBoxContainer" parent="属性面板/阶段数值容器/修罗道阶段" unique_id=792243091]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 68.0
+offset_right = 391.0
+offset_bottom = 91.0
+theme_override_constants/separation = 30
+
+[node name="职业忍术" type="Label" parent="属性面板/阶段数值容器/修罗道阶段/忍术加成列表" unique_id=529673105]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "职业忍术：1"
+
+[node name="世界忍术" type="Label" parent="属性面板/阶段数值容器/修罗道阶段/忍术加成列表" unique_id=1032267028]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "世界忍术：0"
+
+[node name="阶段名称" type="Label" parent="属性面板/阶段数值容器/修罗道阶段" unique_id=1013753395]
+layout_mode = 0
+offset_left = 45.0
+offset_top = -44.0
+offset_right = 139.0
+offset_bottom = -22.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "修罗道"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="进度" type="ProgressBar" parent="属性面板/阶段数值容器/修罗道阶段" unique_id=1833974108]
+layout_mode = 0
+offset_left = 195
+offset_top = -23.0
+offset_right = 395.0
+offset_bottom = -12.0
+show_percentage = false
+
+[node name="进度值" type="Label" parent="属性面板/阶段数值容器/修罗道阶段" unique_id=1121959353]
+layout_mode = 0
+offset_left = 195
+offset_top = -24.0
+offset_right = 395.0
+offset_bottom = -11.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "0/450"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="饿鬼道阶段" type="Control" parent="属性面板/阶段数值容器" unique_id=479374775]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="当前属性" type="RichTextLabel" parent="属性面板/阶段数值容器/饿鬼道阶段" unique_id=335685827]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 8.0
+offset_right = 406.0
+offset_bottom = 27.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 2
+bbcode_enabled = true
+text = "[color=#e88300]轮回[/color][color=#29b7ff]【饿鬼道】[/color][color=#e88300]带来的属性加成：[/color]"
+scroll_active = false
+
+[node name="当前忍术" type="RichTextLabel" parent="属性面板/阶段数值容器/饿鬼道阶段" unique_id=515771722]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 50.0
+offset_right = 406.0
+offset_bottom = 69.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 2
+bbcode_enabled = true
+text = "[color=#e88300]轮回[/color][color=#29b7ff]【饿鬼道】[/color][color=#e88300]带来的属性加成：[/color]"
+scroll_active = false
+
+[node name="属性列表" type="HBoxContainer" parent="属性面板/阶段数值容器/饿鬼道阶段" unique_id=1179304025]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 27.0
+offset_right = 391.0
+offset_bottom = 50.0
+theme_override_constants/separation = 25
+
+[node name="攻击数值" type="Label" parent="属性面板/阶段数值容器/饿鬼道阶段/属性列表" unique_id=454714262]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "攻击：1500"
+
+[node name="防御数值" type="Label" parent="属性面板/阶段数值容器/饿鬼道阶段/属性列表" unique_id=1895030001]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "防御：750"
+
+[node name="闪避数值" type="Label" parent="属性面板/阶段数值容器/饿鬼道阶段/属性列表" unique_id=34513621]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "闪避：100"
+
+[node name="暴击数值" type="Label" parent="属性面板/阶段数值容器/饿鬼道阶段/属性列表" unique_id=1859492508]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "暴击：60"
+
+[node name="生命值数值" type="Label" parent="属性面板/阶段数值容器/饿鬼道阶段/属性列表" unique_id=1164921110]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "生命值：3750"
+
+[node name="忍术加成列表" type="HBoxContainer" parent="属性面板/阶段数值容器/饿鬼道阶段" unique_id=1035993526]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 68.0
+offset_right = 391.0
+offset_bottom = 91.0
+theme_override_constants/separation = 30
+
+[node name="职业忍术" type="Label" parent="属性面板/阶段数值容器/饿鬼道阶段/忍术加成列表" unique_id=266094342]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "职业忍术：3"
+
+[node name="世界忍术" type="Label" parent="属性面板/阶段数值容器/饿鬼道阶段/忍术加成列表" unique_id=1328667811]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "世界忍术：0"
+
+[node name="阶段名称" type="Label" parent="属性面板/阶段数值容器/饿鬼道阶段" unique_id=41656421]
+layout_mode = 0
+offset_left = 45.0
+offset_top = -44.0
+offset_right = 139.0
+offset_bottom = -22.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "饿鬼道"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="进度" type="ProgressBar" parent="属性面板/阶段数值容器/饿鬼道阶段" unique_id=2115752054]
+layout_mode = 0
+offset_left = 195
+offset_top = -23.0
+offset_right = 395.0
+offset_bottom = -12.0
+show_percentage = false
+
+[node name="进度值" type="Label" parent="属性面板/阶段数值容器/饿鬼道阶段" unique_id=2078474165]
+layout_mode = 0
+offset_left = 195
+offset_top = -24.0
+offset_right = 395.0
+offset_bottom = -11.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "0/585"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="地狱道阶段" type="Control" parent="属性面板/阶段数值容器" unique_id=1635047556]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="当前属性" type="RichTextLabel" parent="属性面板/阶段数值容器/地狱道阶段" unique_id=1652014938]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 8.0
+offset_right = 406.0
+offset_bottom = 27.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 2
+bbcode_enabled = true
+text = "[color=#e88300]轮回[/color][color=#29b7ff]【地狱道】[/color][color=#e88300]带来的属性加成：[/color]"
+scroll_active = false
+
+[node name="当前忍术" type="RichTextLabel" parent="属性面板/阶段数值容器/地狱道阶段" unique_id=861852010]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 50.0
+offset_right = 406.0
+offset_bottom = 69.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 2
+bbcode_enabled = true
+text = "[color=#e88300]轮回[/color][color=#29b7ff]【地狱道】[/color][color=#e88300]带来的属性加成：[/color]"
+scroll_active = false
+
+[node name="属性列表" type="HBoxContainer" parent="属性面板/阶段数值容器/地狱道阶段" unique_id=14542045]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 27.0
+offset_right = 402.0
+offset_bottom = 50.0
+theme_override_constants/separation = 25
+
+[node name="攻击数值" type="Label" parent="属性面板/阶段数值容器/地狱道阶段/属性列表" unique_id=728675062]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "攻击：3000"
+
+[node name="防御数值" type="Label" parent="属性面板/阶段数值容器/地狱道阶段/属性列表" unique_id=412879358]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "防御：1500"
+
+[node name="闪避数值" type="Label" parent="属性面板/阶段数值容器/地狱道阶段/属性列表" unique_id=253515589]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "闪避：200"
+
+[node name="暴击数值" type="Label" parent="属性面板/阶段数值容器/地狱道阶段/属性列表" unique_id=1746716971]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "暴击：80"
+
+[node name="生命值数值" type="Label" parent="属性面板/阶段数值容器/地狱道阶段/属性列表" unique_id=126431156]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "生命值：15000"
+
+[node name="忍术加成列表" type="HBoxContainer" parent="属性面板/阶段数值容器/地狱道阶段" unique_id=336130050]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 68.0
+offset_right = 391.0
+offset_bottom = 91.0
+theme_override_constants/separation = 30
+
+[node name="职业忍术" type="Label" parent="属性面板/阶段数值容器/地狱道阶段/忍术加成列表" unique_id=1277754423]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "职业忍术：4"
+
+[node name="世界忍术" type="Label" parent="属性面板/阶段数值容器/地狱道阶段/忍术加成列表" unique_id=1237932868]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "世界忍术：3"
+
+[node name="阶段名称" type="Label" parent="属性面板/阶段数值容器/地狱道阶段" unique_id=1562038418]
+layout_mode = 0
+offset_left = 45.0
+offset_top = -44.0
+offset_right = 139.0
+offset_bottom = -22.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "地狱道"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="进度" type="ProgressBar" parent="属性面板/阶段数值容器/地狱道阶段" unique_id=1263938067]
+layout_mode = 0
+offset_left = 195
+offset_top = -23.0
+offset_right = 395.0
+offset_bottom = -12.0
+show_percentage = false
+
+[node name="进度值" type="Label" parent="属性面板/阶段数值容器/地狱道阶段" unique_id=1766406141]
+layout_mode = 0
+offset_left = 195
+offset_top = -24.0
+offset_right = 395.0
+offset_bottom = -11.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "0/735"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="外道阶段" type="Control" parent="属性面板/阶段数值容器" unique_id=110638551]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="当前属性" type="RichTextLabel" parent="属性面板/阶段数值容器/外道阶段" unique_id=675030605]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 8.0
+offset_right = 406.0
+offset_bottom = 27.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 2
+bbcode_enabled = true
+text = "[color=#e88300]轮回[/color][color=#29b7ff]【外道】[/color][color=#e88300]带来的属性加成：[/color]"
+scroll_active = false
+
+[node name="当前忍术" type="RichTextLabel" parent="属性面板/阶段数值容器/外道阶段" unique_id=149656098]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 50.0
+offset_right = 406.0
+offset_bottom = 69.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 2
+bbcode_enabled = true
+text = "[color=#e88300]轮回[/color][color=#29b7ff]【外道】[/color][color=#e88300]带来的属性加成：[/color]"
+scroll_active = false
+
+[node name="属性列表" type="HBoxContainer" parent="属性面板/阶段数值容器/外道阶段" unique_id=1886304777]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 27.0
+offset_right = 409.0
+offset_bottom = 50.0
+theme_override_constants/separation = 25
+
+[node name="攻击数值" type="Label" parent="属性面板/阶段数值容器/外道阶段/属性列表" unique_id=1424567372]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "攻击：6000"
+
+[node name="防御数值" type="Label" parent="属性面板/阶段数值容器/外道阶段/属性列表" unique_id=1294543555]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "防御：3000"
+
+[node name="闪避数值" type="Label" parent="属性面板/阶段数值容器/外道阶段/属性列表" unique_id=1562303821]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "闪避：300"
+
+[node name="暴击数值" type="Label" parent="属性面板/阶段数值容器/外道阶段/属性列表" unique_id=1085825659]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "暴击：100"
+
+[node name="生命值数值" type="Label" parent="属性面板/阶段数值容器/外道阶段/属性列表" unique_id=919722688]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "生命值：30000"
+
+[node name="忍术加成列表" type="HBoxContainer" parent="属性面板/阶段数值容器/外道阶段" unique_id=1879938168]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 68.0
+offset_right = 391.0
+offset_bottom = 91.0
+theme_override_constants/separation = 30
+
+[node name="职业忍术" type="Label" parent="属性面板/阶段数值容器/外道阶段/忍术加成列表" unique_id=2139129536]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "职业忍术：5"
+
+[node name="世界忍术" type="Label" parent="属性面板/阶段数值容器/外道阶段/忍术加成列表" unique_id=1620723007]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "世界忍术：5"
+
+[node name="阶段名称" type="Label" parent="属性面板/阶段数值容器/外道阶段" unique_id=2095082300]
+layout_mode = 0
+offset_left = 45.0
+offset_top = -44.0
+offset_right = 139.0
+offset_bottom = -22.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "外道"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="进度" type="ProgressBar" parent="属性面板/阶段数值容器/外道阶段" unique_id=1534178325]
+layout_mode = 0
+offset_left = 195
+offset_top = -23.0
+offset_right = 395.0
+offset_bottom = -12.0
+show_percentage = false
+
+[node name="进度值" type="Label" parent="属性面板/阶段数值容器/外道阶段" unique_id=541419990]
+layout_mode = 0
+offset_left = 195
+offset_top = -24.0
+offset_right = 395.0
+offset_bottom = -11.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "0/735"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="技能格区" type="HBoxContainer" parent="属性面板" unique_id=67017536]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 93.0
+offset_right = 387.0
+offset_bottom = 131.0
+theme_override_constants/separation = 10
+
+[node name="轮回·灵魂吞噬" type="Panel" parent="属性面板/技能格区" unique_id=1411156443]
+custom_minimum_size = Vector2(38, 38)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_tsux6")
+
+[node name="技能图标轮回·灵魂吞噬" type="TextureRect" parent="属性面板/技能格区/轮回·灵魂吞噬" unique_id=2011463863]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 36.0
+offset_bottom = 36.0
+texture = ExtResource("13_4esrw")
+stretch_mode = 5
+
+[node name="轮回·阿修罗形态" type="Panel" parent="属性面板/技能格区" unique_id=907885211]
+custom_minimum_size = Vector2(38, 38)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_tsux6")
+
+[node name="技能轮回·阿修罗形态" type="TextureRect" parent="属性面板/技能格区/轮回·阿修罗形态" unique_id=1436059807]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 36.0
+offset_bottom = 36.0
+texture = ExtResource("14_0oopf")
+stretch_mode = 5
+
+[node name="轮回·吞噬" type="Panel" parent="属性面板/技能格区" unique_id=267476740]
+custom_minimum_size = Vector2(38, 38)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_tsux6")
+
+[node name="技能轮回·吞噬" type="TextureRect" parent="属性面板/技能格区/轮回·吞噬" unique_id=691550889]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 36.0
+offset_bottom = 36.0
+texture = ExtResource("15_q44hb")
+
+[node name="轮回·判决" type="Panel" parent="属性面板/技能格区" unique_id=1850956941]
+custom_minimum_size = Vector2(38, 38)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_tsux6")
+
+[node name="技能轮回·判决" type="TextureRect" parent="属性面板/技能格区/轮回·判决" unique_id=285348966]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 36.0
+offset_bottom = 36.0
+texture = ExtResource("16_kbgva")
+
+[node name="轮回·万象天引" type="Panel" parent="属性面板/技能格区" unique_id=1541581494]
+custom_minimum_size = Vector2(38, 38)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_tsux6")
+
+[node name="技能轮回·万象天引" type="TextureRect" parent="属性面板/技能格区/轮回·万象天引" unique_id=2075520935]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 36.0
+offset_bottom = 36.0
+texture = ExtResource("17_o05tc")
+
+[node name="空技能格" type="Panel" parent="属性面板/技能格区" unique_id=1567787880]
+custom_minimum_size = Vector2(38, 38)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_tsux6")
+
+[node name="空技能格2" type="Panel" parent="属性面板/技能格区" unique_id=1060554366]
+custom_minimum_size = Vector2(38, 38)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_tsux6")
+
+[node name="提升轮回阶数弹窗" type="Control" parent="." unique_id=987622609]
+visible = false
+clip_contents = true
+anchors_preset = 0
+offset_left = 5.0
+offset_top = 228.0
+offset_right = 419.0
+offset_bottom = 357.0
+theme = ExtResource("23_4eap0")
+script = ExtResource("24_m6oo8")
+
+[node name="ColorRect" type="ColorRect" parent="提升轮回阶数弹窗" unique_id=1674108050]
+layout_mode = 0
+offset_left = -4.0
+offset_top = 1.0
+offset_right = 410.0
+offset_bottom = 123.0
+mouse_filter = 2
+color = Color(0.21176471, 0.15294118, 0.12941177, 1)
+
+[node name="底图" type="TextureRect" parent="提升轮回阶数弹窗" unique_id=1288479313]
+layout_mode = 0
+offset_left = -4.0
+offset_top = -1.0
+offset_right = 416.0
+offset_bottom = 131.0
+texture = ExtResource("15_hsvo6")
+expand_mode = 1
+
+[node name="轮回灵符" type="Label" parent="提升轮回阶数弹窗" unique_id=1856922116]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 3.0
+offset_right = 51.0
+offset_bottom = 33.0
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "轮回灵符
+"
+
+[node name="道具框" type="Panel" parent="提升轮回阶数弹窗" unique_id=459485531]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 17.0
+offset_right = 48.0
+offset_bottom = 57.0
+
+[node name="轮回灵符" type="TextureRect" parent="提升轮回阶数弹窗/道具框" unique_id=1406158417]
+texture_filter = 1
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 37.0
+offset_bottom = 37.0
+texture = ExtResource("25_10ffx")
+stretch_mode = 5
+
+[node name="数量数值" type="Label" parent="提升轮回阶数弹窗/道具框/轮回灵符" unique_id=981389887]
+layout_mode = 0
+offset_top = 24.0
+offset_right = 35.0
+offset_bottom = 37.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "0"
+horizontal_alignment = 2
+
+[node name="提升祝福值" type="Label" parent="提升轮回阶数弹窗" unique_id=80595672]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 17.0
+offset_right = 125.0
+offset_bottom = 34.0
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "提升祝福值"
+
+[node name="说明文字1" type="RichTextLabel" parent="提升轮回阶数弹窗" unique_id=587315203]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 37.0
+offset_right = 291.0
+offset_bottom = 77.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 2
+bbcode_enabled = true
+text = "失败增加1-3点祝福值，本次升阶成功祝福
+值为0-6，[color=#ff0000]超过6必成！[/color]"
+scroll_active = false
+
+[node name="说明文字2" type="RichTextLabel" parent="提升轮回阶数弹窗" unique_id=725440391]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 70.0
+offset_right = 312.0
+offset_bottom = 151.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 2
+bbcode_enabled = true
+text = "[color=#ff0000]每提升1次，祝福值保留时问重置为12小时[/color]
+[color=#33ff00]提升阶段需要（轮回灵符）可从商城购买[/color]"
+scroll_active = false
+
+[node name="消耗说明文字" type="RichTextLabel" parent="提升轮回阶数弹窗" unique_id=1428792688]
+layout_mode = 0
+offset_left = 296.0
+offset_top = 17.0
+offset_right = 394.0
+offset_bottom = 52.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 2
+bbcode_enabled = true
+text = "本次提升需要：
+[color=#ff0000]轮回灵符1张[/color]"
+scroll_active = false
+
+[node name="成功率说明文字" type="Label" parent="提升轮回阶数弹窗" unique_id=1176316015]
+layout_mode = 0
+offset_left = 296.0
+offset_top = 46.0
+offset_right = 410.0
+offset_bottom = 61.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "本次提升成功率：50%"
+
+[node name="祝福值进度条" type="ProgressBar" parent="提升轮回阶数弹窗" unique_id=1627784111]
+layout_mode = 0
+offset_left = 127.0
+offset_top = 17.0
+offset_right = 287.0
+offset_bottom = 30.0
+show_percentage = false
+
+[node name="祝福值数值" type="Label" parent="提升轮回阶数弹窗/祝福值进度条" unique_id=1020029725]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 2.0
+offset_right = 105.0
+offset_bottom = 15.0
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "0/1000"
+
+[node name="购买按钮" type="Button" parent="提升轮回阶数弹窗" unique_id=1367980323]
+custom_minimum_size = Vector2(37, 22)
+layout_mode = 0
+offset_left = 8.0
+offset_top = 60.0
+offset_right = 49.0
+offset_bottom = 82.0
+focus_mode = 0
+text = "购买"
+
+[node name="开始提升按钮" type="Button" parent="提升轮回阶数弹窗" unique_id=125500573]
+layout_mode = 0
+offset_left = 291.0
+offset_top = 76.0
+offset_right = 346.0
+offset_bottom = 96.0
+text = "开始提升"
+
+[node name="自动提升按钮" type="Button" parent="提升轮回阶数弹窗" unique_id=2145917258]
+layout_mode = 0
+offset_left = 353.0
+offset_top = 76.0
+offset_right = 408.0
+offset_bottom = 96.0
+text = "自动提升"
+
+[node name="关闭按钮" type="Button" parent="提升轮回阶数弹窗" unique_id=264815479]
+custom_minimum_size = Vector2(25, 24)
+layout_mode = 0
+offset_left = 385.0
+offset_top = 1.0
+offset_right = 410.0
+offset_bottom = 25.0
+tooltip_text = "关闭"
+focus_mode = 0
+theme_override_colors/icon_normal_color = Color(0.82, 0.82, 0.82, 1)
+theme_override_colors/icon_pressed_color = Color(1, 0.85, 0.6, 1)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hjo3m")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_hjo3m")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_hjo3m")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hjo3m")
+icon = ExtResource("26_tcg2f")
+flat = true
+
+[node name="滑出动画" type="AnimationPlayer" parent="提升轮回阶数弹窗" unique_id=610498053]
+libraries/ = SubResource("AnimationLibrary_t0ue5")
+
+[connection signal="pressed" from="提升轮回六道" to="提升轮回阶数弹窗" method="open_popup"]
+[connection signal="pressed" from="提升轮回阶数弹窗/关闭按钮" to="提升轮回阶数弹窗" method="_on_close_button_pressed"]

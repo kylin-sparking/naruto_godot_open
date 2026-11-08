@@ -1,0 +1,190 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/物品格.png" id="1_slot"]
+
+; 原版「灵器炼制」三扇（洗炼 `XiLianWindow` / 灵化 `LingHuaWindow` / 开光 `KaiGuangWindow`，
+; 都在 `com/mxw/uifl/controls/lingQi/`），三扇 `super(520,345,true)`、版式**逐行相同**。
+; 由 `onClickPopupMenu` 的「洗练 / 灵化 / 开光」三项打开（带 `curCellData`）。
+;
+; 提交各自走 `LING = 2081` 的不同子命令（`LingEquipProcessor.as:107/116/125`）：
+;   灵化 `writeByte(1)` / 开光 `writeByte(0)` / 洗炼 `writeByte(2)`，都带 (itemId, itemPos)。
+;
+; 坐标出处与算式见生成器 `开发工具/生成灵器炼制场景.py` 的头注。**别手改本文件。**
+[node name="原版灵器炼制内容" type="Control"]
+custom_minimum_size = Vector2(520, 345)
+mouse_filter = 2
+
+[node name="外框" type="Panel" parent="."]
+offset_right = 520.0
+offset_bottom = 345.0
+mouse_filter = 2
+
+; `_contentBg`（MYellow）：位置 (CONTENT_GAP, 38)，`createChildren` 里改成 505×300。
+[node name="内容背景" type="Panel" parent="."]
+offset_left = 8.0
+offset_top = 38.0
+offset_right = 513.0
+offset_bottom = 338.0
+
+; 说明底（MPane 495×63）
+[node name="说明底" type="Panel" parent="."]
+offset_left = 13.0
+offset_top = 43.0
+offset_right = 508.0
+offset_bottom = 106.0
+
+[node name="说明" type="RichTextLabel" parent="."]
+offset_left = 18.0
+offset_top = 48.0
+offset_right = 513.0
+offset_bottom = 111.0
+bbcode_enabled = true
+mouse_filter = 2
+
+; 内容底（MPane 495×226）
+[node name="内容底" type="Panel" parent="."]
+offset_left = 13.0
+offset_top = 107.0
+offset_right = 508.0
+offset_bottom = 333.0
+
+; 文案（TextArea2 345×226）
+[node name="文案" type="RichTextLabel" parent="内容底"]
+offset_left = 5.0
+offset_top = 10.0
+offset_right = 350.0
+offset_bottom = 236.0
+bbcode_enabled = true
+mouse_filter = 2
+
+[node name="材料格一" type="TextureRect" parent="内容底"]
+offset_left = 350.0
+offset_top = 80.0
+offset_right = 390.0
+offset_bottom = 120.0
+texture = ExtResource("1_slot")
+mouse_filter = 2
+
+[node name="材料图标" type="TextureRect" parent="内容底/材料格一"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+mouse_filter = 2
+
+[node name="材料数量" type="Label" parent="内容底/材料格一"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -30.0
+offset_top = -18.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+vertical_alignment = 2
+mouse_filter = 2
+
+; 购买钮（原版 `ItemCaiLiaoBox.updateDisplayList`：`buyBtn.y = itemCell.y + itemCell.height + 3`、
+; `x = (_width − buyBtn.width) / 2` ⇒ 格正下方、按 60 宽盒居中。`true` 那参就是 showBuyBtn。）
+[node name="材料格一购买" type="Button" parent="内容底"]
+offset_left = 347.0
+offset_top = 123.0
+offset_right = 397.0
+offset_bottom = 145.0
+focus_mode = 0
+text = "购买"
+
+[node name="材料格一名" type="Label" parent="内容底"]
+offset_left = 344.0
+offset_top = 60.0
+offset_right = 402.0
+offset_bottom = 80.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+mouse_filter = 2
+
+[node name="材料格二" type="TextureRect" parent="内容底"]
+offset_left = 410.0
+offset_top = 80.0
+offset_right = 450.0
+offset_bottom = 120.0
+texture = ExtResource("1_slot")
+mouse_filter = 2
+
+[node name="材料图标" type="TextureRect" parent="内容底/材料格二"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+mouse_filter = 2
+
+[node name="材料数量" type="Label" parent="内容底/材料格二"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -30.0
+offset_top = -18.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+vertical_alignment = 2
+mouse_filter = 2
+
+; 购买钮（原版 `ItemCaiLiaoBox.updateDisplayList`：`buyBtn.y = itemCell.y + itemCell.height + 3`、
+; `x = (_width − buyBtn.width) / 2` ⇒ 格正下方、按 60 宽盒居中。`true` 那参就是 showBuyBtn。）
+[node name="材料格二购买" type="Button" parent="内容底"]
+offset_left = 407.0
+offset_top = 123.0
+offset_right = 457.0
+offset_bottom = 145.0
+focus_mode = 0
+text = "购买"
+
+[node name="材料格二名" type="Label" parent="内容底"]
+offset_left = 404.0
+offset_top = 60.0
+offset_right = 462.0
+offset_bottom = 80.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+mouse_filter = 2
+
+; 开始钮（MButtonF 61×22）：洗炼/灵化在材料格正下方；开光在三枚件右侧（渲染时按模式挪）。
+[node name="开始" type="Button" parent="内容底"]
+offset_left = 350.0
+offset_top = 175.0
+offset_right = 411.0
+offset_bottom = 197.0
+text = "洗炼"

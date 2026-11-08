@@ -1,0 +1,359 @@
+[gd_scene load_steps=10 format=3]
+
+; 原版「商城」窗内容 —— `com/mxw/uifl/controls/cashShop/CashShopWindow2.as:481-564`（`newBackground()`）。
+;
+; ⚠️ **本场景的坐标一律是 AS3 的窗口局部坐标**，不是"内容区局部"：
+;    尺寸表 `数据/界面/窗口尺寸.json` 里这一页写了 `"原点": [0, 0]`，
+;    于是 `功能窗口.gd:496-499` 把 页面容器 摆在窗口 (0,0)。
+;    所以下面每个 offset 都能跟 AS3 的 `.x = / .y =` 逐行对上，**不要再减 (8,38)**。
+;    （2026-09-26 之前这一页写的是内容区局部，整体偏了 (-2,-3)。）
+;
+; AS3 对照表（`background = MWindow_background` 拉到 640x420，即本场景根）：
+;   background2   MYellow_background @ (6,38)  628x377  → `内容背景`
+;   listBg        MPane_background   @ (11,64) 618x312  → `商品列表框`
+;   itemScrollPane ScrollPane        @ (3,2)   608x308  → `商品列表框/商品滚动`（相对列表框）
+;   页签           MTabButtonF        @ x=16 起, y=44, 宽 49, 间距 +50
+;   搜索框底       MTextInput_background @ (470,42) 100x22 → `搜索词`（LineEdit 自带该底图）
+;   keywordsText   TextField         @ (473,45) 94x18
+;   searchBtn      MButtonF          @ (572,42) 宽 btn_width_two=37
+;   cashMoneyPane  CashMoneyPane     @ (17,385)
+;   rongYuLable    MGlowLabel        @ (238,387) 83x25 右对齐
+;   rongYuInput    MTextInput2       @ (321,385) 宽 120 右对齐
+;
+; ⚠️ 高度是 **420**，不是 423。`CashShopWindow2.as:249-252` 重写了 `get height()` 返回 423，
+;    但那是给窗口管理器**居中**用的；真正画出来的外框是 `background.height = 420`。
+;    尺寸表原先写 423，框会比原版高 3px（2026-09-26 更正）。
+;
+; 页签**不在本场景里** —— 名字与个数来自 `数据/界面/商城分页.json`（9 个，真值出自
+; GameData 的 `String/ShangCheng.yuanbao`），由 `社交窗口.gd::_render_shop()` 按真值宽度生成。
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/商城/券.png" id="1_quan"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/火影币.png" id="2_yuanbao"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/首页.png" id="4_first"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/上一页.png" id="5_prev"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/下一页.png" id="6_next"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/末页.png" id="7_last"]
+[ext_resource type="PackedScene" path="res://场景/界面/组件/商城购买窗.tscn" id="8_buy"]
+[ext_resource type="Script" path="res://脚本/界面/组件/原版三态钮.gd" id="9_三态"]
+
+[node name="原版商城窗口内容" type="Control"]
+offset_right = 640.0
+offset_bottom = 420.0
+mouse_filter = 2
+
+; CashShopWindow2.as:492-497 —— background2 = MYellow_background @ (6,38)，尺寸 width-12 / 377
+[node name="内容背景" type="Panel" parent="."]
+offset_left = 6.0
+offset_top = 38.0
+offset_right = 634.0
+offset_bottom = 415.0
+mouse_filter = 2
+theme_type_variation = &"OrigContentPanel"
+
+; CashShopWindow2.as:498-503 —— listBg = MPane_background @ (11,64) 618x312
+[node name="商品列表框" type="Panel" parent="."]
+offset_left = 11.0
+offset_top = 64.0
+offset_right = 629.0
+offset_bottom = 376.0
+mouse_filter = 2
+
+; CashShopWindow2.as:212-220 —— itemScrollPane @ (3,2)，宽 = listBg.width-10 = 608，高 308
+[node name="商品滚动" type="ScrollContainer" parent="商品列表框"]
+offset_left = 3.0
+offset_top = 2.0
+offset_right = 611.0
+offset_bottom = 310.0
+horizontal_scroll_mode = 0
+
+; 货架。原版 itemContainer 是 ScrollPane 的 source，商品行的 y = 行高(62) * 序号、x = 0。
+[node name="商品列表" type="Control" parent="商品列表框/商品滚动"]
+offset_right = 608.0
+offset_bottom = 308.0
+mouse_filter = 2
+
+; CashShopWindow2.as:192-209 —— 页签从 x=16 起、y=44，每个宽 btn_width_three=49、下一个 +50。
+; 页签由代码按真值生成（名字/个数来自数据），这里只放容器。
+[node name="分页" type="Control" parent="."]
+offset_left = 16.0
+offset_top = 44.0
+offset_right = 466.0
+offset_bottom = 66.0
+mouse_filter = 2
+
+; 九个页签**烘在场景里**（`CashShopWindow2.as:192-209` 的 `MTabButtonF`）：x 从 16 起（已烘进 `分页` 的 (16,44)）、
+; 宽 `btn_width_three`=49、步进 +50。文字仍由 `数据/界面/商城分页.json` 运行期填（下标就是 categoryId）。
+; 皮走主题变体 `OrigTab`（= `原版皮肤表.变体_分页` 四态：未选 / 未选悬停 / 选中 / 选中）。
+[node name="页签0" type="Button" parent="分页"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 49.0
+offset_bottom = 22.0
+toggle_mode = true
+focus_mode = 0
+theme_type_variation = &"OrigTab"
+
+[node name="页签1" type="Button" parent="分页"]
+offset_left = 50.0
+offset_top = 0.0
+offset_right = 99.0
+offset_bottom = 22.0
+toggle_mode = true
+focus_mode = 0
+theme_type_variation = &"OrigTab"
+
+[node name="页签2" type="Button" parent="分页"]
+offset_left = 100.0
+offset_top = 0.0
+offset_right = 149.0
+offset_bottom = 22.0
+toggle_mode = true
+focus_mode = 0
+theme_type_variation = &"OrigTab"
+
+[node name="页签3" type="Button" parent="分页"]
+offset_left = 150.0
+offset_top = 0.0
+offset_right = 199.0
+offset_bottom = 22.0
+toggle_mode = true
+focus_mode = 0
+theme_type_variation = &"OrigTab"
+
+[node name="页签4" type="Button" parent="分页"]
+offset_left = 200.0
+offset_top = 0.0
+offset_right = 249.0
+offset_bottom = 22.0
+toggle_mode = true
+focus_mode = 0
+theme_type_variation = &"OrigTab"
+
+[node name="页签5" type="Button" parent="分页"]
+offset_left = 250.0
+offset_top = 0.0
+offset_right = 299.0
+offset_bottom = 22.0
+toggle_mode = true
+focus_mode = 0
+theme_type_variation = &"OrigTab"
+
+[node name="页签6" type="Button" parent="分页"]
+offset_left = 300.0
+offset_top = 0.0
+offset_right = 349.0
+offset_bottom = 22.0
+toggle_mode = true
+focus_mode = 0
+theme_type_variation = &"OrigTab"
+
+[node name="页签7" type="Button" parent="分页"]
+offset_left = 350.0
+offset_top = 0.0
+offset_right = 399.0
+offset_bottom = 22.0
+toggle_mode = true
+focus_mode = 0
+theme_type_variation = &"OrigTab"
+
+[node name="页签8" type="Button" parent="分页"]
+offset_left = 400.0
+offset_top = 0.0
+offset_right = 449.0
+offset_bottom = 22.0
+toggle_mode = true
+focus_mode = 0
+theme_type_variation = &"OrigTab"
+
+
+; CashShopWindow2.as:504-508 + :535-544 —— 输入框底 (470,42) 100x22，文字框 (473,45) 94x18。
+; 两处用的是同一张 MTextInput_background；Godot 的 LineEdit 主题态就是这张图，故合成一个控件。
+[node name="搜索词" type="LineEdit" parent="."]
+offset_left = 470.0
+offset_top = 42.0
+offset_right = 570.0
+offset_bottom = 64.0
+placeholder_text = "请输入道具名称"
+
+; CashShopWindow2.as:545-552 —— searchBtn @ (572,42)，宽 UIConfig.btn_width_two = 37
+[node name="搜索" type="Button" parent="."]
+offset_left = 572.0
+offset_top = 42.0
+offset_right = 609.0
+offset_bottom = 64.0
+tooltip_text = "搜索商城商品"
+focus_mode = 0
+text = "搜索"
+
+; CashShopWindow2.as:510-518 —— cashMoneyPane / bandMoneyPane 都在 (17,385)。
+; ⚠️ bandMoneyPane **原版永远不显示**：`liJinTabTexts` 在 `:176` 初始化成空数组后再没被写过，
+;    `:143` 的 `indexOf` 恒为 -1，`SHOP_TYPE_BAND` 分支是死代码，故本场景不放它。
+;    （点券数额仍然显示 —— 在 cashMoneyPane 里，见 `:78-80` 的 bandMoneyIcon/bandMoneyText。）
+[node name="货币栏" type="Control" parent="."]
+offset_left = 17.0
+offset_top = 385.0
+offset_right = 640.0
+offset_bottom = 412.0
+mouse_filter = 2
+
+; CashMoneyPane.as:44-53 —— 两条 MTextInput_background：(0,1) 120x20 与 (122,1) 120x20
+[node name="元宝底" type="Panel" parent="货币栏"]
+offset_top = 1.0
+offset_right = 120.0
+offset_bottom = 21.0
+mouse_filter = 2
+theme_type_variation = &"OrigInputBox"
+
+[node name="点券底" type="Panel" parent="货币栏"]
+offset_left = 122.0
+offset_top = 1.0
+offset_right = 242.0
+offset_bottom = 21.0
+mouse_filter = 2
+theme_type_variation = &"OrigInputBox"
+
+; CashMoneyPane.as:80-83 —— cashMoneyIcon = MIconGoldYuanBaoF @ (4,5)，自然尺寸 19x13
+[node name="元宝图标" type="TextureRect" parent="货币栏"]
+offset_left = 4.0
+offset_top = 5.0
+offset_right = 23.0
+offset_bottom = 18.0
+mouse_filter = 2
+texture = ExtResource("2_yuanbao")
+expand_mode = 1
+stretch_mode = 5
+
+; CashMoneyPane.as:88-91 —— cashMoneyText @ (24,1) 94x18，右对齐，纯数字（**不带「元宝」二字**）
+[node name="元宝值" type="Label" parent="货币栏"]
+offset_left = 24.0
+offset_top = 1.0
+offset_right = 118.0
+offset_bottom = 19.0
+mouse_filter = 2
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+text = "0"
+
+; CashMoneyPane.as:78-80 —— bandMoneyIcon = QUAN_ICON @ (126,5)，符号 #102，19x13
+[node name="点券图标" type="TextureRect" parent="货币栏"]
+offset_left = 126.0
+offset_top = 5.0
+offset_right = 145.0
+offset_bottom = 18.0
+mouse_filter = 2
+texture = ExtResource("1_quan")
+expand_mode = 1
+stretch_mode = 5
+
+; CashMoneyPane.as:92-95 —— bandMoneyText @ (146,1) 94x18，右对齐
+[node name="点券值" type="Label" parent="货币栏"]
+offset_left = 146.0
+offset_top = 1.0
+offset_right = 240.0
+offset_bottom = 19.0
+mouse_filter = 2
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+text = "0"
+
+; ⚠️ CashMoneyPane.as:97-104 的 cashMoneyTipText（「1RMB = 10元宝」）**本工程删掉了**
+;   （2026-11-01 用户要求：充值逻辑早已拆除，这条提示没有意义）。
+;   原样的空位（货币栏 (437,1) ⇒ 页面坐标 454,386）正好让给下面被移过来的 `分页条`。
+
+; 原版这里有一枚「充值」按钮（CashMoneyPane.as:73-77 payBtn @ (530,-4)，皮肤 ChongZhiButtonUpSkin，
+; 点了跳 Config.ChargeUrl）。**本工程按用户要求删掉了**（2026-10-18，有意偏离原版：没有充值渠道）。
+
+; CashShopWindow2.as:519-534 —— rongYuLable @ (238,387) 83x25 右对齐；rongYuInput @ (321,385) 宽 120。
+; 文案 `CASHSHOP_RONGYU_JIFEN` =「荣誉积分:」（半角冒号，别改成全角）。
+[node name="荣誉积分标签" type="Label" parent="."]
+offset_left = 238.0
+offset_top = 387.0
+offset_right = 321.0
+offset_bottom = 412.0
+mouse_filter = 2
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+text = "荣誉积分:"
+
+[node name="荣誉积分底" type="Panel" parent="."]
+offset_left = 321.0
+offset_top = 385.0
+offset_right = 441.0
+offset_bottom = 406.0
+mouse_filter = 2
+theme_type_variation = &"OrigInputBox"
+
+; MTextInput2.as:126-127 —— 文字框在底条局部 (paddingLeft, 3)，原版这个框是右对齐且只读。
+[node name="荣誉积分值" type="Label" parent="."]
+offset_left = 326.0
+offset_top = 388.0
+offset_right = 436.0
+offset_bottom = 406.0
+mouse_filter = 2
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+text = "0"
+
+; CashShopWindow2.as:254-289 —— 翻页条 `PageComponent(total, 20, 3)`：首页/上一页/「n/N」/下一页/末页。
+;   宽 = 18+2+15+2+50+2+15+2+18 = 124（四个箭头的自然尺寸见各自 PNG）；
+;   `y = cashMoneyPane.y + 1` = 385+1 = **386**。
+;   ⚠️ **x 是本工程的偏离**：原版权威摆法是 `x = ((width - 124) >> 1) + 40` = **283**
+;    （`width` 取 `:415-418` 覆写值 610），但那样会压住「荣誉积分」那对控件
+;    （积分框 238..441；原版 `hideRongYuShop():317-320` 全项目零调用点 ⇒ 两者同屏，
+;    重叠是原版自带的）。2026-11-01 用户要求把翻页条移到右侧 —— 正好放进删掉的
+;    「1RMB = 10元宝」文案位（货币栏 (437,1) ⇒ 页面坐标 **454,386**），
+;    右缘 578 < 内容宽 610，与荣誉积分框之间留 13px。
+;   与首领窗的 `分页` 是同一个 PageComponent，尺寸/子钮摆法逐项一致（那边在 (224,270)）。
+[node name="分页条" type="Control" parent="."]
+offset_left = 454.0
+offset_top = 386.0
+offset_right = 578.0
+offset_bottom = 406.0
+mouse_filter = 2
+
+[node name="首页" type="TextureButton" parent="分页条"]
+offset_right = 18.0
+offset_bottom = 13.0
+texture_normal = ExtResource("4_first")
+script = ExtResource("9_三态")
+mouse_default_cursor_shape = 2
+
+[node name="上一页" type="TextureButton" parent="分页条"]
+offset_left = 20.0
+offset_right = 35.0
+offset_bottom = 13.0
+texture_normal = ExtResource("5_prev")
+
+; PageComponent.as:166-176 —— 页码文本 50x16、白字、居中、`letterSpacing = 2`
+; （Godot 的 Label 没有字距，这条没接；只有"1/5"这种短文本，先记着）。
+script = ExtResource("9_三态")
+mouse_default_cursor_shape = 2
+[node name="页码" type="Label" parent="分页条"]
+offset_left = 37.0
+offset_right = 87.0
+offset_bottom = 16.0
+mouse_filter = 2
+theme_override_font_sizes/font_size = 12
+text = "1/1"
+horizontal_alignment = 1
+
+[node name="下一页" type="TextureButton" parent="分页条"]
+offset_left = 89.0
+offset_right = 104.0
+offset_bottom = 13.0
+texture_normal = ExtResource("6_next")
+script = ExtResource("9_三态")
+mouse_default_cursor_shape = 2
+
+[node name="末页" type="TextureButton" parent="分页条"]
+offset_left = 106.0
+offset_right = 124.0
+offset_bottom = 13.0
+texture_normal = ExtResource("7_last")
+
+; ⚠️ 2026-10-13（§3.145）：这里**原先烘着一枚 `BuyEqpWindow` 实例**，已撤掉 ——
+;   原版那两扇购买窗都是 `PopUpMananger.centerWindow(…, true)` 弹在**舞台上**、带**整舞台遮罩**，
+;   而烘在页里的这枚父链在 `页面容器` 之下、**吃不到 `_overlay` 那层遮罩**（§3.137.2 的护栏）。
+;   现在统一走 `功能窗口.打开商城购买窗` ⇒ 挂在 `_overlay` 上，与另外两条入口同一枚。
+script = ExtResource("9_三态")
+mouse_default_cursor_shape = 2

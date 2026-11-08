@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://脚本/界面/组件/意志提示框.gd" id="1_tip"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/提示框底.png" id="2_bg"]
+
+; 原版 `YiZhiTip`：宽**定死 246**（`YiZhiTip.as:60` 只设 back.width），高随文字；
+; 底图 = 符号 699 `ToolTip_background`，与 `文字提示框` 同一张、同样**整张非等比拉伸**
+; （SWF 里 699 没有 scale9Grid）。必须用 `提示框底.png`（与元件图逐像素 0 差），
+; 不是同目录那张差 5110 像素的 `提示框.png`。
+; 默认可见 = 错：原版是悬停才 `addChild` 到 stage（`MToolTip.as:94-106`）。
+[node name="意志提示框" type="Control"]
+visible = false
+mouse_filter = 2
+script = ExtResource("1_tip")
+
+[node name="底" type="TextureRect" parent="."]
+offset_right = 246.0
+offset_bottom = 60.0
+mouse_filter = 2
+texture = ExtResource("2_bg")
+expand_mode = 1
+
+[node name="文字" type="RichTextLabel" parent="."]
+offset_left = 7.0
+offset_top = 7.0
+offset_right = 183.0
+offset_bottom = 53.0
+mouse_filter = 2
+bbcode_enabled = true
+text = "[color=#ffffff]占位[/color]"
+scroll_active = false
+autowrap_mode = 3
+theme_override_constants/line_separation = 7
+theme_override_font_sizes/normal_font_size = 12
+
+[node name="图标" type="TextureRect" parent="."]
+offset_left = 181.0
+offset_top = 7.0
+offset_right = 215.0
+offset_bottom = 41.0
+mouse_filter = 2
+expand_mode = 1

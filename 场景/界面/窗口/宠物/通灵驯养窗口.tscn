@@ -1,0 +1,67 @@
+[gd_scene load_steps=2 format=3]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tab"]
+
+[node name="原版通灵驯养内容" type="Control"]
+custom_minimum_size = Vector2(410, 362)
+
+[node name="内容底" type="Panel" parent="."]
+offset_left = -4.0
+offset_top = 12.0
+offset_right = 398.0
+offset_bottom = 366.0
+mouse_filter = 2
+
+[node name="页签_0" type="Button" parent="."]
+offset_left = 3.0
+offset_top = -7.0
+offset_right = 57.0
+offset_bottom = 15.0
+focus_mode = 0
+text = "通灵进阶"
+theme_override_styles/normal = SubResource("StyleBoxEmpty_tab")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_tab")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tab")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_tab")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tab")
+
+[node name="页签_1" type="Button" parent="."]
+offset_left = 57.0
+offset_top = -7.0
+offset_right = 111.0
+offset_bottom = 15.0
+focus_mode = 0
+text = "属性提升"
+theme_override_styles/normal = SubResource("StyleBoxEmpty_tab")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_tab")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tab")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_tab")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tab")
+
+[node name="页签_2" type="Button" parent="."]
+offset_left = 111.0
+offset_top = -7.0
+offset_right = 165.0
+offset_bottom = 15.0
+focus_mode = 0
+text = "宠物融魂"
+theme_override_styles/normal = SubResource("StyleBoxEmpty_tab")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_tab")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tab")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_tab")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tab")
+
+[node name="页签_3" type="Button" parent="."]
+visible = false
+offset_left = 165.0
+offset_top = -7.0
+offset_right = 219.0
+offset_bottom = 15.0
+focus_mode = 0
+text = "通灵进化"
+
+[node name="页容器" type="Control" parent="."]
+offset_left = 4.0
+offset_top = 22.0
+offset_right = 394.0
+offset_bottom = 360.0

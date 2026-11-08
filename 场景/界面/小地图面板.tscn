@@ -1,0 +1,537 @@
+[gd_scene format=3 uid="uid://b18ufcc1s38de"]
+
+[ext_resource type="Script" uid="uid://cl82duct2hxtv" path="res://脚本/界面/小地图面板.gd" id="1_v2x8i"]
+[ext_resource type="Texture2D" uid="uid://bltgngk31j23g" path="res://素材/界面/通用界面/SmallMapWindowF.png" id="2_wtxyu"]
+[ext_resource type="Texture2D" uid="uid://v6hvf7tjq6fj" path="res://素材/界面/专用控件/小地图宝箱.png" id="3_fkrd0"]
+[ext_resource type="Texture2D" uid="uid://byejqaki6at71" path="res://素材/界面/专用控件/小地图原石.png" id="4_aj2cm"]
+[ext_resource type="Texture2D" uid="uid://3ekqtmljlxo4" path="res://素材/界面/专用控件/小地图首领.png" id="5_o5mg6"]
+[ext_resource type="Texture2D" uid="uid://edo7dh2l6w6m" path="res://素材/界面/专用控件/小地图强化.png" id="6_v6ixg"]
+[ext_resource type="Texture2D" uid="uid://c4y7q0c3fyycx" path="res://素材/界面/专用控件/小地图技能书.png" id="7_5qwck"]
+[ext_resource type="Texture2D" uid="uid://dga52wm6cu6a7" path="res://素材/界面/专用控件/小地图遗址.png" id="8_o3mrk"]
+[ext_resource type="Texture2D" uid="uid://cs42ac5ukeqmu" path="res://素材/界面/通用界面/任务追踪标题.png" id="9_ij22j"]
+[ext_resource type="Texture2D" uid="uid://duffs1atn26yk" path="res://素材/界面/原版窗口/通用控件/减少按钮.png" id="10_expand_on"]
+[ext_resource type="Texture2D" uid="uid://dllfv8l5y5ac7" path="res://素材/界面/通用界面/UISwf_Text.swf_22.png" id="12_activity"]
+[ext_resource type="Texture2D" uid="uid://ciee38m2hayor" path="res://素材/界面/通用界面/UISwf_Text.swf_25.png" id="13_info"]
+[ext_resource type="Texture2D" uid="uid://b76yatqitlj8o" path="res://素材/界面/通用界面/UISwf_Text.swf_28.png" id="14_gift"]
+[ext_resource type="Script" uid="uid://ccgt6pel4ie11" path="res://素材/界面/任务界面/脚本/追踪背景.gd" id="15_tracker_bg"]
+[ext_resource type="Shader" uid="uid://eisvn21evar6" path="res://素材/界面/任务界面/脚本/渐变文字.gdshader" id="16_grad_shader"]
+[ext_resource type="Texture2D" uid="uid://cwpcidflyowgb" path="res://素材/界面/专用控件/小地图活跃度入口.png" id="17_huo_entry"]
+[ext_resource type="Texture2D" path="res://素材/界面/专用控件/小地图活跃度光晕.tres" id="18_huo_glow"]
+[ext_resource type="Texture2D" uid="uid://bar18xwhlemk8" path="res://素材/界面/专用控件/小地图礼包入口.png" id="19_prize_entry"]
+; 竞技场那两颗入口钮（原版 `SmallMapButtonBox` 数组的第 12、15 位）：
+;   竞技场 = `UISwf_PvpIcon_Image`（42×38，天然尺寸==设定宽 42 ⇒ 不缩），排名奖 = `UISwf_PaiMing_Button`（墨 39×42、
+;   原版 `width = 44` 只把**点击盒**撑到 44 ⇒ 皮不许跟着拉宽，故「排名奖钮」写 ignore_texture_size + STRETCH_KEEP）。
+[ext_resource type="Texture2D" path="res://素材/界面/专用控件/小地图竞技场.png" id="22_pvp_btn"]
+[ext_resource type="Texture2D" path="res://素材/界面/专用控件/小地图排名奖.png" id="23_prize_btn"]
+; 屏蔽/音量两颗的**独立皮肤**（原版元件 282/275 的 upSkin = MainLib 符号 281/274）。
+; 以前这里用 `AtlasTexture` 从整张 SmallMapWindowF 上裁 23×23 —— 裁块连底板背景一起算进了皮肤
+; （不透明 211 个 vs 真皮肤 185 个），静止看不出，一按原版的 getLightFilter 就会把底板一起提亮。
+; 选中态的另一张皮（selectedUpSkin = 符号 278/271）由 `小地图面板.gd` 的 `_态皮肤` 在运行期换。
+[ext_resource type="Texture2D" uid="uid://dsqvugpyt0fb2" path="res://素材/界面/专用控件/小地图屏蔽.png" id="20_shield"]
+[ext_resource type="Texture2D" uid="uid://cvqmu8seohbf6" path="res://素材/界面/专用控件/小地图音量.png" id="21_voice"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_quest_tab"]
+
+[sub_resource type="ShaderMaterial" id="r0"]
+shader = ExtResource("16_grad_shader")
+shader_parameter/top_color = Color(0.99216, 0.96078, 0.43922, 1)
+shader_parameter/bottom_color = Color(1, 0.61176, 0.26275, 1)
+shader_parameter/gradient_height = 19.0
+shader_parameter/gray_amount = 0.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_quest_tab_text"]
+content_margin_top = 1.0
+content_margin_bottom = 4.0
+
+[node name="小地图面板" type="CanvasLayer" unique_id=517169387 groups=["game_hud"]]
+layer = 20
+script = ExtResource("1_v2x8i")
+
+[node name="小地图区域" type="Control" parent="." unique_id=2039853881]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -4.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="小地图" type="Control" parent="小地图区域" unique_id=1719528827]
+anchors_preset = 0
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -195.0
+offset_bottom = 179.0
+grow_horizontal = 0
+
+[node name="小地图底图框" type="TextureRect" parent="小地图区域/小地图" unique_id=962649857]
+layout_mode = 0
+offset_right = 195.0
+offset_bottom = 179.0
+mouse_filter = 2
+texture = ExtResource("2_wtxyu")
+expand_mode = 1
+
+[node name="小地图内容槽" type="Control" parent="小地图区域/小地图" unique_id=382220760]
+clip_contents = true
+anchors_preset = 0
+offset_left = 49.0
+offset_top = 30.0
+offset_right = 189.0
+offset_bottom = 150.0
+mouse_filter = 2
+
+[node name="地图名" type="Label" parent="小地图区域/小地图" unique_id=2004798038]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 2.0
+offset_right = 167.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="坐标" type="Label" parent="小地图区域/小地图" unique_id=1791043369]
+layout_mode = 0
+offset_left = 16.0
+offset_right = 96.0
+offset_bottom = 19.0
+theme_override_colors/font_color = Color(1, 0.541, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_font_sizes/font_size = 12
+text = "[17,3]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="展开收起钮" type="Button" parent="小地图区域/小地图" unique_id=697925441]
+layout_mode = 0
+offset_left = 170.0
+offset_top = 2.0
+offset_right = 191.0
+offset_bottom = 23.0
+tooltip_text = "收起小地图"
+focus_mode = 0
+flat = true
+
+[node name="活动按钮" type="TextureButton" parent="小地图区域/小地图" unique_id=1566846745]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 25.0
+offset_right = 43.0
+offset_bottom = 52.0
+tooltip_text = "活动"
+focus_mode = 0
+texture_normal = ExtResource("12_activity")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="福利按钮" type="TextureButton" parent="小地图区域/小地图" unique_id=499589401]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 52.0
+offset_right = 43.0
+offset_bottom = 75.0
+tooltip_text = "开心有礼"
+focus_mode = 0
+texture_normal = ExtResource("14_gift")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="信息按钮" type="TextureButton" parent="小地图区域/小地图" unique_id=1528916708]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 75.0
+offset_right = 43.0
+offset_bottom = 98.0
+tooltip_text = "系统与聊天信息"
+focus_mode = 0
+texture_normal = ExtResource("13_info")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="屏蔽按钮" type="TextureButton" parent="小地图区域/小地图" unique_id=730876547]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 98.0
+offset_right = 43.0
+offset_bottom = 121.0
+tooltip_text = "点击后将显示/遮罩其他玩家的人物及其名称\n遮罩其他玩家可以提高游戏的流畅效果"
+focus_mode = 0
+toggle_mode = true
+texture_normal = ExtResource("20_shield")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="音量按钮" type="TextureButton" parent="小地图区域/小地图" unique_id=701157119]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 121.0
+offset_right = 43.0
+offset_bottom = 144.0
+tooltip_text = "点击后将打开/关闭游戏音乐与音效"
+focus_mode = 0
+toggle_mode = true
+texture_normal = ExtResource("21_voice")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="地图文字钮" type="Button" parent="小地图区域/小地图" unique_id=136343581]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 153.0
+offset_right = 87.0
+offset_bottom = 175.0
+tooltip_text = "打开大地图"
+focus_mode = 0
+theme_override_colors/font_color = Color(0.996, 0.827, 0.439, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxEmpty_quest_tab")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_quest_tab")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_quest_tab")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_quest_tab")
+text = "地图"
+flat = true
+
+[node name="排行文字钮" type="Button" parent="小地图区域/小地图" unique_id=260159328]
+layout_mode = 0
+offset_left = 99.0
+offset_top = 153.0
+offset_right = 139.0
+offset_bottom = 175.0
+tooltip_text = "打开排行榜"
+focus_mode = 0
+theme_override_colors/font_color = Color(0.996, 0.827, 0.439, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxEmpty_quest_tab")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_quest_tab")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_quest_tab")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_quest_tab")
+text = "排行"
+flat = true
+
+[node name="换线文字钮" type="Button" parent="小地图区域/小地图" unique_id=2129483482]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 153.0
+offset_right = 190.0
+offset_bottom = 175.0
+tooltip_text = "切换线路"
+focus_mode = 0
+theme_override_colors/font_color = Color(0.996, 0.827, 0.439, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxEmpty_quest_tab")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_quest_tab")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_quest_tab")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_quest_tab")
+text = "线路"
+flat = true
+
+[node name="常驻活动图标" type="Control" parent="小地图区域/小地图"]
+layout_mode = 0
+offset_left = -230.0
+offset_right = -230.0
+mouse_filter = 2
+
+[node name="活跃度光晕" type="TextureRect" parent="小地图区域/小地图/常驻活动图标"]
+layout_mode = 0
+offset_left = -50.0
+offset_top = 48.0
+offset_right = 32.0
+offset_bottom = 139.0
+visible = false
+mouse_filter = 2
+texture = ExtResource("18_huo_glow")
+expand_mode = 1
+
+[node name="活跃度入口" type="TextureButton" parent="小地图区域/小地图/常驻活动图标"]
+layout_mode = 0
+offset_left = -26.0
+offset_top = 72.0
+offset_right = 8.0
+offset_bottom = 115.0
+tooltip_text = "活跃度"
+focus_mode = 0
+texture_normal = ExtResource("17_huo_entry")
+ignore_texture_size = true
+
+[node name="礼包入口" type="TextureButton" parent="小地图区域/小地图/常驻活动图标"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 72.0
+offset_right = 87.0
+offset_bottom = 124.0
+focus_mode = 0
+texture_normal = ExtResource("19_prize_entry")
+ignore_texture_size = true
+
+[node name="点击领取" type="Label" parent="小地图区域/小地图/常驻活动图标/礼包入口"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 35.0
+offset_right = 63.0
+offset_bottom = 54.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.988, 0.957, 0.612, 1)
+theme_override_colors/font_outline_color = Color(0.408, 0.137, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "点击领取"
+
+[node name="功能按钮" type="Control" parent="小地图区域" unique_id=1884201017]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -178.0
+offset_top = 23.0
+offset_right = -178.0
+offset_bottom = 23.0
+grow_horizontal = 0
+mouse_filter = 2
+
+[node name="亲热天堂钮" type="TextureButton" parent="小地图区域/功能按钮" unique_id=1268409663]
+layout_mode = 0
+offset_left = -47.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 43.0
+tooltip_text = "亲热天堂"
+focus_mode = 0
+texture_normal = ExtResource("3_fkrd0")
+
+[node name="宝石工艺钮" type="TextureButton" parent="小地图区域/功能按钮" unique_id=1004311995]
+layout_mode = 0
+offset_left = -136.0
+offset_top = 0.0
+offset_right = -89.0
+offset_bottom = 39.0
+tooltip_text = "宝石工艺"
+focus_mode = 0
+texture_normal = ExtResource("4_aj2cm")
+
+[node name="首领刷新钮" type="TextureButton" parent="小地图区域/功能按钮" unique_id=1560300424]
+layout_mode = 0
+offset_left = -228.0
+offset_top = 0.0
+offset_right = -180.0
+offset_bottom = 47.0
+tooltip_text = "BOSS刷新信息"
+focus_mode = 0
+texture_normal = ExtResource("5_o5mg6")
+
+[node name="装备打造钮" type="TextureButton" parent="小地图区域/功能按钮" unique_id=1119875244]
+layout_mode = 0
+offset_left = -180.0
+offset_top = 0.0
+offset_right = -136.0
+offset_bottom = 43.0
+tooltip_text = "装备打造"
+focus_mode = 0
+texture_normal = ExtResource("6_v6ixg")
+
+[node name="秘笈合成钮" type="TextureButton" parent="小地图区域/功能按钮" unique_id=1387123310]
+layout_mode = 0
+offset_left = -89.0
+offset_top = 0.0
+offset_right = -47.0
+offset_bottom = 45.0
+tooltip_text = "秘籍合成"
+focus_mode = 0
+texture_normal = ExtResource("7_5qwck")
+
+[node name="意志背包钮" type="TextureButton" parent="小地图区域/功能按钮" unique_id=1729530746]
+layout_mode = 0
+offset_left = -277.0
+offset_top = 0.0
+offset_right = -228.0
+offset_bottom = 44.0
+tooltip_text = "意志背包"
+focus_mode = 0
+texture_normal = ExtResource("8_o3mrk")
+
+[node name="竞技场钮" type="TextureButton" parent="小地图区域/功能按钮"]
+layout_mode = 0
+offset_left = -319.0
+offset_top = 4.0
+offset_right = -277.0
+offset_bottom = 42.0
+tooltip_text = "竞技场"
+focus_mode = 0
+visible = false
+texture_normal = ExtResource("22_pvp_btn")
+
+[node name="排名奖钮" type="TextureButton" parent="小地图区域/功能按钮"]
+layout_mode = 0
+offset_left = -363.0
+offset_top = 0.0
+offset_right = -319.0
+offset_bottom = 42.0
+tooltip_text = "竞技场排名奖励"
+focus_mode = 0
+visible = false
+ignore_texture_size = true
+stretch_mode = 2
+texture_normal = ExtResource("23_prize_btn")
+
+[node name="任务追踪" type="Control" parent="小地图区域" unique_id=442498755]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -175.0
+offset_top = 178.0
+offset_bottom = 358.0
+grow_horizontal = 0
+
+[node name="追踪底" type="Control" parent="小地图区域/任务追踪" unique_id=177751695]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("15_tracker_bg")
+
+[node name="追踪标题条" type="TextureRect" parent="小地图区域/任务追踪" unique_id=274751321]
+layout_mode = 0
+offset_right = 175.0
+offset_bottom = 23.0
+mouse_filter = 2
+texture = ExtResource("9_ij22j")
+expand_mode = 1
+
+[node name="当前任务页签" type="Button" parent="小地图区域/任务追踪" unique_id=1021786435]
+material = SubResource("r0")
+layout_mode = 0
+offset_left = 20.0
+offset_top = 3.0
+offset_right = 78.0
+offset_bottom = 22.0
+focus_mode = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 0
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("StyleBoxEmpty_quest_tab_text")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_quest_tab_text")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_quest_tab_text")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_quest_tab_text")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_quest_tab_text")
+text = "当前任务"
+alignment = 0
+
+[node name="可接任务页签" type="Button" parent="小地图区域/任务追踪" unique_id=1233228382]
+material = SubResource("r0")
+layout_mode = 0
+offset_left = 90.0
+offset_top = 3.0
+offset_right = 148.0
+offset_bottom = 22.0
+focus_mode = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 0
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("StyleBoxEmpty_quest_tab_text")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_quest_tab_text")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_quest_tab_text")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_quest_tab_text")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_quest_tab_text")
+text = "可接任务"
+alignment = 0
+
+[node name="折叠钮" type="TextureButton" parent="小地图区域/任务追踪" unique_id=374247251]
+layout_mode = 0
+offset_left = 153.0
+offset_top = 2.0
+offset_right = 171.0
+offset_bottom = 20.0
+tooltip_text = "收起任务追踪"
+focus_mode = 0
+texture_normal = ExtResource("10_expand_on")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="任务内容区" type="ScrollContainer" parent="小地图区域/任务追踪" unique_id=545926574]
+clip_contents = true
+anchors_preset = 0
+offset_top = 22.0
+offset_right = 170.0
+offset_bottom = 180.0
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="任务列表" type="VBoxContainer" parent="小地图区域/任务追踪/任务内容区" unique_id=1791198729]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+theme_override_constants/separation = 0
+
+[node name="更多可玩内容" type="RichTextLabel" parent="小地图区域/任务追踪" unique_id=600100001]
+visible = false
+layout_mode = 0
+offset_top = 27.0
+offset_right = 175.0
+offset_bottom = 52.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 0
+theme_override_font_sizes/normal_font_size = 14
+bbcode_enabled = true
+text = "[color=#00ff00][u]更多可玩内容[/u][/color]"
+scroll_active = false
+
+; 通知条 = 原版 `API.ui.addNotice` → `MessageTipPane`：容器摆在
+; (**0.6×宽, 0.6×高**)、文字宽 300 自动换行、左对齐 14 号
+; （`UIMain2.as:3512-3513`、`MessageTipPane.as:createTextField`）。
+; 以前挂在小地图区域顶上(y=60) 且留在 CanvasLayer 20 ⇒ 既是"地图最上方"、又会被
+; 功能窗(110+) 盖住（2026-11-02 用户报「装备打造的信息不要显示在地图最上方」）。
+; 单独一层 layer=350：高于功能窗(110+)/头像面板(300)，仍低于模态确认与 Boss 进图确认层(400)。
+[node name="通知层" type="CanvasLayer" parent="."]
+layer = 350
+
+[node name="通知区域" type="Control" parent="通知层"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="通知条" type="Label" parent="通知层/通知区域"]
+visible = false
+layout_mode = 0
+anchor_left = 0.6
+anchor_top = 0.6
+anchor_right = 0.6
+anchor_bottom = 0.6
+offset_right = 300.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 0.88, 0.35, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_font_sizes/font_size = 14
+autowrap_mode = 3

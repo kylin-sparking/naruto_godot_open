@@ -1,0 +1,409 @@
+[gd_scene format=3 uid="uid://dcwpv3u5urdrk"]
+
+[ext_resource type="Script" uid="uid://2kplyrne8of8" path="res://脚本/界面/窗口/家族/家族子窗.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://c4wagf0kmwdlm" path="res://素材/界面/原版窗口/家族/盒底.png" id="t10"]
+[ext_resource type="Texture2D" uid="uid://du0ddt53vwo6x" path="res://素材/界面/原版窗口/家族/端帽左.png" id="t11"]
+[ext_resource type="Texture2D" uid="uid://mp7hnhk0s1e8" path="res://素材/界面/原版窗口/家族/端帽右.png" id="t12"]
+[ext_resource type="Texture2D" uid="uid://v8ognv0kia5f" path="res://素材/界面/原版窗口/通用控件/输入框.png" id="t13"]
+[ext_resource type="Texture2D" uid="uid://dkil44jd6c66y" path="res://素材/界面/原版窗口/通用控件/横向分隔线.png" id="t16"]
+[ext_resource type="Texture2D" uid="uid://lcbygen1ls1k" path="res://素材/界面/原版窗口/通用控件/上一页.png" id="t17"]
+[ext_resource type="Texture2D" uid="uid://dvamf62f4lctb" path="res://素材/界面/原版窗口/通用控件/下一页.png" id="t18"]
+[ext_resource type="Texture2D" uid="uid://gumwsn66i8rl" path="res://素材/界面/原版窗口/通用控件/物品格.png" id="t19"]
+[ext_resource type="Texture2D" uid="uid://dbqqi3qs1xv3u" path="res://素材/界面/原版窗口/家族/钮底.png" id="t20"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/家族/钮底61.png" id="t9"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/家族/钮底37.png" id="t10"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty1"]
+
+[node name="家族创建窗" type="Control" unique_id=1465787805]
+custom_minimum_size = Vector2(445, 356)
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_script")
+
+[node name="标签家族名" type="Label" parent="." unique_id=1534713603]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 8.0
+offset_right = 96.0
+offset_bottom = 28.0
+theme_override_colors/font_color = Color(1, 0.49803922, 0, 1)
+text = "输入家族名称："
+vertical_alignment = 1
+clip_text = true
+
+[node name="输入家族名底" type="NinePatchRect" parent="." unique_id=1137931397]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 8.0
+offset_right = 366.0
+offset_bottom = 29.0
+texture = ExtResource("t13")
+patch_margin_left = 6
+patch_margin_top = 5
+patch_margin_right = 6
+patch_margin_bottom = 6
+
+[node name="输入家族名" type="LineEdit" parent="." unique_id=769904004]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 8.0
+offset_right = 366.0
+offset_bottom = 29.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxEmpty1")
+theme_override_styles/focus = SubResource("StyleBoxEmpty1")
+max_length = 12
+
+[node name="钮检测重名" type="TextureButton" parent="." unique_id=110999429]
+layout_mode = 0
+offset_left = 371.0
+offset_top = 8.0
+offset_right = 432.0
+offset_bottom = 30.0
+focus_mode = 0
+texture_normal = ExtResource("t9")
+ignore_texture_size = true
+stretch_mode = 0
+metadata/skin = "res://素材/界面/原版窗口/家族/钮底61"
+metadata/act = "检测重名"
+
+[node name="Label" type="Label" parent="钮检测重名" unique_id=796565564]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "检测重名"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="标签公告名" type="Label" parent="." unique_id=1981100538]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 25.0
+offset_right = 98.0
+offset_bottom = 44.0
+theme_override_colors/font_color = Color(1, 0.49803922, 0, 1)
+text = "输入家族公告："
+vertical_alignment = 1
+clip_text = true
+
+[node name="输入文本公告底" type="NinePatchRect" parent="." unique_id=55168077]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 48.0
+offset_right = 435.0
+offset_bottom = 155.0
+texture = ExtResource("t13")
+patch_margin_left = 6
+patch_margin_top = 5
+patch_margin_right = 6
+patch_margin_bottom = 6
+
+[node name="输入文本公告" type="TextEdit" parent="." unique_id=1175487705]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 48.0
+offset_right = 435.0
+offset_bottom = 155.0
+theme_override_colors/font_color = Color(1, 0.5921569, 0.2509804, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxEmpty1")
+theme_override_styles/focus = SubResource("StyleBoxEmpty1")
+text = " "
+
+[node name="盒家徽说明" type="NinePatchRect" parent="." unique_id=197414230]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 175.0
+offset_right = 176.0
+offset_bottom = 316.0
+texture = ExtResource("t10")
+patch_margin_left = 7
+patch_margin_top = 6
+patch_margin_right = 7
+patch_margin_bottom = 7
+
+[node name="端帽左" type="TextureRect" parent="." unique_id=1003298286]
+layout_mode = 0
+offset_left = 322.0
+offset_top = 161.0
+offset_right = 349.0
+offset_bottom = 183.0
+mouse_filter = 2
+texture = ExtResource("t11")
+expand_mode = 1
+
+[node name="端帽右" type="TextureRect" parent="." unique_id=1160022959]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 161.0
+offset_right = 427.0
+offset_bottom = 183.0
+mouse_filter = 2
+texture = ExtResource("t12")
+expand_mode = 1
+
+[node name="标题家徽说明" type="Label" parent="." unique_id=877760766]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 156.0
+offset_right = 176.0
+offset_bottom = 174.0
+text = "家徽说明"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+
+[node name="盒图形选择" type="NinePatchRect" parent="." unique_id=1300117467]
+layout_mode = 0
+offset_left = 177.0
+offset_top = 175.0
+offset_right = 308.0
+offset_bottom = 316.0
+texture = ExtResource("t10")
+patch_margin_left = 7
+patch_margin_top = 6
+patch_margin_right = 7
+patch_margin_bottom = 7
+
+[node name="端帽左2" type="TextureRect" parent="." unique_id=2059894235]
+layout_mode = 0
+offset_left = 190.0
+offset_top = 161.0
+offset_right = 217.0
+offset_bottom = 183.0
+mouse_filter = 2
+texture = ExtResource("t11")
+expand_mode = 1
+
+[node name="端帽右2" type="TextureRect" parent="." unique_id=984216845]
+layout_mode = 0
+offset_left = 268.0
+offset_top = 161.0
+offset_right = 295.0
+offset_bottom = 183.0
+mouse_filter = 2
+texture = ExtResource("t12")
+expand_mode = 1
+
+[node name="标题图形选择" type="Label" parent="." unique_id=677552460]
+layout_mode = 0
+offset_left = 177.0
+offset_top = 156.0
+offset_right = 308.0
+offset_bottom = 174.0
+text = "图形选择"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+
+[node name="盒创建条件" type="NinePatchRect" parent="." unique_id=1988836613]
+layout_mode = 0
+offset_left = 309.0
+offset_top = 175.0
+offset_right = 440.0
+offset_bottom = 316.0
+texture = ExtResource("t10")
+patch_margin_left = 7
+patch_margin_top = 6
+patch_margin_right = 7
+patch_margin_bottom = 7
+
+[node name="端帽左3" type="TextureRect" parent="." unique_id=572735337]
+layout_mode = 0
+offset_left = 322.0
+offset_top = 161.0
+offset_right = 349.0
+offset_bottom = 183.0
+mouse_filter = 2
+texture = ExtResource("t11")
+expand_mode = 1
+
+[node name="端帽右3" type="TextureRect" parent="." unique_id=756537557]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 161.0
+offset_right = 427.0
+offset_bottom = 183.0
+mouse_filter = 2
+texture = ExtResource("t12")
+expand_mode = 1
+
+[node name="标题创建条件" type="Label" parent="." unique_id=1968846730]
+layout_mode = 0
+offset_left = 309.0
+offset_top = 156.0
+offset_right = 440.0
+offset_bottom = 174.0
+text = "创建条件"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+
+[node name="标签家徽名" type="Label" parent="." unique_id=1921571576]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 185.0
+offset_right = 108.0
+offset_bottom = 204.0
+theme_override_colors/font_color = Color(1, 0.49803922, 0, 1)
+text = "输入家徽名称："
+vertical_alignment = 1
+clip_text = true
+
+[node name="输入家徽名底" type="NinePatchRect" parent="." unique_id=51749585]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 209.0
+offset_right = 145.0
+offset_bottom = 230.0
+texture = ExtResource("t13")
+patch_margin_left = 6
+patch_margin_top = 5
+patch_margin_right = 6
+patch_margin_bottom = 6
+
+[node name="输入家徽名" type="LineEdit" parent="." unique_id=1379096834]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 209.0
+offset_right = 145.0
+offset_bottom = 230.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxEmpty1")
+theme_override_styles/focus = SubResource("StyleBoxEmpty1")
+max_length = 12
+
+[node name="线家徽" type="TextureRect" parent="." unique_id=1902559454]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 234.0
+offset_right = 176.0
+offset_bottom = 236.0
+mouse_filter = 2
+texture = ExtResource("t16")
+expand_mode = 1
+
+[node name="文本家徽说明" type="RichTextLabel" parent="." unique_id=1177677441]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 238.0
+offset_right = 157.0
+offset_bottom = 311.0
+mouse_filter = 2
+theme_override_colors/default_color = Color(1, 0.5921569, 0.2509804, 1)
+theme_override_constants/line_separation = 2
+theme_override_font_sizes/normal_font_size = 12
+bbcode_enabled = true
+text = "初始家徽为一级
+【可不断升级】
+家徽等级越高给家族
+带来的属性加成越高"
+scroll_active = false
+
+[node name="格家徽图" type="TextureRect" parent="." unique_id=778630169]
+layout_mode = 0
+offset_left = 222.0
+offset_top = 215.0
+offset_right = 262.0
+offset_bottom = 255.0
+mouse_filter = 2
+texture = ExtResource("t19")
+expand_mode = 1
+
+[node name="线旗页" type="TextureRect" parent="." unique_id=1228669079]
+layout_mode = 0
+offset_left = 182.0
+offset_top = 267.0
+offset_right = 303.0
+offset_bottom = 269.0
+mouse_filter = 2
+texture = ExtResource("t16")
+expand_mode = 1
+
+[node name="分页短旗选择" type="Control" parent="." unique_id=1999709119]
+anchors_preset = 0
+offset_left = 200.0
+offset_top = 279.0
+offset_right = 284.0
+offset_bottom = 297.0
+
+[node name="上一页" type="TextureButton" parent="分页短旗选择" unique_id=474868826]
+layout_mode = 0
+offset_right = 15.0
+offset_bottom = 13.0
+focus_mode = 0
+texture_normal = ExtResource("t17")
+ignore_texture_size = true
+
+[node name="页码" type="Label" parent="分页短旗选择" unique_id=1201245277]
+layout_mode = 0
+offset_left = 17.0
+offset_top = -2.0
+offset_right = 67.0
+offset_bottom = 16.0
+text = "1/1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="下一页" type="TextureButton" parent="分页短旗选择" unique_id=2101714496]
+layout_mode = 0
+offset_left = 69.0
+offset_right = 84.0
+offset_bottom = 13.0
+focus_mode = 0
+texture_normal = ExtResource("t18")
+ignore_texture_size = true
+
+[node name="标签创建条件" type="Label" parent="." unique_id=1645553935]
+layout_mode = 0
+offset_left = 309.0
+offset_top = 185.0
+offset_right = 436.0
+offset_bottom = 205.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "需要族の书1个"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+
+[node name="格族书" type="TextureRect" parent="." unique_id=1067999321]
+layout_mode = 0
+offset_left = 354.0
+offset_top = 215.0
+offset_right = 394.0
+offset_bottom = 255.0
+mouse_filter = 2
+texture = ExtResource("t19")
+expand_mode = 1
+
+[node name="钮创建" type="TextureButton" parent="." unique_id=1605906626]
+layout_mode = 0
+offset_left = 408.0
+offset_top = 329.0
+offset_right = 445.0
+offset_bottom = 351.0
+focus_mode = 0
+texture_normal = ExtResource("t10")
+ignore_texture_size = true
+stretch_mode = 0
+metadata/skin = "res://素材/界面/原版窗口/家族/钮底37"
+metadata/act = "创建"
+
+[node name="Label" type="Label" parent="钮创建" unique_id=1393639949]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "创建"
+horizontal_alignment = 1
+vertical_alignment = 1

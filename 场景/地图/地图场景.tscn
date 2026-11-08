@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://d3qbuw53knmnk"]
+
+[ext_resource type="Script" uid="uid://3kjvf27odb0a" path="res://脚本/地图/地图根节点.gd" id="1_map"]
+[ext_resource type="Script" uid="uid://bc4alaerwh40k" path="res://脚本/地图/地表.gd" id="2_fh"]
+[ext_resource type="Script" uid="uid://dkmwk16halvwl" path="res://脚本/角色/玩家.gd" id="3_player"]
+[ext_resource type="Script" uid="uid://rnu48wfk26h3" path="res://脚本/地图/地图块.gd" id="4_tile"]
+[ext_resource type="Script" uid="uid://b115vbb80ry6n" path="res://脚本/地图/攀爬物.gd" id="5_ladder"]
+[ext_resource type="Script" uid="uid://cpj4i1drjwcmt" path="res://脚本/地图/地图实体.gd" id="6_life"]
+[ext_resource type="Script" uid="uid://mqbeu7xcad03" path="res://脚本/地图/传送门.gd" id="7_portal"]
+[ext_resource type="Script" uid="uid://dicp8dh0dctnk" path="res://脚本/地图/地图物件.gd" id="8_objects"]
+[ext_resource type="PackedScene" path="res://场景/界面/头像面板.tscn" id="9_avatar"]
+[ext_resource type="PackedScene" path="res://场景/界面/小地图面板.tscn" id="10_minimap"]
+[ext_resource type="Script" uid="uid://cncmxh05723m6" path="res://脚本/地图/世界相机.gd" id="11_camera"]
+[ext_resource type="PackedScene" path="res://场景/界面/聊天面板.tscn" id="12_chat"]
+[ext_resource type="PackedScene" path="res://场景/界面/技能面板.tscn" id="13_skills"]
+[ext_resource type="PackedScene" path="res://场景/界面/窗口管理.tscn" id="14_features"]
+[ext_resource type="PackedScene" path="res://场景/界面/组件/系统消息.tscn" id="15_sysmsg"]
+
+[node name="地图场景" type="Node2D" unique_id=554028339]
+script = ExtResource("1_map")
+
+[node name="TileRoot" type="Node2D" parent="." unique_id=1673553523]
+script = ExtResource("4_tile")
+
+[node name="ObjectRoot" type="Node2D" parent="." unique_id=38492297]
+script = ExtResource("8_objects")
+
+[node name="Footholds" type="Node2D" parent="." unique_id=498617073]
+script = ExtResource("2_fh")
+
+[node name="LadderRoot" type="Node2D" parent="." unique_id=1543267660]
+script = ExtResource("5_ladder")
+
+[node name="LifeRoot" type="Node2D" parent="." unique_id=1947311183]
+script = ExtResource("6_life")
+
+[node name="PortalRoot" type="Node2D" parent="." unique_id=536016571]
+script = ExtResource("7_portal")
+
+[node name="Player" type="Node2D" parent="." unique_id=629174346]
+script = ExtResource("3_player")
+
+[node name="WorldCamera" type="Camera2D" parent="." unique_id=1242646719]
+script = ExtResource("11_camera")
+
+[node name="头像面板" parent="." instance=ExtResource("9_avatar")]
+
+[node name="小地图面板" parent="." instance=ExtResource("10_minimap")]
+
+[node name="聊天面板" parent="." instance=ExtResource("12_chat")]
+
+[node name="技能面板" parent="." instance=ExtResource("13_skills")]
+
+[node name="窗口管理" parent="." instance=ExtResource("14_features")]
+
+[node name="系统消息" parent="." instance=ExtResource("15_sysmsg")]

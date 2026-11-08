@@ -1,0 +1,2464 @@
+[gd_scene load_steps=14 format=3]
+; 由 `开发工具/生成意志背包场景.py` 从量具表 `截意志背包页.gd` 的 件路径/件期望 生成。
+; **改真值改量具表再重跑生成器，别手改本文件。**
+; 原版 `com/mxw/uifl/controls/yiZhi/YiZhiPackWindow.as`，663×548，整窗 1:1 移植。
+; 场景 y = AS3 窗口局部 y − 29（`窗口尺寸.json` 的「遗址」标 `整框: true`）。
+; 美术来自运行期包 `swf/UISwf/UISwf_yizhiPack.swf`（格底/格悬停/equipSkin/yizhiIcon/feng）。
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/内容面板.png" id="t0"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/输入框.png" id="t1"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/意志背包/格底.png" id="t2"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/意志背包/格悬停.png" id="t3"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/意志背包/封印.png" id="t4"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/意志背包/穿戴盘.png" id="t5"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/意志背包/意志力图标.png" id="t6"]
+[ext_resource type="Texture2D" path="res://素材/界面/专用控件/意志_一键合成.png" id="t7"]
+[ext_resource type="Texture2D" path="res://素材/界面/专用控件/意志_前往学习.png" id="t8"]
+[ext_resource type="Texture2D" path="res://素材/界面/专用控件/意志_自动升级.png" id="t9"]
+[ext_resource type="Texture2D" path="res://素材/界面/专用控件/意志_自动升级_灰.png" id="t10"]
+[sub_resource type="StyleBoxTexture" id="sb_yellow"]
+texture = ExtResource("t0")
+texture_margin_left = 11
+texture_margin_top = 10
+texture_margin_right = 10
+texture_margin_bottom = 11
+content_margin_left = 0.0
+content_margin_right = 0.0
+content_margin_top = 0.0
+content_margin_bottom = 0.0
+
+[sub_resource type="StyleBoxTexture" id="sb_input"]
+texture = ExtResource("t1")
+texture_margin_left = 6
+texture_margin_top = 5
+texture_margin_right = 7
+texture_margin_bottom = 6
+content_margin_left = 0.0
+content_margin_right = 0.0
+content_margin_top = 0.0
+content_margin_bottom = 0.0
+
+
+[node name="原版意志背包内容" type="Control"]
+custom_minimum_size = Vector2(663, 519)
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 663.0
+offset_bottom = 519.0
+
+[node name="外框黄底" type="Panel" parent="."]
+theme_override_styles/panel = SubResource("sb_yellow")
+
+layout_mode = 0
+offset_left = 8.0
+offset_top = 9.0
+offset_right = 655.0
+offset_bottom = 489.0
+
+[node name="拖动提示" type="Label" parent="."]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+horizontal_alignment = 0
+text = "意志可直接拖动放置于人物身上"
+
+layout_mode = 0
+offset_left = 38.0
+offset_top = 19.0
+offset_right = 511.0
+offset_bottom = 38.0
+
+[node name="意志值框" type="LineEdit" parent="."]
+theme_override_styles/normal = SubResource("sb_input")
+text = "0"
+alignment = 1
+
+layout_mode = 0
+offset_left = 522.0
+offset_top = 23.0
+offset_right = 647.0
+offset_bottom = 44.0
+
+[node name="意志力图标" type="TextureRect" parent="."]
+texture = ExtResource("t6")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 507.0
+offset_top = 18.0
+offset_right = 536.0
+offset_bottom = 48.0
+
+[node name="背包容器" type="Control" parent="."]
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 16.0
+offset_top = 51.0
+offset_right = 356.0
+offset_bottom = 460.0
+
+[node name="格_0" type="Control" parent="背包容器"]
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格_1" type="Control" parent="背包容器"]
+
+layout_mode = 0
+offset_left = 69.0
+offset_top = 0.0
+offset_right = 133.0
+offset_bottom = 64.0
+
+[node name="格_10" type="Control" parent="背包容器"]
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 138.0
+offset_right = 64.0
+offset_bottom = 202.0
+
+[node name="格_11" type="Control" parent="背包容器"]
+
+layout_mode = 0
+offset_left = 69.0
+offset_top = 138.0
+offset_right = 133.0
+offset_bottom = 202.0
+
+[node name="格_12" type="Control" parent="背包容器"]
+
+layout_mode = 0
+offset_left = 138.0
+offset_top = 138.0
+offset_right = 202.0
+offset_bottom = 202.0
+
+[node name="格_13" type="Control" parent="背包容器"]
+
+layout_mode = 0
+offset_left = 207.0
+offset_top = 138.0
+offset_right = 271.0
+offset_bottom = 202.0
+
+[node name="格_14" type="Control" parent="背包容器"]
+
+layout_mode = 0
+offset_left = 276.0
+offset_top = 138.0
+offset_right = 340.0
+offset_bottom = 202.0
+
+[node name="格_15" type="Control" parent="背包容器"]
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 207.0
+offset_right = 64.0
+offset_bottom = 271.0
+
+[node name="格_16" type="Control" parent="背包容器"]
+
+layout_mode = 0
+offset_left = 69.0
+offset_top = 207.0
+offset_right = 133.0
+offset_bottom = 271.0
+
+[node name="格_17" type="Control" parent="背包容器"]
+
+layout_mode = 0
+offset_left = 138.0
+offset_top = 207.0
+offset_right = 202.0
+offset_bottom = 271.0
+
+[node name="格_18" type="Control" parent="背包容器"]
+
+layout_mode = 0
+offset_left = 207.0
+offset_top = 207.0
+offset_right = 271.0
+offset_bottom = 271.0
+
+[node name="格_19" type="Control" parent="背包容器"]
+
+layout_mode = 0
+offset_left = 276.0
+offset_top = 207.0
+offset_right = 340.0
+offset_bottom = 271.0
+
+[node name="格_2" type="Control" parent="背包容器"]
+
+layout_mode = 0
+offset_left = 138.0
+offset_top = 0.0
+offset_right = 202.0
+offset_bottom = 64.0
+
+[node name="格_20" type="Control" parent="背包容器"]
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 276.0
+offset_right = 64.0
+offset_bottom = 340.0
+
+[node name="格_21" type="Control" parent="背包容器"]
+
+layout_mode = 0
+offset_left = 69.0
+offset_top = 276.0
+offset_right = 133.0
+offset_bottom = 340.0
+
+[node name="格_22" type="Control" parent="背包容器"]
+
+layout_mode = 0
+offset_left = 138.0
+offset_top = 276.0
+offset_right = 202.0
+offset_bottom = 340.0
+
+[node name="格_23" type="Control" parent="背包容器"]
+
+layout_mode = 0
+offset_left = 207.0
+offset_top = 276.0
+offset_right = 271.0
+offset_bottom = 340.0
+
+[node name="格_24" type="Control" parent="背包容器"]
+
+layout_mode = 0
+offset_left = 276.0
+offset_top = 276.0
+offset_right = 340.0
+offset_bottom = 340.0
+
+[node name="格_25" type="Control" parent="背包容器"]
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 345.0
+offset_right = 64.0
+offset_bottom = 409.0
+
+[node name="格_26" type="Control" parent="背包容器"]
+
+layout_mode = 0
+offset_left = 69.0
+offset_top = 345.0
+offset_right = 133.0
+offset_bottom = 409.0
+
+[node name="格_27" type="Control" parent="背包容器"]
+
+layout_mode = 0
+offset_left = 138.0
+offset_top = 345.0
+offset_right = 202.0
+offset_bottom = 409.0
+
+[node name="格_28" type="Control" parent="背包容器"]
+
+layout_mode = 0
+offset_left = 207.0
+offset_top = 345.0
+offset_right = 271.0
+offset_bottom = 409.0
+
+[node name="格_29" type="Control" parent="背包容器"]
+
+layout_mode = 0
+offset_left = 276.0
+offset_top = 345.0
+offset_right = 340.0
+offset_bottom = 409.0
+
+[node name="格_3" type="Control" parent="背包容器"]
+
+layout_mode = 0
+offset_left = 207.0
+offset_top = 0.0
+offset_right = 271.0
+offset_bottom = 64.0
+
+[node name="格_4" type="Control" parent="背包容器"]
+
+layout_mode = 0
+offset_left = 276.0
+offset_top = 0.0
+offset_right = 340.0
+offset_bottom = 64.0
+
+[node name="格_5" type="Control" parent="背包容器"]
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 69.0
+offset_right = 64.0
+offset_bottom = 133.0
+
+[node name="格_6" type="Control" parent="背包容器"]
+
+layout_mode = 0
+offset_left = 69.0
+offset_top = 69.0
+offset_right = 133.0
+offset_bottom = 133.0
+
+[node name="格_7" type="Control" parent="背包容器"]
+
+layout_mode = 0
+offset_left = 138.0
+offset_top = 69.0
+offset_right = 202.0
+offset_bottom = 133.0
+
+[node name="格_8" type="Control" parent="背包容器"]
+
+layout_mode = 0
+offset_left = 207.0
+offset_top = 69.0
+offset_right = 271.0
+offset_bottom = 133.0
+
+[node name="格_9" type="Control" parent="背包容器"]
+
+layout_mode = 0
+offset_left = 276.0
+offset_top = 69.0
+offset_right = 340.0
+offset_bottom = 133.0
+
+[node name="格底" type="TextureRect" parent="背包容器/格_0"]
+texture = ExtResource("t2")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格底" type="TextureRect" parent="背包容器/格_1"]
+texture = ExtResource("t2")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格底" type="TextureRect" parent="背包容器/格_10"]
+texture = ExtResource("t2")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格底" type="TextureRect" parent="背包容器/格_11"]
+texture = ExtResource("t2")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格底" type="TextureRect" parent="背包容器/格_12"]
+texture = ExtResource("t2")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格底" type="TextureRect" parent="背包容器/格_13"]
+texture = ExtResource("t2")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格底" type="TextureRect" parent="背包容器/格_14"]
+texture = ExtResource("t2")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格底" type="TextureRect" parent="背包容器/格_15"]
+texture = ExtResource("t2")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格底" type="TextureRect" parent="背包容器/格_16"]
+texture = ExtResource("t2")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格底" type="TextureRect" parent="背包容器/格_17"]
+texture = ExtResource("t2")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格底" type="TextureRect" parent="背包容器/格_18"]
+texture = ExtResource("t2")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格底" type="TextureRect" parent="背包容器/格_19"]
+texture = ExtResource("t2")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格底" type="TextureRect" parent="背包容器/格_2"]
+texture = ExtResource("t2")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格底" type="TextureRect" parent="背包容器/格_20"]
+texture = ExtResource("t2")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格底" type="TextureRect" parent="背包容器/格_21"]
+texture = ExtResource("t2")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格底" type="TextureRect" parent="背包容器/格_22"]
+texture = ExtResource("t2")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格底" type="TextureRect" parent="背包容器/格_23"]
+texture = ExtResource("t2")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格底" type="TextureRect" parent="背包容器/格_24"]
+texture = ExtResource("t2")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格底" type="TextureRect" parent="背包容器/格_25"]
+texture = ExtResource("t2")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格底" type="TextureRect" parent="背包容器/格_26"]
+texture = ExtResource("t2")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格底" type="TextureRect" parent="背包容器/格_27"]
+texture = ExtResource("t2")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格底" type="TextureRect" parent="背包容器/格_28"]
+texture = ExtResource("t2")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格底" type="TextureRect" parent="背包容器/格_29"]
+texture = ExtResource("t2")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格底" type="TextureRect" parent="背包容器/格_3"]
+texture = ExtResource("t2")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格底" type="TextureRect" parent="背包容器/格_4"]
+texture = ExtResource("t2")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格底" type="TextureRect" parent="背包容器/格_5"]
+texture = ExtResource("t2")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格底" type="TextureRect" parent="背包容器/格_6"]
+texture = ExtResource("t2")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格底" type="TextureRect" parent="背包容器/格_7"]
+texture = ExtResource("t2")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格底" type="TextureRect" parent="背包容器/格_8"]
+texture = ExtResource("t2")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格底" type="TextureRect" parent="背包容器/格_9"]
+texture = ExtResource("t2")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格悬停" type="TextureRect" parent="背包容器/格_0"]
+visible = false
+texture = ExtResource("t3")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格悬停" type="TextureRect" parent="背包容器/格_1"]
+visible = false
+texture = ExtResource("t3")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格悬停" type="TextureRect" parent="背包容器/格_10"]
+visible = false
+texture = ExtResource("t3")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格悬停" type="TextureRect" parent="背包容器/格_11"]
+visible = false
+texture = ExtResource("t3")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格悬停" type="TextureRect" parent="背包容器/格_12"]
+visible = false
+texture = ExtResource("t3")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格悬停" type="TextureRect" parent="背包容器/格_13"]
+visible = false
+texture = ExtResource("t3")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格悬停" type="TextureRect" parent="背包容器/格_14"]
+visible = false
+texture = ExtResource("t3")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格悬停" type="TextureRect" parent="背包容器/格_15"]
+visible = false
+texture = ExtResource("t3")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格悬停" type="TextureRect" parent="背包容器/格_16"]
+visible = false
+texture = ExtResource("t3")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格悬停" type="TextureRect" parent="背包容器/格_17"]
+visible = false
+texture = ExtResource("t3")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格悬停" type="TextureRect" parent="背包容器/格_18"]
+visible = false
+texture = ExtResource("t3")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格悬停" type="TextureRect" parent="背包容器/格_19"]
+visible = false
+texture = ExtResource("t3")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格悬停" type="TextureRect" parent="背包容器/格_2"]
+visible = false
+texture = ExtResource("t3")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格悬停" type="TextureRect" parent="背包容器/格_20"]
+visible = false
+texture = ExtResource("t3")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格悬停" type="TextureRect" parent="背包容器/格_21"]
+visible = false
+texture = ExtResource("t3")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格悬停" type="TextureRect" parent="背包容器/格_22"]
+visible = false
+texture = ExtResource("t3")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格悬停" type="TextureRect" parent="背包容器/格_23"]
+visible = false
+texture = ExtResource("t3")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格悬停" type="TextureRect" parent="背包容器/格_24"]
+visible = false
+texture = ExtResource("t3")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格悬停" type="TextureRect" parent="背包容器/格_25"]
+visible = false
+texture = ExtResource("t3")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格悬停" type="TextureRect" parent="背包容器/格_26"]
+visible = false
+texture = ExtResource("t3")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格悬停" type="TextureRect" parent="背包容器/格_27"]
+visible = false
+texture = ExtResource("t3")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格悬停" type="TextureRect" parent="背包容器/格_28"]
+visible = false
+texture = ExtResource("t3")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格悬停" type="TextureRect" parent="背包容器/格_29"]
+visible = false
+texture = ExtResource("t3")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格悬停" type="TextureRect" parent="背包容器/格_3"]
+visible = false
+texture = ExtResource("t3")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格悬停" type="TextureRect" parent="背包容器/格_4"]
+visible = false
+texture = ExtResource("t3")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格悬停" type="TextureRect" parent="背包容器/格_5"]
+visible = false
+texture = ExtResource("t3")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格悬停" type="TextureRect" parent="背包容器/格_6"]
+visible = false
+texture = ExtResource("t3")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格悬停" type="TextureRect" parent="背包容器/格_7"]
+visible = false
+texture = ExtResource("t3")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格悬停" type="TextureRect" parent="背包容器/格_8"]
+visible = false
+texture = ExtResource("t3")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格悬停" type="TextureRect" parent="背包容器/格_9"]
+visible = false
+texture = ExtResource("t3")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="名称" type="Label" parent="背包容器/格_0"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 32.0
+offset_right = 64.0
+offset_bottom = 51.0
+
+[node name="名称" type="Label" parent="背包容器/格_1"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 32.0
+offset_right = 64.0
+offset_bottom = 51.0
+
+[node name="名称" type="Label" parent="背包容器/格_10"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 32.0
+offset_right = 64.0
+offset_bottom = 51.0
+
+[node name="名称" type="Label" parent="背包容器/格_11"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 32.0
+offset_right = 64.0
+offset_bottom = 51.0
+
+[node name="名称" type="Label" parent="背包容器/格_12"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 32.0
+offset_right = 64.0
+offset_bottom = 51.0
+
+[node name="名称" type="Label" parent="背包容器/格_13"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 32.0
+offset_right = 64.0
+offset_bottom = 51.0
+
+[node name="名称" type="Label" parent="背包容器/格_14"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 32.0
+offset_right = 64.0
+offset_bottom = 51.0
+
+[node name="名称" type="Label" parent="背包容器/格_15"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 32.0
+offset_right = 64.0
+offset_bottom = 51.0
+
+[node name="名称" type="Label" parent="背包容器/格_16"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 32.0
+offset_right = 64.0
+offset_bottom = 51.0
+
+[node name="名称" type="Label" parent="背包容器/格_17"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 32.0
+offset_right = 64.0
+offset_bottom = 51.0
+
+[node name="名称" type="Label" parent="背包容器/格_18"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 32.0
+offset_right = 64.0
+offset_bottom = 51.0
+
+[node name="名称" type="Label" parent="背包容器/格_19"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 32.0
+offset_right = 64.0
+offset_bottom = 51.0
+
+[node name="名称" type="Label" parent="背包容器/格_2"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 32.0
+offset_right = 64.0
+offset_bottom = 51.0
+
+[node name="名称" type="Label" parent="背包容器/格_20"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 32.0
+offset_right = 64.0
+offset_bottom = 51.0
+
+[node name="名称" type="Label" parent="背包容器/格_21"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 32.0
+offset_right = 64.0
+offset_bottom = 51.0
+
+[node name="名称" type="Label" parent="背包容器/格_22"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 32.0
+offset_right = 64.0
+offset_bottom = 51.0
+
+[node name="名称" type="Label" parent="背包容器/格_23"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 32.0
+offset_right = 64.0
+offset_bottom = 51.0
+
+[node name="名称" type="Label" parent="背包容器/格_24"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 32.0
+offset_right = 64.0
+offset_bottom = 51.0
+
+[node name="名称" type="Label" parent="背包容器/格_25"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 32.0
+offset_right = 64.0
+offset_bottom = 51.0
+
+[node name="名称" type="Label" parent="背包容器/格_26"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 32.0
+offset_right = 64.0
+offset_bottom = 51.0
+
+[node name="名称" type="Label" parent="背包容器/格_27"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 32.0
+offset_right = 64.0
+offset_bottom = 51.0
+
+[node name="名称" type="Label" parent="背包容器/格_28"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 32.0
+offset_right = 64.0
+offset_bottom = 51.0
+
+[node name="名称" type="Label" parent="背包容器/格_29"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 32.0
+offset_right = 64.0
+offset_bottom = 51.0
+
+[node name="名称" type="Label" parent="背包容器/格_3"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 32.0
+offset_right = 64.0
+offset_bottom = 51.0
+
+[node name="名称" type="Label" parent="背包容器/格_4"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 32.0
+offset_right = 64.0
+offset_bottom = 51.0
+
+[node name="名称" type="Label" parent="背包容器/格_5"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 32.0
+offset_right = 64.0
+offset_bottom = 51.0
+
+[node name="名称" type="Label" parent="背包容器/格_6"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 32.0
+offset_right = 64.0
+offset_bottom = 51.0
+
+[node name="名称" type="Label" parent="背包容器/格_7"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 32.0
+offset_right = 64.0
+offset_bottom = 51.0
+
+[node name="名称" type="Label" parent="背包容器/格_8"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 32.0
+offset_right = 64.0
+offset_bottom = 51.0
+
+[node name="名称" type="Label" parent="背包容器/格_9"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 32.0
+offset_right = 64.0
+offset_bottom = 51.0
+
+[node name="等级" type="Label" parent="背包容器/格_0"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 46.0
+offset_right = 64.0
+offset_bottom = 65.0
+
+[node name="等级" type="Label" parent="背包容器/格_1"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 46.0
+offset_right = 64.0
+offset_bottom = 65.0
+
+[node name="等级" type="Label" parent="背包容器/格_10"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 46.0
+offset_right = 64.0
+offset_bottom = 65.0
+
+[node name="等级" type="Label" parent="背包容器/格_11"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 46.0
+offset_right = 64.0
+offset_bottom = 65.0
+
+[node name="等级" type="Label" parent="背包容器/格_12"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 46.0
+offset_right = 64.0
+offset_bottom = 65.0
+
+[node name="等级" type="Label" parent="背包容器/格_13"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 46.0
+offset_right = 64.0
+offset_bottom = 65.0
+
+[node name="等级" type="Label" parent="背包容器/格_14"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 46.0
+offset_right = 64.0
+offset_bottom = 65.0
+
+[node name="等级" type="Label" parent="背包容器/格_15"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 46.0
+offset_right = 64.0
+offset_bottom = 65.0
+
+[node name="等级" type="Label" parent="背包容器/格_16"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 46.0
+offset_right = 64.0
+offset_bottom = 65.0
+
+[node name="等级" type="Label" parent="背包容器/格_17"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 46.0
+offset_right = 64.0
+offset_bottom = 65.0
+
+[node name="等级" type="Label" parent="背包容器/格_18"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 46.0
+offset_right = 64.0
+offset_bottom = 65.0
+
+[node name="等级" type="Label" parent="背包容器/格_19"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 46.0
+offset_right = 64.0
+offset_bottom = 65.0
+
+[node name="等级" type="Label" parent="背包容器/格_2"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 46.0
+offset_right = 64.0
+offset_bottom = 65.0
+
+[node name="等级" type="Label" parent="背包容器/格_20"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 46.0
+offset_right = 64.0
+offset_bottom = 65.0
+
+[node name="等级" type="Label" parent="背包容器/格_21"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 46.0
+offset_right = 64.0
+offset_bottom = 65.0
+
+[node name="等级" type="Label" parent="背包容器/格_22"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 46.0
+offset_right = 64.0
+offset_bottom = 65.0
+
+[node name="等级" type="Label" parent="背包容器/格_23"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 46.0
+offset_right = 64.0
+offset_bottom = 65.0
+
+[node name="等级" type="Label" parent="背包容器/格_24"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 46.0
+offset_right = 64.0
+offset_bottom = 65.0
+
+[node name="等级" type="Label" parent="背包容器/格_25"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 46.0
+offset_right = 64.0
+offset_bottom = 65.0
+
+[node name="等级" type="Label" parent="背包容器/格_26"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 46.0
+offset_right = 64.0
+offset_bottom = 65.0
+
+[node name="等级" type="Label" parent="背包容器/格_27"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 46.0
+offset_right = 64.0
+offset_bottom = 65.0
+
+[node name="等级" type="Label" parent="背包容器/格_28"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 46.0
+offset_right = 64.0
+offset_bottom = 65.0
+
+[node name="等级" type="Label" parent="背包容器/格_29"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 46.0
+offset_right = 64.0
+offset_bottom = 65.0
+
+[node name="等级" type="Label" parent="背包容器/格_3"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 46.0
+offset_right = 64.0
+offset_bottom = 65.0
+
+[node name="等级" type="Label" parent="背包容器/格_4"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 46.0
+offset_right = 64.0
+offset_bottom = 65.0
+
+[node name="等级" type="Label" parent="背包容器/格_5"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 46.0
+offset_right = 64.0
+offset_bottom = 65.0
+
+[node name="等级" type="Label" parent="背包容器/格_6"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 46.0
+offset_right = 64.0
+offset_bottom = 65.0
+
+[node name="等级" type="Label" parent="背包容器/格_7"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 46.0
+offset_right = 64.0
+offset_bottom = 65.0
+
+[node name="等级" type="Label" parent="背包容器/格_8"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 46.0
+offset_right = 64.0
+offset_bottom = 65.0
+
+[node name="等级" type="Label" parent="背包容器/格_9"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 46.0
+offset_right = 64.0
+offset_bottom = 65.0
+
+[node name="穿戴盘" type="TextureRect" parent="."]
+texture = ExtResource("t5")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 391.0
+offset_top = 83.0
+offset_right = 621.0
+offset_bottom = 313.0
+
+[node name="穿戴容器" type="Control" parent="."]
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 391.0
+offset_top = 83.0
+offset_right = 621.0
+offset_bottom = 313.0
+
+[node name="格_1" type="Control" parent="穿戴容器"]
+
+layout_mode = 0
+offset_left = -29.0
+offset_top = 81.0
+offset_right = 35.0
+offset_bottom = 145.0
+
+[node name="格_2" type="Control" parent="穿戴容器"]
+
+layout_mode = 0
+offset_left = -4.0
+offset_top = 1.0
+offset_right = 60.0
+offset_bottom = 65.0
+
+[node name="格_3" type="Control" parent="穿戴容器"]
+
+layout_mode = 0
+offset_left = 80.0
+offset_top = -30.0
+offset_right = 144.0
+offset_bottom = 34.0
+
+[node name="格_4" type="Control" parent="穿戴容器"]
+
+layout_mode = 0
+offset_left = 165.0
+offset_top = 1.0
+offset_right = 229.0
+offset_bottom = 65.0
+
+[node name="格_5" type="Control" parent="穿戴容器"]
+
+layout_mode = 0
+offset_left = 195.0
+offset_top = 81.0
+offset_right = 259.0
+offset_bottom = 145.0
+
+[node name="格_6" type="Control" parent="穿戴容器"]
+
+layout_mode = 0
+offset_left = 165.0
+offset_top = 161.0
+offset_right = 229.0
+offset_bottom = 225.0
+
+[node name="格_7" type="Control" parent="穿戴容器"]
+
+layout_mode = 0
+offset_left = 80.0
+offset_top = 196.0
+offset_right = 144.0
+offset_bottom = 260.0
+
+[node name="格_8" type="Control" parent="穿戴容器"]
+
+layout_mode = 0
+offset_left = -4.0
+offset_top = 161.0
+offset_right = 60.0
+offset_bottom = 225.0
+
+[node name="格底" type="TextureRect" parent="穿戴容器/格_1"]
+texture = ExtResource("t2")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格底" type="TextureRect" parent="穿戴容器/格_2"]
+texture = ExtResource("t2")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格底" type="TextureRect" parent="穿戴容器/格_3"]
+texture = ExtResource("t2")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格底" type="TextureRect" parent="穿戴容器/格_4"]
+texture = ExtResource("t2")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格底" type="TextureRect" parent="穿戴容器/格_5"]
+texture = ExtResource("t2")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格底" type="TextureRect" parent="穿戴容器/格_6"]
+texture = ExtResource("t2")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格底" type="TextureRect" parent="穿戴容器/格_7"]
+texture = ExtResource("t2")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格底" type="TextureRect" parent="穿戴容器/格_8"]
+texture = ExtResource("t2")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="封印" type="TextureRect" parent="穿戴容器/格_1"]
+visible = false
+texture = ExtResource("t4")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="封印" type="TextureRect" parent="穿戴容器/格_2"]
+texture = ExtResource("t4")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="封印" type="TextureRect" parent="穿戴容器/格_3"]
+texture = ExtResource("t4")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="封印" type="TextureRect" parent="穿戴容器/格_4"]
+texture = ExtResource("t4")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="封印" type="TextureRect" parent="穿戴容器/格_5"]
+texture = ExtResource("t4")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="封印" type="TextureRect" parent="穿戴容器/格_6"]
+texture = ExtResource("t4")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="封印" type="TextureRect" parent="穿戴容器/格_7"]
+texture = ExtResource("t4")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="封印" type="TextureRect" parent="穿戴容器/格_8"]
+texture = ExtResource("t4")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格悬停" type="TextureRect" parent="穿戴容器/格_1"]
+visible = false
+texture = ExtResource("t3")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格悬停" type="TextureRect" parent="穿戴容器/格_2"]
+visible = false
+texture = ExtResource("t3")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格悬停" type="TextureRect" parent="穿戴容器/格_3"]
+visible = false
+texture = ExtResource("t3")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格悬停" type="TextureRect" parent="穿戴容器/格_4"]
+visible = false
+texture = ExtResource("t3")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格悬停" type="TextureRect" parent="穿戴容器/格_5"]
+visible = false
+texture = ExtResource("t3")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格悬停" type="TextureRect" parent="穿戴容器/格_6"]
+visible = false
+texture = ExtResource("t3")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格悬停" type="TextureRect" parent="穿戴容器/格_7"]
+visible = false
+texture = ExtResource("t3")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格悬停" type="TextureRect" parent="穿戴容器/格_8"]
+visible = false
+texture = ExtResource("t3")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="名称" type="Label" parent="穿戴容器/格_1"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 32.0
+offset_right = 64.0
+offset_bottom = 51.0
+
+[node name="名称" type="Label" parent="穿戴容器/格_2"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 32.0
+offset_right = 64.0
+offset_bottom = 51.0
+
+[node name="名称" type="Label" parent="穿戴容器/格_3"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 32.0
+offset_right = 64.0
+offset_bottom = 51.0
+
+[node name="名称" type="Label" parent="穿戴容器/格_4"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 32.0
+offset_right = 64.0
+offset_bottom = 51.0
+
+[node name="名称" type="Label" parent="穿戴容器/格_5"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 32.0
+offset_right = 64.0
+offset_bottom = 51.0
+
+[node name="名称" type="Label" parent="穿戴容器/格_6"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 32.0
+offset_right = 64.0
+offset_bottom = 51.0
+
+[node name="名称" type="Label" parent="穿戴容器/格_7"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 32.0
+offset_right = 64.0
+offset_bottom = 51.0
+
+[node name="名称" type="Label" parent="穿戴容器/格_8"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 32.0
+offset_right = 64.0
+offset_bottom = 51.0
+
+[node name="等级" type="Label" parent="穿戴容器/格_1"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 46.0
+offset_right = 64.0
+offset_bottom = 65.0
+
+[node name="等级" type="Label" parent="穿戴容器/格_2"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 46.0
+offset_right = 64.0
+offset_bottom = 65.0
+
+[node name="等级" type="Label" parent="穿戴容器/格_3"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 46.0
+offset_right = 64.0
+offset_bottom = 65.0
+
+[node name="等级" type="Label" parent="穿戴容器/格_4"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 46.0
+offset_right = 64.0
+offset_bottom = 65.0
+
+[node name="等级" type="Label" parent="穿戴容器/格_5"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 46.0
+offset_right = 64.0
+offset_bottom = 65.0
+
+[node name="等级" type="Label" parent="穿戴容器/格_6"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 46.0
+offset_right = 64.0
+offset_bottom = 65.0
+
+[node name="等级" type="Label" parent="穿戴容器/格_7"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 46.0
+offset_right = 64.0
+offset_bottom = 65.0
+
+[node name="等级" type="Label" parent="穿戴容器/格_8"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 46.0
+offset_right = 64.0
+offset_bottom = 65.0
+
+[node name="意志介绍" type="Label" parent="."]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 0.941176, 0, 1)
+horizontal_alignment = 2
+text = "[意志介绍]"
+underline = 1
+mouse_filter = 0
+
+layout_mode = 0
+offset_left = 538.0
+offset_top = 459.0
+offset_right = 648.0
+offset_bottom = 478.0
+
+[node name="一键合成" type="TextureButton" parent="."]
+texture_normal = ExtResource("t7")
+
+layout_mode = 0
+offset_left = 80.0
+offset_top = 492.0
+offset_right = 223.0
+offset_bottom = 514.0
+
+[node name="字" type="Label" parent="一键合成"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+horizontal_alignment = 1
+text = "一键合成背包内全部意志"
+vertical_alignment = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 143.0
+offset_bottom = 22.0
+
+[node name="前往学习" type="TextureButton" parent="."]
+texture_normal = ExtResource("t8")
+
+layout_mode = 0
+offset_left = 440.0
+offset_top = 492.0
+offset_right = 522.0
+offset_bottom = 514.0
+
+[node name="字" type="Label" parent="前往学习"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+horizontal_alignment = 1
+text = "前往学习意志"
+vertical_alignment = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 82.0
+offset_bottom = 22.0
+
+[node name="升级格" type="Control" parent="."]
+
+layout_mode = 0
+offset_left = 413.0
+offset_top = 359.0
+offset_right = 477.0
+offset_bottom = 423.0
+
+[node name="格底" type="TextureRect" parent="升级格"]
+texture = ExtResource("t2")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="格悬停" type="TextureRect" parent="升级格"]
+visible = false
+texture = ExtResource("t3")
+expand_mode = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="名称" type="Label" parent="升级格"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 32.0
+offset_right = 64.0
+offset_bottom = 51.0
+
+[node name="等级" type="Label" parent="升级格"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
+text = ""
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 46.0
+offset_right = 64.0
+offset_bottom = 65.0
+
+[node name="锁定勾选" type="CheckBox" parent="."]
+text = "锁定意志"
+theme_override_constants/h_separation = 2
+
+layout_mode = 0
+offset_left = 485.0
+offset_top = 364
+offset_right = 561.0
+offset_bottom = 383
+
+[node name="自动升级钮" type="TextureButton" parent="."]
+texture_normal = ExtResource("t9")
+disabled = true
+texture_disabled = ExtResource("t10")
+
+layout_mode = 0
+offset_left = 485.0
+offset_top = 391.0
+offset_right = 595.0
+offset_bottom = 413.0
+
+[node name="字" type="Label" parent="自动升级钮"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.576471, 0.576471, 0.576471, 1)
+horizontal_alignment = 1
+text = "自动升级意志"
+vertical_alignment = 1
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 110.0
+offset_bottom = 22.0
+
+[node name="自动升级提示" type="Label" parent="."]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0, 0.8, 0, 1)
+horizontal_alignment = 0
+text = "提示:任意背包/穿戴意志都可直接拖入此槽\n勾选锁定后点击升级即可"
+line_spacing = 6
+autowrap_mode = 0
+
+layout_mode = 0
+offset_left = 410.0
+offset_top = 423.0
+offset_right = 638.0
+offset_bottom = 463.0
+

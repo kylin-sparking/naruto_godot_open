@@ -1,0 +1,333 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/宠物/宠物装备面板.png" id="1_petbg"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/物品格.png" id="2_cell"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/横向分隔线.png" id="3_line"]
+
+[node name="宠物融魂页" type="Control"]
+custom_minimum_size = Vector2(388, 354)
+
+[node name="预览底" type="TextureRect" parent="."]
+offset_left = 5.0
+offset_top = 7.0
+offset_right = 193.0
+offset_bottom = 107.0
+mouse_filter = 2
+texture = ExtResource("1_petbg")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="预览宠物" type="Control" parent="."]
+offset_left = 100.0
+offset_top = 102.0
+mouse_filter = 2
+
+[node name="预览字" type="Label" parent="."]
+offset_left = 5.0
+offset_top = 7.0
+offset_right = 193.0
+offset_bottom = 37.0
+mouse_filter = 2
+theme_override_font_sizes/font_size = 16
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "尾兽预览"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="信息底" type="Panel" parent="."]
+offset_left = 195.0
+offset_top = 7.0
+offset_right = 392.0
+offset_bottom = 179.0
+
+[node name="宠物名" type="Label" parent="."]
+offset_left = 200.0
+offset_top = 12.0
+offset_right = 380.0
+offset_bottom = 32.0
+mouse_filter = 2
+
+[node name="技能格" type="TextureRect" parent="."]
+offset_left = 205.0
+offset_top = 32.0
+offset_right = 245.0
+offset_bottom = 72.0
+mouse_filter = 2
+texture = ExtResource("2_cell")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="技能图标" type="TextureRect" parent="技能格"]
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 37.0
+offset_bottom = 37.0
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="技能名" type="Label" parent="."]
+offset_left = 245.0
+offset_top = 32.0
+offset_right = 395.0
+offset_bottom = 52.0
+mouse_filter = 2
+
+[node name="技能说明框" type="Control" parent="."]
+offset_left = 245.0
+offset_top = 47.0
+offset_right = 385.0
+offset_bottom = 84.0
+mouse_filter = 2
+clip_contents = true
+
+[node name="技能说明" type="Label" parent="技能说明框"]
+offset_right = 140.0
+offset_bottom = 37.0
+mouse_filter = 2
+autowrap_mode = 2
+
+[node name="分隔线" type="TextureRect" parent="."]
+offset_left = 200.0
+offset_top = 84.0
+offset_right = 387.0
+offset_bottom = 86.0
+mouse_filter = 2
+texture = ExtResource("3_line")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="潜力_0" type="Label" parent="."]
+offset_left = 213.0
+offset_top = 84.0
+offset_right = 393.0
+offset_bottom = 102.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 0.569, 0, 1)
+
+[node name="潜力_1" type="Label" parent="."]
+offset_left = 213.0
+offset_top = 102.0
+offset_right = 393.0
+offset_bottom = 120.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 0.569, 0, 1)
+
+[node name="潜力_2" type="Label" parent="."]
+offset_left = 213.0
+offset_top = 120.0
+offset_right = 393.0
+offset_bottom = 138.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 0.569, 0, 1)
+
+[node name="潜力_3" type="Label" parent="."]
+offset_left = 213.0
+offset_top = 138.0
+offset_right = 393.0
+offset_bottom = 156.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 0.569, 0, 1)
+
+[node name="潜力_4" type="Label" parent="."]
+offset_left = 213.0
+offset_top = 156.0
+offset_right = 393.0
+offset_bottom = 174.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 0.569, 0, 1)
+
+[node name="红字" type="Label" parent="."]
+offset_left = 5.0
+offset_top = 89.0
+offset_right = 205.0
+offset_bottom = 109.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+text = "当前只开放4个尾兽形态!"
+horizontal_alignment = 1
+
+[node name="下底" type="Panel" parent="."]
+offset_left = 5.0
+offset_top = 182.0
+offset_right = 392.0
+offset_bottom = 325.0
+
+[node name="提示" type="Label" parent="."]
+offset_left = 13.0
+offset_top = 187.0
+offset_right = 213.0
+offset_bottom = 207.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 0.569, 0, 1)
+text = "你将要融合的宠物是："
+
+[node name="宠物行" type="Label" parent="."]
+offset_left = 13.0
+offset_top = 202.0
+offset_right = 213.0
+offset_bottom = 222.0
+mouse_filter = 2
+
+[node name="等级行" type="Label" parent="."]
+offset_left = 13.0
+offset_top = 217.0
+offset_right = 213.0
+offset_bottom = 237.0
+mouse_filter = 2
+
+[node name="残魂说明" type="Label" parent="."]
+offset_left = 13.0
+offset_top = 232.0
+offset_right = 78.0
+offset_bottom = 252.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.988, 0.765, 0.6, 1)
+text = "融魂需要："
+
+[node name="残魂格" type="Control" parent="."]
+offset_left = 78.0
+offset_top = 216.0
+offset_right = 128.0
+offset_bottom = 304.0
+[node name="名" type="Label" parent="残魂格"]
+offset_right = 50.0
+offset_bottom = 20.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 0.569, 0, 1)
+horizontal_alignment = 1
+[node name="底" type="TextureRect" parent="残魂格"]
+offset_left = 5.0
+offset_top = 20.0
+offset_right = 45.0
+offset_bottom = 60.0
+mouse_filter = 2
+texture = ExtResource("2_cell")
+expand_mode = 1
+stretch_mode = 0
+[node name="图标" type="TextureRect" parent="残魂格"]
+offset_left = 8.0
+offset_top = 23.0
+offset_right = 42.0
+offset_bottom = 57.0
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+[node name="数量" type="Label" parent="残魂格"]
+offset_left = 5.0
+offset_top = 40.0
+offset_right = 45.0
+offset_bottom = 60.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 2
+[node name="购买" type="Button" parent="残魂格"]
+offset_left = 6.5
+offset_top = 63.0
+offset_right = 43.5
+offset_bottom = 85.0
+focus_mode = 0
+text = "购买"
+
+[node name="金币" type="Label" parent="."]
+offset_left = 13.0
+offset_top = 300.0
+offset_right = 213.0
+offset_bottom = 320.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+
+[node name="说明底" type="Panel" parent="."]
+offset_left = 195.0
+offset_top = 187.0
+offset_right = 388.0
+offset_bottom = 320.0
+
+[node name="说明" type="RichTextLabel" parent="."]
+offset_left = 200.0
+offset_top = 192.0
+offset_right = 388.0
+offset_bottom = 325.0
+mouse_filter = 2
+bbcode_enabled = true
+scroll_active = false
+
+[node name="融魂按钮" type="Button" parent="."]
+offset_left = 333.0
+offset_top = 325.0
+offset_right = 394.0
+offset_bottom = 347.0
+focus_mode = 0
+text = "开始融魂"
+
+[node name="尾兽_0" type="Button" parent="."]
+offset_left = 10.0
+offset_top = 109.0
+offset_right = 59.0
+offset_bottom = 131.0
+focus_mode = 0
+text = "一尾"
+
+[node name="尾兽_1" type="Button" parent="."]
+offset_left = 75.0
+offset_top = 109.0
+offset_right = 124.0
+offset_bottom = 131.0
+focus_mode = 0
+text = "二尾"
+
+[node name="尾兽_2" type="Button" parent="."]
+offset_left = 140.0
+offset_top = 109.0
+offset_right = 189.0
+offset_bottom = 131.0
+focus_mode = 0
+text = "三尾"
+
+[node name="尾兽_3" type="Button" parent="."]
+offset_left = 10.0
+offset_top = 133.0
+offset_right = 59.0
+offset_bottom = 155.0
+focus_mode = 0
+text = "四尾"
+
+[node name="尾兽_4" type="Button" parent="."]
+offset_left = 75.0
+offset_top = 133.0
+offset_right = 124.0
+offset_bottom = 155.0
+focus_mode = 0
+text = "五尾"
+
+[node name="尾兽_5" type="Button" parent="."]
+offset_left = 140.0
+offset_top = 133.0
+offset_right = 189.0
+offset_bottom = 155.0
+focus_mode = 0
+text = "六尾"
+
+[node name="尾兽_6" type="Button" parent="."]
+offset_left = 10.0
+offset_top = 157.0
+offset_right = 59.0
+offset_bottom = 179.0
+focus_mode = 0
+text = "七尾"
+
+[node name="尾兽_7" type="Button" parent="."]
+offset_left = 75.0
+offset_top = 157.0
+offset_right = 124.0
+offset_bottom = 179.0
+focus_mode = 0
+text = "八尾"
+
+[node name="尾兽_8" type="Button" parent="."]
+offset_left = 140.0
+offset_top = 157.0
+offset_right = 189.0
+offset_bottom = 179.0
+focus_mode = 0
+text = "九尾"

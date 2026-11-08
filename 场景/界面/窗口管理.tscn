@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://脚本/界面/窗口管理.gd" id="1_mgr"]
+[ext_resource type="PackedScene" path="res://场景/界面/组件/邀请托盘.tscn" id="2_tray"]
+[ext_resource type="PackedScene" path="res://场景/界面/组件/模态确认弹.tscn" id="3_dlg"]
+[ext_resource type="PackedScene" path="res://场景/界面/窗口/师徒/师徒申请窗.tscn" id="4_shitu"]
+
+[node name="窗口管理" type="CanvasLayer"]
+layer = 110
+script = ExtResource("1_mgr")
+
+[node name="邀请托盘" parent="." instance=ExtResource("2_tray")]
+
+[node name="模态确认弹层" type="CanvasLayer" parent="."]
+layer = 400
+
+[node name="模态确认弹" parent="模态确认弹层" instance=ExtResource("3_dlg")]
+
+[node name="师徒申请层" type="CanvasLayer" parent="."]
+layer = 400
+
+[node name="师徒申请窗" parent="师徒申请层" instance=ExtResource("4_shitu")]

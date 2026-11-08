@@ -1,0 +1,175 @@
+[gd_scene load_steps=12 format=3]
+
+[ext_resource type="Script" path="res://脚本/界面/窗口/家族/家族子窗.gd" id="1_script"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/家族/盒底.png" id="t1"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/物品格.png" id="t2"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/物品格.png" id="t3"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/物品格.png" id="t4"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/物品格.png" id="t5"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/物品格.png" id="t6"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/物品格.png" id="t7"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/家族/钮底37.png" id="t8"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/家族/钮底37.png" id="t9"]
+
+
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/家族/钮底61.png" id="t10"]
+
+[node name="家族令牌窗" type="Control"]
+custom_minimum_size = Vector2(261, 166)
+script = ExtResource("1_script")
+窗名 = "家族令牌窗"
+
+[node name="文本说明" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 261.0
+offset_bottom = 64.0
+mouse_filter = 2
+theme_override_constants/line_separation = 2
+theme_override_font_sizes/normal_font_size = 12
+theme_override_colors/default_color = Color(1.0, 0.4980392156862745, 0.0, 1)
+bbcode_enabled = true
+text = "请放入你希望贡献到族贡仓库中的书籍\n每贡献一个任意类型的书籍，增加贡献值1点\n贡献后将无法取回，请慎重"
+scroll_active = false
+
+[node name="盒" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 65.0
+offset_right = 256.0
+offset_bottom = 131.0
+mouse_filter = 2
+texture = ExtResource("t1")
+patch_margin_left = 8
+patch_margin_top = 7
+patch_margin_right = 7
+patch_margin_bottom = 7
+
+[node name="格0" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 78.0
+offset_right = 48.0
+offset_bottom = 118.0
+mouse_filter = 2
+texture = ExtResource("t2")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="格1" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 78.0
+offset_right = 89.0
+offset_bottom = 118.0
+mouse_filter = 2
+texture = ExtResource("t3")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="格2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 90.0
+offset_top = 78.0
+offset_right = 130.0
+offset_bottom = 118.0
+mouse_filter = 2
+texture = ExtResource("t4")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="格3" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 131.0
+offset_top = 78.0
+offset_right = 171.0
+offset_bottom = 118.0
+mouse_filter = 2
+texture = ExtResource("t5")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="格4" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 172.0
+offset_top = 78.0
+offset_right = 212.0
+offset_bottom = 118.0
+mouse_filter = 2
+texture = ExtResource("t6")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="格5" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 213.0
+offset_top = 78.0
+offset_right = 253.0
+offset_bottom = 118.0
+mouse_filter = 2
+texture = ExtResource("t7")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="钮确定" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 139.0
+offset_right = 113.0
+offset_bottom = 161.0
+texture_normal = ExtResource("t10")
+expand_mode = 1
+stretch_mode = 0
+focus_mode = 0
+ignore_texture_size = true
+metadata/skin = "res://素材/界面/原版窗口/家族/钮底61"
+metadata/act = "确定"
+
+[node name="Label" type="Label" parent="钮确定"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+text = "确定"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="钮取消" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 172.0
+offset_top = 139.0
+offset_right = 233.0
+offset_bottom = 161.0
+texture_normal = ExtResource("t10")
+expand_mode = 1
+stretch_mode = 0
+focus_mode = 0
+ignore_texture_size = true
+metadata/skin = "res://素材/界面/原版窗口/家族/钮底61"
+metadata/act = "取消"
+
+[node name="Label" type="Label" parent="钮取消"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+text = "取消"
+horizontal_alignment = 1
+vertical_alignment = 1

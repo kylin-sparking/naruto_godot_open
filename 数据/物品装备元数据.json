@@ -1,0 +1,5311 @@
+{
+ "刻印值": {
+  "1": {
+   "name": "守鹤秘印",
+   "type": "ATK_RATE",
+   "value_max": 5,
+   "value_min": 1
+  },
+  "2": {
+   "name": "猫又秘印",
+   "type": "DAMAGE_REFLECT",
+   "value_max": 4,
+   "value_min": 1
+  },
+  "3": {
+   "name": "鼠蛟秘印",
+   "type": "IGNORE_DEF",
+   "value_max": 5,
+   "value_min": 1
+  },
+  "4": {
+   "name": "矶怃秘印",
+   "type": "DAMAGE_REDUCE",
+   "value_max": 4,
+   "value_min": 1
+  }
+ },
+ "灵器": {
+  "20100001": {
+   "add_attr": [
+    [
+     4,
+     600
+    ]
+   ],
+   "base_attr": [
+    [
+     4,
+     5000
+    ],
+    [
+     1,
+     50000
+    ]
+   ],
+   "required_job": 0,
+   "required_level": 60,
+   "special_attr": []
+  },
+  "20200001": {
+   "add_attr": [
+    [
+     4,
+     600
+    ]
+   ],
+   "base_attr": [
+    [
+     4,
+     6500
+    ],
+    [
+     1,
+     100000
+    ]
+   ],
+   "required_job": 0,
+   "required_level": 60,
+   "special_attr": [
+    [
+     "ANTI_SEAL_PET",
+     1
+    ],
+    [
+     "JOB_SKILL_LEVEL",
+     2
+    ],
+    [
+     "WORLD_SKILL_LEVEL",
+     2
+    ],
+    [
+     "ANTI_SEAL_PET_SHOW",
+     50
+    ]
+   ]
+  },
+  "20300001": {
+   "add_attr": [
+    [
+     4,
+     600
+    ]
+   ],
+   "base_attr": [
+    [
+     4,
+     5000
+    ],
+    [
+     1,
+     50000
+    ]
+   ],
+   "required_job": 0,
+   "required_level": 60,
+   "special_attr": []
+  },
+  "20400001": {
+   "add_attr": [
+    [
+     4,
+     600
+    ]
+   ],
+   "base_attr": [
+    [
+     4,
+     5000
+    ],
+    [
+     1,
+     50000
+    ]
+   ],
+   "required_job": 0,
+   "required_level": 60,
+   "special_attr": []
+  },
+  "20500001": {
+   "add_attr": [
+    [
+     4,
+     600
+    ]
+   ],
+   "base_attr": [
+    [
+     4,
+     5000
+    ],
+    [
+     1,
+     50000
+    ]
+   ],
+   "required_job": 0,
+   "required_level": 60,
+   "special_attr": []
+  }
+ },
+ "物品": {
+  "01010011": {
+   "base_attr_type": 4,
+   "base_attr_value": 35,
+   "max_endure": 150,
+   "position": -1,
+   "required_job": 100,
+   "stage": 1,
+   "type_name": "EquipA"
+  },
+  "01010012": {
+   "base_attr_type": 4,
+   "base_attr_value": 35,
+   "max_endure": 150,
+   "position": -1,
+   "required_job": 200,
+   "stage": 1,
+   "type_name": "EquipA"
+  },
+  "01010013": {
+   "base_attr_type": 4,
+   "base_attr_value": 35,
+   "max_endure": 150,
+   "position": -1,
+   "required_job": 300,
+   "stage": 1,
+   "type_name": "EquipA"
+  },
+  "01010014": {
+   "base_attr_type": 4,
+   "base_attr_value": 35,
+   "max_endure": 150,
+   "position": -1,
+   "required_job": 400,
+   "stage": 1,
+   "type_name": "EquipA"
+  },
+  "01010021": {
+   "base_attr_type": 4,
+   "base_attr_value": 116,
+   "max_endure": 180,
+   "position": -1,
+   "required_job": 100,
+   "stage": 2,
+   "type_name": "EquipA"
+  },
+  "01010022": {
+   "base_attr_type": 4,
+   "base_attr_value": 116,
+   "max_endure": 180,
+   "position": -1,
+   "required_job": 200,
+   "stage": 2,
+   "type_name": "EquipA"
+  },
+  "01010023": {
+   "base_attr_type": 4,
+   "base_attr_value": 116,
+   "max_endure": 180,
+   "position": -1,
+   "required_job": 300,
+   "stage": 2,
+   "type_name": "EquipA"
+  },
+  "01010024": {
+   "base_attr_type": 4,
+   "base_attr_value": 116,
+   "max_endure": 180,
+   "position": -1,
+   "required_job": 400,
+   "stage": 2,
+   "type_name": "EquipA"
+  },
+  "01010031": {
+   "base_attr_type": 4,
+   "base_attr_value": 216,
+   "max_endure": 210,
+   "position": -1,
+   "required_job": 100,
+   "stage": 3,
+   "type_name": "EquipA"
+  },
+  "01010032": {
+   "base_attr_type": 4,
+   "base_attr_value": 216,
+   "max_endure": 210,
+   "position": -1,
+   "required_job": 200,
+   "stage": 3,
+   "type_name": "EquipA"
+  },
+  "01010033": {
+   "base_attr_type": 4,
+   "base_attr_value": 216,
+   "max_endure": 210,
+   "position": -1,
+   "required_job": 300,
+   "stage": 3,
+   "type_name": "EquipA"
+  },
+  "01010034": {
+   "base_attr_type": 4,
+   "base_attr_value": 216,
+   "max_endure": 210,
+   "position": -1,
+   "required_job": 400,
+   "stage": 3,
+   "type_name": "EquipA"
+  },
+  "01010041": {
+   "base_attr_type": 4,
+   "base_attr_value": 315,
+   "max_endure": 240,
+   "position": -1,
+   "required_job": 100,
+   "stage": 4,
+   "type_name": "EquipA"
+  },
+  "01010042": {
+   "base_attr_type": 4,
+   "base_attr_value": 315,
+   "max_endure": 240,
+   "position": -1,
+   "required_job": 200,
+   "stage": 4,
+   "type_name": "EquipA"
+  },
+  "01010043": {
+   "base_attr_type": 4,
+   "base_attr_value": 315,
+   "max_endure": 240,
+   "position": -1,
+   "required_job": 300,
+   "stage": 4,
+   "type_name": "EquipA"
+  },
+  "01010044": {
+   "base_attr_type": 4,
+   "base_attr_value": 315,
+   "max_endure": 240,
+   "position": -1,
+   "required_job": 400,
+   "stage": 4,
+   "type_name": "EquipA"
+  },
+  "01010051": {
+   "base_attr_type": 4,
+   "base_attr_value": 414,
+   "max_endure": 270,
+   "position": -1,
+   "required_job": 100,
+   "stage": 5,
+   "type_name": "EquipA"
+  },
+  "01010052": {
+   "base_attr_type": 4,
+   "base_attr_value": 414,
+   "max_endure": 270,
+   "position": -1,
+   "required_job": 200,
+   "stage": 5,
+   "type_name": "EquipA"
+  },
+  "01010053": {
+   "base_attr_type": 4,
+   "base_attr_value": 414,
+   "max_endure": 270,
+   "position": -1,
+   "required_job": 300,
+   "stage": 5,
+   "type_name": "EquipA"
+  },
+  "01010054": {
+   "base_attr_type": 4,
+   "base_attr_value": 414,
+   "max_endure": 270,
+   "position": -1,
+   "required_job": 400,
+   "stage": 5,
+   "type_name": "EquipA"
+  },
+  "01010061": {
+   "base_attr_type": 4,
+   "base_attr_value": 514,
+   "max_endure": 300,
+   "position": -1,
+   "required_job": 100,
+   "stage": 6,
+   "type_name": "EquipA"
+  },
+  "01010062": {
+   "base_attr_type": 4,
+   "base_attr_value": 514,
+   "max_endure": 300,
+   "position": -1,
+   "required_job": 200,
+   "stage": 6,
+   "type_name": "EquipA"
+  },
+  "01010063": {
+   "base_attr_type": 4,
+   "base_attr_value": 514,
+   "max_endure": 300,
+   "position": -1,
+   "required_job": 300,
+   "stage": 6,
+   "type_name": "EquipA"
+  },
+  "01010064": {
+   "base_attr_type": 4,
+   "base_attr_value": 514,
+   "max_endure": 300,
+   "position": -1,
+   "required_job": 400,
+   "stage": 6,
+   "type_name": "EquipA"
+  },
+  "01010071": {
+   "base_attr_type": 4,
+   "base_attr_value": 615,
+   "max_endure": 330,
+   "position": -1,
+   "required_job": 100,
+   "stage": 7,
+   "type_name": "EquipA"
+  },
+  "01010072": {
+   "base_attr_type": 4,
+   "base_attr_value": 615,
+   "max_endure": 330,
+   "position": -1,
+   "required_job": 200,
+   "stage": 7,
+   "type_name": "EquipA"
+  },
+  "01010073": {
+   "base_attr_type": 4,
+   "base_attr_value": 615,
+   "max_endure": 330,
+   "position": -1,
+   "required_job": 300,
+   "stage": 7,
+   "type_name": "EquipA"
+  },
+  "01010074": {
+   "base_attr_type": 4,
+   "base_attr_value": 615,
+   "max_endure": 330,
+   "position": -1,
+   "required_job": 400,
+   "stage": 7,
+   "type_name": "EquipA"
+  },
+  "01020010": {
+   "base_attr_type": 4,
+   "base_attr_value": 8,
+   "max_endure": 150,
+   "position": -2,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipB"
+  },
+  "01020020": {
+   "base_attr_type": 4,
+   "base_attr_value": 28,
+   "max_endure": 180,
+   "position": -2,
+   "required_job": 0,
+   "stage": 2,
+   "type_name": "EquipB"
+  },
+  "01020030": {
+   "base_attr_type": 4,
+   "base_attr_value": 51,
+   "max_endure": 210,
+   "position": -2,
+   "required_job": 0,
+   "stage": 3,
+   "type_name": "EquipB"
+  },
+  "01020040": {
+   "base_attr_type": 4,
+   "base_attr_value": 74,
+   "max_endure": 240,
+   "position": -2,
+   "required_job": 0,
+   "stage": 4,
+   "type_name": "EquipB"
+  },
+  "01020050": {
+   "base_attr_type": 4,
+   "base_attr_value": 97,
+   "max_endure": 270,
+   "position": -2,
+   "required_job": 0,
+   "stage": 5,
+   "type_name": "EquipB"
+  },
+  "01020060": {
+   "base_attr_type": 4,
+   "base_attr_value": 119,
+   "max_endure": 300,
+   "position": -2,
+   "required_job": 0,
+   "stage": 6,
+   "type_name": "EquipB"
+  },
+  "01020070": {
+   "base_attr_type": 4,
+   "base_attr_value": 155,
+   "max_endure": 330,
+   "position": -2,
+   "required_job": 0,
+   "stage": 7,
+   "type_name": "EquipB"
+  },
+  "01030011": {
+   "base_attr_type": 5,
+   "base_attr_value": 23,
+   "max_endure": 150,
+   "position": -3,
+   "required_job": 100,
+   "stage": 1,
+   "type_name": "EquipC"
+  },
+  "01030012": {
+   "base_attr_type": 5,
+   "base_attr_value": 23,
+   "max_endure": 150,
+   "position": -3,
+   "required_job": 200,
+   "stage": 1,
+   "type_name": "EquipC"
+  },
+  "01030013": {
+   "base_attr_type": 5,
+   "base_attr_value": 23,
+   "max_endure": 150,
+   "position": -3,
+   "required_job": 300,
+   "stage": 1,
+   "type_name": "EquipC"
+  },
+  "01030014": {
+   "base_attr_type": 5,
+   "base_attr_value": 23,
+   "max_endure": 150,
+   "position": -3,
+   "required_job": 400,
+   "stage": 1,
+   "type_name": "EquipC"
+  },
+  "01030021": {
+   "base_attr_type": 5,
+   "base_attr_value": 76,
+   "max_endure": 180,
+   "position": -3,
+   "required_job": 100,
+   "stage": 2,
+   "type_name": "EquipC"
+  },
+  "01030022": {
+   "base_attr_type": 5,
+   "base_attr_value": 76,
+   "max_endure": 180,
+   "position": -3,
+   "required_job": 200,
+   "stage": 2,
+   "type_name": "EquipC"
+  },
+  "01030023": {
+   "base_attr_type": 5,
+   "base_attr_value": 76,
+   "max_endure": 180,
+   "position": -3,
+   "required_job": 300,
+   "stage": 2,
+   "type_name": "EquipC"
+  },
+  "01030024": {
+   "base_attr_type": 5,
+   "base_attr_value": 76,
+   "max_endure": 180,
+   "position": -3,
+   "required_job": 400,
+   "stage": 2,
+   "type_name": "EquipC"
+  },
+  "01030031": {
+   "base_attr_type": 5,
+   "base_attr_value": 128,
+   "max_endure": 210,
+   "position": -3,
+   "required_job": 100,
+   "stage": 3,
+   "type_name": "EquipC"
+  },
+  "01030032": {
+   "base_attr_type": 5,
+   "base_attr_value": 128,
+   "max_endure": 210,
+   "position": -3,
+   "required_job": 200,
+   "stage": 3,
+   "type_name": "EquipC"
+  },
+  "01030033": {
+   "base_attr_type": 5,
+   "base_attr_value": 128,
+   "max_endure": 210,
+   "position": -3,
+   "required_job": 300,
+   "stage": 3,
+   "type_name": "EquipC"
+  },
+  "01030034": {
+   "base_attr_type": 5,
+   "base_attr_value": 128,
+   "max_endure": 210,
+   "position": -3,
+   "required_job": 400,
+   "stage": 3,
+   "type_name": "EquipC"
+  },
+  "01030041": {
+   "base_attr_type": 5,
+   "base_attr_value": 181,
+   "max_endure": 240,
+   "position": -3,
+   "required_job": 100,
+   "stage": 4,
+   "type_name": "EquipC"
+  },
+  "01030042": {
+   "base_attr_type": 5,
+   "base_attr_value": 181,
+   "max_endure": 240,
+   "position": -3,
+   "required_job": 200,
+   "stage": 4,
+   "type_name": "EquipC"
+  },
+  "01030043": {
+   "base_attr_type": 5,
+   "base_attr_value": 181,
+   "max_endure": 240,
+   "position": -3,
+   "required_job": 300,
+   "stage": 4,
+   "type_name": "EquipC"
+  },
+  "01030044": {
+   "base_attr_type": 5,
+   "base_attr_value": 181,
+   "max_endure": 240,
+   "position": -3,
+   "required_job": 400,
+   "stage": 4,
+   "type_name": "EquipC"
+  },
+  "01030051": {
+   "base_attr_type": 5,
+   "base_attr_value": 234,
+   "max_endure": 270,
+   "position": -3,
+   "required_job": 100,
+   "stage": 5,
+   "type_name": "EquipC"
+  },
+  "01030052": {
+   "base_attr_type": 5,
+   "base_attr_value": 234,
+   "max_endure": 270,
+   "position": -3,
+   "required_job": 200,
+   "stage": 5,
+   "type_name": "EquipC"
+  },
+  "01030053": {
+   "base_attr_type": 5,
+   "base_attr_value": 234,
+   "max_endure": 270,
+   "position": -3,
+   "required_job": 300,
+   "stage": 5,
+   "type_name": "EquipC"
+  },
+  "01030054": {
+   "base_attr_type": 5,
+   "base_attr_value": 234,
+   "max_endure": 270,
+   "position": -3,
+   "required_job": 400,
+   "stage": 5,
+   "type_name": "EquipC"
+  },
+  "01030061": {
+   "base_attr_type": 5,
+   "base_attr_value": 287,
+   "max_endure": 300,
+   "position": -3,
+   "required_job": 100,
+   "stage": 6,
+   "type_name": "EquipC"
+  },
+  "01030062": {
+   "base_attr_type": 5,
+   "base_attr_value": 287,
+   "max_endure": 300,
+   "position": -3,
+   "required_job": 200,
+   "stage": 6,
+   "type_name": "EquipC"
+  },
+  "01030063": {
+   "base_attr_type": 5,
+   "base_attr_value": 287,
+   "max_endure": 300,
+   "position": -3,
+   "required_job": 300,
+   "stage": 6,
+   "type_name": "EquipC"
+  },
+  "01030064": {
+   "base_attr_type": 5,
+   "base_attr_value": 287,
+   "max_endure": 300,
+   "position": -3,
+   "required_job": 400,
+   "stage": 6,
+   "type_name": "EquipC"
+  },
+  "01030071": {
+   "base_attr_type": 5,
+   "base_attr_value": 360,
+   "max_endure": 330,
+   "position": -3,
+   "required_job": 100,
+   "stage": 7,
+   "type_name": "EquipC"
+  },
+  "01030072": {
+   "base_attr_type": 5,
+   "base_attr_value": 360,
+   "max_endure": 330,
+   "position": -3,
+   "required_job": 200,
+   "stage": 7,
+   "type_name": "EquipC"
+  },
+  "01030073": {
+   "base_attr_type": 5,
+   "base_attr_value": 360,
+   "max_endure": 330,
+   "position": -3,
+   "required_job": 300,
+   "stage": 7,
+   "type_name": "EquipC"
+  },
+  "01030074": {
+   "base_attr_type": 5,
+   "base_attr_value": 360,
+   "max_endure": 330,
+   "position": -3,
+   "required_job": 400,
+   "stage": 7,
+   "type_name": "EquipC"
+  },
+  "01040011": {
+   "base_attr_type": 5,
+   "base_attr_value": 7,
+   "max_endure": 150,
+   "position": -4,
+   "required_job": 100,
+   "stage": 1,
+   "type_name": "EquipD"
+  },
+  "01040012": {
+   "base_attr_type": 5,
+   "base_attr_value": 7,
+   "max_endure": 150,
+   "position": -4,
+   "required_job": 200,
+   "stage": 1,
+   "type_name": "EquipD"
+  },
+  "01040013": {
+   "base_attr_type": 5,
+   "base_attr_value": 7,
+   "max_endure": 150,
+   "position": -4,
+   "required_job": 300,
+   "stage": 1,
+   "type_name": "EquipD"
+  },
+  "01040014": {
+   "base_attr_type": 5,
+   "base_attr_value": 7,
+   "max_endure": 150,
+   "position": -4,
+   "required_job": 400,
+   "stage": 1,
+   "type_name": "EquipD"
+  },
+  "01040021": {
+   "base_attr_type": 5,
+   "base_attr_value": 21,
+   "max_endure": 180,
+   "position": -4,
+   "required_job": 100,
+   "stage": 2,
+   "type_name": "EquipD"
+  },
+  "01040022": {
+   "base_attr_type": 5,
+   "base_attr_value": 21,
+   "max_endure": 180,
+   "position": -4,
+   "required_job": 200,
+   "stage": 2,
+   "type_name": "EquipD"
+  },
+  "01040023": {
+   "base_attr_type": 5,
+   "base_attr_value": 21,
+   "max_endure": 180,
+   "position": -4,
+   "required_job": 300,
+   "stage": 2,
+   "type_name": "EquipD"
+  },
+  "01040024": {
+   "base_attr_type": 5,
+   "base_attr_value": 21,
+   "max_endure": 180,
+   "position": -4,
+   "required_job": 400,
+   "stage": 2,
+   "type_name": "EquipD"
+  },
+  "01040031": {
+   "base_attr_type": 5,
+   "base_attr_value": 36,
+   "max_endure": 210,
+   "position": -4,
+   "required_job": 100,
+   "stage": 3,
+   "type_name": "EquipD"
+  },
+  "01040032": {
+   "base_attr_type": 5,
+   "base_attr_value": 36,
+   "max_endure": 210,
+   "position": -4,
+   "required_job": 200,
+   "stage": 3,
+   "type_name": "EquipD"
+  },
+  "01040033": {
+   "base_attr_type": 5,
+   "base_attr_value": 36,
+   "max_endure": 210,
+   "position": -4,
+   "required_job": 300,
+   "stage": 3,
+   "type_name": "EquipD"
+  },
+  "01040034": {
+   "base_attr_type": 5,
+   "base_attr_value": 36,
+   "max_endure": 210,
+   "position": -4,
+   "required_job": 400,
+   "stage": 3,
+   "type_name": "EquipD"
+  },
+  "01040041": {
+   "base_attr_type": 5,
+   "base_attr_value": 50,
+   "max_endure": 240,
+   "position": -4,
+   "required_job": 100,
+   "stage": 4,
+   "type_name": "EquipD"
+  },
+  "01040042": {
+   "base_attr_type": 5,
+   "base_attr_value": 50,
+   "max_endure": 240,
+   "position": -4,
+   "required_job": 200,
+   "stage": 4,
+   "type_name": "EquipD"
+  },
+  "01040043": {
+   "base_attr_type": 5,
+   "base_attr_value": 50,
+   "max_endure": 240,
+   "position": -4,
+   "required_job": 300,
+   "stage": 4,
+   "type_name": "EquipD"
+  },
+  "01040044": {
+   "base_attr_type": 5,
+   "base_attr_value": 50,
+   "max_endure": 240,
+   "position": -4,
+   "required_job": 400,
+   "stage": 4,
+   "type_name": "EquipD"
+  },
+  "01040051": {
+   "base_attr_type": 5,
+   "base_attr_value": 64,
+   "max_endure": 270,
+   "position": -4,
+   "required_job": 100,
+   "stage": 5,
+   "type_name": "EquipD"
+  },
+  "01040052": {
+   "base_attr_type": 5,
+   "base_attr_value": 64,
+   "max_endure": 270,
+   "position": -4,
+   "required_job": 200,
+   "stage": 5,
+   "type_name": "EquipD"
+  },
+  "01040053": {
+   "base_attr_type": 5,
+   "base_attr_value": 64,
+   "max_endure": 270,
+   "position": -4,
+   "required_job": 300,
+   "stage": 5,
+   "type_name": "EquipD"
+  },
+  "01040054": {
+   "base_attr_type": 5,
+   "base_attr_value": 64,
+   "max_endure": 270,
+   "position": -4,
+   "required_job": 400,
+   "stage": 5,
+   "type_name": "EquipD"
+  },
+  "01040061": {
+   "base_attr_type": 5,
+   "base_attr_value": 79,
+   "max_endure": 300,
+   "position": -4,
+   "required_job": 100,
+   "stage": 6,
+   "type_name": "EquipD"
+  },
+  "01040062": {
+   "base_attr_type": 5,
+   "base_attr_value": 79,
+   "max_endure": 300,
+   "position": -4,
+   "required_job": 200,
+   "stage": 6,
+   "type_name": "EquipD"
+  },
+  "01040063": {
+   "base_attr_type": 5,
+   "base_attr_value": 79,
+   "max_endure": 300,
+   "position": -4,
+   "required_job": 300,
+   "stage": 6,
+   "type_name": "EquipD"
+  },
+  "01040064": {
+   "base_attr_type": 5,
+   "base_attr_value": 79,
+   "max_endure": 300,
+   "position": -4,
+   "required_job": 400,
+   "stage": 6,
+   "type_name": "EquipD"
+  },
+  "01040071": {
+   "base_attr_type": 5,
+   "base_attr_value": 115,
+   "max_endure": 330,
+   "position": -4,
+   "required_job": 100,
+   "stage": 7,
+   "type_name": "EquipD"
+  },
+  "01040072": {
+   "base_attr_type": 5,
+   "base_attr_value": 115,
+   "max_endure": 330,
+   "position": -4,
+   "required_job": 200,
+   "stage": 7,
+   "type_name": "EquipD"
+  },
+  "01040073": {
+   "base_attr_type": 5,
+   "base_attr_value": 115,
+   "max_endure": 330,
+   "position": -4,
+   "required_job": 300,
+   "stage": 7,
+   "type_name": "EquipD"
+  },
+  "01040074": {
+   "base_attr_type": 5,
+   "base_attr_value": 115,
+   "max_endure": 330,
+   "position": -4,
+   "required_job": 400,
+   "stage": 7,
+   "type_name": "EquipD"
+  },
+  "01050011": {
+   "base_attr_type": 5,
+   "base_attr_value": 7,
+   "max_endure": 150,
+   "position": -5,
+   "required_job": 100,
+   "stage": 1,
+   "type_name": "EquipE"
+  },
+  "01050012": {
+   "base_attr_type": 5,
+   "base_attr_value": 7,
+   "max_endure": 150,
+   "position": -5,
+   "required_job": 200,
+   "stage": 1,
+   "type_name": "EquipE"
+  },
+  "01050013": {
+   "base_attr_type": 5,
+   "base_attr_value": 7,
+   "max_endure": 150,
+   "position": -5,
+   "required_job": 300,
+   "stage": 1,
+   "type_name": "EquipE"
+  },
+  "01050014": {
+   "base_attr_type": 5,
+   "base_attr_value": 7,
+   "max_endure": 150,
+   "position": -5,
+   "required_job": 400,
+   "stage": 1,
+   "type_name": "EquipE"
+  },
+  "01050021": {
+   "base_attr_type": 5,
+   "base_attr_value": 21,
+   "max_endure": 180,
+   "position": -5,
+   "required_job": 100,
+   "stage": 2,
+   "type_name": "EquipE"
+  },
+  "01050022": {
+   "base_attr_type": 5,
+   "base_attr_value": 21,
+   "max_endure": 180,
+   "position": -5,
+   "required_job": 200,
+   "stage": 2,
+   "type_name": "EquipE"
+  },
+  "01050023": {
+   "base_attr_type": 5,
+   "base_attr_value": 21,
+   "max_endure": 180,
+   "position": -5,
+   "required_job": 300,
+   "stage": 2,
+   "type_name": "EquipE"
+  },
+  "01050024": {
+   "base_attr_type": 5,
+   "base_attr_value": 21,
+   "max_endure": 180,
+   "position": -5,
+   "required_job": 400,
+   "stage": 2,
+   "type_name": "EquipE"
+  },
+  "01050031": {
+   "base_attr_type": 5,
+   "base_attr_value": 36,
+   "max_endure": 210,
+   "position": -5,
+   "required_job": 100,
+   "stage": 3,
+   "type_name": "EquipE"
+  },
+  "01050032": {
+   "base_attr_type": 5,
+   "base_attr_value": 36,
+   "max_endure": 210,
+   "position": -5,
+   "required_job": 200,
+   "stage": 3,
+   "type_name": "EquipE"
+  },
+  "01050033": {
+   "base_attr_type": 5,
+   "base_attr_value": 36,
+   "max_endure": 210,
+   "position": -5,
+   "required_job": 300,
+   "stage": 3,
+   "type_name": "EquipE"
+  },
+  "01050034": {
+   "base_attr_type": 5,
+   "base_attr_value": 36,
+   "max_endure": 210,
+   "position": -5,
+   "required_job": 400,
+   "stage": 3,
+   "type_name": "EquipE"
+  },
+  "01050041": {
+   "base_attr_type": 5,
+   "base_attr_value": 50,
+   "max_endure": 240,
+   "position": -5,
+   "required_job": 100,
+   "stage": 4,
+   "type_name": "EquipE"
+  },
+  "01050042": {
+   "base_attr_type": 5,
+   "base_attr_value": 50,
+   "max_endure": 240,
+   "position": -5,
+   "required_job": 200,
+   "stage": 4,
+   "type_name": "EquipE"
+  },
+  "01050043": {
+   "base_attr_type": 5,
+   "base_attr_value": 50,
+   "max_endure": 240,
+   "position": -5,
+   "required_job": 300,
+   "stage": 4,
+   "type_name": "EquipE"
+  },
+  "01050044": {
+   "base_attr_type": 5,
+   "base_attr_value": 50,
+   "max_endure": 240,
+   "position": -5,
+   "required_job": 400,
+   "stage": 4,
+   "type_name": "EquipE"
+  },
+  "01050051": {
+   "base_attr_type": 5,
+   "base_attr_value": 64,
+   "max_endure": 270,
+   "position": -5,
+   "required_job": 100,
+   "stage": 5,
+   "type_name": "EquipE"
+  },
+  "01050052": {
+   "base_attr_type": 5,
+   "base_attr_value": 64,
+   "max_endure": 270,
+   "position": -5,
+   "required_job": 200,
+   "stage": 5,
+   "type_name": "EquipE"
+  },
+  "01050053": {
+   "base_attr_type": 5,
+   "base_attr_value": 64,
+   "max_endure": 270,
+   "position": -5,
+   "required_job": 300,
+   "stage": 5,
+   "type_name": "EquipE"
+  },
+  "01050054": {
+   "base_attr_type": 5,
+   "base_attr_value": 64,
+   "max_endure": 270,
+   "position": -5,
+   "required_job": 400,
+   "stage": 5,
+   "type_name": "EquipE"
+  },
+  "01050061": {
+   "base_attr_type": 5,
+   "base_attr_value": 79,
+   "max_endure": 300,
+   "position": -5,
+   "required_job": 100,
+   "stage": 6,
+   "type_name": "EquipE"
+  },
+  "01050062": {
+   "base_attr_type": 5,
+   "base_attr_value": 79,
+   "max_endure": 300,
+   "position": -5,
+   "required_job": 200,
+   "stage": 6,
+   "type_name": "EquipE"
+  },
+  "01050063": {
+   "base_attr_type": 5,
+   "base_attr_value": 79,
+   "max_endure": 300,
+   "position": -5,
+   "required_job": 300,
+   "stage": 6,
+   "type_name": "EquipE"
+  },
+  "01050064": {
+   "base_attr_type": 5,
+   "base_attr_value": 79,
+   "max_endure": 300,
+   "position": -5,
+   "required_job": 400,
+   "stage": 6,
+   "type_name": "EquipE"
+  },
+  "01050071": {
+   "base_attr_type": 5,
+   "base_attr_value": 115,
+   "max_endure": 330,
+   "position": -5,
+   "required_job": 100,
+   "stage": 7,
+   "type_name": "EquipE"
+  },
+  "01050072": {
+   "base_attr_type": 5,
+   "base_attr_value": 115,
+   "max_endure": 330,
+   "position": -5,
+   "required_job": 200,
+   "stage": 7,
+   "type_name": "EquipE"
+  },
+  "01050073": {
+   "base_attr_type": 5,
+   "base_attr_value": 115,
+   "max_endure": 330,
+   "position": -5,
+   "required_job": 300,
+   "stage": 7,
+   "type_name": "EquipE"
+  },
+  "01050074": {
+   "base_attr_type": 5,
+   "base_attr_value": 115,
+   "max_endure": 330,
+   "position": -5,
+   "required_job": 400,
+   "stage": 7,
+   "type_name": "EquipE"
+  },
+  "01060011": {
+   "base_attr_type": 5,
+   "base_attr_value": 7,
+   "max_endure": 150,
+   "position": -6,
+   "required_job": 100,
+   "stage": 1,
+   "type_name": "EquipF"
+  },
+  "01060012": {
+   "base_attr_type": 5,
+   "base_attr_value": 7,
+   "max_endure": 150,
+   "position": -6,
+   "required_job": 200,
+   "stage": 1,
+   "type_name": "EquipF"
+  },
+  "01060013": {
+   "base_attr_type": 5,
+   "base_attr_value": 7,
+   "max_endure": 150,
+   "position": -6,
+   "required_job": 300,
+   "stage": 1,
+   "type_name": "EquipF"
+  },
+  "01060014": {
+   "base_attr_type": 5,
+   "base_attr_value": 7,
+   "max_endure": 150,
+   "position": -6,
+   "required_job": 400,
+   "stage": 1,
+   "type_name": "EquipF"
+  },
+  "01060021": {
+   "base_attr_type": 5,
+   "base_attr_value": 21,
+   "max_endure": 180,
+   "position": -6,
+   "required_job": 100,
+   "stage": 2,
+   "type_name": "EquipF"
+  },
+  "01060022": {
+   "base_attr_type": 5,
+   "base_attr_value": 21,
+   "max_endure": 180,
+   "position": -6,
+   "required_job": 200,
+   "stage": 2,
+   "type_name": "EquipF"
+  },
+  "01060023": {
+   "base_attr_type": 5,
+   "base_attr_value": 21,
+   "max_endure": 180,
+   "position": -6,
+   "required_job": 300,
+   "stage": 2,
+   "type_name": "EquipF"
+  },
+  "01060024": {
+   "base_attr_type": 5,
+   "base_attr_value": 21,
+   "max_endure": 180,
+   "position": -6,
+   "required_job": 400,
+   "stage": 2,
+   "type_name": "EquipF"
+  },
+  "01060031": {
+   "base_attr_type": 5,
+   "base_attr_value": 36,
+   "max_endure": 210,
+   "position": -6,
+   "required_job": 100,
+   "stage": 3,
+   "type_name": "EquipF"
+  },
+  "01060032": {
+   "base_attr_type": 5,
+   "base_attr_value": 36,
+   "max_endure": 210,
+   "position": -6,
+   "required_job": 200,
+   "stage": 3,
+   "type_name": "EquipF"
+  },
+  "01060033": {
+   "base_attr_type": 5,
+   "base_attr_value": 36,
+   "max_endure": 210,
+   "position": -6,
+   "required_job": 300,
+   "stage": 3,
+   "type_name": "EquipF"
+  },
+  "01060034": {
+   "base_attr_type": 5,
+   "base_attr_value": 36,
+   "max_endure": 210,
+   "position": -6,
+   "required_job": 400,
+   "stage": 3,
+   "type_name": "EquipF"
+  },
+  "01060041": {
+   "base_attr_type": 5,
+   "base_attr_value": 50,
+   "max_endure": 240,
+   "position": -6,
+   "required_job": 100,
+   "stage": 4,
+   "type_name": "EquipF"
+  },
+  "01060042": {
+   "base_attr_type": 5,
+   "base_attr_value": 50,
+   "max_endure": 240,
+   "position": -6,
+   "required_job": 200,
+   "stage": 4,
+   "type_name": "EquipF"
+  },
+  "01060043": {
+   "base_attr_type": 5,
+   "base_attr_value": 50,
+   "max_endure": 240,
+   "position": -6,
+   "required_job": 300,
+   "stage": 4,
+   "type_name": "EquipF"
+  },
+  "01060044": {
+   "base_attr_type": 5,
+   "base_attr_value": 50,
+   "max_endure": 240,
+   "position": -6,
+   "required_job": 400,
+   "stage": 4,
+   "type_name": "EquipF"
+  },
+  "01060051": {
+   "base_attr_type": 5,
+   "base_attr_value": 64,
+   "max_endure": 270,
+   "position": -6,
+   "required_job": 100,
+   "stage": 5,
+   "type_name": "EquipF"
+  },
+  "01060052": {
+   "base_attr_type": 5,
+   "base_attr_value": 64,
+   "max_endure": 270,
+   "position": -6,
+   "required_job": 200,
+   "stage": 5,
+   "type_name": "EquipF"
+  },
+  "01060053": {
+   "base_attr_type": 5,
+   "base_attr_value": 64,
+   "max_endure": 270,
+   "position": -6,
+   "required_job": 300,
+   "stage": 5,
+   "type_name": "EquipF"
+  },
+  "01060054": {
+   "base_attr_type": 5,
+   "base_attr_value": 64,
+   "max_endure": 270,
+   "position": -6,
+   "required_job": 400,
+   "stage": 5,
+   "type_name": "EquipF"
+  },
+  "01060061": {
+   "base_attr_type": 5,
+   "base_attr_value": 79,
+   "max_endure": 300,
+   "position": -6,
+   "required_job": 100,
+   "stage": 6,
+   "type_name": "EquipF"
+  },
+  "01060062": {
+   "base_attr_type": 5,
+   "base_attr_value": 79,
+   "max_endure": 300,
+   "position": -6,
+   "required_job": 200,
+   "stage": 6,
+   "type_name": "EquipF"
+  },
+  "01060063": {
+   "base_attr_type": 5,
+   "base_attr_value": 79,
+   "max_endure": 300,
+   "position": -6,
+   "required_job": 300,
+   "stage": 6,
+   "type_name": "EquipF"
+  },
+  "01060064": {
+   "base_attr_type": 5,
+   "base_attr_value": 79,
+   "max_endure": 300,
+   "position": -6,
+   "required_job": 400,
+   "stage": 6,
+   "type_name": "EquipF"
+  },
+  "01060071": {
+   "base_attr_type": 5,
+   "base_attr_value": 115,
+   "max_endure": 330,
+   "position": -6,
+   "required_job": 100,
+   "stage": 7,
+   "type_name": "EquipF"
+  },
+  "01060072": {
+   "base_attr_type": 5,
+   "base_attr_value": 115,
+   "max_endure": 330,
+   "position": -6,
+   "required_job": 200,
+   "stage": 7,
+   "type_name": "EquipF"
+  },
+  "01060073": {
+   "base_attr_type": 5,
+   "base_attr_value": 115,
+   "max_endure": 330,
+   "position": -6,
+   "required_job": 300,
+   "stage": 7,
+   "type_name": "EquipF"
+  },
+  "01060074": {
+   "base_attr_type": 5,
+   "base_attr_value": 115,
+   "max_endure": 330,
+   "position": -6,
+   "required_job": 400,
+   "stage": 7,
+   "type_name": "EquipF"
+  },
+  "01070010": {
+   "base_attr_type": 6,
+   "base_attr_value": 15,
+   "max_endure": 150,
+   "position": -7,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipG"
+  },
+  "01070020": {
+   "base_attr_type": 6,
+   "base_attr_value": 25,
+   "max_endure": 180,
+   "position": -7,
+   "required_job": 0,
+   "stage": 2,
+   "type_name": "EquipG"
+  },
+  "01070030": {
+   "base_attr_type": 6,
+   "base_attr_value": 38,
+   "max_endure": 210,
+   "position": -7,
+   "required_job": 0,
+   "stage": 3,
+   "type_name": "EquipG"
+  },
+  "01070040": {
+   "base_attr_type": 6,
+   "base_attr_value": 55,
+   "max_endure": 240,
+   "position": -7,
+   "required_job": 0,
+   "stage": 4,
+   "type_name": "EquipG"
+  },
+  "01070050": {
+   "base_attr_type": 6,
+   "base_attr_value": 75,
+   "max_endure": 270,
+   "position": -7,
+   "required_job": 0,
+   "stage": 5,
+   "type_name": "EquipG"
+  },
+  "01070060": {
+   "base_attr_type": 6,
+   "base_attr_value": 100,
+   "max_endure": 300,
+   "position": -7,
+   "required_job": 0,
+   "stage": 6,
+   "type_name": "EquipG"
+  },
+  "01070070": {
+   "base_attr_type": 6,
+   "base_attr_value": 140,
+   "max_endure": 330,
+   "position": -7,
+   "required_job": 0,
+   "stage": 7,
+   "type_name": "EquipG"
+  },
+  "01080010": {
+   "base_attr_type": 7,
+   "base_attr_value": 22,
+   "max_endure": 150,
+   "position": -8,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipH"
+  },
+  "01080020": {
+   "base_attr_type": 7,
+   "base_attr_value": 107,
+   "max_endure": 180,
+   "position": -8,
+   "required_job": 0,
+   "stage": 2,
+   "type_name": "EquipH"
+  },
+  "01080030": {
+   "base_attr_type": 7,
+   "base_attr_value": 192,
+   "max_endure": 210,
+   "position": -8,
+   "required_job": 0,
+   "stage": 3,
+   "type_name": "EquipH"
+  },
+  "01080040": {
+   "base_attr_type": 7,
+   "base_attr_value": 277,
+   "max_endure": 240,
+   "position": -8,
+   "required_job": 0,
+   "stage": 4,
+   "type_name": "EquipH"
+  },
+  "01080050": {
+   "base_attr_type": 7,
+   "base_attr_value": 362,
+   "max_endure": 270,
+   "position": -8,
+   "required_job": 0,
+   "stage": 5,
+   "type_name": "EquipH"
+  },
+  "01080060": {
+   "base_attr_type": 7,
+   "base_attr_value": 447,
+   "max_endure": 300,
+   "position": -8,
+   "required_job": 0,
+   "stage": 6,
+   "type_name": "EquipH"
+  },
+  "01080070": {
+   "base_attr_type": 7,
+   "base_attr_value": 550,
+   "max_endure": 330,
+   "position": -8,
+   "required_job": 0,
+   "stage": 7,
+   "type_name": "EquipH"
+  },
+  "01090010": {
+   "base_attr_type": 4,
+   "base_attr_value": 6,
+   "max_endure": 150,
+   "position": -9,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipI"
+  },
+  "01090020": {
+   "base_attr_type": 4,
+   "base_attr_value": 18,
+   "max_endure": 180,
+   "position": -9,
+   "required_job": 0,
+   "stage": 2,
+   "type_name": "EquipI"
+  },
+  "01090030": {
+   "base_attr_type": 4,
+   "base_attr_value": 34,
+   "max_endure": 210,
+   "position": -9,
+   "required_job": 0,
+   "stage": 3,
+   "type_name": "EquipI"
+  },
+  "01090040": {
+   "base_attr_type": 4,
+   "base_attr_value": 49,
+   "max_endure": 240,
+   "position": -9,
+   "required_job": 0,
+   "stage": 4,
+   "type_name": "EquipI"
+  },
+  "01090050": {
+   "base_attr_type": 4,
+   "base_attr_value": 64,
+   "max_endure": 270,
+   "position": -9,
+   "required_job": 0,
+   "stage": 5,
+   "type_name": "EquipI"
+  },
+  "01090060": {
+   "base_attr_type": 4,
+   "base_attr_value": 80,
+   "max_endure": 300,
+   "position": -9,
+   "required_job": 0,
+   "stage": 6,
+   "type_name": "EquipI"
+  },
+  "01090070": {
+   "base_attr_type": 4,
+   "base_attr_value": 110,
+   "max_endure": 330,
+   "position": -9,
+   "required_job": 0,
+   "stage": 7,
+   "type_name": "EquipI"
+  },
+  "01100010": {
+   "base_attr_type": 4,
+   "base_attr_value": 6,
+   "max_endure": 150,
+   "position": -10,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipJ"
+  },
+  "01100020": {
+   "base_attr_type": 4,
+   "base_attr_value": 18,
+   "max_endure": 180,
+   "position": -10,
+   "required_job": 0,
+   "stage": 2,
+   "type_name": "EquipJ"
+  },
+  "01100030": {
+   "base_attr_type": 4,
+   "base_attr_value": 34,
+   "max_endure": 210,
+   "position": -10,
+   "required_job": 0,
+   "stage": 3,
+   "type_name": "EquipJ"
+  },
+  "01100040": {
+   "base_attr_type": 4,
+   "base_attr_value": 49,
+   "max_endure": 240,
+   "position": -10,
+   "required_job": 0,
+   "stage": 4,
+   "type_name": "EquipJ"
+  },
+  "01100050": {
+   "base_attr_type": 4,
+   "base_attr_value": 64,
+   "max_endure": 270,
+   "position": -10,
+   "required_job": 0,
+   "stage": 5,
+   "type_name": "EquipJ"
+  },
+  "01100060": {
+   "base_attr_type": 4,
+   "base_attr_value": 80,
+   "max_endure": 300,
+   "position": -10,
+   "required_job": 0,
+   "stage": 6,
+   "type_name": "EquipJ"
+  },
+  "01100070": {
+   "base_attr_type": 4,
+   "base_attr_value": 110,
+   "max_endure": 330,
+   "position": -10,
+   "required_job": 0,
+   "stage": 7,
+   "type_name": "EquipJ"
+  },
+  "01110010": {
+   "base_attr_type": 1,
+   "base_attr_value": 105,
+   "max_endure": 150,
+   "position": -11,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipK"
+  },
+  "01110020": {
+   "base_attr_type": 1,
+   "base_attr_value": 525,
+   "max_endure": 180,
+   "position": -11,
+   "required_job": 0,
+   "stage": 2,
+   "type_name": "EquipK"
+  },
+  "01110030": {
+   "base_attr_type": 1,
+   "base_attr_value": 945,
+   "max_endure": 210,
+   "position": -11,
+   "required_job": 0,
+   "stage": 3,
+   "type_name": "EquipK"
+  },
+  "01110040": {
+   "base_attr_type": 1,
+   "base_attr_value": 1365,
+   "max_endure": 240,
+   "position": -11,
+   "required_job": 0,
+   "stage": 4,
+   "type_name": "EquipK"
+  },
+  "01110050": {
+   "base_attr_type": 1,
+   "base_attr_value": 1785,
+   "max_endure": 270,
+   "position": -11,
+   "required_job": 0,
+   "stage": 5,
+   "type_name": "EquipK"
+  },
+  "01110060": {
+   "base_attr_type": 1,
+   "base_attr_value": 2205,
+   "max_endure": 300,
+   "position": -11,
+   "required_job": 0,
+   "stage": 6,
+   "type_name": "EquipK"
+  },
+  "01110070": {
+   "base_attr_type": 1,
+   "base_attr_value": 2880,
+   "max_endure": 330,
+   "position": -11,
+   "required_job": 0,
+   "stage": 7,
+   "type_name": "EquipK"
+  },
+  "01120010": {
+   "base_attr_type": 2,
+   "base_attr_value": 43,
+   "max_endure": 150,
+   "position": -12,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipL"
+  },
+  "01120020": {
+   "base_attr_type": 2,
+   "base_attr_value": 213,
+   "max_endure": 180,
+   "position": -12,
+   "required_job": 0,
+   "stage": 2,
+   "type_name": "EquipL"
+  },
+  "01120030": {
+   "base_attr_type": 2,
+   "base_attr_value": 383,
+   "max_endure": 210,
+   "position": -12,
+   "required_job": 0,
+   "stage": 3,
+   "type_name": "EquipL"
+  },
+  "01120040": {
+   "base_attr_type": 2,
+   "base_attr_value": 553,
+   "max_endure": 240,
+   "position": -12,
+   "required_job": 0,
+   "stage": 4,
+   "type_name": "EquipL"
+  },
+  "01120050": {
+   "base_attr_type": 2,
+   "base_attr_value": 723,
+   "max_endure": 270,
+   "position": -12,
+   "required_job": 0,
+   "stage": 5,
+   "type_name": "EquipL"
+  },
+  "01120060": {
+   "base_attr_type": 2,
+   "base_attr_value": 893,
+   "max_endure": 300,
+   "position": -12,
+   "required_job": 0,
+   "stage": 6,
+   "type_name": "EquipL"
+  },
+  "01120070": {
+   "base_attr_type": 2,
+   "base_attr_value": 1043,
+   "max_endure": 330,
+   "position": -12,
+   "required_job": 0,
+   "stage": 7,
+   "type_name": "EquipL"
+  },
+  "01200010": {
+   "base_attr_type": 4,
+   "base_attr_value": 10,
+   "max_endure": -1,
+   "position": -20,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipS1"
+  },
+  "01200020": {
+   "base_attr_type": 4,
+   "base_attr_value": 20,
+   "max_endure": -1,
+   "position": -20,
+   "required_job": 0,
+   "stage": 2,
+   "type_name": "EquipS1"
+  },
+  "01200030": {
+   "base_attr_type": 4,
+   "base_attr_value": 30,
+   "max_endure": -1,
+   "position": -20,
+   "required_job": 0,
+   "stage": 3,
+   "type_name": "EquipS1"
+  },
+  "01200040": {
+   "base_attr_type": 4,
+   "base_attr_value": 40,
+   "max_endure": -1,
+   "position": -20,
+   "required_job": 0,
+   "stage": 4,
+   "type_name": "EquipS1"
+  },
+  "01200050": {
+   "base_attr_type": 4,
+   "base_attr_value": 50,
+   "max_endure": -1,
+   "position": -20,
+   "required_job": 0,
+   "stage": 5,
+   "type_name": "EquipS1"
+  },
+  "01200060": {
+   "base_attr_type": 4,
+   "base_attr_value": 60,
+   "max_endure": -1,
+   "position": -20,
+   "required_job": 0,
+   "stage": 6,
+   "type_name": "EquipS1"
+  },
+  "01210001": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210002": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210003": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210004": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210005": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210006": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210007": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210008": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210009": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210010": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210011": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210012": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210101": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210102": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210103": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210104": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210105": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210106": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210201": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210202": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210203": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210204": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210205": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210206": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210207": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210208": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210209": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210210": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210211": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210212": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210213": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210214": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210215": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210216": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210217": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210218": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210219": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210220": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210221": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210222": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210223": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210224": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210225": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210226": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210227": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210228": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210229": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210230": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210231": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210232": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210233": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210234": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210235": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210236": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210237": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210238": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210239": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210240": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210241": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210242": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210243": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210244": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210245": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210246": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210247": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210248": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210249": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210250": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210251": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210252": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210253": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210254": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210255": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210256": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210257": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210258": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210259": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210260": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210261": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210262": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210263": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210264": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210265": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210266": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210267": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210268": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210269": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210270": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210271": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210272": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210273": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210274": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210275": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210276": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210277": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210278": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210279": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210280": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210281": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210282": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210283": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210284": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210285": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210286": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210287": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210288": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210289": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210290": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210291": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210292": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210293": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210294": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210295": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210296": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210297": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210298": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210299": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210300": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210301": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210302": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210303": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210304": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210305": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210306": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210307": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210308": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210309": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210310": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210311": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210312": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210313": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210314": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210315": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210316": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210317": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210318": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210319": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210320": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210321": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210322": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210323": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210324": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210325": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210326": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210327": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210328": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210329": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210330": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210331": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210332": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210333": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210334": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210335": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210336": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210337": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210338": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210339": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210340": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210341": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210342": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210343": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210344": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210345": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210346": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210347": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210348": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210349": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210350": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210351": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210352": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210353": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210354": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210355": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210356": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210357": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210358": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210359": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210360": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210361": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210362": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210363": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210364": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210365": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210366": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210367": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210368": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210369": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210370": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210371": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210372": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210373": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210374": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210375": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210376": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210377": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210378": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210379": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210380": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210381": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210382": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210383": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210384": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210385": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210386": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210387": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210388": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210389": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210390": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210391": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210392": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210393": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210394": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210395": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210396": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210397": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210398": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210399": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210400": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210401": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210402": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210403": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210404": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210405": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210406": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210407": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210408": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210409": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210410": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210411": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210412": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210413": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210414": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210415": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210416": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210417": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210418": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210419": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210420": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210421": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210422": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210423": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210424": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210425": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210426": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210427": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210428": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210429": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210430": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210431": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210432": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210433": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210434": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210435": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210436": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210437": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210438": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210439": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210440": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210441": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210442": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210443": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210444": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210445": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210451": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210452": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210453": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210454": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210455": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210456": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210457": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210458": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210459": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210460": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210461": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210462": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210463": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210464": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210465": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210466": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210467": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210468": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210469": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210470": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210471": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210472": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210473": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210474": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210475": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210476": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210477": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210478": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210479": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210480": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210481": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210482": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210483": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210484": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210485": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210486": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210487": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210488": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210489": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210490": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210491": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210492": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210493": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210494": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210495": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210496": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210497": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210498": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210499": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210500": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210501": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210502": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210503": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210504": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210505": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210506": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210507": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210508": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210509": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210510": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210511": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210512": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210513": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210514": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210515": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210516": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210517": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210518": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210519": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210520": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210521": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210524": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210525": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210526": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210527": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210528": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210529": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210530": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210531": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210532": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210533": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210534": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210535": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210536": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210537": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210538": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210539": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210540": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210637": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210638": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210639": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210640": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210641": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210642": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210643": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210697": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210698": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01210699": {
+   "base_attr_type": 4,
+   "base_attr_value": 1,
+   "max_endure": 100,
+   "position": -21,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "EquipSZ"
+  },
+  "01310001": {
+   "base_attr_type": 1,
+   "base_attr_value": 137,
+   "max_endure": 100,
+   "position": -205,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "KunChong"
+  },
+  "01310002": {
+   "base_attr_type": 2,
+   "base_attr_value": 40,
+   "max_endure": 100,
+   "position": -205,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "KunChong"
+  },
+  "01310003": {
+   "base_attr_type": 7,
+   "base_attr_value": 29,
+   "max_endure": 100,
+   "position": -205,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "KunChong"
+  },
+  "01310004": {
+   "base_attr_type": 6,
+   "base_attr_value": 11,
+   "max_endure": 100,
+   "position": -205,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "KunChong"
+  },
+  "01310005": {
+   "base_attr_type": 5,
+   "base_attr_value": 26,
+   "max_endure": 100,
+   "position": -205,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "KunChong"
+  },
+  "01310006": {
+   "base_attr_type": 4,
+   "base_attr_value": 32,
+   "max_endure": 100,
+   "position": -205,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "KunChong"
+  },
+  "01410001": {
+   "base_attr_type": 4,
+   "base_attr_value": 0,
+   "max_endure": 100,
+   "position": -22,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "HuiZhang"
+  },
+  "01410002": {
+   "base_attr_type": 4,
+   "base_attr_value": 0,
+   "max_endure": 100,
+   "position": -22,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "HuiZhang"
+  },
+  "01410003": {
+   "base_attr_type": 4,
+   "base_attr_value": 0,
+   "max_endure": 100,
+   "position": -22,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "HuiZhang"
+  },
+  "01410004": {
+   "base_attr_type": 4,
+   "base_attr_value": 0,
+   "max_endure": 100,
+   "position": -22,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "HuiZhang"
+  },
+  "01410005": {
+   "base_attr_type": 4,
+   "base_attr_value": 0,
+   "max_endure": 100,
+   "position": -22,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "HuiZhang"
+  },
+  "01410006": {
+   "base_attr_type": 4,
+   "base_attr_value": 0,
+   "max_endure": 100,
+   "position": -22,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "HuiZhang"
+  },
+  "01410007": {
+   "base_attr_type": 4,
+   "base_attr_value": 0,
+   "max_endure": 100,
+   "position": -22,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "HuiZhang"
+  },
+  "01410008": {
+   "base_attr_type": 4,
+   "base_attr_value": 0,
+   "max_endure": 100,
+   "position": -22,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "HuiZhang"
+  },
+  "01410009": {
+   "base_attr_type": 4,
+   "base_attr_value": 0,
+   "max_endure": 100,
+   "position": -22,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "HuiZhang"
+  },
+  "01410010": {
+   "base_attr_type": 4,
+   "base_attr_value": 0,
+   "max_endure": 100,
+   "position": -22,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "HuiZhang"
+  },
+  "01410011": {
+   "base_attr_type": 4,
+   "base_attr_value": 0,
+   "max_endure": 100,
+   "position": -22,
+   "required_job": 0,
+   "stage": 1,
+   "type_name": "HuiZhang"
+  }
+ }
+}

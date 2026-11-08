@@ -1,0 +1,155 @@
+[gd_scene format=3]
+[ext_resource type="Script" path="res://脚本/界面/组件/原版三态钮.gd" id="9_三态"]
+
+
+[node name="原版领取修行收益内容" type="Control"]
+custom_minimum_size = Vector2(267, 218)
+offset_right = 267.0
+offset_bottom = 218.0
+
+[node name="外层面板" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 39.0
+offset_right = 261.0
+offset_bottom = 185.0
+mouse_filter = 2
+
+[node name="子面板底" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 85.0
+offset_right = 256.0
+offset_bottom = 179.0
+mouse_filter = 2
+
+[node name="密卷格" type="Button" parent="."]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 94.0
+offset_right = 61.0
+offset_bottom = 134.0
+mouse_default_cursor_shape = 2
+theme_type_variation = &"OrigItemSlotButton"
+
+[node name="角标" type="Label" parent="密卷格"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 24.0
+offset_right = 38.0
+offset_bottom = 40.0
+mouse_filter = 2
+horizontal_alignment = 2
+
+[node name="经验底图" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 172.0
+offset_top = 125.0
+offset_right = 240.0
+offset_bottom = 146.0
+mouse_filter = 2
+theme_type_variation = &"OrigInputBox"
+
+[node name="精华底图" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 172.0
+offset_top = 152.0
+offset_right = 240.0
+offset_bottom = 173.0
+mouse_filter = 2
+theme_type_variation = &"OrigInputBox"
+
+[node name="经验标题" type="Label" parent="."]
+layout_mode = 0
+offset_left = 83.0
+offset_top = 123.0
+offset_right = 168.0
+offset_bottom = 141.0
+mouse_filter = 2
+text = "人物经验值："
+
+[node name="经验值" type="Label" parent="."]
+layout_mode = 0
+offset_left = 172.0
+offset_top = 127.0
+offset_right = 240.0
+offset_bottom = 145.0
+mouse_filter = 2
+
+[node name="精华标题" type="Label" parent="."]
+layout_mode = 0
+offset_left = 83.0
+offset_top = 151.0
+offset_right = 168.0
+offset_bottom = 169.0
+mouse_filter = 2
+text = "人物精华储量："
+
+[node name="精华值" type="Label" parent="."]
+layout_mode = 0
+offset_left = 174.0
+offset_top = 154.0
+offset_right = 242.0
+offset_bottom = 172.0
+mouse_filter = 2
+
+[node name="购买" type="Button" parent="."]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 143.0
+offset_right = 59.0
+offset_bottom = 165.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+text = "购买"
+script = ExtResource("9_三态")
+
+[node name="单倍领取" type="Button" parent="."]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 189.0
+offset_right = 96.0
+offset_bottom = 211.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+text = "单倍领取"
+script = ExtResource("9_三态")
+
+[node name="双倍领取" type="Button" parent="."]
+layout_mode = 0
+offset_left = 171.0
+offset_top = 189.0
+offset_right = 232.0
+offset_bottom = 211.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+text = "双倍领取"
+script = ExtResource("9_三态")
+
+[node name="收益标题" type="Label" parent="."]
+layout_mode = 0
+offset_left = 119.0
+offset_top = 92.0
+offset_right = 246.0
+offset_bottom = 110.0
+mouse_filter = 2
+text = "修行收益如下："
+
+[node name="提示盒" type="Control" parent="."]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 47.0
+offset_right = 255.0
+offset_bottom = 87.0
+mouse_filter = 2
+
+[node name="提示" type="RichTextLabel" parent="提示盒"]
+layout_mode = 0
+offset_right = 242.0
+offset_bottom = 40.0
+mouse_filter = 2
+scroll_active = false
+autowrap_mode = 3
+bbcode_enabled = true
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 2

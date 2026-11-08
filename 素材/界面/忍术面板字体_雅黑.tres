@@ -1,0 +1,17 @@
+[gd_resource type="SystemFont" format=3]
+
+; 忍术面板专用字体（§3.39：用户 2026-09-26 要"只忍术面板用雅黑"）。
+;
+; ⚠️ 2026-09-27 补上光栅化参数 —— 此前这里**只有 font_names**，其余全走 Godot 默认
+; （hinting=Light、subpixel_positioning=Auto），于是全局字体改了、这份没改，
+; 忍术面板的字一直比别的面板糊。用户报"忍术效果说明字体有模糊感"就是这个。
+;
+; ⚠️ 另外要知道：**雅黑没有内嵌点阵**（宋体有，12px 起会吸附到点阵网格）。
+; 所以即便参数调对，雅黑在 12px 也会比宋体柔一点 —— 这是字体本身的性质，不是 bug。
+; 原版 `Config.COMMON_FONT` 是宋体，原版忍术面板用的也是宋体。
+[resource]
+font_names = PackedStringArray("Microsoft YaHei UI", "Microsoft YaHei", "微软雅黑", "Noto Sans SC", "Source Han Sans SC", "sans-serif")
+antialiasing = 1
+hinting = 2
+subpixel_positioning = 0
+disable_embedded_bitmaps = false

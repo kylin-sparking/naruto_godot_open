@@ -1,0 +1,1646 @@
+[gd_scene load_steps=0 format=3]
+
+; 由 `开发工具/生成挂机场景.py` 从原版 `GuaJiSettingWindow.as` 的 createChildren() **链式重算**生成。
+; **改真值改生成器再重跑，别手改本文件**（手改会被下一次生成吃掉）。
+; 原版 664×492（`super(664,492,true)` 在 `:166`），标题「智能托管打怪设置」`:167`。
+; 页面局部坐标 = AS3 窗口坐标 − (8,38)（`UIWindow.as:37-38` 内容底原点）；根尺寸 648×454。
+; 同级顺序 = AS3 addChild 顺序：吃药/采集/战斗三盒最先，出售盒排在「自动出售装备」之后（`:313`）。
+; 「输入底」不是 AS3 的一个子件（它是 MTextInput2 自己的皮），这里垫在 LineEdit **之前**（先加者在下）。
+; 逐件出处与算式见 `真值/窗口/挂机设置窗.md`。
+
+[ext_resource type="PackedScene" path="res://场景/界面/组件/原版复选项.tscn" id="k1"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/家族/盒底.png" id="t1"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/家族/端帽左.png" id="t2"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/家族/端帽右.png" id="t3"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/输入框.png" id="t4"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/无箭头.png" id="t5"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/家族/钮底61.png" id="t6"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/下拉框.png" id="t7"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/下拉框悬停.png" id="t8"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/下拉框按下.png" id="t9"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/下拉框禁用.png" id="t10"]
+
+[sub_resource type="StyleBoxEmpty" id="sb_empty"]
+
+[sub_resource type="StyleBoxTexture" id="sb_combo_normal"]
+texture = ExtResource("t7")
+texture_margin_left = 5.5
+texture_margin_right = 22.75
+texture_margin_top = 5.0
+texture_margin_bottom = 5.5
+content_margin_left = 5
+content_margin_right = 23
+content_margin_top = 3
+content_margin_bottom = 0
+
+[sub_resource type="StyleBoxTexture" id="sb_combo_hover"]
+texture = ExtResource("t8")
+texture_margin_left = 6.0
+texture_margin_right = 22.0
+texture_margin_top = 5.0
+texture_margin_bottom = 5.5
+content_margin_left = 5
+content_margin_right = 23
+content_margin_top = 3
+content_margin_bottom = 0
+
+[sub_resource type="StyleBoxTexture" id="sb_combo_pressed"]
+texture = ExtResource("t9")
+texture_margin_left = 6.0
+texture_margin_right = 22.75
+texture_margin_top = 5.25
+texture_margin_bottom = 5.5
+content_margin_left = 5
+content_margin_right = 23
+content_margin_top = 3
+content_margin_bottom = 0
+
+[sub_resource type="StyleBoxTexture" id="sb_combo_disabled"]
+texture = ExtResource("t10")
+texture_margin_left = 6.0
+texture_margin_right = 21.75
+texture_margin_top = 5.5
+texture_margin_bottom = 5.25
+content_margin_left = 5
+content_margin_right = 23
+content_margin_top = 3
+content_margin_bottom = 0
+
+[node name="原版挂机设置内容" type="Control"]
+custom_minimum_size = Vector2(648, 454)
+mouse_filter = 2
+
+[node name="盒吃药" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 29.0
+offset_right = 357.0
+offset_bottom = 182.0
+mouse_filter = 2
+texture = ExtResource("t1")
+patch_margin_left = 8
+patch_margin_top = 7
+patch_margin_right = 7
+patch_margin_bottom = 7
+
+[node name="端帽左吃药" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 15.0
+offset_right = 72.0
+offset_bottom = 37.0
+mouse_filter = 2
+texture = ExtResource("t2")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="端帽右吃药" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 290.0
+offset_top = 15.0
+offset_right = 317.0
+offset_bottom = 37.0
+mouse_filter = 2
+texture = ExtResource("t3")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="标题吃药" type="Label" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 10.0
+offset_right = 357.0
+offset_bottom = 30.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 0.9411764705882353, 0.0, 1)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+text = "吃药保护设置"
+
+[node name="盒采集" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 206.0
+offset_right = 357.0
+offset_bottom = 292.0
+mouse_filter = 2
+texture = ExtResource("t1")
+patch_margin_left = 8
+patch_margin_top = 7
+patch_margin_right = 7
+patch_margin_bottom = 7
+
+[node name="端帽左采集" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 192.0
+offset_right = 72.0
+offset_bottom = 214.0
+mouse_filter = 2
+texture = ExtResource("t2")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="端帽右采集" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 290.0
+offset_top = 192.0
+offset_right = 317.0
+offset_bottom = 214.0
+mouse_filter = 2
+texture = ExtResource("t3")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="标题采集" type="Label" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 187.0
+offset_right = 357.0
+offset_bottom = 207.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 0.9411764705882353, 0.0, 1)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+text = "自动拾取设置"
+
+[node name="盒战斗" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 362.0
+offset_top = 29.0
+offset_right = 643.0
+offset_bottom = 292.0
+mouse_filter = 2
+texture = ExtResource("t1")
+patch_margin_left = 8
+patch_margin_top = 7
+patch_margin_right = 7
+patch_margin_bottom = 7
+
+[node name="端帽左战斗" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 402.0
+offset_top = 15.0
+offset_right = 429.0
+offset_bottom = 37.0
+mouse_filter = 2
+texture = ExtResource("t2")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="端帽右战斗" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 576.0
+offset_top = 15.0
+offset_right = 603.0
+offset_bottom = 37.0
+mouse_filter = 2
+texture = ExtResource("t3")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="标题战斗" type="Label" parent="."]
+layout_mode = 0
+offset_left = 362.0
+offset_top = 10.0
+offset_right = 643.0
+offset_bottom = 30.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 0.9411764705882353, 0.0, 1)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+text = "自动战斗设置"
+
+[node name="复选生命阈值" parent="." instance=ExtResource("k1")]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 37.0
+offset_right = 32.0
+offset_bottom = 56.0
+custom_minimum_size = Vector2(19, 19)
+mouse_filter = 2
+
+[node name="文本" parent="复选生命阈值"]
+offset_left = 21
+offset_right = 21.0
+offset_bottom = 19
+theme_override_colors/font_color = Color(0.11764705882352941, 0.5647058823529412, 1.0, 1)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1)
+theme_override_constants/outline_size = 2
+text = ""
+
+[node name="点击区域" parent="复选生命阈值"]
+offset_right = 19.0
+offset_bottom = 19
+tooltip_text = ""
+
+[node name="标签生命低于" type="Label" parent="."]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 37.0
+offset_right = 114.0
+offset_bottom = 57.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+vertical_alignment = 1
+clip_text = true
+text = "当生命值低于"
+
+[node name="输入底生命阈值" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 118.0
+offset_top = 37.0
+offset_right = 158.0
+offset_bottom = 58.0
+mouse_filter = 2
+texture = ExtResource("t4")
+patch_margin_left = 6
+patch_margin_top = 5
+patch_margin_right = 7
+patch_margin_bottom = 6
+
+[node name="输入生命阈值" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 118.0
+offset_top = 37.0
+offset_right = 158.0
+offset_bottom = 58.0
+theme_override_styles/normal = SubResource("sb_empty")
+theme_override_styles/read_only = SubResource("sb_empty")
+theme_override_styles/focus = SubResource("sb_empty")
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1)
+theme_override_font_sizes/font_size = 12
+alignment = 1
+max_length = 3
+editable = true
+text = ""
+metadata/max = 100
+metadata/as3 = ":280"
+
+[node name="标签生命时" type="Label" parent="."]
+layout_mode = 0
+offset_left = 158.0
+offset_top = 37.0
+offset_right = 222.0
+offset_bottom = 57.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+text = "%时自动"
+
+[node name="下拉生命药品" type="OptionButton" parent="."]
+layout_mode = 0
+offset_left = 223.0
+offset_top = 37.0
+offset_right = 303.0
+offset_bottom = 58.0
+theme_override_styles/normal = SubResource("sb_combo_normal")
+theme_override_styles/hover = SubResource("sb_combo_hover")
+theme_override_styles/pressed = SubResource("sb_combo_pressed")
+theme_override_styles/focus = SubResource("sb_combo_normal")
+theme_override_styles/disabled = SubResource("sb_combo_disabled")
+theme_override_icons/arrow = ExtResource("t5")
+theme_override_constants/h_separation = 0
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1)
+theme_override_font_sizes/font_size = 12
+focus_mode = 0
+alignment = 0
+clip_text = true
+fit_to_longest_item = false
+text = "从大到小"
+metadata/as3 = ":283"
+
+[node name="标签生命吃药" type="Label" parent="."]
+layout_mode = 0
+offset_left = 303.0
+offset_top = 37.0
+offset_right = 353.0
+offset_bottom = 57.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+vertical_alignment = 1
+clip_text = true
+text = "吃药"
+
+[node name="复选查克拉阈值" parent="." instance=ExtResource("k1")]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 61.0
+offset_right = 32.0
+offset_bottom = 80.0
+custom_minimum_size = Vector2(19, 19)
+mouse_filter = 2
+
+[node name="文本" parent="复选查克拉阈值"]
+offset_left = 21
+offset_right = 21.0
+offset_bottom = 19
+theme_override_colors/font_color = Color(0.11764705882352941, 0.5647058823529412, 1.0, 1)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1)
+theme_override_constants/outline_size = 2
+text = ""
+
+[node name="点击区域" parent="复选查克拉阈值"]
+offset_right = 19.0
+offset_bottom = 19
+tooltip_text = ""
+
+[node name="标签查克拉低于" type="Label" parent="."]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 61.0
+offset_right = 114.0
+offset_bottom = 81.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+vertical_alignment = 1
+clip_text = true
+text = "当查拉克低于"
+
+[node name="输入底查克拉阈值" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 118.0
+offset_top = 61.0
+offset_right = 158.0
+offset_bottom = 82.0
+mouse_filter = 2
+texture = ExtResource("t4")
+patch_margin_left = 6
+patch_margin_top = 5
+patch_margin_right = 7
+patch_margin_bottom = 6
+
+[node name="输入查克拉阈值" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 118.0
+offset_top = 61.0
+offset_right = 158.0
+offset_bottom = 82.0
+theme_override_styles/normal = SubResource("sb_empty")
+theme_override_styles/read_only = SubResource("sb_empty")
+theme_override_styles/focus = SubResource("sb_empty")
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1)
+theme_override_font_sizes/font_size = 12
+alignment = 1
+max_length = 3
+editable = true
+text = ""
+metadata/max = 100
+metadata/as3 = ":287"
+
+[node name="标签查克拉时" type="Label" parent="."]
+layout_mode = 0
+offset_left = 158.0
+offset_top = 61.0
+offset_right = 222.0
+offset_bottom = 81.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+text = "%时自动"
+
+[node name="下拉查克拉药品" type="OptionButton" parent="."]
+layout_mode = 0
+offset_left = 223.0
+offset_top = 61.0
+offset_right = 303.0
+offset_bottom = 82.0
+theme_override_styles/normal = SubResource("sb_combo_normal")
+theme_override_styles/hover = SubResource("sb_combo_hover")
+theme_override_styles/pressed = SubResource("sb_combo_pressed")
+theme_override_styles/focus = SubResource("sb_combo_normal")
+theme_override_styles/disabled = SubResource("sb_combo_disabled")
+theme_override_icons/arrow = ExtResource("t5")
+theme_override_constants/h_separation = 0
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1)
+theme_override_font_sizes/font_size = 12
+focus_mode = 0
+alignment = 0
+clip_text = true
+fit_to_longest_item = false
+text = "从大到小"
+metadata/as3 = ":290"
+
+[node name="标签查克拉吃药" type="Label" parent="."]
+layout_mode = 0
+offset_left = 303.0
+offset_top = 61.0
+offset_right = 353.0
+offset_bottom = 81.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+vertical_alignment = 1
+clip_text = true
+text = "吃药"
+
+[node name="复选体力符" parent="." instance=ExtResource("k1")]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 100.0
+offset_right = 353.0
+offset_bottom = 119.0
+custom_minimum_size = Vector2(340, 19)
+mouse_filter = 2
+
+[node name="文本" parent="复选体力符"]
+offset_left = 21
+offset_right = 340.0
+offset_bottom = 19
+theme_override_colors/font_color = Color(0.9215686274509803, 0.8901960784313725, 0.5058823529411764, 1)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1)
+theme_override_constants/outline_size = 2
+text = "当双倍经验符状态过期后，自动续用"
+
+[node name="点击区域" parent="复选体力符"]
+offset_right = 340.0
+offset_bottom = 19
+tooltip_text = "当双倍经验符状态过期后，自动续用"
+
+[node name="复选精华符" parent="." instance=ExtResource("k1")]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 124.0
+offset_right = 353.0
+offset_bottom = 143.0
+custom_minimum_size = Vector2(340, 19)
+mouse_filter = 2
+
+[node name="文本" parent="复选精华符"]
+offset_left = 21
+offset_right = 340.0
+offset_bottom = 19
+theme_override_colors/font_color = Color(0.9215686274509803, 0.8901960784313725, 0.5058823529411764, 1)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1)
+theme_override_constants/outline_size = 2
+text = "当双倍查克拉精华符状态过期后，自动续用"
+
+[node name="点击区域" parent="复选精华符"]
+offset_right = 340.0
+offset_bottom = 19
+tooltip_text = "当双倍查克拉精华符状态过期后，自动续用"
+
+[node name="复选通灵体力符" parent="." instance=ExtResource("k1")]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 148.0
+offset_right = 353.0
+offset_bottom = 167.0
+custom_minimum_size = Vector2(340, 19)
+mouse_filter = 2
+
+[node name="文本" parent="复选通灵体力符"]
+offset_left = 21
+offset_right = 340.0
+offset_bottom = 19
+theme_override_colors/font_color = Color(0.9215686274509803, 0.8901960784313725, 0.5058823529411764, 1)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1)
+theme_override_constants/outline_size = 2
+text = "当通灵双倍经验符状态过期后，自动续用"
+
+[node name="点击区域" parent="复选通灵体力符"]
+offset_right = 340.0
+offset_bottom = 19
+tooltip_text = "当通灵双倍经验符状态过期后，自动续用"
+
+[node name="复选拾取总开关" parent="." instance=ExtResource("k1")]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 214.0
+offset_right = 32.0
+offset_bottom = 233.0
+custom_minimum_size = Vector2(19, 19)
+mouse_filter = 2
+
+[node name="文本" parent="复选拾取总开关"]
+offset_left = 21
+offset_right = 21.0
+offset_bottom = 19
+theme_override_colors/font_color = Color(0.11764705882352941, 0.5647058823529412, 1.0, 1)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1)
+theme_override_constants/outline_size = 2
+text = ""
+
+[node name="点击区域" parent="复选拾取总开关"]
+offset_right = 19.0
+offset_bottom = 19
+tooltip_text = ""
+
+[node name="标签拾取" type="Label" parent="."]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 214.0
+offset_right = 70.0
+offset_bottom = 234.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+vertical_alignment = 1
+clip_text = true
+text = "拾取"
+
+[node name="下拉拾取职业" type="OptionButton" parent="."]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 214.0
+offset_right = 148.0
+offset_bottom = 235.0
+theme_override_styles/normal = SubResource("sb_combo_normal")
+theme_override_styles/hover = SubResource("sb_combo_hover")
+theme_override_styles/pressed = SubResource("sb_combo_pressed")
+theme_override_styles/focus = SubResource("sb_combo_normal")
+theme_override_styles/disabled = SubResource("sb_combo_disabled")
+theme_override_icons/arrow = ExtResource("t5")
+theme_override_constants/h_separation = 0
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1)
+theme_override_font_sizes/font_size = 12
+focus_mode = 0
+alignment = 0
+clip_text = true
+fit_to_longest_item = false
+text = "所有"
+metadata/as3 = ":297"
+
+[node name="下拉拾取等级" type="OptionButton" parent="."]
+layout_mode = 0
+offset_left = 148.0
+offset_top = 214.0
+offset_right = 228.0
+offset_bottom = 235.0
+theme_override_styles/normal = SubResource("sb_combo_normal")
+theme_override_styles/hover = SubResource("sb_combo_hover")
+theme_override_styles/pressed = SubResource("sb_combo_pressed")
+theme_override_styles/focus = SubResource("sb_combo_normal")
+theme_override_styles/disabled = SubResource("sb_combo_disabled")
+theme_override_icons/arrow = ExtResource("t5")
+theme_override_constants/h_separation = 0
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1)
+theme_override_font_sizes/font_size = 12
+focus_mode = 0
+alignment = 0
+clip_text = true
+fit_to_longest_item = false
+text = "全部等级"
+metadata/as3 = ":298"
+
+[node name="下拉拾取品质" type="OptionButton" parent="."]
+layout_mode = 0
+offset_left = 228.0
+offset_top = 214.0
+offset_right = 308.0
+offset_bottom = 235.0
+theme_override_styles/normal = SubResource("sb_combo_normal")
+theme_override_styles/hover = SubResource("sb_combo_hover")
+theme_override_styles/pressed = SubResource("sb_combo_pressed")
+theme_override_styles/focus = SubResource("sb_combo_normal")
+theme_override_styles/disabled = SubResource("sb_combo_disabled")
+theme_override_icons/arrow = ExtResource("t5")
+theme_override_constants/h_separation = 0
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1)
+theme_override_font_sizes/font_size = 12
+focus_mode = 0
+alignment = 0
+clip_text = true
+fit_to_longest_item = false
+text = "全部品质"
+metadata/as3 = ":299"
+
+[node name="标签拾取装备" type="Label" parent="."]
+layout_mode = 0
+offset_left = 308.0
+offset_top = 214.0
+offset_right = 340.0
+offset_bottom = 234.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+vertical_alignment = 1
+clip_text = true
+text = "装备"
+
+[node name="复选拾取任务品" parent="." instance=ExtResource("k1")]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 238.0
+offset_right = 133.0
+offset_bottom = 257.0
+custom_minimum_size = Vector2(120, 19)
+mouse_filter = 2
+
+[node name="文本" parent="复选拾取任务品"]
+offset_left = 21
+offset_right = 120.0
+offset_bottom = 19
+theme_override_colors/font_color = Color(0.11764705882352941, 0.5647058823529412, 1.0, 1)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1)
+theme_override_constants/outline_size = 2
+text = "拾取任务品"
+
+[node name="点击区域" parent="复选拾取任务品"]
+offset_right = 120.0
+offset_bottom = 19
+tooltip_text = "拾取任务品"
+
+[node name="复选拾取药品" parent="." instance=ExtResource("k1")]
+layout_mode = 0
+offset_left = 133.0
+offset_top = 238.0
+offset_right = 253.0
+offset_bottom = 257.0
+custom_minimum_size = Vector2(120, 19)
+mouse_filter = 2
+
+[node name="文本" parent="复选拾取药品"]
+offset_left = 21
+offset_right = 120.0
+offset_bottom = 19
+theme_override_colors/font_color = Color(0.11764705882352941, 0.5647058823529412, 1.0, 1)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1)
+theme_override_constants/outline_size = 2
+text = "拾取药品"
+
+[node name="点击区域" parent="复选拾取药品"]
+offset_right = 120.0
+offset_bottom = 19
+tooltip_text = "拾取药品"
+
+[node name="复选拾取金币" parent="." instance=ExtResource("k1")]
+layout_mode = 0
+offset_left = 253.0
+offset_top = 238.0
+offset_right = 353.0
+offset_bottom = 257.0
+custom_minimum_size = Vector2(100, 19)
+mouse_filter = 2
+
+[node name="文本" parent="复选拾取金币"]
+offset_left = 21
+offset_right = 100.0
+offset_bottom = 19
+theme_override_colors/font_color = Color(0.11764705882352941, 0.5647058823529412, 1.0, 1)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1)
+theme_override_constants/outline_size = 2
+text = "拾取金币"
+
+[node name="点击区域" parent="复选拾取金币"]
+offset_right = 100.0
+offset_bottom = 19
+tooltip_text = "拾取金币"
+
+[node name="复选拾取材料" parent="." instance=ExtResource("k1")]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 262.0
+offset_right = 133.0
+offset_bottom = 281.0
+custom_minimum_size = Vector2(120, 19)
+mouse_filter = 2
+
+[node name="文本" parent="复选拾取材料"]
+offset_left = 21
+offset_right = 120.0
+offset_bottom = 19
+theme_override_colors/font_color = Color(0.11764705882352941, 0.5647058823529412, 1.0, 1)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1)
+theme_override_constants/outline_size = 2
+text = "拾取材料"
+
+[node name="点击区域" parent="复选拾取材料"]
+offset_right = 120.0
+offset_bottom = 19
+tooltip_text = "拾取材料"
+
+[node name="复选拾取其他" parent="." instance=ExtResource("k1")]
+layout_mode = 0
+offset_left = 133.0
+offset_top = 262.0
+offset_right = 253.0
+offset_bottom = 281.0
+custom_minimum_size = Vector2(120, 19)
+mouse_filter = 2
+
+[node name="文本" parent="复选拾取其他"]
+offset_left = 21
+offset_right = 120.0
+offset_bottom = 19
+theme_override_colors/font_color = Color(0.11764705882352941, 0.5647058823529412, 1.0, 1)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1)
+theme_override_constants/outline_size = 2
+text = "拾取其他"
+
+[node name="点击区域" parent="复选拾取其他"]
+offset_right = 120.0
+offset_bottom = 19
+tooltip_text = "拾取其他"
+
+[node name="复选自动出售装备" parent="." instance=ExtResource("k1")]
+layout_mode = 0
+offset_left = 241.0
+offset_top = 262.0
+offset_right = 369.0
+offset_bottom = 281.0
+custom_minimum_size = Vector2(128, 19)
+mouse_filter = 2
+
+[node name="文本" parent="复选自动出售装备"]
+offset_left = 21
+offset_right = 128.0
+offset_bottom = 19
+theme_override_colors/font_color = Color(0.11764705882352941, 0.5647058823529412, 1.0, 1)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1)
+theme_override_constants/outline_size = 2
+text = "自动出售"
+
+[node name="点击区域" parent="复选自动出售装备"]
+offset_right = 128.0
+offset_bottom = 19
+tooltip_text = "自动出售"
+
+[node name="标签人物自动使用" type="Label" parent="."]
+layout_mode = 0
+offset_left = 370.0
+offset_top = 37.0
+offset_right = 450.0
+offset_bottom = 57.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+vertical_alignment = 1
+clip_text = true
+text = "人物自动使用"
+
+[node name="下拉自动忍术" type="OptionButton" parent="."]
+layout_mode = 0
+offset_left = 449.0
+offset_top = 38.0
+offset_right = 529.0
+offset_bottom = 59.0
+theme_override_styles/normal = SubResource("sb_combo_normal")
+theme_override_styles/hover = SubResource("sb_combo_hover")
+theme_override_styles/pressed = SubResource("sb_combo_pressed")
+theme_override_styles/focus = SubResource("sb_combo_normal")
+theme_override_styles/disabled = SubResource("sb_combo_disabled")
+theme_override_icons/arrow = ExtResource("t5")
+theme_override_constants/h_separation = 0
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1)
+theme_override_font_sizes/font_size = 12
+focus_mode = 0
+alignment = 0
+clip_text = true
+fit_to_longest_item = false
+text = ""
+metadata/as3 = ":327"
+
+[node name="标签攻击动物一" type="Label" parent="."]
+layout_mode = 0
+offset_left = 529.0
+offset_top = 37.0
+offset_right = 639.0
+offset_bottom = 57.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+vertical_alignment = 1
+clip_text = true
+text = "攻击动物"
+
+[node name="标签通灵自动使用" type="Label" parent="."]
+layout_mode = 0
+offset_left = 370.0
+offset_top = 61.0
+offset_right = 450.0
+offset_bottom = 81.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+vertical_alignment = 1
+clip_text = true
+text = "通灵自动使用"
+
+[node name="下拉自动宠物忍术" type="OptionButton" parent="."]
+layout_mode = 0
+offset_left = 449.0
+offset_top = 62.0
+offset_right = 529.0
+offset_bottom = 83.0
+theme_override_styles/normal = SubResource("sb_combo_normal")
+theme_override_styles/hover = SubResource("sb_combo_hover")
+theme_override_styles/pressed = SubResource("sb_combo_pressed")
+theme_override_styles/focus = SubResource("sb_combo_normal")
+theme_override_styles/disabled = SubResource("sb_combo_disabled")
+theme_override_icons/arrow = ExtResource("t5")
+theme_override_constants/h_separation = 0
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1)
+theme_override_font_sizes/font_size = 12
+focus_mode = 0
+alignment = 0
+clip_text = true
+fit_to_longest_item = false
+text = ""
+metadata/as3 = ":330"
+
+[node name="标签攻击动物二" type="Label" parent="."]
+layout_mode = 0
+offset_left = 529.0
+offset_top = 61.0
+offset_right = 639.0
+offset_bottom = 81.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+vertical_alignment = 1
+clip_text = true
+text = "攻击动物"
+
+[node name="复选自动续用辅助" parent="." instance=ExtResource("k1")]
+layout_mode = 0
+offset_left = 370.0
+offset_top = 87.0
+offset_right = 637.0
+offset_bottom = 106.0
+custom_minimum_size = Vector2(267, 19)
+mouse_filter = 2
+
+[node name="文本" parent="复选自动续用辅助"]
+offset_left = 21
+offset_right = 267.0
+offset_bottom = 19
+theme_override_colors/font_color = Color(0.11764705882352941, 0.5647058823529412, 1.0, 1)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1)
+theme_override_constants/outline_size = 2
+text = "自动续用以下辅助忍术"
+
+[node name="点击区域" parent="复选自动续用辅助"]
+offset_right = 267.0
+offset_bottom = 19
+tooltip_text = "自动续用以下辅助忍术"
+
+[node name="复选天之咒印" parent="." instance=ExtResource("k1")]
+layout_mode = 0
+offset_left = 370.0
+offset_top = 108.0
+offset_right = 471.0
+offset_bottom = 127.0
+custom_minimum_size = Vector2(101, 19)
+mouse_filter = 2
+
+[node name="文本" parent="复选天之咒印"]
+offset_left = 21
+offset_right = 101.0
+offset_bottom = 19
+theme_override_colors/font_color = Color(0.11764705882352941, 0.5647058823529412, 1.0, 1)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1)
+theme_override_constants/outline_size = 2
+text = "天之咒印"
+
+[node name="点击区域" parent="复选天之咒印"]
+offset_right = 101.0
+offset_bottom = 19
+tooltip_text = "天之咒印"
+
+[node name="复选地之咒印" parent="." instance=ExtResource("k1")]
+layout_mode = 0
+offset_left = 470.0
+offset_top = 108.0
+offset_right = 637.0
+offset_bottom = 127.0
+custom_minimum_size = Vector2(167, 19)
+mouse_filter = 2
+
+[node name="文本" parent="复选地之咒印"]
+offset_left = 21
+offset_right = 167.0
+offset_bottom = 19
+theme_override_colors/font_color = Color(0.11764705882352941, 0.5647058823529412, 1.0, 1)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1)
+theme_override_constants/outline_size = 2
+text = "地之咒印"
+
+[node name="点击区域" parent="复选地之咒印"]
+offset_right = 167.0
+offset_bottom = 19
+tooltip_text = "地之咒印"
+
+[node name="复选掌仙术" parent="." instance=ExtResource("k1")]
+layout_mode = 0
+offset_left = 370.0
+offset_top = 129.0
+offset_right = 471.0
+offset_bottom = 148.0
+custom_minimum_size = Vector2(101, 19)
+mouse_filter = 2
+
+[node name="文本" parent="复选掌仙术"]
+offset_left = 21
+offset_right = 101.0
+offset_bottom = 19
+theme_override_colors/font_color = Color(0.11764705882352941, 0.5647058823529412, 1.0, 1)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1)
+theme_override_constants/outline_size = 2
+text = "掌仙术"
+
+[node name="点击区域" parent="复选掌仙术"]
+offset_right = 101.0
+offset_bottom = 19
+tooltip_text = "掌仙术"
+
+[node name="复选创造再生" parent="." instance=ExtResource("k1")]
+layout_mode = 0
+offset_left = 470.0
+offset_top = 129.0
+offset_right = 637.0
+offset_bottom = 148.0
+custom_minimum_size = Vector2(167, 19)
+mouse_filter = 2
+
+[node name="文本" parent="复选创造再生"]
+offset_left = 21
+offset_right = 167.0
+offset_bottom = 19
+theme_override_colors/font_color = Color(0.11764705882352941, 0.5647058823529412, 1.0, 1)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1)
+theme_override_constants/outline_size = 2
+text = "创造再生"
+
+[node name="点击区域" parent="复选创造再生"]
+offset_right = 167.0
+offset_bottom = 19
+tooltip_text = "创造再生"
+
+[node name="复选不离不弃" parent="." instance=ExtResource("k1")]
+layout_mode = 0
+offset_left = 370.0
+offset_top = 150.0
+offset_right = 471.0
+offset_bottom = 169.0
+custom_minimum_size = Vector2(101, 19)
+mouse_filter = 2
+
+[node name="文本" parent="复选不离不弃"]
+offset_left = 21
+offset_right = 101.0
+offset_bottom = 19
+theme_override_colors/font_color = Color(0.11764705882352941, 0.5647058823529412, 1.0, 1)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1)
+theme_override_constants/outline_size = 2
+text = "不离不弃"
+
+[node name="点击区域" parent="复选不离不弃"]
+offset_right = 101.0
+offset_bottom = 19
+tooltip_text = "不离不弃"
+
+[node name="复选自动升级技能" parent="." instance=ExtResource("k1")]
+layout_mode = 0
+offset_left = 470.0
+offset_top = 150.0
+offset_right = 637.0
+offset_bottom = 169.0
+custom_minimum_size = Vector2(167, 19)
+mouse_filter = 2
+
+[node name="文本" parent="复选自动升级技能"]
+offset_left = 21
+offset_right = 167.0
+offset_bottom = 19
+theme_override_colors/font_color = Color(1.0, 0.9411764705882353, 0.0, 1)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1)
+theme_override_constants/outline_size = 2
+text = "自动升级技能"
+
+[node name="点击区域" parent="复选自动升级技能"]
+offset_right = 167.0
+offset_bottom = 19
+tooltip_text = "自动升级技能"
+
+[node name="标签战斗范围" type="Label" parent="."]
+layout_mode = 0
+offset_left = 370.0
+offset_top = 173.0
+offset_right = 482.0
+offset_bottom = 193.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+vertical_alignment = 1
+clip_text = true
+text = "自动战斗范围：周围"
+
+[node name="输入底战斗范围" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 485.0
+offset_top = 173.0
+offset_right = 525.0
+offset_bottom = 194.0
+mouse_filter = 2
+texture = ExtResource("t4")
+patch_margin_left = 6
+patch_margin_top = 5
+patch_margin_right = 7
+patch_margin_bottom = 6
+
+[node name="输入战斗范围" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 485.0
+offset_top = 173.0
+offset_right = 525.0
+offset_bottom = 194.0
+theme_override_styles/normal = SubResource("sb_empty")
+theme_override_styles/read_only = SubResource("sb_empty")
+theme_override_styles/focus = SubResource("sb_empty")
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1)
+theme_override_font_sizes/font_size = 12
+alignment = 1
+max_length = 3
+editable = true
+text = ""
+metadata/max = 99
+metadata/as3 = ":340"
+
+[node name="标签格" type="Label" parent="."]
+layout_mode = 0
+offset_left = 525.0
+offset_top = 173.0
+offset_right = 541.0
+offset_bottom = 193.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+vertical_alignment = 1
+clip_text = true
+text = "格"
+
+[node name="标签战斗时间" type="Label" parent="."]
+layout_mode = 0
+offset_left = 370.0
+offset_top = 197.0
+offset_right = 454.0
+offset_bottom = 217.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+vertical_alignment = 1
+clip_text = true
+text = "自动战斗时间："
+
+[node name="输入底战斗时间" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 455.0
+offset_top = 197.0
+offset_right = 495.0
+offset_bottom = 218.0
+mouse_filter = 2
+texture = ExtResource("t4")
+patch_margin_left = 6
+patch_margin_top = 5
+patch_margin_right = 7
+patch_margin_bottom = 6
+
+[node name="输入战斗时间" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 455.0
+offset_top = 197.0
+offset_right = 495.0
+offset_bottom = 218.0
+theme_override_styles/normal = SubResource("sb_empty")
+theme_override_styles/read_only = SubResource("sb_empty")
+theme_override_styles/focus = SubResource("sb_empty")
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1)
+theme_override_font_sizes/font_size = 12
+alignment = 1
+max_length = 3
+editable = true
+text = ""
+metadata/max = 500
+metadata/as3 = ":343"
+
+[node name="标签分钟" type="Label" parent="."]
+layout_mode = 0
+offset_left = 495.0
+offset_top = 197.0
+offset_right = 523.0
+offset_bottom = 217.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+vertical_alignment = 1
+clip_text = true
+text = "分钟"
+
+[node name="复选无限时长" parent="." instance=ExtResource("k1")]
+layout_mode = 0
+offset_left = 525.0
+offset_top = 197.0
+offset_right = 635.0
+offset_bottom = 216.0
+custom_minimum_size = Vector2(110, 19)
+mouse_filter = 2
+
+[node name="文本" parent="复选无限时长"]
+offset_left = 21
+offset_right = 110.0
+offset_bottom = 19
+theme_override_colors/font_color = Color(0.8666666666666667, 0.6196078431372549, 0.24705882352941178, 1)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1)
+theme_override_constants/outline_size = 2
+text = "无限制时长"
+
+[node name="点击区域" parent="复选无限时长"]
+offset_right = 110.0
+offset_bottom = 19
+tooltip_text = "无限制时长"
+
+[node name="复选回城打坐" parent="." instance=ExtResource("k1")]
+layout_mode = 0
+offset_left = 370.0
+offset_top = 222.0
+offset_right = 637.0
+offset_bottom = 241.0
+custom_minimum_size = Vector2(267, 19)
+mouse_filter = 2
+
+[node name="文本" parent="复选回城打坐"]
+offset_left = 21
+offset_right = 267.0
+offset_bottom = 19
+theme_override_colors/font_color = Color(0.8666666666666667, 0.6196078431372549, 0.24705882352941178, 1)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1)
+theme_override_constants/outline_size = 2
+text = "自动战斗结束后，回城打坐"
+
+[node name="点击区域" parent="复选回城打坐"]
+offset_right = 267.0
+offset_bottom = 19
+tooltip_text = "自动战斗结束后，回城打坐"
+
+[node name="复选避开首领" parent="." instance=ExtResource("k1")]
+layout_mode = 0
+offset_left = 370.0
+offset_top = 244.0
+offset_right = 637.0
+offset_bottom = 263.0
+custom_minimum_size = Vector2(267, 19)
+mouse_filter = 2
+
+[node name="文本" parent="复选避开首领"]
+offset_left = 21
+offset_right = 267.0
+offset_bottom = 19
+theme_override_colors/font_color = Color(0.8666666666666667, 0.6196078431372549, 0.24705882352941178, 1)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1)
+theme_override_constants/outline_size = 2
+text = "自动战斗时，避开变异怪与BOSS"
+
+[node name="点击区域" parent="复选避开首领"]
+offset_right = 267.0
+offset_bottom = 19
+tooltip_text = "自动战斗时，避开变异怪与BOSS"
+
+[node name="复选原地复活" parent="." instance=ExtResource("k1")]
+layout_mode = 0
+offset_left = 370.0
+offset_top = 266.0
+offset_right = 637.0
+offset_bottom = 285.0
+custom_minimum_size = Vector2(267, 19)
+mouse_filter = 2
+
+[node name="文本" parent="复选原地复活"]
+offset_left = 21
+offset_right = 267.0
+offset_bottom = 19
+theme_override_colors/font_color = Color(0.8666666666666667, 0.6196078431372549, 0.24705882352941178, 1)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1)
+theme_override_constants/outline_size = 2
+text = "人物死亡后，自动使用千纸鹤原地复活"
+
+[node name="点击区域" parent="复选原地复活"]
+offset_right = 267.0
+offset_bottom = 19
+tooltip_text = "人物死亡后，自动使用千纸鹤原地复活"
+
+[node name="盒出售" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 310.0
+offset_right = 643.0
+offset_bottom = 414.0
+mouse_filter = 2
+texture = ExtResource("t1")
+patch_margin_left = 8
+patch_margin_top = 7
+patch_margin_right = 7
+patch_margin_bottom = 7
+
+[node name="端帽左出售" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 296.0
+offset_right = 72.0
+offset_bottom = 318.0
+mouse_filter = 2
+texture = ExtResource("t2")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="端帽右出售" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 576.0
+offset_top = 296.0
+offset_right = 603.0
+offset_bottom = 318.0
+mouse_filter = 2
+texture = ExtResource("t3")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="标题出售" type="Label" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 291.0
+offset_right = 643.0
+offset_bottom = 311.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 0.9411764705882353, 0.0, 1)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+text = "自动出售"
+
+[node name="复选自动出售开" parent="." instance=ExtResource("k1")]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 334.0
+offset_right = 101.0
+offset_bottom = 353.0
+custom_minimum_size = Vector2(88, 19)
+mouse_filter = 2
+
+[node name="文本" parent="复选自动出售开"]
+offset_left = 21
+offset_right = 88.0
+offset_bottom = 19
+theme_override_colors/font_color = Color(0.11764705882352941, 0.5647058823529412, 1.0, 1)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1)
+theme_override_constants/outline_size = 2
+text = "自动出售"
+
+[node name="点击区域" parent="复选自动出售开"]
+offset_right = 88.0
+offset_bottom = 19
+tooltip_text = "自动出售"
+
+[node name="标签等级上限" type="Label" parent="."]
+layout_mode = 0
+offset_left = 108.0
+offset_top = 334.0
+offset_right = 172.0
+offset_bottom = 354.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+vertical_alignment = 1
+clip_text = true
+text = "等级上限"
+
+[node name="下拉出售等级" type="OptionButton" parent="."]
+layout_mode = 0
+offset_left = 175.0
+offset_top = 334.0
+offset_right = 255.0
+offset_bottom = 355.0
+theme_override_styles/normal = SubResource("sb_combo_normal")
+theme_override_styles/hover = SubResource("sb_combo_hover")
+theme_override_styles/pressed = SubResource("sb_combo_pressed")
+theme_override_styles/focus = SubResource("sb_combo_normal")
+theme_override_styles/disabled = SubResource("sb_combo_disabled")
+theme_override_icons/arrow = ExtResource("t5")
+theme_override_constants/h_separation = 0
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1)
+theme_override_font_sizes/font_size = 12
+focus_mode = 0
+alignment = 0
+clip_text = true
+fit_to_longest_item = false
+text = "全部等级"
+metadata/as3 = ":317"
+
+[node name="标签职业" type="Label" parent="."]
+layout_mode = 0
+offset_left = 263.0
+offset_top = 334.0
+offset_right = 311.0
+offset_bottom = 354.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+vertical_alignment = 1
+clip_text = true
+text = "职业"
+
+[node name="下拉出售职业" type="OptionButton" parent="."]
+layout_mode = 0
+offset_left = 315.0
+offset_top = 334.0
+offset_right = 395.0
+offset_bottom = 355.0
+theme_override_styles/normal = SubResource("sb_combo_normal")
+theme_override_styles/hover = SubResource("sb_combo_hover")
+theme_override_styles/pressed = SubResource("sb_combo_pressed")
+theme_override_styles/focus = SubResource("sb_combo_normal")
+theme_override_styles/disabled = SubResource("sb_combo_disabled")
+theme_override_icons/arrow = ExtResource("t5")
+theme_override_constants/h_separation = 0
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1)
+theme_override_font_sizes/font_size = 12
+focus_mode = 0
+alignment = 0
+clip_text = true
+fit_to_longest_item = false
+text = "所有"
+metadata/as3 = ":319"
+
+[node name="标签品质上限" type="Label" parent="."]
+layout_mode = 0
+offset_left = 403.0
+offset_top = 334.0
+offset_right = 463.0
+offset_bottom = 354.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+vertical_alignment = 1
+clip_text = true
+text = "品质≤"
+
+[node name="下拉出售品质" type="OptionButton" parent="."]
+layout_mode = 0
+offset_left = 465.0
+offset_top = 334.0
+offset_right = 545.0
+offset_bottom = 355.0
+theme_override_styles/normal = SubResource("sb_combo_normal")
+theme_override_styles/hover = SubResource("sb_combo_hover")
+theme_override_styles/pressed = SubResource("sb_combo_pressed")
+theme_override_styles/focus = SubResource("sb_combo_normal")
+theme_override_styles/disabled = SubResource("sb_combo_disabled")
+theme_override_icons/arrow = ExtResource("t5")
+theme_override_constants/h_separation = 0
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1)
+theme_override_font_sizes/font_size = 12
+focus_mode = 0
+alignment = 0
+clip_text = true
+fit_to_longest_item = false
+text = "不限"
+metadata/as3 = ":321"
+
+[node name="复选出售食材" parent="." instance=ExtResource("k1")]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 360.0
+offset_right = 173.0
+offset_bottom = 379.0
+custom_minimum_size = Vector2(160, 19)
+mouse_filter = 2
+
+[node name="文本" parent="复选出售食材"]
+offset_left = 21
+offset_right = 160.0
+offset_bottom = 19
+theme_override_colors/font_color = Color(0.11764705882352941, 0.5647058823529412, 1.0, 1)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1)
+theme_override_constants/outline_size = 2
+text = "出售烹饪食材(12种)"
+
+[node name="点击区域" parent="复选出售食材"]
+offset_right = 160.0
+offset_bottom = 19
+tooltip_text = "出售烹饪食材(12种)"
+
+[node name="复选出售残卷" parent="." instance=ExtResource("k1")]
+layout_mode = 0
+offset_left = 183.0
+offset_top = 360.0
+offset_right = 313.0
+offset_bottom = 379.0
+custom_minimum_size = Vector2(130, 19)
+mouse_filter = 2
+
+[node name="文本" parent="复选出售残卷"]
+offset_left = 21
+offset_right = 130.0
+offset_bottom = 19
+theme_override_colors/font_color = Color(0.11764705882352941, 0.5647058823529412, 1.0, 1)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1)
+theme_override_constants/outline_size = 2
+text = "出售技能书残卷"
+
+[node name="点击区域" parent="复选出售残卷"]
+offset_right = 130.0
+offset_bottom = 19
+tooltip_text = "出售技能书残卷"
+
+[node name="复选出售技能书" parent="." instance=ExtResource("k1")]
+layout_mode = 0
+offset_left = 323.0
+offset_top = 360.0
+offset_right = 433.0
+offset_bottom = 379.0
+custom_minimum_size = Vector2(110, 19)
+mouse_filter = 2
+
+[node name="文本" parent="复选出售技能书"]
+offset_left = 21
+offset_right = 110.0
+offset_bottom = 19
+theme_override_colors/font_color = Color(0.11764705882352941, 0.5647058823529412, 1.0, 1)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1)
+theme_override_constants/outline_size = 2
+text = "出售技能书"
+
+[node name="点击区域" parent="复选出售技能书"]
+offset_right = 110.0
+offset_bottom = 19
+tooltip_text = "出售技能书"
+
+[node name="标签出售提示" type="Label" parent="."]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 386.0
+offset_right = 433.0
+offset_bottom = 406.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 1)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+vertical_alignment = 1
+clip_text = true
+text = "技能书自动排除奥义/轮回/秘籍（月读、天照、神罗天征等）"
+
+[node name="标签提示" type="Label" parent="."]
+layout_mode = 0
+offset_left = 407.0
+offset_top = 427.0
+offset_right = 650.0
+offset_bottom = 447.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.0, 1.0, 0.0, 1)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+vertical_alignment = 1
+clip_text = true
+text = "在地图任意空白处点击可中断挂机状态"
+
+[node name="钮开始" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 242.5
+offset_top = 429.0
+offset_right = 303.5
+offset_bottom = 451.0
+texture_normal = ExtResource("t6")
+ignore_texture_size = true
+stretch_mode = 0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+metadata/skin = "res://素材/界面/原版窗口/家族/钮底61"
+metadata/as3 = ":350-352"
+
+[node name="文字" type="Label" parent="钮开始"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+text = "开始挂机"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_colors/font_color = Color(0.9882352941176471, 0.9568627450980393, 0.611764705882353, 1)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+
+[node name="钮停止" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 343.5
+offset_top = 429.0
+offset_right = 404.5
+offset_bottom = 451.0
+texture_normal = ExtResource("t6")
+ignore_texture_size = true
+stretch_mode = 0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+metadata/skin = "res://素材/界面/原版窗口/家族/钮底61"
+metadata/as3 = ":353-355"
+
+[node name="文字" type="Label" parent="钮停止"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+text = "停止挂机"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_colors/font_color = Color(0.9882352941176471, 0.9568627450980393, 0.611764705882353, 1)
+theme_override_colors/font_outline_color = Color(0.0, 0.0, 0.0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12

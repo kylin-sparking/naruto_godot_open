@@ -1,0 +1,173 @@
+{
+ "_说明": "由 开发工具/出交易夹具.py 生成；每条帧的段序都与服务端源码逐 token 反查过（`handle_player_interaction` / `_broadcast_trade_snapshot`），改服务端那几段拼接式会让生成器直接红。离线门把这些原文喂进 `后端连接._handle_trade_text`。",
+ "模板": {
+  "邀请": [
+   "{op(ServerOpcode.PLAYER_INTERACTION)}",
+   ":3:",
+   "{character_id}",
+   ":",
+   "{self.character.name}"
+  ],
+  "婉拒后取消": [
+   "{op(ServerOpcode.PLAYER_INTERACTION)}",
+   ":9:0"
+  ],
+  "开始给邀请者": [
+   "{op(ServerOpcode.PLAYER_INTERACTION)}",
+   ":22:0:",
+   "{inviter.character.character_id}",
+   ":",
+   "{inviter.character.name}",
+   ":1:",
+   "{character_id}",
+   ":",
+   "{self.character.name}"
+  ],
+  "开始给接受者": [
+   "{op(ServerOpcode.PLAYER_INTERACTION)}",
+   ":22:0:",
+   "{character_id}",
+   ":",
+   "{self.character.name}",
+   ":1:",
+   "{inviter.character.character_id}",
+   ":",
+   "{inviter.character.name}"
+  ],
+  "退出后取消": [
+   "{op(ServerOpcode.PLAYER_INTERACTION)}",
+   ":9:0"
+  ],
+  "快照金币": [
+   "{op(ServerOpcode.PLAYER_INTERACTION)}",
+   ":4:",
+   "{player_slot}",
+   ":",
+   "{trade.offered_money.get(owner_id, 0)}"
+  ],
+  "快照元宝": [
+   "{op(ServerOpcode.PLAYER_INTERACTION)}",
+   ":6:",
+   "{player_slot}",
+   ":",
+   "{trade.offered_cash_money.get(owner_id, 0)}"
+  ],
+  "快照放物": [
+   "{op(ServerOpcode.PLAYER_INTERACTION)}",
+   ":5:",
+   "{player_slot}",
+   ":",
+   "{encoded}"
+  ],
+  "快照放宠": [
+   "{op(ServerOpcode.PLAYER_INTERACTION)}",
+   ":10:",
+   "{player_slot}",
+   ":",
+   "{owner._encode_pet(pet)}"
+  ],
+  "取回物品": [
+   "{op(ServerOpcode.PLAYER_INTERACTION)}",
+   ":21:",
+   "{slot}",
+   ":",
+   "{encoded}"
+  ],
+  "取回宠物": [
+   "{op(ServerOpcode.PLAYER_INTERACTION)}",
+   ":11:",
+   "{slot}",
+   ":",
+   "{self._encode_pet(pet)}"
+  ],
+  "双方锁定": [
+   "{op(ServerOpcode.PLAYER_INTERACTION)}",
+   ":7"
+  ],
+  "成交完成": [
+   "{op(ServerOpcode.PLAYER_INTERACTION)}",
+   ":8"
+  ]
+ },
+ "上行动作号": {
+  "CREATE": 0,
+  "INVITE": 2,
+  "DECLINE": 3,
+  "VISIT": 4,
+  "CHAT": 6,
+  "LOCK": 9,
+  "EXIT": 10,
+  "SET_CASH": 13,
+  "SET_ITEMS": 14,
+  "SET_COCONUTS": 15,
+  "CONFIRM": 16,
+  "TAKE_ITEM_BACK_TRADE": 17,
+  "SET_PET": 18,
+  "TAKE_PET_BACK_TRADE": 19
+ },
+ "物品负载段": [
+  "op(ItemCodecType.ITEM)",
+  "item.item_id",
+  "item.slot",
+  "quantity",
+  "0",
+  "0",
+  "int(item.can_trade)",
+  "owner",
+  "0",
+  "item.unique_id"
+ ],
+ "宠物负载段": [
+  "pet.item_id",
+  "pet.position",
+  "1",
+  "0",
+  "0",
+  "int(pet.can_trade)",
+  "self.character.name",
+  "0",
+  "pet.unique_id",
+  "self.character.character_id",
+  "pet.name",
+  "pet.level",
+  "0",
+  "self.character.foothold",
+  "pet.blessing",
+  "pet.aptitude",
+  "pet.savvy",
+  "pet.experience",
+  "pet.fullness",
+  "pet.potential_real_atk",
+  "pet.potential_real_def",
+  "pet.potential_real_dex",
+  "pet.potential_real_str",
+  "pet.potential_total_atk",
+  "pet.potential_total_def",
+  "pet.potential_total_dex",
+  "pet.potential_total_str",
+  "self._pet_skin(pet)",
+  "equipment",
+  "skills",
+  "pet.dream"
+ ],
+ "我号": 1001,
+ "我名": "木叶忍者",
+ "他号": 1002,
+ "他名": "油女澪",
+ "原文": {
+  "邀请": "335:3:1002:油女澪",
+  "开始": "335:22:0:1001:木叶忍者:1:1002:油女澪",
+  "我方金币": "335:4:0:200000",
+  "对方金币": "335:4:1:1500",
+  "我方元宝": "335:6:0:30",
+  "对方元宝": "335:6:1:5",
+  "我方放物": "335:5:0:2&10000001&2&5&0&0&1&油女澪&0&7001",
+  "对方放物": "335:5:1:2&10000002&3&1&0&0&1&油女澪&0&7002",
+  "我方取回": "335:21:0:2&10000001&2&5&0&0&1&油女澪&0&7001",
+  "我方放宠": "335:10:0:101&5&1&0&0&1&油女澪&0&8101&1002&蜃&12&0&0&0&3&60&0&0&10&10&10&10&20&20&20&20&101&-&-&0",
+  "对方放宠": "335:10:1:102&5&1&0&0&1&木叶忍者&0&8102&1001&蛤龙&12&0&0&0&3&60&0&0&10&10&10&10&20&20&20&20&102&-&-&0",
+  "双方锁定": "335:7",
+  "成交": "335:8",
+  "取消": "335:9:0"
+ }
+}

@@ -1,0 +1,184 @@
+[gd_scene load_steps=15 format=3]
+
+[ext_resource type="Script" path="res://脚本/界面/组件/存取金额窗口.gd" id="1_win"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/窗口内底.png" id="t2"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/输入框.png" id="t3"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/金币.png" id="t4"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/增加按钮.png" id="t5"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/减少按钮.png" id="t6"]
+[ext_resource type="Script" path="res://脚本/界面/组件/原版三态钮.gd" id="9_三态"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/关闭按钮.png" id="9_关皮"]
+
+[sub_resource type="StyleBoxTexture" id="SB_add"]
+texture = ExtResource("t5")
+
+[sub_resource type="StyleBoxEmpty" id="SB_none"]
+
+[sub_resource type="StyleBoxTexture" id="SB_minus"]
+texture = ExtResource("t6")
+
+[node name="存取金额窗口" type="Control"]
+visible = false
+offset_right = 187.0
+offset_bottom = 174.0
+mouse_filter = 2
+script = ExtResource("1_win")
+
+[node name="框" type="Panel" parent="."]
+offset_right = 187.0
+offset_bottom = 174.0
+mouse_filter = 2
+theme_type_variation = &"OrigSmallWindowFrame"
+
+[node name="标题" type="Label" parent="."]
+offset_left = 63.0
+offset_top = 5.0
+offset_right = 124.0
+offset_bottom = 23.0
+mouse_filter = 2
+theme_type_variation = &"OrigWindowTitle"
+horizontal_alignment = 1
+
+[node name="关闭" type="Button" parent="."]
+offset_left = 156.0
+offset_top = 6.0
+offset_right = 181.0
+offset_bottom = 30.0
+focus_mode = 0
+flat = true
+script = ExtResource("9_三态")
+icon = ExtResource("9_关皮")
+mouse_default_cursor_shape = 2
+
+[node name="黄底" type="TextureRect" parent="."]
+offset_left = 6.0
+offset_top = 30.0
+offset_right = 181.0
+offset_bottom = 167.0
+mouse_filter = 2
+texture = ExtResource("t2")
+expand_mode = 1
+
+[node name="上标签" type="Label" parent="."]
+offset_left = 8.0
+offset_top = 32.0
+offset_right = 179.0
+offset_bottom = 50.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 0.568627, 0, 1)
+theme_override_font_sizes/font_size = 12
+
+[node name="下标签" type="Label" parent="."]
+offset_left = 8.0
+offset_top = 82.0
+offset_right = 179.0
+offset_bottom = 100.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 0.568627, 0, 1)
+theme_override_font_sizes/font_size = 12
+
+[node name="持有底" type="NinePatchRect" parent="."]
+offset_left = 23.0
+offset_top = 57.0
+offset_right = 162.0
+offset_bottom = 78.0
+mouse_filter = 2
+texture = ExtResource("t3")
+patch_margin_left = 6
+patch_margin_top = 5
+patch_margin_right = 7
+patch_margin_bottom = 6
+
+[node name="金币图标" type="TextureRect" parent="."]
+offset_left = 28.0
+offset_top = 59.0
+offset_right = 45.0
+offset_bottom = 76.0
+mouse_filter = 2
+expand_mode = 1
+texture = ExtResource("t4")
+
+[node name="持有金额" type="Label" parent="."]
+offset_left = 23.0
+offset_top = 57.0
+offset_right = 162.0
+offset_bottom = 78.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="数量底" type="NinePatchRect" parent="."]
+offset_left = 31.0
+offset_top = 110.0
+offset_right = 99.0
+offset_bottom = 131.0
+mouse_filter = 2
+texture = ExtResource("t3")
+patch_margin_left = 6
+patch_margin_top = 5
+patch_margin_right = 7
+patch_margin_bottom = 6
+
+[node name="数量" type="LineEdit" parent="."]
+offset_left = 35.0
+offset_top = 111.0
+offset_right = 99.0
+offset_bottom = 129.0
+theme_override_styles/normal = SubResource("SB_none")
+theme_override_styles/focus = SubResource("SB_none")
+theme_override_styles/read_only = SubResource("SB_none")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+text = "0"
+
+[node name="减" type="Button" parent="."]
+offset_left = 13.0
+offset_top = 111.0
+offset_right = 31.0
+offset_bottom = 129.0
+focus_mode = 0
+theme_override_styles/normal = SubResource("SB_minus")
+theme_override_styles/hover = SubResource("SB_minus")
+theme_override_styles/pressed = SubResource("SB_minus")
+theme_override_styles/focus = SubResource("SB_minus")
+script = ExtResource("9_三态")
+mouse_default_cursor_shape = 2
+
+[node name="加" type="Button" parent="."]
+offset_left = 100.0
+offset_top = 111.0
+offset_right = 118.0
+offset_bottom = 129.0
+focus_mode = 0
+theme_override_styles/normal = SubResource("SB_add")
+theme_override_styles/hover = SubResource("SB_add")
+theme_override_styles/pressed = SubResource("SB_add")
+theme_override_styles/focus = SubResource("SB_add")
+script = ExtResource("9_三态")
+mouse_default_cursor_shape = 2
+
+[node name="MAX" type="Button" parent="."]
+offset_left = 126.0
+offset_top = 110.0
+offset_right = 163.0
+offset_bottom = 132.0
+focus_mode = 0
+text = "MAX"
+
+[node name="确定" type="Button" parent="."]
+offset_left = 52.0
+offset_top = 138.0
+offset_right = 89.0
+offset_bottom = 160.0
+focus_mode = 0
+text = "确定"
+
+[node name="取消" type="Button" parent="."]
+offset_left = 102.0
+offset_top = 138.0
+offset_right = 139.0
+offset_bottom = 160.0
+focus_mode = 0
+text = "取消"

@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://脚本/界面/组件/富文本提示框.gd" id="1_rich"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/提示框.png" id="2_bg"]
+
+[node name="富文本提示框" type="Control"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 200.0
+offset_bottom = 80.0
+mouse_filter = 2
+script = ExtResource("1_rich")
+
+[node name="底" type="NinePatchRect" parent="."]
+layout_mode = 0
+texture = ExtResource("2_bg")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="文" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 7.0
+offset_right = 190.0
+offset_bottom = 70.0
+mouse_filter = 2
+bbcode_enabled = true
+fit_content = true
+scroll_active = false

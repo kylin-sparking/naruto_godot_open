@@ -1,0 +1,107 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://脚本/界面/组件/宝石孔格.gd" id="1_hole"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/窗口内底.png" id="2_inner"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/子面板.png" id="3_pane"]
+
+; 原版 `StoneCarryWindow`（`com/mxw/uifl/controls/equip/StoneCarryWindow.as`）。
+; 从**装备**菜单「宝石镶嵌」开。窗局部坐标（整框、原点 [0,0]）：
+;   super(254,204)；橙装 6 孔 → setSize(300,204)。内容盒 contentBox (BORDER_GAP=5, 33) 铺 MYellow。
+;   descTextField (CONTENT_GAP=8,8) w=contentBox.w-16 h=42 ；
+;   stonePanel(HBox) (8, desc.y+desc.h=50) w 同 h=60 铺 MPane，5~6 个 40x40 SimpleItemCell 横 gap=2 居中；
+;   textField (8, panel.y+panel.h+4=114) w 同 h=42 居中。
+; 孔的**具体 x 在运行时按孔数居中摆**（原版是 HBox 自动排布，这里对齐它，不写死）。
+[node name="原版宝石镶嵌内容" type="Control"]
+custom_minimum_size = Vector2(254, 204)
+mouse_filter = 2
+
+[node name="内容底" type="TextureRect" parent="."]
+offset_left = 5.0
+offset_top = 33.0
+offset_right = 249.0
+offset_bottom = 199.0
+texture = ExtResource("2_inner")
+expand_mode = 1
+
+[node name="镶嵌说明" type="RichTextLabel" parent="."]
+offset_left = 13.0
+offset_top = 41.0
+offset_right = 241.0
+offset_bottom = 83.0
+mouse_filter = 2
+bbcode_enabled = true
+text = "[color=#ff9100]宝石镶嵌：[/color][color=#ffffff]将背包中的宝石拖入本窗口[/color]
+[color=#ff9100]宝石取出：[/color][color=#ffffff]点击本窗口中的宝石[/color]"
+
+[node name="孔面板" type="TextureRect" parent="."]
+offset_left = 13.0
+offset_top = 83.0
+offset_right = 241.0
+offset_bottom = 143.0
+texture = ExtResource("3_pane")
+expand_mode = 1
+
+[node name="孔_0" type="Button" parent="孔面板"]
+custom_minimum_size = Vector2(40, 40)
+offset_right = 40.0
+offset_bottom = 40.0
+focus_mode = 0
+expand_icon = false
+icon_alignment = 1
+script = ExtResource("1_hole")
+
+[node name="孔_1" type="Button" parent="孔面板"]
+custom_minimum_size = Vector2(40, 40)
+offset_right = 40.0
+offset_bottom = 40.0
+focus_mode = 0
+expand_icon = false
+icon_alignment = 1
+script = ExtResource("1_hole")
+
+[node name="孔_2" type="Button" parent="孔面板"]
+custom_minimum_size = Vector2(40, 40)
+offset_right = 40.0
+offset_bottom = 40.0
+focus_mode = 0
+expand_icon = false
+icon_alignment = 1
+script = ExtResource("1_hole")
+
+[node name="孔_3" type="Button" parent="孔面板"]
+custom_minimum_size = Vector2(40, 40)
+offset_right = 40.0
+offset_bottom = 40.0
+focus_mode = 0
+expand_icon = false
+icon_alignment = 1
+script = ExtResource("1_hole")
+
+[node name="孔_4" type="Button" parent="孔面板"]
+custom_minimum_size = Vector2(40, 40)
+offset_right = 40.0
+offset_bottom = 40.0
+focus_mode = 0
+expand_icon = false
+icon_alignment = 1
+script = ExtResource("1_hole")
+
+[node name="孔_5" type="Button" parent="孔面板"]
+custom_minimum_size = Vector2(40, 40)
+offset_right = 40.0
+offset_bottom = 40.0
+focus_mode = 0
+expand_icon = false
+icon_alignment = 1
+visible = false
+script = ExtResource("1_hole")
+
+[node name="取出说明" type="RichTextLabel" parent="."]
+offset_left = 13.0
+offset_top = 147.0
+offset_right = 241.0
+offset_bottom = 189.0
+mouse_filter = 2
+bbcode_enabled = true
+text = "[color=#00ff00]宝石镶嵌与取出不消耗任何费用
+成功率为100%[/color]"

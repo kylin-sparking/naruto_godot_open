@@ -1,0 +1,123 @@
+[gd_scene load_steps=15 format=3]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/内容面板.png" id="t1"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/横向分隔线.png" id="t2"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/洗点/确定钮.png" id="t3"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/洗点/确定钮_悬停.png" id="t4"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/洗点/确定钮_按下.png" id="t5"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/洗点/取消钮.png" id="t6"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/洗点/取消钮_悬停.png" id="t7"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/洗点/取消钮_按下.png" id="t8"]
+
+[sub_resource type="StyleBoxTexture" id="sb1_n"]
+texture = ExtResource("t3")
+
+[sub_resource type="StyleBoxTexture" id="sb1_h"]
+texture = ExtResource("t4")
+
+[sub_resource type="StyleBoxTexture" id="sb1_p"]
+texture = ExtResource("t5")
+
+[sub_resource type="StyleBoxTexture" id="sb2_n"]
+texture = ExtResource("t6")
+
+[sub_resource type="StyleBoxTexture" id="sb2_h"]
+texture = ExtResource("t7")
+
+[sub_resource type="StyleBoxTexture" id="sb2_p"]
+texture = ExtResource("t8")
+
+[node name="原版洗点确认内容" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 240
+offset_bottom = 169.0
+
+[node name="内容底" type="NinePatchRect" parent="."]
+texture = ExtResource("t1")
+patch_margin_left = 11
+patch_margin_right = 10
+patch_margin_top = 10
+patch_margin_bottom = 11
+layout_mode = 0
+offset_left = 6.0
+offset_top = 1.0
+offset_right = 234.0
+offset_bottom = 137.0
+
+[node name="分隔线" type="TextureRect" parent="."]
+texture = ExtResource("t2")
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 0
+layout_mode = 0
+offset_left = 6.0
+offset_top = 60.0
+offset_right = 228.0
+offset_bottom = 62.0
+
+[node name="方案文本" type="RichTextLabel" parent="."]
+text = ""
+scroll_active = false
+bbcode_enabled = true
+autowrap_mode = 3
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 2
+layout_mode = 0
+offset_left = 11.0
+offset_top = 6.0
+offset_right = 230.0
+offset_bottom = 55.0
+
+[node name="结果文本" type="RichTextLabel" parent="."]
+text = ""
+scroll_active = false
+bbcode_enabled = true
+autowrap_mode = 3
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 2
+theme_override_colors/default_color = Color(0.000000, 1.000000, 0.000000, 1)
+layout_mode = 0
+offset_left = 11.0
+offset_top = 67.0
+offset_right = 230.0
+offset_bottom = 101.0
+
+[node name="确定钮" type="Button" parent="."]
+theme_override_styles/normal = SubResource("sb1_n")
+theme_override_styles/hover = SubResource("sb1_h")
+theme_override_styles/pressed = SubResource("sb1_p")
+text = "确定"
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+layout_mode = 0
+offset_left = 58.0
+offset_top = 142.0
+offset_right = 95.0
+offset_bottom = 164.0
+
+[node name="取消钮" type="Button" parent="."]
+theme_override_styles/normal = SubResource("sb2_n")
+theme_override_styles/hover = SubResource("sb2_h")
+theme_override_styles/pressed = SubResource("sb2_p")
+text = "取消"
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+layout_mode = 0
+offset_left = 145.0
+offset_top = 142.0
+offset_right = 182.0
+offset_bottom = 164.0

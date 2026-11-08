@@ -1,0 +1,855 @@
+[gd_scene format=3 uid="uid://1pgitkxvctq0"]
+
+[ext_resource type="Texture2D" uid="uid://o6lay1yq0hfe" path="res://素材/界面/原版窗口/人物/寄坏之术/寄坏之术背景.png" id="1_bg"]
+[ext_resource type="Texture2D" uid="uid://dh7xywvq5y1ti" path="res://素材/界面/原版窗口/人物/寄坏之术/无装备虫槽.png" id="2_4xn1a"]
+[ext_resource type="Texture2D" uid="uid://bfmlxsgw12k6n" path="res://素材/界面/原版窗口/通用控件/内容面板.png" id="3_panel"]
+[ext_resource type="Texture2D" uid="uid://n4dj04sw5hao" path="res://素材/界面/原版窗口/通用控件/小窗口边框.png" id="4_jo31k"]
+[ext_resource type="Texture2D" uid="uid://dkil44jd6c66y" path="res://素材/界面/原版窗口/通用控件/横向分隔线.png" id="5_kv12r"]
+[ext_resource type="Script" uid="uid://s64kktqyrit2" path="res://素材/界面/原版窗口/人物/寄坏之术/脚本/昆虫介绍弹窗.gd" id="5_oossp"]
+[ext_resource type="Texture2D" uid="uid://ch54qb4s25og5" path="res://素材/界面/原版窗口/通用控件/关闭按钮.png" id="6_jo31k"]
+[ext_resource type="Script" uid="uid://cwgddrrmd5ye2" path="res://素材/界面/原版窗口/人物/寄坏之术/脚本/关闭按钮交互.gd" id="8_oossp"]
+[ext_resource type="Texture2D" uid="uid://c65ep1vynjqo3" path="res://素材/界面/原版窗口/通用控件/窗口边框.png" id="9_8tq7a"]
+[ext_resource type="Script" uid="uid://cnvxew42jlyx6" path="res://素材/界面/原版窗口/人物/寄坏之术/脚本/昆虫强化弹窗.gd" id="10_4i5ji"]
+[ext_resource type="Texture2D" uid="uid://diwhoiv62oy18" path="res://素材/界面/原版窗口/通用控件/分页按钮选中.png" id="10_6vhy4"]
+[ext_resource type="Texture2D" uid="uid://cvqyjvrw5mup8" path="res://素材/界面/原版窗口/忍术/忍术树箭头.png" id="10_tnfny"]
+[ext_resource type="Texture2D" uid="uid://de1ft0wkwl5a2" path="res://素材/界面/原版窗口/通用控件/窗口内底.png" id="10_w723r"]
+[ext_resource type="Texture2D" uid="uid://bgadcsjt6nxet" path="res://素材/界面/原版窗口/人物/寄坏之术/镇灵石.png" id="12_xegoh"]
+[ext_resource type="Texture2D" uid="uid://np3hlsuigi4x" path="res://素材/界面/原版窗口/人物/寄坏之术/寄坏玉.png" id="13_4i5ji"]
+[ext_resource type="Texture2D" uid="uid://bcf3keslc54lt" path="res://素材/界面/原版窗口/通用控件/下拉箭头2.png" id="14_xegoh"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_panel"]
+texture = ExtResource("3_panel")
+texture_margin_left = 11.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2f48v"]
+texture = ExtResource("4_jo31k")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_10tuq"]
+texture = ExtResource("9_8tq7a")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5qsg1"]
+texture = ExtResource("10_w723r")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bq156"]
+texture = ExtResource("10_tnfny")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tsux6"]
+texture = ExtResource("10_6vhy4")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xegoh"]
+
+[node name="寄坏之术内容" type="Control" unique_id=1997666203]
+custom_minimum_size = Vector2(421, 367)
+layout_mode = 3
+anchors_preset = 0
+
+[node name="标题" type="Label" parent="." unique_id=2088127235]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 4.0
+offset_right = 204.0
+offset_bottom = 22.0
+theme_override_colors/font_color = Color(0.2, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "寄坏之术"
+horizontal_alignment = 1
+
+[node name="介绍" type="RichTextLabel" parent="." unique_id=778718911]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 20.0
+offset_right = 205.0
+offset_bottom = 87.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 2
+bbcode_enabled = true
+text = "[color=#ffff00]油女一族秘术，与虫族签订契约，贡献自身的查克拉给昆虫，昆虫则寄身于自己体内，为自己战斗。[/color]
+[color=#33ff00]不同类型的昆虫加成不同的属性[/color]"
+scroll_active = false
+
+[node name="强化说明" type="RichTextLabel" parent="." unique_id=1307622448]
+layout_mode = 0
+offset_left = 238.0
+offset_top = 19.0
+offset_right = 418.0
+offset_bottom = 62.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 2
+bbcode_enabled = true
+text = "[color=#33ff00]寄身的昆虫可通过强化提升属性[/color]
+[color=#e88300]※强化属性越高提升属性越大[/color]"
+scroll_active = false
+
+[node name="强化寄坏虫" type="Button" parent="." unique_id=573523220]
+layout_mode = 0
+offset_left = 280.0
+offset_top = 62.0
+offset_right = 360.0
+offset_bottom = 84.0
+text = "昆虫强化"
+
+[node name="虫槽区域" type="Control" parent="." unique_id=1426772012]
+anchors_preset = 0
+offset_left = 26.0
+offset_top = 105.0
+offset_right = 259.0
+offset_bottom = 338.0
+
+[node name="背景" type="TextureRect" parent="虫槽区域" unique_id=416990942]
+layout_mode = 0
+offset_right = 233.0
+offset_bottom = 233.0
+mouse_filter = 2
+texture = ExtResource("1_bg")
+
+[node name="寄坏槽一" type="TextureButton" parent="虫槽区域" unique_id=224161829]
+layout_mode = 0
+offset_left = -4.0
+offset_top = 14.0
+offset_right = 60.0
+offset_bottom = 78.0
+tooltip_text = "寄坏虫槽一"
+texture_normal = ExtResource("2_4xn1a")
+
+[node name="昆虫图标" type="TextureRect" parent="虫槽区域/寄坏槽一" unique_id=224161830]
+visible = false
+mouse_filter = 2
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 49.0
+offset_bottom = 49.0
+expand_mode = 1
+stretch_mode = 6
+
+[node name="昆虫名称" type="Label" parent="虫槽区域/寄坏槽一" unique_id=224161831]
+visible = false
+mouse_filter = 2
+offset_left = 2.0
+offset_top = 60.0
+offset_right = 62.0
+offset_bottom = 76.0
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+
+[node name="寄坏槽二" type="TextureButton" parent="虫槽区域" unique_id=1129740034]
+layout_mode = 0
+offset_left = 169.0
+offset_top = 14.0
+offset_right = 233.0
+offset_bottom = 78.0
+tooltip_text = "寄坏虫槽二"
+texture_normal = ExtResource("2_4xn1a")
+
+[node name="昆虫图标" type="TextureRect" parent="虫槽区域/寄坏槽二" unique_id=1129740035]
+visible = false
+mouse_filter = 2
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 49.0
+offset_bottom = 49.0
+expand_mode = 1
+stretch_mode = 6
+
+[node name="昆虫名称" type="Label" parent="虫槽区域/寄坏槽二" unique_id=1129740036]
+visible = false
+mouse_filter = 2
+offset_left = 2.0
+offset_top = 60.0
+offset_right = 62.0
+offset_bottom = 76.0
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+
+[node name="寄坏槽三" type="TextureButton" parent="虫槽区域" unique_id=1849339876]
+layout_mode = 0
+offset_left = 169.0
+offset_top = 150.0
+offset_right = 233.0
+offset_bottom = 214.0
+tooltip_text = "寄坏虫槽三"
+texture_normal = ExtResource("2_4xn1a")
+
+[node name="昆虫图标" type="TextureRect" parent="虫槽区域/寄坏槽三" unique_id=1849339877]
+visible = false
+mouse_filter = 2
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 49.0
+offset_bottom = 49.0
+expand_mode = 1
+stretch_mode = 6
+
+[node name="昆虫名称" type="Label" parent="虫槽区域/寄坏槽三" unique_id=1849339878]
+visible = false
+mouse_filter = 2
+offset_left = 2.0
+offset_top = 60.0
+offset_right = 62.0
+offset_bottom = 76.0
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+
+[node name="寄坏槽四" type="TextureButton" parent="虫槽区域" unique_id=1233066609]
+layout_mode = 0
+offset_left = -4.0
+offset_top = 150.0
+offset_right = 60.0
+offset_bottom = 214.0
+tooltip_text = "寄坏虫槽四"
+texture_normal = ExtResource("2_4xn1a")
+
+[node name="昆虫图标" type="TextureRect" parent="虫槽区域/寄坏槽四" unique_id=1233066610]
+visible = false
+mouse_filter = 2
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 49.0
+offset_bottom = 49.0
+expand_mode = 1
+stretch_mode = 6
+
+[node name="昆虫名称" type="Label" parent="虫槽区域/寄坏槽四" unique_id=1233066611]
+visible = false
+mouse_filter = 2
+offset_left = 2.0
+offset_top = 60.0
+offset_right = 62.0
+offset_bottom = 76.0
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+
+[node name="属性面板" type="Panel" parent="." unique_id=1473550835]
+layout_mode = 0
+offset_left = 282.0
+offset_top = 105.0
+offset_right = 417.0
+offset_bottom = 325.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_panel")
+
+[node name="属性" type="RichTextLabel" parent="属性面板" unique_id=1072148329]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 127.0
+offset_bottom = 212.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 2
+bbcode_enabled = true
+text = "[color=#29b7ff]注意：
+每个角色最多可同时装
+备四隻昆虫，强化昆虫
+可有效提高追加属性[/color]"
+fit_content = true
+
+[node name="类别介绍" type="Button" parent="." unique_id=144327230]
+layout_mode = 0
+offset_left = 327.0
+offset_top = 333.0
+offset_right = 423.0
+offset_bottom = 355.0
+theme_override_colors/font_color = Color(0.9882353, 0.95686275, 0.05490196, 1)
+text = "【昆虫类别介绍】"
+flat = true
+
+[node name="昆虫介绍弹窗" type="Panel" parent="." unique_id=1225937256]
+visible = false
+layout_mode = 0
+offset_left = 23.0
+offset_top = 135.0
+offset_right = 257.0
+offset_bottom = 292.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_2f48v")
+script = ExtResource("5_oossp")
+
+[node name="底图" type="Panel" parent="昆虫介绍弹窗" unique_id=913156702]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 24.0
+offset_right = 229.0
+offset_bottom = 152.0
+
+[node name="分隔线间距" type="VBoxContainer" parent="昆虫介绍弹窗/底图" unique_id=1578528270]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 2.0
+offset_right = 221.0
+offset_bottom = 125.0
+theme_override_constants/separation = 18
+
+[node name="分隔线" type="TextureRect" parent="昆虫介绍弹窗/底图/分隔线间距" unique_id=1601046861]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("5_kv12r")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="蝉介绍" type="Label" parent="昆虫介绍弹窗/底图/分隔线间距/分隔线" unique_id=2040615460]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 2.0
+offset_right = 164.0
+offset_bottom = 17.0
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "【蝉】【加成属性：生命值上限】"
+
+[node name="分隔线2" type="TextureRect" parent="昆虫介绍弹窗/底图/分隔线间距" unique_id=1950430324]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("5_kv12r")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="蝴蝶介绍" type="Label" parent="昆虫介绍弹窗/底图/分隔线间距/分隔线2" unique_id=1276273793]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 2.0
+offset_right = 175.0
+offset_bottom = 17.0
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "【蝴蝶】【加成属性：查克拉上限】"
+
+[node name="分隔线3" type="TextureRect" parent="昆虫介绍弹窗/底图/分隔线间距" unique_id=1619878368]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("5_kv12r")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="蜻蜓介绍" type="Label" parent="昆虫介绍弹窗/底图/分隔线间距/分隔线3" unique_id=669520101]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 2.0
+offset_right = 131.0
+offset_bottom = 17.0
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "【蜻蜓】【加成属性：闪避】"
+
+[node name="分隔线4" type="TextureRect" parent="昆虫介绍弹窗/底图/分隔线间距" unique_id=1995625828]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("5_kv12r")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="蜜蜂介绍" type="Label" parent="昆虫介绍弹窗/底图/分隔线间距/分隔线4" unique_id=909440729]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 2.0
+offset_right = 142.0
+offset_bottom = 17.0
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "【蜜蜂】【加成属性：暴击】"
+
+[node name="分隔线5" type="TextureRect" parent="昆虫介绍弹窗/底图/分隔线间距" unique_id=1097706473]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("5_kv12r")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="甲虫介绍" type="Label" parent="昆虫介绍弹窗/底图/分隔线间距/分隔线5" unique_id=1822336054]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 2.0
+offset_right = 142.0
+offset_bottom = 17.0
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "【甲虫】【加成属性：防御】"
+
+[node name="分隔线6" type="TextureRect" parent="昆虫介绍弹窗/底图/分隔线间距" unique_id=970865213]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("5_kv12r")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="寄坏虫介绍" type="Label" parent="昆虫介绍弹窗/底图/分隔线间距/分隔线6" unique_id=1272396536]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 2.0
+offset_right = 153.0
+offset_bottom = 17.0
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "【寄坏虫】【加成属性：攻击】"
+
+[node name="分隔线7" type="TextureRect" parent="昆虫介绍弹窗/底图/分隔线间距" unique_id=1087504809]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("5_kv12r")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="标题" type="Label" parent="昆虫介绍弹窗" unique_id=1263528242]
+layout_mode = 0
+offset_left = 94.0
+offset_top = 2.0
+offset_right = 138.0
+offset_bottom = 17.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "昆虫介绍"
+
+[node name="关闭按钮" type="TextureButton" parent="昆虫介绍弹窗" unique_id=462914118]
+layout_mode = 0
+offset_left = 211.0
+offset_top = 5.0
+offset_right = 236.0
+offset_bottom = 29.0
+scale = Vector2(0.7, 0.7)
+texture_normal = ExtResource("6_jo31k")
+script = ExtResource("8_oossp")
+
+[node name="昆虫强化弹窗" type="Panel" parent="." unique_id=730764177]
+visible = false
+layout_mode = 0
+offset_right = 358.0
+offset_bottom = 393.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_10tuq")
+script = ExtResource("10_4i5ji")
+
+[node name="昆虫强化标题" type="Label" parent="昆虫强化弹窗" unique_id=293258358]
+layout_mode = 0
+offset_left = 145.0
+offset_top = 1.0
+offset_right = 205.0
+offset_bottom = 21.0
+theme_override_font_sizes/font_size = 15
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "昆虫强化"
+
+[node name="底图" type="Panel" parent="昆虫强化弹窗" unique_id=1158003417]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 55.0
+offset_right = 352.0
+offset_bottom = 363.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_5qsg1")
+
+[node name="放置区底图" type="Panel" parent="昆虫强化弹窗/底图" unique_id=1030033880]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 13.0
+offset_right = 94.0
+offset_bottom = 196.0
+
+[node name="开始提升按钮" type="Button" parent="昆虫强化弹窗/底图/放置区底图" unique_id=167897638]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 10.0
+offset_right = 68.0
+offset_bottom = 30.0
+text = "放入昆虫"
+
+[node name="放置格" type="Panel" parent="昆虫强化弹窗/底图/放置区底图" unique_id=642214366]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 33.0
+offset_right = 60.0
+offset_bottom = 73.0
+
+[node name="昆虫图标" type="TextureRect" parent="昆虫强化弹窗/底图/放置区底图/放置格"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 37.0
+offset_bottom = 37.0
+visible = false
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 6
+
+[node name="箭头指示标" type="Panel" parent="昆虫强化弹窗/底图/放置区底图" unique_id=1738472017]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 75.0
+offset_right = 50.0
+offset_bottom = 132.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_bq156")
+
+[node name="成功格" type="Panel" parent="昆虫强化弹窗/底图/放置区底图" unique_id=1485220965]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 130.0
+offset_right = 60.0
+offset_bottom = 170.0
+
+[node name="昆虫图标" type="TextureRect" parent="昆虫强化弹窗/底图/放置区底图/成功格"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 37.0
+offset_bottom = 37.0
+visible = false
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 6
+
+[node name="强化步骤说明" type="RichTextLabel" parent="昆虫强化弹窗/底图" unique_id=2052524069]
+layout_mode = 0
+offset_left = 106.0
+offset_top = 4.0
+offset_right = 377.0
+offset_bottom = 72.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/normal_font_size = 12
+bbcode_enabled = true
+text = "[color=#ff9100]昆虫属性强化步骤说明：[/color]
+[color=#ffffff]1：请在左侧物品框放入要强化的昆虫
+2：准备好足够的金币
+3：点“开始强化”按钮即可开始强化操作[/color]"
+scroll_active = false
+
+[node name="分隔线" type="TextureRect" parent="昆虫强化弹窗/底图" unique_id=852565989]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 0
+offset_left = 103.0
+offset_top = 73.0
+offset_right = 338.0
+offset_bottom = 75.0
+mouse_filter = 2
+texture = ExtResource("5_kv12r")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="强化等级说明" type="RichTextLabel" parent="昆虫强化弹窗/底图" unique_id=1154556393]
+layout_mode = 0
+offset_left = 105.0
+offset_top = 76.0
+offset_right = 337.0
+offset_bottom = 176.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/normal_font_size = 12
+bbcode_enabled = true
+text = "[color=#ff9100]强化昆虫等级：[/color]
+[color=#00ff00]+1～+3不会失败[/color]
+[color=#1e90ff]+4～+7失败降1级[/color]
+[color=#ba01f9]+8～+10失败强化清零[/color]
+[color=#ff0000]+10以上失败后昆虫死亡[/color]
+[color=#ff9100]注意：镇灵石可避免昆虫死亡[/color]"
+scroll_active = false
+
+[node name="分隔线2" type="TextureRect" parent="昆虫强化弹窗/底图" unique_id=1581606411]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 0
+offset_left = 103.0
+offset_top = 194.0
+offset_right = 338.0
+offset_bottom = 196.0
+mouse_filter = 2
+texture = ExtResource("5_kv12r")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="强化小提示" type="Label" parent="昆虫强化弹窗/底图" unique_id=1791463606]
+layout_mode = 0
+offset_left = 73.0
+offset_top = 196.0
+offset_right = 265.0
+offset_bottom = 211.0
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "*强化成功后，昆虫属性将得到大幅提升"
+
+[node name="强化区底图" type="Panel" parent="昆虫强化弹窗/底图" unique_id=380917663]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 210.0
+offset_right = 343.0
+offset_bottom = 304.0
+
+[node name="镇灵石标题" type="Label" parent="昆虫强化弹窗/底图/强化区底图" unique_id=1240720934]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 8.0
+offset_right = 51.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "镇灵石"
+
+[node name="镇灵石格" type="Panel" parent="昆虫强化弹窗/底图/强化区底图" unique_id=1272855207]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 24.0
+offset_right = 48.0
+offset_bottom = 64.0
+
+[node name="镇灵石图标" type="TextureRect" parent="昆虫强化弹窗/底图/强化区底图/镇灵石格" unique_id=313580808]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 3.0
+offset_right = 38.0
+offset_bottom = 37.0
+texture = ExtResource("12_xegoh")
+stretch_mode = 5
+
+[node name="数量" type="Label" parent="昆虫强化弹窗/底图/强化区底图/镇灵石格"]
+layout_mode = 0
+offset_top = 20.0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+text = "0"
+
+[node name="购买按钮" type="Button" parent="昆虫强化弹窗/底图/强化区底图/镇灵石格" unique_id=2059502229]
+custom_minimum_size = Vector2(37, 22)
+layout_mode = 0
+offset_top = 43.0
+offset_right = 41.0
+offset_bottom = 65.0
+focus_mode = 0
+text = "购买"
+
+[node name="寄坏玉标题" type="Label" parent="昆虫强化弹窗/底图/强化区底图" unique_id=1635272179]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 8.0
+offset_right = 106.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "寄坏玉"
+
+[node name="寄坏玉格" type="Panel" parent="昆虫强化弹窗/底图/强化区底图" unique_id=1360333526]
+layout_mode = 0
+offset_left = 63.0
+offset_top = 24.0
+offset_right = 103.0
+offset_bottom = 64.0
+
+[node name="寄坏玉图标" type="TextureRect" parent="昆虫强化弹窗/底图/强化区底图/寄坏玉格" unique_id=857395496]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 2.0
+offset_right = 39.0
+offset_bottom = 39.0
+texture = ExtResource("13_4i5ji")
+stretch_mode = 5
+
+[node name="数量" type="Label" parent="昆虫强化弹窗/底图/强化区底图/寄坏玉格"]
+layout_mode = 0
+offset_top = 20.0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+text = "0"
+
+[node name="购买按钮" type="Button" parent="昆虫强化弹窗/底图/强化区底图/寄坏玉格" unique_id=1495660716]
+custom_minimum_size = Vector2(37, 22)
+layout_mode = 0
+offset_top = 43.0
+offset_right = 41.0
+offset_bottom = 65.0
+focus_mode = 0
+text = "购买"
+
+[node name="强化消耗与几率" type="RichTextLabel" parent="昆虫强化弹窗/底图/强化区底图"]
+layout_mode = 0
+offset_left = 156.0
+offset_top = 11.0
+offset_right = 336.0
+offset_bottom = 41.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/normal_font_size = 12
+bbcode_enabled = true
+text = "[color=#ffffff]本次操作消耗金币：0
+本次操作成功几率：0%[/color]"
+scroll_active = false
+
+[node name="使用镇灵石" type="CheckBox" parent="昆虫强化弹窗/底图/强化区底图" unique_id=656473472]
+layout_mode = 0
+offset_left = 125.0
+offset_top = 42
+offset_right = 255.0
+offset_bottom = 61
+focus_mode = 0
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_constants/h_separation = 3
+text = "本次操作使用镇灵石"
+
+[node name="使用寄坏玉" type="CheckBox" parent="昆虫强化弹窗/底图/强化区底图" unique_id=818240735]
+layout_mode = 0
+offset_left = 125.0
+offset_top = 64
+offset_right = 219.0
+offset_bottom = 83
+focus_mode = 0
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_constants/h_separation = 3
+text = "本次操作使用"
+
+; 这一行照 `KunChongStrengthWindow.as:296-321`：勾在 x=125、下拉在勾右 (=220)、尾文字贴下拉右沿。
+; ⚠ 下拉在 Godot 里最窄 57（主题盒 25 + 箭头 12 + 间隔 + 字宽），比原版 MComboBox 的 40 宽 17
+;   ⇒ 尾文字的下拉局部偏移必须 ≥ 57（这里 60），否则控件右沿会压在「个寄坏玉」底下（2026-10-27 报修④）。
+[node name="数量下拉" type="OptionButton" parent="昆虫强化弹窗/底图/强化区底图" unique_id=1557913918]
+layout_mode = 0
+offset_left = 220.0
+offset_top = 65.0
+offset_right = 277.0
+offset_bottom = 92.0
+focus_mode = 0
+theme_override_constants/h_separation = 2
+theme_override_constants/arrow_margin = 0
+theme_override_icons/arrow = ExtResource("14_xegoh")
+clip_text = true
+selected = 0
+fit_to_longest_item = false
+item_count = 9
+popup/item_0/text = "1"
+popup/item_0/id = 0
+popup/item_1/text = "2"
+popup/item_1/id = 1
+popup/item_2/text = "3"
+popup/item_2/id = 2
+popup/item_3/text = "4"
+popup/item_3/id = 3
+popup/item_4/text = "5"
+popup/item_4/id = 4
+popup/item_5/text = "6"
+popup/item_5/id = 5
+popup/item_6/text = "7"
+popup/item_6/id = 6
+popup/item_7/text = "8"
+popup/item_7/id = 7
+popup/item_8/text = "9"
+popup/item_8/id = 8
+
+[node name="寄坏玉数量" type="Label" parent="昆虫强化弹窗/底图/强化区底图/数量下拉" unique_id=1513943180]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 6.0
+offset_right = 108.0
+offset_bottom = 21.0
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "个寄坏玉"
+
+[node name="强化分页按钮" type="Button" parent="昆虫强化弹窗" unique_id=1298380862]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 38.0
+offset_right = 53.0
+offset_bottom = 57.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_tsux6")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_tsux6")
+text = "强化"
+disabled = true
+
+[node name="使用寄坏玉" type="CheckBox" parent="昆虫强化弹窗" unique_id=1876866483]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 362
+offset_right = 101.0
+offset_bottom = 381
+focus_mode = 0
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_constants/h_separation = 3
+text = "自动强化到10并停止"
+
+[node name="开始提升按钮" type="Button" parent="昆虫强化弹窗" unique_id=1172029428]
+layout_mode = 0
+offset_left = 146.0
+offset_top = 366.0
+offset_right = 201.0
+offset_bottom = 386.0
+text = "开始强化"
+
+[node name="关闭按钮" type="Button" parent="昆虫强化弹窗" unique_id=352680159]
+custom_minimum_size = Vector2(25, 24)
+layout_mode = 0
+offset_left = 326.0
+offset_top = 6.0
+offset_right = 351.0
+offset_bottom = 30.0
+tooltip_text = "关闭"
+focus_mode = 0
+theme_override_colors/icon_normal_color = Color(0.82, 0.82, 0.82, 1)
+theme_override_colors/icon_pressed_color = Color(1, 0.85, 0.6, 1)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xegoh")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_xegoh")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_xegoh")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xegoh")
+icon = ExtResource("6_jo31k")
+flat = true
+
+[connection signal="pressed" from="强化寄坏虫" to="昆虫强化弹窗" method="_on_insect_btn_pressed"]
+[connection signal="pressed" from="类别介绍" to="昆虫介绍弹窗" method="open_popup"]
+[connection signal="pressed" from="昆虫介绍弹窗/关闭按钮" to="昆虫介绍弹窗" method="_on_close_button_pressed"]
+[connection signal="pressed" from="昆虫介绍弹窗/关闭按钮" to="昆虫介绍弹窗" method="_on_关闭按钮_pressed"]
+[connection signal="pressed" from="昆虫强化弹窗/关闭按钮" to="昆虫强化弹窗" method="_on_close_button_pressed"]

@@ -1,0 +1,437 @@
+[gd_scene load_steps=18 format=3]
+
+[ext_resource type="PackedScene" path="res://场景/界面/组件/物品格.tscn" id="1_grid"]
+[ext_resource type="PackedScene" path="res://场景/界面/组件/物品提示框.tscn" id="9_tip"]
+[ext_resource type="PackedScene" path="res://场景/界面/组件/装备提示框.tscn" id="2_tip2"]
+[ext_resource type="PackedScene" path="res://场景/界面/组件/物品菜单.tscn" id="10_menu"]
+[ext_resource type="PackedScene" path="res://场景/界面/组件/存取金额窗口.tscn" id="11_money"]
+[ext_resource type="PackedScene" path="res://场景/界面/组件/销毁窗口.tscn" id="12_destroy"]
+[ext_resource type="PackedScene" path="res://场景/界面/组件/扩容窗口.tscn" id="13_enlarge"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/窗口内底.png" id="t2"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/子面板.png" id="t3"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/横向分隔线.png" id="t4"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/输入框.png" id="t5"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/金币.png" id="t6"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/按钮.png" id="t7"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/分页按钮未选.png" id="t8"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/分页按钮选中.png" id="t9"]
+
+[node name="原版NPC仓库内容" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 275.0
+offset_bottom = 365.0
+mouse_filter = 2
+
+[node name="内层底" type="TextureRect" parent="."]
+offset_left = 6.0
+offset_top = 10.0
+offset_right = 269.0
+offset_bottom = 359.0
+mouse_filter = 2
+texture = ExtResource("t2")
+expand_mode = 1
+
+[node name="格区底" type="TextureRect" parent="."]
+offset_left = 11.0
+offset_top = 36.0
+offset_right = 264.0
+offset_bottom = 248.0
+mouse_filter = 2
+texture = ExtResource("t3")
+expand_mode = 1
+
+[node name="分页" type="Control" parent="."]
+offset_right = 275.0
+offset_bottom = 39.0
+mouse_filter = 2
+
+[node name="第1页" type="Button" parent="分页"]
+offset_left = 20.0
+offset_top = 17.0
+offset_right = 45.0
+offset_bottom = 39.0
+focus_mode = 0
+toggle_mode = true
+theme_type_variation = &"OrigTab"
+text = "一"
+
+[node name="第2页" type="Button" parent="分页"]
+offset_left = 45.0
+offset_top = 17.0
+offset_right = 70.0
+offset_bottom = 39.0
+focus_mode = 0
+toggle_mode = true
+theme_type_variation = &"OrigTab"
+text = "二"
+
+[node name="第3页" type="Button" parent="分页"]
+offset_left = 70.0
+offset_top = 17.0
+offset_right = 95.0
+offset_bottom = 39.0
+focus_mode = 0
+toggle_mode = true
+theme_type_variation = &"OrigTab"
+text = "三"
+
+[node name="第4页" type="Button" parent="分页"]
+offset_left = 95.0
+offset_top = 17.0
+offset_right = 120.0
+offset_bottom = 39.0
+focus_mode = 0
+toggle_mode = true
+theme_type_variation = &"OrigTab"
+text = "四"
+
+[node name="第5页" type="Button" parent="分页"]
+offset_left = 120.0
+offset_top = 17.0
+offset_right = 145.0
+offset_bottom = 39.0
+focus_mode = 0
+toggle_mode = true
+theme_type_variation = &"OrigTab"
+text = "五"
+
+[node name="第6页" type="Button" parent="分页"]
+offset_left = 145.0
+offset_top = 17.0
+offset_right = 170.0
+offset_bottom = 39.0
+focus_mode = 0
+toggle_mode = true
+theme_type_variation = &"OrigTab"
+text = "六"
+
+[node name="第7页" type="Button" parent="分页"]
+offset_left = 170.0
+offset_top = 17.0
+offset_right = 195.0
+offset_bottom = 39.0
+focus_mode = 0
+toggle_mode = true
+theme_type_variation = &"OrigTab"
+text = "七"
+
+[node name="第8页" type="Button" parent="分页"]
+offset_left = 195.0
+offset_top = 17.0
+offset_right = 220.0
+offset_bottom = 39.0
+focus_mode = 0
+toggle_mode = true
+theme_type_variation = &"OrigTab"
+text = "八"
+
+[node name="第9页" type="Button" parent="分页"]
+offset_left = 220.0
+offset_top = 17.0
+offset_right = 245.0
+offset_bottom = 39.0
+focus_mode = 0
+toggle_mode = true
+theme_type_variation = &"OrigTab"
+text = "九"
+
+[node name="扩充" type="Button" parent="分页"]
+offset_left = 95.0
+offset_top = 17.0
+offset_right = 132.0
+offset_bottom = 39.0
+focus_mode = 0
+theme_type_variation = &"OrigTab"
+text = "扩充"
+
+[node name="格子容器" type="Control" parent="."]
+offset_left = 11.0
+offset_top = 36.0
+offset_right = 264.0
+offset_bottom = 248.0
+mouse_filter = 2
+
+[node name="物品格_0" parent="格子容器" instance=ExtResource("1_grid")]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 44.0
+offset_bottom = 44.0
+
+[node name="物品格_1" parent="格子容器" instance=ExtResource("1_grid")]
+offset_left = 45.0
+offset_top = 4.0
+offset_right = 85.0
+offset_bottom = 44.0
+
+[node name="物品格_2" parent="格子容器" instance=ExtResource("1_grid")]
+offset_left = 86.0
+offset_top = 4.0
+offset_right = 126.0
+offset_bottom = 44.0
+
+[node name="物品格_3" parent="格子容器" instance=ExtResource("1_grid")]
+offset_left = 127.0
+offset_top = 4.0
+offset_right = 167.0
+offset_bottom = 44.0
+
+[node name="物品格_4" parent="格子容器" instance=ExtResource("1_grid")]
+offset_left = 168.0
+offset_top = 4.0
+offset_right = 208.0
+offset_bottom = 44.0
+
+[node name="物品格_5" parent="格子容器" instance=ExtResource("1_grid")]
+offset_left = 209.0
+offset_top = 4.0
+offset_right = 249.0
+offset_bottom = 44.0
+
+[node name="物品格_6" parent="格子容器" instance=ExtResource("1_grid")]
+offset_left = 4.0
+offset_top = 45.0
+offset_right = 44.0
+offset_bottom = 85.0
+
+[node name="物品格_7" parent="格子容器" instance=ExtResource("1_grid")]
+offset_left = 45.0
+offset_top = 45.0
+offset_right = 85.0
+offset_bottom = 85.0
+
+[node name="物品格_8" parent="格子容器" instance=ExtResource("1_grid")]
+offset_left = 86.0
+offset_top = 45.0
+offset_right = 126.0
+offset_bottom = 85.0
+
+[node name="物品格_9" parent="格子容器" instance=ExtResource("1_grid")]
+offset_left = 127.0
+offset_top = 45.0
+offset_right = 167.0
+offset_bottom = 85.0
+
+[node name="物品格_10" parent="格子容器" instance=ExtResource("1_grid")]
+offset_left = 168.0
+offset_top = 45.0
+offset_right = 208.0
+offset_bottom = 85.0
+
+[node name="物品格_11" parent="格子容器" instance=ExtResource("1_grid")]
+offset_left = 209.0
+offset_top = 45.0
+offset_right = 249.0
+offset_bottom = 85.0
+
+[node name="物品格_12" parent="格子容器" instance=ExtResource("1_grid")]
+offset_left = 4.0
+offset_top = 86.0
+offset_right = 44.0
+offset_bottom = 126.0
+
+[node name="物品格_13" parent="格子容器" instance=ExtResource("1_grid")]
+offset_left = 45.0
+offset_top = 86.0
+offset_right = 85.0
+offset_bottom = 126.0
+
+[node name="物品格_14" parent="格子容器" instance=ExtResource("1_grid")]
+offset_left = 86.0
+offset_top = 86.0
+offset_right = 126.0
+offset_bottom = 126.0
+
+[node name="物品格_15" parent="格子容器" instance=ExtResource("1_grid")]
+offset_left = 127.0
+offset_top = 86.0
+offset_right = 167.0
+offset_bottom = 126.0
+
+[node name="物品格_16" parent="格子容器" instance=ExtResource("1_grid")]
+offset_left = 168.0
+offset_top = 86.0
+offset_right = 208.0
+offset_bottom = 126.0
+
+[node name="物品格_17" parent="格子容器" instance=ExtResource("1_grid")]
+offset_left = 209.0
+offset_top = 86.0
+offset_right = 249.0
+offset_bottom = 126.0
+
+[node name="物品格_18" parent="格子容器" instance=ExtResource("1_grid")]
+offset_left = 4.0
+offset_top = 127.0
+offset_right = 44.0
+offset_bottom = 167.0
+
+[node name="物品格_19" parent="格子容器" instance=ExtResource("1_grid")]
+offset_left = 45.0
+offset_top = 127.0
+offset_right = 85.0
+offset_bottom = 167.0
+
+[node name="物品格_20" parent="格子容器" instance=ExtResource("1_grid")]
+offset_left = 86.0
+offset_top = 127.0
+offset_right = 126.0
+offset_bottom = 167.0
+
+[node name="物品格_21" parent="格子容器" instance=ExtResource("1_grid")]
+offset_left = 127.0
+offset_top = 127.0
+offset_right = 167.0
+offset_bottom = 167.0
+
+[node name="物品格_22" parent="格子容器" instance=ExtResource("1_grid")]
+offset_left = 168.0
+offset_top = 127.0
+offset_right = 208.0
+offset_bottom = 167.0
+
+[node name="物品格_23" parent="格子容器" instance=ExtResource("1_grid")]
+offset_left = 209.0
+offset_top = 127.0
+offset_right = 249.0
+offset_bottom = 167.0
+
+[node name="物品格_24" parent="格子容器" instance=ExtResource("1_grid")]
+offset_left = 4.0
+offset_top = 168.0
+offset_right = 44.0
+offset_bottom = 208.0
+
+[node name="物品格_25" parent="格子容器" instance=ExtResource("1_grid")]
+offset_left = 45.0
+offset_top = 168.0
+offset_right = 85.0
+offset_bottom = 208.0
+
+[node name="物品格_26" parent="格子容器" instance=ExtResource("1_grid")]
+offset_left = 86.0
+offset_top = 168.0
+offset_right = 126.0
+offset_bottom = 208.0
+
+[node name="物品格_27" parent="格子容器" instance=ExtResource("1_grid")]
+offset_left = 127.0
+offset_top = 168.0
+offset_right = 167.0
+offset_bottom = 208.0
+
+[node name="物品格_28" parent="格子容器" instance=ExtResource("1_grid")]
+offset_left = 168.0
+offset_top = 168.0
+offset_right = 208.0
+offset_bottom = 208.0
+
+[node name="物品格_29" parent="格子容器" instance=ExtResource("1_grid")]
+offset_left = 209.0
+offset_top = 168.0
+offset_right = 249.0
+offset_bottom = 208.0
+
+[node name="分隔线" type="TextureRect" parent="."]
+offset_left = 11.0
+offset_top = 278.0
+offset_right = 263.0
+offset_bottom = 280.0
+mouse_filter = 2
+texture = ExtResource("t4")
+expand_mode = 1
+
+[node name="输入底" type="TextureRect" parent="."]
+offset_left = 112.0
+offset_top = 283.0
+offset_right = 251.0
+offset_bottom = 304.0
+mouse_filter = 2
+texture = ExtResource("t5")
+expand_mode = 1
+
+[node name="金币图标" type="TextureRect" parent="."]
+offset_left = 115.0
+offset_top = 285.0
+offset_right = 132.0
+offset_bottom = 302.0
+mouse_filter = 2
+texture = ExtResource("t6")
+expand_mode = 1
+
+
+[node name="仓库中金币" type="Label" parent="."]
+offset_left = 42.0
+offset_top = 281.0
+offset_right = 112.0
+offset_bottom = 299.0
+mouse_filter = 2
+text = "仓库中金币"
+
+[node name="批量存取提示" type="Label" parent="."]
+offset_left = 44.0
+offset_top = 334.0
+offset_right = 246.0
+offset_bottom = 352.0
+mouse_filter = 2
+text = "批量存取按钮可让存取更加简便"
+
+[node name="仓库金币数" type="Label" parent="."]
+offset_left = 136.0
+offset_top = 283.0
+offset_right = 225.0
+offset_bottom = 299.0
+mouse_filter = 2
+
+[node name="容量" type="Label" parent="."]
+offset_left = 224.0
+offset_top = 16.0
+offset_right = 264.0
+offset_bottom = 32.0
+mouse_filter = 2
+text = "0/0"
+
+[node name="整理仓库" type="Button" parent="."]
+offset_left = 16.0
+offset_top = 252.0
+offset_right = 77.0
+offset_bottom = 274.0
+focus_mode = 0
+text = "整理仓库"
+
+[node name="批量存取" type="Button" parent="."]
+offset_left = 203.0
+offset_top = 252.0
+offset_right = 264.0
+offset_bottom = 274.0
+focus_mode = 0
+text = "批量存取"
+
+[node name="存钱" type="Button" parent="."]
+offset_left = 112.0
+offset_top = 310.0
+offset_right = 149.0
+offset_bottom = 332.0
+focus_mode = 0
+text = "存钱"
+
+[node name="取钱" type="Button" parent="."]
+offset_left = 216.0
+offset_top = 310.0
+offset_right = 253.0
+offset_bottom = 332.0
+focus_mode = 0
+text = "取钱"
+
+[node name="物品提示框" parent="." instance=ExtResource("9_tip")]
+visible = false
+
+[node name="物品菜单" parent="." instance=ExtResource("10_menu")]
+
+[node name="存取金额窗口" parent="." instance=ExtResource("11_money")]
+
+[node name="销毁窗口" parent="." instance=ExtResource("12_destroy")]
+
+[node name="扩容窗口" parent="." instance=ExtResource("13_enlarge")]
+
+[node name="装备提示框" parent="." instance=ExtResource("2_tip2")]

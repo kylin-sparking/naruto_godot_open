@@ -1,0 +1,258 @@
+[gd_scene load_steps=10 format=3]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/内容面板.png" id="t1"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/物品格.png" id="t2"]
+
+[ext_resource type="Texture2D" path="res://素材/物品/原版/FuZhuWuPin/LiBao_11000440_info.swf_1_LiBao_11000440_info_icon.png" id="t3"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/变身卡互换/确认钮.png" id="t4"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/变身卡互换/确认钮_悬停.png" id="t5"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/变身卡互换/确认钮_按下.png" id="t6"]
+
+[sub_resource type="StyleBoxTexture" id="sb1_n"]
+texture = ExtResource("t4")
+
+[sub_resource type="StyleBoxTexture" id="sb1_h"]
+texture = ExtResource("t5")
+
+[sub_resource type="StyleBoxTexture" id="sb1_p"]
+texture = ExtResource("t6")
+
+[node name="原版变身卡互换内容" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 420
+offset_bottom = 366.0
+
+[node name="内容底" type="NinePatchRect" parent="."]
+texture = ExtResource("t1")
+patch_margin_left = 11
+patch_margin_right = 10
+patch_margin_top = 10
+patch_margin_bottom = 11
+layout_mode = 0
+offset_left = 8.0
+offset_top = 9.0
+offset_right = 412.0
+offset_bottom = 336.0
+
+[node name="说明" type="RichTextLabel" parent="."]
+text = "放入两张变身卡，交换基础属性和附加属性"
+scroll_active = false
+bbcode_enabled = true
+autowrap_mode = 3
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 0
+horizontal_alignment = 1
+theme_override_colors/default_color = Color(0.000000, 1.000000, 0.000000, 1)
+layout_mode = 0
+offset_left = 15.0
+offset_top = 13.0
+offset_right = 405.0
+offset_bottom = 33.0
+
+[node name="分隔线一" type="ColorRect" parent="."]
+mouse_filter = 2
+color = Color(1.000000, 0.568627, 0.000000, 0.5)
+layout_mode = 0
+offset_left = 15.0
+offset_top = 35.0
+offset_right = 405.0
+offset_bottom = 36.0
+
+[node name="标签A" type="Label" parent="."]
+text = "请放入变身卡A"
+theme_override_colors/font_color = Color(1.000000, 0.568627, 0.000000, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+mouse_filter = 2
+layout_mode = 0
+offset_left = 65.0
+offset_top = 43.0
+offset_right = 185.0
+offset_bottom = 63.0
+
+[node name="卡格A" type="Control" parent="."]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 103.0
+offset_top = 66.0
+offset_right = 143.0
+offset_bottom = 106.0
+
+[node name="卡格A_格" type="TextureRect" parent="卡格A"]
+texture = ExtResource("t2")
+mouse_filter = 0
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="卡格A_名" type="Label" parent="卡格A/卡格A_格"]
+text = "放入"
+theme_override_colors/font_color = Color(1.000000, 0.568627, 0.000000, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0.0
+offset_top = 8.0
+offset_right = 40.0
+offset_bottom = 28.0
+
+[node name="标签B" type="Label" parent="."]
+text = "请放入变身卡B"
+theme_override_colors/font_color = Color(1.000000, 0.568627, 0.000000, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+mouse_filter = 2
+layout_mode = 0
+offset_left = 235.0
+offset_top = 43.0
+offset_right = 355.0
+offset_bottom = 63.0
+
+[node name="卡格B" type="Control" parent="."]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 273.0
+offset_top = 66.0
+offset_right = 313.0
+offset_bottom = 106.0
+
+[node name="卡格B_格" type="TextureRect" parent="卡格B"]
+texture = ExtResource("t2")
+mouse_filter = 0
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="卡格B_名" type="Label" parent="卡格B/卡格B_格"]
+text = "放入"
+theme_override_colors/font_color = Color(1.000000, 0.568627, 0.000000, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0.0
+offset_top = 8.0
+offset_right = 40.0
+offset_bottom = 28.0
+
+[node name="立绘A" type="Control" parent="."]
+mouse_filter = 2
+clip_contents = true
+layout_mode = 0
+offset_left = 85.0
+offset_top = 116.0
+offset_right = 215.0
+offset_bottom = 276.0
+
+[node name="立绘B" type="Control" parent="."]
+mouse_filter = 2
+clip_contents = true
+layout_mode = 0
+offset_left = 255.0
+offset_top = 116.0
+offset_right = 385.0
+offset_bottom = 276.0
+
+[node name="分隔线二" type="ColorRect" parent="."]
+mouse_filter = 2
+color = Color(1.000000, 0.568627, 0.000000, 0.5)
+layout_mode = 0
+offset_left = 15.0
+offset_top = 281.0
+offset_right = 405.0
+offset_bottom = 282.0
+
+[node name="费用格" type="Control" parent="."]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 15.0
+offset_top = 287.0
+offset_right = 55.0
+offset_bottom = 327.0
+
+[node name="费用格_格" type="TextureRect" parent="费用格"]
+texture = ExtResource("t2")
+mouse_filter = 0
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="费用格_格_数量" type="Label" parent="费用格/费用格_格"]
+text = ""
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 1
+offset_top = 24
+offset_right = 38
+offset_bottom = 40
+
+[node name="费用格_格_图标" type="TextureRect" parent="费用格/费用格_格"]
+texture = ExtResource("t3")
+expand_mode = 1
+mouse_filter = 2
+layout_mode = 0
+offset_left = 3
+offset_top = 3
+offset_right = 37
+offset_bottom = 37
+
+[node name="数量行" type="RichTextLabel" parent="."]
+text = "消耗[color=#00FF00]【研究所凭证】[/color]1个  当前拥有：[color=#FF0000]0[/color]个"
+scroll_active = false
+bbcode_enabled = true
+autowrap_mode = 3
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 0
+layout_mode = 0
+offset_left = 60.0
+offset_top = 301.0
+offset_right = 400.0
+offset_bottom = 321.0
+
+[node name="确认钮" type="Button" parent="."]
+theme_override_styles/normal = SubResource("sb1_n")
+theme_override_styles/hover = SubResource("sb1_h")
+theme_override_styles/pressed = SubResource("sb1_p")
+text = "确认交换"
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+layout_mode = 0
+offset_left = 169.0
+offset_top = 339.0
+offset_right = 251.0
+offset_bottom = 361.0
+
+[node name="动画遮罩" type="Control" parent="."]
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 2.0
+offset_top = 3.0
+offset_right = 418.0
+offset_bottom = 364.0
+
+[node name="特效层" type="Control" parent="."]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0.0
+offset_top = -29.0
+offset_right = 0.0
+offset_bottom = -29.0

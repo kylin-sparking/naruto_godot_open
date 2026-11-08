@@ -1,0 +1,11 @@
+{
+  "0": {"id": 0, "name": "第1演习场", "required_level": 15, "stars": 3.5, "description": "连续击杀训练员与教官可获得高额经验。", "rewards": [{"item_id": 16000012, "quantity": 1}, {"item_id": 16000032, "quantity": 1}, {"item_id": 16000057, "quantity": 1}]},
+  "1": {"id": 1, "name": "命运之抉择", "required_level": 25, "stars": 4.0, "description": "在八个平台间做出选择，抵达终点完成挑战。", "rewards": []},
+  "2": {"id": 2, "name": "守卫木叶村", "required_level": 50, "stars": 5.0, "description": "击退进攻木叶的敌人，守住村庄。", "rewards": [{"item_id": 16000037, "quantity": 3}]},
+  "3": {"id": 3, "name": "秽土转生", "required_level": 55, "stars": 5.5, "description": "迎战秽土转生的强敌并完成全部关卡。", "rewards": [{"item_id": 16000037, "quantity": 3}]},
+  "4": {"id": 4, "name": "挑战第七班", "required_level": 70, "stars": 6.0, "description": "击败第七班全部成员即可通关。", "rewards": [{"item_id": 15029001, "quantity": 1}]},
+  "5": {"id": 5, "name": "挑战尾兽", "required_level": 40, "stars": 5.0, "description": "阻止守鹤肆虐，挑战失败可再次进入。", "rewards": [{"item_id": 15009004, "quantity": 2}]},
+  "6": {"id": 6, "name": "血之羁绊", "required_level": 50, "stars": 5.0, "description": "击败副本中的全部怪物。", "rewards": [{"item_id": 16000015, "quantity": 3}]},
+  "7": {"id": 7, "name": "迷路森林", "required_level": 50, "stars": 5.0, "description": "尽快穿越森林，到达终点完成挑战。", "rewards": [{"item_id": 16000062, "quantity": 2}]},
+  "8": {"id": 8, "name": "护送鸣人", "required_level": 55, "stars": 5.5, "description": "护送鸣人与奇拉比会合。", "rewards": [{"item_id": 15009004, "quantity": 7}]}
+}

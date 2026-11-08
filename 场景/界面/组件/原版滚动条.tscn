@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://脚本/界面/组件/原版滚动条.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/滚动槽.png" id="2_track"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/滚动滑块.png" id="3_thumb"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/滚动向上.png" id="4_up"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/滚动向下.png" id="5_down"]
+
+[node name="原版滚动条" type="Control"]
+custom_minimum_size = Vector2(19, 90)
+offset_right = 19.0
+offset_bottom = 90.0
+mouse_filter = 2
+script = ExtResource("1_script")
+
+[node name="槽" type="TextureRect" parent="."]
+offset_right = 19.0
+offset_bottom = 90.0
+mouse_filter = 0
+texture = ExtResource("2_track")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="滑块" type="TextureButton" parent="."]
+offset_top = 17.0
+offset_right = 19.0
+offset_bottom = 38.0
+ignore_texture_size = true
+stretch_mode = 0
+texture_normal = ExtResource("3_thumb")
+
+[node name="上箭头" type="TextureButton" parent="."]
+offset_right = 19.0
+offset_bottom = 17.0
+ignore_texture_size = true
+stretch_mode = 0
+texture_normal = ExtResource("4_up")
+
+[node name="下箭头" type="TextureButton" parent="."]
+offset_top = 73.0
+offset_right = 19.0
+offset_bottom = 90.0
+ignore_texture_size = true
+stretch_mode = 0
+texture_normal = ExtResource("5_down")

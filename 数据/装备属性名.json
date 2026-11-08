@@ -1,0 +1,101 @@
+{
+ "说明": "属性类型 id → 显示名。id 就是协议里的 subAttrType/baseAttrType。",
+ "出处": "com/mxw/common/data/items/ItemFactory.as:30-34 + com/mxw/data/attribute/SubAttrType.as",
+ "百分比": [
+  12,
+  13
+ ],
+ "属性": {
+  "0": {
+   "中文": "",
+   "英文": "money",
+   "键": ""
+  },
+  "1": {
+   "中文": "生命值上限",
+   "英文": "maxhp",
+   "键": "ITEM_ATTR_NAME_MAXHP"
+  },
+  "2": {
+   "中文": "查克拉上限",
+   "英文": "maxmp",
+   "键": "ITEM_ATTR_NAME_MAXMP"
+  },
+  "3": {
+   "中文": "体力值上限",
+   "英文": "maxtp",
+   "键": "ITEM_ATTR_NAME_MAXTP"
+  },
+  "4": {
+   "中文": "攻击",
+   "英文": "atk",
+   "键": "ITEM_ATTR_NAME_ATK"
+  },
+  "5": {
+   "中文": "防御",
+   "英文": "def",
+   "键": "ITEM_ATTR_NAME_DEF"
+  },
+  "6": {
+   "中文": "暴击",
+   "英文": "bsk",
+   "键": "ITEM_ATTR_NAME_BSK"
+  },
+  "7": {
+   "中文": "闪避",
+   "英文": "avd",
+   "键": "ITEM_ATTR_NAME_AVD"
+  },
+  "8": {
+   "中文": "攻击速度",
+   "英文": "atkspeed",
+   "键": "ITEM_ATTR_NAME_ATK_SPEED"
+  },
+  "9": {
+   "中文": "移动速度",
+   "英文": "wlkspeed",
+   "键": "ITEM_ATTR_NAME_WLK_SPEED"
+  },
+  "10": {
+   "中文": "技能等级加成",
+   "英文": "skill_level",
+   "键": "ITEMFACTORY_SKILL_LEVEL"
+  },
+  "11": {
+   "中文": "攻击力增加",
+   "英文": "atk_tate",
+   "键": "ITEMFACTORY_ATK_TATE"
+  },
+  "12": {
+   "中文": "伤害反弹",
+   "英文": "damage_reflect",
+   "键": "ITEMFACTORY_DAMAGE_REFLECT"
+  },
+  "13": {
+   "中文": "伤害减免",
+   "英文": "damage_reduce",
+   "键": "ITEMFACTORY_DAMAGE_REDUCE"
+  },
+  "14": {
+   "中文": "忽视防御",
+   "英文": "ignore_def",
+   "键": "ITEMFACTORY_IGNORE_DEF"
+  },
+  "15": {
+   "中文": "手里剑触发",
+   "英文": "anqi_trigger",
+   "键": "ITEMFACTORY_ANQI_TRIGGER"
+  },
+  "24": {
+   "中文": "",
+   "英文": "anti_seal_pet",
+   "键": "ITEMFACTORY_ANQI_SEAL_PET",
+   "特殊": true
+  },
+  "25": {
+   "中文": "经验加成",
+   "英文": "mob_exp",
+   "键": "ITEMFACTORY_MOB_EXP"
+  }
+ }
+}

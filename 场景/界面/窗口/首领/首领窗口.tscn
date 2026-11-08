@@ -1,0 +1,1002 @@
+[gd_scene load_steps=29 format=3]
+; ── 首领（原版 `com/mxw/uifl/controls/wangBoss/WangBossWindow.as` + `WangBossCell.as`，573×324，整窗 1:1 移植）──
+; 本文件由 `开发工具/生成首领场景.py` 从量具表 `截首领页.gd` 的 件路径/件期望/件文案 生成。
+; **改真值改量具表再重跑生成器，别手改本文件。** 逐件算式与出处见 `game-client/真值/窗口/首领.md`；
+; 场景 y = AS3 窗口局部 y − 29（`窗口尺寸.json` 的「首领」标 `整框: true` ⇒ 容器原点 (0,29)）。
+; 外框那圈（MWindow_background）/标题/关闭钮由外壳 `遮罩/主窗口/窗口边框` 画，本页不重复画。
+; 11 张首领头像来自运行期包 `swf/Effect/Effect_Wang_<i>.swf`（`PicTool.getWangBossPic`），非 MainLib。
+; 三张卡 = 静态表 BossWang.boss 的前三条；alive/nextTime 是服务端字段 ⇒ 烘 alive=true（「未死亡」）。
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/内容面板.png" id="t0"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/子面板.png" id="t1"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/首领/头像背景.png" id="t2"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/首领/前往挑战.png" id="t3"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/首领/星级.png" id="t4"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/首领/半星.png" id="t5"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/首页.png" id="t6"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/上一页.png" id="t7"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/下一页.png" id="t8"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/末页.png" id="t9"]
+[ext_resource type="Texture2D" path="res://素材/界面/专用控件/分页首页_灰.png" id="t10"]
+[ext_resource type="Texture2D" path="res://素材/界面/专用控件/分页上一页_灰.png" id="t11"]
+[ext_resource type="Texture2D" path="res://素材/界面/专用控件/分页下一页_灰.png" id="t12"]
+[ext_resource type="Texture2D" path="res://素材/界面/专用控件/分页末页_灰.png" id="t13"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/首领/Effect_Wang_0.png" id="t14"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/首领/Effect_Wang_1.png" id="t15"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/首领/Effect_Wang_2.png" id="t16"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/首领/Effect_Wang_3.png" id="t17"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/首领/Effect_Wang_4.png" id="t18"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/首领/Effect_Wang_5.png" id="t19"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/首领/Effect_Wang_6.png" id="t20"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/首领/Effect_Wang_7.png" id="t21"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/首领/Effect_Wang_8.png" id="t22"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/首领/Effect_Wang_9.png" id="t23"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/首领/Effect_Wang_10.png" id="t24"]
+[sub_resource type="StyleBoxTexture" id="r0"]
+texture = ExtResource("t0")
+texture_margin_left = 11
+texture_margin_top = 10
+texture_margin_right = 10
+texture_margin_bottom = 11
+content_margin_left = 0.0
+content_margin_right = 0.0
+content_margin_top = 0.0
+content_margin_bottom = 0.0
+
+[sub_resource type="StyleBoxTexture" id="r1"]
+texture = ExtResource("t1")
+texture_margin_left = 7.5
+texture_margin_top = 6.75
+texture_margin_right = 7
+texture_margin_bottom = 7.25
+content_margin_left = 0.0
+content_margin_right = 0.0
+content_margin_top = 0.0
+content_margin_bottom = 0.0
+
+[sub_resource type="StyleBoxTexture" id="r2"]
+texture = ExtResource("t2")
+texture_margin_left = 19
+texture_margin_top = 15
+texture_margin_right = 22.05
+texture_margin_bottom = 15
+content_margin_left = 0.0
+content_margin_right = 0.0
+content_margin_top = 0.0
+content_margin_bottom = 0.0
+
+[node name="原版首领窗口内容" type="Control"]
+custom_minimum_size = Vector2(573, 295)
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 573.0
+offset_bottom = 295.0
+
+[node name="外框黄底" type="Panel" parent="."]
+theme_override_styles/panel = SubResource("r0")
+
+layout_mode = 0
+offset_left = 6.0
+offset_top = 10.0
+offset_right = 567.0
+offset_bottom = 270.0
+
+[node name="卡片_0" type="Control" parent="."]
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 11.0
+offset_top = 15.0
+offset_right = 194.0
+offset_bottom = 265.0
+
+[node name="卡片_1" type="Control" parent="."]
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 195.0
+offset_top = 15.0
+offset_right = 378.0
+offset_bottom = 265.0
+
+[node name="卡片_2" type="Control" parent="."]
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 379.0
+offset_top = 15.0
+offset_right = 562.0
+offset_bottom = 265.0
+
+[node name="卡片底" type="Panel" parent="卡片_0"]
+theme_override_styles/panel = SubResource("r1")
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 183.0
+offset_bottom = 250.0
+
+[node name="头像底" type="Panel" parent="卡片_0"]
+theme_override_styles/panel = SubResource("r2")
+mouse_filter = 0
+
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 179.0
+offset_bottom = 122.0
+
+[node name="头像" type="TextureRect" parent="卡片_0/头像底"]
+texture = ExtResource("t14")
+expand_mode = 1
+stretch_mode = 0
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 173.0
+offset_bottom = 116.0
+
+[node name="序号" type="Label" parent="卡片_0"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+vertical_alignment = 1
+horizontal_alignment = 2
+text = ""
+
+layout_mode = 0
+offset_left = 9.0
+offset_top = 9.0
+offset_right = 174.0
+offset_bottom = 27.0
+
+[node name="名称" type="Label" parent="卡片_0"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 0.568627, 0, 1)
+vertical_alignment = 1
+horizontal_alignment = 0
+text = "【BOSS】水木"
+
+layout_mode = 0
+offset_left = 9.0
+offset_top = 125.0
+offset_right = 174.0
+offset_bottom = 143.0
+
+[node name="类型" type="Label" parent="卡片_0"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 0.568627, 0, 1)
+vertical_alignment = 1
+horizontal_alignment = 0
+text = "中忍"
+
+layout_mode = 0
+offset_left = 149.0
+offset_top = 125.0
+offset_right = 179.0
+offset_bottom = 143.0
+
+[node name="信息底" type="Panel" parent="卡片_0"]
+theme_override_styles/panel = SubResource("r1")
+
+layout_mode = 0
+offset_left = 4.0
+offset_top = 146.0
+offset_right = 179.0
+offset_bottom = 245.0
+
+[node name="等级标签" type="Label" parent="卡片_0"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.988235, 0.764706, 0.6, 1)
+vertical_alignment = 1
+horizontal_alignment = 0
+text = "等　　级："
+
+layout_mode = 0
+offset_left = 14.0
+offset_top = 151.0
+offset_right = 74.0
+offset_bottom = 169.0
+
+[node name="等级数值" type="Label" parent="卡片_0"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+vertical_alignment = 1
+horizontal_alignment = 0
+text = "20级"
+
+layout_mode = 0
+offset_left = 72.0
+offset_top = 151.0
+offset_right = 142.0
+offset_bottom = 169.0
+
+[node name="地图标签" type="Label" parent="卡片_0"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.988235, 0.764706, 0.6, 1)
+vertical_alignment = 1
+horizontal_alignment = 0
+text = "刷新地图："
+
+layout_mode = 0
+offset_left = 14.0
+offset_top = 172.0
+offset_right = 74.0
+offset_bottom = 190.0
+
+[node name="地图数值" type="Label" parent="卡片_0"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+vertical_alignment = 1
+horizontal_alignment = 0
+mouse_filter = 0
+text = "森林秘境"
+
+layout_mode = 0
+offset_left = 72.0
+offset_top = 172.0
+offset_right = 142.0
+offset_bottom = 190.0
+
+[node name="时间标签" type="Label" parent="卡片_0"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.988235, 0.764706, 0.6, 1)
+vertical_alignment = 1
+horizontal_alignment = 0
+text = "刷新时间："
+
+layout_mode = 0
+offset_left = 14.0
+offset_top = 193.0
+offset_right = 74.0
+offset_bottom = 211.0
+
+[node name="时间数值" type="Label" parent="卡片_0"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+vertical_alignment = 1
+horizontal_alignment = 0
+text = "未死亡"
+
+layout_mode = 0
+offset_left = 72.0
+offset_top = 193.0
+offset_right = 142.0
+offset_bottom = 211.0
+
+[node name="爆率标签" type="Label" parent="卡片_0"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.988235, 0.764706, 0.6, 1)
+vertical_alignment = 1
+horizontal_alignment = 0
+text = "爆率说明："
+
+layout_mode = 0
+offset_left = 14.0
+offset_top = 214.0
+offset_right = 74.0
+offset_bottom = 232.0
+
+[node name="挑战钮" type="TextureButton" parent="卡片_0"]
+texture_normal = ExtResource("t3")
+ignore_texture_size = false
+stretch_mode = 0
+mouse_default_cursor_shape = 2
+
+layout_mode = 0
+offset_left = 149.0
+offset_top = 170.0
+offset_right = 171.0
+offset_bottom = 192.0
+
+[node name="星级" type="Control" parent="卡片_0"]
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 72.0
+offset_top = 218.0
+offset_right = 114.0
+offset_bottom = 231.0
+
+[node name="星_0" type="TextureRect" parent="卡片_0/星级"]
+texture = ExtResource("t4")
+expand_mode = 1
+stretch_mode = 0
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 14.0
+offset_bottom = 13.0
+
+[node name="星_1" type="TextureRect" parent="卡片_0/星级"]
+texture = ExtResource("t4")
+expand_mode = 1
+stretch_mode = 0
+
+layout_mode = 0
+offset_left = 14.0
+offset_top = 0.0
+offset_right = 28.0
+offset_bottom = 13.0
+
+[node name="星_2" type="TextureRect" parent="卡片_0/星级"]
+texture = ExtResource("t5")
+expand_mode = 1
+stretch_mode = 0
+
+layout_mode = 0
+offset_left = 28.0
+offset_top = 0.0
+offset_right = 42.0
+offset_bottom = 13.0
+
+[node name="星_3" type="TextureRect" parent="卡片_0/星级"]
+visible = false
+texture = ExtResource("t4")
+expand_mode = 1
+stretch_mode = 0
+
+layout_mode = 0
+offset_left = 42.0
+offset_top = 0.0
+offset_right = 56.0
+offset_bottom = 13.0
+
+[node name="星_4" type="TextureRect" parent="卡片_0/星级"]
+visible = false
+texture = ExtResource("t4")
+expand_mode = 1
+stretch_mode = 0
+
+layout_mode = 0
+offset_left = 56.0
+offset_top = 0.0
+offset_right = 70.0
+offset_bottom = 13.0
+
+[node name="星_5" type="TextureRect" parent="卡片_0/星级"]
+visible = false
+texture = ExtResource("t4")
+expand_mode = 1
+stretch_mode = 0
+
+layout_mode = 0
+offset_left = 70.0
+offset_top = 0.0
+offset_right = 84.0
+offset_bottom = 13.0
+
+[node name="星_6" type="TextureRect" parent="卡片_0/星级"]
+visible = false
+texture = ExtResource("t4")
+expand_mode = 1
+stretch_mode = 0
+
+layout_mode = 0
+offset_left = 84.0
+offset_top = 0.0
+offset_right = 98.0
+offset_bottom = 13.0
+
+[node name="卡片底" type="Panel" parent="卡片_1"]
+theme_override_styles/panel = SubResource("r1")
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 183.0
+offset_bottom = 250.0
+
+[node name="头像底" type="Panel" parent="卡片_1"]
+theme_override_styles/panel = SubResource("r2")
+mouse_filter = 0
+
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 179.0
+offset_bottom = 122.0
+
+[node name="头像" type="TextureRect" parent="卡片_1/头像底"]
+texture = ExtResource("t15")
+expand_mode = 1
+stretch_mode = 0
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 173.0
+offset_bottom = 116.0
+
+[node name="序号" type="Label" parent="卡片_1"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+vertical_alignment = 1
+horizontal_alignment = 2
+text = ""
+
+layout_mode = 0
+offset_left = 9.0
+offset_top = 9.0
+offset_right = 174.0
+offset_bottom = 27.0
+
+[node name="名称" type="Label" parent="卡片_1"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 0.568627, 0, 1)
+vertical_alignment = 1
+horizontal_alignment = 0
+text = "【BOSS】桃地再不斩"
+
+layout_mode = 0
+offset_left = 9.0
+offset_top = 125.0
+offset_right = 174.0
+offset_bottom = 143.0
+
+[node name="类型" type="Label" parent="卡片_1"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 0.568627, 0, 1)
+vertical_alignment = 1
+horizontal_alignment = 0
+text = "上忍"
+
+layout_mode = 0
+offset_left = 149.0
+offset_top = 125.0
+offset_right = 179.0
+offset_bottom = 143.0
+
+[node name="信息底" type="Panel" parent="卡片_1"]
+theme_override_styles/panel = SubResource("r1")
+
+layout_mode = 0
+offset_left = 4.0
+offset_top = 146.0
+offset_right = 179.0
+offset_bottom = 245.0
+
+[node name="等级标签" type="Label" parent="卡片_1"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.988235, 0.764706, 0.6, 1)
+vertical_alignment = 1
+horizontal_alignment = 0
+text = "等　　级："
+
+layout_mode = 0
+offset_left = 14.0
+offset_top = 151.0
+offset_right = 74.0
+offset_bottom = 169.0
+
+[node name="等级数值" type="Label" parent="卡片_1"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+vertical_alignment = 1
+horizontal_alignment = 0
+text = "30级"
+
+layout_mode = 0
+offset_left = 72.0
+offset_top = 151.0
+offset_right = 142.0
+offset_bottom = 169.0
+
+[node name="地图标签" type="Label" parent="卡片_1"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.988235, 0.764706, 0.6, 1)
+vertical_alignment = 1
+horizontal_alignment = 0
+text = "刷新地图："
+
+layout_mode = 0
+offset_left = 14.0
+offset_top = 172.0
+offset_right = 74.0
+offset_bottom = 190.0
+
+[node name="地图数值" type="Label" parent="卡片_1"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+vertical_alignment = 1
+horizontal_alignment = 0
+mouse_filter = 0
+text = "边境玄界"
+
+layout_mode = 0
+offset_left = 72.0
+offset_top = 172.0
+offset_right = 142.0
+offset_bottom = 190.0
+
+[node name="时间标签" type="Label" parent="卡片_1"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.988235, 0.764706, 0.6, 1)
+vertical_alignment = 1
+horizontal_alignment = 0
+text = "刷新时间："
+
+layout_mode = 0
+offset_left = 14.0
+offset_top = 193.0
+offset_right = 74.0
+offset_bottom = 211.0
+
+[node name="时间数值" type="Label" parent="卡片_1"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+vertical_alignment = 1
+horizontal_alignment = 0
+text = "未死亡"
+
+layout_mode = 0
+offset_left = 72.0
+offset_top = 193.0
+offset_right = 142.0
+offset_bottom = 211.0
+
+[node name="爆率标签" type="Label" parent="卡片_1"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.988235, 0.764706, 0.6, 1)
+vertical_alignment = 1
+horizontal_alignment = 0
+text = "爆率说明："
+
+layout_mode = 0
+offset_left = 14.0
+offset_top = 214.0
+offset_right = 74.0
+offset_bottom = 232.0
+
+[node name="挑战钮" type="TextureButton" parent="卡片_1"]
+texture_normal = ExtResource("t3")
+ignore_texture_size = false
+stretch_mode = 0
+mouse_default_cursor_shape = 2
+
+layout_mode = 0
+offset_left = 149.0
+offset_top = 170.0
+offset_right = 171.0
+offset_bottom = 192.0
+
+[node name="星级" type="Control" parent="卡片_1"]
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 72.0
+offset_top = 218.0
+offset_right = 114.0
+offset_bottom = 231.0
+
+[node name="星_0" type="TextureRect" parent="卡片_1/星级"]
+texture = ExtResource("t4")
+expand_mode = 1
+stretch_mode = 0
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 14.0
+offset_bottom = 13.0
+
+[node name="星_1" type="TextureRect" parent="卡片_1/星级"]
+texture = ExtResource("t4")
+expand_mode = 1
+stretch_mode = 0
+
+layout_mode = 0
+offset_left = 14.0
+offset_top = 0.0
+offset_right = 28.0
+offset_bottom = 13.0
+
+[node name="星_2" type="TextureRect" parent="卡片_1/星级"]
+texture = ExtResource("t4")
+expand_mode = 1
+stretch_mode = 0
+
+layout_mode = 0
+offset_left = 28.0
+offset_top = 0.0
+offset_right = 42.0
+offset_bottom = 13.0
+
+[node name="星_3" type="TextureRect" parent="卡片_1/星级"]
+visible = false
+texture = ExtResource("t4")
+expand_mode = 1
+stretch_mode = 0
+
+layout_mode = 0
+offset_left = 42.0
+offset_top = 0.0
+offset_right = 56.0
+offset_bottom = 13.0
+
+[node name="星_4" type="TextureRect" parent="卡片_1/星级"]
+visible = false
+texture = ExtResource("t4")
+expand_mode = 1
+stretch_mode = 0
+
+layout_mode = 0
+offset_left = 56.0
+offset_top = 0.0
+offset_right = 70.0
+offset_bottom = 13.0
+
+[node name="星_5" type="TextureRect" parent="卡片_1/星级"]
+visible = false
+texture = ExtResource("t4")
+expand_mode = 1
+stretch_mode = 0
+
+layout_mode = 0
+offset_left = 70.0
+offset_top = 0.0
+offset_right = 84.0
+offset_bottom = 13.0
+
+[node name="星_6" type="TextureRect" parent="卡片_1/星级"]
+visible = false
+texture = ExtResource("t4")
+expand_mode = 1
+stretch_mode = 0
+
+layout_mode = 0
+offset_left = 84.0
+offset_top = 0.0
+offset_right = 98.0
+offset_bottom = 13.0
+
+[node name="卡片底" type="Panel" parent="卡片_2"]
+theme_override_styles/panel = SubResource("r1")
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 183.0
+offset_bottom = 250.0
+
+[node name="头像底" type="Panel" parent="卡片_2"]
+theme_override_styles/panel = SubResource("r2")
+mouse_filter = 0
+
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 179.0
+offset_bottom = 122.0
+
+[node name="头像" type="TextureRect" parent="卡片_2/头像底"]
+texture = ExtResource("t16")
+expand_mode = 1
+stretch_mode = 0
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 173.0
+offset_bottom = 116.0
+
+[node name="序号" type="Label" parent="卡片_2"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+vertical_alignment = 1
+horizontal_alignment = 2
+text = ""
+
+layout_mode = 0
+offset_left = 9.0
+offset_top = 9.0
+offset_right = 174.0
+offset_bottom = 27.0
+
+[node name="名称" type="Label" parent="卡片_2"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 0.568627, 0, 1)
+vertical_alignment = 1
+horizontal_alignment = 0
+text = "【BOSS】白"
+
+layout_mode = 0
+offset_left = 9.0
+offset_top = 125.0
+offset_right = 174.0
+offset_bottom = 143.0
+
+[node name="类型" type="Label" parent="卡片_2"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 0.568627, 0, 1)
+vertical_alignment = 1
+horizontal_alignment = 0
+text = "上忍"
+
+layout_mode = 0
+offset_left = 149.0
+offset_top = 125.0
+offset_right = 179.0
+offset_bottom = 143.0
+
+[node name="信息底" type="Panel" parent="卡片_2"]
+theme_override_styles/panel = SubResource("r1")
+
+layout_mode = 0
+offset_left = 4.0
+offset_top = 146.0
+offset_right = 179.0
+offset_bottom = 245.0
+
+[node name="等级标签" type="Label" parent="卡片_2"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.988235, 0.764706, 0.6, 1)
+vertical_alignment = 1
+horizontal_alignment = 0
+text = "等　　级："
+
+layout_mode = 0
+offset_left = 14.0
+offset_top = 151.0
+offset_right = 74.0
+offset_bottom = 169.0
+
+[node name="等级数值" type="Label" parent="卡片_2"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+vertical_alignment = 1
+horizontal_alignment = 0
+text = "40级"
+
+layout_mode = 0
+offset_left = 72.0
+offset_top = 151.0
+offset_right = 142.0
+offset_bottom = 169.0
+
+[node name="地图标签" type="Label" parent="卡片_2"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.988235, 0.764706, 0.6, 1)
+vertical_alignment = 1
+horizontal_alignment = 0
+text = "刷新地图："
+
+layout_mode = 0
+offset_left = 14.0
+offset_top = 172.0
+offset_right = 74.0
+offset_bottom = 190.0
+
+[node name="地图数值" type="Label" parent="卡片_2"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+vertical_alignment = 1
+horizontal_alignment = 0
+mouse_filter = 0
+text = "波之国秘林"
+
+layout_mode = 0
+offset_left = 72.0
+offset_top = 172.0
+offset_right = 142.0
+offset_bottom = 190.0
+
+[node name="时间标签" type="Label" parent="卡片_2"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.988235, 0.764706, 0.6, 1)
+vertical_alignment = 1
+horizontal_alignment = 0
+text = "刷新时间："
+
+layout_mode = 0
+offset_left = 14.0
+offset_top = 193.0
+offset_right = 74.0
+offset_bottom = 211.0
+
+[node name="时间数值" type="Label" parent="卡片_2"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+vertical_alignment = 1
+horizontal_alignment = 0
+text = "未死亡"
+
+layout_mode = 0
+offset_left = 72.0
+offset_top = 193.0
+offset_right = 142.0
+offset_bottom = 211.0
+
+[node name="爆率标签" type="Label" parent="卡片_2"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.988235, 0.764706, 0.6, 1)
+vertical_alignment = 1
+horizontal_alignment = 0
+text = "爆率说明："
+
+layout_mode = 0
+offset_left = 14.0
+offset_top = 214.0
+offset_right = 74.0
+offset_bottom = 232.0
+
+[node name="挑战钮" type="TextureButton" parent="卡片_2"]
+texture_normal = ExtResource("t3")
+ignore_texture_size = false
+stretch_mode = 0
+mouse_default_cursor_shape = 2
+
+layout_mode = 0
+offset_left = 149.0
+offset_top = 170.0
+offset_right = 171.0
+offset_bottom = 192.0
+
+[node name="星级" type="Control" parent="卡片_2"]
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 72.0
+offset_top = 218.0
+offset_right = 128.0
+offset_bottom = 231.0
+
+[node name="星_0" type="TextureRect" parent="卡片_2/星级"]
+texture = ExtResource("t4")
+expand_mode = 1
+stretch_mode = 0
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 14.0
+offset_bottom = 13.0
+
+[node name="星_1" type="TextureRect" parent="卡片_2/星级"]
+texture = ExtResource("t4")
+expand_mode = 1
+stretch_mode = 0
+
+layout_mode = 0
+offset_left = 14.0
+offset_top = 0.0
+offset_right = 28.0
+offset_bottom = 13.0
+
+[node name="星_2" type="TextureRect" parent="卡片_2/星级"]
+texture = ExtResource("t4")
+expand_mode = 1
+stretch_mode = 0
+
+layout_mode = 0
+offset_left = 28.0
+offset_top = 0.0
+offset_right = 42.0
+offset_bottom = 13.0
+
+[node name="星_3" type="TextureRect" parent="卡片_2/星级"]
+texture = ExtResource("t5")
+expand_mode = 1
+stretch_mode = 0
+
+layout_mode = 0
+offset_left = 42.0
+offset_top = 0.0
+offset_right = 56.0
+offset_bottom = 13.0
+
+[node name="星_4" type="TextureRect" parent="卡片_2/星级"]
+visible = false
+texture = ExtResource("t4")
+expand_mode = 1
+stretch_mode = 0
+
+layout_mode = 0
+offset_left = 56.0
+offset_top = 0.0
+offset_right = 70.0
+offset_bottom = 13.0
+
+[node name="星_5" type="TextureRect" parent="卡片_2/星级"]
+visible = false
+texture = ExtResource("t4")
+expand_mode = 1
+stretch_mode = 0
+
+layout_mode = 0
+offset_left = 70.0
+offset_top = 0.0
+offset_right = 84.0
+offset_bottom = 13.0
+
+[node name="星_6" type="TextureRect" parent="卡片_2/星级"]
+visible = false
+texture = ExtResource("t4")
+expand_mode = 1
+stretch_mode = 0
+
+layout_mode = 0
+offset_left = 84.0
+offset_top = 0.0
+offset_right = 98.0
+offset_bottom = 13.0
+
+[node name="分页" type="Control" parent="."]
+mouse_filter = 2
+
+layout_mode = 0
+offset_left = 224.0
+offset_top = 270.0
+offset_right = 348.0
+offset_bottom = 290.0
+
+[node name="首页" type="TextureButton" parent="分页"]
+disabled = true
+texture_disabled = ExtResource("t10")
+texture_normal = ExtResource("t6")
+ignore_texture_size = false
+stretch_mode = 0
+mouse_default_cursor_shape = 2
+
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 18.0
+offset_bottom = 13.0
+
+[node name="上一页" type="TextureButton" parent="分页"]
+disabled = true
+texture_disabled = ExtResource("t11")
+texture_normal = ExtResource("t7")
+ignore_texture_size = false
+stretch_mode = 0
+mouse_default_cursor_shape = 2
+
+layout_mode = 0
+offset_left = 20.0
+offset_top = 0.0
+offset_right = 35.0
+offset_bottom = 13.0
+
+[node name="页码" type="Label" parent="分页"]
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+vertical_alignment = 1
+horizontal_alignment = 1
+theme_override_font_flags/font = 4
+text = "1/4"
+
+layout_mode = 0
+offset_left = 37.0
+offset_top = 0.0
+offset_right = 87.0
+offset_bottom = 16.0
+
+[node name="下一页" type="TextureButton" parent="分页"]
+texture_disabled = ExtResource("t12")
+texture_normal = ExtResource("t8")
+ignore_texture_size = false
+stretch_mode = 0
+mouse_default_cursor_shape = 2
+
+layout_mode = 0
+offset_left = 89.0
+offset_top = 0.0
+offset_right = 104.0
+offset_bottom = 13.0
+
+[node name="末页" type="TextureButton" parent="分页"]
+texture_disabled = ExtResource("t13")
+texture_normal = ExtResource("t9")
+ignore_texture_size = false
+stretch_mode = 0
+mouse_default_cursor_shape = 2
+
+layout_mode = 0
+offset_left = 106.0
+offset_top = 0.0
+offset_right = 124.0
+offset_bottom = 13.0

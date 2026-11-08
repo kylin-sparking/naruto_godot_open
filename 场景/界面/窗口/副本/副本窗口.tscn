@@ -1,0 +1,1191 @@
+[gd_scene load_steps=26 format=3]
+; 由 `开发工具/生成副本场景.py` 从量具 `截副本页.gd` 的 件路径/件期望/原文/文案色/列色 + `数据/副本.json` 生成。
+; **改真值改量具表或重跑生成器，别手改本文件**（手改会被下一次生成吃掉）。
+; 原版 `com/mxw/uifl/controls/copy/CopyWindow.as`，`super(570,283)` 在 `:69`；
+; 标题 = `COPY_WINDOW_TITLE`「副本传送」（`:138`），**不是**「挑战副本」（那是 NPC 菜单项）。
+; 场景 y = AS3 窗口局部 y − 29（「副本」在 `窗口尺寸.json` 标 `整框: true` ⇒ 容器原点 (0,29)）。
+; 同级顺序 = AS3 addChild 序（列表在最后 ⇒ 盖住底）；行内 四列 → 悬停框 → 选中框。
+; 逐件出处见 `测试/截图/副本_对照/真值对照表.md` 与 `game-client/真值/窗口/副本.md`。
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/内容面板.png" id="t0"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/子面板.png" id="t1"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/列表分隔.png" id="t2"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/竖向分隔线.png" id="t3"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/横向分隔线.png" id="t4"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/选中条1.png" id="t5"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/副本/星实心.png" id="t6"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/副本/星空心.png" id="t7"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/复选框未选.png" id="t8"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/复选框选中.png" id="t9"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/副本/钮_进入.png" id="t10"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/副本/钮_进入_悬停.png" id="t11"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/副本/钮_进入_按下.png" id="t12"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/副本/钮_密卷.png" id="t13"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/副本/钮_密卷_悬停.png" id="t14"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/副本/钮_密卷_按下.png" id="t15"]
+[sub_resource type="StyleBoxTexture" id="r0"]
+texture = ExtResource("t0")
+texture_margin_left = 11
+texture_margin_right = 10
+texture_margin_top = 10
+texture_margin_bottom = 11
+
+[sub_resource type="StyleBoxTexture" id="r1"]
+texture = ExtResource("t1")
+texture_margin_left = 7.5
+texture_margin_right = 7.5
+texture_margin_top = 6.75
+texture_margin_bottom = 6.75
+
+[sub_resource type="StyleBoxTexture" id="r2"]
+texture = ExtResource("t2")
+texture_margin_left = 76
+texture_margin_right = 76
+texture_margin_top = 6
+texture_margin_bottom = 6
+
+[sub_resource type="StyleBoxTexture" id="r3"]
+texture = ExtResource("t10")
+texture_margin_left = 0
+texture_margin_right = 0
+texture_margin_top = 0
+texture_margin_bottom = 0
+
+[sub_resource type="StyleBoxTexture" id="r4"]
+texture = ExtResource("t11")
+texture_margin_left = 0
+texture_margin_right = 0
+texture_margin_top = 0
+texture_margin_bottom = 0
+
+[sub_resource type="StyleBoxTexture" id="r5"]
+texture = ExtResource("t12")
+texture_margin_left = 0
+texture_margin_right = 0
+texture_margin_top = 0
+texture_margin_bottom = 0
+
+[sub_resource type="StyleBoxTexture" id="r6"]
+texture = ExtResource("t13")
+texture_margin_left = 0
+texture_margin_right = 0
+texture_margin_top = 0
+texture_margin_bottom = 0
+
+[sub_resource type="StyleBoxTexture" id="r7"]
+texture = ExtResource("t14")
+texture_margin_left = 0
+texture_margin_right = 0
+texture_margin_top = 0
+texture_margin_bottom = 0
+
+[sub_resource type="StyleBoxTexture" id="r8"]
+texture = ExtResource("t15")
+texture_margin_left = 0
+texture_margin_right = 0
+texture_margin_top = 0
+texture_margin_bottom = 0
+
+
+[node name="原版副本内容" type="Control"]
+custom_minimum_size = Vector2(570, 254)
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 570
+offset_bottom = 254
+
+[node name="内容底" type="Panel" parent="."]
+theme_override_styles/panel = SubResource("r0")
+layout_mode = 0
+offset_left = 6.0
+offset_top = 10.0
+offset_right = 564.0
+offset_bottom = 250.0
+
+[node name="列表面板" type="Panel" parent="."]
+theme_override_styles/panel = SubResource("r1")
+layout_mode = 0
+offset_left = 11.0
+offset_top = 14.0
+offset_right = 324.0
+offset_bottom = 218.0
+
+[node name="详情面板" type="Panel" parent="."]
+theme_override_styles/panel = SubResource("r1")
+layout_mode = 0
+offset_left = 325.0
+offset_top = 14.0
+offset_right = 560.0
+offset_bottom = 243.0
+
+[node name="列头底" type="Panel" parent="."]
+theme_override_styles/panel = SubResource("r2")
+layout_mode = 0
+offset_left = 13.0
+offset_top = 14.0
+offset_right = 318.0
+offset_bottom = 38.0
+
+[node name="列头_名称" type="Label" parent="."]
+text = "副本名称"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.988235, 0.717647, 0.6, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 12.0
+offset_top = 16.0
+offset_right = 136.0
+offset_bottom = 34.0
+
+[node name="列头_等级" type="Label" parent="."]
+text = "等级"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.988235, 0.717647, 0.6, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 147.0
+offset_top = 16.0
+offset_right = 183.0
+offset_bottom = 34.0
+
+[node name="列头_组队" type="Label" parent="."]
+text = "组队"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.988235, 0.717647, 0.6, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 202.0
+offset_top = 16.0
+offset_right = 238.0
+offset_bottom = 34.0
+
+[node name="列头_次数" type="Label" parent="."]
+text = "次数"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.988235, 0.717647, 0.6, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 257.0
+offset_top = 16.0
+offset_right = 293.0
+offset_bottom = 34.0
+
+[node name="列分隔1" type="TextureRect" parent="."]
+texture = ExtResource("t3")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 140.0
+offset_top = 16.0
+offset_right = 142.0
+offset_bottom = 36.0
+
+[node name="列分隔2" type="TextureRect" parent="."]
+texture = ExtResource("t3")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 191.0
+offset_top = 16.0
+offset_right = 193.0
+offset_bottom = 36.0
+
+[node name="列分隔3" type="TextureRect" parent="."]
+texture = ExtResource("t3")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 242.0
+offset_top = 16.0
+offset_right = 244.0
+offset_bottom = 36.0
+
+[node name="星级标题" type="Label" parent="."]
+text = "副本内奖励丰厚度："
+horizontal_alignment = 0
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 0.6, 0, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 328.0
+offset_top = 14.0
+offset_right = 563.0
+offset_bottom = 32.0
+
+[node name="星级分隔" type="TextureRect" parent="."]
+texture = ExtResource("t4")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 328.0
+offset_top = 61.0
+offset_right = 553.0
+offset_bottom = 63.0
+
+[node name="星容器" type="Control" parent="."]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 359.0
+offset_top = 38.0
+offset_right = 457.0
+offset_bottom = 51.0
+
+[node name="星1" type="TextureRect" parent="星容器"]
+texture = ExtResource("t6")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 14.0
+offset_bottom = 13.0
+
+[node name="星2" type="TextureRect" parent="星容器"]
+texture = ExtResource("t6")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 14.0
+offset_top = 0.0
+offset_right = 28.0
+offset_bottom = 13.0
+
+[node name="星3" type="TextureRect" parent="星容器"]
+texture = ExtResource("t6")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 28.0
+offset_top = 0.0
+offset_right = 42.0
+offset_bottom = 13.0
+
+[node name="星4" type="TextureRect" parent="星容器"]
+texture = ExtResource("t7")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 42.0
+offset_top = 0.0
+offset_right = 56.0
+offset_bottom = 13.0
+
+[node name="星5" type="TextureRect" parent="星容器"]
+texture = ExtResource("t7")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 56.0
+offset_top = 0.0
+offset_right = 70.0
+offset_bottom = 13.0
+
+[node name="星6" type="TextureRect" parent="星容器"]
+texture = ExtResource("t7")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 70.0
+offset_top = 0.0
+offset_right = 84.0
+offset_bottom = 13.0
+
+[node name="星7" type="TextureRect" parent="星容器"]
+texture = ExtResource("t7")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 84.0
+offset_top = 0.0
+offset_right = 98.0
+offset_bottom = 13.0
+
+[node name="详情滚动" type="ScrollContainer" parent="."]
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 1
+layout_mode = 0
+offset_left = 328.0
+offset_top = 67.0
+offset_right = 552.0
+offset_bottom = 209.0
+
+[node name="详情内容" type="Control" parent="详情滚动"]
+custom_minimum_size = Vector2(224, 222)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 224.0
+offset_bottom = 222.0
+
+[node name="奖励标题" type="Label" parent="详情滚动/详情内容"]
+text = "通关奖励："
+horizontal_alignment = 0
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 0.6, 0, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 3.0
+offset_top = -2.0
+offset_right = 79.0
+offset_bottom = 16.0
+
+[node name="奖励" type="RichTextLabel" parent="详情滚动/详情内容"]
+bbcode_enabled = true
+text = "[color=#00ff00]【进阶符×1】\n【手里剑木桩×1】\n【柔拳灵符×1】[/color]"
+scroll_active = false
+autowrap_mode = 3
+theme_override_constants/line_separation = 5
+layout_mode = 0
+offset_left = 20
+offset_top = 17
+offset_right = 190
+offset_bottom = 68.0
+
+[node name="说明" type="RichTextLabel" parent="详情滚动/详情内容"]
+bbcode_enabled = true
+text = "[color=#ff9100]副本说明：\n该副本为连斩演习副本，总共有1200位训练员与8位训练教官，都包含【高额经验】。\n【小提示】：连续击杀怪将获得连斩BUFF，连斩BUFF将增加人物打怪获得的经验，同时可对BOSS造成高伤害，该副本内的怪均包含相当高的经验。[/color]"
+scroll_active = false
+autowrap_mode = 3
+theme_override_constants/line_separation = 5
+layout_mode = 0
+offset_left = 3
+offset_top = 69.0
+offset_right = 203
+offset_bottom = 222.0
+
+[node name="勾选" type="CheckBox" parent="."]
+text = "只显示我可以参与的副本"
+theme_override_colors/font_color = Color(1, 0.941176, 0, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_icons/unchecked = ExtResource("t8")
+theme_override_icons/checked = ExtResource("t9")
+icon_alignment = 0
+alignment = 0
+button_icon_size = 19
+layout_mode = 0
+offset_left = 15.0
+offset_top = 220.0
+offset_right = 171.0
+offset_bottom = 239.0
+
+[node name="排行钮" type="Button" parent="."]
+theme_override_styles/normal = SubResource("r3")
+theme_override_styles/hover = SubResource("r4")
+theme_override_styles/pressed = SubResource("r5")
+text = "查看副本竞速榜"
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+visible = false
+layout_mode = 0
+offset_left = 190.0
+offset_top = 220.0
+offset_right = 284.0
+offset_bottom = 242.0
+
+[node name="进入钮" type="Button" parent="."]
+theme_override_styles/normal = SubResource("r3")
+theme_override_styles/hover = SubResource("r4")
+theme_override_styles/pressed = SubResource("r5")
+text = "进入"
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+layout_mode = 0
+offset_left = 330.0
+offset_top = 213.0
+offset_right = 367.0
+offset_bottom = 235.0
+
+[node name="密卷钮" type="Button" parent="."]
+theme_override_styles/normal = SubResource("r6")
+theme_override_styles/hover = SubResource("r7")
+theme_override_styles/pressed = SubResource("r8")
+text = "副本密卷进入"
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+layout_mode = 0
+offset_left = 410.0
+offset_top = 213.0
+offset_right = 492.0
+offset_bottom = 235.0
+
+[node name="确认钮" type="Button" parent="."]
+theme_override_styles/normal = SubResource("r3")
+theme_override_styles/hover = SubResource("r4")
+theme_override_styles/pressed = SubResource("r5")
+text = "确认"
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+visible = false
+layout_mode = 0
+offset_left = 190.0
+offset_top = 213.0
+offset_right = 227.0
+offset_bottom = 235.0
+
+[node name="取消钮" type="Button" parent="."]
+theme_override_styles/normal = SubResource("r3")
+theme_override_styles/hover = SubResource("r4")
+theme_override_styles/pressed = SubResource("r5")
+text = "取消"
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+visible = false
+layout_mode = 0
+offset_left = 229.0
+offset_top = 213.0
+offset_right = 266.0
+offset_bottom = 235.0
+
+[node name="领取钮" type="Button" parent="."]
+theme_override_styles/normal = SubResource("r3")
+theme_override_styles/hover = SubResource("r4")
+theme_override_styles/pressed = SubResource("r5")
+text = "领取"
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+visible = false
+layout_mode = 0
+offset_left = 268.0
+offset_top = 213.0
+offset_right = 305.0
+offset_bottom = 235.0
+
+[node name="列表" type="ScrollContainer" parent="."]
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 1
+layout_mode = 0
+offset_left = 14.0
+offset_top = 36.0
+offset_right = 316.0
+offset_bottom = 203.0
+
+[node name="行容器" type="Control" parent="列表"]
+custom_minimum_size = Vector2(298, 160)
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 298.0
+offset_bottom = 160.0
+
+[node name="行1" type="Control" parent="列表/行容器"]
+custom_minimum_size = Vector2(298, 20)
+mouse_filter = 0
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 298.0
+offset_bottom = 20.0
+
+[node name="悬停底" type="TextureRect" parent="列表/行容器/行1"]
+texture = ExtResource("t5")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 298.0
+offset_bottom = 20.0
+
+[node name="名" type="Label" parent="列表/行容器/行1"]
+text = "第1演习场"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.117647, 0.564706, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 124.0
+offset_bottom = 18.0
+
+[node name="等级" type="Label" parent="列表/行容器/行1"]
+text = "15"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 132.0
+offset_top = 0.0
+offset_right = 174.0
+offset_bottom = 18.0
+
+[node name="组队" type="Label" parent="列表/行容器/行1"]
+text = "混合"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 177.0
+offset_top = 0.0
+offset_right = 237.0
+offset_bottom = 18.0
+
+[node name="次数" type="Label" parent="列表/行容器/行1"]
+text = "0/1次"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 232.0
+offset_top = 0.0
+offset_right = 295.0
+offset_bottom = 18.0
+
+[node name="选中底" type="TextureRect" parent="列表/行容器/行1"]
+texture = ExtResource("t5")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 298.0
+offset_bottom = 20.0
+
+[node name="行2" type="Control" parent="列表/行容器"]
+custom_minimum_size = Vector2(298, 20)
+mouse_filter = 0
+layout_mode = 0
+offset_left = 0.0
+offset_top = 20.0
+offset_right = 298.0
+offset_bottom = 40.0
+
+[node name="悬停底" type="TextureRect" parent="列表/行容器/行2"]
+texture = ExtResource("t5")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 298.0
+offset_bottom = 20.0
+
+[node name="名" type="Label" parent="列表/行容器/行2"]
+text = "命运之抉择"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.117647, 0.564706, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 124.0
+offset_bottom = 18.0
+
+[node name="等级" type="Label" parent="列表/行容器/行2"]
+text = "25"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 132.0
+offset_top = 0.0
+offset_right = 174.0
+offset_bottom = 18.0
+
+[node name="组队" type="Label" parent="列表/行容器/行2"]
+text = "混合"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 177.0
+offset_top = 0.0
+offset_right = 237.0
+offset_bottom = 18.0
+
+[node name="次数" type="Label" parent="列表/行容器/行2"]
+text = "0/1次"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 232.0
+offset_top = 0.0
+offset_right = 295.0
+offset_bottom = 18.0
+
+[node name="选中底" type="TextureRect" parent="列表/行容器/行2"]
+texture = ExtResource("t5")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 298.0
+offset_bottom = 20.0
+
+[node name="行3" type="Control" parent="列表/行容器"]
+custom_minimum_size = Vector2(298, 20)
+mouse_filter = 0
+layout_mode = 0
+offset_left = 0.0
+offset_top = 40.0
+offset_right = 298.0
+offset_bottom = 60.0
+
+[node name="悬停底" type="TextureRect" parent="列表/行容器/行3"]
+texture = ExtResource("t5")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 298.0
+offset_bottom = 20.0
+
+[node name="名" type="Label" parent="列表/行容器/行3"]
+text = "秽土转生"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.117647, 0.564706, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 124.0
+offset_bottom = 18.0
+
+[node name="等级" type="Label" parent="列表/行容器/行3"]
+text = "55"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 132.0
+offset_top = 0.0
+offset_right = 174.0
+offset_bottom = 18.0
+
+[node name="组队" type="Label" parent="列表/行容器/行3"]
+text = "混合"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 177.0
+offset_top = 0.0
+offset_right = 237.0
+offset_bottom = 18.0
+
+[node name="次数" type="Label" parent="列表/行容器/行3"]
+text = "0/1次"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 232.0
+offset_top = 0.0
+offset_right = 295.0
+offset_bottom = 18.0
+
+[node name="选中底" type="TextureRect" parent="列表/行容器/行3"]
+texture = ExtResource("t5")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 298.0
+offset_bottom = 20.0
+
+[node name="行4" type="Control" parent="列表/行容器"]
+custom_minimum_size = Vector2(298, 20)
+mouse_filter = 0
+layout_mode = 0
+offset_left = 0.0
+offset_top = 60.0
+offset_right = 298.0
+offset_bottom = 80.0
+
+[node name="悬停底" type="TextureRect" parent="列表/行容器/行4"]
+texture = ExtResource("t5")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 298.0
+offset_bottom = 20.0
+
+[node name="名" type="Label" parent="列表/行容器/行4"]
+text = "挑战第七班"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.117647, 0.564706, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 124.0
+offset_bottom = 18.0
+
+[node name="等级" type="Label" parent="列表/行容器/行4"]
+text = "70"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 132.0
+offset_top = 0.0
+offset_right = 174.0
+offset_bottom = 18.0
+
+[node name="组队" type="Label" parent="列表/行容器/行4"]
+text = "混合"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 177.0
+offset_top = 0.0
+offset_right = 237.0
+offset_bottom = 18.0
+
+[node name="次数" type="Label" parent="列表/行容器/行4"]
+text = "0/1次"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 232.0
+offset_top = 0.0
+offset_right = 295.0
+offset_bottom = 18.0
+
+[node name="选中底" type="TextureRect" parent="列表/行容器/行4"]
+texture = ExtResource("t5")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 298.0
+offset_bottom = 20.0
+
+[node name="行5" type="Control" parent="列表/行容器"]
+custom_minimum_size = Vector2(298, 20)
+mouse_filter = 0
+layout_mode = 0
+offset_left = 0.0
+offset_top = 80.0
+offset_right = 298.0
+offset_bottom = 100.0
+
+[node name="悬停底" type="TextureRect" parent="列表/行容器/行5"]
+texture = ExtResource("t5")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 298.0
+offset_bottom = 20.0
+
+[node name="名" type="Label" parent="列表/行容器/行5"]
+text = "挑战尾兽"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.117647, 0.564706, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 124.0
+offset_bottom = 18.0
+
+[node name="等级" type="Label" parent="列表/行容器/行5"]
+text = "40"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 132.0
+offset_top = 0.0
+offset_right = 174.0
+offset_bottom = 18.0
+
+[node name="组队" type="Label" parent="列表/行容器/行5"]
+text = "混合"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 177.0
+offset_top = 0.0
+offset_right = 237.0
+offset_bottom = 18.0
+
+[node name="次数" type="Label" parent="列表/行容器/行5"]
+text = "0/1次"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 232.0
+offset_top = 0.0
+offset_right = 295.0
+offset_bottom = 18.0
+
+[node name="选中底" type="TextureRect" parent="列表/行容器/行5"]
+texture = ExtResource("t5")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 298.0
+offset_bottom = 20.0
+
+[node name="行6" type="Control" parent="列表/行容器"]
+custom_minimum_size = Vector2(298, 20)
+mouse_filter = 0
+layout_mode = 0
+offset_left = 0.0
+offset_top = 100.0
+offset_right = 298.0
+offset_bottom = 120.0
+
+[node name="悬停底" type="TextureRect" parent="列表/行容器/行6"]
+texture = ExtResource("t5")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 298.0
+offset_bottom = 20.0
+
+[node name="名" type="Label" parent="列表/行容器/行6"]
+text = "血之羁绊"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.117647, 0.564706, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 124.0
+offset_bottom = 18.0
+
+[node name="等级" type="Label" parent="列表/行容器/行6"]
+text = "50"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 132.0
+offset_top = 0.0
+offset_right = 174.0
+offset_bottom = 18.0
+
+[node name="组队" type="Label" parent="列表/行容器/行6"]
+text = "组队"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 177.0
+offset_top = 0.0
+offset_right = 237.0
+offset_bottom = 18.0
+
+[node name="次数" type="Label" parent="列表/行容器/行6"]
+text = "0/1次"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 232.0
+offset_top = 0.0
+offset_right = 295.0
+offset_bottom = 18.0
+
+[node name="选中底" type="TextureRect" parent="列表/行容器/行6"]
+texture = ExtResource("t5")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 298.0
+offset_bottom = 20.0
+
+[node name="行7" type="Control" parent="列表/行容器"]
+custom_minimum_size = Vector2(298, 20)
+mouse_filter = 0
+layout_mode = 0
+offset_left = 0.0
+offset_top = 120.0
+offset_right = 298.0
+offset_bottom = 140.0
+
+[node name="悬停底" type="TextureRect" parent="列表/行容器/行7"]
+texture = ExtResource("t5")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 298.0
+offset_bottom = 20.0
+
+[node name="名" type="Label" parent="列表/行容器/行7"]
+text = "迷路森林"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.117647, 0.564706, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 124.0
+offset_bottom = 18.0
+
+[node name="等级" type="Label" parent="列表/行容器/行7"]
+text = "50"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 132.0
+offset_top = 0.0
+offset_right = 174.0
+offset_bottom = 18.0
+
+[node name="组队" type="Label" parent="列表/行容器/行7"]
+text = "单人"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 177.0
+offset_top = 0.0
+offset_right = 237.0
+offset_bottom = 18.0
+
+[node name="次数" type="Label" parent="列表/行容器/行7"]
+text = "0/1次"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 232.0
+offset_top = 0.0
+offset_right = 295.0
+offset_bottom = 18.0
+
+[node name="选中底" type="TextureRect" parent="列表/行容器/行7"]
+texture = ExtResource("t5")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 298.0
+offset_bottom = 20.0
+
+[node name="行8" type="Control" parent="列表/行容器"]
+custom_minimum_size = Vector2(298, 20)
+mouse_filter = 0
+layout_mode = 0
+offset_left = 0.0
+offset_top = 140.0
+offset_right = 298.0
+offset_bottom = 160.0
+
+[node name="悬停底" type="TextureRect" parent="列表/行容器/行8"]
+texture = ExtResource("t5")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 298.0
+offset_bottom = 20.0
+
+[node name="名" type="Label" parent="列表/行容器/行8"]
+text = "修炼场"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.117647, 0.564706, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 124.0
+offset_bottom = 18.0
+
+[node name="等级" type="Label" parent="列表/行容器/行8"]
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 132.0
+offset_top = 0.0
+offset_right = 174.0
+offset_bottom = 18.0
+
+[node name="组队" type="Label" parent="列表/行容器/行8"]
+text = "单人"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 177.0
+offset_top = 0.0
+offset_right = 237.0
+offset_bottom = 18.0
+
+[node name="次数" type="Label" parent="列表/行容器/行8"]
+text = "0/1次"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 232.0
+offset_top = 0.0
+offset_right = 295.0
+offset_bottom = 18.0
+
+[node name="选中底" type="TextureRect" parent="列表/行容器/行8"]
+texture = ExtResource("t5")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+visible = false
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 298.0
+offset_bottom = 20.0
+

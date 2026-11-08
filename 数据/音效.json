@@ -1,0 +1,244 @@
+{
+  "说明": "原版音频库。生成物，别手改；改逻辑请改 开发工具/导出音频.mjs。",
+  "BGM": {
+    "目录": "res://素材/音效/BGM",
+    "数量": 52,
+    "清单": [
+      "0",
+      "1",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "2",
+      "20",
+      "21",
+      "22",
+      "23",
+      "24",
+      "25",
+      "26",
+      "27",
+      "28",
+      "29",
+      "3",
+      "30",
+      "31",
+      "32",
+      "33",
+      "34",
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "4",
+      "40",
+      "41",
+      "42",
+      "43",
+      "44",
+      "45",
+      "46",
+      "47",
+      "48",
+      "49",
+      "5",
+      "50",
+      "6",
+      "7",
+      "8",
+      "9",
+      "default"
+    ],
+    "内容重复": {
+      "2.mp3=default.mp3": 2
+    },
+    "选曲真值": "地图的 bgm **不抄进本表**：原版就是运行时读地图自己的 info.bgm（World.as:999），这里只留核对用的分布统计",
+    "地图核对": {
+      "张数": 181,
+      "分布": {
+        "0": 1,
+        "1": 3,
+        "2": 38,
+        "3": 97,
+        "4": 1,
+        "5": 3,
+        "6": 15,
+        "7": 20,
+        "8": 1,
+        "null": 2
+      }
+    },
+    "规则": {
+      "选项": "World.as:1091 parseBGMChoices —— 逗号/竖线/分号分隔，`名@权重` 把名字重复入池，去重，全空则 default",
+      "防重复": "World.as:947-977 同图连续切歌时，若上首是出现次数最多且独享最多，则把它剔出本次随机池",
+      "淡切": "World.as:1021/1050 beginBGMFade+advanceBGMFade：先淡出到 0 换轨，再淡入到设置音量；跨图换图不淡切",
+      "播完": "World.as:1085 onBGMComplete → playBGM() 重选一首"
+    }
+  },
+  "音效": {
+    "目录": "res://素材/音效",
+    "数量": 22,
+    "表": {
+      "Sound_BaoJi_Fire": {
+        "文件": "res://素材/音效/Sound_BaoJi_Fire.mp3",
+        "库文件": "Sound_BaoJi.swf",
+        "常量": "SOUND_BAOJI_FIRE"
+      },
+      "Sound_BaoJi_Lighting": {
+        "文件": "res://素材/音效/Sound_BaoJi_Lighting.mp3",
+        "库文件": "Sound_BaoJi.swf",
+        "常量": "SOUND_BAOJI_LIGHTING"
+      },
+      "Sound_BaoJi_Water": {
+        "文件": "res://素材/音效/Sound_BaoJi_Water.mp3",
+        "库文件": "Sound_BaoJi.swf",
+        "常量": "SOUND_BAOJI_WATER"
+      },
+      "Sound_BaoJi_Wind": {
+        "文件": "res://素材/音效/Sound_BaoJi_Wind.mp3",
+        "库文件": "Sound_BaoJi.swf",
+        "常量": "SOUND_BAOJI_WIND"
+      },
+      "Sound_CommonSkill_Flash": {
+        "文件": "res://素材/音效/Sound_CommonSkill_Flash.mp3",
+        "库文件": "Sound_CommonSkill.swf",
+        "常量": "SOUND_COMMONSKILL_FLASH"
+      },
+      "Sound_Dead_Fire": {
+        "文件": "res://素材/音效/Sound_Dead_Fire.mp3",
+        "库文件": "Sound_Dead.swf",
+        "常量": "SOUND_DEAD_FIRE"
+      },
+      "Sound_Dead_Lighting": {
+        "文件": "res://素材/音效/Sound_Dead_Lighting.mp3",
+        "库文件": "Sound_Dead.swf",
+        "常量": "SOUND_DEAD_LIGHTING"
+      },
+      "Sound_Dead_Water": {
+        "文件": "res://素材/音效/Sound_Dead_Water.mp3",
+        "库文件": "Sound_Dead.swf",
+        "常量": "SOUND_DEAD_WATER"
+      },
+      "Sound_Dead_Wind": {
+        "文件": "res://素材/音效/Sound_Dead_Wind.mp3",
+        "库文件": "Sound_Dead.swf",
+        "常量": "SOUND_DEAD_WIND"
+      },
+      "Sound_Mai_Fire": {
+        "文件": "res://素材/音效/Sound_Mai_Fire.mp3",
+        "库文件": "Sound_Mai.swf",
+        "常量": "SOUND_MAI_FIRE"
+      },
+      "Sound_Mai_Lighting": {
+        "文件": "res://素材/音效/Sound_Mai_Lighting.mp3",
+        "库文件": "Sound_Mai.swf",
+        "常量": "SOUND_MAI_LIGHTING"
+      },
+      "Sound_Mai_Water": {
+        "文件": "res://素材/音效/Sound_Mai_Water.mp3",
+        "库文件": "Sound_Mai.swf",
+        "常量": "SOUND_MAI_WATER"
+      },
+      "Sound_Mai_Wind": {
+        "文件": "res://素材/音效/Sound_Mai_Wind.mp3",
+        "库文件": "Sound_Mai.swf",
+        "常量": "SOUND_MAI_WIND"
+      },
+      "Sound_Movement_Jump": {
+        "文件": "res://素材/音效/Sound_Movement_Jump.mp3",
+        "库文件": "Sound_Movement.swf",
+        "常量": "SOUND_MOVEMENT_JUMP"
+      },
+      "Sound_Movement_Land": {
+        "文件": "res://素材/音效/Sound_Movement_Land.mp3",
+        "库文件": "Sound_Movement.swf",
+        "常量": "SOUND_MOVEMENT_LAND"
+      },
+      "Sound_Pouf": {
+        "文件": "res://素材/音效/Sound_Pouf.mp3",
+        "库文件": "Sound_Pouf.swf",
+        "常量": "SOUND_POUF"
+      },
+      "Sound_Select_Fire": {
+        "文件": "res://素材/音效/Sound_Select_Fire.mp3",
+        "库文件": "Sound_Select.swf",
+        "常量": "SOUND_SELECT_FIRE"
+      },
+      "Sound_Select_Lighting": {
+        "文件": "res://素材/音效/Sound_Select_Lighting.mp3",
+        "库文件": "Sound_Select.swf",
+        "常量": "SOUND_SELECT_LIGHTING"
+      },
+      "Sound_Select_Water": {
+        "文件": "res://素材/音效/Sound_Select_Water.mp3",
+        "库文件": "Sound_Select.swf",
+        "常量": "SOUND_SELECT_WATER"
+      },
+      "Sound_Select_Wind": {
+        "文件": "res://素材/音效/Sound_Select_Wind.mp3",
+        "库文件": "Sound_Select.swf",
+        "常量": "SOUND_SELECT_WIND"
+      },
+      "Sound_ShouLiJian": {
+        "文件": "res://素材/音效/Sound_ShouLiJian.mp3",
+        "库文件": "Sound_ShouLiJian.swf",
+        "常量": "SOUND_SHOULIJIAN"
+      },
+      "Sound_SingleMap_MesoPickup": {
+        "文件": "res://素材/音效/Sound_SingleMap_MesoPickup.mp3",
+        "库文件": "Sound_SingleMap.swf",
+        "常量": "SOUND_SINGLEMAP_MESOPICKUP"
+      }
+    },
+    "按职业": {
+      "GetMaiSound": {
+        "100": "Sound_Mai_Fire",
+        "200": "Sound_Mai_Water",
+        "300": "Sound_Mai_Lighting",
+        "400": "Sound_Mai_Wind"
+      },
+      "GetSelectSound": {
+        "100": "Sound_Select_Fire",
+        "200": "Sound_Select_Water",
+        "300": "Sound_Select_Lighting",
+        "400": "Sound_Select_Wind"
+      },
+      "GetBaoJiSound": {
+        "100": "Sound_BaoJi_Fire",
+        "200": "Sound_BaoJi_Water",
+        "300": "Sound_BaoJi_Lighting",
+        "400": "Sound_BaoJi_Wind"
+      },
+      "GetDeadSound": {
+        "100": "Sound_Dead_Fire",
+        "200": "Sound_Dead_Water",
+        "300": "Sound_Dead_Lighting",
+        "400": "Sound_Dead_Wind"
+      }
+    },
+    "职业系真值": "CocoJob.as:6-14 + SoundConstants 四个 Get*Sound 的 switch：**精确匹配** 100/200/300/400，其余（含土遁 500、转职细分 110+）返回 null = 不播",
+    "无调用点的": [
+      "Sound_Select_Fire",
+      "Sound_Select_Lighting",
+      "Sound_Select_Water",
+      "Sound_Select_Wind",
+      "Sound_SingleMap_MesoPickup"
+    ]
+  },
+  "影分身": {
+    "目录": "res://素材/音效",
+    "清单": [
+      "shadow-clone-despawn.mp3",
+      "shadow-clone-summon.mp3"
+    ],
+    "出处": "AbstractCloseAttackEffect.as:268"
+  }
+}

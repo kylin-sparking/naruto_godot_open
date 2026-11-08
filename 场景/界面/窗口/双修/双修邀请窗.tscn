@@ -1,0 +1,182 @@
+[gd_scene load_steps=17 format=3]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/内容面板.png" id="t1"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/子面板.png" id="t2"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/物品格.png" id="t3"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/心法/确定钮.png" id="t4"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/心法/确定钮_悬停.png" id="t5"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/心法/确定钮_按下.png" id="t6"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/洗点/确定钮.png" id="t7"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/洗点/确定钮_悬停.png" id="t8"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/洗点/确定钮_按下.png" id="t9"]
+
+[sub_resource type="StyleBoxTexture" id="sb_w61_n"]
+texture = ExtResource("t4")
+
+[sub_resource type="StyleBoxTexture" id="sb_w61_h"]
+texture = ExtResource("t5")
+
+[sub_resource type="StyleBoxTexture" id="sb_w61_p"]
+texture = ExtResource("t6")
+
+[sub_resource type="StyleBoxTexture" id="sb_w37_n"]
+texture = ExtResource("t7")
+
+[sub_resource type="StyleBoxTexture" id="sb_w37_h"]
+texture = ExtResource("t8")
+
+[sub_resource type="StyleBoxTexture" id="sb_w37_p"]
+texture = ExtResource("t9")
+
+[node name="原版双修邀请内容" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 280.0
+offset_bottom = 195.0
+
+[node name="内容底" type="NinePatchRect" parent="."]
+texture = ExtResource("t1")
+patch_margin_left = 11
+patch_margin_right = 10
+patch_margin_top = 10
+patch_margin_bottom = 11
+layout_mode = 0
+offset_left = 6.0
+offset_top = 10.0
+offset_right = 274.0
+offset_bottom = 161.0
+
+[node name="子面板" type="NinePatchRect" parent="."]
+mouse_filter = 2
+texture = ExtResource("t2")
+patch_margin_left = 8
+patch_margin_right = 7
+patch_margin_top = 7
+patch_margin_bottom = 7
+layout_mode = 0
+offset_left = 11.0
+offset_top = 63.0
+offset_right = 269.0
+offset_bottom = 153.0
+
+[node name="头像格" type="NinePatchRect" parent="."]
+mouse_filter = 2
+texture = ExtResource("t3")
+patch_margin_left = 9
+patch_margin_right = 6
+patch_margin_top = 9
+patch_margin_bottom = 6
+layout_mode = 0
+offset_left = 13.0
+offset_top = 16.0
+offset_right = 55.0
+offset_bottom = 58.0
+
+[node name="头像" type="TextureRect" parent="头像格"]
+layout_mode = 0
+offset_right = 42.0
+offset_bottom = 42.0
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 4
+
+[node name="昵称" type="Label" parent="."]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 13.0
+offset_right = 178.0
+offset_bottom = 31.0
+theme_override_font_sizes/font_size = 12
+text_overrun_behavior = 3
+
+[node name="等级" type="Label" parent="."]
+layout_mode = 0
+offset_left = 181.0
+offset_top = 13.0
+offset_right = 265.0
+offset_bottom = 31.0
+theme_override_font_sizes/font_size = 12
+text_overrun_behavior = 3
+
+[node name="家族" type="Label" parent="."]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 41.0
+offset_right = 180.0
+offset_bottom = 59.0
+theme_override_font_sizes/font_size = 12
+text_overrun_behavior = 3
+
+[node name="职业" type="Label" parent="."]
+layout_mode = 0
+offset_left = 181.0
+offset_top = 41.0
+offset_right = 265.0
+offset_bottom = 59.0
+theme_override_font_sizes/font_size = 12
+text_overrun_behavior = 3
+
+[node name="说明" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 72.0
+offset_right = 267.0
+offset_bottom = 141.0
+mouse_filter = 2
+bbcode_enabled = true
+text = ""
+scroll_active = false
+autowrap_mode = 3
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 2
+
+[node name="查看资料钮" type="Button" parent="."]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 167.0
+offset_right = 86.0
+offset_bottom = 189.0
+theme_override_styles/normal = SubResource("sb_w61_n")
+theme_override_styles/hover = SubResource("sb_w61_h")
+theme_override_styles/pressed = SubResource("sb_w61_p")
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_font_sizes/font_size = 12
+text = "查看资料"
+horizontal_alignment = 1
+mouse_default_cursor_shape = 2
+
+[node name="同意钮" type="Button" parent="."]
+layout_mode = 0
+offset_left = 121.0
+offset_top = 167.0
+offset_right = 158.0
+offset_bottom = 189.0
+theme_override_styles/normal = SubResource("sb_w37_n")
+theme_override_styles/hover = SubResource("sb_w37_h")
+theme_override_styles/pressed = SubResource("sb_w37_p")
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_font_sizes/font_size = 12
+text = "同意"
+horizontal_alignment = 1
+mouse_default_cursor_shape = 2
+
+[node name="取消钮" type="Button" parent="."]
+layout_mode = 0
+offset_left = 218.0
+offset_top = 167.0
+offset_right = 255.0
+offset_bottom = 189.0
+theme_override_styles/normal = SubResource("sb_w37_n")
+theme_override_styles/hover = SubResource("sb_w37_h")
+theme_override_styles/pressed = SubResource("sb_w37_p")
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_font_sizes/font_size = 12
+text = "取消"
+horizontal_alignment = 1
+mouse_default_cursor_shape = 2

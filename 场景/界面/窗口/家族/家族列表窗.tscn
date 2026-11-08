@@ -1,0 +1,530 @@
+[gd_scene load_steps=14 format=3]
+
+[ext_resource type="Script" path="res://脚本/界面/窗口/家族/家族列表窗.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/家族/盒底.png" id="2_盒底"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/家族/钮底61.png" id="3_钮61"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/横向分隔线.png" id="4_横线"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/家族/表头竖分隔线.png" id="5_竖分隔"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/下拉箭头.png" id="6_三角"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/家族/下拉60.png" id="7_下拉"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/家族/下拉90.png" id="7b_下拉90"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/家族/复选框.png" id="8_复选"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/分页首.png" id="10_首"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/上一页.png" id="11_上"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/下一页.png" id="12_下"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/分页末.png" id="13_末"]
+
+[node name="原版家族列表内容" type="Control"]
+custom_minimum_size = Vector2(604, 332)
+script = ExtResource("1_script")
+
+[node name="列表盒" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 599.0
+offset_bottom = 272.0
+mouse_filter = 2
+texture = ExtResource("2_盒底")
+patch_margin_left = 8
+patch_margin_top = 7
+patch_margin_right = 7
+patch_margin_bottom = 7
+
+[node name="表头" type="Control" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 8.0
+offset_right = 594.0
+offset_bottom = 28.0
+mouse_filter = 2
+
+[node name="家徽" type="Label" parent="表头"]
+layout_mode = 0
+offset_right = 57.0
+offset_bottom = 20.0
+text = "家徽"
+horizontal_alignment = 1
+
+[node name="家族名称" type="Label" parent="表头"]
+layout_mode = 0
+offset_left = 57.0
+offset_right = 137.0
+offset_bottom = 20.0
+text = "家族名称"
+horizontal_alignment = 1
+
+[node name="现任族长" type="Label" parent="表头"]
+layout_mode = 0
+offset_left = 137.0
+offset_right = 220.0
+offset_bottom = 20.0
+text = "现任族长"
+horizontal_alignment = 1
+
+[node name="族中人数" type="Label" parent="表头"]
+layout_mode = 0
+offset_left = 220.0
+offset_right = 291.0
+offset_bottom = 20.0
+text = "族中人数"
+horizontal_alignment = 1
+
+[node name="等级总和" type="Label" parent="表头"]
+layout_mode = 0
+offset_left = 291.0
+offset_right = 362.0
+offset_bottom = 20.0
+text = "等级总和"
+horizontal_alignment = 1
+
+[node name="家徽等级" type="Label" parent="表头"]
+layout_mode = 0
+offset_left = 362.0
+offset_right = 469.0
+offset_bottom = 20.0
+text = "家徽等级"
+horizontal_alignment = 1
+
+[node name="本周击杀BOSS数" type="Label" parent="表头"]
+layout_mode = 0
+offset_left = 469.0
+offset_right = 579.0
+offset_bottom = 20.0
+text = "本周击杀BOSS数"
+horizontal_alignment = 1
+
+[node name="三角家徽" type="TextureRect" parent="表头"]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 6.0
+offset_right = 55.0
+offset_bottom = 14.0
+mouse_filter = 2
+texture = ExtResource("6_三角")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="三角家族名称" type="TextureRect" parent="表头"]
+layout_mode = 0
+offset_left = 122.0
+offset_top = 6.0
+offset_right = 135.0
+offset_bottom = 14.0
+mouse_filter = 2
+texture = ExtResource("6_三角")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="三角现任族长" type="TextureRect" parent="表头"]
+layout_mode = 0
+offset_left = 205.0
+offset_top = 6.0
+offset_right = 218.0
+offset_bottom = 14.0
+mouse_filter = 2
+texture = ExtResource("6_三角")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="三角族中人数" type="TextureRect" parent="表头"]
+layout_mode = 0
+offset_left = 276.0
+offset_top = 6.0
+offset_right = 289.0
+offset_bottom = 14.0
+mouse_filter = 2
+texture = ExtResource("6_三角")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="三角等级总和" type="TextureRect" parent="表头"]
+layout_mode = 0
+offset_left = 347.0
+offset_top = 6.0
+offset_right = 360.0
+offset_bottom = 14.0
+mouse_filter = 2
+texture = ExtResource("6_三角")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="三角家徽等级" type="TextureRect" parent="表头"]
+layout_mode = 0
+offset_left = 454.0
+offset_top = 6.0
+offset_right = 467.0
+offset_bottom = 14.0
+mouse_filter = 2
+texture = ExtResource("6_三角")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="三角本周击杀BOSS数" type="TextureRect" parent="表头"]
+layout_mode = 0
+offset_left = 564.0
+offset_top = 6.0
+offset_right = 577.0
+offset_bottom = 14.0
+mouse_filter = 2
+texture = ExtResource("6_三角")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="竖分隔1" type="TextureRect" parent="表头"]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 2.0
+offset_right = 59.0
+offset_bottom = 22.0
+mouse_filter = 2
+texture = ExtResource("5_竖分隔")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="竖分隔2" type="TextureRect" parent="表头"]
+layout_mode = 0
+offset_left = 137.0
+offset_top = 2.0
+offset_right = 139.0
+offset_bottom = 22.0
+mouse_filter = 2
+texture = ExtResource("5_竖分隔")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="竖分隔3" type="TextureRect" parent="表头"]
+layout_mode = 0
+offset_left = 220.0
+offset_top = 2.0
+offset_right = 222.0
+offset_bottom = 22.0
+mouse_filter = 2
+texture = ExtResource("5_竖分隔")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="竖分隔4" type="TextureRect" parent="表头"]
+layout_mode = 0
+offset_left = 291.0
+offset_top = 2.0
+offset_right = 293.0
+offset_bottom = 22.0
+mouse_filter = 2
+texture = ExtResource("5_竖分隔")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="竖分隔5" type="TextureRect" parent="表头"]
+layout_mode = 0
+offset_left = 362.0
+offset_top = 2.0
+offset_right = 364.0
+offset_bottom = 22.0
+mouse_filter = 2
+texture = ExtResource("5_竖分隔")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="竖分隔6" type="TextureRect" parent="表头"]
+layout_mode = 0
+offset_left = 469.0
+offset_top = 2.0
+offset_right = 471.0
+offset_bottom = 22.0
+mouse_filter = 2
+texture = ExtResource("5_竖分隔")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="表头横线" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 30.0
+offset_right = 594.0
+offset_bottom = 32.0
+mouse_filter = 2
+texture = ExtResource("4_横线")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="列表窗口" type="Control" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 34.0
+offset_right = 579.0
+offset_bottom = 269.0
+clip_contents = true
+mouse_filter = 2
+
+[node name="内容列" type="Control" parent="列表窗口"]
+layout_mode = 0
+offset_right = 569.0
+offset_bottom = 235.0
+mouse_filter = 2
+
+[node name="空提示" type="Label" parent="列表窗口/内容列"]
+layout_mode = 0
+offset_right = 569.0
+offset_bottom = 23.0
+text = "暂无家族"
+horizontal_alignment = 1
+
+[node name="滚动条" type="Control" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 579.0
+offset_top = 34.0
+offset_right = 594.0
+offset_bottom = 269.0
+mouse_filter = 2
+
+[node name="滚动上" type="TextureButton" parent="滚动条"]
+layout_mode = 0
+offset_right = 15.0
+offset_bottom = 14.0
+focus_mode = 0
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="滚动槽" type="TextureRect" parent="滚动条"]
+layout_mode = 0
+offset_top = 14.0
+offset_right = 15.0
+offset_bottom = 255.0
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 0
+
+[node name="滑块底" type="NinePatchRect" parent="滚动条"]
+layout_mode = 0
+offset_top = 14.0
+offset_right = 15.0
+offset_bottom = 51.0
+mouse_filter = 2
+patch_margin_left = 6
+patch_margin_top = 9
+patch_margin_right = 6
+patch_margin_bottom = 9
+
+[node name="滑块" type="TextureButton" parent="滚动条"]
+layout_mode = 0
+offset_top = 14.0
+offset_right = 15.0
+offset_bottom = 51.0
+focus_mode = 0
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="滚动下" type="TextureButton" parent="滚动条"]
+layout_mode = 0
+offset_top = 255.0
+offset_right = 15.0
+offset_bottom = 269.0
+focus_mode = 0
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="每页" type="Label" parent="."]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 275.0
+offset_right = 48.0
+offset_bottom = 295.0
+text = "每页"
+
+[node name="页下拉" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 275.0
+offset_right = 110.0
+offset_bottom = 296.0
+focus_mode = 0
+texture_normal = ExtResource("7_下拉")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="文字" type="Label" parent="页下拉"]
+layout_mode = 0
+offset_left = 6.0
+offset_right = 44.0
+offset_bottom = 21.0
+mouse_filter = 2
+text = "10项"
+vertical_alignment = 1
+
+[node name="箭头" type="TextureRect" parent="页下拉"]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 6.0
+offset_right = 58.0
+offset_bottom = 14.0
+mouse_filter = 2
+texture = ExtResource("6_三角")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="显示" type="Label" parent="."]
+layout_mode = 0
+offset_left = 130.0
+offset_top = 275.0
+offset_right = 158.0
+offset_bottom = 295.0
+text = "显示"
+
+[node name="家主下拉" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 275.0
+offset_right = 250.0
+offset_bottom = 296.0
+focus_mode = 0
+texture_normal = ExtResource("7b_下拉90")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="文字" type="Label" parent="家主下拉"]
+layout_mode = 0
+offset_left = 6.0
+offset_right = 74.0
+offset_bottom = 21.0
+mouse_filter = 2
+text = "所有家族"
+vertical_alignment = 1
+
+[node name="箭头" type="TextureRect" parent="家主下拉"]
+layout_mode = 0
+offset_left = 76.0
+offset_top = 6.0
+offset_right = 89.0
+offset_bottom = 14.0
+mouse_filter = 2
+texture = ExtResource("6_三角")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="自动同意" type="Control" parent="."]
+layout_mode = 0
+offset_left = 255.0
+offset_top = 276.0
+offset_right = 600.0
+offset_bottom = 295.0
+
+[node name="框" type="TextureRect" parent="自动同意"]
+layout_mode = 0
+offset_right = 19.0
+offset_bottom = 19.0
+mouse_filter = 2
+texture = ExtResource("8_复选")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="字" type="Label" parent="自动同意"]
+layout_mode = 0
+offset_left = 24.0
+offset_right = 345.0
+offset_bottom = 19.0
+mouse_filter = 2
+text = "自动同意任意玩家向本家族发出的加入申请（族长可设置）"
+
+[node name="创建家族" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 142.0
+offset_top = 305.0
+offset_right = 203.0
+offset_bottom = 327.0
+focus_mode = 0
+texture_normal = ExtResource("3_钮61")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="创建家族"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+text = "创建家族"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="分页" type="Control" parent="."]
+layout_mode = 0
+offset_left = 248.0
+offset_top = 307.0
+offset_right = 372.0
+offset_bottom = 325.0
+mouse_filter = 2
+
+[node name="首页" type="TextureButton" parent="分页"]
+layout_mode = 0
+offset_right = 18.0
+offset_bottom = 13.0
+focus_mode = 0
+texture_normal = ExtResource("10_首")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="上一页" type="TextureButton" parent="分页"]
+layout_mode = 0
+offset_left = 20.0
+offset_right = 35.0
+offset_bottom = 13.0
+focus_mode = 0
+texture_normal = ExtResource("11_上")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="页码" type="Label" parent="分页"]
+layout_mode = 0
+offset_left = 37.0
+offset_top = -2.0
+offset_right = 87.0
+offset_bottom = 16.0
+text = "1/1"
+horizontal_alignment = 1
+
+[node name="下一页" type="TextureButton" parent="分页"]
+layout_mode = 0
+offset_left = 89.0
+offset_right = 104.0
+offset_bottom = 13.0
+focus_mode = 0
+texture_normal = ExtResource("12_下")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="末页" type="TextureButton" parent="分页"]
+layout_mode = 0
+offset_left = 106.0
+offset_right = 124.0
+offset_bottom = 13.0
+focus_mode = 0
+texture_normal = ExtResource("13_末")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="申请加入" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 417.0
+offset_top = 305.0
+offset_right = 478.0
+offset_bottom = 327.0
+focus_mode = 0
+texture_normal = ExtResource("3_钮61")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="申请加入"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+text = "申请加入"
+horizontal_alignment = 1
+vertical_alignment = 1

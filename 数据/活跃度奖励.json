@@ -1,0 +1,183 @@
+{
+ "info": {
+  "0": {
+   "cnt1": 1,
+   "cnt2": 20,
+   "dianjuan": 10,
+   "exp": 15,
+   "itemId1": 15009003,
+   "itemId2": 16000010,
+   "reqScore": 10
+  },
+  "1": {
+   "cnt1": 2,
+   "cnt2": 10,
+   "dianjuan": 20,
+   "exp": 15,
+   "itemId1": 15009003,
+   "itemId2": 16000016,
+   "reqScore": 20
+  },
+  "2": {
+   "cnt1": 3,
+   "cnt2": 10,
+   "dianjuan": 20,
+   "exp": 15,
+   "itemId1": 15009003,
+   "itemId2": 16000018,
+   "reqScore": 30
+  },
+  "3": {
+   "cnt1": 4,
+   "cnt2": 1,
+   "dianjuan": 40,
+   "exp": 30,
+   "itemId1": 15009003,
+   "itemId2": 16000002,
+   "reqScore": 40
+  },
+  "4": {
+   "cnt1": 4,
+   "cnt2": 2,
+   "dianjuan": 40,
+   "exp": 30,
+   "itemId1": 15009003,
+   "itemId2": 11010044,
+   "reqScore": 60
+  },
+  "5": {
+   "cnt1": 6,
+   "cnt2": 2,
+   "dianjuan": 60,
+   "exp": 35,
+   "itemId1": 15009003,
+   "itemId2": 11020012,
+   "reqScore": 80
+  },
+  "6": {
+   "cnt1": 8,
+   "cnt2": 3,
+   "dianjuan": 80,
+   "exp": 35,
+   "itemId1": 15009003,
+   "itemId2": 16000013,
+   "reqScore": 100
+  },
+  "7": {
+   "cnt1": 10,
+   "cnt2": 2,
+   "dianjuan": 100,
+   "exp": 70,
+   "itemId1": 15009003,
+   "itemId2": 11010089,
+   "reqScore": 120
+  }
+ },
+ "taskInfo": {
+  "0": {
+   "count": 1,
+   "des": "累积线上时长3小时",
+   "icon": "UISwf_ActivityTask_LiveTime",
+   "name": "线上时长",
+   "open": 0
+  },
+  "1": {
+   "count": 1,
+   "des": "成功击杀1个Boss",
+   "icon": "UISwf_ActivityTask_BossBattle",
+   "name": "Bossの战",
+   "open": 1
+  },
+  "10": {
+   "count": 1,
+   "des": "挑战1次挑战第七班副本",
+   "icon": "UISwf_ActivityTask_SevenIsGood",
+   "name": "最强第七班",
+   "open": 2
+  },
+  "11": {
+   "count": 1,
+   "des": "挑战1次血之羁绊副本",
+   "icon": "UISwf_ActivityTask_CheckLuck",
+   "name": "查克拉の怒",
+   "open": 2
+  },
+  "12": {
+   "count": 1,
+   "des": "挑战1次迷路森林副本",
+   "icon": "UISwf_ActivityTask_Run",
+   "name": "狂奔倒计时",
+   "open": 2
+  },
+  "13": {
+   "count": 1,
+   "des": "赠送好友玫瑰花1朵",
+   "icon": "UISwf_ActivityTask_SayLove",
+   "name": "爱の告白",
+   "open": 0
+  },
+  "14": {
+   "count": 5,
+   "des": "完成家族贡献5",
+   "icon": "UISwf_ActivityTask_OurHonor",
+   "name": "家族荣誉",
+   "open": 1
+  },
+  "2": {
+   "count": 1,
+   "des": "挑战1次第1演习场副本",
+   "icon": "UISwf_ActivityTask_LianZhanCopy",
+   "name": "连斩副本",
+   "open": 2
+  },
+  "3": {
+   "count": 1,
+   "des": "挑战1次命运之抉择副本",
+   "icon": "UISwf_ActivityTask_Destiny",
+   "name": "命运抉择",
+   "open": 2
+  },
+  "4": {
+   "count": 1,
+   "des": "挑战1次秽土转生副本",
+   "icon": "UISwf_ActivityTask_RenBattle",
+   "name": "忍界大战",
+   "open": 2
+  },
+  "5": {
+   "count": 2,
+   "des": "完成2次护送任务",
+   "icon": "UISwf_ActivityTask_EscortTask",
+   "name": "护送任务",
+   "open": 2
+  },
+  "6": {
+   "count": 4,
+   "des": "挑战4次精英副本",
+   "icon": "UISwf_ActivityTask_GoodGuys",
+   "name": "精英试炼",
+   "open": 2
+  },
+  "7": {
+   "count": 5,
+   "des": "完成5次竞技场",
+   "icon": "UISwf_ActivityTask_ArenaBattle",
+   "name": "战·竞技场",
+   "open": 1
+  },
+  "8": {
+   "count": 1,
+   "des": "成功击杀大蛇丸分身1次",
+   "icon": "UISwf_ActivityTask_BigSnake",
+   "name": "弑·大蛇丸",
+   "open": "0"
+  },
+  "9": {
+   "count": 2,
+   "des": "学习2次意志",
+   "icon": "UISwf_ActivityTask_SpritePower",
+   "name": "意志学习",
+   "open": 1
+  }
+ }
+}

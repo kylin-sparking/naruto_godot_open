@@ -1,0 +1,93 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://脚本/界面/窗口/家族/家族子窗.gd" id="1_script"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/内容面板.png" id="t1"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/家族/展开钮.png" id="t2"]
+
+
+
+[node name="家族Boss奖励条" type="Control"]
+custom_minimum_size = Vector2(263, 222)
+script = ExtResource("1_script")
+窗名 = "家族Boss奖励条"
+
+[node name="提示底" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 263.0
+offset_bottom = 222.0
+mouse_filter = 2
+texture = ExtResource("t1")
+patch_margin_left = 40
+patch_margin_top = 29
+patch_margin_right = 12
+patch_margin_bottom = 21
+
+[node name="标题奖励说明" type="Label" parent="."]
+layout_mode = 0
+offset_left = 0.0
+offset_top = 5.0
+offset_right = 263.0
+offset_bottom = 24.0
+mouse_filter = 2
+horizontal_alignment = 1
+text = "奖励说明"
+theme_override_colors/font_color = Color(1.0, 0.0, 0.0, 1)
+theme_override_font_sizes/font_size = 16
+vertical_alignment = 1
+clip_text = true
+
+[node name="钮收起" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 240.0
+offset_top = 8.0
+offset_right = 258.0
+offset_bottom = 26.0
+texture_normal = ExtResource("t2")
+expand_mode = 1
+stretch_mode = 0
+focus_mode = 0
+ignore_texture_size = true
+metadata/skin = "res://素材/界面/原版窗口/家族/展开钮"
+metadata/act = "收起"
+
+[node name="Label" type="Label" parent="钮收起"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+text = ""
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="文本奖励" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 29.0
+offset_right = 263.0
+offset_bottom = 254.0
+mouse_filter = 2
+theme_override_constants/line_separation = 2
+theme_override_font_sizes/normal_font_size = 12
+theme_override_colors/default_color = Color(1.0, 0.592156862745098, 0.25098039215686274, 1)
+bbcode_enabled = true
+text = "[color=#ff0000]波数      经验      金币      家族金币[/color]"
+scroll_active = false
+
+[node name="标签倒计时" type="Label" parent="."]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 210.0
+offset_right = 215.0
+offset_bottom = 230.0
+mouse_filter = 2
+text = "距离副本结束还有：%1:%2:%300:00:00"
+theme_override_colors/font_color = Color(1.0, 1.0, 0.0, 1)
+vertical_alignment = 1
+clip_text = true

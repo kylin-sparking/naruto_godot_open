@@ -1,0 +1,4 @@
+# Normalize EOL for all files that Git considers text files.
+* text=auto eol=lf
+# .bat 例外：cmd 双击的启动器固定 CRLF（本机实测 LF 也能跑，但别让 git 悄悄翻行尾）
+*.bat text eol=crlf

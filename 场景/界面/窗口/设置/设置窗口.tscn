@@ -1,0 +1,1740 @@
+[gd_scene load_steps=10 format=3]
+
+[ext_resource type="Script" path="res://脚本/界面/窗口/设置/设置窗口.gd" id="1_script"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/设置/内容底.png" id="r1"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/设置/子面板.png" id="r2"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/设置/页签未选.png" id="r3"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/设置/页签选中.png" id="r4"]
+
+[ext_resource type="GDScript" path="res://脚本/界面/组件/原版复选项.gd" id="r5"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/复选框未选.png" id="r6"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/复选框选中.png" id="r7"]
+
+[ext_resource type="GDScript" path="res://脚本/界面/组件/自绘圆.gd" id="r8"]
+
+
+
+[node name="原版系统设置内容" type="Control"]
+custom_minimum_size = Vector2(423, 395)
+script = ExtResource("1_script")
+窗名 = "设置"
+
+[node name="九宫内容底" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 6
+offset_top = 10.0
+offset_right = 417
+offset_bottom = 389.0
+texture = ExtResource("r1")
+patch_margin_left = 11
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 12
+
+[node name="九宫左栏" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 11
+offset_top = 35.0
+offset_right = 211
+offset_bottom = 384.0
+texture = ExtResource("r2")
+patch_margin_left = 7
+patch_margin_top = 6
+patch_margin_right = 7
+patch_margin_bottom = 7
+
+[node name="九宫右栏" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 212
+offset_top = 35.0
+offset_right = 412
+offset_bottom = 384.0
+texture = ExtResource("r2")
+patch_margin_left = 7
+patch_margin_top = 6
+patch_margin_right = 7
+patch_margin_bottom = 7
+
+[node name="页签系统设置" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 16
+offset_top = 15.0
+offset_right = 75
+offset_bottom = 37.0
+texture_normal = ExtResource("r3")
+texture_disabled = ExtResource("r4")
+mouse_default_cursor_shape = 2
+ignore_texture_size = true
+stretch_mode = 0
+disabled = true
+metadata/skin = "res://素材/界面/原版窗口/设置/页签未选"
+metadata/act = "设置:页签系统设置"
+theme_override_font_sizes/font_size = 12
+
+[node name="页签快速键" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 76
+offset_top = 15.0
+offset_right = 135
+offset_bottom = 37.0
+texture_normal = ExtResource("r3")
+texture_disabled = ExtResource("r4")
+mouse_default_cursor_shape = 2
+ignore_texture_size = true
+stretch_mode = 0
+disabled = false
+metadata/skin = "res://素材/界面/原版窗口/设置/页签未选"
+metadata/act = "设置:页签快速键"
+theme_override_font_sizes/font_size = 12
+
+[node name="页签特殊设置" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 136
+offset_top = 15.0
+offset_right = 195
+offset_bottom = 37.0
+texture_normal = ExtResource("r3")
+texture_disabled = ExtResource("r4")
+mouse_default_cursor_shape = 2
+ignore_texture_size = true
+stretch_mode = 0
+disabled = false
+metadata/skin = "res://素材/界面/原版窗口/设置/页签未选"
+metadata/act = "设置:页签特殊设置"
+theme_override_font_sizes/font_size = 12
+
+[node name="字页签系统设置" type="Label" parent="页签系统设置"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 59
+offset_bottom = 22
+text = "系统设置"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1)
+theme_override_font_sizes/font_size = 12
+mouse_filter = 2
+
+[node name="字快速键" type="Label" parent="页签快速键"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 59
+offset_bottom = 22
+text = "快速键"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1)
+theme_override_font_sizes/font_size = 12
+mouse_filter = 2
+
+[node name="字特殊设置" type="Label" parent="页签特殊设置"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 59
+offset_bottom = 22
+text = "特殊设置"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1)
+theme_override_font_sizes/font_size = 12
+mouse_filter = 2
+
+[node name="页签客户端" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 196
+offset_top = 15.0
+offset_right = 255
+offset_bottom = 37.0
+texture_normal = ExtResource("r3")
+texture_disabled = ExtResource("r4")
+mouse_default_cursor_shape = 2
+ignore_texture_size = true
+stretch_mode = 0
+disabled = false
+metadata/skin = "res://素材/界面/原版窗口/设置/页签未选"
+metadata/act = "设置:页签客户端"
+theme_override_font_sizes/font_size = 12
+
+[node name="字客户端" type="Label" parent="页签客户端"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 59
+offset_bottom = 22
+text = "客户端"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1)
+theme_override_font_sizes/font_size = 12
+mouse_filter = 2
+
+[node name="更多设置" type="Control" parent="."]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 423
+offset_bottom = 395
+mouse_filter = 2
+visible = false
+
+[node name="音乐面板" type="Panel" parent="更多设置"]
+layout_mode = 0
+offset_left = 17
+offset_top = 43
+offset_right = 198
+offset_bottom = 175
+
+[node name="标题" type="Label" parent="更多设置/音乐面板"]
+layout_mode = 0
+offset_left = 13
+offset_top = 10
+offset_right = 163
+offset_bottom = 30
+text = "音乐设置"
+
+[node name="静音" type="CheckBox" parent="更多设置/音乐面板"]
+layout_mode = 0
+offset_left = 10
+offset_top = 34
+offset_right = 165
+offset_bottom = 53
+text = "关闭地图音乐"
+
+[node name="音量文字" type="Label" parent="更多设置/音乐面板"]
+layout_mode = 0
+offset_left = 13
+offset_top = 62
+offset_right = 163
+offset_bottom = 82
+text = "音乐音量"
+
+[node name="音量" type="HSlider" parent="更多设置/音乐面板"]
+layout_mode = 0
+offset_left = 13
+offset_top = 88
+offset_right = 163
+offset_bottom = 108
+
+[node name="音效面板" type="Panel" parent="更多设置"]
+layout_mode = 0
+offset_left = 213
+offset_top = 43
+offset_right = 394
+offset_bottom = 175
+
+[node name="标题" type="Label" parent="更多设置/音效面板"]
+layout_mode = 0
+offset_left = 13
+offset_top = 10
+offset_right = 163
+offset_bottom = 30
+text = "音效设置"
+
+[node name="静音" type="CheckBox" parent="更多设置/音效面板"]
+layout_mode = 0
+offset_left = 10
+offset_top = 34
+offset_right = 165
+offset_bottom = 53
+text = "关闭动作音效"
+
+[node name="音量文字" type="Label" parent="更多设置/音效面板"]
+layout_mode = 0
+offset_left = 13
+offset_top = 62
+offset_right = 163
+offset_bottom = 82
+text = "音效音量"
+
+[node name="音量" type="HSlider" parent="更多设置/音效面板"]
+layout_mode = 0
+offset_left = 13
+offset_top = 88
+offset_right = 163
+offset_bottom = 108
+
+[node name="全屏显示" type="CheckBox" parent="更多设置"]
+layout_mode = 0
+offset_left = 20
+offset_top = 184
+offset_right = 190
+offset_bottom = 203
+text = "全屏显示"
+
+[node name="自动拾取" type="CheckBox" parent="更多设置"]
+layout_mode = 0
+offset_left = 216
+offset_top = 184
+offset_right = 386
+offset_bottom = 203
+text = "自动拾取"
+
+[node name="连接标题" type="Label" parent="更多设置"]
+layout_mode = 0
+offset_left = 20
+offset_top = 212
+offset_right = 388
+offset_bottom = 230
+text = "原服务端连接"
+
+[node name="主机" type="LineEdit" parent="更多设置"]
+layout_mode = 0
+offset_left = 20
+offset_top = 232
+offset_right = 150
+offset_bottom = 255
+
+[node name="端口" type="SpinBox" parent="更多设置"]
+layout_mode = 0
+offset_left = 156
+offset_top = 232
+offset_right = 246
+offset_bottom = 255
+
+[node name="同步" type="Button" parent="更多设置"]
+layout_mode = 0
+offset_left = 312
+offset_top = 232
+offset_right = 388
+offset_bottom = 255
+text = "立即同步"
+
+[node name="账号" type="LineEdit" parent="更多设置"]
+layout_mode = 0
+offset_left = 20
+offset_top = 260
+offset_right = 198
+offset_bottom = 283
+
+[node name="密码" type="LineEdit" parent="更多设置"]
+layout_mode = 0
+offset_left = 210
+offset_top = 260
+offset_right = 388
+offset_bottom = 283
+
+[node name="网页地址" type="LineEdit" parent="更多设置"]
+layout_mode = 0
+offset_left = 20
+offset_top = 288
+offset_right = 388
+offset_bottom = 311
+
+[node name="连接状态" type="Label" parent="更多设置"]
+layout_mode = 0
+offset_left = 20
+offset_top = 318
+offset_right = 388
+offset_bottom = 338
+
+[node name="层主页" type="Control" parent="."]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 423
+offset_bottom = 395
+mouse_filter = 2
+
+[node name="复选遮罩其他玩家造型" type="Control" parent="层主页"]
+layout_mode = 0
+offset_left = 20
+offset_top = 45.0
+offset_right = 202
+offset_bottom = 64.0
+mouse_filter = 2
+script = ExtResource("r5")
+
+[node name="指示框" type="TextureRect" parent="层主页/复选遮罩其他玩家造型"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 19
+offset_bottom = 19
+texture = ExtResource("r6")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="标记" type="TextureRect" parent="层主页/复选遮罩其他玩家造型"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 19
+offset_bottom = 19
+visible = false
+texture = ExtResource("r7")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="文本" type="Label" parent="层主页/复选遮罩其他玩家造型"]
+layout_mode = 0
+offset_left = 22
+offset_top = 4
+offset_right = 182
+offset_bottom = 19
+text = "遮罩其他玩家的造型显示"
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1)
+theme_override_font_sizes/font_size = 12
+mouse_filter = 2
+clip_text = true
+
+[node name="点击区域" type="Button" parent="层主页/复选遮罩其他玩家造型"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 182
+offset_bottom = 19
+flat = true
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.0, 0.0, 0.0, 1)
+
+[node name="复选遮罩其他玩家名字" type="Control" parent="层主页"]
+layout_mode = 0
+offset_left = 20
+offset_top = 139.0
+offset_right = 202
+offset_bottom = 158.0
+mouse_filter = 2
+script = ExtResource("r5")
+
+[node name="指示框" type="TextureRect" parent="层主页/复选遮罩其他玩家名字"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 19
+offset_bottom = 19
+texture = ExtResource("r6")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="标记" type="TextureRect" parent="层主页/复选遮罩其他玩家名字"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 19
+offset_bottom = 19
+visible = false
+texture = ExtResource("r7")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="文本" type="Label" parent="层主页/复选遮罩其他玩家名字"]
+layout_mode = 0
+offset_left = 22
+offset_top = 4
+offset_right = 182
+offset_bottom = 19
+text = "遮罩其他玩家的名字资讯"
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1)
+theme_override_font_sizes/font_size = 12
+mouse_filter = 2
+clip_text = true
+
+[node name="点击区域" type="Button" parent="层主页/复选遮罩其他玩家名字"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 182
+offset_bottom = 19
+flat = true
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.0, 0.0, 0.0, 1)
+
+[node name="复选遮罩其他玩家特效" type="Control" parent="层主页"]
+layout_mode = 0
+offset_left = 20
+offset_top = 183.0
+offset_right = 202
+offset_bottom = 202.0
+mouse_filter = 2
+script = ExtResource("r5")
+
+[node name="指示框" type="TextureRect" parent="层主页/复选遮罩其他玩家特效"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 19
+offset_bottom = 19
+texture = ExtResource("r6")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="标记" type="TextureRect" parent="层主页/复选遮罩其他玩家特效"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 19
+offset_bottom = 19
+visible = false
+texture = ExtResource("r7")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="文本" type="Label" parent="层主页/复选遮罩其他玩家特效"]
+layout_mode = 0
+offset_left = 22
+offset_top = 4
+offset_right = 182
+offset_bottom = 19
+text = "遮罩其他玩家的忍术特效"
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1)
+theme_override_font_sizes/font_size = 12
+mouse_filter = 2
+clip_text = true
+
+[node name="点击区域" type="Button" parent="层主页/复选遮罩其他玩家特效"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 182
+offset_bottom = 19
+flat = true
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.0, 0.0, 0.0, 1)
+
+[node name="复选遮罩暴击震屏" type="Control" parent="层主页"]
+layout_mode = 0
+offset_left = 20
+offset_top = 233.0
+offset_right = 202
+offset_bottom = 252.0
+mouse_filter = 2
+script = ExtResource("r5")
+
+[node name="指示框" type="TextureRect" parent="层主页/复选遮罩暴击震屏"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 19
+offset_bottom = 19
+texture = ExtResource("r6")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="标记" type="TextureRect" parent="层主页/复选遮罩暴击震屏"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 19
+offset_bottom = 19
+visible = false
+texture = ExtResource("r7")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="文本" type="Label" parent="层主页/复选遮罩暴击震屏"]
+layout_mode = 0
+offset_left = 22
+offset_top = 4
+offset_right = 182
+offset_bottom = 19
+text = "遮罩暴击操作的震屏特效"
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1)
+theme_override_font_sizes/font_size = 12
+mouse_filter = 2
+clip_text = true
+
+[node name="点击区域" type="Button" parent="层主页/复选遮罩暴击震屏"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 182
+offset_bottom = 19
+flat = true
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.0, 0.0, 0.0, 1)
+
+[node name="复选遮罩低生命心跳" type="Control" parent="层主页"]
+layout_mode = 0
+offset_left = 20
+offset_top = 281.0
+offset_right = 202
+offset_bottom = 300.0
+mouse_filter = 2
+script = ExtResource("r5")
+
+[node name="指示框" type="TextureRect" parent="层主页/复选遮罩低生命心跳"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 19
+offset_bottom = 19
+texture = ExtResource("r6")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="标记" type="TextureRect" parent="层主页/复选遮罩低生命心跳"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 19
+offset_bottom = 19
+visible = false
+texture = ExtResource("r7")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="文本" type="Label" parent="层主页/复选遮罩低生命心跳"]
+layout_mode = 0
+offset_left = 22
+offset_top = 4
+offset_right = 182
+offset_bottom = 19
+text = "遮罩生命过低时的心跳特效"
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1)
+theme_override_font_sizes/font_size = 12
+mouse_filter = 2
+clip_text = true
+
+[node name="点击区域" type="Button" parent="层主页/复选遮罩低生命心跳"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 182
+offset_bottom = 19
+flat = true
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.0, 0.0, 0.0, 1)
+
+[node name="复选遮罩任务追踪面板" type="Control" parent="层主页"]
+layout_mode = 0
+offset_left = 20
+offset_top = 328.0
+offset_right = 202
+offset_bottom = 347.0
+mouse_filter = 2
+script = ExtResource("r5")
+
+[node name="指示框" type="TextureRect" parent="层主页/复选遮罩任务追踪面板"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 19
+offset_bottom = 19
+texture = ExtResource("r6")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="标记" type="TextureRect" parent="层主页/复选遮罩任务追踪面板"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 19
+offset_bottom = 19
+visible = false
+texture = ExtResource("r7")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="文本" type="Label" parent="层主页/复选遮罩任务追踪面板"]
+layout_mode = 0
+offset_left = 22
+offset_top = 4
+offset_right = 182
+offset_bottom = 19
+text = "遮罩任务追踪面板的显示"
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1)
+theme_override_font_sizes/font_size = 12
+mouse_filter = 2
+clip_text = true
+
+[node name="点击区域" type="Button" parent="层主页/复选遮罩任务追踪面板"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 182
+offset_bottom = 19
+flat = true
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.0, 0.0, 0.0, 1)
+
+[node name="复选遮罩队员资讯窗口" type="Control" parent="层主页"]
+layout_mode = 0
+offset_left = 20
+offset_top = 354.0
+offset_right = 202
+offset_bottom = 373.0
+mouse_filter = 2
+script = ExtResource("r5")
+
+[node name="指示框" type="TextureRect" parent="层主页/复选遮罩队员资讯窗口"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 19
+offset_bottom = 19
+texture = ExtResource("r6")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="标记" type="TextureRect" parent="层主页/复选遮罩队员资讯窗口"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 19
+offset_bottom = 19
+visible = false
+texture = ExtResource("r7")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="文本" type="Label" parent="层主页/复选遮罩队员资讯窗口"]
+layout_mode = 0
+offset_left = 22
+offset_top = 4
+offset_right = 182
+offset_bottom = 19
+text = "遮罩队员资讯窗口的显示"
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1)
+theme_override_font_sizes/font_size = 12
+mouse_filter = 2
+clip_text = true
+
+[node name="点击区域" type="Button" parent="层主页/复选遮罩队员资讯窗口"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 182
+offset_bottom = 19
+flat = true
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.0, 0.0, 0.0, 1)
+
+[node name="复选关闭地图音乐" type="Control" parent="层主页"]
+layout_mode = 0
+offset_left = 222
+offset_top = 45.0
+offset_right = 404
+offset_bottom = 64.0
+mouse_filter = 2
+script = ExtResource("r5")
+
+[node name="指示框" type="TextureRect" parent="层主页/复选关闭地图音乐"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 19
+offset_bottom = 19
+texture = ExtResource("r6")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="标记" type="TextureRect" parent="层主页/复选关闭地图音乐"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 19
+offset_bottom = 19
+visible = false
+texture = ExtResource("r7")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="文本" type="Label" parent="层主页/复选关闭地图音乐"]
+layout_mode = 0
+offset_left = 22
+offset_top = 4
+offset_right = 182
+offset_bottom = 19
+text = "关闭地图音乐"
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1)
+theme_override_font_sizes/font_size = 12
+mouse_filter = 2
+clip_text = true
+
+[node name="点击区域" type="Button" parent="层主页/复选关闭地图音乐"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 182
+offset_bottom = 19
+flat = true
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.0, 0.0, 0.0, 1)
+
+[node name="复选关闭动作音效" type="Control" parent="层主页"]
+layout_mode = 0
+offset_left = 222
+offset_top = 92.0
+offset_right = 404
+offset_bottom = 111.0
+mouse_filter = 2
+script = ExtResource("r5")
+
+[node name="指示框" type="TextureRect" parent="层主页/复选关闭动作音效"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 19
+offset_bottom = 19
+texture = ExtResource("r6")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="标记" type="TextureRect" parent="层主页/复选关闭动作音效"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 19
+offset_bottom = 19
+visible = false
+texture = ExtResource("r7")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="文本" type="Label" parent="层主页/复选关闭动作音效"]
+layout_mode = 0
+offset_left = 22
+offset_top = 4
+offset_right = 182
+offset_bottom = 19
+text = "关闭动作音效"
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1)
+theme_override_font_sizes/font_size = 12
+mouse_filter = 2
+clip_text = true
+
+[node name="点击区域" type="Button" parent="层主页/复选关闭动作音效"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 182
+offset_bottom = 19
+flat = true
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.0, 0.0, 0.0, 1)
+
+[node name="复选遮罩所有造型特效" type="Control" parent="层主页"]
+layout_mode = 0
+offset_left = 222
+offset_top = 139.0
+offset_right = 404
+offset_bottom = 158.0
+mouse_filter = 2
+script = ExtResource("r5")
+
+[node name="指示框" type="TextureRect" parent="层主页/复选遮罩所有造型特效"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 19
+offset_bottom = 19
+texture = ExtResource("r6")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="标记" type="TextureRect" parent="层主页/复选遮罩所有造型特效"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 19
+offset_bottom = 19
+visible = false
+texture = ExtResource("r7")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="文本" type="Label" parent="层主页/复选遮罩所有造型特效"]
+layout_mode = 0
+offset_left = 22
+offset_top = 4
+offset_right = 182
+offset_bottom = 19
+text = "遮罩所有造型特效"
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1)
+theme_override_font_sizes/font_size = 12
+mouse_filter = 2
+clip_text = true
+
+[node name="点击区域" type="Button" parent="层主页/复选遮罩所有造型特效"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 182
+offset_bottom = 19
+flat = true
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.0, 0.0, 0.0, 1)
+
+[node name="复选关闭自动提交任务" type="Control" parent="层主页"]
+layout_mode = 0
+offset_left = 222
+offset_top = 166.0
+offset_right = 404
+offset_bottom = 185.0
+mouse_filter = 2
+script = ExtResource("r5")
+
+[node name="指示框" type="TextureRect" parent="层主页/复选关闭自动提交任务"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 19
+offset_bottom = 19
+texture = ExtResource("r6")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="标记" type="TextureRect" parent="层主页/复选关闭自动提交任务"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 19
+offset_bottom = 19
+visible = false
+texture = ExtResource("r7")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="文本" type="Label" parent="层主页/复选关闭自动提交任务"]
+layout_mode = 0
+offset_left = 22
+offset_top = 4
+offset_right = 182
+offset_bottom = 19
+text = "关闭自动提交任务"
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1)
+theme_override_font_sizes/font_size = 12
+mouse_filter = 2
+clip_text = true
+
+[node name="点击区域" type="Button" parent="层主页/复选关闭自动提交任务"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 182
+offset_bottom = 19
+flat = true
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.0, 0.0, 0.0, 1)
+
+[node name="复选禁止他人发起私聊" type="Control" parent="层主页"]
+layout_mode = 0
+offset_left = 222
+offset_top = 189.0
+offset_right = 404
+offset_bottom = 208.0
+mouse_filter = 2
+script = ExtResource("r5")
+
+[node name="指示框" type="TextureRect" parent="层主页/复选禁止他人发起私聊"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 19
+offset_bottom = 19
+texture = ExtResource("r6")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="标记" type="TextureRect" parent="层主页/复选禁止他人发起私聊"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 19
+offset_bottom = 19
+visible = false
+texture = ExtResource("r7")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="文本" type="Label" parent="层主页/复选禁止他人发起私聊"]
+layout_mode = 0
+offset_left = 22
+offset_top = 4
+offset_right = 182
+offset_bottom = 19
+text = "禁止他人向我发起私聊"
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1)
+theme_override_font_sizes/font_size = 12
+mouse_filter = 2
+clip_text = true
+
+[node name="点击区域" type="Button" parent="层主页/复选禁止他人发起私聊"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 182
+offset_bottom = 19
+flat = true
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.0, 0.0, 0.0, 1)
+
+[node name="复选禁止他人加我为好友" type="Control" parent="层主页"]
+layout_mode = 0
+offset_left = 222
+offset_top = 235.0
+offset_right = 404
+offset_bottom = 254.0
+mouse_filter = 2
+script = ExtResource("r5")
+
+[node name="指示框" type="TextureRect" parent="层主页/复选禁止他人加我为好友"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 19
+offset_bottom = 19
+texture = ExtResource("r6")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="标记" type="TextureRect" parent="层主页/复选禁止他人加我为好友"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 19
+offset_bottom = 19
+visible = false
+texture = ExtResource("r7")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="文本" type="Label" parent="层主页/复选禁止他人加我为好友"]
+layout_mode = 0
+offset_left = 22
+offset_top = 4
+offset_right = 182
+offset_bottom = 19
+text = "禁止他人将我加为好友"
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1)
+theme_override_font_sizes/font_size = 12
+mouse_filter = 2
+clip_text = true
+
+[node name="点击区域" type="Button" parent="层主页/复选禁止他人加我为好友"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 182
+offset_bottom = 19
+flat = true
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.0, 0.0, 0.0, 1)
+
+[node name="复选拒绝他人发起交易" type="Control" parent="层主页"]
+layout_mode = 0
+offset_left = 222
+offset_top = 284.0
+offset_right = 404
+offset_bottom = 303.0
+mouse_filter = 2
+script = ExtResource("r5")
+
+[node name="指示框" type="TextureRect" parent="层主页/复选拒绝他人发起交易"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 19
+offset_bottom = 19
+texture = ExtResource("r6")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="标记" type="TextureRect" parent="层主页/复选拒绝他人发起交易"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 19
+offset_bottom = 19
+visible = false
+texture = ExtResource("r7")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="文本" type="Label" parent="层主页/复选拒绝他人发起交易"]
+layout_mode = 0
+offset_left = 22
+offset_top = 4
+offset_right = 182
+offset_bottom = 19
+text = "拒绝他人向我发起交易"
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1)
+theme_override_font_sizes/font_size = 12
+mouse_filter = 2
+clip_text = true
+
+[node name="点击区域" type="Button" parent="层主页/复选拒绝他人发起交易"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 182
+offset_bottom = 19
+flat = true
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.0, 0.0, 0.0, 1)
+
+[node name="复选拒绝家族邀请" type="Control" parent="层主页"]
+layout_mode = 0
+offset_left = 222
+offset_top = 330.0
+offset_right = 404
+offset_bottom = 349.0
+mouse_filter = 2
+script = ExtResource("r5")
+
+[node name="指示框" type="TextureRect" parent="层主页/复选拒绝家族邀请"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 19
+offset_bottom = 19
+texture = ExtResource("r6")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="标记" type="TextureRect" parent="层主页/复选拒绝家族邀请"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 19
+offset_bottom = 19
+visible = false
+texture = ExtResource("r7")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="文本" type="Label" parent="层主页/复选拒绝家族邀请"]
+layout_mode = 0
+offset_left = 22
+offset_top = 4
+offset_right = 182
+offset_bottom = 19
+text = "拒绝他人邀请我加入家族"
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1)
+theme_override_font_sizes/font_size = 12
+mouse_filter = 2
+clip_text = true
+
+[node name="点击区域" type="Button" parent="层主页/复选拒绝家族邀请"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 182
+offset_bottom = 19
+flat = true
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.0, 0.0, 0.0, 1)
+
+[node name="复选拒绝组队邀请" type="Control" parent="层主页"]
+layout_mode = 0
+offset_left = 222
+offset_top = 357.0
+offset_right = 404
+offset_bottom = 376.0
+mouse_filter = 2
+script = ExtResource("r5")
+
+[node name="指示框" type="TextureRect" parent="层主页/复选拒绝组队邀请"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 19
+offset_bottom = 19
+texture = ExtResource("r6")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="标记" type="TextureRect" parent="层主页/复选拒绝组队邀请"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 19
+offset_bottom = 19
+visible = false
+texture = ExtResource("r7")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="文本" type="Label" parent="层主页/复选拒绝组队邀请"]
+layout_mode = 0
+offset_left = 22
+offset_top = 4
+offset_right = 182
+offset_bottom = 19
+text = "拒绝他人邀请我加入组队"
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1)
+theme_override_font_sizes/font_size = 12
+mouse_filter = 2
+clip_text = true
+
+[node name="点击区域" type="Button" parent="层主页/复选拒绝组队邀请"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 182
+offset_bottom = 19
+flat = true
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.0, 0.0, 0.0, 1)
+
+[node name="提示快捷显隐键一" type="Label" parent="层主页"]
+layout_mode = 0
+offset_left = 40
+offset_top = 65.0
+offset_right = 210
+offset_bottom = 83.0
+text = "快捷显隐键：无"
+theme_override_colors/font_color = Color(1.0, 0.941176, 0.0, 1)
+theme_override_font_sizes/font_size = 12
+mouse_filter = 2
+autowrap_mode = 0
+
+[node name="提示快捷显隐键二" type="Label" parent="层主页"]
+layout_mode = 0
+offset_left = 40
+offset_top = 159.0
+offset_right = 210
+offset_bottom = 177.0
+text = "快捷显隐键：无"
+theme_override_colors/font_color = Color(1.0, 0.941176, 0.0, 1)
+theme_override_font_sizes/font_size = 12
+mouse_filter = 2
+autowrap_mode = 0
+
+[node name="提示忍术特效" type="Label" parent="层主页"]
+layout_mode = 0
+offset_left = 40
+offset_top = 206.0
+offset_right = 210
+offset_bottom = 224.0
+text = "遮罩后不再显示忍术特效"
+theme_override_colors/font_color = Color(1.0, 0.941176, 0.0, 1)
+theme_override_font_sizes/font_size = 12
+mouse_filter = 2
+autowrap_mode = 0
+
+[node name="提示震屏" type="Label" parent="层主页"]
+layout_mode = 0
+offset_left = 40
+offset_top = 253.0
+offset_right = 210
+offset_bottom = 271.0
+text = "遮罩后萤幕将不再抖动"
+theme_override_colors/font_color = Color(1.0, 0.941176, 0.0, 1)
+theme_override_font_sizes/font_size = 12
+mouse_filter = 2
+autowrap_mode = 0
+
+[node name="提示心跳" type="Label" parent="层主页"]
+layout_mode = 0
+offset_left = 40
+offset_top = 300.0
+offset_right = 210
+offset_bottom = 318.0
+text = "遮罩后生命过低萤幕不变红"
+theme_override_colors/font_color = Color(1.0, 0.941176, 0.0, 1)
+theme_override_font_sizes/font_size = 12
+mouse_filter = 2
+autowrap_mode = 0
+
+[node name="提示音乐开关" type="Label" parent="层主页"]
+layout_mode = 0
+offset_left = 242
+offset_top = 65.0
+offset_right = 412
+offset_bottom = 83.0
+text = "快捷开关键：无"
+theme_override_colors/font_color = Color(1.0, 0.941176, 0.0, 1)
+theme_override_font_sizes/font_size = 12
+mouse_filter = 2
+autowrap_mode = 0
+
+[node name="提示音效开关" type="Label" parent="层主页"]
+layout_mode = 0
+offset_left = 242
+offset_top = 113.0
+offset_right = 412
+offset_bottom = 131.0
+text = "快捷开关键：Ctrl + Y"
+theme_override_colors/font_color = Color(1.0, 0.941176, 0.0, 1)
+theme_override_font_sizes/font_size = 12
+mouse_filter = 2
+autowrap_mode = 0
+
+[node name="提示私聊" type="Label" parent="层主页"]
+layout_mode = 0
+offset_left = 242
+offset_top = 210.0
+offset_right = 412
+offset_bottom = 228.0
+text = "禁止后你将不再收到私聊消息"
+theme_override_colors/font_color = Color(1.0, 0.941176, 0.0, 1)
+theme_override_font_sizes/font_size = 12
+mouse_filter = 2
+autowrap_mode = 0
+
+[node name="提示加好友" type="Label" parent="层主页"]
+layout_mode = 0
+offset_left = 242
+offset_top = 256.0
+offset_right = 412
+offset_bottom = 274.0
+text = "禁止后你将不再收到加友提示"
+theme_override_colors/font_color = Color(1.0, 0.941176, 0.0, 1)
+theme_override_font_sizes/font_size = 12
+mouse_filter = 2
+autowrap_mode = 0
+
+[node name="提示交易" type="Label" parent="层主页"]
+layout_mode = 0
+offset_left = 242
+offset_top = 303.0
+offset_right = 412
+offset_bottom = 321.0
+text = "禁止后你将不再收到交易提示"
+theme_override_colors/font_color = Color(1.0, 0.941176, 0.0, 1)
+theme_override_font_sizes/font_size = 12
+mouse_filter = 2
+autowrap_mode = 0
+
+[node name="盒绿字造型说明" type="Control" parent="层主页"]
+layout_mode = 0
+offset_left = 27
+offset_top = 85.0
+offset_right = 190
+offset_bottom = 129.0
+mouse_filter = 2
+
+[node name="文绿字造型说明" type="RichTextLabel" parent="层主页/盒绿字造型说明"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 163
+offset_bottom = 40
+theme_override_colors/default_color = Color(0.0, 1.0, 0.0, 1)
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 8
+bbcode_enabled = false
+scroll_active = false
+mouse_filter = 2
+text = "当你的机器非常卡的时候 推荐你遮罩其他玩家的造型"
+
+[node name="层特页" type="Control" parent="."]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 423
+offset_bottom = 395
+mouse_filter = 2
+visible = false
+
+[node name="复选分栏装备特性" type="Control" parent="层特页"]
+layout_mode = 0
+offset_left = 20
+offset_top = 41.0
+offset_right = 260
+offset_bottom = 60.0
+mouse_filter = 2
+script = ExtResource("r5")
+
+[node name="指示框" type="TextureRect" parent="层特页/复选分栏装备特性"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 19
+offset_bottom = 19
+texture = ExtResource("r6")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="标记" type="TextureRect" parent="层特页/复选分栏装备特性"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 19
+offset_bottom = 19
+visible = false
+texture = ExtResource("r7")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="文本" type="Label" parent="层特页/复选分栏装备特性"]
+layout_mode = 0
+offset_left = 22
+offset_top = 4
+offset_right = 240
+offset_bottom = 19
+text = "装备特性/神话属性分栏显示"
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1)
+theme_override_font_sizes/font_size = 12
+mouse_filter = 2
+clip_text = true
+
+[node name="点击区域" type="Button" parent="层特页/复选分栏装备特性"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 240
+offset_bottom = 19
+flat = true
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.0, 0.0, 0.0, 1)
+
+[node name="复选分栏三栏" type="Control" parent="层特页"]
+layout_mode = 0
+offset_left = 38
+offset_top = 66.0
+offset_right = 228
+offset_bottom = 85.0
+mouse_filter = 2
+script = ExtResource("r5")
+
+[node name="指示框" type="TextureRect" parent="层特页/复选分栏三栏"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 19
+offset_bottom = 19
+texture = ExtResource("r6")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="标记" type="TextureRect" parent="层特页/复选分栏三栏"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 19
+offset_bottom = 19
+visible = false
+texture = ExtResource("r7")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="文本" type="Label" parent="层特页/复选分栏三栏"]
+layout_mode = 0
+offset_left = 22
+offset_top = 4
+offset_right = 190
+offset_bottom = 19
+text = "改为3栏分栏"
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1)
+theme_override_font_sizes/font_size = 12
+mouse_filter = 2
+clip_text = true
+
+[node name="点击区域" type="Button" parent="层特页/复选分栏三栏"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 190
+offset_bottom = 19
+flat = true
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.0, 0.0, 0.0, 1)
+
+[node name="复选分栏四栏" type="Control" parent="层特页"]
+layout_mode = 0
+offset_left = 38
+offset_top = 91.0
+offset_right = 228
+offset_bottom = 110.0
+mouse_filter = 2
+script = ExtResource("r5")
+
+[node name="指示框" type="TextureRect" parent="层特页/复选分栏四栏"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 19
+offset_bottom = 19
+texture = ExtResource("r6")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="标记" type="TextureRect" parent="层特页/复选分栏四栏"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 19
+offset_bottom = 19
+visible = false
+texture = ExtResource("r7")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="文本" type="Label" parent="层特页/复选分栏四栏"]
+layout_mode = 0
+offset_left = 22
+offset_top = 4
+offset_right = 190
+offset_bottom = 19
+text = "改为4栏分栏"
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1)
+theme_override_font_sizes/font_size = 12
+mouse_filter = 2
+clip_text = true
+
+[node name="点击区域" type="Button" parent="层特页/复选分栏四栏"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 190
+offset_bottom = 19
+flat = true
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.0, 0.0, 0.0, 1)
+
+[node name="复选遮罩自身忍术特效" type="Control" parent="层特页"]
+layout_mode = 0
+offset_left = 20
+offset_top = 118.0
+offset_right = 202
+offset_bottom = 137.0
+mouse_filter = 2
+script = ExtResource("r5")
+
+[node name="指示框" type="TextureRect" parent="层特页/复选遮罩自身忍术特效"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 19
+offset_bottom = 19
+texture = ExtResource("r6")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="标记" type="TextureRect" parent="层特页/复选遮罩自身忍术特效"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 19
+offset_bottom = 19
+visible = false
+texture = ExtResource("r7")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="文本" type="Label" parent="层特页/复选遮罩自身忍术特效"]
+layout_mode = 0
+offset_left = 22
+offset_top = 4
+offset_right = 182
+offset_bottom = 19
+text = "隐藏自身忍术特效"
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1)
+theme_override_font_sizes/font_size = 12
+mouse_filter = 2
+clip_text = true
+
+[node name="点击区域" type="Button" parent="层特页/复选遮罩自身忍术特效"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 182
+offset_bottom = 19
+flat = true
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.0, 0.0, 0.0, 1)
+
+[node name="复选遮罩所有忍术特效" type="Control" parent="层特页"]
+layout_mode = 0
+offset_left = 20
+offset_top = 145.0
+offset_right = 202
+offset_bottom = 164.0
+mouse_filter = 2
+script = ExtResource("r5")
+
+[node name="指示框" type="TextureRect" parent="层特页/复选遮罩所有忍术特效"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 19
+offset_bottom = 19
+texture = ExtResource("r6")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="标记" type="TextureRect" parent="层特页/复选遮罩所有忍术特效"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 19
+offset_bottom = 19
+visible = false
+texture = ExtResource("r7")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="文本" type="Label" parent="层特页/复选遮罩所有忍术特效"]
+layout_mode = 0
+offset_left = 22
+offset_top = 4
+offset_right = 182
+offset_bottom = 19
+text = "隐藏所有忍术特效"
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1)
+theme_override_font_sizes/font_size = 12
+mouse_filter = 2
+clip_text = true
+
+[node name="点击区域" type="Button" parent="层特页/复选遮罩所有忍术特效"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 182
+offset_bottom = 19
+flat = true
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.0, 0.0, 0.0, 1)
+
+[node name="复选遮罩宠物变身外观" type="Control" parent="层特页"]
+layout_mode = 0
+offset_left = 20
+offset_top = 172.0
+offset_right = 202
+offset_bottom = 191.0
+mouse_filter = 2
+script = ExtResource("r5")
+
+[node name="指示框" type="TextureRect" parent="层特页/复选遮罩宠物变身外观"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 19
+offset_bottom = 19
+texture = ExtResource("r6")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="标记" type="TextureRect" parent="层特页/复选遮罩宠物变身外观"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 19
+offset_bottom = 19
+visible = false
+texture = ExtResource("r7")
+expand_mode = 1
+mouse_filter = 2
+
+[node name="文本" type="Label" parent="层特页/复选遮罩宠物变身外观"]
+layout_mode = 0
+offset_left = 22
+offset_top = 4
+offset_right = 182
+offset_bottom = 19
+text = "隐藏宠物变身卡外观"
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1)
+theme_override_font_sizes/font_size = 12
+mouse_filter = 2
+clip_text = true
+
+[node name="点击区域" type="Button" parent="层特页/复选遮罩宠物变身外观"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 182
+offset_bottom = 19
+flat = true
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.0, 0.0, 0.0, 1)
+
+[node name="条背景音乐音量" type="Control" parent="层特页"]
+layout_mode = 0
+offset_left = 20
+offset_top = 203.0
+offset_right = 200
+offset_bottom = 235.0
+mouse_filter = 2
+
+[node name="文标签" type="Label" parent="层特页/条背景音乐音量"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 180
+offset_bottom = 20
+text = "背景音乐音量 100%"
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1)
+theme_override_font_sizes/font_size = 12
+mouse_filter = 2
+
+[node name="轨条" type="ColorRect" parent="层特页/条背景音乐音量"]
+layout_mode = 0
+offset_left = 0
+offset_top = 22
+offset_right = 170
+offset_bottom = 28
+color = Color(0.2, 0.2, 0.2, 1)
+mouse_filter = 2
+
+[node name="钮滑块" type="Control" parent="层特页/条背景音乐音量"]
+layout_mode = 0
+offset_left = -7
+offset_top = 18
+offset_right = 7
+offset_bottom = 32
+script = ExtResource("r8")
+半径 = 7.0
+颜色 = Color(1.0, 0.8, 0.0, 1)
+mouse_filter = 2
+
+[node name="条技能音效音量" type="Control" parent="层特页"]
+layout_mode = 0
+offset_left = 20
+offset_top = 246.0
+offset_right = 200
+offset_bottom = 278.0
+mouse_filter = 2
+
+[node name="文标签" type="Label" parent="层特页/条技能音效音量"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 180
+offset_bottom = 20
+text = "技能/界面音效音量 100%"
+theme_override_colors/font_color = Color(1.0, 1.0, 1.0, 1)
+theme_override_font_sizes/font_size = 12
+mouse_filter = 2
+
+[node name="轨条" type="ColorRect" parent="层特页/条技能音效音量"]
+layout_mode = 0
+offset_left = 0
+offset_top = 22
+offset_right = 170
+offset_bottom = 28
+color = Color(0.2, 0.2, 0.2, 1)
+mouse_filter = 2
+
+[node name="钮滑块" type="Control" parent="层特页/条技能音效音量"]
+layout_mode = 0
+offset_left = -7
+offset_top = 18
+offset_right = 7
+offset_bottom = 32
+script = ExtResource("r8")
+半径 = 7.0
+颜色 = Color(1.0, 0.8, 0.0, 1)
+mouse_filter = 2

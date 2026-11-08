@@ -1,0 +1,85 @@
+[
+  {
+    "step": "hello",
+    "sent": {
+      "opCode": 1,
+      "readStr": "1:79:1785294847606"
+    },
+    "received": [
+      "{\"jylx\":1,\"version\":79}"
+    ]
+  },
+  {
+    "step": "login",
+    "sent": {
+      "opCode": 6,
+      "readStr": "6:{\"userName\":\"probe002\",\"password\":\"probe123\",\"register\":1}:1785294848614"
+    },
+    "received": [
+      "{\"jylx\":0,\"loginStatus\":4}"
+    ]
+  },
+  {
+    "step": "serverstatus",
+    "sent": {
+      "opCode": 5,
+      "readStr": "5:1785294850618"
+    },
+    "received": [
+      "{\"jylx\":0,\"loginStatus\":0}",
+      "9:1:火影世界:1线&0&1&1@2线&0&1&2@3线&0&1&3@4线&0&1&4@5线&0&1&5@6线&0&1&6@7线&0&1&7@8线&0&1&8",
+      "{\"jylx\":10,\"maxChars\":1,\"id\":8,\"name\":\"木叶忍者\",\"gender\":0,\"skinColor\":0,\"face\":1,\"hair\":0,\"level\":1,\"job\":300,\"apAtk\":100,\"apDef\":80,\"apDex\":80,\"apPhy\":80,\"hp\":500,\"maxHp\":500,\"mp\":200,\"maxMp\":200,\"remainingAp\":0,\"remainingSp\":0,\"experience\":0.0,\"fame\":0,\"mapId\":101010000,\"initSpX\":252,\"initSpY\":204,\"zq\":0,\"vip\":false,\"shengwang\":0,\"crime\":0,\"charType\":0,\"lingFace\":0,\"maiListId\":0,\"maiExplodedCount\":0,\"myEquipments\":null,\"maskedEquipments\":null,\"lingEquip\":0}",
+      "{\"jylx\":11,\"ip\":\"127.0.0.1\",\"port\":18684,\"clientId\":8,\"channelId\":1,\"timeStamp\":1785294850}"
+    ]
+  },
+  {
+    "step": "charlist",
+    "sent": {
+      "opCode": 9,
+      "readStr": "9:1:1785294851630"
+    },
+    "received": [
+      "{\"jylx\":10,\"maxChars\":1,\"id\":8,\"name\":\"木叶忍者\",\"gender\":0,\"skinColor\":0,\"face\":1,\"hair\":0,\"level\":1,\"job\":300,\"apAtk\":100,\"apDef\":80,\"apDex\":80,\"apPhy\":80,\"hp\":500,\"maxHp\":500,\"mp\":200,\"maxMp\":200,\"remainingAp\":0,\"remainingSp\":0,\"experience\":0.0,\"fame\":0,\"mapId\":101010000,\"initSpX\":252,\"initSpY\":204,\"zq\":0,\"vip\":false,\"shengwang\":0,\"crime\":0,\"charType\":0,\"lingFace\":0,\"maiListId\":0,\"maiExplodedCount\":0,\"myEquipments\":null,\"maskedEquipments\":null,\"lingEquip\":0}"
+    ]
+  },
+  {
+    "step": "charselect",
+    "sent": {
+      "opCode": 10,
+      "readStr": "10:8:1:1785294853644"
+    },
+    "received": [
+      "{\"jylx\":11,\"ip\":\"127.0.0.1\",\"port\":18684,\"clientId\":8,\"channelId\":1,\"timeStamp\":1785294853}"
+    ]
+  },
+  {
+    "step": "playerloggedin",
+    "sent": {
+      "opCode": 11,
+      "readStr": "11:8:1785294855655"
+    },
+    "received": [
+      "<server closed connection>"
+    ]
+  },
+  {
+    "step": "idle",
+    "sent": null,
+    "received": [
+      "<server closed connection>"
+    ]
+  },
+  {
+    "step": "server_packet_builder_samples",
+    "source": "src/NewLoginServer/NewLoginServer.Common.Protocol/PacketBuilder.cs",
+    "received": [
+      "238:1:7001:0:1001001:101010000:300:400:0:0:0:0:true:0:300:400:0:0:-:-:-:0:false:false:false:0:0",
+      "241:0:7001:0:0:300:400:100:0:2:6:900:5:0:0:0:300:400",
+      "241:0:7001:0:0:390:400:0:0:2:5:500:5:1:0:0:390:400",
+      "187:0:9001:0:0:140:230:40:0:0:3:0:0",
+      "187:0:9001:0:0:120:230:-60:0:0:3:0:0",
+      "163:7001",
+      "187:0:9001:0:0:160:230:0:0:0:1:0:0"
+    ]
+  }
+]

@@ -1,0 +1,126 @@
+{
+ "EQUIPMENT_SERIES_TIP": {
+  "文": "<font color=\"#ffffff\">隐藏属性：</font><font color=\"#ffff00\">【%1】</font><br/><font color=\"#ffffff\">当前状态：</font>%2<br/><font color=\"#ffffff\">启动条件：</font><br/><font color=\"#fcc399\">%3</font><br/><font color=\"#ffffff\">加成效果：</font><br/><font color=\"#00ff00\">额外%4</font>",
+  "出处": "EE:934 模板（满 12/等阶灯）"
+ },
+ "EQUIPMENT_SERIES_TIP2": {
+  "文": "<font color=\"#ffffff\">隐藏属性：</font><font color=\"#ffff00\">【%1】</font><br/><font color=\"#ffffff\">当前状态：</font>%2<br/><font color=\"#ffffff\">启动条件：</font><br/><font color=\"#fcc399\">%3</font><br/><font color=\"#ffffff\">加成效果：</font><br/><font color=\"#00ff00\">额外%4</font><font color=\"#999999\">下阶状态：</font>%5<br/><font color=\"#999999\">额外%6</font>",
+  "出处": "EE:940 模板（未满时多两行『下阶状态』）"
+ },
+ "EQUIPMENT_SERIES_TIP_ACTIVE": {
+  "文": "<font color=\"#00ff00\">【已启动】</font>",
+  "出处": "EE:931 【已启动】"
+ },
+ "EQUIPMENT_SERIES_TIP_UNACTIVE": {
+  "文": "<font color=\"#ff0000\">【未启动】</font>",
+  "出处": "EE:931 【未启动】"
+ },
+ "EQUIP_PANE_YIJIHUO": {
+  "文": "<font color='#00ff00'>【已启动 12/12】</font>",
+  "出处": "EE:937 12/12 满格"
+ },
+ "EQUIP_PANE_JIHUO_ZHONG_RED": {
+  "文": "<font color='#ff0000'>【已启动 %1/12】</font>",
+  "出处": "EE:937 红色 n/12（红=在拼 TIP2 的 %2）"
+ },
+ "EQUIP_PANE_JIHUO_ZHONG_GRAY": {
+  "文": "<font color='#999999'>【已启动 %1/12】</font>",
+  "出处": "EE:943 灰色 (n+1)/12"
+ },
+ "EQUIPMENT_SERIES_DATA_NAME_1": {
+  "文": "等阶套装",
+  "出处": "CN:9938 等阶套装"
+ },
+ "EQUIPMENT_SERIES_DATA_NAME_2": {
+  "文": "全紫套装",
+  "出处": "CN:9941 全紫套装"
+ },
+ "EQUIPMENT_SERIES_DATA_NAME_3": {
+  "文": "满星套装",
+  "出处": "CN:9944 满星套装"
+ },
+ "EQUIPMENT_SERIES_DATA_NAME_4": {
+  "文": "六级满融套装",
+  "出处": "CN:9947 六级满融套装"
+ },
+ "EQUIPMENT_SERIES_DATA_DESC_1": {
+  "文": "所穿戴的全部装备在阶数上都保持相同",
+  "出处": "CN:9940 启动条件①"
+ },
+ "EQUIPMENT_SERIES_DATA_DESC_2": {
+  "文": "穿戴全紫装备越多加成效果越大",
+  "出处": "CN:9943 启动条件②"
+ },
+ "EQUIPMENT_SERIES_DATA_DESC_3": {
+  "文": "穿戴满星装备越多加成效果越大",
+  "出处": "CN:9946 启动条件③"
+ },
+ "EQUIPMENT_SERIES_DATA_DESC_4": {
+  "文": "镶嵌六级宝石越多加成效果越大",
+  "出处": "CN:9949 启动条件④"
+ },
+ "ITEM_ATTR_NAME_MAXHP": {
+  "文": "生命值上限",
+  "出处": "IFN:35"
+ },
+ "ITEM_ATTR_NAME_MAXMP": {
+  "文": "查克拉上限",
+  "出处": "IFN:35"
+ },
+ "ITEM_ATTR_NAME_MAXTP": {
+  "文": "体力值上限",
+  "出处": "IFN:35"
+ },
+ "ITEM_ATTR_NAME_ATK": {
+  "文": "攻击",
+  "出处": "IFN:35"
+ },
+ "ITEM_ATTR_NAME_DEF": {
+  "文": "防御",
+  "出处": "IFN:35"
+ },
+ "ITEM_ATTR_NAME_BSK": {
+  "文": "暴击",
+  "出处": "IFN:35"
+ },
+ "ITEM_ATTR_NAME_AVD": {
+  "文": "闪避",
+  "出处": "IFN:35"
+ },
+ "ITEM_ATTR_NAME_ATK_SPEED": {
+  "文": "攻击速度",
+  "出处": "IFN:35"
+ },
+ "ITEM_ATTR_NAME_WLK_SPEED": {
+  "文": "移动速度",
+  "出处": "IFN:35"
+ },
+ "ITEMFACTORY_SKILL_LEVEL": {
+  "文": "技能等级加成",
+  "出处": "IFN:35"
+ },
+ "ITEMFACTORY_ATK_TATE": {
+  "文": "攻击力增加",
+  "出处": "IFN:35"
+ },
+ "ITEMFACTORY_DAMAGE_REFLECT": {
+  "文": "伤害反弹",
+  "出处": "IFN:35"
+ },
+ "ITEMFACTORY_DAMAGE_REDUCE": {
+  "文": "伤害减免",
+  "出处": "IFN:35"
+ },
+ "ITEMFACTORY_IGNORE_DEF": {
+  "文": "忽视防御",
+  "出处": "IFN:35"
+ },
+ "ITEMFACTORY_ANQI_TRIGGER": {
+  "文": "手里剑触发",
+  "出处": "IFN:35"
+ },
+ "ITEMFACTORY_MOB_EXP": {
+  "文": "经验加成",
+  "出处": "IFN:35"
+ }
+}

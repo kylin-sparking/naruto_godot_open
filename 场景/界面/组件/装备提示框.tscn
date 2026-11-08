@@ -1,0 +1,197 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://脚本/界面/组件/装备提示框.gd" id="1_tip"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/提示框底.png" id="2_bg"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/物品格.png" id="3_grid"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/人物/角色/装备格破碎角标.png" id="4_broken"]
+[ext_resource type="Script" path="res://脚本/界面/组件/品质流光.gd" id="7_glow"]
+
+; ⚠️ 必须 `visible = false`，理由同 `物品提示框.tscn` —— 原版悬停才 new 出提示框
+; （`MToolTipItem.createToolTip`），常驻节点若默认可见就会在没人悬停时糊一块底板。
+[node name="装备提示框" type="Control"]
+visible = false
+mouse_filter = 2
+script = ExtResource("1_tip")
+
+[node name="底" type="TextureRect" parent="."]
+offset_right = 293.0
+offset_bottom = 100.0
+mouse_filter = 2
+texture = ExtResource("2_bg")
+expand_mode = 1
+
+[node name="标题" type="Label" parent="."]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 288.0
+offset_bottom = 28.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 14
+horizontal_alignment = 1
+
+; 对比列（身上穿戴件）标题后缀「(已装备)」。原版只有对比组**右列**才建这个文本框
+; （`MToolTipZhuangBei.as:224-235` 的 `compareSuffixTF`，色来自 `EQUIPMENT_ALREADY` 那串 `<font>`）。
+; 位置与可见性都由 `_排标题()` 每次现算，这里烘的 offsets 只是编辑器预览。
+[node name="对比后缀" type="Label" parent="."]
+visible = false
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 108.0
+offset_bottom = 28.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 0.4, 0, 1)
+theme_override_font_sizes/font_size = 14
+
+; baseInfo 四行拆成两个 Label：前 3 行普通白字，职业行单独一个（不满足要求时整行染红，
+; 颜色直接设在 Label 上 —— 避开 BBCode，和 `物品提示框.gd` 一样只用普通 Label）。
+[node name="信息" type="Label" parent="."]
+offset_left = 8.0
+offset_top = 33.0
+offset_right = 288.0
+offset_bottom = 93.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/line_spacing = 4
+theme_override_font_sizes/font_size = 12
+
+[node name="职业行" type="Label" parent="."]
+offset_left = 8.0
+offset_top = 98.0
+offset_right = 288.0
+offset_bottom = 113.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/line_spacing = 4
+theme_override_font_sizes/font_size = 12
+
+[node name="描述" type="Label" parent="."]
+offset_left = 8.0
+offset_top = 118.0
+offset_right = 288.0
+offset_bottom = 138.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/line_spacing = 4
+theme_override_font_sizes/font_size = 12
+autowrap_mode = 2
+
+[node name="分隔线" type="TextureRect" parent="."]
+offset_left = 8.0
+offset_top = 143.0
+offset_right = 288.0
+offset_bottom = 145.0
+mouse_filter = 2
+expand_mode = 1
+
+; ⚠️ 明细是 **RichTextLabel 不是 Label** —— 原版 `contentText3` 是 **htmlText**，
+; 附加属性那一块**一行里混好几种颜色**（属性行按资质、`追+N` 黄、`【梦幻满值】`绿、抬头橙）。
+; Label 一个节点只能一种字色，做不到。
+; 现有那些纯文本段（耐久/强化等级/基本属性…）不含 ASCII `[`，原样塞进来就行。
+; 高度**不能**再用 `_文字高()` 量（它不认识 BBCode，会把标签也算进去），走 `get_content_height()`。
+[node name="明细" type="RichTextLabel" parent="."]
+offset_left = 8.0
+offset_top = 150.0
+offset_right = 288.0
+offset_bottom = 230.0
+mouse_filter = 2
+bbcode_enabled = true
+scroll_active = false
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_constants/line_separation = 4
+theme_override_font_sizes/normal_font_size = 12
+
+; 镶嵌属性段：抬头一行 + 每颗宝石一行（22x22 图标 + 文字）。
+; 行由 `装备提示框.gd` 运行时创建（颗数不定），这里只放一个空容器。
+; 稀有段容器：传说属性 / 秘印属性两个 Label + 刻印进度图。
+; 做成容器而不是单个 Label，是因为刻印的进度图要按"文字已经排到哪"来定位，
+; 而且两者颜色不同（原版传说值按资质、刻印值绿、抬头都橙）。
+[node name="稀有明细" type="Control" parent="."]
+mouse_filter = 2
+
+[node name="传说段" type="Label" parent="稀有明细"]
+offset_right = 280.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 0.568627, 0, 1)
+theme_override_constants/line_spacing = 4
+theme_override_font_sizes/font_size = 12
+
+[node name="秘印抬头" type="Label" parent="稀有明细"]
+offset_right = 280.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 0.568627, 0, 1)
+theme_override_constants/line_spacing = 4
+theme_override_font_sizes/font_size = 12
+
+; 刻印的值行是**绿色**（实测原版 `(0,255,0)`），抬头仍是上面那个橙 Label。
+[node name="秘印段" type="Label" parent="稀有明细"]
+offset_right = 280.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_constants/line_spacing = 4
+theme_override_font_sizes/font_size = 12
+
+[node name="镶嵌块" type="Control" parent="."]
+mouse_filter = 2
+
+[node name="价格" type="Label" parent="."]
+offset_left = 8.0
+offset_top = 235.0
+offset_right = 288.0
+offset_bottom = 255.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_constants/line_spacing = 4
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+
+[node name="绑定" type="Label" parent="."]
+offset_left = 8.0
+offset_top = 255.0
+offset_right = 288.0
+offset_bottom = 275.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.556863, 0.658824, 0.847059, 1)
+theme_override_constants/line_spacing = 4
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+
+[node name="图标框" type="TextureRect" parent="."]
+offset_left = 170.0
+offset_top = 38.0
+offset_right = 210.0
+offset_bottom = 78.0
+mouse_filter = 2
+texture = ExtResource("3_grid")
+
+[node name="图标" type="TextureRect" parent="图标框"]
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 37.0
+offset_bottom = 37.0
+mouse_filter = 2
+
+; 资质框 + 流光：原版这两层加在**图标**上（`MToolTipZhuangBei.as:172-181`，
+; aptitudeIcon (-3,-3)、equipAnimationF (1,1)），而图标在 40x40 的框里居中、位置随图片尺寸动，
+; 所以真实位置由 `装备品质.挂覆盖层(_图标框, 实例, false, "提示框", _图标.position)` 每次算。
+; 这里烘的是**34x34 图标**（原版物品图就是这个尺寸）时的结果：
+;   资质框 = 图标 (3,3) + 偏移 (-3,-3) = (0,0)，尺寸 42x42；
+;   流光   = 图标 (3,3) + 偏移 (1,1) + 尺寸一半 (17.5,17.5) = (21.5,21.5)，尺寸 35x35。
+; 两者默认 `visible = false` —— 空白提示框/非装备任何时候都不该有框，编辑器与运行时一致。
+[node name="资质框" type="TextureRect" parent="图标框"]
+visible = false
+offset_right = 42.0
+offset_bottom = 42.0
+mouse_filter = 2
+
+[node name="流光" type="AnimatedSprite2D" parent="图标框"]
+visible = false
+position = Vector2(21.5, 21.5)
+script = ExtResource("7_glow")
+
+[node name="破碎" type="TextureRect" parent="图标框"]
+visible = false
+offset_right = 25.0
+offset_bottom = 16.0
+mouse_filter = 2
+texture = ExtResource("4_broken")

@@ -1,0 +1,20 @@
+[gd_scene format=3]
+
+[node name="队伍成员行" type="Panel"]
+custom_minimum_size = Vector2(274, 40)
+offset_right = 274.0
+offset_bottom = 40.0
+
+[node name="角色名" type="Label" parent="."]
+offset_left = 10.0
+offset_top = 4.0
+offset_right = 182.0
+offset_bottom = 22.0
+text = "[队长] 忍者名称"
+
+[node name="等级" type="Label" parent="."]
+offset_left = 205.0
+offset_top = 4.0
+offset_right = 260.0
+offset_bottom = 22.0
+text = "Lv.1"

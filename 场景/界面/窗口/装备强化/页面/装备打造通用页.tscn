@@ -1,0 +1,181 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/物品格.png" id="1_slot"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/横向分隔线.png" id="2_line"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/进度槽.png" id="3_progress"]
+
+[node name="原版装备打造通用页" type="Control"]
+custom_minimum_size = Vector2(350, 349)
+
+[node name="装备栏面板" type="Panel" parent="."]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 91.0
+offset_bottom = 183.0
+
+[node name="选择装备" type="Button" parent="."]
+offset_left = 19.0
+offset_top = 18.0
+offset_right = 80.0
+offset_bottom = 40.0
+text = "放入装备"
+
+[node name="装备格" type="TextureRect" parent="."]
+offset_left = 29.0
+offset_top = 45.0
+offset_right = 69.0
+offset_bottom = 85.0
+texture = ExtResource("1_slot")
+mouse_filter = 2
+
+[node name="装备图标" type="TextureRect" parent="装备格"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+mouse_filter = 2
+
+[node name="属性标题" type="Label" parent="."]
+offset_left = 111.0
+offset_top = 20.0
+offset_right = 341.0
+offset_bottom = 38.0
+
+[node name="新属性标题" type="Label" parent="."]
+visible = false
+offset_left = 239.0
+offset_top = 20.0
+offset_right = 347.0
+offset_bottom = 38.0
+
+[node name="说明" type="Label" parent="."]
+offset_left = 102.0
+offset_top = 42.0
+offset_right = 342.0
+offset_bottom = 180.0
+autowrap_mode = 2
+
+[node name="分隔线" type="TextureRect" parent="."]
+offset_left = 99.0
+offset_top = 181.0
+offset_right = 342.0
+offset_bottom = 183.0
+texture = ExtResource("2_line")
+expand_mode = 1
+stretch_mode = 6
+mouse_filter = 2
+
+[node name="材料标题" type="Label" parent="."]
+offset_left = 8.0
+offset_top = 187.0
+offset_right = 342.0
+offset_bottom = 207.0
+horizontal_alignment = 1
+
+[node name="材料面板" type="Panel" parent="."]
+offset_left = 8.0
+offset_top = 211.0
+offset_right = 342.0
+offset_bottom = 310.0
+
+[node name="材料格一" type="TextureRect" parent="."]
+offset_left = 13.0
+offset_top = 216.0
+offset_right = 53.0
+offset_bottom = 256.0
+texture = ExtResource("1_slot")
+mouse_filter = 2
+
+[node name="材料格二" type="TextureRect" parent="."]
+visible = false
+offset_left = 78.0
+offset_top = 216.0
+offset_right = 118.0
+offset_bottom = 256.0
+texture = ExtResource("1_slot")
+mouse_filter = 2
+
+[node name="材料说明" type="Label" parent="."]
+offset_left = 98.0
+offset_top = 226.0
+offset_right = 334.0
+offset_bottom = 286.0
+autowrap_mode = 2
+
+[node name="使用幸运符" type="CheckBox" parent="."]
+visible = false
+offset_left = 138.0
+offset_top = 272
+offset_right = 236.0
+offset_bottom = 291
+text = "本次操作使用"
+
+[node name="幸运符数量" type="OptionButton" parent="."]
+visible = false
+offset_left = 236.0
+offset_top = 270.0
+offset_right = 281.0
+offset_bottom = 294.0
+
+[node name="锻造项目" type="OptionButton" parent="."]
+visible = false
+offset_left = 169.0
+offset_top = 236.0
+offset_right = 274.0
+offset_bottom = 260.0
+
+[node name="成功率标题" type="Label" parent="."]
+visible = false
+offset_left = 98.0
+offset_top = 264.0
+offset_right = 170.0
+offset_bottom = 284.0
+text = "锻造成功率"
+
+[node name="成功率" type="TextureProgressBar" parent="."]
+visible = false
+offset_left = 169.0
+offset_top = 267.0
+offset_right = 269.0
+offset_bottom = 279.0
+texture_under = ExtResource("3_progress")
+texture_progress = ExtResource("3_progress")
+value = 0.0
+
+[node name="执行" type="Button" parent="."]
+offset_left = 145.0
+offset_top = 322.0
+offset_right = 206.0
+offset_bottom = 344.0
+
+[node name="左操作" type="Button" parent="."]
+visible = false
+offset_left = 100.0
+offset_top = 322.0
+offset_right = 161.0
+offset_bottom = 344.0
+text = "保存"
+
+[node name="右操作" type="Button" parent="."]
+visible = false
+offset_left = 189.0
+offset_top = 322.0
+offset_right = 250.0
+offset_bottom = 344.0
+text = "取消"
+
+[node name="帮助" type="Button" parent="."]
+visible = false
+offset_left = 239.0
+offset_top = 322.0
+offset_right = 300.0
+offset_bottom = 344.0
+text = "刻印图解"

@@ -1,0 +1,991 @@
+[gd_scene load_steps=97 format=3]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/内容面板.png" id="t1"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/子面板.png" id="t2"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/洗点/属性图标左.png" id="t3"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/洗点/属性图标右.png" id="t4"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/输入框.png" id="t5"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/横向分隔线.png" id="t6"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/洗点/开始钮.png" id="t7"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/洗点/开始钮_悬停.png" id="t8"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/洗点/开始钮_按下.png" id="t9"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/洗点/开始钮_禁用.png" id="t10"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/洗点/再想钮.png" id="t11"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/洗点/再想钮_悬停.png" id="t12"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/洗点/再想钮_按下.png" id="t13"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/洗点/全收钮.png" id="t14"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/洗点/全收钮_悬停.png" id="t15"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/洗点/全收钮_按下.png" id="t16"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/洗点/全收钮_禁用.png" id="t17"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/洗点/加号钮.png" id="t18"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/洗点/加号钮_悬停.png" id="t19"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/洗点/加号钮_按下.png" id="t20"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/洗点/加号钮_禁用.png" id="t21"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/洗点/减号钮.png" id="t22"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/洗点/减号钮_悬停.png" id="t23"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/洗点/减号钮_按下.png" id="t24"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/洗点/减号钮_禁用.png" id="t25"]
+
+[sub_resource type="StyleBoxTexture" id="sb1_n"]
+texture = ExtResource("t7")
+
+[sub_resource type="StyleBoxTexture" id="sb1_h"]
+texture = ExtResource("t8")
+
+[sub_resource type="StyleBoxTexture" id="sb1_p"]
+texture = ExtResource("t9")
+
+[sub_resource type="StyleBoxTexture" id="sb1_d"]
+texture = ExtResource("t10")
+
+[sub_resource type="StyleBoxTexture" id="sb2_n"]
+texture = ExtResource("t11")
+
+[sub_resource type="StyleBoxTexture" id="sb2_h"]
+texture = ExtResource("t12")
+
+[sub_resource type="StyleBoxTexture" id="sb2_p"]
+texture = ExtResource("t13")
+
+[sub_resource type="StyleBoxTexture" id="sb3_n"]
+texture = ExtResource("t14")
+
+[sub_resource type="StyleBoxTexture" id="sb3_h"]
+texture = ExtResource("t15")
+
+[sub_resource type="StyleBoxTexture" id="sb3_p"]
+texture = ExtResource("t16")
+
+[sub_resource type="StyleBoxTexture" id="sb3_d"]
+texture = ExtResource("t17")
+
+[sub_resource type="StyleBoxTexture" id="sb4_n"]
+texture = ExtResource("t18")
+
+[sub_resource type="StyleBoxTexture" id="sb4_h"]
+texture = ExtResource("t19")
+
+[sub_resource type="StyleBoxTexture" id="sb4_p"]
+texture = ExtResource("t20")
+
+[sub_resource type="StyleBoxTexture" id="sb4_d"]
+texture = ExtResource("t21")
+
+[sub_resource type="StyleBoxTexture" id="sb5_n"]
+texture = ExtResource("t22")
+
+[sub_resource type="StyleBoxTexture" id="sb5_h"]
+texture = ExtResource("t23")
+
+[sub_resource type="StyleBoxTexture" id="sb5_p"]
+texture = ExtResource("t24")
+
+[sub_resource type="StyleBoxTexture" id="sb5_d"]
+texture = ExtResource("t25")
+
+[sub_resource type="StyleBoxTexture" id="sb6_n"]
+texture = ExtResource("t14")
+
+[sub_resource type="StyleBoxTexture" id="sb6_h"]
+texture = ExtResource("t15")
+
+[sub_resource type="StyleBoxTexture" id="sb6_p"]
+texture = ExtResource("t16")
+
+[sub_resource type="StyleBoxTexture" id="sb6_d"]
+texture = ExtResource("t17")
+
+[sub_resource type="StyleBoxTexture" id="sb7_n"]
+texture = ExtResource("t14")
+
+[sub_resource type="StyleBoxTexture" id="sb7_h"]
+texture = ExtResource("t15")
+
+[sub_resource type="StyleBoxTexture" id="sb7_p"]
+texture = ExtResource("t16")
+
+[sub_resource type="StyleBoxTexture" id="sb7_d"]
+texture = ExtResource("t17")
+
+[sub_resource type="StyleBoxTexture" id="sb8_n"]
+texture = ExtResource("t18")
+
+[sub_resource type="StyleBoxTexture" id="sb8_h"]
+texture = ExtResource("t19")
+
+[sub_resource type="StyleBoxTexture" id="sb8_p"]
+texture = ExtResource("t20")
+
+[sub_resource type="StyleBoxTexture" id="sb8_d"]
+texture = ExtResource("t21")
+
+[sub_resource type="StyleBoxTexture" id="sb9_n"]
+texture = ExtResource("t22")
+
+[sub_resource type="StyleBoxTexture" id="sb9_h"]
+texture = ExtResource("t23")
+
+[sub_resource type="StyleBoxTexture" id="sb9_p"]
+texture = ExtResource("t24")
+
+[sub_resource type="StyleBoxTexture" id="sb9_d"]
+texture = ExtResource("t25")
+
+[sub_resource type="StyleBoxTexture" id="sb10_n"]
+texture = ExtResource("t14")
+
+[sub_resource type="StyleBoxTexture" id="sb10_h"]
+texture = ExtResource("t15")
+
+[sub_resource type="StyleBoxTexture" id="sb10_p"]
+texture = ExtResource("t16")
+
+[sub_resource type="StyleBoxTexture" id="sb10_d"]
+texture = ExtResource("t17")
+
+[sub_resource type="StyleBoxTexture" id="sb11_n"]
+texture = ExtResource("t14")
+
+[sub_resource type="StyleBoxTexture" id="sb11_h"]
+texture = ExtResource("t15")
+
+[sub_resource type="StyleBoxTexture" id="sb11_p"]
+texture = ExtResource("t16")
+
+[sub_resource type="StyleBoxTexture" id="sb11_d"]
+texture = ExtResource("t17")
+
+[sub_resource type="StyleBoxTexture" id="sb12_n"]
+texture = ExtResource("t18")
+
+[sub_resource type="StyleBoxTexture" id="sb12_h"]
+texture = ExtResource("t19")
+
+[sub_resource type="StyleBoxTexture" id="sb12_p"]
+texture = ExtResource("t20")
+
+[sub_resource type="StyleBoxTexture" id="sb12_d"]
+texture = ExtResource("t21")
+
+[sub_resource type="StyleBoxTexture" id="sb13_n"]
+texture = ExtResource("t22")
+
+[sub_resource type="StyleBoxTexture" id="sb13_h"]
+texture = ExtResource("t23")
+
+[sub_resource type="StyleBoxTexture" id="sb13_p"]
+texture = ExtResource("t24")
+
+[sub_resource type="StyleBoxTexture" id="sb13_d"]
+texture = ExtResource("t25")
+
+[sub_resource type="StyleBoxTexture" id="sb14_n"]
+texture = ExtResource("t14")
+
+[sub_resource type="StyleBoxTexture" id="sb14_h"]
+texture = ExtResource("t15")
+
+[sub_resource type="StyleBoxTexture" id="sb14_p"]
+texture = ExtResource("t16")
+
+[sub_resource type="StyleBoxTexture" id="sb14_d"]
+texture = ExtResource("t17")
+
+[sub_resource type="StyleBoxTexture" id="sb15_n"]
+texture = ExtResource("t14")
+
+[sub_resource type="StyleBoxTexture" id="sb15_h"]
+texture = ExtResource("t15")
+
+[sub_resource type="StyleBoxTexture" id="sb15_p"]
+texture = ExtResource("t16")
+
+[sub_resource type="StyleBoxTexture" id="sb15_d"]
+texture = ExtResource("t17")
+
+[sub_resource type="StyleBoxTexture" id="sb16_n"]
+texture = ExtResource("t18")
+
+[sub_resource type="StyleBoxTexture" id="sb16_h"]
+texture = ExtResource("t19")
+
+[sub_resource type="StyleBoxTexture" id="sb16_p"]
+texture = ExtResource("t20")
+
+[sub_resource type="StyleBoxTexture" id="sb16_d"]
+texture = ExtResource("t21")
+
+[sub_resource type="StyleBoxTexture" id="sb17_n"]
+texture = ExtResource("t22")
+
+[sub_resource type="StyleBoxTexture" id="sb17_h"]
+texture = ExtResource("t23")
+
+[sub_resource type="StyleBoxTexture" id="sb17_p"]
+texture = ExtResource("t24")
+
+[sub_resource type="StyleBoxTexture" id="sb17_d"]
+texture = ExtResource("t25")
+
+[sub_resource type="StyleBoxTexture" id="sb18_n"]
+texture = ExtResource("t14")
+
+[sub_resource type="StyleBoxTexture" id="sb18_h"]
+texture = ExtResource("t15")
+
+[sub_resource type="StyleBoxTexture" id="sb18_p"]
+texture = ExtResource("t16")
+
+[sub_resource type="StyleBoxTexture" id="sb18_d"]
+texture = ExtResource("t17")
+
+[node name="原版洗点内容" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 275
+offset_bottom = 295.0
+
+[node name="内容底" type="NinePatchRect" parent="."]
+texture = ExtResource("t1")
+patch_margin_left = 11
+patch_margin_right = 10
+patch_margin_top = 10
+patch_margin_bottom = 11
+layout_mode = 0
+offset_left = 6.0
+offset_top = 10.0
+offset_right = 269.0
+offset_bottom = 261.0
+
+[node name="属性区底" type="NinePatchRect" parent="."]
+texture = ExtResource("t2")
+patch_margin_left = 8
+patch_margin_right = 7
+patch_margin_top = 7
+patch_margin_bottom = 7
+layout_mode = 0
+offset_left = 11.0
+offset_top = 110.0
+offset_right = 264.0
+offset_bottom = 256.0
+
+[node name="属性图标左" type="TextureRect" parent="."]
+texture = ExtResource("t3")
+mouse_filter = 2
+layout_mode = 0
+offset_left = 40.0
+offset_top = 96.0
+offset_right = 67.0
+offset_bottom = 118.0
+
+[node name="属性图标右" type="TextureRect" parent="."]
+texture = ExtResource("t4")
+mouse_filter = 2
+layout_mode = 0
+offset_left = 209.0
+offset_top = 96.0
+offset_right = 236.0
+offset_bottom = 118.0
+
+[node name="获得数底" type="NinePatchRect" parent="."]
+texture = ExtResource("t5")
+patch_margin_left = 6
+patch_margin_right = 7
+patch_margin_top = 5
+patch_margin_bottom = 6
+layout_mode = 0
+offset_left = 135.0
+offset_top = 231.0
+offset_right = 195.0
+offset_bottom = 252.0
+
+[node name="分隔线" type="TextureRect" parent="."]
+texture = ExtResource("t6")
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 0
+layout_mode = 0
+offset_left = 8.0
+offset_top = 87.0
+offset_right = 266.0
+offset_bottom = 89.0
+
+[node name="开始钮" type="Button" parent="."]
+theme_override_styles/normal = SubResource("sb1_n")
+theme_override_styles/hover = SubResource("sb1_h")
+theme_override_styles/pressed = SubResource("sb1_p")
+text = "开始洗点"
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+theme_override_styles/disabled = SubResource("sb1_d")
+theme_override_colors/font_disabled_color = Color(0.576, 0.576, 0.576, 1)
+disabled = true
+layout_mode = 0
+offset_left = 51.0
+offset_top = 267.0
+offset_right = 112.0
+offset_bottom = 289.0
+
+[node name="再想钮" type="Button" parent="."]
+theme_override_styles/normal = SubResource("sb2_n")
+theme_override_styles/hover = SubResource("sb2_h")
+theme_override_styles/pressed = SubResource("sb2_p")
+text = "我再想想"
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+layout_mode = 0
+offset_left = 162.0
+offset_top = 267.0
+offset_right = 223.0
+offset_bottom = 289.0
+
+[node name="行0" type="Control" parent="."]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 20.0
+offset_top = 118.0
+offset_right = 246.0
+offset_bottom = 139.0
+
+[node name="行0已分配底" type="NinePatchRect" parent="行0"]
+texture = ExtResource("t5")
+patch_margin_left = 6
+patch_margin_right = 7
+patch_margin_top = 5
+patch_margin_bottom = 6
+layout_mode = 0
+offset_left = 55.0
+offset_top = 0.0
+offset_right = 95.0
+offset_bottom = 21.0
+
+[node name="行0还原底" type="NinePatchRect" parent="行0"]
+texture = ExtResource("t5")
+patch_margin_left = 6
+patch_margin_right = 7
+patch_margin_top = 5
+patch_margin_bottom = 6
+layout_mode = 0
+offset_left = 100.0
+offset_top = 0.0
+offset_right = 140.0
+offset_bottom = 21.0
+
+[node name="行0全收钮" type="Button" parent="行0"]
+theme_override_styles/normal = SubResource("sb3_n")
+theme_override_styles/hover = SubResource("sb3_h")
+theme_override_styles/pressed = SubResource("sb3_p")
+text = ""
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+theme_override_styles/disabled = SubResource("sb3_d")
+theme_override_colors/font_disabled_color = Color(0.576, 0.576, 0.576, 1)
+disabled = true
+layout_mode = 0
+offset_left = 145.0
+offset_top = 0.0
+offset_right = 166.0
+offset_bottom = 21.0
+
+[node name="行0加钮" type="Button" parent="行0"]
+theme_override_styles/normal = SubResource("sb4_n")
+theme_override_styles/hover = SubResource("sb4_h")
+theme_override_styles/pressed = SubResource("sb4_p")
+text = ""
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+theme_override_styles/disabled = SubResource("sb4_d")
+theme_override_colors/font_disabled_color = Color(0.576, 0.576, 0.576, 1)
+disabled = true
+layout_mode = 0
+offset_left = 167.0
+offset_top = 2.0
+offset_right = 185.0
+offset_bottom = 20.0
+
+[node name="行0减钮" type="Button" parent="行0"]
+theme_override_styles/normal = SubResource("sb5_n")
+theme_override_styles/hover = SubResource("sb5_h")
+theme_override_styles/pressed = SubResource("sb5_p")
+text = ""
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+theme_override_styles/disabled = SubResource("sb5_d")
+theme_override_colors/font_disabled_color = Color(0.576, 0.576, 0.576, 1)
+layout_mode = 0
+offset_left = 186.0
+offset_top = 2.0
+offset_right = 204.0
+offset_bottom = 20.0
+
+[node name="行0全放钮" type="Button" parent="行0"]
+theme_override_styles/normal = SubResource("sb6_n")
+theme_override_styles/hover = SubResource("sb6_h")
+theme_override_styles/pressed = SubResource("sb6_p")
+text = ""
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+theme_override_styles/disabled = SubResource("sb6_d")
+theme_override_colors/font_disabled_color = Color(0.576, 0.576, 0.576, 1)
+layout_mode = 0
+offset_left = 205.0
+offset_top = 0.0
+offset_right = 226.0
+offset_bottom = 21.0
+
+[node name="行0属性名" type="Label" parent="行0"]
+text = "攻击型"
+theme_override_colors/font_color = Color(1.000000, 0.568627, 0.000000, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 0.0
+offset_top = 1.0
+offset_right = 50.0
+offset_bottom = 19.0
+
+[node name="行0已分配" type="Label" parent="行0"]
+text = ""
+theme_override_colors/font_color = Color(1.000000, 0.568627, 0.000000, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 55.0
+offset_top = 1.0
+offset_right = 95.0
+offset_bottom = 19.0
+
+[node name="行0还原数" type="Label" parent="行0"]
+text = ""
+theme_override_colors/font_color = Color(1.000000, 0.568627, 0.000000, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+layout_mode = 0
+offset_left = 100.0
+offset_top = 1.0
+offset_right = 140.0
+offset_bottom = 19.0
+
+[node name="行1" type="Control" parent="."]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 20.0
+offset_top = 141.0
+offset_right = 246.0
+offset_bottom = 162.0
+
+[node name="行1已分配底" type="NinePatchRect" parent="行1"]
+texture = ExtResource("t5")
+patch_margin_left = 6
+patch_margin_right = 7
+patch_margin_top = 5
+patch_margin_bottom = 6
+layout_mode = 0
+offset_left = 55.0
+offset_top = 0.0
+offset_right = 95.0
+offset_bottom = 21.0
+
+[node name="行1还原底" type="NinePatchRect" parent="行1"]
+texture = ExtResource("t5")
+patch_margin_left = 6
+patch_margin_right = 7
+patch_margin_top = 5
+patch_margin_bottom = 6
+layout_mode = 0
+offset_left = 100.0
+offset_top = 0.0
+offset_right = 140.0
+offset_bottom = 21.0
+
+[node name="行1全收钮" type="Button" parent="行1"]
+theme_override_styles/normal = SubResource("sb7_n")
+theme_override_styles/hover = SubResource("sb7_h")
+theme_override_styles/pressed = SubResource("sb7_p")
+text = ""
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+theme_override_styles/disabled = SubResource("sb7_d")
+theme_override_colors/font_disabled_color = Color(0.576, 0.576, 0.576, 1)
+disabled = true
+layout_mode = 0
+offset_left = 145.0
+offset_top = 0.0
+offset_right = 166.0
+offset_bottom = 21.0
+
+[node name="行1加钮" type="Button" parent="行1"]
+theme_override_styles/normal = SubResource("sb8_n")
+theme_override_styles/hover = SubResource("sb8_h")
+theme_override_styles/pressed = SubResource("sb8_p")
+text = ""
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+theme_override_styles/disabled = SubResource("sb8_d")
+theme_override_colors/font_disabled_color = Color(0.576, 0.576, 0.576, 1)
+disabled = true
+layout_mode = 0
+offset_left = 167.0
+offset_top = 2.0
+offset_right = 185.0
+offset_bottom = 20.0
+
+[node name="行1减钮" type="Button" parent="行1"]
+theme_override_styles/normal = SubResource("sb9_n")
+theme_override_styles/hover = SubResource("sb9_h")
+theme_override_styles/pressed = SubResource("sb9_p")
+text = ""
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+theme_override_styles/disabled = SubResource("sb9_d")
+theme_override_colors/font_disabled_color = Color(0.576, 0.576, 0.576, 1)
+layout_mode = 0
+offset_left = 186.0
+offset_top = 2.0
+offset_right = 204.0
+offset_bottom = 20.0
+
+[node name="行1全放钮" type="Button" parent="行1"]
+theme_override_styles/normal = SubResource("sb10_n")
+theme_override_styles/hover = SubResource("sb10_h")
+theme_override_styles/pressed = SubResource("sb10_p")
+text = ""
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+theme_override_styles/disabled = SubResource("sb10_d")
+theme_override_colors/font_disabled_color = Color(0.576, 0.576, 0.576, 1)
+layout_mode = 0
+offset_left = 205.0
+offset_top = 0.0
+offset_right = 226.0
+offset_bottom = 21.0
+
+[node name="行1属性名" type="Label" parent="行1"]
+text = "防御型"
+theme_override_colors/font_color = Color(1.000000, 0.568627, 0.000000, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 0.0
+offset_top = 1.0
+offset_right = 50.0
+offset_bottom = 19.0
+
+[node name="行1已分配" type="Label" parent="行1"]
+text = ""
+theme_override_colors/font_color = Color(1.000000, 0.568627, 0.000000, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 55.0
+offset_top = 1.0
+offset_right = 95.0
+offset_bottom = 19.0
+
+[node name="行1还原数" type="Label" parent="行1"]
+text = ""
+theme_override_colors/font_color = Color(1.000000, 0.568627, 0.000000, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+layout_mode = 0
+offset_left = 100.0
+offset_top = 1.0
+offset_right = 140.0
+offset_bottom = 19.0
+
+[node name="行2" type="Control" parent="."]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 20.0
+offset_top = 164.0
+offset_right = 246.0
+offset_bottom = 185.0
+
+[node name="行2已分配底" type="NinePatchRect" parent="行2"]
+texture = ExtResource("t5")
+patch_margin_left = 6
+patch_margin_right = 7
+patch_margin_top = 5
+patch_margin_bottom = 6
+layout_mode = 0
+offset_left = 55.0
+offset_top = 0.0
+offset_right = 95.0
+offset_bottom = 21.0
+
+[node name="行2还原底" type="NinePatchRect" parent="行2"]
+texture = ExtResource("t5")
+patch_margin_left = 6
+patch_margin_right = 7
+patch_margin_top = 5
+patch_margin_bottom = 6
+layout_mode = 0
+offset_left = 100.0
+offset_top = 0.0
+offset_right = 140.0
+offset_bottom = 21.0
+
+[node name="行2全收钮" type="Button" parent="行2"]
+theme_override_styles/normal = SubResource("sb11_n")
+theme_override_styles/hover = SubResource("sb11_h")
+theme_override_styles/pressed = SubResource("sb11_p")
+text = ""
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+theme_override_styles/disabled = SubResource("sb11_d")
+theme_override_colors/font_disabled_color = Color(0.576, 0.576, 0.576, 1)
+disabled = true
+layout_mode = 0
+offset_left = 145.0
+offset_top = 0.0
+offset_right = 166.0
+offset_bottom = 21.0
+
+[node name="行2加钮" type="Button" parent="行2"]
+theme_override_styles/normal = SubResource("sb12_n")
+theme_override_styles/hover = SubResource("sb12_h")
+theme_override_styles/pressed = SubResource("sb12_p")
+text = ""
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+theme_override_styles/disabled = SubResource("sb12_d")
+theme_override_colors/font_disabled_color = Color(0.576, 0.576, 0.576, 1)
+disabled = true
+layout_mode = 0
+offset_left = 167.0
+offset_top = 2.0
+offset_right = 185.0
+offset_bottom = 20.0
+
+[node name="行2减钮" type="Button" parent="行2"]
+theme_override_styles/normal = SubResource("sb13_n")
+theme_override_styles/hover = SubResource("sb13_h")
+theme_override_styles/pressed = SubResource("sb13_p")
+text = ""
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+theme_override_styles/disabled = SubResource("sb13_d")
+theme_override_colors/font_disabled_color = Color(0.576, 0.576, 0.576, 1)
+layout_mode = 0
+offset_left = 186.0
+offset_top = 2.0
+offset_right = 204.0
+offset_bottom = 20.0
+
+[node name="行2全放钮" type="Button" parent="行2"]
+theme_override_styles/normal = SubResource("sb14_n")
+theme_override_styles/hover = SubResource("sb14_h")
+theme_override_styles/pressed = SubResource("sb14_p")
+text = ""
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+theme_override_styles/disabled = SubResource("sb14_d")
+theme_override_colors/font_disabled_color = Color(0.576, 0.576, 0.576, 1)
+layout_mode = 0
+offset_left = 205.0
+offset_top = 0.0
+offset_right = 226.0
+offset_bottom = 21.0
+
+[node name="行2属性名" type="Label" parent="行2"]
+text = "灵巧型"
+theme_override_colors/font_color = Color(1.000000, 0.568627, 0.000000, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 0.0
+offset_top = 1.0
+offset_right = 50.0
+offset_bottom = 19.0
+
+[node name="行2已分配" type="Label" parent="行2"]
+text = ""
+theme_override_colors/font_color = Color(1.000000, 0.568627, 0.000000, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 55.0
+offset_top = 1.0
+offset_right = 95.0
+offset_bottom = 19.0
+
+[node name="行2还原数" type="Label" parent="行2"]
+text = ""
+theme_override_colors/font_color = Color(1.000000, 0.568627, 0.000000, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+layout_mode = 0
+offset_left = 100.0
+offset_top = 1.0
+offset_right = 140.0
+offset_bottom = 19.0
+
+[node name="行3" type="Control" parent="."]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 20.0
+offset_top = 187.0
+offset_right = 246.0
+offset_bottom = 208.0
+
+[node name="行3已分配底" type="NinePatchRect" parent="行3"]
+texture = ExtResource("t5")
+patch_margin_left = 6
+patch_margin_right = 7
+patch_margin_top = 5
+patch_margin_bottom = 6
+layout_mode = 0
+offset_left = 55.0
+offset_top = 0.0
+offset_right = 95.0
+offset_bottom = 21.0
+
+[node name="行3还原底" type="NinePatchRect" parent="行3"]
+texture = ExtResource("t5")
+patch_margin_left = 6
+patch_margin_right = 7
+patch_margin_top = 5
+patch_margin_bottom = 6
+layout_mode = 0
+offset_left = 100.0
+offset_top = 0.0
+offset_right = 140.0
+offset_bottom = 21.0
+
+[node name="行3全收钮" type="Button" parent="行3"]
+theme_override_styles/normal = SubResource("sb15_n")
+theme_override_styles/hover = SubResource("sb15_h")
+theme_override_styles/pressed = SubResource("sb15_p")
+text = ""
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+theme_override_styles/disabled = SubResource("sb15_d")
+theme_override_colors/font_disabled_color = Color(0.576, 0.576, 0.576, 1)
+disabled = true
+layout_mode = 0
+offset_left = 145.0
+offset_top = 0.0
+offset_right = 166.0
+offset_bottom = 21.0
+
+[node name="行3加钮" type="Button" parent="行3"]
+theme_override_styles/normal = SubResource("sb16_n")
+theme_override_styles/hover = SubResource("sb16_h")
+theme_override_styles/pressed = SubResource("sb16_p")
+text = ""
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+theme_override_styles/disabled = SubResource("sb16_d")
+theme_override_colors/font_disabled_color = Color(0.576, 0.576, 0.576, 1)
+disabled = true
+layout_mode = 0
+offset_left = 167.0
+offset_top = 2.0
+offset_right = 185.0
+offset_bottom = 20.0
+
+[node name="行3减钮" type="Button" parent="行3"]
+theme_override_styles/normal = SubResource("sb17_n")
+theme_override_styles/hover = SubResource("sb17_h")
+theme_override_styles/pressed = SubResource("sb17_p")
+text = ""
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+theme_override_styles/disabled = SubResource("sb17_d")
+theme_override_colors/font_disabled_color = Color(0.576, 0.576, 0.576, 1)
+layout_mode = 0
+offset_left = 186.0
+offset_top = 2.0
+offset_right = 204.0
+offset_bottom = 20.0
+
+[node name="行3全放钮" type="Button" parent="行3"]
+theme_override_styles/normal = SubResource("sb18_n")
+theme_override_styles/hover = SubResource("sb18_h")
+theme_override_styles/pressed = SubResource("sb18_p")
+text = ""
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+theme_override_styles/disabled = SubResource("sb18_d")
+theme_override_colors/font_disabled_color = Color(0.576, 0.576, 0.576, 1)
+layout_mode = 0
+offset_left = 205.0
+offset_top = 0.0
+offset_right = 226.0
+offset_bottom = 21.0
+
+[node name="行3属性名" type="Label" parent="行3"]
+text = "健体型"
+theme_override_colors/font_color = Color(1.000000, 0.568627, 0.000000, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 0.0
+offset_top = 1.0
+offset_right = 50.0
+offset_bottom = 19.0
+
+[node name="行3已分配" type="Label" parent="行3"]
+text = ""
+theme_override_colors/font_color = Color(1.000000, 0.568627, 0.000000, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 55.0
+offset_top = 1.0
+offset_right = 95.0
+offset_bottom = 19.0
+
+[node name="行3还原数" type="Label" parent="行3"]
+text = ""
+theme_override_colors/font_color = Color(1.000000, 0.568627, 0.000000, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+layout_mode = 0
+offset_left = 100.0
+offset_top = 1.0
+offset_right = 140.0
+offset_bottom = 19.0
+
+[node name="当前方案" type="Label" parent="."]
+text = "当前配点方案如下"
+theme_override_colors/font_color = Color(1.000000, 0.941176, 0.000000, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 88.0
+offset_top = 94.0
+offset_right = 190.0
+offset_bottom = 114.0
+
+[node name="说明盒" type="Control" parent="."]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 11.0
+offset_top = 15.0
+offset_right = 271.0
+offset_bottom = 82.0
+
+[node name="说明" type="RichTextLabel" parent="说明盒"]
+text = "[color=#00ff00]洗点：将已经分配的点数还原，\n　　　重新变成未分配的潜能点[/color]\n30级之前全身筋骨尚未定型，可免费为你洗点。\n30级之后，每洗一点则需要消耗一个洗点卷。"
+scroll_active = false
+bbcode_enabled = true
+autowrap_mode = 3
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 2
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 260.0
+offset_bottom = 66.0
+
+[node name="操作提示" type="Label" parent="."]
+text = "请点击上方的 + - 按钮还原点数"
+theme_override_colors/font_color = Color(0.117647, 0.564706, 1.000000, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 13.0
+offset_top = 211.0
+offset_right = 261.0
+offset_bottom = 229.0
+
+[node name="获得标题" type="Label" parent="."]
+text = "洗点后将获得潜能点："
+theme_override_colors/font_color = Color(0.117647, 0.564706, 1.000000, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 13.0
+offset_top = 231.0
+offset_right = 141.0
+offset_bottom = 249.0
+
+[node name="获得数值" type="Label" parent="."]
+text = "0"
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 135.0
+offset_top = 231.0
+offset_right = 195.0
+offset_bottom = 249.0

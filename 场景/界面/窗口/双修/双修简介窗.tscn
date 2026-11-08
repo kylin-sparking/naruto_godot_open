@@ -1,0 +1,123 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="Script" path="res://脚本/界面/窗口/家族/家族子窗.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/小窗口边框.png" id="t1"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/关闭按钮.png" id="t2"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/内容面板.png" id="t3"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/子面板.png" id="t4"]
+[ext_resource type="Script" path="res://脚本/界面/组件/原版三态钮.gd" id="9_三态"]
+
+[node name="双修简介窗" type="Control"]
+custom_minimum_size = Vector2(279, 228)
+script = ExtResource("1_script")
+窗名 = "双修简介窗"
+
+[node name="窗底" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 279.0
+offset_bottom = 228.0
+mouse_filter = 2
+texture = ExtResource("t1")
+patch_margin_left = 50
+patch_margin_top = 26
+patch_margin_right = 52
+patch_margin_bottom = 18
+
+[node name="标题" type="Label" parent="."]
+layout_mode = 0
+offset_left = 0.0
+offset_top = 3.0
+offset_right = 279.0
+offset_bottom = 21.0
+mouse_filter = 2
+text = "双修简介"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_colors/font_color = Color(0.9882352941176471, 0.9568627450980393, 0.611764705882353, 1)
+
+[node name="关钮" type="TextureButton" parent="."]
+layout_mode = 0
+mouse_default_cursor_shape = 2
+offset_left = 248.0
+offset_top = 4.0
+offset_right = 273.0
+offset_bottom = 28.0
+focus_mode = 0
+ignore_texture_size = true
+texture_normal = ExtResource("t2")
+metadata/act = "关闭"
+script = ExtResource("9_三态")
+
+[node name="内容底" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 30.0
+offset_right = 273.0
+offset_bottom = 222.0
+mouse_filter = 2
+texture = ExtResource("t3")
+patch_margin_left = 11
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 11
+
+[node name="子面板" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 135.0
+offset_right = 268.0
+offset_bottom = 218.0
+mouse_filter = 2
+texture = ExtResource("t4")
+patch_margin_left = 8
+patch_margin_top = 7
+patch_margin_right = 7
+patch_margin_bottom = 7
+
+[node name="简介一" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 39.0
+offset_right = 266.0
+offset_bottom = 75.0
+mouse_filter = 2
+bbcode_enabled = true
+text = "[color=#ff9100]请输入你希望与之双修的角色名，
+点击开始双修按钮，进入打坐双修模式[/color]"
+scroll_active = false
+autowrap_mode = 3
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 2
+
+[node name="简介二" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 93.0
+offset_right = 266.0
+offset_bottom = 129.0
+mouse_filter = 2
+bbcode_enabled = true
+text = "[color=#00ff00]开始双修后，打坐的双方在查克拉精华和经验
+获得速度上将比单独打坐加快20%[/color]"
+scroll_active = false
+autowrap_mode = 3
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 2
+
+[node name="简介三" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 145.0
+offset_right = 266.0
+offset_bottom = 204.0
+mouse_filter = 2
+bbcode_enabled = true
+text = "[color=#ffffff]注意：
+1.双修的另一方必须处于你身边一格范围内
+2.任何一方中断打坐状态，均将中断双修模式[/color]"
+scroll_active = false
+autowrap_mode = 3
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 6

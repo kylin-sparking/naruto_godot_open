@@ -1,0 +1,622 @@
+[gd_scene load_steps=22 format=3]
+
+[ext_resource type="PackedScene" path="res://场景/界面/窗口/交易/交易格.tscn" id="2_cellscene"]
+[ext_resource type="PackedScene" path="res://场景/界面/窗口/交易/宠物格.tscn" id="3_petscene"]
+[ext_resource type="PackedScene" path="res://场景/界面/组件/存取金额窗口.tscn" id="4_money"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/内容面板.png" id="5_ct"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/子面板.png" id="6_pane"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/输入框.png" id="7_input"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/横向分隔线.png" id="8_line"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/金币.png" id="9_coin"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/元宝币.png" id="10_bean"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/心法/确定钮.png" id="11_b61"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/心法/确定钮_悬停.png" id="12_b61h"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/心法/确定钮_按下.png" id="13_b61p"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/洗点/确定钮.png" id="14_b37"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/洗点/确定钮_悬停.png" id="15_b37h"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/洗点/确定钮_按下.png" id="16_b37p"]
+
+[sub_resource type="StyleBoxTexture" id="sb61_n"]
+texture = ExtResource("11_b61")
+
+[sub_resource type="StyleBoxTexture" id="sb61_h"]
+texture = ExtResource("12_b61h")
+
+[sub_resource type="StyleBoxTexture" id="sb61_p"]
+texture = ExtResource("13_b61p")
+
+[sub_resource type="StyleBoxTexture" id="sb37_n"]
+texture = ExtResource("14_b37")
+
+[sub_resource type="StyleBoxTexture" id="sb37_h"]
+texture = ExtResource("15_b37h")
+
+[sub_resource type="StyleBoxTexture" id="sb37_p"]
+texture = ExtResource("16_b37p")
+
+[node name="原版交易内容" type="Control"]
+custom_minimum_size = Vector2(321, 454)
+offset_right = 321.0
+offset_bottom = 454.0
+
+[node name="内容底" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 10.0
+offset_right = 315.0
+offset_bottom = 422.0
+mouse_filter = 2
+texture = ExtResource("5_ct")
+patch_margin_left = 11
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 11
+
+[node name="对方物品底" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 49.0
+offset_right = 158.0
+offset_bottom = 272.0
+mouse_filter = 2
+texture = ExtResource("6_pane")
+patch_margin_left = 8
+patch_margin_top = 7
+patch_margin_right = 7
+patch_margin_bottom = 7
+
+[node name="我的物品底" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 163.0
+offset_top = 49.0
+offset_right = 310.0
+offset_bottom = 272.0
+mouse_filter = 2
+texture = ExtResource("6_pane")
+patch_margin_left = 8
+patch_margin_top = 7
+patch_margin_right = 7
+patch_margin_bottom = 7
+
+[node name="对方宠物底" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 276.0
+offset_right = 158.0
+offset_bottom = 324.0
+mouse_filter = 2
+texture = ExtResource("6_pane")
+patch_margin_left = 8
+patch_margin_top = 7
+patch_margin_right = 7
+patch_margin_bottom = 7
+
+[node name="我的宠物底" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 163.0
+offset_top = 276.0
+offset_right = 310.0
+offset_bottom = 324.0
+mouse_filter = 2
+texture = ExtResource("6_pane")
+patch_margin_left = 8
+patch_margin_top = 7
+patch_margin_right = 7
+patch_margin_bottom = 7
+
+[node name="对方金币底" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 328.0
+offset_right = 152.0
+offset_bottom = 349.0
+mouse_filter = 2
+texture = ExtResource("7_input")
+patch_margin_left = 6
+patch_margin_top = 5
+patch_margin_right = 7
+patch_margin_bottom = 6
+
+[node name="对方元宝底" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 354.0
+offset_right = 152.0
+offset_bottom = 375.0
+mouse_filter = 2
+texture = ExtResource("7_input")
+patch_margin_left = 6
+patch_margin_top = 5
+patch_margin_right = 7
+patch_margin_bottom = 6
+
+[node name="我的金币底" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 201.0
+offset_top = 328.0
+offset_right = 302.0
+offset_bottom = 349.0
+mouse_filter = 2
+texture = ExtResource("7_input")
+patch_margin_left = 6
+patch_margin_top = 5
+patch_margin_right = 7
+patch_margin_bottom = 6
+
+[node name="我的元宝底" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 201.0
+offset_top = 354.0
+offset_right = 302.0
+offset_bottom = 375.0
+mouse_filter = 2
+texture = ExtResource("7_input")
+patch_margin_left = 6
+patch_margin_top = 5
+patch_margin_right = 7
+patch_margin_bottom = 6
+
+[node name="对方金币图" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 330.0
+offset_right = 71.0
+offset_bottom = 347.0
+mouse_filter = 2
+texture = ExtResource("9_coin")
+
+[node name="我的元宝图" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 204.0
+offset_top = 358.0
+offset_right = 223.0
+offset_bottom = 371.0
+mouse_filter = 2
+texture = ExtResource("10_bean")
+
+[node name="我的金币图" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 204.0
+offset_top = 330.0
+offset_right = 221.0
+offset_bottom = 347.0
+mouse_filter = 2
+texture = ExtResource("9_coin")
+
+[node name="对方元宝图" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 358.0
+offset_right = 73.0
+offset_bottom = 371.0
+mouse_filter = 2
+texture = ExtResource("10_bean")
+
+[node name="对方线1" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 95.0
+offset_right = 146.0
+offset_bottom = 97.0
+mouse_filter = 2
+texture = ExtResource("8_line")
+stretch_mode = 1
+
+[node name="对方线2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 138.0
+offset_right = 146.0
+offset_bottom = 140.0
+mouse_filter = 2
+texture = ExtResource("8_line")
+stretch_mode = 1
+
+[node name="对方线3" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 181.0
+offset_right = 146.0
+offset_bottom = 183.0
+mouse_filter = 2
+texture = ExtResource("8_line")
+stretch_mode = 1
+
+[node name="对方线4" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 224.0
+offset_right = 146.0
+offset_bottom = 226.0
+mouse_filter = 2
+texture = ExtResource("8_line")
+stretch_mode = 1
+
+[node name="我的线1" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 167.0
+offset_top = 95.0
+offset_right = 299.0
+offset_bottom = 97.0
+mouse_filter = 2
+texture = ExtResource("8_line")
+stretch_mode = 1
+
+[node name="我的线2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 167.0
+offset_top = 138.0
+offset_right = 299.0
+offset_bottom = 140.0
+mouse_filter = 2
+texture = ExtResource("8_line")
+stretch_mode = 1
+
+[node name="我的线3" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 167.0
+offset_top = 181.0
+offset_right = 299.0
+offset_bottom = 183.0
+mouse_filter = 2
+texture = ExtResource("8_line")
+stretch_mode = 1
+
+[node name="我的线4" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 167.0
+offset_top = 224.0
+offset_right = 299.0
+offset_bottom = 226.0
+mouse_filter = 2
+texture = ExtResource("8_line")
+stretch_mode = 1
+
+[node name="对方格1" parent="." instance=ExtResource("2_cellscene")]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 54.0
+offset_right = 158.0
+offset_bottom = 94.0
+
+[node name="对方格2" parent="." instance=ExtResource("2_cellscene")]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 97.0
+offset_right = 158.0
+offset_bottom = 137.0
+
+[node name="对方格3" parent="." instance=ExtResource("2_cellscene")]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 140.0
+offset_right = 158.0
+offset_bottom = 180.0
+
+[node name="对方格4" parent="." instance=ExtResource("2_cellscene")]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 183.0
+offset_right = 158.0
+offset_bottom = 223.0
+
+[node name="对方格5" parent="." instance=ExtResource("2_cellscene")]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 226.0
+offset_right = 158.0
+offset_bottom = 266.0
+
+[node name="我的格1" parent="." instance=ExtResource("2_cellscene")]
+layout_mode = 0
+offset_left = 166.0
+offset_top = 54.0
+offset_right = 307.0
+offset_bottom = 94.0
+
+[node name="我的格2" parent="." instance=ExtResource("2_cellscene")]
+layout_mode = 0
+offset_left = 166.0
+offset_top = 97.0
+offset_right = 307.0
+offset_bottom = 137.0
+
+[node name="我的格3" parent="." instance=ExtResource("2_cellscene")]
+layout_mode = 0
+offset_left = 166.0
+offset_top = 140.0
+offset_right = 307.0
+offset_bottom = 180.0
+
+[node name="我的格4" parent="." instance=ExtResource("2_cellscene")]
+layout_mode = 0
+offset_left = 166.0
+offset_top = 183.0
+offset_right = 307.0
+offset_bottom = 223.0
+
+[node name="我的格5" parent="." instance=ExtResource("2_cellscene")]
+layout_mode = 0
+offset_left = 166.0
+offset_top = 226.0
+offset_right = 307.0
+offset_bottom = 266.0
+
+[node name="对方宠物格" parent="." instance=ExtResource("3_petscene")]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 278.0
+offset_right = 155.0
+offset_bottom = 322.0
+
+[node name="我的宠物格" parent="." instance=ExtResource("3_petscene")]
+layout_mode = 0
+offset_left = 166.0
+offset_top = 278.0
+offset_right = 307.0
+offset_bottom = 322.0
+
+[node name="物品上架钮" type="Button" parent="."]
+toggle_mode = true
+layout_mode = 0
+offset_left = 237.0
+offset_top = 23.0
+offset_right = 298.0
+offset_bottom = 45.0
+theme_override_styles/normal = SubResource("sb61_n")
+theme_override_styles/hover = SubResource("sb61_h")
+theme_override_styles/pressed = SubResource("sb61_p")
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_font_sizes/font_size = 12
+text = "物品上架"
+horizontal_alignment = 1
+mouse_default_cursor_shape = 2
+
+[node name="输入金币钮" type="Button" parent="."]
+layout_mode = 0
+offset_left = 184.0
+offset_top = 378.0
+offset_right = 245.0
+offset_bottom = 400.0
+theme_override_styles/normal = SubResource("sb61_n")
+theme_override_styles/hover = SubResource("sb61_h")
+theme_override_styles/pressed = SubResource("sb61_p")
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_font_sizes/font_size = 12
+text = "输入金币"
+horizontal_alignment = 1
+mouse_default_cursor_shape = 2
+
+[node name="输入元宝钮" type="Button" parent="."]
+layout_mode = 0
+offset_left = 245.0
+offset_top = 378.0
+offset_right = 306.0
+offset_bottom = 400.0
+theme_override_styles/normal = SubResource("sb61_n")
+theme_override_styles/hover = SubResource("sb61_h")
+theme_override_styles/pressed = SubResource("sb61_p")
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_font_sizes/font_size = 12
+text = "输入元宝"
+horizontal_alignment = 1
+mouse_default_cursor_shape = 2
+
+[node name="宠物列表钮" type="Button" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 426.0
+offset_right = 69.0
+offset_bottom = 448.0
+theme_override_styles/normal = SubResource("sb61_n")
+theme_override_styles/hover = SubResource("sb61_h")
+theme_override_styles/pressed = SubResource("sb61_p")
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_font_sizes/font_size = 12
+text = "宠物列表"
+horizontal_alignment = 1
+mouse_default_cursor_shape = 2
+
+[node name="锁定物品钮" type="Button" parent="."]
+layout_mode = 0
+offset_left = 74.0
+offset_top = 426.0
+offset_right = 135.0
+offset_bottom = 448.0
+theme_override_styles/normal = SubResource("sb61_n")
+theme_override_styles/hover = SubResource("sb61_h")
+theme_override_styles/pressed = SubResource("sb61_p")
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_font_sizes/font_size = 12
+text = "锁定物品"
+horizontal_alignment = 1
+mouse_default_cursor_shape = 2
+
+[node name="交易钮" type="Button" parent="."]
+layout_mode = 0
+offset_left = 235.0
+offset_top = 426.0
+offset_right = 272.0
+offset_bottom = 448.0
+theme_override_styles/normal = SubResource("sb37_n")
+theme_override_styles/hover = SubResource("sb37_h")
+theme_override_styles/pressed = SubResource("sb37_p")
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_font_sizes/font_size = 12
+disabled = true
+text = "交易"
+horizontal_alignment = 1
+mouse_default_cursor_shape = 2
+
+[node name="取消钮" type="Button" parent="."]
+layout_mode = 0
+offset_left = 277.0
+offset_top = 426.0
+offset_right = 314.0
+offset_bottom = 448.0
+theme_override_styles/normal = SubResource("sb37_n")
+theme_override_styles/hover = SubResource("sb37_h")
+theme_override_styles/pressed = SubResource("sb37_p")
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_font_sizes/font_size = 12
+text = "取消"
+horizontal_alignment = 1
+mouse_default_cursor_shape = 2
+
+[node name="对方名" type="Label" parent="."]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 11.0
+offset_right = 157.0
+offset_bottom = 29.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+
+[node name="我的物品" type="Label" parent="."]
+layout_mode = 0
+offset_left = 163.0
+offset_top = 11.0
+offset_right = 236.0
+offset_bottom = 29.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+text = "我的物品"
+
+[node name="对方金币标签" type="Label" parent="."]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 329.0
+offset_right = 55.0
+offset_bottom = 347.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 0.568627, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "金币："
+
+[node name="对方元宝标签" type="Label" parent="."]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 353.0
+offset_right = 55.0
+offset_bottom = 371.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 0.568627, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "元宝:"
+
+[node name="我的金币标签" type="Label" parent="."]
+layout_mode = 0
+offset_left = 164.0
+offset_top = 329.0
+offset_right = 205.0
+offset_bottom = 347.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 0.568627, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "金币："
+
+[node name="我的元宝标签" type="Label" parent="."]
+layout_mode = 0
+offset_left = 164.0
+offset_top = 353.0
+offset_right = 205.0
+offset_bottom = 371.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 0.568627, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "元宝:"
+
+[node name="对方金币值" type="Label" parent="."]
+layout_mode = 0
+offset_left = 73.0
+offset_top = 329.0
+offset_right = 149.0
+offset_bottom = 347.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 0.568627, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "0"
+
+[node name="对方元宝值" type="Label" parent="."]
+layout_mode = 0
+offset_left = 73.0
+offset_top = 355.0
+offset_right = 149.0
+offset_bottom = 373.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 0.568627, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "0"
+
+[node name="我的金币值" type="Label" parent="."]
+layout_mode = 0
+offset_left = 223.0
+offset_top = 329.0
+offset_right = 299.0
+offset_bottom = 347.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 0.568627, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "0"
+
+[node name="我的元宝值" type="Label" parent="."]
+layout_mode = 0
+offset_left = 223.0
+offset_top = 355.0
+offset_right = 299.0
+offset_bottom = 373.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 0.568627, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "0"
+
+[node name="提示" type="Label" parent="."]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 402.0
+offset_right = 310.0
+offset_bottom = 420.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "请确认好您交易的物品后，点击锁定货物按钮"
+
+[node name="对方遮罩" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 7.0
+offset_top = 10.0
+offset_right = 158.0
+offset_bottom = 418.0
+mouse_filter = 2
+color = Color(1, 0, 0, 0.3)
+
+[node name="我的遮罩" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 163.0
+offset_top = 10.0
+offset_right = 314.0
+offset_bottom = 418.0
+mouse_filter = 2
+color = Color(1, 0, 0, 0.3)
+
+[node name="交易金额窗" parent="." instance=ExtResource("4_money")]
+layout_mode = 0
+visible = false

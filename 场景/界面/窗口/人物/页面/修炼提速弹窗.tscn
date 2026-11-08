@@ -1,0 +1,413 @@
+[gd_scene format=3 uid="uid://drvxfqd7fepew"]
+
+[ext_resource type="Script" uid="uid://ca6jkke0ex1fp" path="res://素材/界面/原版窗口/人物/手里剑/脚本/修炼提速弹窗.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://ch54qb4s25og5" path="res://素材/界面/原版窗口/通用控件/关闭按钮.png" id="2_close"]
+[ext_resource type="Texture2D" uid="uid://dkil44jd6c66y" path="res://素材/界面/原版窗口/通用控件/横向分隔线.png" id="3_line"]
+[ext_resource type="Texture2D" uid="uid://v8ognv0kia5f" path="res://素材/界面/原版窗口/通用控件/输入框.png" id="4_input"]
+[ext_resource type="Texture2D" uid="uid://ddchmtc63xs2h" path="res://素材/界面/原版窗口/通用控件/按钮.png" id="5_button"]
+[ext_resource type="Texture2D" uid="uid://crlxy3pv10h21" path="res://素材/界面/原版窗口/通用控件/按钮按下.png" id="6_button_down"]
+[ext_resource type="Texture2D" uid="uid://m507s4c12u35" path="res://素材/界面/原版窗口/通用控件/子面板.png" id="7_panel"]
+[ext_resource type="Texture2D" uid="uid://dbo10i1nqb1r6" path="res://素材/物品/原版/TeShuWuPin/TeShuWuPin_15020001_info.swf_1_TeShuWuPin_15020001_info_icon.png" id="8_item"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleTitleBtn"]
+
+[sub_resource type="StyleBoxTexture" id="StyleInput"]
+texture = ExtResource("4_input")
+texture_margin_left = 6.0
+texture_margin_top = 5.0
+texture_margin_right = 7.0
+texture_margin_bottom = 6.0
+
+[sub_resource type="StyleBoxTexture" id="StyleButton"]
+texture = ExtResource("5_button")
+
+[sub_resource type="StyleBoxTexture" id="StyleButtonDown"]
+texture = ExtResource("6_button_down")
+
+[sub_resource type="StyleBoxTexture" id="StylePanel"]
+texture = ExtResource("7_panel")
+texture_margin_left = 8.0
+texture_margin_top = 7.0
+texture_margin_right = 7.0
+texture_margin_bottom = 7.0
+
+[node name="修炼提速弹窗" type="Control" unique_id=559481096]
+custom_minimum_size = Vector2(340, 205)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 340.0
+offset_bottom = 205.0
+script = ExtResource("1_script")
+
+[node name="窗口边框" type="Panel" parent="." unique_id=1298645844]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_type_variation = &"OrigWindowFrame"
+
+[node name="内容底" type="Panel" parent="." unique_id=951260188]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 32.0
+offset_right = 332.0
+offset_bottom = 197.0
+mouse_filter = 2
+theme_type_variation = &"OrigWindowInner"
+
+[node name="标题" type="Label" parent="." unique_id=121977587]
+layout_mode = 0
+offset_right = 340.0
+offset_bottom = 24.0
+theme_type_variation = &"OrigWindowTitle"
+theme_override_colors/font_color = Color(0.960784, 0.917647, 0.839216, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "修炼提速"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="关闭按钮" type="Button" parent="." unique_id=1567669561]
+custom_minimum_size = Vector2(25, 24)
+layout_mode = 0
+offset_left = 310.0
+offset_top = 5.0
+offset_right = 335.0
+offset_bottom = 29.0
+tooltip_text = "关闭"
+focus_mode = 0
+theme_override_colors/icon_normal_color = Color(0.82, 0.82, 0.82, 1)
+theme_override_colors/icon_pressed_color = Color(1, 0.85, 0.6, 1)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleTitleBtn")
+theme_override_styles/pressed = SubResource("StyleTitleBtn")
+theme_override_styles/hover = SubResource("StyleTitleBtn")
+theme_override_styles/focus = SubResource("StyleTitleBtn")
+icon = ExtResource("2_close")
+flat = true
+
+[node name="物品区" type="Control" parent="." unique_id=655710073]
+anchors_preset = 0
+offset_left = 13.0
+offset_top = 37.0
+offset_right = 101.0
+offset_bottom = 129.0
+
+[node name="格子" type="Panel" parent="物品区" unique_id=1269328154]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 18.0
+offset_right = 48.0
+offset_bottom = 58.0
+theme_override_styles/panel = SubResource("StyleInput")
+
+[node name="图标" type="TextureRect" parent="物品区" unique_id=1901416671]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 21.0
+offset_right = 45.0
+offset_bottom = 55.0
+mouse_filter = 2
+texture = ExtResource("8_item")
+
+[node name="名称" type="Label" parent="物品区" unique_id=1142116041]
+layout_mode = 0
+offset_left = -14.0
+offset_top = 4.0
+offset_right = 74.0
+offset_bottom = 20.0
+theme_override_colors/font_color = Color(1, 0.5686275, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "手里剑修炼符"
+horizontal_alignment = 1
+
+[node name="名称标题" type="Label" parent="." unique_id=2020961116]
+layout_mode = 0
+offset_left = 113.0
+offset_top = 39.0
+offset_right = 187.0
+offset_bottom = 57.0
+theme_override_colors/font_color = Color(1, 0.568627, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "手里剑名称："
+vertical_alignment = 1
+
+[node name="名称" type="Panel" parent="." unique_id=1767224359]
+layout_mode = 0
+offset_left = 187.0
+offset_top = 37.0
+offset_right = 267.0
+offset_bottom = 58.0
+theme_override_styles/panel = SubResource("StyleInput")
+
+[node name="值" type="Label" parent="名称" unique_id=629457125]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "基础手里剑"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="品阶标题" type="Label" parent="." unique_id=578130076]
+layout_mode = 0
+offset_left = 113.0
+offset_top = 63.0
+offset_right = 187.0
+offset_bottom = 81.0
+theme_override_colors/font_color = Color(1, 0.568627, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "手里剑品阶："
+vertical_alignment = 1
+
+[node name="品阶" type="Panel" parent="." unique_id=71993330]
+layout_mode = 0
+offset_left = 187.0
+offset_top = 61.0
+offset_right = 267.0
+offset_bottom = 82.0
+theme_override_styles/panel = SubResource("StyleInput")
+
+[node name="值" type="Label" parent="品阶" unique_id=69534857]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "1阶"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="等级标题" type="Label" parent="." unique_id=1674593627]
+layout_mode = 0
+offset_left = 113.0
+offset_top = 87.0
+offset_right = 187.0
+offset_bottom = 105.0
+theme_override_colors/font_color = Color(1, 0.568627, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "手里剑等级："
+vertical_alignment = 1
+
+[node name="等级" type="Panel" parent="." unique_id=575201570]
+layout_mode = 0
+offset_left = 187.0
+offset_top = 85.0
+offset_right = 267.0
+offset_bottom = 106.0
+theme_override_styles/panel = SubResource("StyleInput")
+
+[node name="值" type="Label" parent="等级" unique_id=824292463]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "1/4级"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="熟练度标题" type="Label" parent="." unique_id=572826063]
+layout_mode = 0
+offset_left = 113.0
+offset_top = 111.0
+offset_right = 187.0
+offset_bottom = 129.0
+theme_override_colors/font_color = Color(1, 0.568627, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "熟　练　度："
+vertical_alignment = 1
+
+[node name="熟练度" type="Panel" parent="." unique_id=1916282985]
+layout_mode = 0
+offset_left = 187.0
+offset_top = 109.0
+offset_right = 267.0
+offset_bottom = 130.0
+theme_override_styles/panel = SubResource("StyleInput")
+
+[node name="值" type="Label" parent="熟练度" unique_id=736389102]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0/5000"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="分隔线" type="TextureRect" parent="." unique_id=976879290]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 136.0
+offset_right = 324.0
+offset_bottom = 138.0
+mouse_filter = 2
+texture = ExtResource("3_line")
+stretch_mode = 1
+
+[node name="提示" type="Label" parent="." unique_id=552373399]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 142.0
+offset_right = 321.0
+offset_bottom = 160.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "提升50点熟练度，需要消耗一张手里剑修炼符"
+horizontal_alignment = 2
+
+[node name="开始提速" type="Button" parent="." unique_id=1555707811]
+custom_minimum_size = Vector2(61, 22)
+layout_mode = 0
+offset_left = 20.0
+offset_top = 172.0
+offset_right = 81.0
+offset_bottom = 194.0
+focus_mode = 0
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleButton")
+theme_override_styles/pressed = SubResource("StyleButtonDown")
+theme_override_styles/hover = SubResource("StyleButton")
+text = "开始提速"
+
+[node name="使用全部" type="Button" parent="." unique_id=113264457]
+custom_minimum_size = Vector2(61, 22)
+layout_mode = 0
+offset_left = 139.0
+offset_top = 172.0
+offset_right = 200.0
+offset_bottom = 194.0
+focus_mode = 0
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleButton")
+theme_override_styles/pressed = SubResource("StyleButtonDown")
+theme_override_styles/hover = SubResource("StyleButton")
+text = "使用全部"
+
+[node name="取消" type="Button" parent="." unique_id=478475785]
+custom_minimum_size = Vector2(61, 22)
+layout_mode = 0
+offset_left = 259.0
+offset_top = 172.0
+offset_right = 320.0
+offset_bottom = 194.0
+focus_mode = 0
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleButton")
+theme_override_styles/pressed = SubResource("StyleButtonDown")
+theme_override_styles/hover = SubResource("StyleButton")
+text = "取消"
+
+[node name="全部确认" type="Panel" parent="." unique_id=155379030]
+visible = false
+layout_mode = 0
+offset_left = 60.0
+offset_top = 52.0
+offset_right = 280.0
+offset_bottom = 152.0
+theme_override_styles/panel = SubResource("StylePanel")
+
+[node name="标题" type="Label" parent="全部确认" unique_id=339494718]
+layout_mode = 0
+offset_top = 4.0
+offset_right = 220.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(1, 0.568627, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "注 意"
+horizontal_alignment = 1
+
+[node name="文本" type="Label" parent="全部确认" unique_id=721326978]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 30.0
+offset_right = 210.0
+offset_bottom = 62.0
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "确定要使用背包内全部的手里剑修炼符？"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="确定" type="Button" parent="全部确认" unique_id=646902073]
+custom_minimum_size = Vector2(61, 22)
+layout_mode = 0
+offset_left = 40.0
+offset_top = 80.0
+offset_right = 101.0
+offset_bottom = 102.0
+focus_mode = 0
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleButton")
+theme_override_styles/pressed = SubResource("StyleButtonDown")
+theme_override_styles/hover = SubResource("StyleButton")
+text = "确定"
+
+[node name="取消" type="Button" parent="全部确认" unique_id=603017503]
+custom_minimum_size = Vector2(61, 22)
+layout_mode = 0
+offset_left = 120.0
+offset_top = 80.0
+offset_right = 181.0
+offset_bottom = 102.0
+focus_mode = 0
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleButton")
+theme_override_styles/pressed = SubResource("StyleButtonDown")
+theme_override_styles/hover = SubResource("StyleButton")
+text = "取消"

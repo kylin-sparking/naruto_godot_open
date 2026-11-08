@@ -1,0 +1,406 @@
+[gd_scene format=3 uid="uid://bwgs2eva17vc8"]
+
+[ext_resource type="Script" uid="uid://b0fcsc3ev60gh" path="res://场景/界面/窗口/人物/页面/开通穴道弹窗.gd" id="0_pop"]
+[ext_resource type="Texture2D" uid="uid://ch54qb4s25og5" path="res://素材/界面/原版窗口/通用控件/关闭按钮.png" id="1_close"]
+[ext_resource type="Texture2D" uid="uid://dkil44jd6c66y" path="res://素材/界面/原版窗口/通用控件/横向分隔线.png" id="2_line"]
+[ext_resource type="Texture2D" uid="uid://b58xoy6g0yyj2" path="res://素材/物品/原版/FuZhuWuPin/FuZhuWuPin_16000001_info.swf_1_FuZhuWuPin_16000001_info_icon.png" id="3_lingfu"]
+[ext_resource type="Texture2D" uid="uid://v8ognv0kia5f" path="res://素材/界面/原版窗口/通用控件/输入框.png" id="4_input"]
+[ext_resource type="Texture2D" uid="uid://dbmys7tu18uyi" path="res://素材/界面/原版窗口/通用控件/下拉箭头.png" id="6_arrow"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleTitleBtn"]
+
+[sub_resource type="StyleBoxTexture" id="StyleValueBox"]
+texture = ExtResource("4_input")
+texture_margin_left = 6.0
+texture_margin_top = 5.0
+texture_margin_right = 7.0
+texture_margin_bottom = 6.0
+
+[node name="开通穴道弹窗" type="Control" unique_id=484846026]
+custom_minimum_size = Vector2(287, 288)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 287.0
+offset_bottom = 288.0
+script = ExtResource("0_pop")
+
+[node name="窗口边框" type="Panel" parent="." unique_id=1414309010]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_type_variation = &"OrigWindowFrame"
+
+[node name="内容底" type="Panel" parent="." unique_id=221554702]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 32.0
+offset_right = 279.0
+offset_bottom = 280.0
+mouse_filter = 2
+theme_type_variation = &"OrigWindowInner"
+
+[node name="标题" type="Label" parent="." unique_id=90579662]
+layout_mode = 0
+offset_top = 5.0
+offset_right = 287.0
+offset_bottom = 29.0
+theme_type_variation = &"OrigWindowTitle"
+theme_override_colors/font_color = Color(0.960784, 0.917647, 0.839216, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "开通穴道"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="拖动区" type="Control" parent="." unique_id=36906255]
+anchors_preset = 0
+offset_right = 287.0
+offset_bottom = 29.0
+
+[node name="关闭按钮" type="Button" parent="." unique_id=866425837]
+custom_minimum_size = Vector2(25, 24)
+layout_mode = 0
+offset_left = 257.0
+offset_top = 5.0
+offset_right = 282.0
+offset_bottom = 29.0
+tooltip_text = "关闭"
+focus_mode = 0
+theme_override_colors/icon_normal_color = Color(0.82, 0.82, 0.82, 1)
+theme_override_colors/icon_pressed_color = Color(1, 0.85, 0.6, 1)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleTitleBtn")
+theme_override_styles/pressed = SubResource("StyleTitleBtn")
+theme_override_styles/hover = SubResource("StyleTitleBtn")
+theme_override_styles/focus = SubResource("StyleTitleBtn")
+icon = ExtResource("1_close")
+flat = true
+
+[node name="行1" type="Control" parent="." unique_id=1942758945]
+anchors_preset = 0
+offset_left = 13.0
+offset_top = 39.0
+offset_right = 274.0
+offset_bottom = 61.0
+
+[node name="标题" type="Label" parent="行1" unique_id=804094806]
+layout_mode = 0
+offset_right = 131.0
+offset_bottom = 21.0
+theme_override_colors/font_color = Color(1, 0.5686275, 0, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "你即将开通穴道"
+vertical_alignment = 1
+
+[node name="值框" type="Panel" parent="行1" unique_id=1307304180]
+layout_mode = 0
+offset_left = 131.0
+offset_right = 258.0
+offset_bottom = 21.0
+theme_override_styles/panel = SubResource("StyleValueBox")
+
+[node name="值" type="Label" parent="行1/值框" unique_id=1511002344]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "头维"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="行2" type="Control" parent="." unique_id=959064540]
+anchors_preset = 0
+offset_left = 13.0
+offset_top = 61.0
+offset_right = 274.0
+offset_bottom = 83.0
+
+[node name="标题" type="Label" parent="行2" unique_id=1078920482]
+layout_mode = 0
+offset_right = 131.0
+offset_bottom = 21.0
+theme_override_colors/font_color = Color(1, 0.5686275, 0, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "本穴道开通后你将获得"
+vertical_alignment = 1
+
+[node name="值框" type="Panel" parent="行2" unique_id=43117576]
+layout_mode = 0
+offset_left = 131.0
+offset_right = 258.0
+offset_bottom = 21.0
+theme_override_styles/panel = SubResource("StyleValueBox")
+
+[node name="值" type="Label" parent="行2/值框" unique_id=1189092691]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "生命+15"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="行3" type="Control" parent="." unique_id=971737085]
+anchors_preset = 0
+offset_left = 13.0
+offset_top = 83.0
+offset_right = 274.0
+offset_bottom = 105.0
+
+[node name="标题" type="Label" parent="行3" unique_id=2077168106]
+layout_mode = 0
+offset_right = 131.0
+offset_bottom = 21.0
+theme_override_colors/font_color = Color(1, 0.5686275, 0, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "你当前拥有查克拉精华"
+vertical_alignment = 1
+
+[node name="值框" type="Panel" parent="行3" unique_id=1273602142]
+layout_mode = 0
+offset_left = 131.0
+offset_right = 258.0
+offset_bottom = 21.0
+theme_override_styles/panel = SubResource("StyleValueBox")
+
+[node name="值" type="Label" parent="行3/值框" unique_id=98482648]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "399746"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="分隔线" type="TextureRect" parent="." unique_id=804888090]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 108.0
+offset_right = 274.0
+offset_bottom = 110.0
+mouse_filter = 2
+texture = ExtResource("2_line")
+expand_mode = 1
+
+[node name="提示文字" type="RichTextLabel" parent="." unique_id=1095582954]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 112.0
+offset_right = 274.0
+offset_bottom = 152.0
+mouse_filter = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = 2
+theme_override_font_sizes/normal_font_size = 12
+bbcode_enabled = true
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 2
+text = "温馨提示：在你开通穴道操作成功后，处于你附近的玩家将获得大量的经验奖励"
+scroll_active = false
+
+[node name="提示底框" type="Panel" parent="." unique_id=980387237]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 152.0
+offset_right = 274.0
+offset_bottom = 246.0
+mouse_filter = 2
+
+[node name="灵符格" type="Control" parent="." unique_id=1628379714]
+anchors_preset = 0
+offset_left = 18.0
+offset_top = 157.0
+offset_right = 78.0
+offset_bottom = 221.0
+mouse_filter = 2
+
+[node name="名" type="Label" parent="灵符格" unique_id=1574314361]
+layout_mode = 0
+offset_right = 60.0
+offset_bottom = 20.0
+theme_override_colors/font_color = Color(1, 0.5686275, 0, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "八门灵符"
+horizontal_alignment = 1
+
+[node name="格" type="Control" parent="灵符格" unique_id=1573378428]
+anchors_preset = 0
+offset_left = 10.0
+offset_top = 20.0
+offset_right = 50.0
+offset_bottom = 60.0
+mouse_filter = 2
+
+[node name="底" type="Panel" parent="灵符格/格" unique_id=543049819]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+theme_type_variation = &"OrigItemSlot"
+
+[node name="灵符图标" type="TextureRect" parent="灵符格/格" unique_id=1983753063]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 3.0
+offset_right = 38.0
+offset_bottom = 39.0
+mouse_filter = 2
+texture = ExtResource("3_lingfu")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="数量" type="Label" parent="灵符格/格" unique_id=1302170130]
+layout_mode = 0
+offset_top = 20.0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 2
+text = "999"
+horizontal_alignment = 2
+
+[node name="使用八门灵符" type="CheckBox" parent="." unique_id=1542522002]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 213
+offset_right = 164.0
+offset_bottom = 232
+focus_mode = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/h_separation = 3
+text = "本次操作使用"
+
+[node name="数量下拉" type="OptionButton" parent="." unique_id=199601878]
+layout_mode = 0
+offset_left = 162.0
+offset_top = 217.0
+offset_right = 205.0
+offset_bottom = 238.0
+focus_mode = 0
+theme_override_constants/arrow_margin = 0
+clip_text = true
+selected = 0
+fit_to_longest_item = false
+item_count = 9
+popup/item_0/text = "1"
+popup/item_0/id = 0
+popup/item_1/text = "2"
+popup/item_1/id = 1
+popup/item_2/text = "3"
+popup/item_2/id = 2
+popup/item_3/text = "4"
+popup/item_3/id = 3
+popup/item_4/text = "5"
+popup/item_4/id = 4
+popup/item_5/text = "6"
+popup/item_5/id = 5
+popup/item_6/text = "7"
+popup/item_6/id = 6
+popup/item_7/text = "8"
+popup/item_7/id = 7
+popup/item_8/text = "9"
+popup/item_8/id = 8
+
+[node name="下拉箭头" type="TextureRect" parent="." unique_id=847229442]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 223.0
+offset_right = 205.0
+offset_bottom = 231.0
+mouse_filter = 2
+texture = ExtResource("6_arrow")
+
+[node name="个灵符" type="Label" parent="." unique_id=1766812181]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 217.0
+offset_right = 271.0
+offset_bottom = 235.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "个八门灵符"
+vertical_alignment = 1
+
+[node name="消耗与几率" type="RichTextLabel" parent="." unique_id=586349226]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 157.0
+offset_right = 279.0
+offset_bottom = 205.0
+mouse_filter = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = 4
+theme_override_font_sizes/normal_font_size = 12
+bbcode_enabled = true
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 2
+text = "本次操作消耗精华：[color=#00ff00]1500[/color]
+本次操作成功几率：[color=#00ff00]100%[/color]"
+scroll_active = false
+
+[node name="开通穴道按钮" type="Button" parent="." unique_id=746259950]
+custom_minimum_size = Vector2(57, 22)
+layout_mode = 0
+offset_left = 113.0
+offset_top = 255.0
+offset_right = 170.0
+offset_bottom = 277.0
+focus_mode = 0
+text = "开通穴道"
+
+[node name="购买" type="Button" parent="." unique_id=1621250185]
+custom_minimum_size = Vector2(37, 22)
+layout_mode = 0
+offset_left = 26.0
+offset_top = 218.0
+offset_right = 67.0
+offset_bottom = 240.0
+focus_mode = 0
+text = "购买"

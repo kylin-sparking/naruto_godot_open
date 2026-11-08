@@ -1,0 +1,477 @@
+[gd_scene load_steps=25 format=3]
+; 由 `开发工具/生成秘笈合成场景.py` 从量具表 `截秘笈合成页.gd` 的 件路径/件期望/原文/页签真值/下拉皮 生成。
+; **改真值改量具表再重跑生成器，别手改本文件**（手改会被下一次生成吃掉）。
+; 原版 `com/mxw/uifl/controls/equip/JiNengCompositeWindow.as` 340×381（`super(340,381)` 在 `:79`）。
+; 场景 y = AS3 窗口局部 y − 29（「技能书」在 `窗口尺寸.json` 标 `整框: true` ⇒ 容器原点 (0,29)）。
+; 同级顺序 = AS3 addChild 序（内容框 → 页签条 → 提交钮；内容框内 说明 → 残卷区 → 材料说明 → 材料排 → 结果区）。
+; 逐件出处见 `测试/截图/秘笈合成_对照/真值对照表.md` 与 `game-client/真值/窗口/秘笈合成.md`。
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/内容面板.png" id="t0"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/子面板.png" id="t1"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/物品格.png" id="t2"]
+[ext_resource type="Script" path="res://脚本/界面/组件/残卷放入格.gd" id="s_drop"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/横向分隔线.png" id="t3"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/方向箭头.png" id="t4"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/分页按钮未选.png" id="t5"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/分页按钮未选_悬停.png" id="t6"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/分页按钮选中.png" id="t7"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/下拉框.png" id="t8"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/下拉框悬停.png" id="t9"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/下拉框按下.png" id="t10"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/下拉框禁用.png" id="t11"]
+[sub_resource type="StyleBoxTexture" id="sb_tab_normal"]
+texture = ExtResource("t5")
+texture_margin_left = 7
+texture_margin_right = 8
+texture_margin_top = 7
+texture_margin_bottom = 7
+content_margin_left = 0.0
+content_margin_right = 0.0
+content_margin_top = 0.0
+content_margin_bottom = 0.0
+
+[sub_resource type="StyleBoxTexture" id="sb_tab_hover"]
+texture = ExtResource("t6")
+texture_margin_left = 7
+texture_margin_right = 8
+texture_margin_top = 7
+texture_margin_bottom = 7
+content_margin_left = 0.0
+content_margin_right = 0.0
+content_margin_top = 0.0
+content_margin_bottom = 0.0
+
+[sub_resource type="StyleBoxTexture" id="sb_tab_pressed"]
+texture = ExtResource("t7")
+texture_margin_left = 9
+texture_margin_right = 8
+texture_margin_top = 9
+texture_margin_bottom = 4
+content_margin_left = 0.0
+content_margin_right = 0.0
+content_margin_top = 0.0
+content_margin_bottom = 0.0
+
+[sub_resource type="StyleBoxTexture" id="sb_tab_hover_pressed"]
+texture = ExtResource("t7")
+texture_margin_left = 9
+texture_margin_right = 8
+texture_margin_top = 9
+texture_margin_bottom = 4
+content_margin_left = 0.0
+content_margin_right = 0.0
+content_margin_top = 0.0
+content_margin_bottom = 0.0
+
+[sub_resource type="StyleBoxTexture" id="r0"]
+texture = ExtResource("t0")
+texture_margin_left = 11
+texture_margin_right = 10
+texture_margin_top = 10
+texture_margin_bottom = 11
+content_margin_left = 0.0
+content_margin_right = 0.0
+content_margin_top = 0.0
+content_margin_bottom = 0.0
+
+[sub_resource type="StyleBoxTexture" id="r1"]
+texture = ExtResource("t1")
+texture_margin_left = 8
+texture_margin_right = 7
+texture_margin_top = 7
+texture_margin_bottom = 7
+content_margin_left = 0.0
+content_margin_right = 0.0
+content_margin_top = 0.0
+content_margin_bottom = 0.0
+
+[sub_resource type="StyleBoxTexture" id="r2"]
+texture = ExtResource("t4")
+texture_margin_left = 4.25
+texture_margin_right = 4.25
+texture_margin_top = 1
+texture_margin_bottom = 9.25
+content_margin_left = 0.0
+content_margin_right = 0.0
+content_margin_top = 0.0
+content_margin_bottom = 0.0
+
+[sub_resource type="StyleBoxTexture" id="sb_combo_normal"]
+texture = ExtResource("t8")
+texture_margin_left = 5.5
+texture_margin_right = 22.75
+texture_margin_top = 5
+texture_margin_bottom = 5.5
+content_margin_left = 3
+content_margin_right = 24
+content_margin_top = 3
+content_margin_bottom = 0
+
+[sub_resource type="StyleBoxTexture" id="sb_combo_hover"]
+texture = ExtResource("t9")
+texture_margin_left = 6
+texture_margin_right = 22
+texture_margin_top = 5
+texture_margin_bottom = 5.5
+content_margin_left = 3
+content_margin_right = 24
+content_margin_top = 3
+content_margin_bottom = 0
+
+[sub_resource type="StyleBoxTexture" id="sb_combo_pressed"]
+texture = ExtResource("t10")
+texture_margin_left = 6
+texture_margin_right = 22.75
+texture_margin_top = 5.25
+texture_margin_bottom = 5.5
+content_margin_left = 3
+content_margin_right = 24
+content_margin_top = 3
+content_margin_bottom = 0
+
+[sub_resource type="StyleBoxTexture" id="sb_combo_disabled"]
+texture = ExtResource("t11")
+texture_margin_left = 6
+texture_margin_right = 21.75
+texture_margin_top = 5.5
+texture_margin_bottom = 5.25
+content_margin_left = 3
+content_margin_right = 24
+content_margin_top = 3
+content_margin_bottom = 0
+
+
+[node name="原版秘籍合成内容" type="Control"]
+custom_minimum_size = Vector2(340, 352)
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 340
+offset_bottom = 352
+
+[node name="内容框" type="Panel" parent="."]
+theme_override_styles/panel = SubResource("r0")
+layout_mode = 0
+offset_left = 5.0
+offset_top = 29.0
+offset_right = 335.0
+offset_bottom = 319.0
+
+[node name="说明" type="RichTextLabel" parent="内容框"]
+bbcode_enabled = true
+text = "[color=#ff9100]秘笈合成可以将忍术残卷合成为忍术秘笈\n合成成功则你将获得忍术秘笈\n合成失败将回收辅残卷，不回收主残卷[/color]"
+scroll_active = false
+autowrap_mode = 3
+theme_override_constants/line_separation = 6
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 332.0
+offset_bottom = 65.0
+
+[node name="说明分隔线" type="TextureRect" parent="内容框"]
+texture = ExtResource("t3")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 8.0
+offset_top = 67.0
+offset_right = 332.0
+offset_bottom = 69.0
+
+[node name="放入残卷区" type="Panel" parent="内容框"]
+theme_override_styles/panel = SubResource("r1")
+layout_mode = 0
+offset_left = 8.0
+offset_top = 70.0
+offset_right = 91.0
+offset_bottom = 284.0
+
+[node name="放入残卷" type="Button" parent="内容框/放入残卷区"]
+text = "放入残卷"
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+layout_mode = 0
+offset_left = 11.0
+offset_top = 10.0
+offset_right = 72.0
+offset_bottom = 32.0
+
+[node name="主残卷格" type="Button" parent="内容框/放入残卷区"]
+flat = true
+focus_mode = 0
+script = ExtResource("s_drop")
+icon = ExtResource("t2")
+expand_icon = true
+layout_mode = 0
+offset_left = 21.5
+offset_top = 37.0
+offset_right = 61.5
+offset_bottom = 77.0
+
+[node name="方向箭头" type="Panel" parent="内容框/放入残卷区"]
+theme_override_styles/panel = SubResource("r2")
+layout_mode = 0
+offset_left = 34.5
+offset_top = 77.0
+offset_right = 48.5
+offset_bottom = 164.0
+
+[node name="秘籍格" type="TextureRect" parent="内容框/放入残卷区"]
+texture = ExtResource("t2")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 21.5
+offset_top = 164.0
+offset_right = 61.5
+offset_bottom = 204.0
+
+[node name="材料说明" type="RichTextLabel" parent="内容框"]
+bbcode_enabled = true
+text = "[color=#ffffff]辅残卷需要和主残卷同类型\n幸运符：提高合成的成功概率[/color]"
+scroll_active = false
+autowrap_mode = 3
+theme_override_constants/line_separation = 6
+layout_mode = 0
+offset_left = 95.0
+offset_top = 132.0
+offset_right = 275.0
+offset_bottom = 170.0
+
+[node name="材料格1" type="Control" parent="内容框"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 95.0
+offset_top = 70.0
+offset_right = 151.0
+offset_bottom = 158.0
+
+[node name="标签" type="Label" parent="内容框/材料格1"]
+text = "辅残卷"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 0.6, 0, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 56.0
+offset_bottom = 20.0
+
+[node name="物品格" type="TextureRect" parent="内容框/材料格1"]
+texture = ExtResource("t2")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 8.0
+offset_top = 20.0
+offset_right = 48.0
+offset_bottom = 60.0
+
+[node name="材料格2" type="Control" parent="内容框"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 153.0
+offset_top = 70.0
+offset_right = 209.0
+offset_bottom = 158.0
+
+[node name="标签" type="Label" parent="内容框/材料格2"]
+text = "辅残卷"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 0.6, 0, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 56.0
+offset_bottom = 20.0
+
+[node name="物品格" type="TextureRect" parent="内容框/材料格2"]
+texture = ExtResource("t2")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 8.0
+offset_top = 20.0
+offset_right = 48.0
+offset_bottom = 60.0
+
+[node name="材料格3" type="Control" parent="内容框"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 211.0
+offset_top = 70.0
+offset_right = 267.0
+offset_bottom = 158.0
+
+[node name="标签" type="Label" parent="内容框/材料格3"]
+text = "辅残卷"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 0.6, 0, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 56.0
+offset_bottom = 20.0
+
+[node name="物品格" type="TextureRect" parent="内容框/材料格3"]
+texture = ExtResource("t2")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 8.0
+offset_top = 20.0
+offset_right = 48.0
+offset_bottom = 60.0
+
+[node name="材料格4" type="Control" parent="内容框"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 269.0
+offset_top = 70.0
+offset_right = 325.0
+offset_bottom = 158.0
+
+[node name="标签" type="Label" parent="内容框/材料格4"]
+text = "幸运符"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 0.6, 0, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 56.0
+offset_bottom = 20.0
+
+[node name="物品格" type="TextureRect" parent="内容框/材料格4"]
+texture = ExtResource("t2")
+expand_mode = 1
+stretch_mode = 0
+mouse_filter = 2
+layout_mode = 0
+offset_left = 8.0
+offset_top = 20.0
+offset_right = 48.0
+offset_bottom = 60.0
+
+[node name="购买" type="Button" parent="内容框/材料格4"]
+text = "购买"
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+layout_mode = 0
+offset_left = 9.5
+offset_top = 63.0
+offset_right = 46.5
+offset_bottom = 85.0
+
+[node name="结果区" type="Panel" parent="内容框"]
+theme_override_styles/panel = SubResource("r1")
+layout_mode = 0
+offset_left = 95.0
+offset_top = 212.0
+offset_right = 324.0
+offset_bottom = 282.0
+
+[node name="结果" type="RichTextLabel" parent="内容框/结果区"]
+bbcode_enabled = true
+text = "[color=#ffffff]本次操作消耗精华：0\n本次操作成功几率：0%[/color]"
+scroll_active = false
+autowrap_mode = 3
+theme_override_constants/line_separation = 6
+layout_mode = 0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = 213.0
+offset_bottom = 44.0
+
+[node name="使用幸运符" type="CheckBox" parent="内容框/结果区"]
+text = "本次操作使用"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+button_icon_size = 19
+layout_mode = 0
+offset_left = 4.0
+offset_top = 48
+offset_right = 102.0
+offset_bottom = 67
+
+[node name="单位" type="Label" parent="内容框/结果区"]
+text = "个幸运符"
+horizontal_alignment = 0
+vertical_alignment = 1
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+mouse_filter = 2
+layout_mode = 0
+offset_left = 147.0
+offset_top = 48.0
+offset_right = 199.0
+offset_bottom = 68.0
+
+[node name="幸运符数量" type="MenuButton" parent="内容框/结果区"]
+theme_override_styles/normal = SubResource("sb_combo_normal")
+theme_override_styles/hover = SubResource("sb_combo_hover")
+theme_override_styles/pressed = SubResource("sb_combo_pressed")
+theme_override_styles/disabled = SubResource("sb_combo_disabled")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+flat = false
+text = "1"
+disabled = true
+alignment = 0
+layout_mode = 0
+offset_left = 102.0
+offset_top = 44.0
+offset_right = 147.0
+offset_bottom = 66.0
+
+[node name="分页" type="Control" parent="."]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 10
+offset_top = 9
+offset_right = 64.0
+offset_bottom = 31
+
+[node name="页签0" type="Button" parent="分页"]
+theme_override_styles/normal = SubResource("sb_tab_normal")
+theme_override_styles/hover = SubResource("sb_tab_hover")
+theme_override_styles/pressed = SubResource("sb_tab_pressed")
+theme_override_styles/hover_pressed = SubResource("sb_tab_hover_pressed")
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_disabled_color = Color(0.988235, 0.956863, 0.611765, 1)
+toggle_mode = true
+button_pressed = true
+text = "秘笈合成"
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 54.0
+offset_bottom = 22
+
+[node name="开始合成" type="Button" parent="."]
+text = "开始合成"
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+layout_mode = 0
+offset_left = 274.0
+offset_top = 325.0
+offset_right = 335.0
+offset_bottom = 347.0
+

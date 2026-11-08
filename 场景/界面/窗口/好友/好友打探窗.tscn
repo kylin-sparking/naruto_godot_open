@@ -1,0 +1,194 @@
+[gd_scene load_steps=9 format=3]
+
+[ext_resource type="Script" path="res://脚本/界面/窗口/好友/好友打探窗.gd" id="1_script"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/窗口边框.png" id="t1"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/关闭按钮.png" id="t2"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/子面板.png" id="t3"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/物品格.png" id="t4"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/好友/钮底30.png" id="t5"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/好友/钮底30.png" id="t6"]
+
+[ext_resource type="Script" path="res://脚本/界面/组件/原版三态钮.gd" id="9_三态"]
+
+
+
+[node name="好友打探窗" type="Control"]
+custom_minimum_size = Vector2(294, 215)
+script = ExtResource("1_script")
+窗名 = "好友打探窗"
+
+[node name="窗底" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 294.0
+offset_bottom = 215.0
+mouse_filter = 2
+texture = ExtResource("t1")
+patch_margin_left = 48
+patch_margin_top = 29
+patch_margin_right = 48
+patch_margin_bottom = 18
+
+[node name="标题" type="Label" parent="."]
+layout_mode = 0
+offset_left = 0.0
+offset_top = 5.0
+offset_right = 294.0
+offset_bottom = 23.0
+mouse_filter = 2
+text = "打探玩家"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_colors/font_color = Color(0.9882352941176471, 0.9568627450980393, 0.611764705882353, 1)
+
+[node name="关钮" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 263.0
+offset_top = 6.0
+offset_right = 288.0
+offset_bottom = 30.0
+focus_mode = 0
+ignore_texture_size = true
+texture_normal = ExtResource("t2")
+metadata/act = "关闭"
+script = ExtResource("9_三态")
+mouse_default_cursor_shape = 2
+
+[node name="橙说明" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 46.0
+offset_right = 270.0
+offset_bottom = 80.0
+mouse_filter = 2
+theme_override_constants/line_separation = 2
+theme_override_font_sizes/normal_font_size = 12
+theme_override_colors/default_color = Color(1.0, 0.4980392156862745, 0.0, 1)
+bbcode_enabled = true
+text = "打探玩家当前所在地图与具体座标需要消耗一个“%1”"
+scroll_active = false
+
+[node name="棕底" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 80.0
+offset_right = 280.0
+offset_bottom = 160.0
+mouse_filter = 2
+texture = ExtResource("t3")
+patch_margin_left = 8
+patch_margin_top = 7
+patch_margin_right = 7
+patch_margin_bottom = 7
+
+[node name="材料格" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 87.0
+offset_right = 61.0
+offset_bottom = 127.0
+mouse_filter = 2
+texture = ExtResource("t4")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="头像" type="Control" parent="."]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 107.0
+offset_right = 81.0
+offset_bottom = 147.0
+mouse_filter = 2
+
+[node name="信息串" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 84.0
+offset_right = 299.0
+offset_bottom = 141.0
+mouse_filter = 2
+theme_override_constants/line_separation = 2
+theme_override_font_sizes/normal_font_size = 12
+theme_override_colors/default_color = Color(1.0, 0.592156862745098, 0.25098039215686274, 1)
+bbcode_enabled = true
+text = " "
+scroll_active = false
+
+[node name="红字" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 160.0
+offset_right = 283.0
+offset_bottom = 179.0
+mouse_filter = 2
+theme_override_constants/line_separation = 2
+theme_override_font_sizes/normal_font_size = 12
+theme_override_colors/default_color = Color(1.0, 0.0, 0.0, 1)
+bbcode_enabled = true
+text = " "
+scroll_active = false
+
+[node name="材料盒" type="Control" parent="."]
+layout_mode = 0
+offset_left = 205.0
+offset_top = 67.0
+offset_right = 265.0
+offset_bottom = 131.0
+mouse_filter = 2
+
+[node name="打探钮" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 188.0
+offset_right = 70.0
+offset_bottom = 210.0
+focus_mode = 0
+ignore_texture_size = true
+texture_normal = ExtResource("t5")
+metadata/skin = "res://素材/界面/原版窗口/好友/钮底30"
+metadata/act = "打探钮"
+disabled = false
+
+[node name="Label" type="Label" parent="打探钮"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+text = "打探"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="取消钮" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 224.0
+offset_top = 188.0
+offset_right = 254.0
+offset_bottom = 210.0
+focus_mode = 0
+ignore_texture_size = true
+texture_normal = ExtResource("t6")
+metadata/skin = "res://素材/界面/原版窗口/好友/钮底30"
+metadata/act = "取消钮"
+disabled = false
+
+[node name="Label" type="Label" parent="取消钮"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+text = "取消"
+horizontal_alignment = 1
+vertical_alignment = 1

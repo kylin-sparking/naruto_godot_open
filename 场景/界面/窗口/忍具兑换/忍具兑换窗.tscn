@@ -1,0 +1,485 @@
+[gd_scene load_steps=19 format=3]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/内容面板.png" id="t1"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/子面板.png" id="t2"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/物品格.png" id="t3"]
+
+[ext_resource type="Texture2D" path="res://素材/原版直解/LingQi/LingQi_20100002_info_icon.swf_2_LingQi_20100002_info_icon.png" id="t4"]
+
+[ext_resource type="Shader" path="res://脚本/界面/组件/禁用灰度.gdshader" id="sh1"]
+
+[ext_resource type="Texture2D" path="res://素材/物品/原版/FuZhuWuPin/FuZhuWuPin_16000110_info.swf_1_FuZhuWuPin_16000110_info_icon.png" id="t5"]
+
+[ext_resource type="Texture2D" path="res://素材/物品/原版/FuZhuWuPin/FuZhuWuPin_16000111_info.swf_1_FuZhuWuPin_16000111_info_icon.png" id="t6"]
+
+[ext_resource type="Texture2D" path="res://素材/物品/原版/FuZhuWuPin/FuZhuWuPin_16000112_info.swf_1_FuZhuWuPin_16000112_info_icon.png" id="t7"]
+
+[ext_resource type="Texture2D" path="res://素材/物品/原版/FuZhuWuPin/FuZhuWuPin_16000113_info.swf_1_FuZhuWuPin_16000113_info_icon.png" id="t8"]
+
+[ext_resource type="Texture2D" path="res://素材/物品/原版/FuZhuWuPin/FuZhuWuPin_16000114_info.swf_1_FuZhuWuPin_16000114_info_icon.png" id="t9"]
+
+[ext_resource type="Texture2D" path="res://素材/物品/原版/FuZhuWuPin/FuZhuWuPin_16000115_info.swf_1_FuZhuWuPin_16000115_info_icon.png" id="t10"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/忍具兑换/兑换钮.png" id="t11"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/忍具兑换/兑换钮_悬停.png" id="t12"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/忍具兑换/兑换钮_按下.png" id="t13"]
+
+[sub_resource type="ShaderMaterial" id="mat1"]
+render_priority = 0
+transparency = 0
+shader = ExtResource("sh1")
+
+[sub_resource type="StyleBoxTexture" id="sb1_n"]
+texture = ExtResource("t11")
+
+[sub_resource type="StyleBoxTexture" id="sb1_h"]
+texture = ExtResource("t12")
+
+[sub_resource type="StyleBoxTexture" id="sb1_p"]
+texture = ExtResource("t13")
+
+[node name="原版忍具兑换内容" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 420
+offset_bottom = 221.0
+
+[node name="内容底" type="NinePatchRect" parent="."]
+texture = ExtResource("t1")
+patch_margin_left = 11
+patch_margin_right = 10
+patch_margin_top = 10
+patch_margin_bottom = 11
+layout_mode = 0
+offset_left = 8.0
+offset_top = 9.0
+offset_right = 412.0
+offset_bottom = 191.0
+
+[node name="子面板" type="NinePatchRect" parent="."]
+texture = ExtResource("t2")
+patch_margin_left = 8
+patch_margin_right = 7
+patch_margin_top = 7
+patch_margin_bottom = 7
+layout_mode = 0
+offset_left = 13.0
+offset_top = 14.0
+offset_right = 407.0
+offset_bottom = 187.0
+
+[node name="忍具格" type="Control" parent="子面板"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 18.0
+offset_top = 30.0
+offset_right = 18.0
+offset_bottom = 30.0
+
+[node name="忍具格_格" type="TextureRect" parent="子面板/忍具格"]
+texture = ExtResource("t3")
+mouse_filter = 2
+layout_mode = 0
+offset_left = -20.0
+offset_top = 20.0
+offset_right = 20.0
+offset_bottom = 60.0
+
+[node name="忍具格_格_数量" type="Label" parent="子面板/忍具格/忍具格_格"]
+text = "0"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 20
+offset_right = 40.0
+offset_bottom = 40
+
+[node name="忍具格_格_图标" type="TextureRect" parent="子面板/忍具格/忍具格_格"]
+texture = ExtResource("t4")
+expand_mode = 1
+mouse_filter = 2
+layout_mode = 0
+offset_left = 3
+offset_top = 3
+offset_right = 37
+offset_bottom = 37
+
+[node name="忍具格_名" type="Label" parent="子面板/忍具格/忍具格_格"]
+text = "忍具"
+theme_override_colors/font_color = Color(1.000000, 0.568627, 0.000000, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+visible = false
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0.0
+offset_top = 8.0
+offset_right = 40.0
+offset_bottom = 28.0
+
+[node name="说明" type="RichTextLabel" parent="子面板"]
+text = "源自上古三神器的灵镜，大蛇丸毕生寻觅的特殊神器。\n装备持有者可手动点击镜面自由切换水、火、风、雷单一防御属性;自身受到与镜面当前同属性忍术攻击时，削减10%对应职业技能忍术伤害。"
+scroll_active = false
+bbcode_enabled = true
+autowrap_mode = 3
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 6
+theme_override_colors/default_color = Color(1.000000, 1.000000, 1.000000, 1)
+layout_mode = 0
+offset_left = 73.0
+offset_top = 29.0
+offset_right = 382.0
+offset_bottom = 101.0
+
+[node name="碎片格1" type="Control" parent="子面板"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 50.0
+offset_top = 90.0
+offset_right = 90.0
+offset_bottom = 90.0
+
+[node name="碎片格1_格" type="TextureRect" parent="子面板/碎片格1"]
+material = SubResource("mat1")
+texture = ExtResource("t3")
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0.0
+offset_top = 20.0
+offset_right = 40.0
+offset_bottom = 60.0
+
+[node name="碎片格1_格_数量" type="Label" parent="子面板/碎片格1/碎片格1_格"]
+material = SubResource("mat1")
+text = "0"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 20
+offset_right = 40.0
+offset_bottom = 40
+
+[node name="碎片格1_格_图标" type="TextureRect" parent="子面板/碎片格1/碎片格1_格"]
+material = SubResource("mat1")
+texture = ExtResource("t5")
+expand_mode = 1
+mouse_filter = 2
+layout_mode = 0
+offset_left = 3
+offset_top = 3
+offset_right = 37
+offset_bottom = 37
+
+[node name="碎片格1_名" type="Label" parent="子面板/碎片格1/碎片格1_格"]
+text = "碎片1"
+theme_override_colors/font_color = Color(1.000000, 0.568627, 0.000000, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+visible = false
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0.0
+offset_top = 8.0
+offset_right = 40.0
+offset_bottom = 28.0
+
+[node name="碎片格2" type="Control" parent="子面板"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 100.0
+offset_top = 90.0
+offset_right = 140.0
+offset_bottom = 90.0
+
+[node name="碎片格2_格" type="TextureRect" parent="子面板/碎片格2"]
+material = SubResource("mat1")
+texture = ExtResource("t3")
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0.0
+offset_top = 20.0
+offset_right = 40.0
+offset_bottom = 60.0
+
+[node name="碎片格2_格_数量" type="Label" parent="子面板/碎片格2/碎片格2_格"]
+material = SubResource("mat1")
+text = "0"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 20
+offset_right = 40.0
+offset_bottom = 40
+
+[node name="碎片格2_格_图标" type="TextureRect" parent="子面板/碎片格2/碎片格2_格"]
+material = SubResource("mat1")
+texture = ExtResource("t6")
+expand_mode = 1
+mouse_filter = 2
+layout_mode = 0
+offset_left = 3
+offset_top = 3
+offset_right = 37
+offset_bottom = 37
+
+[node name="碎片格2_名" type="Label" parent="子面板/碎片格2/碎片格2_格"]
+text = "碎片2"
+theme_override_colors/font_color = Color(1.000000, 0.568627, 0.000000, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+visible = false
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0.0
+offset_top = 8.0
+offset_right = 40.0
+offset_bottom = 28.0
+
+[node name="碎片格3" type="Control" parent="子面板"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 150.0
+offset_top = 90.0
+offset_right = 190.0
+offset_bottom = 90.0
+
+[node name="碎片格3_格" type="TextureRect" parent="子面板/碎片格3"]
+material = SubResource("mat1")
+texture = ExtResource("t3")
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0.0
+offset_top = 20.0
+offset_right = 40.0
+offset_bottom = 60.0
+
+[node name="碎片格3_格_数量" type="Label" parent="子面板/碎片格3/碎片格3_格"]
+material = SubResource("mat1")
+text = "0"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 20
+offset_right = 40.0
+offset_bottom = 40
+
+[node name="碎片格3_格_图标" type="TextureRect" parent="子面板/碎片格3/碎片格3_格"]
+material = SubResource("mat1")
+texture = ExtResource("t7")
+expand_mode = 1
+mouse_filter = 2
+layout_mode = 0
+offset_left = 3
+offset_top = 3
+offset_right = 37
+offset_bottom = 37
+
+[node name="碎片格3_名" type="Label" parent="子面板/碎片格3/碎片格3_格"]
+text = "碎片3"
+theme_override_colors/font_color = Color(1.000000, 0.568627, 0.000000, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+visible = false
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0.0
+offset_top = 8.0
+offset_right = 40.0
+offset_bottom = 28.0
+
+[node name="碎片格4" type="Control" parent="子面板"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 200.0
+offset_top = 90.0
+offset_right = 240.0
+offset_bottom = 90.0
+
+[node name="碎片格4_格" type="TextureRect" parent="子面板/碎片格4"]
+material = SubResource("mat1")
+texture = ExtResource("t3")
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0.0
+offset_top = 20.0
+offset_right = 40.0
+offset_bottom = 60.0
+
+[node name="碎片格4_格_数量" type="Label" parent="子面板/碎片格4/碎片格4_格"]
+material = SubResource("mat1")
+text = "0"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 20
+offset_right = 40.0
+offset_bottom = 40
+
+[node name="碎片格4_格_图标" type="TextureRect" parent="子面板/碎片格4/碎片格4_格"]
+material = SubResource("mat1")
+texture = ExtResource("t8")
+expand_mode = 1
+mouse_filter = 2
+layout_mode = 0
+offset_left = 3
+offset_top = 3
+offset_right = 37
+offset_bottom = 37
+
+[node name="碎片格4_名" type="Label" parent="子面板/碎片格4/碎片格4_格"]
+text = "碎片4"
+theme_override_colors/font_color = Color(1.000000, 0.568627, 0.000000, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+visible = false
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0.0
+offset_top = 8.0
+offset_right = 40.0
+offset_bottom = 28.0
+
+[node name="碎片格5" type="Control" parent="子面板"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 250.0
+offset_top = 90.0
+offset_right = 290.0
+offset_bottom = 90.0
+
+[node name="碎片格5_格" type="TextureRect" parent="子面板/碎片格5"]
+material = SubResource("mat1")
+texture = ExtResource("t3")
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0.0
+offset_top = 20.0
+offset_right = 40.0
+offset_bottom = 60.0
+
+[node name="碎片格5_格_数量" type="Label" parent="子面板/碎片格5/碎片格5_格"]
+material = SubResource("mat1")
+text = "0"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 20
+offset_right = 40.0
+offset_bottom = 40
+
+[node name="碎片格5_格_图标" type="TextureRect" parent="子面板/碎片格5/碎片格5_格"]
+material = SubResource("mat1")
+texture = ExtResource("t9")
+expand_mode = 1
+mouse_filter = 2
+layout_mode = 0
+offset_left = 3
+offset_top = 3
+offset_right = 37
+offset_bottom = 37
+
+[node name="碎片格5_名" type="Label" parent="子面板/碎片格5/碎片格5_格"]
+text = "碎片5"
+theme_override_colors/font_color = Color(1.000000, 0.568627, 0.000000, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+visible = false
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0.0
+offset_top = 8.0
+offset_right = 40.0
+offset_bottom = 28.0
+
+[node name="碎片格6" type="Control" parent="子面板"]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 300.0
+offset_top = 90.0
+offset_right = 340.0
+offset_bottom = 90.0
+
+[node name="碎片格6_格" type="TextureRect" parent="子面板/碎片格6"]
+material = SubResource("mat1")
+texture = ExtResource("t3")
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0.0
+offset_top = 20.0
+offset_right = 40.0
+offset_bottom = 60.0
+
+[node name="碎片格6_格_数量" type="Label" parent="子面板/碎片格6/碎片格6_格"]
+material = SubResource("mat1")
+text = "0"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 20
+offset_right = 40.0
+offset_bottom = 40
+
+[node name="碎片格6_格_图标" type="TextureRect" parent="子面板/碎片格6/碎片格6_格"]
+material = SubResource("mat1")
+texture = ExtResource("t10")
+expand_mode = 1
+mouse_filter = 2
+layout_mode = 0
+offset_left = 3
+offset_top = 3
+offset_right = 37
+offset_bottom = 37
+
+[node name="碎片格6_名" type="Label" parent="子面板/碎片格6/碎片格6_格"]
+text = "碎片6"
+theme_override_colors/font_color = Color(1.000000, 0.568627, 0.000000, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+visible = false
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0.0
+offset_top = 8.0
+offset_right = 40.0
+offset_bottom = 28.0
+
+[node name="兑换钮" type="Button" parent="."]
+theme_override_styles/normal = SubResource("sb1_n")
+theme_override_styles/hover = SubResource("sb1_h")
+theme_override_styles/pressed = SubResource("sb1_p")
+text = "兑换"
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+layout_mode = 0
+offset_left = 166.5
+offset_top = 194.0
+offset_right = 227.5
+offset_bottom = 216.0

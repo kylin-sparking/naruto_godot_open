@@ -1,0 +1,546 @@
+[gd_scene load_steps=22 format=3]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/子面板.png" id="t1"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/护送/列表分隔条2.png" id="t2"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/护送/奖卡底.png" id="t3"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/护送/奖卡图标0.png" id="t4"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/护送/奖卡选中框.png" id="t5"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/护送/奖卡图标1.png" id="t6"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/护送/奖卡图标2.png" id="t7"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/护送/奖卡图标3.png" id="t8"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/护送/奖卡图标4.png" id="t9"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/护送/刷新钮.png" id="t10"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/护送/刷新钮_悬停.png" id="t11"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/护送/刷新钮_按下.png" id="t12"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/护送/开始钮.png" id="t13"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/护送/开始钮_悬停.png" id="t14"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/护送/开始钮_按下.png" id="t15"]
+
+[sub_resource type="StyleBoxTexture" id="sb1_n"]
+texture = ExtResource("t10")
+
+[sub_resource type="StyleBoxTexture" id="sb1_h"]
+texture = ExtResource("t11")
+
+[sub_resource type="StyleBoxTexture" id="sb1_p"]
+texture = ExtResource("t12")
+
+[sub_resource type="StyleBoxTexture" id="sb2_n"]
+texture = ExtResource("t13")
+
+[sub_resource type="StyleBoxTexture" id="sb2_h"]
+texture = ExtResource("t14")
+
+[sub_resource type="StyleBoxTexture" id="sb2_p"]
+texture = ExtResource("t15")
+
+[node name="原版护送任务内容" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 578
+offset_bottom = 313.0
+
+[node name="上区底" type="NinePatchRect" parent="."]
+texture = ExtResource("t1")
+patch_margin_left = 8
+patch_margin_right = 7
+patch_margin_top = 7
+patch_margin_bottom = 7
+layout_mode = 0
+offset_left = 13.0
+offset_top = 6.0
+offset_right = 565.0
+offset_bottom = 175.0
+
+[node name="左下底" type="NinePatchRect" parent="."]
+texture = ExtResource("t1")
+patch_margin_left = 8
+patch_margin_right = 7
+patch_margin_top = 7
+patch_margin_bottom = 7
+layout_mode = 0
+offset_left = 13.0
+offset_top = 175.0
+offset_right = 220.0
+offset_bottom = 270.0
+
+[node name="中下底" type="NinePatchRect" parent="."]
+texture = ExtResource("t1")
+patch_margin_left = 8
+patch_margin_right = 7
+patch_margin_top = 7
+patch_margin_bottom = 7
+layout_mode = 0
+offset_left = 222.0
+offset_top = 175.0
+offset_right = 406.0
+offset_bottom = 270.0
+
+[node name="右下底" type="NinePatchRect" parent="."]
+texture = ExtResource("t1")
+patch_margin_left = 8
+patch_margin_right = 7
+patch_margin_top = 7
+patch_margin_bottom = 7
+layout_mode = 0
+offset_left = 408.0
+offset_top = 175.0
+offset_right = 565.0
+offset_bottom = 270.0
+
+[node name="等级条底" type="TextureRect" parent="."]
+texture = ExtResource("t2")
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 0
+layout_mode = 0
+offset_left = 18.0
+offset_top = 11.0
+offset_right = 554.0
+offset_bottom = 36.0
+
+[node name="等级文本" type="RichTextLabel" parent="."]
+text = "当前护送等级："
+scroll_active = false
+bbcode_enabled = true
+autowrap_mode = 3
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 6
+horizontal_alignment = 1
+layout_mode = 0
+offset_left = 23.0
+offset_top = 13.0
+offset_right = 554.0
+offset_bottom = 33.0
+
+[node name="奖格0" type="Control" parent="."]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 28.0
+offset_top = 46.0
+offset_right = 124.0
+offset_bottom = 172.0
+
+[node name="奖格0底" type="NinePatchRect" parent="奖格0"]
+texture = ExtResource("t3")
+patch_margin_left = 0
+patch_margin_right = 0
+patch_margin_top = 0
+patch_margin_bottom = 0
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 96.0
+offset_bottom = 96.0
+
+[node name="奖格0图标" type="TextureRect" parent="奖格0"]
+texture = ExtResource("t4")
+mouse_filter = 2
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 93.0
+offset_bottom = 93.0
+
+[node name="奖格0名" type="Label" parent="奖格0"]
+text = "D级"
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+layout_mode = 0
+offset_left = 5.0
+offset_top = 101.0
+offset_right = 91.0
+offset_bottom = 126.0
+
+[node name="奖格0选中" type="NinePatchRect" parent="奖格0"]
+texture = ExtResource("t5")
+patch_margin_left = 0
+patch_margin_right = 0
+patch_margin_top = 0
+patch_margin_bottom = 0
+visible = false
+layout_mode = 0
+offset_left = -7.0
+offset_top = -7.0
+offset_right = 99.0
+offset_bottom = 99.0
+
+[node name="奖格1" type="Control" parent="."]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 134.0
+offset_top = 46.0
+offset_right = 230.0
+offset_bottom = 172.0
+
+[node name="奖格1底" type="NinePatchRect" parent="奖格1"]
+texture = ExtResource("t3")
+patch_margin_left = 0
+patch_margin_right = 0
+patch_margin_top = 0
+patch_margin_bottom = 0
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 96.0
+offset_bottom = 96.0
+
+[node name="奖格1图标" type="TextureRect" parent="奖格1"]
+texture = ExtResource("t6")
+mouse_filter = 2
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 93.0
+offset_bottom = 93.0
+
+[node name="奖格1名" type="Label" parent="奖格1"]
+text = "C级"
+theme_override_colors/font_color = Color(0.000000, 1.000000, 0.000000, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+layout_mode = 0
+offset_left = 5.0
+offset_top = 101.0
+offset_right = 91.0
+offset_bottom = 126.0
+
+[node name="奖格1选中" type="NinePatchRect" parent="奖格1"]
+texture = ExtResource("t5")
+patch_margin_left = 0
+patch_margin_right = 0
+patch_margin_top = 0
+patch_margin_bottom = 0
+visible = false
+layout_mode = 0
+offset_left = -7.0
+offset_top = -7.0
+offset_right = 99.0
+offset_bottom = 99.0
+
+[node name="奖格2" type="Control" parent="."]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 240.0
+offset_top = 46.0
+offset_right = 336.0
+offset_bottom = 172.0
+
+[node name="奖格2底" type="NinePatchRect" parent="奖格2"]
+texture = ExtResource("t3")
+patch_margin_left = 0
+patch_margin_right = 0
+patch_margin_top = 0
+patch_margin_bottom = 0
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 96.0
+offset_bottom = 96.0
+
+[node name="奖格2图标" type="TextureRect" parent="奖格2"]
+texture = ExtResource("t7")
+mouse_filter = 2
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 93.0
+offset_bottom = 93.0
+
+[node name="奖格2名" type="Label" parent="奖格2"]
+text = "B级"
+theme_override_colors/font_color = Color(0.117647, 0.564706, 1.000000, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+layout_mode = 0
+offset_left = 5.0
+offset_top = 101.0
+offset_right = 91.0
+offset_bottom = 126.0
+
+[node name="奖格2选中" type="NinePatchRect" parent="奖格2"]
+texture = ExtResource("t5")
+patch_margin_left = 0
+patch_margin_right = 0
+patch_margin_top = 0
+patch_margin_bottom = 0
+visible = false
+layout_mode = 0
+offset_left = -7.0
+offset_top = -7.0
+offset_right = 99.0
+offset_bottom = 99.0
+
+[node name="奖格3" type="Control" parent="."]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 346.0
+offset_top = 46.0
+offset_right = 442.0
+offset_bottom = 172.0
+
+[node name="奖格3底" type="NinePatchRect" parent="奖格3"]
+texture = ExtResource("t3")
+patch_margin_left = 0
+patch_margin_right = 0
+patch_margin_top = 0
+patch_margin_bottom = 0
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 96.0
+offset_bottom = 96.0
+
+[node name="奖格3图标" type="TextureRect" parent="奖格3"]
+texture = ExtResource("t8")
+mouse_filter = 2
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 93.0
+offset_bottom = 93.0
+
+[node name="奖格3名" type="Label" parent="奖格3"]
+text = "A级"
+theme_override_colors/font_color = Color(1.000000, 0.490196, 0.815686, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+layout_mode = 0
+offset_left = 5.0
+offset_top = 101.0
+offset_right = 91.0
+offset_bottom = 126.0
+
+[node name="奖格3选中" type="NinePatchRect" parent="奖格3"]
+texture = ExtResource("t5")
+patch_margin_left = 0
+patch_margin_right = 0
+patch_margin_top = 0
+patch_margin_bottom = 0
+visible = false
+layout_mode = 0
+offset_left = -7.0
+offset_top = -7.0
+offset_right = 99.0
+offset_bottom = 99.0
+
+[node name="奖格4" type="Control" parent="."]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 452.0
+offset_top = 46.0
+offset_right = 548.0
+offset_bottom = 172.0
+
+[node name="奖格4底" type="NinePatchRect" parent="奖格4"]
+texture = ExtResource("t3")
+patch_margin_left = 0
+patch_margin_right = 0
+patch_margin_top = 0
+patch_margin_bottom = 0
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 96.0
+offset_bottom = 96.0
+
+[node name="奖格4图标" type="TextureRect" parent="奖格4"]
+texture = ExtResource("t9")
+mouse_filter = 2
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 93.0
+offset_bottom = 93.0
+
+[node name="奖格4名" type="Label" parent="奖格4"]
+text = "S级"
+theme_override_colors/font_color = Color(1.000000, 0.568627, 0.000000, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+layout_mode = 0
+offset_left = 5.0
+offset_top = 101.0
+offset_right = 91.0
+offset_bottom = 126.0
+
+[node name="奖格4选中" type="NinePatchRect" parent="奖格4"]
+texture = ExtResource("t5")
+patch_margin_left = 0
+patch_margin_right = 0
+patch_margin_top = 0
+patch_margin_bottom = 0
+visible = false
+layout_mode = 0
+offset_left = -7.0
+offset_top = -7.0
+offset_right = 99.0
+offset_bottom = 99.0
+
+[node name="双倍说明" type="RichTextLabel" parent="."]
+text = "每天20:00-20:30护送有双倍奖励，被打劫后还能获得一半奖励。"
+scroll_active = false
+bbcode_enabled = true
+autowrap_mode = 3
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 6
+layout_mode = 0
+offset_left = 21.0
+offset_top = 183.0
+offset_right = 220.0
+offset_bottom = 262.0
+
+[node name="护送规则钮" type="RichTextLabel" parent="."]
+text = "[u]护送规则[/u]"
+scroll_active = false
+bbcode_enabled = true
+autowrap_mode = 3
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 6
+horizontal_alignment = 1
+theme_override_colors/default_color = Color(0.117647, 0.564706, 1.000000, 1)
+layout_mode = 0
+offset_left = 157.0
+offset_top = 234.0
+offset_right = 218.0
+offset_bottom = 254.0
+
+[node name="时间条" type="RichTextLabel" parent="."]
+text = "护送时间："
+scroll_active = false
+bbcode_enabled = true
+autowrap_mode = 3
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 6
+layout_mode = 0
+offset_left = 227.0
+offset_top = 183.0
+offset_right = 406.0
+offset_bottom = 203.0
+
+[node name="经验条" type="RichTextLabel" parent="."]
+text = "护送奖励："
+scroll_active = false
+bbcode_enabled = true
+autowrap_mode = 3
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 6
+layout_mode = 0
+offset_left = 227.0
+offset_top = 203.0
+offset_right = 406.0
+offset_bottom = 223.0
+
+[node name="精华条" type="RichTextLabel" parent="."]
+text = ""
+scroll_active = false
+bbcode_enabled = true
+autowrap_mode = 3
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 6
+layout_mode = 0
+offset_left = 287.0
+offset_top = 223.0
+offset_right = 359.0
+offset_bottom = 243.0
+
+[node name="气血条" type="RichTextLabel" parent="."]
+text = "气血加成："
+scroll_active = false
+bbcode_enabled = true
+autowrap_mode = 3
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 6
+layout_mode = 0
+offset_left = 227.0
+offset_top = 243.0
+offset_right = 406.0
+offset_bottom = 263.0
+
+[node name="刷新钮" type="Button" parent="."]
+theme_override_styles/normal = SubResource("sb1_n")
+theme_override_styles/hover = SubResource("sb1_h")
+theme_override_styles/pressed = SubResource("sb1_p")
+text = "刷新任务"
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+layout_mode = 0
+offset_left = 456.0
+offset_top = 191.0
+offset_right = 517.0
+offset_bottom = 213.0
+
+[node name="自动刷新槽" type="Control" parent="."]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 416.0
+offset_top = 221.0
+offset_right = 461.0
+offset_bottom = 240.0
+
+[node name="品质下拉槽" type="Control" parent="."]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 463.0
+offset_top = 221.0
+offset_right = 523.0
+offset_bottom = 241.0
+
+[node name="为止" type="Label" parent="."]
+text = "为止"
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 523.0
+offset_top = 221.0
+offset_right = 583.0
+offset_bottom = 241.0
+
+[node name="免费刷新数" type="RichTextLabel" parent="."]
+text = ""
+scroll_active = false
+bbcode_enabled = true
+autowrap_mode = 3
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 6
+horizontal_alignment = 1
+layout_mode = 0
+offset_left = 413.0
+offset_top = 241.0
+offset_right = 565.0
+offset_bottom = 261.0
+
+[node name="开始钮" type="Button" parent="."]
+theme_override_styles/normal = SubResource("sb2_n")
+theme_override_styles/hover = SubResource("sb2_h")
+theme_override_styles/pressed = SubResource("sb2_p")
+text = "开启护送"
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+layout_mode = 0
+offset_left = 258.5
+offset_top = 283.0
+offset_right = 319.5
+offset_bottom = 305.0

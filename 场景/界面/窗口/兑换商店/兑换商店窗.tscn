@@ -1,0 +1,64 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/内容面板.png" id="t1"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/子面板.png" id="t2"]
+
+[node name="原版兑换商店内容" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 720
+offset_bottom = 511.0
+
+[node name="内容底" type="NinePatchRect" parent="."]
+texture = ExtResource("t1")
+patch_margin_left = 11
+patch_margin_right = 10
+patch_margin_top = 10
+patch_margin_bottom = 11
+layout_mode = 0
+offset_left = 6.0
+offset_top = 10.0
+offset_right = 714.0
+offset_bottom = 506.0
+
+[node name="列表面板" type="NinePatchRect" parent="."]
+texture = ExtResource("t2")
+patch_margin_left = 8
+patch_margin_right = 7
+patch_margin_top = 7
+patch_margin_bottom = 7
+layout_mode = 0
+offset_left = 11.0
+offset_top = 36.0
+offset_right = 709.0
+offset_bottom = 502.0
+
+[node name="说明" type="RichTextLabel" parent="."]
+text = "[color=#00ff00]免费兑换顶级物品，机会不可错过哦！[color=#ff0000]（请注意活动时间和剩余总量）[/color][/color]"
+scroll_active = false
+bbcode_enabled = true
+autowrap_mode = 3
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 0
+layout_mode = 0
+offset_left = 11.0
+offset_top = 14.0
+offset_right = 709.0
+offset_bottom = 32.0
+
+[node name="兑换列表" type="ScrollContainer" parent="."]
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 1
+layout_mode = 0
+offset_left = 14.0
+offset_top = 40.0
+offset_right = 702.0
+offset_bottom = 498.0
+
+[node name="兑换列表_内容" type="Control" parent="兑换列表"]
+mouse_filter = 2
+layout_mode = 0
+offset_right = 688.0
+offset_bottom = 458.0
+custom_minimum_size = Vector2(688.0, 458.0)

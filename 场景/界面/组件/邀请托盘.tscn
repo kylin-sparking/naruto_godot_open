@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://脚本/界面/邀请托盘.gd" id="1_tray"]
+
+[node name="邀请托盘" type="Control"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 100.0
+offset_right = 880.0
+offset_bottom = 150.0
+mouse_filter = 2
+script = ExtResource("1_tray")

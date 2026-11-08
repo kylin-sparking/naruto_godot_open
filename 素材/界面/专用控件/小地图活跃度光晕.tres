@@ -1,0 +1,89 @@
+[gd_resource type="AnimatedTexture" format=3]
+
+[ext_resource type="Texture2D" path="res://素材/界面/专用控件/小地图活跃度光晕/光晕_00.png" id="1_rwp2o"]
+[ext_resource type="Texture2D" path="res://素材/界面/专用控件/小地图活跃度光晕/光晕_01.png" id="2_cnkgo"]
+[ext_resource type="Texture2D" path="res://素材/界面/专用控件/小地图活跃度光晕/光晕_10.png" id="3_hfxjs"]
+[ext_resource type="Texture2D" path="res://素材/界面/专用控件/小地图活跃度光晕/光晕_11.png" id="4_q8t35"]
+[ext_resource type="Texture2D" path="res://素材/界面/专用控件/小地图活跃度光晕/光晕_12.png" id="5_4o4sp"]
+[ext_resource type="Texture2D" path="res://素材/界面/专用控件/小地图活跃度光晕/光晕_13.png" id="6_rwhj7"]
+[ext_resource type="Texture2D" path="res://素材/界面/专用控件/小地图活跃度光晕/光晕_14.png" id="7_ykyfs"]
+[ext_resource type="Texture2D" path="res://素材/界面/专用控件/小地图活跃度光晕/光晕_15.png" id="8_ehs2e"]
+[ext_resource type="Texture2D" path="res://素材/界面/专用控件/小地图活跃度光晕/光晕_16.png" id="9_67gj1"]
+[ext_resource type="Texture2D" path="res://素材/界面/专用控件/小地图活跃度光晕/光晕_17.png" id="10_2wufn"]
+[ext_resource type="Texture2D" path="res://素材/界面/专用控件/小地图活跃度光晕/光晕_18.png" id="11_8a8q4"]
+[ext_resource type="Texture2D" path="res://素材/界面/专用控件/小地图活跃度光晕/光晕_19.png" id="12_d7sjb"]
+[ext_resource type="Texture2D" path="res://素材/界面/专用控件/小地图活跃度光晕/光晕_02.png" id="13_avlll"]
+[ext_resource type="Texture2D" path="res://素材/界面/专用控件/小地图活跃度光晕/光晕_20.png" id="14_7xh8q"]
+[ext_resource type="Texture2D" path="res://素材/界面/专用控件/小地图活跃度光晕/光晕_21.png" id="15_duse2"]
+[ext_resource type="Texture2D" path="res://素材/界面/专用控件/小地图活跃度光晕/光晕_22.png" id="16_0y62o"]
+[ext_resource type="Texture2D" path="res://素材/界面/专用控件/小地图活跃度光晕/光晕_23.png" id="17_42d2c"]
+[ext_resource type="Texture2D" path="res://素材/界面/专用控件/小地图活跃度光晕/光晕_24.png" id="18_dykvc"]
+[ext_resource type="Texture2D" path="res://素材/界面/专用控件/小地图活跃度光晕/光晕_25.png" id="19_aowef"]
+[ext_resource type="Texture2D" path="res://素材/界面/专用控件/小地图活跃度光晕/光晕_26.png" id="20_4mfke"]
+[ext_resource type="Texture2D" path="res://素材/界面/专用控件/小地图活跃度光晕/光晕_27.png" id="21_wlk8b"]
+[ext_resource type="Texture2D" path="res://素材/界面/专用控件/小地图活跃度光晕/光晕_03.png" id="22_oqpor"]
+[ext_resource type="Texture2D" path="res://素材/界面/专用控件/小地图活跃度光晕/光晕_04.png" id="23_35ptp"]
+[ext_resource type="Texture2D" path="res://素材/界面/专用控件/小地图活跃度光晕/光晕_05.png" id="24_ikvqf"]
+[ext_resource type="Texture2D" path="res://素材/界面/专用控件/小地图活跃度光晕/光晕_06.png" id="25_aaq7s"]
+[ext_resource type="Texture2D" path="res://素材/界面/专用控件/小地图活跃度光晕/光晕_07.png" id="26_yohcg"]
+[ext_resource type="Texture2D" path="res://素材/界面/专用控件/小地图活跃度光晕/光晕_08.png" id="27_i6mjr"]
+[ext_resource type="Texture2D" path="res://素材/界面/专用控件/小地图活跃度光晕/光晕_09.png" id="28_klc6l"]
+
+[resource]
+frames = 28
+frame_0/texture = ExtResource("1_rwp2o")
+frame_0/duration = 0.041666668
+frame_1/texture = ExtResource("2_cnkgo")
+frame_1/duration = 0.041666668
+frame_2/texture = ExtResource("13_avlll")
+frame_2/duration = 0.041666668
+frame_3/texture = ExtResource("22_oqpor")
+frame_3/duration = 0.041666668
+frame_4/texture = ExtResource("23_35ptp")
+frame_4/duration = 0.041666668
+frame_5/texture = ExtResource("24_ikvqf")
+frame_5/duration = 0.041666668
+frame_6/texture = ExtResource("25_aaq7s")
+frame_6/duration = 0.041666668
+frame_7/texture = ExtResource("26_yohcg")
+frame_7/duration = 0.041666668
+frame_8/texture = ExtResource("27_i6mjr")
+frame_8/duration = 0.041666668
+frame_9/texture = ExtResource("28_klc6l")
+frame_9/duration = 0.041666668
+frame_10/texture = ExtResource("3_hfxjs")
+frame_10/duration = 0.041666668
+frame_11/texture = ExtResource("4_q8t35")
+frame_11/duration = 0.041666668
+frame_12/texture = ExtResource("5_4o4sp")
+frame_12/duration = 0.041666668
+frame_13/texture = ExtResource("6_rwhj7")
+frame_13/duration = 0.041666668
+frame_14/texture = ExtResource("7_ykyfs")
+frame_14/duration = 0.041666668
+frame_15/texture = ExtResource("8_ehs2e")
+frame_15/duration = 0.041666668
+frame_16/texture = ExtResource("9_67gj1")
+frame_16/duration = 0.041666668
+frame_17/texture = ExtResource("10_2wufn")
+frame_17/duration = 0.041666668
+frame_18/texture = ExtResource("11_8a8q4")
+frame_18/duration = 0.041666668
+frame_19/texture = ExtResource("12_d7sjb")
+frame_19/duration = 0.041666668
+frame_20/texture = ExtResource("14_7xh8q")
+frame_20/duration = 0.041666668
+frame_21/texture = ExtResource("15_duse2")
+frame_21/duration = 0.041666668
+frame_22/texture = ExtResource("16_0y62o")
+frame_22/duration = 0.041666668
+frame_23/texture = ExtResource("17_42d2c")
+frame_23/duration = 0.041666668
+frame_24/texture = ExtResource("18_dykvc")
+frame_24/duration = 0.041666668
+frame_25/texture = ExtResource("19_aowef")
+frame_25/duration = 0.041666668
+frame_26/texture = ExtResource("20_4mfke")
+frame_26/duration = 0.041666668
+frame_27/texture = ExtResource("21_wlk8b")
+frame_27/duration = 0.041666668

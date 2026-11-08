@@ -1,0 +1,348 @@
+[gd_scene load_steps=18 format=3]
+
+[ext_resource type="Script" path="res://脚本/界面/窗口/家族/家族子窗.gd" id="1_script"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/输入框.png" id="t1"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/家族/钮底.png" id="t2"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/横向分隔线.png" id="t3"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/家族/盒底.png" id="t4"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/家族/表头竖分隔线.png" id="t5"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/家族/表头竖分隔线.png" id="t6"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/横向分隔线.png" id="t7"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/上一页.png" id="t8"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/下一页.png" id="t9"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/家族/钮底.png" id="t10"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/家族/钮底.png" id="t11"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/家族/钮底.png" id="t12"]
+
+
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/家族/钮底37.png" id="t13"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/家族/钮底61.png" id="t14"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty1"]
+
+
+
+[node name="家族搜索窗" type="Control"]
+custom_minimum_size = Vector2(274, 262)
+script = ExtResource("1_script")
+窗名 = "家族搜索窗"
+
+[node name="标签玩家名" type="Label" parent="."]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 5.0
+offset_right = 94.0
+offset_bottom = 25.0
+mouse_filter = 2
+text = "玩家名："
+vertical_alignment = 1
+clip_text = true
+
+[node name="输入玩家名底" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 94.0
+offset_top = 5.0
+offset_right = 208.0
+offset_bottom = 26.0
+mouse_filter = 2
+texture = ExtResource("t1")
+patch_margin_left = 6
+patch_margin_top = 5
+patch_margin_right = 7
+patch_margin_bottom = 6
+
+[node name="输入玩家名" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 94.0
+offset_top = 5.0
+offset_right = 208.0
+offset_bottom = 26.0
+placeholder_text = ""
+theme_override_styles/normal = SubResource("StyleBoxEmpty1")
+theme_override_styles/focus = SubResource("StyleBoxEmpty1")
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.0, 1.0, 0.0, 1)
+text = ""
+max_length = 12
+
+[node name="钮搜索" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 210.0
+offset_top = 5.0
+offset_right = 247.0
+offset_bottom = 27.0
+texture_normal = ExtResource("t13")
+expand_mode = 1
+stretch_mode = 0
+focus_mode = 0
+ignore_texture_size = true
+metadata/skin = "res://素材/界面/原版窗口/家族/钮底37"
+metadata/act = "搜索"
+
+[node name="Label" type="Label" parent="钮搜索"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+text = "搜索"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="线上" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 30.0
+offset_right = 269.0
+offset_bottom = 32.0
+mouse_filter = 2
+texture = ExtResource("t3")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="标签查找结果" type="Label" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 30.0
+offset_right = 57.0
+offset_bottom = 49.0
+mouse_filter = 2
+text = "查找结果"
+vertical_alignment = 1
+clip_text = true
+
+[node name="盒列表皮肤" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 51.0
+offset_right = 269.0
+offset_bottom = 194.0
+mouse_filter = 2
+texture = ExtResource("t4")
+patch_margin_left = 8
+patch_margin_top = 7
+patch_margin_right = 7
+patch_margin_bottom = 7
+
+[node name="列表" type="Control" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 76.0
+offset_right = 266.0
+offset_bottom = 191.0
+mouse_filter = 2
+clip_contents = true
+
+[node name="列查询0" type="Label" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 52.0
+offset_right = 143.0
+offset_bottom = 71.0
+mouse_filter = 2
+horizontal_alignment = 1
+text = "玩家姓名"
+theme_override_colors/font_color = Color(0.9921568627450981, 0.807843137254902, 0.6, 1)
+vertical_alignment = 1
+clip_text = true
+
+[node name="竖分隔查询竖0" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 143.0
+offset_top = 54.0
+offset_right = 145.0
+offset_bottom = 74.0
+mouse_filter = 2
+texture = ExtResource("t5")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="列查询1" type="Label" parent="."]
+layout_mode = 0
+offset_left = 143.0
+offset_top = 52.0
+offset_right = 196.0
+offset_bottom = 71.0
+mouse_filter = 2
+horizontal_alignment = 1
+text = "等级"
+theme_override_colors/font_color = Color(0.9921568627450981, 0.807843137254902, 0.6, 1)
+vertical_alignment = 1
+clip_text = true
+
+[node name="竖分隔查询竖1" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 196.0
+offset_top = 54.0
+offset_right = 198.0
+offset_bottom = 74.0
+mouse_filter = 2
+texture = ExtResource("t6")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="列查询2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 196.0
+offset_top = 52.0
+offset_right = 266.0
+offset_bottom = 71.0
+mouse_filter = 2
+horizontal_alignment = 1
+text = "门派"
+theme_override_colors/font_color = Color(0.9921568627450981, 0.807843137254902, 0.6, 1)
+vertical_alignment = 1
+clip_text = true
+
+[node name="线下" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 74.0
+offset_right = 266.0
+offset_bottom = 76.0
+mouse_filter = 2
+texture = ExtResource("t7")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="标签模糊提示" type="Label" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 197.0
+offset_right = 141.0
+offset_bottom = 216.0
+mouse_filter = 2
+text = "本处支持模糊玩家名搜索"
+theme_override_colors/font_color = Color(1.0, 0.4980392156862745, 0.0, 1)
+vertical_alignment = 1
+clip_text = true
+
+[node name="分页短分页" type="Control" parent="."]
+layout_mode = 0
+offset_left = 188.0
+offset_top = 200.0
+offset_right = 272.0
+offset_bottom = 218.0
+
+[node name="上一页" type="TextureButton" parent="分页短分页"]
+layout_mode = 0
+offset_left = 0.0
+offset_right = 15.0
+offset_bottom = 13.0
+focus_mode = 0
+texture_normal = ExtResource("t8")
+ignore_texture_size = true
+
+[node name="页码" type="Label" parent="分页短分页"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = -2.0
+offset_right = 67.0
+offset_bottom = 16.0
+mouse_filter = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+text = "1/1"
+
+[node name="下一页" type="TextureButton" parent="分页短分页"]
+layout_mode = 0
+offset_left = 69.0
+offset_right = 84.0
+offset_bottom = 13.0
+focus_mode = 0
+texture_normal = ExtResource("t9")
+ignore_texture_size = true
+
+[node name="钮查看资料" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 235.0
+offset_right = 93.0
+offset_bottom = 257.0
+texture_normal = ExtResource("t14")
+expand_mode = 1
+stretch_mode = 0
+focus_mode = 0
+ignore_texture_size = true
+metadata/skin = "res://素材/界面/原版窗口/家族/钮底61"
+metadata/act = "查看资料"
+
+[node name="Label" type="Label" parent="钮查看资料"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+text = "查看资料"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="钮邀请加入" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 106.0
+offset_top = 235.0
+offset_right = 167.0
+offset_bottom = 257.0
+texture_normal = ExtResource("t14")
+expand_mode = 1
+stretch_mode = 0
+focus_mode = 0
+ignore_texture_size = true
+metadata/skin = "res://素材/界面/原版窗口/家族/钮底61"
+metadata/act = "邀请加入"
+
+[node name="Label" type="Label" parent="钮邀请加入"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+text = "邀请加入"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="钮取消" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 205.0
+offset_top = 235.0
+offset_right = 242.0
+offset_bottom = 257.0
+texture_normal = ExtResource("t13")
+expand_mode = 1
+stretch_mode = 0
+focus_mode = 0
+ignore_texture_size = true
+metadata/skin = "res://素材/界面/原版窗口/家族/钮底37"
+metadata/act = "取消"
+
+[node name="Label" type="Label" parent="钮取消"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+text = "取消"
+horizontal_alignment = 1
+vertical_alignment = 1

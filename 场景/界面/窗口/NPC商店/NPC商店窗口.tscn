@@ -1,0 +1,127 @@
+[gd_scene load_steps=5 format=3]
+
+; 原版「NPC 商店」窗内容 —— `com/mxw/uifl/controls/ShopWindow2.as`（689 行）。
+; 标题 `SHOPWINDOW_TITLE` =「交易」（`en_US$message_properties.as:119`）。
+;
+; ⚠️ **本场景的坐标一律是 AS3 的窗口局部坐标**：尺寸表 `数据/界面/窗口尺寸.json` 里
+;    这一页写了 `"原点": [0, 0]`，`功能窗口.gd:496-499` 于是把 页面容器 摆在窗口 (0,0)。
+;    每个 offset 都能跟 AS3 的 `.x = / .y =` 逐行对上，**不要减 (8,38)**。
+;    （2026-09-26 之前写的是内容区局部，整体偏了 (-6,-40)。）
+;
+; `init()`（`:158-233`）对照：
+;   background    MWindow_background @ (0,0)  275x325 ← 这是该符号的**自然尺寸**（#3），不拉伸
+;   background2   MYellow_background @ (6,40)  263x251
+;   cellBackground MPane_background  @ (10,66) 255x220
+;   scrollPaneShop ScrollPane        @ (10,66) 255x220
+;   tabBtnContainer Sprite           @ (17,46)
+;   buyBtn       MButtonF @ (17,297)  宽 btn_width_two=37
+;   saleBtn      MButtonF @ (83,297)  宽 37
+;   quickSaleBtn MButtonF @ (143,297) 宽 btn_width_four=61，文案 `SHOP_QUICK_SALE`=「一键出售」
+;   mendBtn      MButtonF @ (221,297) 宽 37，文案 `MEND`=「修理」
+;
+; ⚠️ 页签**不在本场景里**：`createTabBtn()`（`:347-370`）按服务端下发的 `data.groups` 现建，
+;    宽度取 `[0,25,37,49,61][名字长度]`（`_tabBtnWidthArr`，`:33`），
+;    x 依次累加（`:360` `_loc1_.x = tabBtnContainer.width + 1`）——
+;    **不是固定 3 个**，也不是固定宽度。生成见 `功能窗口.gd::_render_npc_shop()`。
+
+[ext_resource type="PackedScene" path="res://场景/界面/组件/买卖数量窗.tscn" id="1_buysale"]
+[ext_resource type="PackedScene" path="res://场景/界面/组件/物品提示框.tscn" id="2_tip"]
+[ext_resource type="PackedScene" path="res://场景/界面/组件/装备提示框.tscn" id="3_tip2"]
+
+[node name="原版NPC商店内容" type="Control"]
+offset_right = 275.0
+offset_bottom = 296.0
+mouse_filter = 2
+
+; ShopWindow2.as:164-169 —— background2 = MYellow_background @ (6,40)，尺寸 width-12 / 251
+[node name="内容背景" type="Panel" parent="."]
+offset_left = 6.0
+offset_top = 11.0
+offset_right = 269.0
+offset_bottom = 262.0
+mouse_filter = 2
+theme_type_variation = &"OrigContentPanel"
+
+; ShopWindow2.as:170-175 —— cellBackground = MPane_background @ (10,66) 255x220
+[node name="商品面板" type="Panel" parent="."]
+offset_left = 10.0
+offset_top = 37.0
+offset_right = 265.0
+offset_bottom = 257.0
+mouse_filter = 2
+
+; ShopWindow2.as:214-225 —— scrollPaneShop @ (10,66) 255x220，纵向滚动、横向关。
+; 原版是 Flash 的 ScrollPane（滚动条画在面板内），对应 Godot 的 ScrollContainer。
+[node name="商品滚动" type="ScrollContainer" parent="商品面板"]
+offset_right = 255.0
+offset_bottom = 220.0
+horizontal_scroll_mode = 0
+
+; 货架。原版 cellContainer 是 ScrollPane 的 source，格子位置由
+; `initCellCount()`（`:279-313`）按 110x41 + hgap6/vgap3 算出，见 商店商品格.tscn 的注释。
+[node name="商品列表" type="Control" parent="商品面板/商品滚动"]
+offset_right = 255.0
+offset_bottom = 220.0
+mouse_filter = 2
+
+; ShopWindow2.as:210-213 —— tabBtnContainer @ (17,46)。页签由代码按服务端的 groups 生成。
+[node name="分页" type="Control" parent="."]
+offset_left = 17.0
+offset_top = 17.0
+offset_right = 262.0
+offset_bottom = 39.0
+mouse_filter = 2
+
+; ShopWindow2.as:181-209 —— 底部四按钮。文案全部取自语言表，**别写「快速出售」**：
+; `SHOP_QUICK_SALE` =「一键出售」（`en_US$message_properties.as:2413`）。
+; 购买/出售在原版是**切换光标**（`onClickBuyBtn`/`onClickSaleBtn` 挂 `ShopBuyCursorF`/
+; `ShopSaleCursorF`，`:437-454` / `:631-650`），这里用 toggle_mode 表达"选中态"。
+[node name="购买" type="Button" parent="."]
+offset_left = 17.0
+offset_top = 268.0
+offset_right = 54.0
+offset_bottom = 290.0
+tooltip_text = "购买：选中后点背包里的物品"
+focus_mode = 0
+toggle_mode = true
+text = "购买"
+
+[node name="出售" type="Button" parent="."]
+offset_left = 83.0
+offset_top = 268.0
+offset_right = 120.0
+offset_bottom = 290.0
+tooltip_text = "出售：选中后点背包里的物品"
+focus_mode = 0
+toggle_mode = true
+text = "出售"
+
+[node name="一键出售" type="Button" parent="."]
+offset_left = 143.0
+offset_top = 268.0
+offset_right = 204.0
+offset_bottom = 290.0
+tooltip_text = "一键出售普通物品"
+focus_mode = 0
+text = "一键出售"
+
+[node name="修理" type="Button" parent="."]
+offset_left = 221.0
+offset_top = 268.0
+offset_right = 258.0
+offset_bottom = 290.0
+tooltip_text = "修理装备"
+focus_mode = 0
+text = "修理"
+
+; 买卖数量窗（`BuyAndSaleItemWindow`）。原版由 `PopUpMananger.centerWindow` 摆到**舞台正中**，
+; 脚本 `打开()` 里用 global_position 定位。见 买卖数量窗.tscn 的头注释。
+[node name="买卖数量窗" parent="." instance=ExtResource("1_buysale")]
+
+; 商品格的悬停提示。原版 `ShopWindowCell` 挂的是 `MToolTipItem` ——
+; 与背包格**同一套**（`MToolTipItem.setValue` 按 ItemData 子类分发：
+; `EqpData` → `MToolTipZhuangBei`，其余 → `MToolTipDefault`，`MToolTipItem.as:73-109`），
+; 所以这里直接复用背包那两个组件与 `背包窗口._接提示框()`，不另写一份。
+[node name="物品提示框" parent="." instance=ExtResource("2_tip")]
+
+[node name="装备提示框" parent="." instance=ExtResource("3_tip2")]

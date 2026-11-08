@@ -1,0 +1,450 @@
+[gd_scene load_steps=19 format=3]
+
+[ext_resource type="Script" path="res://脚本/界面/窗口/家族/家族子窗.gd" id="1_script"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/横向分隔线.png" id="t1"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/横向分隔线.png" id="t2"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/复选框未选.png" id="t3"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/横向分隔线.png" id="t4"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/复选框未选.png" id="t5"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/横向分隔线.png" id="t6"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/复选框未选.png" id="t7"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/横向分隔线.png" id="t8"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/复选框未选.png" id="t9"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/横向分隔线.png" id="t10"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/复选框未选.png" id="t11"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/横向分隔线.png" id="t12"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/复选框未选.png" id="t13"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/横向分隔线.png" id="t14"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/复选框未选.png" id="t15"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/家族/钮底.png" id="t16"]
+
+
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/家族/钮底61.png" id="t17"]
+
+[node name="家族守卫窗" type="Control"]
+custom_minimum_size = Vector2(244, 282)
+script = ExtResource("1_script")
+窗名 = "家族守卫窗"
+
+[node name="标签可选时间" type="Label" parent="."]
+layout_mode = 0
+offset_left = 90.0
+offset_top = 12.0
+offset_right = 166.0
+offset_bottom = 31.0
+mouse_filter = 2
+text = "可选时间列表"
+theme_override_colors/font_color = Color(1.0, 0.4980392156862745, 0.0, 1)
+vertical_alignment = 1
+clip_text = true
+
+[node name="线表头" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 33.0
+offset_right = 242.0
+offset_bottom = 35.0
+mouse_filter = 2
+texture = ExtResource("t1")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="线周1" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 56.0
+offset_right = 242.0
+offset_bottom = 58.0
+mouse_filter = 2
+texture = ExtResource("t2")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="复选周1" type="Control" parent="."]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 36.0
+offset_right = 172.0
+offset_bottom = 55.0
+metadata/act = "周1"
+
+[node name="框" type="TextureRect" parent="复选周1"]
+layout_mode = 0
+offset_right = 19.0
+offset_bottom = 19.0
+mouse_filter = 2
+texture = ExtResource("t3")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="字" type="Label" parent="复选周1"]
+layout_mode = 0
+offset_left = 24.0
+offset_right = 140.0
+offset_bottom = 19.0
+mouse_filter = 2
+text = "周一"
+theme_override_colors/font_color = Color(1, 0.5921568627450980, 0.2509803921568627, 1)
+
+[node name="标签周1状态" type="Label" parent="."]
+layout_mode = 0
+offset_left = 172.0
+offset_top = 36.0
+offset_right = 217.0
+offset_bottom = 55.0
+mouse_filter = 2
+text = ""
+theme_override_colors/font_color = Color(0.0, 1.0, 0.0, 1)
+vertical_alignment = 1
+clip_text = true
+
+[node name="线周2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 79.0
+offset_right = 242.0
+offset_bottom = 81.0
+mouse_filter = 2
+texture = ExtResource("t4")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="复选周2" type="Control" parent="."]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 59.0
+offset_right = 172.0
+offset_bottom = 78.0
+metadata/act = "周2"
+
+[node name="框" type="TextureRect" parent="复选周2"]
+layout_mode = 0
+offset_right = 19.0
+offset_bottom = 19.0
+mouse_filter = 2
+texture = ExtResource("t5")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="字" type="Label" parent="复选周2"]
+layout_mode = 0
+offset_left = 24.0
+offset_right = 140.0
+offset_bottom = 19.0
+mouse_filter = 2
+text = "周二"
+theme_override_colors/font_color = Color(1, 0.5921568627450980, 0.2509803921568627, 1)
+
+[node name="标签周2状态" type="Label" parent="."]
+layout_mode = 0
+offset_left = 172.0
+offset_top = 59.0
+offset_right = 217.0
+offset_bottom = 78.0
+mouse_filter = 2
+text = ""
+theme_override_colors/font_color = Color(0.0, 1.0, 0.0, 1)
+vertical_alignment = 1
+clip_text = true
+
+[node name="线周3" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 102.0
+offset_right = 242.0
+offset_bottom = 104.0
+mouse_filter = 2
+texture = ExtResource("t6")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="复选周3" type="Control" parent="."]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 82.0
+offset_right = 172.0
+offset_bottom = 101.0
+metadata/act = "周3"
+
+[node name="框" type="TextureRect" parent="复选周3"]
+layout_mode = 0
+offset_right = 19.0
+offset_bottom = 19.0
+mouse_filter = 2
+texture = ExtResource("t7")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="字" type="Label" parent="复选周3"]
+layout_mode = 0
+offset_left = 24.0
+offset_right = 140.0
+offset_bottom = 19.0
+mouse_filter = 2
+text = "周三"
+theme_override_colors/font_color = Color(1, 0.5921568627450980, 0.2509803921568627, 1)
+
+[node name="标签周3状态" type="Label" parent="."]
+layout_mode = 0
+offset_left = 172.0
+offset_top = 82.0
+offset_right = 217.0
+offset_bottom = 101.0
+mouse_filter = 2
+text = ""
+theme_override_colors/font_color = Color(0.0, 1.0, 0.0, 1)
+vertical_alignment = 1
+clip_text = true
+
+[node name="线周4" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 125.0
+offset_right = 242.0
+offset_bottom = 127.0
+mouse_filter = 2
+texture = ExtResource("t8")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="复选周4" type="Control" parent="."]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 105.0
+offset_right = 172.0
+offset_bottom = 124.0
+metadata/act = "周4"
+
+[node name="框" type="TextureRect" parent="复选周4"]
+layout_mode = 0
+offset_right = 19.0
+offset_bottom = 19.0
+mouse_filter = 2
+texture = ExtResource("t9")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="字" type="Label" parent="复选周4"]
+layout_mode = 0
+offset_left = 24.0
+offset_right = 140.0
+offset_bottom = 19.0
+mouse_filter = 2
+text = "周四"
+theme_override_colors/font_color = Color(1, 0.5921568627450980, 0.2509803921568627, 1)
+
+[node name="标签周4状态" type="Label" parent="."]
+layout_mode = 0
+offset_left = 172.0
+offset_top = 105.0
+offset_right = 217.0
+offset_bottom = 124.0
+mouse_filter = 2
+text = ""
+theme_override_colors/font_color = Color(0.0, 1.0, 0.0, 1)
+vertical_alignment = 1
+clip_text = true
+
+[node name="线周5" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 148.0
+offset_right = 242.0
+offset_bottom = 150.0
+mouse_filter = 2
+texture = ExtResource("t10")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="复选周5" type="Control" parent="."]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 128.0
+offset_right = 172.0
+offset_bottom = 147.0
+metadata/act = "周5"
+
+[node name="框" type="TextureRect" parent="复选周5"]
+layout_mode = 0
+offset_right = 19.0
+offset_bottom = 19.0
+mouse_filter = 2
+texture = ExtResource("t11")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="字" type="Label" parent="复选周5"]
+layout_mode = 0
+offset_left = 24.0
+offset_right = 140.0
+offset_bottom = 19.0
+mouse_filter = 2
+text = "周五"
+theme_override_colors/font_color = Color(1, 0.5921568627450980, 0.2509803921568627, 1)
+
+[node name="标签周5状态" type="Label" parent="."]
+layout_mode = 0
+offset_left = 172.0
+offset_top = 128.0
+offset_right = 217.0
+offset_bottom = 147.0
+mouse_filter = 2
+text = ""
+theme_override_colors/font_color = Color(0.0, 1.0, 0.0, 1)
+vertical_alignment = 1
+clip_text = true
+
+[node name="线周6" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 171.0
+offset_right = 242.0
+offset_bottom = 173.0
+mouse_filter = 2
+texture = ExtResource("t12")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="复选周6" type="Control" parent="."]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 151.0
+offset_right = 172.0
+offset_bottom = 170.0
+metadata/act = "周6"
+
+[node name="框" type="TextureRect" parent="复选周6"]
+layout_mode = 0
+offset_right = 19.0
+offset_bottom = 19.0
+mouse_filter = 2
+texture = ExtResource("t13")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="字" type="Label" parent="复选周6"]
+layout_mode = 0
+offset_left = 24.0
+offset_right = 140.0
+offset_bottom = 19.0
+mouse_filter = 2
+text = "周六"
+theme_override_colors/font_color = Color(1, 0.5921568627450980, 0.2509803921568627, 1)
+
+[node name="标签周6状态" type="Label" parent="."]
+layout_mode = 0
+offset_left = 172.0
+offset_top = 151.0
+offset_right = 217.0
+offset_bottom = 170.0
+mouse_filter = 2
+text = ""
+theme_override_colors/font_color = Color(0.0, 1.0, 0.0, 1)
+vertical_alignment = 1
+clip_text = true
+
+[node name="线周7" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 194.0
+offset_right = 242.0
+offset_bottom = 196.0
+mouse_filter = 2
+texture = ExtResource("t14")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="复选周7" type="Control" parent="."]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 174.0
+offset_right = 172.0
+offset_bottom = 193.0
+metadata/act = "周7"
+
+[node name="框" type="TextureRect" parent="复选周7"]
+layout_mode = 0
+offset_right = 19.0
+offset_bottom = 19.0
+mouse_filter = 2
+texture = ExtResource("t15")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="字" type="Label" parent="复选周7"]
+layout_mode = 0
+offset_left = 24.0
+offset_right = 140.0
+offset_bottom = 19.0
+mouse_filter = 2
+text = "周日"
+theme_override_colors/font_color = Color(1, 0.5921568627450980, 0.2509803921568627, 1)
+
+[node name="标签周7状态" type="Label" parent="."]
+layout_mode = 0
+offset_left = 172.0
+offset_top = 174.0
+offset_right = 217.0
+offset_bottom = 193.0
+mouse_filter = 2
+text = ""
+theme_override_colors/font_color = Color(0.0, 1.0, 0.0, 1)
+vertical_alignment = 1
+clip_text = true
+
+[node name="文本提示" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = -16.0
+offset_top = 197.0
+offset_right = 264.0
+offset_bottom = 277.0
+mouse_filter = 2
+theme_override_constants/line_separation = 2
+theme_override_font_sizes/normal_font_size = 12
+theme_override_colors/default_color = Color(1.0, 0.4980392156862745, 0.0, 1)
+bbcode_enabled = true
+text = "每周可挑战2次家族尾兽\n挑战2次后族长和副族长可设置下次挑战时间"
+scroll_active = false
+
+[node name="钮确定" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 91.0
+offset_top = 255.0
+offset_right = 152.0
+offset_bottom = 277.0
+texture_normal = ExtResource("t17")
+expand_mode = 1
+stretch_mode = 0
+focus_mode = 0
+ignore_texture_size = true
+metadata/skin = "res://素材/界面/原版窗口/家族/钮底61"
+metadata/act = "确定"
+
+[node name="Label" type="Label" parent="钮确定"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+text = "确定"
+horizontal_alignment = 1
+vertical_alignment = 1

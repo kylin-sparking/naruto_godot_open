@@ -1,0 +1,2164 @@
+[gd_scene format=3 uid="uid://c0pcauu2r822v"]
+
+[ext_resource type="Texture2D" uid="uid://m507s4c12u35" path="res://素材/界面/原版窗口/通用控件/子面板.png" id="1_krnc2"]
+[ext_resource type="Texture2D" uid="uid://djc366gg1kvta" path="res://素材/角色动画/玩家/木叶忍者_00000001/Char_00000001.swf_12_Char_00000001_stand_0_body.png" id="2_character"]
+[ext_resource type="Texture2D" uid="uid://b0ar2qxwkhg6n" path="res://素材/界面/原版窗口/排行榜/横向分隔线.png" id="2_krnc2"]
+[ext_resource type="PackedScene" path="res://场景/界面/组件/装备格.tscn" id="4_equip"]
+[ext_resource type="Texture2D" uid="uid://c5le2ptbfni76" path="res://素材/界面/原版窗口/通用控件/分页按钮未选.png" id="4_f24ui"]
+[ext_resource type="Texture2D" uid="uid://c0mkydnln13qc" path="res://素材/界面/原版窗口/人物/角色/装备人物背景.png" id="5_equip_bg"]
+[ext_resource type="Texture2D" uid="uid://diwhoiv62oy18" path="res://素材/界面/原版窗口/通用控件/分页按钮选中.png" id="5_f24ui"]
+[ext_resource type="Texture2D" uid="uid://bxpo6xbatqrpp" path="res://素材/界面/原版窗口/人物/角色/按钮上.png" id="13_all_up"]
+[ext_resource type="Texture2D" uid="uid://47sa2u8eclve" path="res://素材/界面/原版窗口/人物/角色/增加一点按钮.png" id="14_add_point"]
+[ext_resource type="Texture2D" uid="uid://dmv8pjouk3vus" path="res://素材/界面/原版窗口/人物/角色/减少一点按钮.png" id="15_minus_point"]
+[ext_resource type="Texture2D" uid="uid://6ap4kcosscij" path="res://素材/界面/原版窗口/人物/角色/生命查克拉槽.png" id="16_bar_under"]
+[ext_resource type="Texture2D" uid="uid://bsh41jofqr8og" path="res://素材/界面/原版窗口/人物/角色/生命填充.png" id="17_hp_fill"]
+[ext_resource type="Texture2D" uid="uid://dhx0qvrvvgfxl" path="res://素材/界面/原版窗口/人物/角色/查克拉填充.png" id="18_mp_fill"]
+[ext_resource type="Texture2D" uid="uid://davucq77br0o6" path="res://素材/界面/原版窗口/人物/角色/加点属性底板.png" id="24_addpoint_bg"]
+[ext_resource type="Texture2D" uid="uid://bc35osaurn6ff" path="res://素材/界面/原版窗口/人物/角色/经验槽.png" id="25_exp_under"]
+[ext_resource type="Texture2D" uid="uid://b6yc6orl83opd" path="res://素材/界面/原版窗口/人物/角色/经验填充.png" id="26_exp_fill"]
+[ext_resource type="Texture2D" uid="uid://c1qhcly2dycr1" path="res://素材/界面/原版窗口/人物/角色/战斗属性面板.png" id="27_second_panel"]
+[ext_resource type="Texture2D" uid="uid://4tn6l8xkr1lf" path="res://素材/界面/原版窗口/人物/角色/按钮下.png" id="29_all_down"]
+[ext_resource type="Texture2D" uid="uid://bqqfu1kqynxv5" path="res://素材/界面/原版窗口/人物/角色/窗内按钮.png" id="30_char_btn"]
+[ext_resource type="Texture2D" uid="uid://betjbmtvteja8" path="res://素材/界面/原版窗口/人物/角色/窗内按钮_悬停.png" id="31_char_btn_over"]
+[ext_resource type="Texture2D" uid="uid://bi0wm8glbngk1" path="res://素材/界面/原版窗口/人物/角色/窗内按钮_按下.png" id="32_char_btn_down"]
+[ext_resource type="Texture2D" uid="uid://ljntey3du4o5" path="res://素材/界面/原版窗口/人物/角色/套装_全紫套装_灰.png" id="套装_全紫"]
+[ext_resource type="Texture2D" uid="uid://cojeisb40dwwy" path="res://素材/界面/原版窗口/人物/角色/套装_满星套装_灰.png" id="套装_满星"]
+[ext_resource type="Texture2D" uid="uid://cfaoiduobmguh" path="res://素材/界面/原版窗口/人物/角色/套装_六级满融套装_灰.png" id="套装_满融"]
+[ext_resource type="Texture2D" uid="uid://cki45jisllf3c" path="res://素材/界面/原版窗口/人物/角色/套装_等阶套装_灰.png" id="套装_等阶"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/人物/角色/强化计数底.png" id="计数底"]
+[ext_resource type="PackedScene" path="res://场景/界面/组件/物品提示框.tscn" id="9_tip"]
+[ext_resource type="PackedScene" path="res://场景/界面/组件/装备提示框.tscn" id="10_tip"]
+[ext_resource type="PackedScene" path="res://场景/界面/组件/物品菜单.tscn" id="11_menu"]
+[ext_resource type="PackedScene" path="res://场景/界面/组件/富文本提示框.tscn" id="13_richtip"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_10tuq"]
+texture = ExtResource("1_krnc2")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2f48v"]
+texture = ExtResource("1_krnc2")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bq156"]
+texture = ExtResource("2_krnc2")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5qsg1"]
+texture = ExtResource("4_f24ui")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f24ui"]
+texture = ExtResource("5_f24ui")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4jrmc"]
+texture = ExtResource("4_f24ui")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vk6pn"]
+texture = ExtResource("4_f24ui")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yjpt7"]
+texture = ExtResource("5_f24ui")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tnr5y"]
+texture = ExtResource("4_f24ui")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8ecqq"]
+texture = ExtResource("4_f24ui")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ddt0t"]
+texture = ExtResource("5_f24ui")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_urhqg"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_exp_under"]
+texture = ExtResource("25_exp_under")
+texture_margin_left = 5.0
+texture_margin_top = 3.0
+texture_margin_right = 6.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_exp_fill"]
+texture = ExtResource("26_exp_fill")
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bar_under"]
+texture = ExtResource("16_bar_under")
+texture_margin_left = 5.0
+texture_margin_top = 3.0
+texture_margin_right = 6.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bar_none"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hp_fill"]
+texture = ExtResource("17_hp_fill")
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mp_fill"]
+texture = ExtResource("18_mp_fill")
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
+
+[node name="原版人物窗口内容" type="Control" unique_id=560684377]
+custom_minimum_size = Vector2(497, 385)
+layout_mode = 3
+anchors_preset = 0
+
+[node name="内容背景" type="Panel" parent="." unique_id=1151596332]
+layout_mode = 0
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 499.0
+offset_bottom = 392.0
+mouse_filter = 2
+
+[node name="底图" type="Panel" parent="内容背景" unique_id=592858842]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 21.0
+offset_right = 497.0
+offset_bottom = 391.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_10tuq")
+
+[node name="主分页" type="Control" parent="." unique_id=1668394834]
+anchors_preset = 0
+offset_left = 2.0
+offset_right = 140.0
+offset_bottom = 22.0
+
+[node name="角色" type="Button" parent="主分页" unique_id=175324542]
+layout_mode = 0
+offset_left = -4.0
+offset_top = -2.0
+offset_right = 34.0
+offset_bottom = 20.0
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxTexture_5qsg1")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_f24ui")
+theme_override_styles/hover = SubResource("StyleBoxTexture_4jrmc")
+toggle_mode = true
+text = "角色"
+
+[node name="秘术" type="Button" parent="主分页" unique_id=2079122825]
+layout_mode = 0
+offset_left = 36.0
+offset_top = -2.0
+offset_right = 74.0
+offset_bottom = 20.0
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxTexture_vk6pn")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_yjpt7")
+theme_override_styles/hover = SubResource("StyleBoxTexture_tnr5y")
+toggle_mode = true
+text = "秘术"
+
+[node name="血继界限" type="Button" parent="主分页" unique_id=1877281412]
+layout_mode = 0
+offset_left = 76.0
+offset_top = -2.0
+offset_right = 138.0
+offset_bottom = 20.0
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxTexture_8ecqq")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ddt0t")
+theme_override_styles/hover = SubResource("StyleBoxTexture_urhqg")
+toggle_mode = true
+text = "血继界限"
+
+[node name="子分页" type="Control" parent="." unique_id=1462440755]
+anchors_preset = 0
+offset_left = 1.0
+offset_top = 22.0
+offset_right = 65.0
+offset_bottom = 100.0
+
+[node name="第1项" type="Button" parent="子分页" unique_id=1495922930]
+layout_mode = 0
+offset_right = 61.0
+offset_bottom = 22.0
+focus_mode = 0
+toggle_mode = true
+text = "人物"
+
+[node name="手里剑页" type="Button" parent="子分页" unique_id=2018621224]
+layout_mode = 0
+offset_top = 26.0
+offset_right = 61.0
+offset_bottom = 48.0
+focus_mode = 0
+toggle_mode = true
+text = "手里剑"
+
+[node name="结印页" type="Button" parent="子分页" unique_id=1814168618]
+layout_mode = 0
+offset_top = 52.0
+offset_right = 61.0
+offset_bottom = 74.0
+focus_mode = 0
+toggle_mode = true
+text = "结印"
+
+[node name="原版人物属性面板" type="Control" parent="." unique_id=975891239]
+clip_contents = true
+anchors_preset = 0
+offset_left = 69.0
+offset_top = 20.0
+offset_right = 504.0
+offset_bottom = 386.0
+
+[node name="角色背景框" type="Panel" parent="原版人物属性面板" unique_id=841468339]
+layout_mode = 0
+offset_left = 45
+offset_top = 63
+offset_right = 195
+offset_bottom = 272
+theme_override_styles/panel = SubResource("StyleBoxTexture_2f48v")
+
+[node name="分隔线1" type="Panel" parent="原版人物属性面板" unique_id=1976362171]
+layout_mode = 0
+offset_left = 0
+offset_top = 58
+offset_right = 419
+offset_bottom = 60
+theme_override_styles/panel = SubResource("StyleBoxTexture_bq156")
+
+[node name="分隔线2" type="Panel" parent="原版人物属性面板" unique_id=1075312740]
+layout_mode = 0
+offset_left = -1
+offset_top = 321
+offset_right = 237
+offset_bottom = 323
+theme_override_styles/panel = SubResource("StyleBoxTexture_bq156")
+
+[node name="角色背景" type="TextureRect" parent="原版人物属性面板" unique_id=1645498438]
+layout_mode = 0
+offset_left = 47
+offset_top = 65
+offset_right = 193
+offset_bottom = 273
+texture = ExtResource("5_equip_bg")
+
+[node name="角色站立图" type="TextureRect" parent="原版人物属性面板" unique_id=1513728912]
+layout_mode = 0
+offset_left = 81.0
+offset_top = 118.0
+offset_right = 151.0
+offset_bottom = 241.0
+mouse_filter = 2
+texture = ExtResource("2_character")
+
+[node name="经验值" type="Label" parent="原版人物属性面板" unique_id=754760877]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 42.0
+offset_right = 53.0
+offset_bottom = 58.0
+theme_override_colors/font_color = Color(0.9882353, 0.7647059, 0.6, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "经验值"
+
+[node name="经验条" type="ProgressBar" parent="原版人物属性面板" unique_id=819181923]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 45.0
+offset_right = 132.0
+offset_bottom = 56.0
+theme_override_styles/background = SubResource("StyleBoxTexture_exp_under")
+theme_override_styles/fill = SubResource("StyleBoxTexture_exp_fill")
+show_percentage = false
+
+[node name="经验数值" type="Label" parent="原版人物属性面板" unique_id=270638711]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 43.0
+offset_right = 132.0
+offset_bottom = 59.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0%"
+horizontal_alignment = 1
+
+[node name="精华" type="Label" parent="原版人物属性面板" unique_id=2137596579]
+layout_mode = 0
+offset_left = 165.0
+offset_top = 42.0
+offset_right = 201.0
+offset_bottom = 59.0
+theme_override_colors/font_color = Color(0.9882353, 0.7647059, 0.6, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "精华"
+
+[node name="精华条" type="ProgressBar" parent="原版人物属性面板" unique_id=1571925954]
+layout_mode = 0
+offset_left = 199.0
+offset_top = 45.0
+offset_right = 274.0
+offset_bottom = 56.0
+theme_override_styles/background = SubResource("StyleBoxTexture_exp_under")
+theme_override_styles/fill = SubResource("StyleBoxTexture_exp_fill")
+show_percentage = false
+
+[node name="精华数值" type="Label" parent="原版人物属性面板" unique_id=1754138067]
+layout_mode = 0
+offset_left = 199.0
+offset_top = 43.0
+offset_right = 274.0
+offset_bottom = 59.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0%"
+horizontal_alignment = 1
+
+[node name="信息区" type="Control" parent="原版人物属性面板" unique_id=173002001]
+anchors_preset = 0
+offset_left = -2.0
+offset_right = 435.0
+offset_bottom = 62.0
+mouse_filter = 2
+
+[node name="姓名格" type="Control" parent="原版人物属性面板/信息区" unique_id=173002002]
+anchors_preset = 0
+offset_left = 16.0
+offset_top = 4.0
+offset_right = 156.0
+offset_bottom = 21.0
+mouse_filter = 2
+
+[node name="名称" type="Label" parent="原版人物属性面板/信息区/姓名格" unique_id=173002003]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 17.0
+theme_override_colors/font_color = Color(0.9882353, 0.7647059, 0.6, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "名字："
+
+[node name="数值" type="Label" parent="原版人物属性面板/信息区/姓名格" unique_id=173002004]
+layout_mode = 0
+offset_left = 40.0
+offset_right = 140.0
+offset_bottom = 17.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "忍者"
+
+[node name="等级格" type="Control" parent="原版人物属性面板/信息区" unique_id=173002005]
+anchors_preset = 0
+offset_left = 177.0
+offset_top = 4.0
+offset_right = 268.0
+offset_bottom = 21.0
+mouse_filter = 2
+
+[node name="名称" type="Label" parent="原版人物属性面板/信息区/等级格" unique_id=173002006]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 17.0
+theme_override_colors/font_color = Color(0.9882353, 0.7647059, 0.6, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "等级："
+
+[node name="数值" type="Label" parent="原版人物属性面板/信息区/等级格" unique_id=173002007]
+layout_mode = 0
+offset_left = 40.0
+offset_right = 91.0
+offset_bottom = 17.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "1"
+
+[node name="职业格" type="Control" parent="原版人物属性面板/信息区" unique_id=173002008]
+anchors_preset = 0
+offset_left = 287.0
+offset_top = 4.0
+offset_right = 427.0
+offset_bottom = 21.0
+mouse_filter = 2
+
+[node name="名称" type="Label" parent="原版人物属性面板/信息区/职业格" unique_id=173002009]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 17.0
+theme_override_colors/font_color = Color(0.9882353, 0.7647059, 0.6, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "职业："
+
+[node name="数值" type="Label" parent="原版人物属性面板/信息区/职业格" unique_id=173002010]
+layout_mode = 0
+offset_left = 40.0
+offset_right = 140.0
+offset_bottom = 17.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "火遁流"
+
+[node name="家族格" type="Control" parent="原版人物属性面板/信息区" unique_id=173002011]
+anchors_preset = 0
+offset_left = 16.0
+offset_top = 22.0
+offset_right = 156.0
+offset_bottom = 39.0
+mouse_filter = 2
+
+[node name="名称" type="Label" parent="原版人物属性面板/信息区/家族格" unique_id=173002012]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 17.0
+theme_override_colors/font_color = Color(0.9882353, 0.7647059, 0.6, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "家族："
+
+[node name="数值" type="Label" parent="原版人物属性面板/信息区/家族格" unique_id=173002013]
+layout_mode = 0
+offset_left = 40.0
+offset_right = 140.0
+offset_bottom = 17.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "-"
+
+[node name="罪恶值格" type="Control" parent="原版人物属性面板/信息区" unique_id=173002014]
+anchors_preset = 0
+offset_left = 177.0
+offset_top = 22.0
+offset_right = 268.0
+offset_bottom = 39.0
+mouse_filter = 2
+
+[node name="名称" type="Label" parent="原版人物属性面板/信息区/罪恶值格" unique_id=173002015]
+layout_mode = 0
+offset_right = 48.0
+offset_bottom = 17.0
+theme_override_colors/font_color = Color(0.9882353, 0.7647059, 0.6, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "罪恶值："
+
+[node name="数值" type="Label" parent="原版人物属性面板/信息区/罪恶值格" unique_id=173002016]
+layout_mode = 0
+offset_left = 48.0
+offset_right = 91.0
+offset_bottom = 17.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0"
+
+[node name="羁绊格" type="Control" parent="原版人物属性面板/信息区" unique_id=173002017]
+anchors_preset = 0
+offset_left = 287.0
+offset_top = 22.0
+offset_right = 427.0
+offset_bottom = 39.0
+mouse_filter = 2
+
+[node name="名称" type="Label" parent="原版人物属性面板/信息区/羁绊格" unique_id=173002018]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 17.0
+theme_override_colors/font_color = Color(0.9882353, 0.7647059, 0.6, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "羁绊："
+
+[node name="数值" type="Label" parent="原版人物属性面板/信息区/羁绊格" unique_id=173002019]
+layout_mode = 0
+offset_left = 40.0
+offset_right = 140.0
+offset_bottom = 17.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "-"
+
+[node name="意志格" type="Control" parent="原版人物属性面板/信息区" unique_id=173002020]
+anchors_preset = 0
+offset_left = 287.0
+offset_top = 42.0
+offset_right = 427.0
+offset_bottom = 59.0
+mouse_filter = 2
+
+[node name="名称" type="Label" parent="原版人物属性面板/信息区/意志格" unique_id=173002021]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 17.0
+theme_override_colors/font_color = Color(0.9882353, 0.7647059, 0.6, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "意志："
+
+[node name="数值" type="Label" parent="原版人物属性面板/信息区/意志格" unique_id=173002022]
+layout_mode = 0
+offset_left = 40.0
+offset_right = 140.0
+offset_bottom = 17.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0"
+
+[node name="改名按钮" type="Button" parent="原版人物属性面板" unique_id=173002023]
+layout_mode = 0
+offset_left = 152.0
+offset_top = 4.0
+offset_right = 172.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0.988281, 0.953125, 0.609375, 1)
+theme_override_font_sizes/font_size = 12
+text = "改"
+
+[node name="装备栏" type="Control" parent="原版人物属性面板" unique_id=1357848133]
+anchors_preset = 0
+offset_right = 246.0
+offset_bottom = 318.0
+
+[node name="装备格子容器" type="Control" parent="原版人物属性面板/装备栏" unique_id=173001001]
+anchors_preset = 0
+offset_right = 246.0
+offset_bottom = 318.0
+mouse_filter = 2
+
+[node name="武器格" parent="原版人物属性面板/装备栏/装备格子容器" unique_id=419576902 instance=ExtResource("4_equip")]
+layout_mode = 0
+offset_top = 64.0
+offset_bottom = 104.0
+
+[node name="名称" type="Label" parent="原版人物属性面板/装备栏/装备格子容器/武器格" unique_id=807423234]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(1, 0.5686275, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "武器"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="手套格" parent="原版人物属性面板/装备栏/装备格子容器" unique_id=1095761890 instance=ExtResource("4_equip")]
+layout_mode = 0
+offset_top = 106.0
+offset_bottom = 146.0
+
+[node name="名称" type="Label" parent="原版人物属性面板/装备栏/装备格子容器/手套格" unique_id=379070015]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(1, 0.5686275, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "手套"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="衣服格" parent="原版人物属性面板/装备栏/装备格子容器" unique_id=1826440135 instance=ExtResource("4_equip")]
+layout_mode = 0
+offset_top = 148.0
+offset_bottom = 188.0
+
+[node name="名称" type="Label" parent="原版人物属性面板/装备栏/装备格子容器/衣服格" unique_id=1749410303]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(1, 0.5686275, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "衣服"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="护额格" parent="原版人物属性面板/装备栏/装备格子容器" unique_id=1837529925 instance=ExtResource("4_equip")]
+layout_mode = 0
+offset_top = 190.0
+offset_bottom = 230.0
+
+[node name="名称" type="Label" parent="原版人物属性面板/装备栏/装备格子容器/护额格" unique_id=1195611591]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(1, 0.5686275, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "护额"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="斗笠格" parent="原版人物属性面板/装备栏/装备格子容器" unique_id=1901296550 instance=ExtResource("4_equip")]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 64.0
+offset_right = 240.0
+offset_bottom = 104.0
+
+[node name="名称" type="Label" parent="原版人物属性面板/装备栏/装备格子容器/斗笠格" unique_id=351830200]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(1, 0.5686275, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "斗笠"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="项链格" parent="原版人物属性面板/装备栏/装备格子容器" unique_id=2059704455 instance=ExtResource("4_equip")]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 106.0
+offset_right = 240.0
+offset_bottom = 146.0
+
+[node name="名称" type="Label" parent="原版人物属性面板/装备栏/装备格子容器/项链格" unique_id=1027016811]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(1, 0.5686275, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "项链"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="护腰格" parent="原版人物属性面板/装备栏/装备格子容器" unique_id=1425177399 instance=ExtResource("4_equip")]
+layout_mode = 0
+offset_top = 232.0
+offset_bottom = 272.0
+
+[node name="名称" type="Label" parent="原版人物属性面板/装备栏/装备格子容器/护腰格" unique_id=1315771581]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(1, 0.5686275, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "护腰"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="忍鞋格" parent="原版人物属性面板/装备栏/装备格子容器" unique_id=458870319 instance=ExtResource("4_equip")]
+layout_mode = 0
+offset_top = 274.0
+offset_bottom = 314.0
+
+[node name="名称" type="Label" parent="原版人物属性面板/装备栏/装备格子容器/忍鞋格" unique_id=1691463528]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(1, 0.5686275, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "忍鞋"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="戒指格" parent="原版人物属性面板/装备栏/装备格子容器" unique_id=451712348 instance=ExtResource("4_equip")]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 148.0
+offset_right = 240.0
+offset_bottom = 188.0
+
+[node name="名称" type="Label" parent="原版人物属性面板/装备栏/装备格子容器/戒指格" unique_id=1810794470]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(1, 0.5686275, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "戒指"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="手环格" parent="原版人物属性面板/装备栏/装备格子容器" unique_id=968590439 instance=ExtResource("4_equip")]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 190.0
+offset_right = 240.0
+offset_bottom = 230.0
+
+[node name="名称" type="Label" parent="原版人物属性面板/装备栏/装备格子容器/手环格" unique_id=1524585680]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(1, 0.5686275, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "手环"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="忍包格" parent="原版人物属性面板/装备栏/装备格子容器" unique_id=1343357033 instance=ExtResource("4_equip")]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 232.0
+offset_right = 240.0
+offset_bottom = 272.0
+
+[node name="名称" type="Label" parent="原版人物属性面板/装备栏/装备格子容器/忍包格" unique_id=1417279284]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(1, 0.5686275, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "忍包"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="斗篷格" parent="原版人物属性面板/装备栏/装备格子容器" unique_id=1305614079 instance=ExtResource("4_equip")]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 274.0
+offset_right = 240.0
+offset_bottom = 314.0
+
+[node name="名称" type="Label" parent="原版人物属性面板/装备栏/装备格子容器/斗篷格" unique_id=604223385]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(1, 0.5686275, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "斗篷"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="变身格" parent="原版人物属性面板/装备栏/装备格子容器" unique_id=171916941 instance=ExtResource("4_equip")]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 274.0
+offset_right = 140.0
+offset_bottom = 314.0
+
+[node name="名称" type="Label" parent="原版人物属性面板/装备栏/装备格子容器/变身格" unique_id=1316726708]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(1, 0.5686275, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "变身"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="勾玉格" parent="原版人物属性面板/装备栏/装备格子容器" unique_id=45364272 instance=ExtResource("4_equip")]
+layout_mode = 0
+offset_left = 155.0
+offset_top = 274.0
+offset_right = 195.0
+offset_bottom = 314.0
+
+[node name="名称" type="Label" parent="原版人物属性面板/装备栏/装备格子容器/勾玉格" unique_id=1145055386]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(1, 0.5686275, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "勾玉"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="真神器" parent="原版人物属性面板/装备栏/装备格子容器" unique_id=1048009078 instance=ExtResource("4_equip")]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 204.0
+offset_right = 87.0
+offset_bottom = 244.0
+
+[node name="名称" type="Label" parent="原版人物属性面板/装备栏/装备格子容器/真神器" unique_id=858394595]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(1, 0.5686275, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "真神器"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="神器剑格" parent="原版人物属性面板/装备栏/装备格子容器" unique_id=1445047181 instance=ExtResource("4_equip")]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 274.0
+offset_right = 85.0
+offset_bottom = 314.0
+
+[node name="名称" type="Label" parent="原版人物属性面板/装备栏/装备格子容器/神器剑格" unique_id=612176320]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(1, 0.5686275, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "神器"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="灵器格" parent="原版人物属性面板/装备栏/装备格子容器" unique_id=496974064 instance=ExtResource("4_equip")]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 162.0
+offset_right = 87.0
+offset_bottom = 202.0
+
+[node name="名称" type="Label" parent="原版人物属性面板/装备栏/装备格子容器/灵器格" unique_id=943176861]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(1, 0.5686275, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "灵器"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="忍具格" parent="原版人物属性面板/装备栏/装备格子容器" unique_id=980716267 instance=ExtResource("4_equip")]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 120.0
+offset_right = 87.0
+offset_bottom = 160.0
+
+[node name="名称" type="Label" parent="原版人物属性面板/装备栏/装备格子容器/忍具格" unique_id=279898901]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(1, 0.5686275, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "忍具"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="徽章格" parent="原版人物属性面板/装备栏/装备格子容器" unique_id=215839639 instance=ExtResource("4_equip")]
+layout_mode = 0
+offset_left = 152.0
+offset_top = 162.0
+offset_right = 192.0
+offset_bottom = 202.0
+
+[node name="名称" type="Label" parent="原版人物属性面板/装备栏/装备格子容器/徽章格" unique_id=1211071838]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(1, 0.5686275, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "徽章"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="羁绊格" parent="原版人物属性面板/装备栏/装备格子容器" unique_id=667006166 instance=ExtResource("4_equip")]
+layout_mode = 0
+offset_left = 152.0
+offset_top = 204.0
+offset_right = 192.0
+offset_bottom = 244.0
+
+[node name="名称" type="Label" parent="原版人物属性面板/装备栏/装备格子容器/羁绊格" unique_id=668023272]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(1, 0.5686275, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "羁绊"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="套装图标" type="Control" parent="原版人物属性面板/装备栏" unique_id=393916175]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="等阶套装" type="TextureRect" parent="原版人物属性面板/装备栏/套装图标" unique_id=508297415]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 244.0
+offset_right = 85.0
+offset_bottom = 264.0
+mouse_filter = 2
+texture = ExtResource("套装_等阶")
+stretch_mode = 5
+
+[node name="全紫套装" type="TextureRect" parent="原版人物属性面板/装备栏/套装图标" unique_id=1477133469]
+layout_mode = 0
+offset_left = 95.0
+offset_top = 244.0
+offset_right = 115.0
+offset_bottom = 264.0
+mouse_filter = 2
+texture = ExtResource("套装_全紫")
+stretch_mode = 5
+
+[node name="满星套装" type="TextureRect" parent="原版人物属性面板/装备栏/套装图标" unique_id=1061354940]
+layout_mode = 0
+offset_left = 125.0
+offset_top = 244.0
+offset_right = 145.0
+offset_bottom = 264.0
+mouse_filter = 2
+texture = ExtResource("套装_满星")
+stretch_mode = 5
+
+[node name="六级满融套装" type="TextureRect" parent="原版人物属性面板/装备栏/套装图标" unique_id=1429270213]
+layout_mode = 0
+offset_left = 155.0
+offset_top = 244.0
+offset_right = 175.0
+offset_bottom = 264.0
+mouse_filter = 2
+texture = ExtResource("套装_满融")
+stretch_mode = 5
+
+[node name="强化计数" type="Control" parent="原版人物属性面板/装备栏"]
+custom_minimum_size = Vector2(16, 16)
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="紫件数" type="Control" parent="原版人物属性面板/装备栏/强化计数"]
+visible = false
+custom_minimum_size = Vector2(16, 16)
+offset_left = 103.0
+offset_top = 256.0
+offset_right = 119.0
+offset_bottom = 272.0
+mouse_filter = 2
+
+[node name="底" type="TextureRect" parent="原版人物属性面板/装备栏/强化计数/紫件数"]
+layout_mode = 0
+offset_right = 16.0
+offset_bottom = 16.0
+mouse_filter = 2
+texture = ExtResource("计数底")
+stretch_mode = 5
+
+[node name="数字" type="Label" parent="原版人物属性面板/装备栏/强化计数/紫件数"]
+layout_mode = 0
+offset_right = 16.0
+offset_bottom = 16.0
+mouse_filter = 2
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+
+[node name="满星件数" type="Control" parent="原版人物属性面板/装备栏/强化计数"]
+visible = false
+custom_minimum_size = Vector2(16, 16)
+offset_left = 133.0
+offset_top = 256.0
+offset_right = 149.0
+offset_bottom = 272.0
+mouse_filter = 2
+
+[node name="底" type="TextureRect" parent="原版人物属性面板/装备栏/强化计数/满星件数"]
+layout_mode = 0
+offset_right = 16.0
+offset_bottom = 16.0
+mouse_filter = 2
+texture = ExtResource("计数底")
+stretch_mode = 5
+
+[node name="数字" type="Label" parent="原版人物属性面板/装备栏/强化计数/满星件数"]
+layout_mode = 0
+offset_right = 16.0
+offset_bottom = 16.0
+mouse_filter = 2
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+
+[node name="满融件数" type="Control" parent="原版人物属性面板/装备栏/强化计数"]
+visible = false
+custom_minimum_size = Vector2(16, 16)
+offset_left = 163.0
+offset_top = 256.0
+offset_right = 179.0
+offset_bottom = 272.0
+mouse_filter = 2
+
+[node name="底" type="TextureRect" parent="原版人物属性面板/装备栏/强化计数/满融件数"]
+layout_mode = 0
+offset_right = 16.0
+offset_bottom = 16.0
+mouse_filter = 2
+texture = ExtResource("计数底")
+stretch_mode = 5
+
+[node name="数字" type="Label" parent="原版人物属性面板/装备栏/强化计数/满融件数"]
+layout_mode = 0
+offset_right = 16.0
+offset_bottom = 16.0
+mouse_filter = 2
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+
+[node name="战斗属性面板" type="TextureRect" parent="原版人物属性面板" unique_id=517619547]
+layout_mode = 0
+offset_left = 243.0
+offset_top = 64.0
+offset_right = 416.0
+offset_bottom = 214.0
+mouse_filter = 2
+texture = ExtResource("27_second_panel")
+
+[node name="战斗属性标题" type="Label" parent="原版人物属性面板" unique_id=272252053]
+layout_mode = 0
+offset_left = 305.0
+offset_top = 64.0
+offset_right = 361.0
+offset_bottom = 81.0
+theme_override_colors/font_color = Color(1, 0.9411765, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "战斗属性"
+
+[node name="战斗属性展开" type="Button" parent="原版人物属性面板" unique_id=765863405]
+layout_mode = 0
+offset_left = 382.0
+offset_top = 61.0
+offset_right = 403.0
+offset_bottom = 82.0
+focus_mode = 0
+icon = ExtResource("13_all_up")
+flat = true
+
+[node name="战斗属性" type="Control" parent="原版人物属性面板" unique_id=1357467632]
+anchors_preset = 0
+offset_left = 280.0
+offset_top = 86.0
+offset_right = 414.0
+offset_bottom = 216.0
+
+[node name="攻击标题" type="Label" parent="原版人物属性面板/战斗属性" unique_id=1039411120]
+layout_mode = 0
+offset_top = -1.0
+offset_right = 60.0
+offset_bottom = 17.0
+theme_override_colors/font_color = Color(1, 0.5686275, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "攻　　击"
+
+[node name="攻击" type="Label" parent="原版人物属性面板/战斗属性" unique_id=895306901]
+layout_mode = 0
+offset_left = 60.0
+offset_right = 134.0
+offset_bottom = 18.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0"
+
+[node name="防御标题" type="Label" parent="原版人物属性面板/战斗属性" unique_id=882677572]
+layout_mode = 0
+offset_top = 21.0
+offset_right = 60.0
+offset_bottom = 39.0
+theme_override_colors/font_color = Color(1, 0.5686275, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "防　　御"
+
+[node name="防御" type="Label" parent="原版人物属性面板/战斗属性" unique_id=2110093943]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 22.0
+offset_right = 134.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0"
+
+[node name="暴击标题" type="Label" parent="原版人物属性面板/战斗属性" unique_id=850849179]
+layout_mode = 0
+offset_top = 43.0
+offset_right = 60.0
+offset_bottom = 61.0
+theme_override_colors/font_color = Color(1, 0.5686275, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "暴　　击"
+
+[node name="暴击" type="Label" parent="原版人物属性面板/战斗属性" unique_id=1770555533]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 44.0
+offset_right = 134.0
+offset_bottom = 62.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0"
+
+[node name="闪避标题" type="Label" parent="原版人物属性面板/战斗属性" unique_id=1159486042]
+layout_mode = 0
+offset_top = 65.0
+offset_right = 60.0
+offset_bottom = 83.0
+theme_override_colors/font_color = Color(1, 0.5686275, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "闪　　避"
+
+[node name="闪避" type="Label" parent="原版人物属性面板/战斗属性" unique_id=361285141]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 66.0
+offset_right = 134.0
+offset_bottom = 84.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0"
+
+[node name="攻击速度标题" type="Label" parent="原版人物属性面板/战斗属性" unique_id=1889251703]
+layout_mode = 0
+offset_top = 87.0
+offset_right = 60.0
+offset_bottom = 105.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "攻击速度"
+
+[node name="攻击速度" type="Label" parent="原版人物属性面板/战斗属性" unique_id=1221951257]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 88.0
+offset_right = 134.0
+offset_bottom = 106.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0"
+
+[node name="移动速度标题" type="Label" parent="原版人物属性面板/战斗属性" unique_id=259857322]
+layout_mode = 0
+offset_top = 109.0
+offset_right = 60.0
+offset_bottom = 127.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "移动速度"
+
+[node name="移动速度" type="Label" parent="原版人物属性面板/战斗属性" unique_id=517836196]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 110.0
+offset_right = 134.0
+offset_bottom = 128.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0"
+
+[node name="加点属性底板" type="TextureRect" parent="原版人物属性面板" unique_id=743447414]
+layout_mode = 0
+offset_left = 241.0
+offset_top = 226.0
+offset_right = 432.0
+offset_bottom = 362.0
+mouse_filter = 2
+texture = ExtResource("24_addpoint_bg")
+
+[node name="加点属性标题" type="Label" parent="原版人物属性面板" unique_id=128551417]
+layout_mode = 0
+offset_left = 305.0
+offset_top = 220.0
+offset_right = 358.0
+offset_bottom = 240.0
+theme_override_colors/font_color = Color(1, 0.9411765, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "加点属性"
+
+[node name="基础属性" type="Control" parent="原版人物属性面板" unique_id=1740881961]
+anchors_preset = 0
+offset_left = 246.0
+offset_top = 243.0
+offset_right = 416.0
+offset_bottom = 339.0
+
+[node name="攻击" type="Label" parent="原版人物属性面板/基础属性" unique_id=1647404972]
+layout_mode = 0
+offset_top = -1.0
+offset_right = 42.0
+offset_bottom = 25.0
+theme_override_colors/font_color = Color(1, 0.5686275, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "攻击型"
+vertical_alignment = 1
+
+[node name="攻击值" type="Label" parent="原版人物属性面板/基础属性" unique_id=2066297249]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 1.0
+offset_right = 83.0
+offset_bottom = 22.0
+theme_override_colors/font_color = Color(1, 0.5686275, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="攻击全加" type="Button" parent="原版人物属性面板/基础属性" unique_id=493900171]
+layout_mode = 0
+offset_left = 84.0
+offset_right = 105.0
+offset_bottom = 21.0
+focus_mode = 0
+icon = ExtResource("13_all_up")
+flat = true
+
+[node name="攻击加点" type="Button" parent="原版人物属性面板/基础属性" unique_id=923648157]
+layout_mode = 0
+offset_left = 106.0
+offset_top = 2.0
+offset_right = 124.0
+offset_bottom = 20.0
+focus_mode = 0
+icon = ExtResource("14_add_point")
+flat = true
+
+[node name="攻击减点" type="Button" parent="原版人物属性面板/基础属性" unique_id=812938595]
+layout_mode = 0
+offset_left = 125.0
+offset_top = 2.0
+offset_right = 143.0
+offset_bottom = 20.0
+focus_mode = 0
+disabled = true
+icon = ExtResource("15_minus_point")
+flat = true
+
+[node name="攻击全减" type="Button" parent="原版人物属性面板/基础属性" unique_id=2128840537]
+layout_mode = 0
+offset_left = 144.0
+offset_right = 165.0
+offset_bottom = 21.0
+focus_mode = 0
+disabled = true
+icon = ExtResource("29_all_down")
+flat = true
+
+[node name="防御" type="Label" parent="原版人物属性面板/基础属性" unique_id=141809632]
+layout_mode = 0
+offset_top = 22.0
+offset_right = 42.0
+offset_bottom = 46.0
+theme_override_colors/font_color = Color(1, 0.5686275, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "防御型"
+vertical_alignment = 1
+
+[node name="防御值" type="Label" parent="原版人物属性面板/基础属性" unique_id=1339930883]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 24.0
+offset_right = 83.0
+offset_bottom = 45.0
+theme_override_colors/font_color = Color(1, 0.5686275, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="防御全加" type="Button" parent="原版人物属性面板/基础属性" unique_id=1047950853]
+layout_mode = 0
+offset_left = 84.0
+offset_top = 23.0
+offset_right = 105.0
+offset_bottom = 44.0
+focus_mode = 0
+icon = ExtResource("13_all_up")
+flat = true
+
+[node name="防御加点" type="Button" parent="原版人物属性面板/基础属性" unique_id=802299169]
+layout_mode = 0
+offset_left = 106.0
+offset_top = 25.0
+offset_right = 124.0
+offset_bottom = 43.0
+focus_mode = 0
+icon = ExtResource("14_add_point")
+flat = true
+
+[node name="防御减点" type="Button" parent="原版人物属性面板/基础属性" unique_id=990551824]
+layout_mode = 0
+offset_left = 125.0
+offset_top = 25.0
+offset_right = 143.0
+offset_bottom = 43.0
+focus_mode = 0
+disabled = true
+icon = ExtResource("15_minus_point")
+flat = true
+
+[node name="防御全减" type="Button" parent="原版人物属性面板/基础属性" unique_id=1189009474]
+layout_mode = 0
+offset_left = 144.0
+offset_top = 23.0
+offset_right = 165.0
+offset_bottom = 44.0
+focus_mode = 0
+disabled = true
+icon = ExtResource("29_all_down")
+flat = true
+
+[node name="灵巧" type="Label" parent="原版人物属性面板/基础属性" unique_id=340712045]
+layout_mode = 0
+offset_top = 45.0
+offset_right = 42.0
+offset_bottom = 69.0
+theme_override_colors/font_color = Color(1, 0.5686275, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "灵巧型"
+vertical_alignment = 1
+
+[node name="灵巧值" type="Label" parent="原版人物属性面板/基础属性" unique_id=868117922]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 47.0
+offset_right = 83.0
+offset_bottom = 68.0
+theme_override_colors/font_color = Color(1, 0.5686275, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="灵巧全加" type="Button" parent="原版人物属性面板/基础属性" unique_id=826699384]
+layout_mode = 0
+offset_left = 84.0
+offset_top = 46.0
+offset_right = 105.0
+offset_bottom = 67.0
+focus_mode = 0
+icon = ExtResource("13_all_up")
+flat = true
+
+[node name="灵巧加点" type="Button" parent="原版人物属性面板/基础属性" unique_id=1030312984]
+layout_mode = 0
+offset_left = 106.0
+offset_top = 48.0
+offset_right = 124.0
+offset_bottom = 66.0
+focus_mode = 0
+icon = ExtResource("14_add_point")
+flat = true
+
+[node name="灵巧减点" type="Button" parent="原版人物属性面板/基础属性" unique_id=760407276]
+layout_mode = 0
+offset_left = 125.0
+offset_top = 48.0
+offset_right = 143.0
+offset_bottom = 66.0
+focus_mode = 0
+disabled = true
+icon = ExtResource("15_minus_point")
+flat = true
+
+[node name="灵巧全减" type="Button" parent="原版人物属性面板/基础属性" unique_id=1921023344]
+layout_mode = 0
+offset_left = 144.0
+offset_top = 46.0
+offset_right = 165.0
+offset_bottom = 67.0
+focus_mode = 0
+disabled = true
+icon = ExtResource("29_all_down")
+flat = true
+
+[node name="健体" type="Label" parent="原版人物属性面板/基础属性" unique_id=635037553]
+layout_mode = 0
+offset_top = 70.0
+offset_right = 42.0
+offset_bottom = 93.0
+theme_override_colors/font_color = Color(1, 0.5686275, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "健体型"
+vertical_alignment = 1
+
+[node name="健体值" type="Label" parent="原版人物属性面板/基础属性" unique_id=1054442746]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 72.0
+offset_right = 81.0
+offset_bottom = 93.0
+theme_override_colors/font_color = Color(1, 0.5686275, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="健体全加" type="Button" parent="原版人物属性面板/基础属性" unique_id=1784110779]
+layout_mode = 0
+offset_left = 84.0
+offset_top = 69.0
+offset_right = 105.0
+offset_bottom = 90.0
+focus_mode = 0
+icon = ExtResource("13_all_up")
+flat = true
+
+[node name="健体加点" type="Button" parent="原版人物属性面板/基础属性" unique_id=88688387]
+layout_mode = 0
+offset_left = 106.0
+offset_top = 71.0
+offset_right = 124.0
+offset_bottom = 89.0
+focus_mode = 0
+icon = ExtResource("14_add_point")
+flat = true
+
+[node name="健体减点" type="Button" parent="原版人物属性面板/基础属性" unique_id=1921877098]
+layout_mode = 0
+offset_left = 125.0
+offset_top = 71.0
+offset_right = 143.0
+offset_bottom = 89.0
+focus_mode = 0
+disabled = true
+icon = ExtResource("15_minus_point")
+flat = true
+
+[node name="健体全减" type="Button" parent="原版人物属性面板/基础属性" unique_id=291421542]
+layout_mode = 0
+offset_left = 144.0
+offset_top = 69.0
+offset_right = 165.0
+offset_bottom = 90.0
+focus_mode = 0
+disabled = true
+icon = ExtResource("29_all_down")
+flat = true
+
+[node name="潜能点" type="Label" parent="原版人物属性面板" unique_id=1752054297]
+layout_mode = 0
+offset_left = 246.0
+offset_top = 337.0
+offset_right = 288.0
+offset_bottom = 360.0
+theme_override_colors/font_color = Color(1, 0.5686275, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "潜能点"
+vertical_alignment = 1
+
+[node name="潜能点值" type="Label" parent="原版人物属性面板" unique_id=1578926701]
+layout_mode = 0
+offset_left = 286.0
+offset_top = 338.0
+offset_right = 327.0
+offset_bottom = 359.0
+theme_override_colors/font_color = Color(1, 0.5686275, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="确认加点" type="Button" parent="原版人物属性面板" unique_id=278871955]
+layout_mode = 0
+offset_left = 329.0
+offset_top = 338.0
+offset_right = 363.0
+offset_bottom = 359.0
+theme_override_font_sizes/font_size = 12
+text = "确定"
+
+[node name="推荐加点" type="Button" parent="原版人物属性面板" unique_id=1327480602]
+layout_mode = 0
+offset_left = 374.0
+offset_top = 338.0
+offset_right = 408.0
+offset_bottom = 359.0
+theme_override_font_sizes/font_size = 12
+text = "推荐"
+
+[node name="他人信息面板" type="Control" parent="原版人物属性面板"]
+visible = false
+layout_mode = 0
+offset_left = 243.0
+offset_top = 223.0
+offset_right = 416.0
+offset_bottom = 360.0
+
+[node name="忍术境界名" type="Label" parent="原版人物属性面板/他人信息面板"]
+layout_mode = 0
+offset_top = 2.0
+offset_right = 58.0
+offset_bottom = 18.0
+theme_override_colors/font_color = Color(1, 0.568627, 0.058824, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "忍术境界"
+
+[node name="忍术境界槽" type="ProgressBar" parent="原版人物属性面板/他人信息面板"]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 3.0
+offset_right = 165.0
+offset_bottom = 14.0
+theme_override_styles/background = SubResource("StyleBoxTexture_exp_under")
+theme_override_styles/fill = SubResource("StyleBoxTexture_exp_fill")
+show_percentage = false
+
+[node name="忍术境界值" type="Label" parent="原版人物属性面板/他人信息面板"]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 1.0
+offset_right = 165.0
+offset_bottom = 17.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0/5400"
+horizontal_alignment = 1
+
+[node name="八门进度名" type="Label" parent="原版人物属性面板/他人信息面板"]
+layout_mode = 0
+offset_top = 21.0
+offset_right = 58.0
+offset_bottom = 37.0
+theme_override_colors/font_color = Color(1, 0.568627, 0.058824, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "八门进度"
+
+[node name="八门进度槽" type="ProgressBar" parent="原版人物属性面板/他人信息面板"]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 22.0
+offset_right = 165.0
+offset_bottom = 33.0
+theme_override_styles/background = SubResource("StyleBoxTexture_exp_under")
+theme_override_styles/fill = SubResource("StyleBoxTexture_exp_fill")
+show_percentage = false
+
+[node name="八门进度值" type="Label" parent="原版人物属性面板/他人信息面板"]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 20.0
+offset_right = 165.0
+offset_bottom = 36.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0/0"
+horizontal_alignment = 1
+
+[node name="成就进度名" type="Label" parent="原版人物属性面板/他人信息面板"]
+layout_mode = 0
+offset_top = 40.0
+offset_right = 58.0
+offset_bottom = 56.0
+theme_override_colors/font_color = Color(1, 0.568627, 0.058824, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "成就进度"
+
+[node name="成就进度槽" type="ProgressBar" parent="原版人物属性面板/他人信息面板"]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 41.0
+offset_right = 165.0
+offset_bottom = 52.0
+theme_override_styles/background = SubResource("StyleBoxTexture_exp_under")
+theme_override_styles/fill = SubResource("StyleBoxTexture_exp_fill")
+show_percentage = false
+
+[node name="成就进度值" type="Label" parent="原版人物属性面板/他人信息面板"]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 39.0
+offset_right = 165.0
+offset_bottom = 55.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0/503"
+horizontal_alignment = 1
+
+[node name="条下分隔线" type="TextureRect" parent="原版人物属性面板/他人信息面板"]
+layout_mode = 0
+offset_top = 58.0
+offset_right = 173.0
+offset_bottom = 60.0
+expand_mode = 1
+texture = ExtResource("2_krnc2")
+stretch_mode = 0
+
+[node name="密语钮" type="TextureButton" parent="原版人物属性面板/他人信息面板"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 74.0
+offset_right = 78.0
+offset_bottom = 96.0
+ignore_texture_size = true
+stretch_mode = 4
+texture_normal = ExtResource("30_char_btn")
+
+[node name="文字" type="Label" parent="原版人物属性面板/他人信息面板/密语钮"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 5.0
+offset_right = 56.0
+offset_bottom = 21.0
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "密　语"
+horizontal_alignment = 1
+
+[node name="交易钮" type="TextureButton" parent="原版人物属性面板/他人信息面板"]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 74.0
+offset_right = 154.0
+offset_bottom = 96.0
+ignore_texture_size = true
+stretch_mode = 4
+texture_normal = ExtResource("30_char_btn")
+
+[node name="文字" type="Label" parent="原版人物属性面板/他人信息面板/交易钮"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 5.0
+offset_right = 56.0
+offset_bottom = 21.0
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "交　易"
+horizontal_alignment = 1
+
+[node name="加友钮" type="TextureButton" parent="原版人物属性面板/他人信息面板"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 105.0
+offset_right = 78.0
+offset_bottom = 127.0
+ignore_texture_size = true
+stretch_mode = 4
+texture_normal = ExtResource("30_char_btn")
+
+[node name="文字" type="Label" parent="原版人物属性面板/他人信息面板/加友钮"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 5.0
+offset_right = 56.0
+offset_bottom = 21.0
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "加　友"
+horizontal_alignment = 1
+
+[node name="组队钮" type="TextureButton" parent="原版人物属性面板/他人信息面板"]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 105.0
+offset_right = 154.0
+offset_bottom = 127.0
+ignore_texture_size = true
+stretch_mode = 4
+texture_normal = ExtResource("30_char_btn")
+
+[node name="文字" type="Label" parent="原版人物属性面板/他人信息面板/组队钮"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 5.0
+offset_right = 56.0
+offset_bottom = 21.0
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "组　队"
+horizontal_alignment = 1
+
+[node name="当前生命" type="Label" parent="原版人物属性面板" unique_id=453791725]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 322.0
+offset_right = 53.0
+offset_bottom = 342.0
+theme_override_colors/font_color = Color(0.9882353, 0.7647059, 0.6, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "生命值"
+
+[node name="当前查克拉" type="Label" parent="原版人物属性面板" unique_id=593622884]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 341.0
+offset_right = 53.0
+offset_bottom = 361.0
+theme_override_colors/font_color = Color(0.9882353, 0.7647059, 0.6, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "查克拉"
+
+[node name="生命槽" type="Panel" parent="原版人物属性面板" unique_id=941372674]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 327.0
+offset_right = 240.0
+offset_bottom = 339.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_bar_under")
+
+[node name="生命条" type="ProgressBar" parent="原版人物属性面板" unique_id=1240440618]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 329.0
+offset_right = 237.0
+offset_bottom = 336.0
+theme_override_styles/background = SubResource("StyleBoxEmpty_bar_none")
+theme_override_styles/fill = SubResource("StyleBoxTexture_hp_fill")
+value = 100.0
+show_percentage = false
+
+[node name="生命数值" type="Label" parent="原版人物属性面板" unique_id=1570202123]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 323.0
+offset_right = 240.0
+offset_bottom = 342.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "100/100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="查克拉槽" type="Panel" parent="原版人物属性面板" unique_id=219642226]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 346.0
+offset_right = 240.0
+offset_bottom = 358.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_bar_under")
+
+[node name="查克拉条" type="ProgressBar" parent="原版人物属性面板" unique_id=2035907549]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 348.0
+offset_right = 237.0
+offset_bottom = 355.0
+theme_override_styles/background = SubResource("StyleBoxEmpty_bar_none")
+theme_override_styles/fill = SubResource("StyleBoxTexture_mp_fill")
+value = 100.0
+show_percentage = false
+
+[node name="查克拉数值" type="Label" parent="原版人物属性面板" unique_id=674495611]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 342.0
+offset_right = 240.0
+offset_bottom = 361.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "100/100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="人物扩展页" type="Panel" parent="." unique_id=262819769]
+visible = false
+clip_contents = true
+layout_mode = 0
+offset_left = 69.0
+offset_top = 20.0
+offset_right = 491.0
+offset_bottom = 386.0
+
+[node name="物品菜单" parent="." instance=ExtResource("11_menu")]
+visible = false
+
+[node name="物品提示框" parent="." instance=ExtResource("9_tip")]
+visible = false
+
+[node name="装备提示框" parent="." instance=ExtResource("10_tip")]
+visible = false
+
+[node name="套装提示框" parent="." instance=ExtResource("13_richtip")]
+
+[node name="其他属性面板" type="Control" parent="." unique_id=1939907671]
+visible = false
+layout_mode = 0
+offset_left = 493.0
+offset_top = 84.0
+offset_right = 666.0
+offset_bottom = 234.0
+mouse_filter = 2
+
+[node name="底板" type="Panel" parent="其他属性面板" unique_id=1781598143]
+visible = false
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 173.0
+offset_bottom = 150.0
+mouse_filter = 2
+
+[node name="顶图" type="TextureRect" parent="其他属性面板" unique_id=531412460]
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 173.0
+offset_bottom = 150.0
+mouse_filter = 2
+texture = ExtResource("27_second_panel")
+
+[node name="标题" type="Label" parent="其他属性面板" unique_id=807521809]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 0.0
+offset_right = 118.0
+offset_bottom = 17.0
+text = "其他属性"
+
+[node name="第0行题" type="Label" parent="其他属性面板" unique_id=1777071945]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 21.0
+offset_right = 115.0
+offset_bottom = 39.0
+text = "伤 害 减 免"
+
+[node name="第0行值" type="Label" parent="其他属性面板" unique_id=236944669]
+layout_mode = 0
+offset_left = 115.0
+offset_top = 22.0
+offset_right = 171.0
+offset_bottom = 40.0
+text = "+ 0 %"
+
+[node name="第1行题" type="Label" parent="其他属性面板" unique_id=1954399568]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 43.0
+offset_right = 115.0
+offset_bottom = 61.0
+text = "伤 害 反 弹"
+
+[node name="第1行值" type="Label" parent="其他属性面板" unique_id=1082114002]
+layout_mode = 0
+offset_left = 115.0
+offset_top = 44.0
+offset_right = 171.0
+offset_bottom = 62.0
+text = "+ 0 %"
+
+[node name="第2行题" type="Label" parent="其他属性面板" unique_id=1178736625]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 65.0
+offset_right = 115.0
+offset_bottom = 83.0
+text = "无 视 防 御"
+
+[node name="第2行值" type="Label" parent="其他属性面板" unique_id=1270414731]
+layout_mode = 0
+offset_left = 115.0
+offset_top = 66.0
+offset_right = 171.0
+offset_bottom = 84.0
+text = "+ 0 %"
+
+[node name="第3行题" type="Label" parent="其他属性面板" unique_id=1799062209]
+visible = false
+layout_mode = 0
+offset_left = 37.0
+offset_top = 87.0
+offset_right = 115.0
+offset_bottom = 105.0
+text = ""
+
+[node name="第3行值" type="Label" parent="其他属性面板" unique_id=348205063]
+visible = false
+layout_mode = 0
+offset_left = 115.0
+offset_top = 88.0
+offset_right = 171.0
+offset_bottom = 106.0
+text = "+ 0 %"
+
+[node name="第4行题" type="Label" parent="其他属性面板" unique_id=1888753005]
+visible = false
+layout_mode = 0
+offset_left = 37.0
+offset_top = 109.0
+offset_right = 115.0
+offset_bottom = 127.0
+text = ""
+
+[node name="第4行值" type="Label" parent="其他属性面板" unique_id=574176443]
+visible = false
+layout_mode = 0
+offset_left = 115.0
+offset_top = 110.0
+offset_right = 171.0
+offset_bottom = 128.0
+text = "+ 0 %"
+
+[node name="第5行题" type="Label" parent="其他属性面板" unique_id=1981237910]
+visible = false
+layout_mode = 0
+offset_left = 37.0
+offset_top = 131.0
+offset_right = 115.0
+offset_bottom = 149.0
+text = ""
+
+[node name="第5行值" type="Label" parent="其他属性面板" unique_id=220288892]
+visible = false
+layout_mode = 0
+offset_left = 115.0
+offset_top = 132.0
+offset_right = 171.0
+offset_bottom = 150.0
+text = "+ 0 %"
+
+[node name="第6行题" type="Label" parent="其他属性面板" unique_id=1425970147]
+visible = false
+layout_mode = 0
+offset_left = 37.0
+offset_top = 153.0
+offset_right = 115.0
+offset_bottom = 171.0
+text = ""
+
+[node name="第6行值" type="Label" parent="其他属性面板" unique_id=685497231]
+visible = false
+layout_mode = 0
+offset_left = 115.0
+offset_top = 154.0
+offset_right = 171.0
+offset_bottom = 172.0
+text = "+ 0 %"
+
+[node name="第7行题" type="Label" parent="其他属性面板" unique_id=649983931]
+visible = false
+layout_mode = 0
+offset_left = 37.0
+offset_top = 175.0
+offset_right = 115.0
+offset_bottom = 193.0
+text = ""
+
+[node name="第7行值" type="Label" parent="其他属性面板" unique_id=1336441550]
+visible = false
+layout_mode = 0
+offset_left = 115.0
+offset_top = 176.0
+offset_right = 171.0
+offset_bottom = 194.0
+text = "+ 0 %"
+
+[node name="第8行题" type="Label" parent="其他属性面板" unique_id=1927126942]
+visible = false
+layout_mode = 0
+offset_left = 37.0
+offset_top = 197.0
+offset_right = 115.0
+offset_bottom = 215.0
+text = ""
+
+[node name="第8行值" type="Label" parent="其他属性面板" unique_id=498774614]
+visible = false
+layout_mode = 0
+offset_left = 115.0
+offset_top = 198.0
+offset_right = 171.0
+offset_bottom = 216.0
+text = "+ 0 %"

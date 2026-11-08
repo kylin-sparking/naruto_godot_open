@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Texture2D" path="res://素材/界面/聊天/faces/face_1.png" id="1_face"]
+
+[node name="聊天表情按钮" type="TextureButton"]
+custom_minimum_size = Vector2(24, 24)
+focus_mode = 0
+texture_normal = ExtResource("1_face")
+stretch_mode = 3

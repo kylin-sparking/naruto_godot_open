@@ -1,0 +1,222 @@
+[gd_scene load_steps=16 format=3]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/子面板.png" id="t1"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/生命料理/放入钮.png" id="t2"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/生命料理/放入钮_悬停.png" id="t3"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/生命料理/放入钮_按下.png" id="t4"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/物品格.png" id="t5"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/生命料理/料理箭头.png" id="t6"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/生命料理/制作钮.png" id="t7"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/生命料理/制作钮_悬停.png" id="t8"]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/生命料理/制作钮_按下.png" id="t9"]
+
+[sub_resource type="StyleBoxTexture" id="sb1_n"]
+texture = ExtResource("t2")
+
+[sub_resource type="StyleBoxTexture" id="sb1_h"]
+texture = ExtResource("t3")
+
+[sub_resource type="StyleBoxTexture" id="sb1_p"]
+texture = ExtResource("t4")
+
+[sub_resource type="StyleBoxTexture" id="sb2_n"]
+texture = ExtResource("t7")
+
+[sub_resource type="StyleBoxTexture" id="sb2_h"]
+texture = ExtResource("t8")
+
+[sub_resource type="StyleBoxTexture" id="sb2_p"]
+texture = ExtResource("t9")
+
+[node name="原版生命料理内容" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 241
+offset_bottom = 290.0
+
+[node name="说明" type="RichTextLabel" parent="."]
+text = "放入材料后，点击【制作】将会随机获得神秘料理一份，不同的料理拥有不同的属性效果"
+scroll_active = false
+bbcode_enabled = true
+autowrap_mode = 3
+theme_override_font_sizes/normal_font_size = 12
+theme_override_constants/line_separation = 6
+layout_mode = 0
+offset_left = 16.0
+offset_top = 17.0
+offset_right = 225.0
+offset_bottom = 73.0
+
+[node name="投料区底" type="NinePatchRect" parent="."]
+texture = ExtResource("t1")
+patch_margin_left = 8
+patch_margin_right = 7
+patch_margin_top = 7
+patch_margin_bottom = 7
+layout_mode = 0
+offset_left = 16.0
+offset_top = 73.0
+offset_right = 225.0
+offset_bottom = 235.0
+
+[node name="投料提示" type="Label" parent="."]
+text = "请在以下两格中放入材料"
+theme_override_colors/font_color = Color(1.000000, 0.568627, 0.000000, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+layout_mode = 0
+offset_left = 16.0
+offset_top = 75.0
+offset_right = 225.0
+offset_bottom = 95.0
+
+[node name="放入钮" type="Button" parent="."]
+theme_override_styles/normal = SubResource("sb1_n")
+theme_override_styles/hover = SubResource("sb1_h")
+theme_override_styles/pressed = SubResource("sb1_p")
+text = "放入材料"
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+layout_mode = 0
+offset_left = 90.0
+offset_top = 99.0
+offset_right = 151.0
+offset_bottom = 121.0
+
+[node name="材料1" type="NinePatchRect" parent="."]
+texture = ExtResource("t5")
+patch_margin_left = 9
+patch_margin_right = 6
+patch_margin_top = 9
+patch_margin_bottom = 6
+layout_mode = 0
+offset_left = 59.0
+offset_top = 126.0
+offset_right = 99.0
+offset_bottom = 166.0
+
+[node name="材料1_数量" type="Label" parent="材料1"]
+text = " "
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 20
+offset_right = 40.0
+offset_bottom = 40
+
+[node name="材料2" type="NinePatchRect" parent="."]
+texture = ExtResource("t5")
+patch_margin_left = 9
+patch_margin_right = 6
+patch_margin_top = 9
+patch_margin_bottom = 6
+layout_mode = 0
+offset_left = 142.0
+offset_top = 126.0
+offset_right = 182.0
+offset_bottom = 166.0
+
+[node name="材料2_数量" type="Label" parent="材料2"]
+text = " "
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 20
+offset_right = 40.0
+offset_bottom = 40
+
+[node name="料理箭头" type="TextureRect" parent="."]
+texture = ExtResource("t6")
+mouse_filter = 2
+layout_mode = 0
+offset_left = 98.5
+offset_top = 144.0
+offset_right = 142.5
+offset_bottom = 189.0
+
+[node name="成品格" type="NinePatchRect" parent="."]
+texture = ExtResource("t5")
+patch_margin_left = 9
+patch_margin_right = 6
+patch_margin_top = 9
+patch_margin_bottom = 6
+layout_mode = 0
+offset_left = 100.5
+offset_top = 190.0
+offset_right = 140.5
+offset_bottom = 230.0
+
+[node name="成品格_数量" type="Label" parent="成品格"]
+text = " "
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+mouse_filter = 2
+layout_mode = 0
+offset_left = 0
+offset_top = 20
+offset_right = 40.0
+offset_bottom = 40
+
+[node name="消耗行" type="Control" parent="."]
+mouse_filter = 2
+layout_mode = 0
+offset_left = 46.5
+offset_top = 236.0
+offset_right = 194.5
+offset_bottom = 256.0
+
+[node name="消耗标题" type="Label" parent="消耗行"]
+text = "需要金币："
+theme_override_colors/font_color = Color(1.000000, 0.568627, 0.000000, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 64.0
+offset_bottom = 20.0
+
+[node name="消耗数值" type="Label" parent="消耗行"]
+text = "2000"
+theme_override_colors/font_color = Color(1.000000, 1.000000, 1.000000, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+layout_mode = 0
+offset_left = 68.0
+offset_top = 0.0
+offset_right = 148.0
+offset_bottom = 20.0
+
+[node name="制作钮" type="Button" parent="."]
+theme_override_styles/normal = SubResource("sb2_n")
+theme_override_styles/hover = SubResource("sb2_h")
+theme_override_styles/pressed = SubResource("sb2_p")
+text = "制作"
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_hover_color = Color(0.988235, 0.956863, 0.611765, 1)
+theme_override_colors/font_pressed_color = Color(0.988235, 0.956863, 0.611765, 1)
+mouse_default_cursor_shape = 2
+layout_mode = 0
+offset_left = 102.0
+offset_top = 263.0
+offset_right = 139.0
+offset_bottom = 285.0

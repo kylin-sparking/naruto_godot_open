@@ -1,0 +1,44 @@
+{
+ "_说明": "原版 GameData `Pvp/open` 段（PVPHandler.as:95-111 读的就是它）。客户端与服务端**都读这一份**，别再各自写死。生成工具：开发工具/导出PVP配置.py；别手改。",
+ "_出处": "as3_MainLib/scripts/com/mxw/game/world/handlers/PVPHandler.as:95-111（读配置） / :313-381（canAttackPlayer） / :392-453（getNoAttackWarning）",
+ "configLevel": 40,
+ "pkLevel": 45,
+ "player2playerLevel": 15,
+ "protectTime": 1800,
+ "defenceTime": 30,
+ "peaceMaps": [
+  100000000,
+  101010000,
+  101020000,
+  101030000,
+  101040000
+ ],
+ "unprotectedMaps": [
+  104040000,
+  105040000,
+  106040000,
+  107040000,
+  108040000,
+  109040000,
+  110040000,
+  100010000,
+  111040000,
+  112040000
+ ],
+ "messages": {
+  "forbidChangeToFamilyMode": "你没有家族，无法切换到家族模式",
+  "forbidChangeToPartyMode": "你没有组队，无法切换到组队模式",
+  "forbidConfigMode": "很抱歉，只有等级高于40级的玩家才可切换PK模式",
+  "forbidFamilyPk": "很抱歉，您当前的PK模式为家族模式，无法对同族成员造成伤害",
+  "forbidPartyPk": "很抱歉，您当前的PK模式为组队模式，无法对该玩家造成伤害",
+  "forbidPkInPeace": "很抱歉，您当前的PK模式为和平模式，无法对该玩家造成伤害",
+  "forbidPkInPeaceMap": "本地图禁止PK",
+  "forbidPkLevel": "很抱歉，只有等级高于45级的玩家才可PK",
+  "forbidProtectedPk": "玩家复活后处于系统保护状态",
+  "lessThan25": "很抱歉，您无法PK等级低于您25级以上的玩家",
+  "losePk": "你被#name玩家杀死",
+  "moreThan25": "很抱歉，您无法PK等级高于您25级以上的玩家",
+  "startDefenceMode": "你进入自卫模式，可以发起反击",
+  "winPk": "你杀死了#name玩家"
+ }
+}

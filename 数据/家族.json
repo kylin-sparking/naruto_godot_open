@@ -1,0 +1,3506 @@
+{
+ "cost": {
+  "kick": {
+   "item": {
+    "0": {
+     "id": 15019001,
+     "count": 1
+    }
+   }
+  },
+  "contri": {
+   "item": {
+    "3": {
+     "id": 16000025
+    },
+    "2": {
+     "id": 16000024
+    },
+    "1": {
+     "id": 16000023
+    },
+    "0": {
+     "id": 16000022
+    },
+    "4": {
+     "id": 16000026
+    }
+   }
+  }
+ },
+ "flagmap": {
+  "3": {
+   "mapid": 103010000,
+   "y": 1038,
+   "childmaps": "103020000,103030000",
+   "x": 1313
+  },
+  "2": {
+   "mapid": 102010000,
+   "y": 444,
+   "childmaps": "102020000,102030000",
+   "x": 696
+  },
+  "10": {
+   "mapid": 110010000,
+   "y": 1075,
+   "childmaps": "110020000,110030000,110040000",
+   "x": 1445
+  },
+  "1": {
+   "mapid": 100000000,
+   "y": 1212,
+   "childmaps": "100010000",
+   "x": 2371
+  },
+  "0": {
+   "mapid": 101010000,
+   "y": 1098,
+   "childmaps": "101020000,101030000,101040000",
+   "x": 962
+  },
+  "7": {
+   "mapid": 107010000,
+   "y": 698,
+   "childmaps": "107020000,107030000,107040000",
+   "x": 1103
+  },
+  "6": {
+   "mapid": 106010000,
+   "y": 1114,
+   "childmaps": "106020000,106030000,106040000",
+   "x": 1553
+  },
+  "5": {
+   "mapid": 104010000,
+   "y": 1147,
+   "childmaps": "104020000,104030000,104040000",
+   "x": 1407
+  },
+  "4": {
+   "mapid": 105010000,
+   "y": 826,
+   "childmaps": "105020000,105030000,105040000",
+   "x": 1011
+  },
+  "9": {
+   "mapid": 109010000,
+   "y": 1138,
+   "childmaps": "109020000,109030000,109040000",
+   "x": 1173
+  },
+  "8": {
+   "mapid": 108010000,
+   "y": 1154,
+   "childmaps": "108020000,108030000,108040000",
+   "x": 955
+  },
+  "11": {
+   "mapid": 111010000,
+   "y": 985,
+   "childmaps": "111020000,111030000,111040000",
+   "x": 1438
+  },
+  "12": {
+   "mapid": 112010000,
+   "y": 448,
+   "childmaps": "112020000,112030000,112040000",
+   "x": 812
+  }
+ },
+ "flag": {
+  "3": {
+   "hp": {
+    "max_hp": 4000,
+    "cure_hp": 20
+   },
+   "attr": {
+    "maxhp_rate": 4,
+    "atk_rate": 3,
+    "def_rate": 3
+   },
+   "mapattr": {
+    "exp_rage": 50,
+    "zq_rate": 8
+   },
+   "cost": {
+    "money": 30000000,
+    "item": {
+     "3": {
+      "id": 16000026,
+      "count": 50
+     },
+     "2": {
+      "id": 16000025,
+      "count": 50
+     },
+     "1": {
+      "id": 16000024,
+      "count": 50
+     },
+     "0": {
+      "id": 16000023,
+      "count": 50
+     }
+    }
+   },
+   "info": {
+    "limit": 50
+   }
+  },
+  "2": {
+   "hp": {
+    "max_hp": 3000,
+    "cure_hp": 15
+   },
+   "attr": {
+    "maxhp_rate": 3,
+    "atk_rate": 2,
+    "def_rate": 2
+   },
+   "mapattr": {
+    "exp_rage": 40,
+    "zq_rate": 5
+   },
+   "cost": {
+    "money": 10000000,
+    "item": {
+     "3": {
+      "id": 16000026,
+      "count": 25
+     },
+     "2": {
+      "id": 16000025,
+      "count": 25
+     },
+     "1": {
+      "id": 16000024,
+      "count": 25
+     },
+     "0": {
+      "id": 16000023,
+      "count": 25
+     }
+    }
+   },
+   "info": {
+    "limit": 40
+   }
+  },
+  "10": {
+   "hp": {
+    "max_hp": 11000,
+    "cure_hp": 55
+   },
+   "attr": {
+    "maxhp_rate": 11,
+    "atk_rate": 10,
+    "def_rate": 10
+   },
+   "mapattr": {
+    "exp_rage": 120,
+    "zq_rate": 28
+   },
+   "cost": {
+    "money": 5200000000.0,
+    "item": {
+     "3": {
+      "id": 16000026,
+      "count": 5200
+     },
+     "2": {
+      "id": 16000025,
+      "count": 5200
+     },
+     "1": {
+      "id": 16000024,
+      "count": 5200
+     },
+     "0": {
+      "id": 16000023,
+      "count": 5200
+     }
+    }
+   },
+   "info": {
+    "limit": 120
+   }
+  },
+  "1": {
+   "hp": {
+    "max_hp": 2000,
+    "cure_hp": 10
+   },
+   "attr": {
+    "maxhp_rate": 2,
+    "atk_rate": 1,
+    "def_rate": 1
+   },
+   "mapattr": {
+    "exp_rage": 30,
+    "zq_rate": 3
+   },
+   "cost": {
+    "money": 0,
+    "item": {
+     "0": {
+      "id": 16000022,
+      "count": 1
+     }
+    }
+   },
+   "info": {
+    "limit": 30
+   }
+  },
+  "7": {
+   "hp": {
+    "max_hp": 8000,
+    "cure_hp": 40
+   },
+   "attr": {
+    "maxhp_rate": 8,
+    "atk_rate": 7,
+    "def_rate": 7
+   },
+   "mapattr": {
+    "exp_rage": 90,
+    "zq_rate": 18
+   },
+   "cost": {
+    "money": 800000000.0,
+    "item": {
+     "3": {
+      "id": 16000026,
+      "count": 800
+     },
+     "2": {
+      "id": 16000025,
+      "count": 800
+     },
+     "1": {
+      "id": 16000024,
+      "count": 800
+     },
+     "0": {
+      "id": 16000023,
+      "count": 800
+     }
+    }
+   },
+   "info": {
+    "limit": 90
+   }
+  },
+  "6": {
+   "hp": {
+    "max_hp": 7000,
+    "cure_hp": 35
+   },
+   "attr": {
+    "maxhp_rate": 7,
+    "atk_rate": 6,
+    "def_rate": 6
+   },
+   "mapattr": {
+    "exp_rage": 80,
+    "zq_rate": 15
+   },
+   "cost": {
+    "money": 400000000.0,
+    "item": {
+     "3": {
+      "id": 16000026,
+      "count": 400
+     },
+     "2": {
+      "id": 16000025,
+      "count": 400
+     },
+     "1": {
+      "id": 16000024,
+      "count": 400
+     },
+     "0": {
+      "id": 16000023,
+      "count": 400
+     }
+    }
+   },
+   "info": {
+    "limit": 80
+   }
+  },
+  "5": {
+   "hp": {
+    "max_hp": 6000,
+    "cure_hp": 30
+   },
+   "attr": {
+    "maxhp_rate": 6,
+    "atk_rate": 5,
+    "def_rate": 5
+   },
+   "mapattr": {
+    "exp_rage": 70,
+    "zq_rate": 13
+   },
+   "cost": {
+    "money": 200000000,
+    "item": {
+     "3": {
+      "id": 16000026,
+      "count": 200
+     },
+     "2": {
+      "id": 16000025,
+      "count": 200
+     },
+     "1": {
+      "id": 16000024,
+      "count": 200
+     },
+     "0": {
+      "id": 16000023,
+      "count": 200
+     }
+    }
+   },
+   "info": {
+    "limit": 70
+   }
+  },
+  "4": {
+   "hp": {
+    "max_hp": 5000,
+    "cure_hp": 25
+   },
+   "attr": {
+    "maxhp_rate": 5,
+    "atk_rate": 4,
+    "def_rate": 4
+   },
+   "mapattr": {
+    "exp_rage": 60,
+    "zq_rate": 10
+   },
+   "cost": {
+    "money": 100000000,
+    "item": {
+     "3": {
+      "id": 16000026,
+      "count": 100
+     },
+     "2": {
+      "id": 16000025,
+      "count": 100
+     },
+     "1": {
+      "id": 16000024,
+      "count": 100
+     },
+     "0": {
+      "id": 16000023,
+      "count": 100
+     }
+    }
+   },
+   "info": {
+    "limit": 60
+   }
+  },
+  "9": {
+   "hp": {
+    "max_hp": 10000,
+    "cure_hp": 50
+   },
+   "attr": {
+    "maxhp_rate": 10,
+    "atk_rate": 9,
+    "def_rate": 9
+   },
+   "mapattr": {
+    "exp_rage": 110,
+    "zq_rate": 24
+   },
+   "cost": {
+    "money": 3200000000.0,
+    "item": {
+     "3": {
+      "id": 16000026,
+      "count": 3200
+     },
+     "2": {
+      "id": 16000025,
+      "count": 3200
+     },
+     "1": {
+      "id": 16000024,
+      "count": 3200
+     },
+     "0": {
+      "id": 16000023,
+      "count": 3200
+     }
+    }
+   },
+   "info": {
+    "limit": 110
+   }
+  },
+  "8": {
+   "hp": {
+    "max_hp": 9000,
+    "cure_hp": 45
+   },
+   "attr": {
+    "maxhp_rate": 9,
+    "atk_rate": 8,
+    "def_rate": 8
+   },
+   "mapattr": {
+    "exp_rage": 100,
+    "zq_rate": 21
+   },
+   "cost": {
+    "money": 1600000000.0,
+    "item": {
+     "3": {
+      "id": 16000026,
+      "count": 1600
+     },
+     "2": {
+      "id": 16000025,
+      "count": 1600
+     },
+     "1": {
+      "id": 16000024,
+      "count": 1600
+     },
+     "0": {
+      "id": 16000023,
+      "count": 1600
+     }
+    }
+   },
+   "info": {
+    "limit": 100
+   }
+  }
+ },
+ "war": {
+  "open": {
+   "timeBegin": "20:30",
+   "timeEnd": "21:00",
+   "days": "1,3,5"
+  },
+  "pubnotice": {
+   "war_wrongtime": "很抱歉，目前不在家族领域战活动时间（只有每周一、周三、周五晚20:30-21:00可以攻击家族旗帜）",
+   "destroy_flag": "本族在#channel#线#map#地图(#x#，#y#)座标的家族旗帜已被【#family#】家族【#name#】玩家彻底摧毁，此地图已不属于本族领地",
+   "war_nobanghui": "很抱歉，您没有加入任何家族，无法参与家族旗帜攻击",
+   "flag_attacked": "本族在#channel#线#map#地图(#x#，#y#)座标的家族旗帜正被攻击，请前往保护，当前血量剩余#hp#%",
+   "add_flag": "本族在#channel#线#map#地图座标(#x#，#y#)已经成功安插本族旗帜，该地图已经成为本族领域"
+  },
+  "common": {
+   "unprotectTime": 1200
+  },
+  "drop": {
+   "3": {
+    "money": {
+     "prob10000": 100000,
+     "quantity": 60000,
+     "dui": 20
+    },
+    "others": {
+     "2": {
+      "dropMax": 1,
+      "items": {
+       "0": {
+        "itemid": 16000026,
+        "prob": 100
+       }
+      },
+      "dropProb": 60000,
+      "dropMin": 1
+     },
+     "1": {
+      "dropMax": 1,
+      "items": {
+       "0": {
+        "itemid": 16000025,
+        "prob": 100
+       }
+      },
+      "dropProb": 60000,
+      "dropMin": 1
+     },
+     "0": {
+      "dropMax": 1,
+      "items": {
+       "0": {
+        "itemid": 16000024,
+        "prob": 100
+       }
+      },
+      "dropProb": 60000,
+      "dropMin": 1
+     }
+    }
+   },
+   "2": {
+    "money": {
+     "prob10000": 100000,
+     "quantity": 50000,
+     "dui": 20
+    },
+    "others": {
+     "1": {
+      "dropMax": 1,
+      "items": {
+       "0": {
+        "itemid": 16000026,
+        "prob": 100
+       }
+      },
+      "dropProb": 55000,
+      "dropMin": 1
+     },
+     "0": {
+      "dropMax": 1,
+      "items": {
+       "0": {
+        "itemid": 16000025,
+        "prob": 100
+       }
+      },
+      "dropProb": 55000,
+      "dropMin": 1
+     }
+    }
+   },
+   "1": {
+    "money": {
+     "prob10000": 100000,
+     "quantity": 40000,
+     "dui": 20
+    },
+    "others": {
+     "1": {
+      "dropMax": 1,
+      "items": {
+       "0": {
+        "itemid": 16000026,
+        "prob": 100
+       }
+      },
+      "dropProb": 50000,
+      "dropMin": 1
+     },
+     "0": {
+      "dropMax": 1,
+      "items": {
+       "0": {
+        "itemid": 16000025,
+        "prob": 100
+       }
+      },
+      "dropProb": 50000,
+      "dropMin": 1
+     }
+    }
+   },
+   "7": {
+    "money": {
+     "prob10000": 100000,
+     "quantity": 100000,
+     "dui": 20
+    },
+    "others": {
+     "3": {
+      "dropMax": 1,
+      "items": {
+       "0": {
+        "itemid": 16000026,
+        "prob": 100
+       }
+      },
+      "dropProb": 80000,
+      "dropMin": 1
+     },
+     "2": {
+      "dropMax": 1,
+      "items": {
+       "0": {
+        "itemid": 16000025,
+        "prob": 100
+       }
+      },
+      "dropProb": 80000,
+      "dropMin": 1
+     },
+     "1": {
+      "dropMax": 1,
+      "items": {
+       "0": {
+        "itemid": 16000024,
+        "prob": 100
+       }
+      },
+      "dropProb": 80000,
+      "dropMin": 1
+     },
+     "0": {
+      "dropMax": 1,
+      "items": {
+       "0": {
+        "itemid": 16000023,
+        "prob": 100
+       }
+      },
+      "dropProb": 80000,
+      "dropMin": 1
+     }
+    }
+   },
+   "6": {
+    "money": {
+     "prob10000": 100000,
+     "quantity": 90000,
+     "dui": 20
+    },
+    "others": {
+     "3": {
+      "dropMax": 1,
+      "items": {
+       "0": {
+        "itemid": 16000026,
+        "prob": 100
+       }
+      },
+      "dropProb": 75000,
+      "dropMin": 1
+     },
+     "2": {
+      "dropMax": 1,
+      "items": {
+       "0": {
+        "itemid": 16000025,
+        "prob": 100
+       }
+      },
+      "dropProb": 75000,
+      "dropMin": 1
+     },
+     "1": {
+      "dropMax": 1,
+      "items": {
+       "0": {
+        "itemid": 16000024,
+        "prob": 100
+       }
+      },
+      "dropProb": 75000,
+      "dropMin": 1
+     },
+     "0": {
+      "dropMax": 1,
+      "items": {
+       "0": {
+        "itemid": 16000023,
+        "prob": 100
+       }
+      },
+      "dropProb": 75000,
+      "dropMin": 1
+     }
+    }
+   },
+   "5": {
+    "money": {
+     "prob10000": 100000,
+     "quantity": 80000,
+     "dui": 20
+    },
+    "others": {
+     "3": {
+      "dropMax": 1,
+      "items": {
+       "0": {
+        "itemid": 16000026,
+        "prob": 100
+       }
+      },
+      "dropProb": 70000,
+      "dropMin": 1
+     },
+     "2": {
+      "dropMax": 1,
+      "items": {
+       "0": {
+        "itemid": 16000025,
+        "prob": 100
+       }
+      },
+      "dropProb": 70000,
+      "dropMin": 1
+     },
+     "1": {
+      "dropMax": 1,
+      "items": {
+       "0": {
+        "itemid": 16000024,
+        "prob": 100
+       }
+      },
+      "dropProb": 70000,
+      "dropMin": 1
+     },
+     "0": {
+      "dropMax": 1,
+      "items": {
+       "0": {
+        "itemid": 16000023,
+        "prob": 100
+       }
+      },
+      "dropProb": 70000,
+      "dropMin": 1
+     }
+    }
+   },
+   "4": {
+    "money": {
+     "prob10000": 100000,
+     "quantity": 70000,
+     "dui": 20
+    },
+    "others": {
+     "2": {
+      "dropMax": 1,
+      "items": {
+       "0": {
+        "itemid": 16000026,
+        "prob": 100
+       }
+      },
+      "dropProb": 65000,
+      "dropMin": 1
+     },
+     "1": {
+      "dropMax": 1,
+      "items": {
+       "0": {
+        "itemid": 16000025,
+        "prob": 100
+       }
+      },
+      "dropProb": 65000,
+      "dropMin": 1
+     },
+     "0": {
+      "dropMax": 1,
+      "items": {
+       "0": {
+        "itemid": 16000024,
+        "prob": 100
+       }
+      },
+      "dropProb": 65000,
+      "dropMin": 1
+     }
+    }
+   },
+   "9": {
+    "money": {
+     "prob10000": 100000,
+     "quantity": 120000,
+     "dui": 20
+    },
+    "others": {
+     "3": {
+      "dropMax": 1,
+      "items": {
+       "0": {
+        "itemid": 16000026,
+        "prob": 100
+       }
+      },
+      "dropProb": 90000,
+      "dropMin": 1
+     },
+     "2": {
+      "dropMax": 1,
+      "items": {
+       "0": {
+        "itemid": 16000025,
+        "prob": 100
+       }
+      },
+      "dropProb": 90000,
+      "dropMin": 1
+     },
+     "1": {
+      "dropMax": 1,
+      "items": {
+       "0": {
+        "itemid": 16000024,
+        "prob": 100
+       }
+      },
+      "dropProb": 90000,
+      "dropMin": 1
+     },
+     "0": {
+      "dropMax": 1,
+      "items": {
+       "0": {
+        "itemid": 16000023,
+        "prob": 100
+       }
+      },
+      "dropProb": 90000,
+      "dropMin": 1
+     }
+    }
+   },
+   "8": {
+    "money": {
+     "prob10000": 100000,
+     "quantity": 110000,
+     "dui": 20
+    },
+    "others": {
+     "3": {
+      "dropMax": 1,
+      "items": {
+       "0": {
+        "itemid": 16000026,
+        "prob": 100
+       }
+      },
+      "dropProb": 85000,
+      "dropMin": 1
+     },
+     "2": {
+      "dropMax": 1,
+      "items": {
+       "0": {
+        "itemid": 16000025,
+        "prob": 100
+       }
+      },
+      "dropProb": 85000,
+      "dropMin": 1
+     },
+     "1": {
+      "dropMax": 1,
+      "items": {
+       "0": {
+        "itemid": 16000024,
+        "prob": 100
+       }
+      },
+      "dropProb": 85000,
+      "dropMin": 1
+     },
+     "0": {
+      "dropMax": 1,
+      "items": {
+       "0": {
+        "itemid": 16000023,
+        "prob": 100
+       }
+      },
+      "dropProb": 85000,
+      "dropMin": 1
+     }
+    }
+   }
+  }
+ },
+ "boss": {
+  "3": {
+   "levelMax": "69",
+   "gainYueLi": 200000,
+   "bossId": 2200061,
+   "gainZq": 8000,
+   "levelMin": "60"
+  },
+  "2": {
+   "levelMax": "59",
+   "gainYueLi": 130000,
+   "bossId": 2200060,
+   "gainZq": 5000,
+   "levelMin": "50"
+  },
+  "time": {
+   "3": {
+    "timePoint": "21:30",
+    "day": "4"
+   },
+   "2": {
+    "timePoint": "21:30",
+    "day": "3"
+   },
+   "1": {
+    "timePoint": "21:30",
+    "day": "2"
+   },
+   "0": {
+    "timePoint": "21:30",
+    "day": "1"
+   },
+   "6": {
+    "timePoint": "21:30",
+    "day": "7"
+   },
+   "5": {
+    "timePoint": "16:30",
+    "day": "7"
+   },
+   "4": {
+    "timePoint": "21:30",
+    "day": "5"
+   }
+  },
+  "1": {
+   "levelMax": "49",
+   "gainYueLi": 80000,
+   "bossId": 2200059,
+   "gainZq": 3000,
+   "levelMin": "40"
+  },
+  "0": {
+   "levelMax": "39",
+   "gainYueLi": 50000,
+   "bossId": 2200058,
+   "gainZq": 2000,
+   "levelMin": "0"
+  },
+  "7": {
+   "levelMax": "109",
+   "gainYueLi": 580000,
+   "bossId": 2200065,
+   "gainZq": 30000,
+   "levelMin": "100"
+  },
+  "common": {
+   "mapId": "408000000",
+   "channel": "3"
+  },
+  "6": {
+   "levelMax": "99",
+   "gainYueLi": 470000,
+   "bossId": 2200064,
+   "gainZq": 23000,
+   "levelMin": "90"
+  },
+  "5": {
+   "levelMax": "89",
+   "gainYueLi": 370000,
+   "bossId": 2200063,
+   "gainZq": 17000,
+   "levelMin": "80"
+  },
+  "4": {
+   "levelMax": "79",
+   "gainYueLi": 280000,
+   "bossId": 2200062,
+   "gainZq": 12000,
+   "levelMin": "70"
+  },
+  "mobs": {
+   "round1": 5000030,
+   "round4": 5000033,
+   "round5": 5000034,
+   "round2": 5000031,
+   "round3": 5000032,
+   "round10": 5000039,
+   "round8": 5000037,
+   "round9": 5000038,
+   "round30": 5000059,
+   "round12": 5000041,
+   "round6": 5000035,
+   "round11": 5000040,
+   "round7": 5000036,
+   "round32": 5000061,
+   "round31": 5000060,
+   "round34": 5000063,
+   "round33": 5000062,
+   "round35": 5000064,
+   "round17": 5000046,
+   "round36": 5000065,
+   "round18": 5000047,
+   "round37": 5000066,
+   "round19": 5000048,
+   "round38": 5000067,
+   "round39": 5000068,
+   "round13": 5000042,
+   "round14": 5000043,
+   "round15": 5000044,
+   "round16": 5000045,
+   "round40": 5000069,
+   "round23": 5000052,
+   "round22": 5000051,
+   "round21": 5000050,
+   "round20": 5000049,
+   "round26": 5000055,
+   "round27": 5000056,
+   "round24": 5000053,
+   "round25": 5000054,
+   "round28": 5000057,
+   "round29": 5000058
+  },
+  "prize": {
+   "round35": {
+    "familyMeso": "1500000",
+    "exp": "250000",
+    "meso": "250000"
+   },
+   "round25": {
+    "familyMeso": "1250000",
+    "exp": "125000",
+    "meso": "125000"
+   },
+   "round40": {
+    "familyMeso": "1500000",
+    "exp": "250000",
+    "meso": "250000"
+   },
+   "round5": {
+    "familyMeso": "900000",
+    "exp": "90000",
+    "meso": "90000"
+   },
+   "round15": {
+    "familyMeso": "1250000",
+    "exp": "125000",
+    "meso": "125000"
+   },
+   "round10": {
+    "familyMeso": "1100000",
+    "exp": "110000",
+    "meso": "110000"
+   },
+   "round30": {
+    "familyMeso": "1250000",
+    "exp": "125000",
+    "meso": "125000"
+   },
+   "round20": {
+    "familyMeso": "1250000",
+    "exp": "125000",
+    "meso": "125000"
+   }
+  },
+  "spawnInfo": {
+   "lPortalName": "sw",
+   "roundDelay": 10,
+   "rPortalName": "se",
+   "maxSpawnRound": 50,
+   "mobCountSpawn": 5
+  }
+ },
+ "flagStyle": {
+  "2008": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_2008_icon",
+     "swfName": "BangHui_flagStyle_2008"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "2009": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_2009_icon",
+     "swfName": "BangHui_flagStyle_2009"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "2006": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_2006_icon",
+     "swfName": "BangHui_flagStyle_2006"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "8010": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_8010_icon",
+     "swfName": "BangHui_flagStyle_8010"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "2007": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_2007_icon",
+     "swfName": "BangHui_flagStyle_2007"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "2004": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_2004_icon",
+     "swfName": "BangHui_flagStyle_2004"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "2005": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_2005_icon",
+     "swfName": "BangHui_flagStyle_2005"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "2002": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_2002_icon",
+     "swfName": "BangHui_flagStyle_2002"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "2003": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_2003_icon",
+     "swfName": "BangHui_flagStyle_2003"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "8016": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_8016_icon",
+     "swfName": "BangHui_flagStyle_8016"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "8015": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_8015_icon",
+     "swfName": "BangHui_flagStyle_8015"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "8018": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_8018_icon",
+     "swfName": "BangHui_flagStyle_8018"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "8017": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_8017_icon",
+     "swfName": "BangHui_flagStyle_8017"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "8012": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_8012_icon",
+     "swfName": "BangHui_flagStyle_8012"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "8011": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_8011_icon",
+     "swfName": "BangHui_flagStyle_8011"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "8014": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_8014_icon",
+     "swfName": "BangHui_flagStyle_8014"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "8013": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_8013_icon",
+     "swfName": "BangHui_flagStyle_8013"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "8008": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_8008_icon",
+     "swfName": "BangHui_flagStyle_8008"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "8009": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_8009_icon",
+     "swfName": "BangHui_flagStyle_8009"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "2012": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_2012_icon",
+     "swfName": "BangHui_flagStyle_2012"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "2011": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_2011_icon",
+     "swfName": "BangHui_flagStyle_2011"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "2010": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_2010_icon",
+     "swfName": "BangHui_flagStyle_2010"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "2017": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_2017_icon",
+     "swfName": "BangHui_flagStyle_2017"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "2018": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_2018_icon",
+     "swfName": "BangHui_flagStyle_2018"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "2019": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_2019_icon",
+     "swfName": "BangHui_flagStyle_2019"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "2013": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_2013_icon",
+     "swfName": "BangHui_flagStyle_2013"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "2014": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_2014_icon",
+     "swfName": "BangHui_flagStyle_2014"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "2015": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_2015_icon",
+     "swfName": "BangHui_flagStyle_2015"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "2016": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_2016_icon",
+     "swfName": "BangHui_flagStyle_2016"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "8019": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_8019_icon",
+     "swfName": "BangHui_flagStyle_8019"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "2001": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_2001_icon",
+     "swfName": "BangHui_flagStyle_2001"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "2000": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_2000_icon",
+     "swfName": "BangHui_flagStyle_2000"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "5007": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_5007_icon",
+     "swfName": "BangHui_flagStyle_5007"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "5008": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_5008_icon",
+     "swfName": "BangHui_flagStyle_5008"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "5005": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_5005_icon",
+     "swfName": "BangHui_flagStyle_5005"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "5006": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_5006_icon",
+     "swfName": "BangHui_flagStyle_5006"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "5009": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_5009_icon",
+     "swfName": "BangHui_flagStyle_5009"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "5011": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_5011_icon",
+     "swfName": "BangHui_flagStyle_5011"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "5010": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_5010_icon",
+     "swfName": "BangHui_flagStyle_5010"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "5015": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_5015_icon",
+     "swfName": "BangHui_flagStyle_5015"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "5014": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_5014_icon",
+     "swfName": "BangHui_flagStyle_5014"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "5013": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_5013_icon",
+     "swfName": "BangHui_flagStyle_5013"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "5012": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_5012_icon",
+     "swfName": "BangHui_flagStyle_5012"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "5000": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_5000_icon",
+     "swfName": "BangHui_flagStyle_5000"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "5002": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_5002_icon",
+     "swfName": "BangHui_flagStyle_5002"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "5001": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_5001_icon",
+     "swfName": "BangHui_flagStyle_5001"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "5004": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_5004_icon",
+     "swfName": "BangHui_flagStyle_5004"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "5003": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_5003_icon",
+     "swfName": "BangHui_flagStyle_5003"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "1003": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_1003_icon",
+     "swfName": "BangHui_flagStyle_1003"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "1004": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_1004_icon",
+     "swfName": "BangHui_flagStyle_1004"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "1001": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_1001_icon",
+     "swfName": "BangHui_flagStyle_1001"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "1002": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_1002_icon",
+     "swfName": "BangHui_flagStyle_1002"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "1007": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_1007_icon",
+     "swfName": "BangHui_flagStyle_1007"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "6018": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_6018_icon",
+     "swfName": "BangHui_flagStyle_6018"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "1008": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_1008_icon",
+     "swfName": "BangHui_flagStyle_1008"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "6017": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_6017_icon",
+     "swfName": "BangHui_flagStyle_6017"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "1005": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_1005_icon",
+     "swfName": "BangHui_flagStyle_1005"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "6019": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_6019_icon",
+     "swfName": "BangHui_flagStyle_6019"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "1006": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_1006_icon",
+     "swfName": "BangHui_flagStyle_1006"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "3005": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_3005_icon",
+     "swfName": "BangHui_flagStyle_3005"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "3006": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_3006_icon",
+     "swfName": "BangHui_flagStyle_3006"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "1009": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_1009_icon",
+     "swfName": "BangHui_flagStyle_1009"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "3003": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_3003_icon",
+     "swfName": "BangHui_flagStyle_3003"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "3004": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_3004_icon",
+     "swfName": "BangHui_flagStyle_3004"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "3009": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_3009_icon",
+     "swfName": "BangHui_flagStyle_3009"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "3007": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_3007_icon",
+     "swfName": "BangHui_flagStyle_3007"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "3008": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_3008_icon",
+     "swfName": "BangHui_flagStyle_3008"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "5019": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_5019_icon",
+     "swfName": "BangHui_flagStyle_5019"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "5018": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_5018_icon",
+     "swfName": "BangHui_flagStyle_5018"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "5017": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_5017_icon",
+     "swfName": "BangHui_flagStyle_5017"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "5016": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_5016_icon",
+     "swfName": "BangHui_flagStyle_5016"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "3013": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_3013_icon",
+     "swfName": "BangHui_flagStyle_3013"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "3012": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_3012_icon",
+     "swfName": "BangHui_flagStyle_3012"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "3011": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_3011_icon",
+     "swfName": "BangHui_flagStyle_3011"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "3010": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_3010_icon",
+     "swfName": "BangHui_flagStyle_3010"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "1011": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_1011_icon",
+     "swfName": "BangHui_flagStyle_1011"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "1010": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_1010_icon",
+     "swfName": "BangHui_flagStyle_1010"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "6009": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_6009_icon",
+     "swfName": "BangHui_flagStyle_6009"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "6008": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_6008_icon",
+     "swfName": "BangHui_flagStyle_6008"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "6007": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_6007_icon",
+     "swfName": "BangHui_flagStyle_6007"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "6006": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_6006_icon",
+     "swfName": "BangHui_flagStyle_6006"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "10001": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_10001_icon",
+     "swfName": "BangHui_flagStyle_10001"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "10002": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_10002_icon",
+     "swfName": "BangHui_flagStyle_10002"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "10000": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_10000_icon",
+     "swfName": "BangHui_flagStyle_10000"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "10005": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_10005_icon",
+     "swfName": "BangHui_flagStyle_10005"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "3000": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_3000_icon",
+     "swfName": "BangHui_flagStyle_3000"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "10006": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_10006_icon",
+     "swfName": "BangHui_flagStyle_10006"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "3002": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_3002_icon",
+     "swfName": "BangHui_flagStyle_3002"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "10003": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_10003_icon",
+     "swfName": "BangHui_flagStyle_10003"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "3001": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_3001_icon",
+     "swfName": "BangHui_flagStyle_3001"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "10004": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_10004_icon",
+     "swfName": "BangHui_flagStyle_10004"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "10009": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_10009_icon",
+     "swfName": "BangHui_flagStyle_10009"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "6015": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_6015_icon",
+     "swfName": "BangHui_flagStyle_6015"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "6016": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_6016_icon",
+     "swfName": "BangHui_flagStyle_6016"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "10007": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_10007_icon",
+     "swfName": "BangHui_flagStyle_10007"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "6013": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_6013_icon",
+     "swfName": "BangHui_flagStyle_6013"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "10008": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_10008_icon",
+     "swfName": "BangHui_flagStyle_10008"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "6014": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_6014_icon",
+     "swfName": "BangHui_flagStyle_6014"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "6011": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_6011_icon",
+     "swfName": "BangHui_flagStyle_6011"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "6012": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_6012_icon",
+     "swfName": "BangHui_flagStyle_6012"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "1000": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_1000_icon",
+     "swfName": "BangHui_flagStyle_1000"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "6010": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_6010_icon",
+     "swfName": "BangHui_flagStyle_6010"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "10014": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_10014_icon",
+     "swfName": "BangHui_flagStyle_10014"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "10015": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_10015_icon",
+     "swfName": "BangHui_flagStyle_10015"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "10016": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_10016_icon",
+     "swfName": "BangHui_flagStyle_10016"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "10017": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_10017_icon",
+     "swfName": "BangHui_flagStyle_10017"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "10010": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_10010_icon",
+     "swfName": "BangHui_flagStyle_10010"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "10011": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_10011_icon",
+     "swfName": "BangHui_flagStyle_10011"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "10012": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_10012_icon",
+     "swfName": "BangHui_flagStyle_10012"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "10013": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_10013_icon",
+     "swfName": "BangHui_flagStyle_10013"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "4019": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_4019_icon",
+     "swfName": "BangHui_flagStyle_4019"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "6000": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_6000_icon",
+     "swfName": "BangHui_flagStyle_6000"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "6001": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_6001_icon",
+     "swfName": "BangHui_flagStyle_6001"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "6002": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_6002_icon",
+     "swfName": "BangHui_flagStyle_6002"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "4017": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_4017_icon",
+     "swfName": "BangHui_flagStyle_4017"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "10018": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_10018_icon",
+     "swfName": "BangHui_flagStyle_10018"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "10019": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_10019_icon",
+     "swfName": "BangHui_flagStyle_10019"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "6003": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_6003_icon",
+     "swfName": "BangHui_flagStyle_6003"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "4018": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_4018_icon",
+     "swfName": "BangHui_flagStyle_4018"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "6004": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_6004_icon",
+     "swfName": "BangHui_flagStyle_6004"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "4015": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_4015_icon",
+     "swfName": "BangHui_flagStyle_4015"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "6005": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_6005_icon",
+     "swfName": "BangHui_flagStyle_6005"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "4016": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_4016_icon",
+     "swfName": "BangHui_flagStyle_4016"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "4012": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_4012_icon",
+     "swfName": "BangHui_flagStyle_4012"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "4011": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_4011_icon",
+     "swfName": "BangHui_flagStyle_4011"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "4014": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_4014_icon",
+     "swfName": "BangHui_flagStyle_4014"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "4013": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_4013_icon",
+     "swfName": "BangHui_flagStyle_4013"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "4010": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_4010_icon",
+     "swfName": "BangHui_flagStyle_4010"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "3018": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_3018_icon",
+     "swfName": "BangHui_flagStyle_3018"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "3019": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_3019_icon",
+     "swfName": "BangHui_flagStyle_3019"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "3014": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_3014_icon",
+     "swfName": "BangHui_flagStyle_3014"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "3015": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_3015_icon",
+     "swfName": "BangHui_flagStyle_3015"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "3016": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_3016_icon",
+     "swfName": "BangHui_flagStyle_3016"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "3017": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_3017_icon",
+     "swfName": "BangHui_flagStyle_3017"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "4008": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_4008_icon",
+     "swfName": "BangHui_flagStyle_4008"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "4009": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_4009_icon",
+     "swfName": "BangHui_flagStyle_4009"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "4004": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_4004_icon",
+     "swfName": "BangHui_flagStyle_4004"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "4005": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_4005_icon",
+     "swfName": "BangHui_flagStyle_4005"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "4006": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_4006_icon",
+     "swfName": "BangHui_flagStyle_4006"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "4007": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_4007_icon",
+     "swfName": "BangHui_flagStyle_4007"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "4002": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_4002_icon",
+     "swfName": "BangHui_flagStyle_4002"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "4003": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_4003_icon",
+     "swfName": "BangHui_flagStyle_4003"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "4000": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_4000_icon",
+     "swfName": "BangHui_flagStyle_4000"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "4001": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_4001_icon",
+     "swfName": "BangHui_flagStyle_4001"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "9000": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_9000_icon",
+     "swfName": "BangHui_flagStyle_9000"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "7019": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_7019_icon",
+     "swfName": "BangHui_flagStyle_7019"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "9002": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_9002_icon",
+     "swfName": "BangHui_flagStyle_9002"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "9001": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_9001_icon",
+     "swfName": "BangHui_flagStyle_9001"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "7018": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_7018_icon",
+     "swfName": "BangHui_flagStyle_7018"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "9004": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_9004_icon",
+     "swfName": "BangHui_flagStyle_9004"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "9003": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_9003_icon",
+     "swfName": "BangHui_flagStyle_9003"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "9006": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_9006_icon",
+     "swfName": "BangHui_flagStyle_9006"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "9005": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_9005_icon",
+     "swfName": "BangHui_flagStyle_9005"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "9008": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_9008_icon",
+     "swfName": "BangHui_flagStyle_9008"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "9007": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_9007_icon",
+     "swfName": "BangHui_flagStyle_9007"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "9009": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_9009_icon",
+     "swfName": "BangHui_flagStyle_9009"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "9011": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_9011_icon",
+     "swfName": "BangHui_flagStyle_9011"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "9010": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_9010_icon",
+     "swfName": "BangHui_flagStyle_9010"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "9015": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_9015_icon",
+     "swfName": "BangHui_flagStyle_9015"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "9014": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_9014_icon",
+     "swfName": "BangHui_flagStyle_9014"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "9013": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_9013_icon",
+     "swfName": "BangHui_flagStyle_9013"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "9012": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_9012_icon",
+     "swfName": "BangHui_flagStyle_9012"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "9019": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_9019_icon",
+     "swfName": "BangHui_flagStyle_9019"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "9018": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_9018_icon",
+     "swfName": "BangHui_flagStyle_9018"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "9017": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_9017_icon",
+     "swfName": "BangHui_flagStyle_9017"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "9016": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_9016_icon",
+     "swfName": "BangHui_flagStyle_9016"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "7003": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_7003_icon",
+     "swfName": "BangHui_flagStyle_7003"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "7004": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_7004_icon",
+     "swfName": "BangHui_flagStyle_7004"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "7005": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_7005_icon",
+     "swfName": "BangHui_flagStyle_7005"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "7006": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_7006_icon",
+     "swfName": "BangHui_flagStyle_7006"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "7000": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_7000_icon",
+     "swfName": "BangHui_flagStyle_7000"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "7001": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_7001_icon",
+     "swfName": "BangHui_flagStyle_7001"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "7002": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_7002_icon",
+     "swfName": "BangHui_flagStyle_7002"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "7016": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_7016_icon",
+     "swfName": "BangHui_flagStyle_7016"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "7017": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_7017_icon",
+     "swfName": "BangHui_flagStyle_7017"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "7014": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_7014_icon",
+     "swfName": "BangHui_flagStyle_7014"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "7015": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_7015_icon",
+     "swfName": "BangHui_flagStyle_7015"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "7012": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_7012_icon",
+     "swfName": "BangHui_flagStyle_7012"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "7013": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_7013_icon",
+     "swfName": "BangHui_flagStyle_7013"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "7010": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_7010_icon",
+     "swfName": "BangHui_flagStyle_7010"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "7011": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_7011_icon",
+     "swfName": "BangHui_flagStyle_7011"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "1017": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_1017_icon",
+     "swfName": "BangHui_flagStyle_1017"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "1016": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_1016_icon",
+     "swfName": "BangHui_flagStyle_1016"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "1019": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_1019_icon",
+     "swfName": "BangHui_flagStyle_1019"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "1018": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_1018_icon",
+     "swfName": "BangHui_flagStyle_1018"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "1013": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_1013_icon",
+     "swfName": "BangHui_flagStyle_1013"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "1012": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_1012_icon",
+     "swfName": "BangHui_flagStyle_1012"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "1015": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_1015_icon",
+     "swfName": "BangHui_flagStyle_1015"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "1014": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_1014_icon",
+     "swfName": "BangHui_flagStyle_1014"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "8000": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_8000_icon",
+     "swfName": "BangHui_flagStyle_8000"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "8001": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_8001_icon",
+     "swfName": "BangHui_flagStyle_8001"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "8002": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_8002_icon",
+     "swfName": "BangHui_flagStyle_8002"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "8003": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_8003_icon",
+     "swfName": "BangHui_flagStyle_8003"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "8004": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_8004_icon",
+     "swfName": "BangHui_flagStyle_8004"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "8005": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_8005_icon",
+     "swfName": "BangHui_flagStyle_8005"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "8006": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_8006_icon",
+     "swfName": "BangHui_flagStyle_8006"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "8007": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_8007_icon",
+     "swfName": "BangHui_flagStyle_8007"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "7009": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_7009_icon",
+     "swfName": "BangHui_flagStyle_7009"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "7008": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_7008_icon",
+     "swfName": "BangHui_flagStyle_7008"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  },
+  "7007": {
+   "icon": {
+    "value": {
+     "className": "BangHui_flagStyle_7007_icon",
+     "swfName": "BangHui_flagStyle_7007"
+    },
+    "origin": {
+     "y": 0,
+     "x": 0
+    }
+   }
+  }
+ }
+}

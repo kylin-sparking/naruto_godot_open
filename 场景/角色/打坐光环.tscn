@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://b2yxtbolvmu74"]
+
+[ext_resource type="Script" uid="uid://o3n0ecmbctii" path="res://脚本/角色/打坐光环.gd" id="1_脚本"]
+[ext_resource type="Texture2D" uid="uid://btauw6mqvdw5g" path="res://素材/特效/打坐光环/打坐光环_0.png" id="2_帧0"]
+[ext_resource type="Texture2D" uid="uid://c57amar6lfkiv" path="res://素材/特效/打坐光环/打坐光环_1.png" id="2_帧1"]
+[ext_resource type="Texture2D" uid="uid://c1p60fe8ac6kt" path="res://素材/特效/打坐光环/打坐光环_2.png" id="2_帧2"]
+[ext_resource type="Texture2D" uid="uid://dj722rtccx0s0" path="res://素材/特效/打坐光环/打坐光环_3.png" id="2_帧3"]
+[ext_resource type="Texture2D" uid="uid://djdv4i1at3wc4" path="res://素材/特效/打坐光环/打坐光环_4.png" id="2_帧4"]
+[ext_resource type="Texture2D" uid="uid://cd2qs172wmk4a" path="res://素材/特效/打坐光环/打坐光环_5.png" id="2_帧5"]
+[ext_resource type="Texture2D" uid="uid://b12a2dgbdol31" path="res://素材/特效/打坐光环/打坐光环_6.png" id="2_帧6"]
+[ext_resource type="Texture2D" uid="uid://cfdl3j3rxwc6c" path="res://素材/特效/打坐光环/打坐光环_7.png" id="2_帧7"]
+
+[node name="打坐光环" type="Node2D" unique_id=696323160]
+script = ExtResource("1_脚本")
+
+[node name="第0帧" type="Sprite2D" parent="." unique_id=806120093]
+position = Vector2(-75, -39)
+texture = ExtResource("2_帧0")
+centered = false
+
+[node name="第1帧" type="Sprite2D" parent="." unique_id=1531740893]
+visible = false
+position = Vector2(-110, -106)
+texture = ExtResource("2_帧1")
+centered = false
+
+[node name="第2帧" type="Sprite2D" parent="." unique_id=1731586998]
+visible = false
+position = Vector2(-84, -112)
+texture = ExtResource("2_帧2")
+centered = false
+
+[node name="第3帧" type="Sprite2D" parent="." unique_id=274551130]
+visible = false
+position = Vector2(-103, -142)
+texture = ExtResource("2_帧3")
+centered = false
+
+[node name="第4帧" type="Sprite2D" parent="." unique_id=1815951918]
+visible = false
+position = Vector2(-110, -150)
+texture = ExtResource("2_帧4")
+centered = false
+
+[node name="第5帧" type="Sprite2D" parent="." unique_id=597240256]
+visible = false
+position = Vector2(-110, -150)
+texture = ExtResource("2_帧5")
+centered = false
+
+[node name="第6帧" type="Sprite2D" parent="." unique_id=1549286394]
+visible = false
+position = Vector2(-110, -150)
+texture = ExtResource("2_帧6")
+centered = false
+
+[node name="第7帧" type="Sprite2D" parent="." unique_id=656460619]
+visible = false
+position = Vector2(-102, -150)
+texture = ExtResource("2_帧7")
+centered = false

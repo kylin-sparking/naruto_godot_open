@@ -1,0 +1,122 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/竖向分隔线.png" id="v1"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/横向分隔线.png" id="v2"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/家族/钮底61.png" id="v3"]
+
+[node name="竞技场英雄榜页" type="Control"]
+offset_right = 380.0
+offset_bottom = 371.0
+
+[node name="内容底" type="Panel" parent="."]
+theme_type_variation = &"OrigContentPanel"
+offset_left = 8.0
+offset_top = 9.0
+offset_right = 372.0
+offset_bottom = 363.0
+
+[node name="面板" type="Panel" parent="."]
+theme_type_variation = &"OrigLightPanel"
+offset_left = 13.0
+offset_top = 24.0
+offset_right = 367.0
+offset_bottom = 333.0
+
+[node name="表头排名" type="Label" parent="."]
+offset_left = 18.0
+offset_top = 29.0
+offset_right = 58.0
+offset_bottom = 49.0
+horizontal_alignment = 1
+vertical_alignment = 1
+text = "排名"
+
+[node name="表头名字" type="Label" parent="."]
+offset_left = 58.0
+offset_top = 29.0
+offset_right = 198.0
+offset_bottom = 49.0
+horizontal_alignment = 1
+vertical_alignment = 1
+text = "玩家姓名"
+
+[node name="表头等级" type="Label" parent="."]
+offset_left = 198.0
+offset_top = 29.0
+offset_right = 278.0
+offset_bottom = 49.0
+horizontal_alignment = 1
+vertical_alignment = 1
+text = "等级"
+
+[node name="表头趋势" type="Label" parent="."]
+offset_left = 278.0
+offset_top = 29.0
+offset_right = 338.0
+offset_bottom = 49.0
+horizontal_alignment = 1
+vertical_alignment = 1
+text = "趋势"
+
+[node name="竖分隔1" type="TextureRect" parent="."]
+texture = ExtResource("v1")
+offset_left = 58.0
+offset_top = 31.0
+offset_right = 60.0
+offset_bottom = 51.0
+
+[node name="竖分隔2" type="TextureRect" parent="."]
+texture = ExtResource("v1")
+offset_left = 198.0
+offset_top = 31.0
+offset_right = 200.0
+offset_bottom = 51.0
+
+[node name="竖分隔3" type="TextureRect" parent="."]
+texture = ExtResource("v1")
+offset_left = 278.0
+offset_top = 31.0
+offset_right = 280.0
+offset_bottom = 51.0
+
+[node name="横分隔线" type="TextureRect" parent="."]
+texture = ExtResource("v2")
+offset_left = 18.0
+offset_top = 49.0
+offset_right = 360.0
+offset_bottom = 51.0
+expand_mode = 1
+stretch_mode = 0
+
+[node name="滚动区" type="ScrollContainer" parent="."]
+offset_left = 18.0
+offset_top = 51.0
+offset_right = 360.0
+offset_bottom = 328.0
+horizontal_scroll_mode = 0
+
+[node name="行列" type="Control" parent="滚动区"]
+layout_mode = 2
+offset_right = 320.0
+offset_bottom = 277.0
+
+[node name="关闭钮" type="TextureButton" parent="."]
+offset_left = 159.0
+offset_top = 336.0
+offset_right = 220.0
+offset_bottom = 358.0
+ignore_texture_size = true
+stretch_mode = 5
+texture_normal = ExtResource("v3")
+
+[node name="文字" type="Label" parent="关闭钮"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+text = "关闭"

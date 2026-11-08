@@ -1,0 +1,80 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="火影世界"
+run/main_scene="res://场景/界面/登录界面.tscn"
+config/features=PackedStringArray("4.7", "GL Compatibility")
+
+[autoload]
+
+GameData="*res://脚本/单例/游戏数据.gd"
+GameSession="*res://脚本/单例/游戏会话.gd"
+ActivityService="*res://脚本/单例/活动服务.gd"
+BackendConnection="*res://脚本/单例/后端连接.gd"
+AudioDirector="*res://脚本/单例/音频管理.gd"
+; 可选帧率浮层：环境变量 NARUTO_FPS=1 或游戏内按 F8 才显示，
+; 正常启动 set_process(false)、每帧零开销。实现见 脚本/调试/帧率显示.gd。
+FpsOverlay="*res://脚本/调试/帧率显示.gd"
+; 可选镜头节拍记录 + 逻辑节拍开关：环境变量 NARUTO_CAMLOG=1 或按 F6 才录，
+; NARUTO_PHYSICS=follow 才改节拍。正常启动 set_process(false)，每帧零开销。
+; 判"镜头抖不抖"必须在玩家自己那一局里量，实现见 脚本/调试/镜头节拍记录.gd。
+CamCadence="*res://脚本/调试/镜头节拍记录.gd"
+; 登录器的账号记忆，存到 `user://launcher.json`。
+; 与游戏的三个存档（玩家数据/活动数据/玩家设置）互不干扰。
+AccountStore="*res://脚本/单例/账号存储.gd"
+
+[display]
+
+window/size/viewport_width=960
+window/size/viewport_height=560
+window/size/window_width_override=960
+window/size/window_height_override=560
+; ⚠️ 2026-09-27：**不要**给 stretch 设 mode。
+; 原版 `Config.STAGE_WIDTH/HEIGHT` 只是默认值，`Game.as:76-93` 会按真实舞台尺寸重算 ——
+; UI **不缩放**（固定像素），舞台变大只是地图多露出来、HUD 分布到四周。
+; 一旦设成 canvas_items，整块 960x560 画布会被放大 → 位图素材全糊（用户实机看到的就是这个）。
+window/stretch/scale_mode="integer"
+
+window/mode="windowed"
+window/size/window_min_width=960
+window/size/window_min_height=560
+
+[dotnet]
+
+project/assembly_name="火影世界"
+
+[gui]
+
+; 悬停提示的迟滞。Godot 默认 0.5 秒，实机"停上去要等一下"很滞；
+; 原版（Flash）几乎立刻出，调到 0.15 秒。
+timers/tooltip_delay_sec=0.15
+
+theme/custom="res://素材/界面/原版主题.tres"
+
+[input]
+
+interact={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":16,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":69,"key_label":0,"unicode":101,"location":0,"echo":false,"script":null)
+]
+}
+basic_attack={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":16,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":88,"key_label":0,"unicode":120,"location":0,"echo":false,"script":null)
+]
+}
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"

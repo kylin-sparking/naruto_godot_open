@@ -1,0 +1,2857 @@
+[gd_scene format=3 uid="uid://45pml4whk6y7"]
+
+[ext_resource type="Script" uid="uid://dinkwk0a7mxhp" path="res://素材/界面/原版窗口/人物/柔拳/脚本/柔拳切换阶段.gd" id="1_b2o7f"]
+[ext_resource type="Texture2D" uid="uid://bodo6k4q5vfrl" path="res://素材/界面/原版窗口/人物/柔拳/柔拳阵.png" id="1_bg"]
+[ext_resource type="Texture2D" uid="uid://cxyuseh2otpt1" path="res://素材/界面/原版窗口/人物/柔拳/柔拳阶段01.png" id="2_s1"]
+[ext_resource type="Texture2D" uid="uid://dwfyvh6xt3pv6" path="res://素材/界面/原版窗口/人物/柔拳/柔拳阶段02.png" id="3_s2"]
+[ext_resource type="Texture2D" uid="uid://nuwuc4au5dr7" path="res://素材/界面/原版窗口/人物/柔拳/角色/柔拳角色阶段2.png" id="4_fm60e"]
+[ext_resource type="Texture2D" uid="uid://cpgfvmmj5spic" path="res://素材/界面/原版窗口/人物/柔拳/柔拳阶段03.png" id="4_s3"]
+[ext_resource type="Texture2D" uid="uid://bmdvkgb04mj5e" path="res://素材/界面/原版窗口/人物/柔拳/角色/柔拳角色阶段3.png" id="5_b2o7f"]
+[ext_resource type="Texture2D" uid="uid://c132viveclqo1" path="res://素材/界面/原版窗口/人物/柔拳/柔拳阶段04.png" id="5_s4"]
+[ext_resource type="Texture2D" uid="uid://blllo5ge6c0ie" path="res://素材/界面/原版窗口/人物/柔拳/角色/柔拳角色阶段4.png" id="6_dwghr"]
+[ext_resource type="Texture2D" uid="uid://bicjp2p3tnrwf" path="res://素材/界面/原版窗口/人物/柔拳/柔拳阶段05.png" id="6_s5"]
+[ext_resource type="Texture2D" uid="uid://bfvwx88k5e7ii" path="res://素材/界面/原版窗口/人物/柔拳/柔拳阶段06.png" id="7_s6"]
+[ext_resource type="Texture2D" uid="uid://cp5ioxur1fdc5" path="res://素材/界面/原版窗口/人物/柔拳/角色/柔拳角色阶段5.png" id="7_w0ft4"]
+[ext_resource type="Texture2D" uid="uid://dpapda82roo72" path="res://素材/界面/原版窗口/人物/柔拳/角色/柔拳角色阶段6.png" id="8_rfmmk"]
+[ext_resource type="Texture2D" uid="uid://iwd1xhwwwto3" path="res://素材/界面/原版窗口/人物/柔拳/柔拳阶段07.png" id="8_s7"]
+[ext_resource type="Texture2D" uid="uid://daca4noib46nw" path="res://素材/界面/原版窗口/人物/柔拳/角色/柔拳角色阶段7.png" id="9_1qu16"]
+[ext_resource type="Texture2D" uid="uid://dubmwd1rxipp5" path="res://素材/界面/原版窗口/人物/柔拳/柔拳阶段08.png" id="9_s8"]
+[ext_resource type="Texture2D" uid="uid://d232x50u17mkh" path="res://素材/界面/原版窗口/人物/柔拳/角色/柔拳角色阶段1.png" id="10_char"]
+[ext_resource type="Texture2D" uid="uid://buw82lae4plka" path="res://素材/界面/原版窗口/人物/柔拳/角色/柔拳角色阶段8.png" id="10_ykhpb"]
+[ext_resource type="Texture2D" uid="uid://m507s4c12u35" path="res://素材/界面/原版窗口/通用控件/子面板.png" id="11_panel"]
+[ext_resource type="Texture2D" uid="uid://ddchmtc63xs2h" path="res://素材/界面/原版窗口/通用控件/按钮.png" id="12_button"]
+[ext_resource type="Texture2D" uid="uid://crlxy3pv10h21" path="res://素材/界面/原版窗口/通用控件/按钮按下.png" id="13_button_down"]
+[ext_resource type="Script" uid="uid://bf5rv6fyfl1g5" path="res://素材/界面/原版窗口/人物/柔拳/脚本/阶段按钮交互.gd" id="13_dwghr"]
+[ext_resource type="Texture2D" uid="uid://dx7r2gb4v1qm0" path="res://素材/界面/原版窗口/通用控件/进度槽.png" id="14_progress_bg"]
+[ext_resource type="Texture2D" uid="uid://cd7y4m1ss231n" path="res://素材/界面/原版窗口/通用控件/进度填充.png" id="15_progress_fill"]
+[ext_resource type="Texture2D" uid="uid://dkil44jd6c66y" path="res://素材/界面/原版窗口/通用控件/横向分隔线.png" id="16_line"]
+[ext_resource type="Texture2D" uid="uid://lcbygen1ls1k" path="res://素材/界面/原版窗口/通用控件/上一页.png" id="17_prev"]
+[ext_resource type="Texture2D" uid="uid://dvamf62f4lctb" path="res://素材/界面/原版窗口/通用控件/下一页.png" id="18_next"]
+[ext_resource type="Theme" uid="uid://ct8tkmscbk125" path="res://素材/界面/原版窗口/人物/柔拳/宋体文字/柔拳字体.tres" id="19_0mrxj"]
+[ext_resource type="Texture2D" uid="uid://dlvo2tw7xb5im" path="res://素材/界面/原版窗口/人物/柔拳/柔拳灵符/柔拳灵符.png" id="20_dvj0y"]
+[ext_resource type="Script" uid="uid://cd6ebtiey08k3" path="res://素材/界面/原版窗口/人物/柔拳/脚本/提升柔拳阶数弹窗滑动动画.gd" id="20_mjs4s"]
+[ext_resource type="Texture2D" uid="uid://ch54qb4s25og5" path="res://素材/界面/原版窗口/通用控件/关闭按钮.png" id="22_mjs4s"]
+[ext_resource type="Script" uid="uid://uxd53y5do5np" path="res://素材/界面/原版窗口/人物/柔拳/脚本/箭头按钮交互.gd" id="27_w0ft4"]
+
+[sub_resource type="StyleBoxTexture" id="StylePanel"]
+texture = ExtResource("11_panel")
+texture_margin_left = 8.0
+texture_margin_top = 7.0
+texture_margin_right = 7.0
+texture_margin_bottom = 7.0
+
+[sub_resource type="StyleBoxTexture" id="StyleProgressBg"]
+texture = ExtResource("14_progress_bg")
+texture_margin_left = 6.0
+texture_margin_top = 4.0
+texture_margin_right = 6.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleProgressFill"]
+texture = ExtResource("15_progress_fill")
+texture_margin_left = 4.0
+texture_margin_top = 3.0
+texture_margin_right = 4.0
+texture_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxTexture" id="StyleButton"]
+texture = ExtResource("12_button")
+texture_margin_left = 7.0
+texture_margin_top = 7.0
+texture_margin_right = 7.0
+texture_margin_bottom = 7.0
+
+[sub_resource type="StyleBoxTexture" id="StyleButtonDown"]
+texture = ExtResource("13_button_down")
+texture_margin_left = 7.0
+texture_margin_top = 7.0
+texture_margin_right = 7.0
+texture_margin_bottom = 7.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0mrxj"]
+
+[sub_resource type="Animation" id="Animation_kgnyq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(5, 228)]
+}
+
+[sub_resource type="Animation" id="Animation_aev27"]
+resource_name = "滑出"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(5, 700), Vector2(5, 228)]
+}
+
+[sub_resource type="Animation" id="Animation_7qqn1"]
+resource_name = "滑入"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(5, 228), Vector2(5, 700)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cbavl"]
+_data = {
+&"RESET": SubResource("Animation_kgnyq"),
+&"滑入": SubResource("Animation_aev27"),
+&"滑出": SubResource("Animation_7qqn1")
+}
+
+[node name="柔拳内容" type="Control" unique_id=1593598877]
+custom_minimum_size = Vector2(421, 367)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 421.0
+offset_bottom = 367.0
+script = ExtResource("1_b2o7f")
+
+[node name="阵法面板" type="Panel" parent="." unique_id=622702899]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 419.0
+offset_bottom = 212.0
+theme_override_styles/panel = SubResource("StylePanel")
+
+[node name="柔拳阵底图" type="TextureRect" parent="阵法面板" unique_id=347679922]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 411.0
+offset_bottom = 204.0
+mouse_filter = 2
+texture = ExtResource("1_bg")
+
+[node name="视觉切换区" type="Control" parent="阵法面板" unique_id=1460141622]
+anchors_preset = 0
+offset_left = 164.0
+offset_top = 16.0
+offset_right = 243.0
+offset_bottom = 124.0
+mouse_filter = 2
+
+[node name="柔拳阶段立绘1" type="TextureRect" parent="阵法面板/视觉切换区" unique_id=1878915505]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 6.0
+offset_right = 87.0
+offset_bottom = 106.0
+mouse_filter = 2
+texture = ExtResource("10_char")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="柔拳阶段立绘2" type="TextureRect" parent="阵法面板/视觉切换区" unique_id=1673282412]
+visible = false
+layout_mode = 0
+offset_left = 6.0
+offset_top = 12.0
+offset_right = 70.0
+offset_bottom = 104.0
+texture = ExtResource("4_fm60e")
+
+[node name="柔拳阶段立绘3" type="TextureRect" parent="阵法面板/视觉切换区" unique_id=176975903]
+visible = false
+layout_mode = 0
+offset_left = 5.0
+offset_top = 6.0
+offset_right = 69.0
+offset_bottom = 102.0
+texture = ExtResource("5_b2o7f")
+stretch_mode = 5
+
+[node name="柔拳阶段立绘4" type="TextureRect" parent="阵法面板/视觉切换区" unique_id=1724018424]
+visible = false
+layout_mode = 0
+offset_left = 12.0
+offset_top = 15.0
+offset_right = 68.0
+offset_bottom = 102.0
+texture = ExtResource("6_dwghr")
+
+[node name="柔拳阶段立绘5" type="TextureRect" parent="阵法面板/视觉切换区" unique_id=1574079696]
+visible = false
+layout_mode = 0
+offset_left = 9.0
+offset_top = 4.0
+offset_right = 76.0
+offset_bottom = 104.0
+texture = ExtResource("7_w0ft4")
+
+[node name="柔拳阶段立绘6" type="TextureRect" parent="阵法面板/视觉切换区" unique_id=436566229]
+visible = false
+layout_mode = 0
+offset_left = -1.0
+offset_top = 15.0
+offset_right = 75.0
+offset_bottom = 100.0
+texture = ExtResource("8_rfmmk")
+
+[node name="柔拳阶段立绘7" type="TextureRect" parent="阵法面板/视觉切换区" unique_id=506779120]
+visible = false
+layout_mode = 0
+offset_left = 1.0
+offset_top = 17.0
+offset_right = 72.0
+offset_bottom = 99.0
+texture = ExtResource("9_1qu16")
+
+[node name="柔拳阶段立绘8" type="TextureRect" parent="阵法面板/视觉切换区" unique_id=545800676]
+visible = false
+layout_mode = 0
+offset_left = 7.0
+offset_top = 8.0
+offset_right = 78.0
+offset_bottom = 107.0
+texture = ExtResource("10_ykhpb")
+
+[node name="阶段图标切换区" type="Control" parent="阵法面板" unique_id=427828421]
+anchors_preset = 0
+offset_left = 39.0
+offset_top = 18.0
+offset_right = 381.0
+offset_bottom = 195.0
+mouse_filter = 2
+
+[node name="阶段1" type="TextureButton" parent="阵法面板/阶段图标切换区" unique_id=571238394]
+layout_mode = 0
+offset_left = 93.0
+offset_top = 2.0
+offset_right = 130.0
+offset_bottom = 39.0
+focus_mode = 0
+texture_normal = ExtResource("2_s1")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("13_dwghr")
+
+[node name="阶段2" type="TextureButton" parent="阵法面板/阶段图标切换区" unique_id=330312991]
+layout_mode = 0
+offset_left = 201.0
+offset_top = 1.0
+offset_right = 238.0
+offset_bottom = 38.0
+focus_mode = 0
+texture_normal = ExtResource("3_s2")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("13_dwghr")
+
+[node name="阶段3" type="TextureButton" parent="阵法面板/阶段图标切换区" unique_id=1305166470]
+layout_mode = 0
+offset_left = 279.0
+offset_top = 26.0
+offset_right = 316.0
+offset_bottom = 63.0
+focus_mode = 0
+texture_normal = ExtResource("4_s3")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("13_dwghr")
+
+[node name="阶段4" type="TextureButton" parent="阵法面板/阶段图标切换区" unique_id=895443288]
+layout_mode = 0
+offset_left = 305.0
+offset_top = 88.0
+offset_right = 342.0
+offset_bottom = 125.0
+focus_mode = 0
+texture_normal = ExtResource("5_s4")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("13_dwghr")
+
+[node name="阶段5" type="TextureButton" parent="阵法面板/阶段图标切换区" unique_id=809320345]
+layout_mode = 0
+offset_left = 233.0
+offset_top = 134.0
+offset_right = 270.0
+offset_bottom = 171.0
+focus_mode = 0
+texture_normal = ExtResource("6_s5")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("13_dwghr")
+
+[node name="阶段6" type="TextureButton" parent="阵法面板/阶段图标切换区" unique_id=629509458]
+layout_mode = 0
+offset_left = 108.0
+offset_top = 139.0
+offset_right = 145.0
+offset_bottom = 176.0
+focus_mode = 0
+texture_normal = ExtResource("7_s6")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("13_dwghr")
+
+[node name="阶段7" type="TextureButton" parent="阵法面板/阶段图标切换区" unique_id=1540104456]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 100.0
+offset_right = 41.0
+offset_bottom = 137.0
+focus_mode = 0
+texture_normal = ExtResource("8_s7")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("13_dwghr")
+
+[node name="阶段8" type="TextureButton" parent="阵法面板/阶段图标切换区" unique_id=244663886]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 29.0
+offset_right = 58.0
+offset_bottom = 66.0
+focus_mode = 0
+texture_normal = ExtResource("9_s8")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("13_dwghr")
+
+[node name="数值，阶段名称切换区" type="Control" parent="阵法面板" unique_id=870713502]
+anchors_preset = 0
+offset_top = 205.0
+offset_right = 414.0
+offset_bottom = 356.0
+mouse_filter = 2
+
+[node name="第一阶段" type="Control" parent="阵法面板/数值，阶段名称切换区" unique_id=15469327]
+visible = false
+anchors_preset = 0
+offset_right = 414.0
+offset_bottom = 148.0
+mouse_filter = 2
+
+[node name="当前阶段" type="RichTextLabel" parent="阵法面板/数值，阶段名称切换区/第一阶段" unique_id=132614216]
+layout_mode = 0
+offset_top = 2.0
+offset_right = 414.0
+offset_bottom = 22.0
+mouse_filter = 2
+theme_override_colors/default_color = Color(1, 0.57, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/normal_font_size = 12
+bbcode_enabled = true
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+text = "当前阶段：[color=#29b7ff]【柔拳-百烈掌】[/color] 可获得的能力提升为："
+
+[node name="生命标题" type="Label" parent="阵法面板/数值，阶段名称切换区/第一阶段" unique_id=528563321]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 22.0
+offset_right = 50.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(1, 0.57, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "生命值"
+
+[node name="生命" type="ProgressBar" parent="阵法面板/数值，阶段名称切换区/第一阶段" unique_id=1402259369]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 25.0
+offset_right = 172.0
+offset_bottom = 36.0
+theme_override_styles/background = SubResource("StyleProgressBg")
+theme_override_styles/fill = SubResource("StyleProgressFill")
+show_percentage = false
+
+[node name="生命值" type="Label" parent="阵法面板/数值，阶段名称切换区/第一阶段" unique_id=2071958186]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 20.0
+offset_right = 172.0
+offset_bottom = 41.0
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0/200"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="查克拉标题" type="Label" parent="阵法面板/数值，阶段名称切换区/第一阶段" unique_id=1398109525]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 42.0
+offset_right = 50.0
+offset_bottom = 60.0
+theme_override_colors/font_color = Color(1, 0.57, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "查克拉"
+
+[node name="查克拉" type="ProgressBar" parent="阵法面板/数值，阶段名称切换区/第一阶段" unique_id=1137991572]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 45.0
+offset_right = 172.0
+offset_bottom = 56.0
+theme_override_styles/background = SubResource("StyleProgressBg")
+theme_override_styles/fill = SubResource("StyleProgressFill")
+show_percentage = false
+
+[node name="查克拉值" type="Label" parent="阵法面板/数值，阶段名称切换区/第一阶段" unique_id=239763938]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 40.0
+offset_right = 172.0
+offset_bottom = 61.0
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0/15"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="攻击标题" type="Label" parent="阵法面板/数值，阶段名称切换区/第一阶段" unique_id=812241413]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 62.0
+offset_right = 50.0
+offset_bottom = 80.0
+theme_override_colors/font_color = Color(1, 0.57, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "攻击"
+
+[node name="攻击" type="ProgressBar" parent="阵法面板/数值，阶段名称切换区/第一阶段" unique_id=48913093]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 65.0
+offset_right = 172.0
+offset_bottom = 76.0
+theme_override_styles/background = SubResource("StyleProgressBg")
+theme_override_styles/fill = SubResource("StyleProgressFill")
+show_percentage = false
+
+[node name="攻击值" type="Label" parent="阵法面板/数值，阶段名称切换区/第一阶段" unique_id=797417112]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 60.0
+offset_right = 172.0
+offset_bottom = 81.0
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0/60"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="防御标题" type="Label" parent="阵法面板/数值，阶段名称切换区/第一阶段" unique_id=1606464800]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 82.0
+offset_right = 50.0
+offset_bottom = 100.0
+theme_override_colors/font_color = Color(1, 0.57, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "防御"
+
+[node name="防御" type="ProgressBar" parent="阵法面板/数值，阶段名称切换区/第一阶段" unique_id=1796543116]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 85.0
+offset_right = 172.0
+offset_bottom = 96.0
+theme_override_styles/background = SubResource("StyleProgressBg")
+theme_override_styles/fill = SubResource("StyleProgressFill")
+show_percentage = false
+
+[node name="防御值" type="Label" parent="阵法面板/数值，阶段名称切换区/第一阶段" unique_id=1850871953]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 80.0
+offset_right = 172.0
+offset_bottom = 101.0
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0/30"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="说明" type="RichTextLabel" parent="阵法面板/数值，阶段名称切换区/第一阶段" unique_id=2003184726]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 106.0
+offset_right = 316.0
+offset_bottom = 152.0
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/normal_font_size = 12
+bbcode_enabled = true
+text = "当前境界下，您可以通过使用[color=#00ff00]【百烈掌秘笈】[/color]来增加属性。可通过击杀[color=#00ff00]1-20级[/color]的怪物获得[color=#00ff00]【百烈掌秘笈】[/color]。"
+
+[node name="第二阶段" type="Control" parent="阵法面板/数值，阶段名称切换区" unique_id=1485011122]
+visible = false
+anchors_preset = 0
+offset_right = 415.0
+offset_bottom = 147.0
+mouse_filter = 2
+
+[node name="当前阶段" type="RichTextLabel" parent="阵法面板/数值，阶段名称切换区/第二阶段" unique_id=2137914116]
+layout_mode = 0
+offset_top = 2.0
+offset_right = 414.0
+offset_bottom = 22.0
+mouse_filter = 2
+theme_override_colors/default_color = Color(1, 0.57, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/normal_font_size = 12
+bbcode_enabled = true
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+text = "当前阶段：[color=#29b7ff]【柔拳-白胧天舞】[/color] 可获得的能力提升为："
+
+[node name="生命标题" type="Label" parent="阵法面板/数值，阶段名称切换区/第二阶段" unique_id=1463136036]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 22.0
+offset_right = 50.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(1, 0.57, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "生命值"
+
+[node name="生命" type="ProgressBar" parent="阵法面板/数值，阶段名称切换区/第二阶段" unique_id=1321759584]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 25.0
+offset_right = 172.0
+offset_bottom = 36.0
+theme_override_styles/background = SubResource("StyleProgressBg")
+theme_override_styles/fill = SubResource("StyleProgressFill")
+show_percentage = false
+
+[node name="生命值" type="Label" parent="阵法面板/数值，阶段名称切换区/第二阶段" unique_id=680058066]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 20.0
+offset_right = 172.0
+offset_bottom = 41.0
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0/500"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="查克拉标题" type="Label" parent="阵法面板/数值，阶段名称切换区/第二阶段" unique_id=1380514579]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 42.0
+offset_right = 50.0
+offset_bottom = 60.0
+theme_override_colors/font_color = Color(1, 0.57, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "查克拉"
+
+[node name="查克拉" type="ProgressBar" parent="阵法面板/数值，阶段名称切换区/第二阶段" unique_id=400810663]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 45.0
+offset_right = 172.0
+offset_bottom = 56.0
+theme_override_styles/background = SubResource("StyleProgressBg")
+theme_override_styles/fill = SubResource("StyleProgressFill")
+show_percentage = false
+
+[node name="查克拉值" type="Label" parent="阵法面板/数值，阶段名称切换区/第二阶段" unique_id=1554420344]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 40.0
+offset_right = 172.0
+offset_bottom = 61.0
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0/45"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="攻击标题" type="Label" parent="阵法面板/数值，阶段名称切换区/第二阶段" unique_id=633054073]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 62.0
+offset_right = 50.0
+offset_bottom = 80.0
+theme_override_colors/font_color = Color(1, 0.57, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "攻击"
+
+[node name="攻击" type="ProgressBar" parent="阵法面板/数值，阶段名称切换区/第二阶段" unique_id=1841221866]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 65.0
+offset_right = 172.0
+offset_bottom = 76.0
+theme_override_styles/background = SubResource("StyleProgressBg")
+theme_override_styles/fill = SubResource("StyleProgressFill")
+show_percentage = false
+
+[node name="攻击值" type="Label" parent="阵法面板/数值，阶段名称切换区/第二阶段" unique_id=281713778]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 60.0
+offset_right = 172.0
+offset_bottom = 81.0
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0/180"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="防御标题" type="Label" parent="阵法面板/数值，阶段名称切换区/第二阶段" unique_id=1079005432]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 82.0
+offset_right = 50.0
+offset_bottom = 100.0
+theme_override_colors/font_color = Color(1, 0.57, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "防御"
+
+[node name="防御" type="ProgressBar" parent="阵法面板/数值，阶段名称切换区/第二阶段" unique_id=620405034]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 85.0
+offset_right = 172.0
+offset_bottom = 96.0
+theme_override_styles/background = SubResource("StyleProgressBg")
+theme_override_styles/fill = SubResource("StyleProgressFill")
+show_percentage = false
+
+[node name="防御值" type="Label" parent="阵法面板/数值，阶段名称切换区/第二阶段" unique_id=445946447]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 80.0
+offset_right = 172.0
+offset_bottom = 101.0
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0/90"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="说明" type="RichTextLabel" parent="阵法面板/数值，阶段名称切换区/第二阶段" unique_id=1092772079]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 106.0
+offset_right = 316.0
+offset_bottom = 152.0
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/normal_font_size = 12
+bbcode_enabled = true
+text = "当前境界下，您可以通过使用[color=#00ff00]【白胧天舞秘笈】[/color]来增加属性。可通过击杀[color=#00ff00]1-20级[/color]的怪物获得[color=#00ff00]【白胧天舞秘笈】[/color]。"
+
+[node name="第三阶段" type="Control" parent="阵法面板/数值，阶段名称切换区" unique_id=1493914435]
+visible = false
+anchors_preset = 0
+offset_right = 415.0
+offset_bottom = 147.0
+mouse_filter = 2
+
+[node name="当前阶段" type="RichTextLabel" parent="阵法面板/数值，阶段名称切换区/第三阶段" unique_id=555244942]
+layout_mode = 0
+offset_top = 2.0
+offset_right = 414.0
+offset_bottom = 22.0
+mouse_filter = 2
+theme_override_colors/default_color = Color(1, 0.57, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/normal_font_size = 12
+bbcode_enabled = true
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+text = "当前阶段：[color=#29b7ff]【柔拳-八卦宗掌波】[/color] 可获得的能力提升为："
+
+[node name="生命标题" type="Label" parent="阵法面板/数值，阶段名称切换区/第三阶段" unique_id=1234473601]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 22.0
+offset_right = 50.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(1, 0.57, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "生命值"
+
+[node name="生命" type="ProgressBar" parent="阵法面板/数值，阶段名称切换区/第三阶段" unique_id=1022664479]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 25.0
+offset_right = 172.0
+offset_bottom = 36.0
+theme_override_styles/background = SubResource("StyleProgressBg")
+theme_override_styles/fill = SubResource("StyleProgressFill")
+show_percentage = false
+
+[node name="生命值" type="Label" parent="阵法面板/数值，阶段名称切换区/第三阶段" unique_id=1551420681]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 20.0
+offset_right = 172.0
+offset_bottom = 41.0
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0/1000"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="查克拉标题" type="Label" parent="阵法面板/数值，阶段名称切换区/第三阶段" unique_id=981859965]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 42.0
+offset_right = 50.0
+offset_bottom = 60.0
+theme_override_colors/font_color = Color(1, 0.57, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "查克拉"
+
+[node name="查克拉" type="ProgressBar" parent="阵法面板/数值，阶段名称切换区/第三阶段" unique_id=433378914]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 45.0
+offset_right = 172.0
+offset_bottom = 56.0
+theme_override_styles/background = SubResource("StyleProgressBg")
+theme_override_styles/fill = SubResource("StyleProgressFill")
+show_percentage = false
+
+[node name="查克拉值" type="Label" parent="阵法面板/数值，阶段名称切换区/第三阶段" unique_id=149303056]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 40.0
+offset_right = 172.0
+offset_bottom = 61.0
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0/100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="攻击标题" type="Label" parent="阵法面板/数值，阶段名称切换区/第三阶段" unique_id=1748645889]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 62.0
+offset_right = 50.0
+offset_bottom = 80.0
+theme_override_colors/font_color = Color(1, 0.57, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "攻击"
+
+[node name="攻击" type="ProgressBar" parent="阵法面板/数值，阶段名称切换区/第三阶段" unique_id=1214480336]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 65.0
+offset_right = 172.0
+offset_bottom = 76.0
+theme_override_styles/background = SubResource("StyleProgressBg")
+theme_override_styles/fill = SubResource("StyleProgressFill")
+show_percentage = false
+
+[node name="攻击值" type="Label" parent="阵法面板/数值，阶段名称切换区/第三阶段" unique_id=1465698071]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 60.0
+offset_right = 172.0
+offset_bottom = 81.0
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0/400"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="防御标题" type="Label" parent="阵法面板/数值，阶段名称切换区/第三阶段" unique_id=1172986886]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 82.0
+offset_right = 50.0
+offset_bottom = 100.0
+theme_override_colors/font_color = Color(1, 0.57, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "防御"
+
+[node name="防御" type="ProgressBar" parent="阵法面板/数值，阶段名称切换区/第三阶段" unique_id=674509920]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 85.0
+offset_right = 172.0
+offset_bottom = 96.0
+theme_override_styles/background = SubResource("StyleProgressBg")
+theme_override_styles/fill = SubResource("StyleProgressFill")
+show_percentage = false
+
+[node name="防御值" type="Label" parent="阵法面板/数值，阶段名称切换区/第三阶段" unique_id=1385354220]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 80.0
+offset_right = 172.0
+offset_bottom = 101.0
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0/200"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="说明" type="RichTextLabel" parent="阵法面板/数值，阶段名称切换区/第三阶段" unique_id=889723516]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 106.0
+offset_right = 316.0
+offset_bottom = 152.0
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/normal_font_size = 12
+bbcode_enabled = true
+text = "当前境界下，您可以通过使用[color=#00ff00]【八卦宗掌波秘笈】[/color]来增加属性。可通过击杀[color=#00ff00]20-40级[/color]的怪物获得[color=#00ff00]【八卦宗掌波秘笈】[/color]。"
+
+[node name="第四阶段" type="Control" parent="阵法面板/数值，阶段名称切换区" unique_id=401678091]
+visible = false
+anchors_preset = 0
+offset_right = 415.0
+offset_bottom = 147.0
+mouse_filter = 2
+
+[node name="当前阶段" type="RichTextLabel" parent="阵法面板/数值，阶段名称切换区/第四阶段" unique_id=1457340993]
+layout_mode = 0
+offset_top = 2.0
+offset_right = 414.0
+offset_bottom = 22.0
+mouse_filter = 2
+theme_override_colors/default_color = Color(1, 0.57, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/normal_font_size = 12
+bbcode_enabled = true
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+text = "当前阶段：[color=#29b7ff]【柔拳-八卦合气掌】[/color] 可获得的能力提升为："
+
+[node name="生命标题" type="Label" parent="阵法面板/数值，阶段名称切换区/第四阶段" unique_id=7877069]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 22.0
+offset_right = 50.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(1, 0.57, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "生命值"
+
+[node name="生命" type="ProgressBar" parent="阵法面板/数值，阶段名称切换区/第四阶段" unique_id=1985176921]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 25.0
+offset_right = 172.0
+offset_bottom = 36.0
+theme_override_styles/background = SubResource("StyleProgressBg")
+theme_override_styles/fill = SubResource("StyleProgressFill")
+show_percentage = false
+
+[node name="生命值" type="Label" parent="阵法面板/数值，阶段名称切换区/第四阶段" unique_id=1536612675]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 20.0
+offset_right = 172.0
+offset_bottom = 41.0
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0/2000"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="查克拉标题" type="Label" parent="阵法面板/数值，阶段名称切换区/第四阶段" unique_id=391210270]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 42.0
+offset_right = 50.0
+offset_bottom = 60.0
+theme_override_colors/font_color = Color(1, 0.57, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "查克拉"
+
+[node name="查克拉" type="ProgressBar" parent="阵法面板/数值，阶段名称切换区/第四阶段" unique_id=191928276]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 45.0
+offset_right = 172.0
+offset_bottom = 56.0
+theme_override_styles/background = SubResource("StyleProgressBg")
+theme_override_styles/fill = SubResource("StyleProgressFill")
+show_percentage = false
+
+[node name="查克拉值" type="Label" parent="阵法面板/数值，阶段名称切换区/第四阶段" unique_id=1462234793]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 40.0
+offset_right = 172.0
+offset_bottom = 61.0
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0/200"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="攻击标题" type="Label" parent="阵法面板/数值，阶段名称切换区/第四阶段" unique_id=475034703]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 62.0
+offset_right = 50.0
+offset_bottom = 80.0
+theme_override_colors/font_color = Color(1, 0.57, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "攻击"
+
+[node name="攻击" type="ProgressBar" parent="阵法面板/数值，阶段名称切换区/第四阶段" unique_id=886984183]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 65.0
+offset_right = 172.0
+offset_bottom = 76.0
+theme_override_styles/background = SubResource("StyleProgressBg")
+theme_override_styles/fill = SubResource("StyleProgressFill")
+show_percentage = false
+
+[node name="攻击值" type="Label" parent="阵法面板/数值，阶段名称切换区/第四阶段" unique_id=603886462]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 60.0
+offset_right = 172.0
+offset_bottom = 81.0
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0/800"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="防御标题" type="Label" parent="阵法面板/数值，阶段名称切换区/第四阶段" unique_id=1776427415]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 82.0
+offset_right = 50.0
+offset_bottom = 100.0
+theme_override_colors/font_color = Color(1, 0.57, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "防御"
+
+[node name="防御" type="ProgressBar" parent="阵法面板/数值，阶段名称切换区/第四阶段" unique_id=1693901148]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 85.0
+offset_right = 172.0
+offset_bottom = 96.0
+theme_override_styles/background = SubResource("StyleProgressBg")
+theme_override_styles/fill = SubResource("StyleProgressFill")
+show_percentage = false
+
+[node name="防御值" type="Label" parent="阵法面板/数值，阶段名称切换区/第四阶段" unique_id=1712062147]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 80.0
+offset_right = 172.0
+offset_bottom = 101.0
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0/400"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="说明" type="RichTextLabel" parent="阵法面板/数值，阶段名称切换区/第四阶段" unique_id=334974829]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 106.0
+offset_right = 316.0
+offset_bottom = 152.0
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/normal_font_size = 12
+bbcode_enabled = true
+text = "当前境界下，您可以通过使用[color=#00ff00]【八卦合气掌秘笈】[/color]来增加属性。可通过击杀[color=#00ff00]20-40级[/color]的怪物获得[color=#00ff00]【八卦合气掌秘笈】[/color]。"
+
+[node name="第五阶段" type="Control" parent="阵法面板/数值，阶段名称切换区" unique_id=1979628940]
+visible = false
+anchors_preset = 0
+offset_right = 415.0
+offset_bottom = 147.0
+mouse_filter = 2
+
+[node name="当前阶段" type="RichTextLabel" parent="阵法面板/数值，阶段名称切换区/第五阶段" unique_id=775318425]
+layout_mode = 0
+offset_top = 2.0
+offset_right = 414.0
+offset_bottom = 22.0
+mouse_filter = 2
+theme_override_colors/default_color = Color(1, 0.57, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/normal_font_size = 12
+bbcode_enabled = true
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+text = "当前阶段：[color=#29b7ff]【柔拳-八卦三十二掌】[/color] 可获得的能力提升为："
+
+[node name="生命标题" type="Label" parent="阵法面板/数值，阶段名称切换区/第五阶段" unique_id=1719453707]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 22.0
+offset_right = 50.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(1, 0.57, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "生命值"
+
+[node name="生命" type="ProgressBar" parent="阵法面板/数值，阶段名称切换区/第五阶段" unique_id=1512596724]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 25.0
+offset_right = 172.0
+offset_bottom = 36.0
+theme_override_styles/background = SubResource("StyleProgressBg")
+theme_override_styles/fill = SubResource("StyleProgressFill")
+show_percentage = false
+
+[node name="生命值" type="Label" parent="阵法面板/数值，阶段名称切换区/第五阶段" unique_id=1100703124]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 20.0
+offset_right = 172.0
+offset_bottom = 41.0
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0/3500"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="查克拉标题" type="Label" parent="阵法面板/数值，阶段名称切换区/第五阶段" unique_id=963584936]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 42.0
+offset_right = 50.0
+offset_bottom = 60.0
+theme_override_colors/font_color = Color(1, 0.57, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "查克拉"
+
+[node name="查克拉" type="ProgressBar" parent="阵法面板/数值，阶段名称切换区/第五阶段" unique_id=2017083387]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 45.0
+offset_right = 172.0
+offset_bottom = 56.0
+theme_override_styles/background = SubResource("StyleProgressBg")
+theme_override_styles/fill = SubResource("StyleProgressFill")
+show_percentage = false
+
+[node name="查克拉值" type="Label" parent="阵法面板/数值，阶段名称切换区/第五阶段" unique_id=1906331929]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 40.0
+offset_right = 172.0
+offset_bottom = 61.0
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0/375"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="攻击标题" type="Label" parent="阵法面板/数值，阶段名称切换区/第五阶段" unique_id=375739028]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 62.0
+offset_right = 50.0
+offset_bottom = 80.0
+theme_override_colors/font_color = Color(1, 0.57, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "攻击"
+
+[node name="攻击" type="ProgressBar" parent="阵法面板/数值，阶段名称切换区/第五阶段" unique_id=319977085]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 65.0
+offset_right = 172.0
+offset_bottom = 76.0
+theme_override_styles/background = SubResource("StyleProgressBg")
+theme_override_styles/fill = SubResource("StyleProgressFill")
+show_percentage = false
+
+[node name="攻击值" type="Label" parent="阵法面板/数值，阶段名称切换区/第五阶段" unique_id=97615492]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 60.0
+offset_right = 172.0
+offset_bottom = 81.0
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0/1500"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="防御标题" type="Label" parent="阵法面板/数值，阶段名称切换区/第五阶段" unique_id=1775216656]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 82.0
+offset_right = 50.0
+offset_bottom = 100.0
+theme_override_colors/font_color = Color(1, 0.57, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "防御"
+
+[node name="防御" type="ProgressBar" parent="阵法面板/数值，阶段名称切换区/第五阶段" unique_id=497055077]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 85.0
+offset_right = 172.0
+offset_bottom = 96.0
+theme_override_styles/background = SubResource("StyleProgressBg")
+theme_override_styles/fill = SubResource("StyleProgressFill")
+show_percentage = false
+
+[node name="防御值" type="Label" parent="阵法面板/数值，阶段名称切换区/第五阶段" unique_id=1298897237]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 80.0
+offset_right = 172.0
+offset_bottom = 101.0
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0/750"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="攻击速度标题" type="Label" parent="阵法面板/数值，阶段名称切换区/第五阶段" unique_id=947998416]
+layout_mode = 0
+offset_left = 191.0
+offset_top = 22.0
+offset_right = 281.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(1, 0.57, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+text = "攻 击 速 度"
+
+[node name="攻击速度" type="ProgressBar" parent="阵法面板/数值，阶段名称切换区/第五阶段" unique_id=1985663138]
+layout_mode = 0
+offset_left = 279.0
+offset_top = 24.0
+offset_right = 401.0
+offset_bottom = 35.0
+theme_override_styles/background = SubResource("StyleProgressBg")
+theme_override_styles/fill = SubResource("StyleProgressFill")
+show_percentage = false
+
+[node name="攻击速度值" type="Label" parent="阵法面板/数值，阶段名称切换区/第五阶段" unique_id=746371428]
+layout_mode = 0
+offset_left = 281.0
+offset_top = 19.0
+offset_right = 403.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0/50"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="移动速度标题" type="Label" parent="阵法面板/数值，阶段名称切换区/第五阶段" unique_id=1922726135]
+layout_mode = 0
+offset_left = 191.0
+offset_top = 39.0
+offset_right = 281.0
+offset_bottom = 57.0
+theme_override_colors/font_color = Color(1, 0.57, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+text = "移 动 速 度"
+
+[node name="移动速度" type="ProgressBar" parent="阵法面板/数值，阶段名称切换区/第五阶段" unique_id=216025393]
+layout_mode = 0
+offset_left = 279.0
+offset_top = 42.0
+offset_right = 401.0
+offset_bottom = 53.0
+theme_override_styles/background = SubResource("StyleProgressBg")
+theme_override_styles/fill = SubResource("StyleProgressFill")
+show_percentage = false
+
+[node name="移动速度值" type="Label" parent="阵法面板/数值，阶段名称切换区/第五阶段" unique_id=934737476]
+layout_mode = 0
+offset_left = 281.0
+offset_top = 37.0
+offset_right = 403.0
+offset_bottom = 58.0
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0/25"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="反弹伤害标题" type="Label" parent="阵法面板/数值，阶段名称切换区/第五阶段" unique_id=286440698]
+layout_mode = 0
+offset_left = 191.0
+offset_top = 68.0
+offset_right = 281.0
+offset_bottom = 86.0
+theme_override_colors/font_color = Color(1, 0.57, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+text = "反 弹 伤 害"
+
+[node name="反弹伤害" type="ProgressBar" parent="阵法面板/数值，阶段名称切换区/第五阶段" unique_id=1280241542]
+layout_mode = 0
+offset_left = 279.0
+offset_top = 70.0
+offset_right = 401.0
+offset_bottom = 81.0
+theme_override_styles/background = SubResource("StyleProgressBg")
+theme_override_styles/fill = SubResource("StyleProgressFill")
+show_percentage = false
+
+[node name="反弹伤害值" type="Label" parent="阵法面板/数值，阶段名称切换区/第五阶段" unique_id=1602747419]
+layout_mode = 0
+offset_left = 281.0
+offset_top = 65.0
+offset_right = 403.0
+offset_bottom = 86.0
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0/2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="伤害减免标题" type="Label" parent="阵法面板/数值，阶段名称切换区/第五阶段" unique_id=1576589876]
+layout_mode = 0
+offset_left = 191.0
+offset_top = 84.0
+offset_right = 281.0
+offset_bottom = 102.0
+theme_override_colors/font_color = Color(1, 0.57, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+text = "伤 害 减 免"
+
+[node name="伤害减免" type="ProgressBar" parent="阵法面板/数值，阶段名称切换区/第五阶段" unique_id=575969631]
+layout_mode = 0
+offset_left = 279.0
+offset_top = 86.0
+offset_right = 401.0
+offset_bottom = 97.0
+theme_override_styles/background = SubResource("StyleProgressBg")
+theme_override_styles/fill = SubResource("StyleProgressFill")
+show_percentage = false
+
+[node name="伤害减免值" type="Label" parent="阵法面板/数值，阶段名称切换区/第五阶段" unique_id=98841669]
+layout_mode = 0
+offset_left = 281.0
+offset_top = 81.0
+offset_right = 403.0
+offset_bottom = 102.0
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0/2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="说明" type="RichTextLabel" parent="阵法面板/数值，阶段名称切换区/第五阶段" unique_id=547457793]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 106.0
+offset_right = 316.0
+offset_bottom = 152.0
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/normal_font_size = 12
+bbcode_enabled = true
+text = "当前境界下，您可以通过使用[color=#00ff00]【八卦三十二掌秘笈】[/color]来增加属性。可通过击杀[color=#00ff00]40-60级[/color]的怪物获得[color=#00ff00]【八卦三十二掌秘笈】[/color]。"
+
+[node name="第六阶段" type="Control" parent="阵法面板/数值，阶段名称切换区" unique_id=1052613187]
+visible = false
+anchors_preset = 0
+offset_right = 415.0
+offset_bottom = 147.0
+mouse_filter = 2
+
+[node name="当前阶段" type="RichTextLabel" parent="阵法面板/数值，阶段名称切换区/第六阶段" unique_id=164186568]
+layout_mode = 0
+offset_top = 2.0
+offset_right = 414.0
+offset_bottom = 22.0
+mouse_filter = 2
+theme_override_colors/default_color = Color(1, 0.57, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/normal_font_size = 12
+bbcode_enabled = true
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+text = "当前阶段：[color=#29b7ff]【柔拳-八卦六十四掌】[/color] 可获得的能力提升为："
+
+[node name="生命标题" type="Label" parent="阵法面板/数值，阶段名称切换区/第六阶段" unique_id=2119184385]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 22.0
+offset_right = 50.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(1, 0.57, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "生命值"
+
+[node name="生命" type="ProgressBar" parent="阵法面板/数值，阶段名称切换区/第六阶段" unique_id=1850175554]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 25.0
+offset_right = 172.0
+offset_bottom = 36.0
+theme_override_styles/background = SubResource("StyleProgressBg")
+theme_override_styles/fill = SubResource("StyleProgressFill")
+show_percentage = false
+
+[node name="生命值" type="Label" parent="阵法面板/数值，阶段名称切换区/第六阶段" unique_id=53269304]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 20.0
+offset_right = 172.0
+offset_bottom = 41.0
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0/6000"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="查克拉标题" type="Label" parent="阵法面板/数值，阶段名称切换区/第六阶段" unique_id=512586468]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 42.0
+offset_right = 50.0
+offset_bottom = 60.0
+theme_override_colors/font_color = Color(1, 0.57, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "查克拉"
+
+[node name="查克拉" type="ProgressBar" parent="阵法面板/数值，阶段名称切换区/第六阶段" unique_id=1300466394]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 45.0
+offset_right = 172.0
+offset_bottom = 56.0
+theme_override_styles/background = SubResource("StyleProgressBg")
+theme_override_styles/fill = SubResource("StyleProgressFill")
+show_percentage = false
+
+[node name="查克拉值" type="Label" parent="阵法面板/数值，阶段名称切换区/第六阶段" unique_id=2005230106]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 40.0
+offset_right = 172.0
+offset_bottom = 61.0
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0/650"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="攻击标题" type="Label" parent="阵法面板/数值，阶段名称切换区/第六阶段" unique_id=286623722]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 62.0
+offset_right = 50.0
+offset_bottom = 80.0
+theme_override_colors/font_color = Color(1, 0.57, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "攻击"
+
+[node name="攻击" type="ProgressBar" parent="阵法面板/数值，阶段名称切换区/第六阶段" unique_id=1255453255]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 65.0
+offset_right = 172.0
+offset_bottom = 76.0
+theme_override_styles/background = SubResource("StyleProgressBg")
+theme_override_styles/fill = SubResource("StyleProgressFill")
+show_percentage = false
+
+[node name="攻击值" type="Label" parent="阵法面板/数值，阶段名称切换区/第六阶段" unique_id=55135074]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 60.0
+offset_right = 172.0
+offset_bottom = 81.0
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0/2600"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="防御标题" type="Label" parent="阵法面板/数值，阶段名称切换区/第六阶段" unique_id=1252487084]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 82.0
+offset_right = 50.0
+offset_bottom = 100.0
+theme_override_colors/font_color = Color(1, 0.57, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "防御"
+
+[node name="防御" type="ProgressBar" parent="阵法面板/数值，阶段名称切换区/第六阶段" unique_id=333403812]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 85.0
+offset_right = 172.0
+offset_bottom = 96.0
+theme_override_styles/background = SubResource("StyleProgressBg")
+theme_override_styles/fill = SubResource("StyleProgressFill")
+show_percentage = false
+
+[node name="防御值" type="Label" parent="阵法面板/数值，阶段名称切换区/第六阶段" unique_id=1269706951]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 80.0
+offset_right = 172.0
+offset_bottom = 101.0
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0/1300"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="攻击速度标题" type="Label" parent="阵法面板/数值，阶段名称切换区/第六阶段" unique_id=1291062737]
+layout_mode = 0
+offset_left = 191.0
+offset_top = 22.0
+offset_right = 281.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(1, 0.57, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+text = "攻 击 速 度"
+
+[node name="攻击速度" type="ProgressBar" parent="阵法面板/数值，阶段名称切换区/第六阶段" unique_id=1678714982]
+layout_mode = 0
+offset_left = 279.0
+offset_top = 24.0
+offset_right = 401.0
+offset_bottom = 35.0
+theme_override_styles/background = SubResource("StyleProgressBg")
+theme_override_styles/fill = SubResource("StyleProgressFill")
+show_percentage = false
+
+[node name="攻击速度值" type="Label" parent="阵法面板/数值，阶段名称切换区/第六阶段" unique_id=581719116]
+layout_mode = 0
+offset_left = 281.0
+offset_top = 19.0
+offset_right = 403.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0/100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="移动速度标题" type="Label" parent="阵法面板/数值，阶段名称切换区/第六阶段" unique_id=1058018052]
+layout_mode = 0
+offset_left = 191.0
+offset_top = 39.0
+offset_right = 281.0
+offset_bottom = 57.0
+theme_override_colors/font_color = Color(1, 0.57, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+text = "移 动 速 度"
+
+[node name="移动速度" type="ProgressBar" parent="阵法面板/数值，阶段名称切换区/第六阶段" unique_id=1082752956]
+layout_mode = 0
+offset_left = 279.0
+offset_top = 39.0
+offset_right = 401.0
+offset_bottom = 50.0
+theme_override_styles/background = SubResource("StyleProgressBg")
+theme_override_styles/fill = SubResource("StyleProgressFill")
+show_percentage = false
+
+[node name="移动速度值" type="Label" parent="阵法面板/数值，阶段名称切换区/第六阶段" unique_id=415854861]
+layout_mode = 0
+offset_left = 281.0
+offset_top = 34.0
+offset_right = 403.0
+offset_bottom = 55.0
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0/50"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="反弹伤害标题" type="Label" parent="阵法面板/数值，阶段名称切换区/第六阶段" unique_id=1482028136]
+layout_mode = 0
+offset_left = 191.0
+offset_top = 68.0
+offset_right = 281.0
+offset_bottom = 86.0
+theme_override_colors/font_color = Color(1, 0.57, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+text = "反 弹 伤 害"
+
+[node name="反弹伤害" type="ProgressBar" parent="阵法面板/数值，阶段名称切换区/第六阶段" unique_id=1358454191]
+layout_mode = 0
+offset_left = 279.0
+offset_top = 71.0
+offset_right = 401.0
+offset_bottom = 82.0
+theme_override_styles/background = SubResource("StyleProgressBg")
+theme_override_styles/fill = SubResource("StyleProgressFill")
+show_percentage = false
+
+[node name="反弹伤害值" type="Label" parent="阵法面板/数值，阶段名称切换区/第六阶段" unique_id=1718639095]
+layout_mode = 0
+offset_left = 281.0
+offset_top = 66.0
+offset_right = 403.0
+offset_bottom = 87.0
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0/5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="伤害减免标题" type="Label" parent="阵法面板/数值，阶段名称切换区/第六阶段" unique_id=737014125]
+layout_mode = 0
+offset_left = 191.0
+offset_top = 84.0
+offset_right = 281.0
+offset_bottom = 102.0
+theme_override_colors/font_color = Color(1, 0.57, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+text = "伤 害 减 免"
+
+[node name="伤害减免" type="ProgressBar" parent="阵法面板/数值，阶段名称切换区/第六阶段" unique_id=1602294778]
+layout_mode = 0
+offset_left = 279.0
+offset_top = 86.0
+offset_right = 401.0
+offset_bottom = 97.0
+theme_override_styles/background = SubResource("StyleProgressBg")
+theme_override_styles/fill = SubResource("StyleProgressFill")
+show_percentage = false
+
+[node name="伤害减免值" type="Label" parent="阵法面板/数值，阶段名称切换区/第六阶段" unique_id=685001003]
+layout_mode = 0
+offset_left = 281.0
+offset_top = 81.0
+offset_right = 403.0
+offset_bottom = 102.0
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0/5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="手里剑触发几率标题" type="Label" parent="阵法面板/数值，阶段名称切换区/第六阶段" unique_id=1948921550]
+layout_mode = 0
+offset_left = 191.0
+offset_top = 54.0
+offset_right = 281.0
+offset_bottom = 72.0
+theme_override_colors/font_color = Color(1, 0.57, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+text = "手里剑触发几率"
+
+[node name="手里剑触发几率" type="ProgressBar" parent="阵法面板/数值，阶段名称切换区/第六阶段" unique_id=1549644186]
+layout_mode = 0
+offset_left = 279.0
+offset_top = 55.0
+offset_right = 401.0
+offset_bottom = 66.0
+theme_override_styles/background = SubResource("StyleProgressBg")
+theme_override_styles/fill = SubResource("StyleProgressFill")
+show_percentage = false
+
+[node name="手里剑触发几率值" type="Label" parent="阵法面板/数值，阶段名称切换区/第六阶段" unique_id=10567757]
+layout_mode = 0
+offset_left = 281.0
+offset_top = 50.0
+offset_right = 403.0
+offset_bottom = 71.0
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0/5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="说明" type="RichTextLabel" parent="阵法面板/数值，阶段名称切换区/第六阶段" unique_id=954335019]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 106.0
+offset_right = 316.0
+offset_bottom = 152.0
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/normal_font_size = 12
+bbcode_enabled = true
+text = "当前境界下，您可以通过使用[color=#00ff00]【八卦六十四掌秘笈】[/color]来增加属性。可通过击杀[color=#00ff00]60-80级[/color]的怪物获得[color=#00ff00]【八卦六十四掌秘笈】[/color]。"
+
+[node name="第七阶段" type="Control" parent="阵法面板/数值，阶段名称切换区" unique_id=739711164]
+visible = false
+anchors_preset = 0
+offset_right = 415.0
+offset_bottom = 147.0
+mouse_filter = 2
+
+[node name="当前阶段" type="RichTextLabel" parent="阵法面板/数值，阶段名称切换区/第七阶段" unique_id=1861973145]
+layout_mode = 0
+offset_top = 2.0
+offset_right = 414.0
+offset_bottom = 22.0
+mouse_filter = 2
+theme_override_colors/default_color = Color(1, 0.57, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/normal_font_size = 12
+bbcode_enabled = true
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+text = "当前阶段：[color=#29b7ff]【柔拳-回天】[/color] 可获得的能力提升为："
+
+[node name="生命标题" type="Label" parent="阵法面板/数值，阶段名称切换区/第七阶段" unique_id=35938499]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 22.0
+offset_right = 50.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(1, 0.57, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "生命值"
+
+[node name="生命" type="ProgressBar" parent="阵法面板/数值，阶段名称切换区/第七阶段" unique_id=896535300]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 25.0
+offset_right = 172.0
+offset_bottom = 36.0
+theme_override_styles/background = SubResource("StyleProgressBg")
+theme_override_styles/fill = SubResource("StyleProgressFill")
+show_percentage = false
+
+[node name="生命值" type="Label" parent="阵法面板/数值，阶段名称切换区/第七阶段" unique_id=1030693065]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 20.0
+offset_right = 172.0
+offset_bottom = 41.0
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0/10000"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="查克拉标题" type="Label" parent="阵法面板/数值，阶段名称切换区/第七阶段" unique_id=215540117]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 42.0
+offset_right = 50.0
+offset_bottom = 60.0
+theme_override_colors/font_color = Color(1, 0.57, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "查克拉"
+
+[node name="查克拉" type="ProgressBar" parent="阵法面板/数值，阶段名称切换区/第七阶段" unique_id=1586623014]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 45.0
+offset_right = 172.0
+offset_bottom = 56.0
+theme_override_styles/background = SubResource("StyleProgressBg")
+theme_override_styles/fill = SubResource("StyleProgressFill")
+show_percentage = false
+
+[node name="查克拉值" type="Label" parent="阵法面板/数值，阶段名称切换区/第七阶段" unique_id=577056408]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 40.0
+offset_right = 172.0
+offset_bottom = 61.0
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0/1050"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="攻击标题" type="Label" parent="阵法面板/数值，阶段名称切换区/第七阶段" unique_id=1326952947]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 62.0
+offset_right = 50.0
+offset_bottom = 80.0
+theme_override_colors/font_color = Color(1, 0.57, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "攻击"
+
+[node name="攻击" type="ProgressBar" parent="阵法面板/数值，阶段名称切换区/第七阶段" unique_id=1464752238]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 65.0
+offset_right = 172.0
+offset_bottom = 76.0
+theme_override_styles/background = SubResource("StyleProgressBg")
+theme_override_styles/fill = SubResource("StyleProgressFill")
+show_percentage = false
+
+[node name="攻击值" type="Label" parent="阵法面板/数值，阶段名称切换区/第七阶段" unique_id=1361745698]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 60.0
+offset_right = 172.0
+offset_bottom = 81.0
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0/4200"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="防御标题" type="Label" parent="阵法面板/数值，阶段名称切换区/第七阶段" unique_id=981433733]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 82.0
+offset_right = 50.0
+offset_bottom = 100.0
+theme_override_colors/font_color = Color(1, 0.57, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "防御"
+
+[node name="防御" type="ProgressBar" parent="阵法面板/数值，阶段名称切换区/第七阶段" unique_id=1437174656]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 85.0
+offset_right = 172.0
+offset_bottom = 96.0
+theme_override_styles/background = SubResource("StyleProgressBg")
+theme_override_styles/fill = SubResource("StyleProgressFill")
+show_percentage = false
+
+[node name="防御值" type="Label" parent="阵法面板/数值，阶段名称切换区/第七阶段" unique_id=1263839815]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 80.0
+offset_right = 172.0
+offset_bottom = 101.0
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0/2100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="攻击速度标题" type="Label" parent="阵法面板/数值，阶段名称切换区/第七阶段" unique_id=655332293]
+layout_mode = 0
+offset_left = 191.0
+offset_top = 22.0
+offset_right = 281.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(1, 0.57, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+text = "攻 击 速 度"
+
+[node name="攻击速度" type="ProgressBar" parent="阵法面板/数值，阶段名称切换区/第七阶段" unique_id=179772346]
+layout_mode = 0
+offset_left = 279.0
+offset_top = 24.0
+offset_right = 401.0
+offset_bottom = 35.0
+theme_override_styles/background = SubResource("StyleProgressBg")
+theme_override_styles/fill = SubResource("StyleProgressFill")
+show_percentage = false
+
+[node name="攻击速度值" type="Label" parent="阵法面板/数值，阶段名称切换区/第七阶段" unique_id=1151694543]
+layout_mode = 0
+offset_left = 281.0
+offset_top = 19.0
+offset_right = 403.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0/150"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="移动速度标题" type="Label" parent="阵法面板/数值，阶段名称切换区/第七阶段" unique_id=147662885]
+layout_mode = 0
+offset_left = 191.0
+offset_top = 39.0
+offset_right = 281.0
+offset_bottom = 57.0
+theme_override_colors/font_color = Color(1, 0.57, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+text = "移 动 速 度"
+
+[node name="移动速度" type="ProgressBar" parent="阵法面板/数值，阶段名称切换区/第七阶段" unique_id=1608044303]
+layout_mode = 0
+offset_left = 279.0
+offset_top = 39.0
+offset_right = 401.0
+offset_bottom = 50.0
+theme_override_styles/background = SubResource("StyleProgressBg")
+theme_override_styles/fill = SubResource("StyleProgressFill")
+show_percentage = false
+
+[node name="移动速度值" type="Label" parent="阵法面板/数值，阶段名称切换区/第七阶段" unique_id=490070350]
+layout_mode = 0
+offset_left = 281.0
+offset_top = 34.0
+offset_right = 403.0
+offset_bottom = 55.0
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0/75"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="反弹伤害标题" type="Label" parent="阵法面板/数值，阶段名称切换区/第七阶段" unique_id=1922332908]
+layout_mode = 0
+offset_left = 191.0
+offset_top = 68.0
+offset_right = 281.0
+offset_bottom = 86.0
+theme_override_colors/font_color = Color(1, 0.57, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+text = "反 弹 伤 害"
+
+[node name="反弹伤害" type="ProgressBar" parent="阵法面板/数值，阶段名称切换区/第七阶段" unique_id=1074222454]
+layout_mode = 0
+offset_left = 279.0
+offset_top = 71.0
+offset_right = 401.0
+offset_bottom = 82.0
+theme_override_styles/background = SubResource("StyleProgressBg")
+theme_override_styles/fill = SubResource("StyleProgressFill")
+show_percentage = false
+
+[node name="反弹伤害值" type="Label" parent="阵法面板/数值，阶段名称切换区/第七阶段" unique_id=470348917]
+layout_mode = 0
+offset_left = 281.0
+offset_top = 66.0
+offset_right = 403.0
+offset_bottom = 87.0
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0/7"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="伤害减免标题" type="Label" parent="阵法面板/数值，阶段名称切换区/第七阶段" unique_id=491873259]
+layout_mode = 0
+offset_left = 191.0
+offset_top = 84.0
+offset_right = 281.0
+offset_bottom = 102.0
+theme_override_colors/font_color = Color(1, 0.57, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+text = "伤 害 减 免"
+
+[node name="伤害减免" type="ProgressBar" parent="阵法面板/数值，阶段名称切换区/第七阶段" unique_id=1122786446]
+layout_mode = 0
+offset_left = 279.0
+offset_top = 86.0
+offset_right = 401.0
+offset_bottom = 97.0
+theme_override_styles/background = SubResource("StyleProgressBg")
+theme_override_styles/fill = SubResource("StyleProgressFill")
+show_percentage = false
+
+[node name="伤害减免值" type="Label" parent="阵法面板/数值，阶段名称切换区/第七阶段" unique_id=580243245]
+layout_mode = 0
+offset_left = 281.0
+offset_top = 81.0
+offset_right = 403.0
+offset_bottom = 102.0
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0/7"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="手里剑触发几率标题" type="Label" parent="阵法面板/数值，阶段名称切换区/第七阶段" unique_id=877088000]
+layout_mode = 0
+offset_left = 191.0
+offset_top = 54.0
+offset_right = 281.0
+offset_bottom = 72.0
+theme_override_colors/font_color = Color(1, 0.57, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+text = "手里剑触发几率"
+
+[node name="手里剑触发几率" type="ProgressBar" parent="阵法面板/数值，阶段名称切换区/第七阶段" unique_id=712162811]
+layout_mode = 0
+offset_left = 279.0
+offset_top = 55.0
+offset_right = 401.0
+offset_bottom = 66.0
+theme_override_styles/background = SubResource("StyleProgressBg")
+theme_override_styles/fill = SubResource("StyleProgressFill")
+show_percentage = false
+
+[node name="手里剑触发几率值" type="Label" parent="阵法面板/数值，阶段名称切换区/第七阶段" unique_id=1647529187]
+layout_mode = 0
+offset_left = 281.0
+offset_top = 50.0
+offset_right = 403.0
+offset_bottom = 71.0
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0/12"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="说明" type="RichTextLabel" parent="阵法面板/数值，阶段名称切换区/第七阶段" unique_id=242642471]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 106.0
+offset_right = 316.0
+offset_bottom = 152.0
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/normal_font_size = 12
+bbcode_enabled = true
+text = "当前境界下，您可以通过使用[color=#00ff00]【回天秘笈】[/color]来增加属性。可通过击杀[color=#00ff00]80-90级[/color]的怪物获得[color=#00ff00]【回天秘笈】[/color]。"
+
+[node name="第八阶段" type="Control" parent="阵法面板/数值，阶段名称切换区" unique_id=1568761989]
+anchors_preset = 0
+offset_right = 415.0
+offset_bottom = 147.0
+mouse_filter = 2
+
+[node name="当前阶段" type="RichTextLabel" parent="阵法面板/数值，阶段名称切换区/第八阶段" unique_id=1099502438]
+layout_mode = 0
+offset_top = 2.0
+offset_right = 414.0
+offset_bottom = 22.0
+mouse_filter = 2
+theme_override_colors/default_color = Color(1, 0.57, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/normal_font_size = 12
+bbcode_enabled = true
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+text = "当前阶段：[color=#29b7ff]【柔拳-空天】[/color] 可获得的能力提升为："
+
+[node name="生命标题" type="Label" parent="阵法面板/数值，阶段名称切换区/第八阶段" unique_id=388987895]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 22.0
+offset_right = 50.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(1, 0.57, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "生命值"
+
+[node name="生命" type="ProgressBar" parent="阵法面板/数值，阶段名称切换区/第八阶段" unique_id=1304657224]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 25.0
+offset_right = 172.0
+offset_bottom = 36.0
+theme_override_styles/background = SubResource("StyleProgressBg")
+theme_override_styles/fill = SubResource("StyleProgressFill")
+show_percentage = false
+
+[node name="生命值" type="Label" parent="阵法面板/数值，阶段名称切换区/第八阶段" unique_id=1367806420]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 20.0
+offset_right = 172.0
+offset_bottom = 41.0
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0/16000"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="查克拉标题" type="Label" parent="阵法面板/数值，阶段名称切换区/第八阶段" unique_id=1404424687]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 42.0
+offset_right = 50.0
+offset_bottom = 60.0
+theme_override_colors/font_color = Color(1, 0.57, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "查克拉"
+
+[node name="查克拉" type="ProgressBar" parent="阵法面板/数值，阶段名称切换区/第八阶段" unique_id=1258524409]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 45.0
+offset_right = 172.0
+offset_bottom = 56.0
+theme_override_styles/background = SubResource("StyleProgressBg")
+theme_override_styles/fill = SubResource("StyleProgressFill")
+show_percentage = false
+
+[node name="查克拉值" type="Label" parent="阵法面板/数值，阶段名称切换区/第八阶段" unique_id=1849056301]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 40.0
+offset_right = 172.0
+offset_bottom = 61.0
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0/1500"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="攻击标题" type="Label" parent="阵法面板/数值，阶段名称切换区/第八阶段" unique_id=815163342]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 62.0
+offset_right = 50.0
+offset_bottom = 80.0
+theme_override_colors/font_color = Color(1, 0.57, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "攻击"
+
+[node name="攻击" type="ProgressBar" parent="阵法面板/数值，阶段名称切换区/第八阶段" unique_id=2031165169]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 65.0
+offset_right = 172.0
+offset_bottom = 76.0
+theme_override_styles/background = SubResource("StyleProgressBg")
+theme_override_styles/fill = SubResource("StyleProgressFill")
+show_percentage = false
+
+[node name="攻击值" type="Label" parent="阵法面板/数值，阶段名称切换区/第八阶段" unique_id=388436149]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 60.0
+offset_right = 172.0
+offset_bottom = 81.0
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0/6000"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="防御标题" type="Label" parent="阵法面板/数值，阶段名称切换区/第八阶段" unique_id=1987523547]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 82.0
+offset_right = 50.0
+offset_bottom = 100.0
+theme_override_colors/font_color = Color(1, 0.57, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "防御"
+
+[node name="防御" type="ProgressBar" parent="阵法面板/数值，阶段名称切换区/第八阶段" unique_id=1213602853]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 85.0
+offset_right = 172.0
+offset_bottom = 96.0
+theme_override_styles/background = SubResource("StyleProgressBg")
+theme_override_styles/fill = SubResource("StyleProgressFill")
+show_percentage = false
+
+[node name="防御值" type="Label" parent="阵法面板/数值，阶段名称切换区/第八阶段" unique_id=2102390191]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 80.0
+offset_right = 172.0
+offset_bottom = 101.0
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0/3000"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="攻击速度标题" type="Label" parent="阵法面板/数值，阶段名称切换区/第八阶段" unique_id=108721297]
+layout_mode = 0
+offset_left = 191.0
+offset_top = 22.0
+offset_right = 281.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(1, 0.57, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+text = "攻 击 速 度"
+
+[node name="攻击速度" type="ProgressBar" parent="阵法面板/数值，阶段名称切换区/第八阶段" unique_id=601486104]
+layout_mode = 0
+offset_left = 279.0
+offset_top = 24.0
+offset_right = 401.0
+offset_bottom = 35.0
+theme_override_styles/background = SubResource("StyleProgressBg")
+theme_override_styles/fill = SubResource("StyleProgressFill")
+show_percentage = false
+
+[node name="攻击速度值" type="Label" parent="阵法面板/数值，阶段名称切换区/第八阶段" unique_id=686106313]
+layout_mode = 0
+offset_left = 281.0
+offset_top = 19.0
+offset_right = 403.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0/200"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="移动速度标题" type="Label" parent="阵法面板/数值，阶段名称切换区/第八阶段" unique_id=402278030]
+layout_mode = 0
+offset_left = 191.0
+offset_top = 39.0
+offset_right = 281.0
+offset_bottom = 57.0
+theme_override_colors/font_color = Color(1, 0.57, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+text = "移 动 速 度"
+
+[node name="移动速度" type="ProgressBar" parent="阵法面板/数值，阶段名称切换区/第八阶段" unique_id=135431531]
+layout_mode = 0
+offset_left = 279.0
+offset_top = 39.0
+offset_right = 401.0
+offset_bottom = 50.0
+theme_override_styles/background = SubResource("StyleProgressBg")
+theme_override_styles/fill = SubResource("StyleProgressFill")
+show_percentage = false
+
+[node name="移动速度值" type="Label" parent="阵法面板/数值，阶段名称切换区/第八阶段" unique_id=1187405281]
+layout_mode = 0
+offset_left = 281.0
+offset_top = 34.0
+offset_right = 403.0
+offset_bottom = 55.0
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0/100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="反弹伤害标题" type="Label" parent="阵法面板/数值，阶段名称切换区/第八阶段" unique_id=318238607]
+layout_mode = 0
+offset_left = 191.0
+offset_top = 68.0
+offset_right = 281.0
+offset_bottom = 86.0
+theme_override_colors/font_color = Color(1, 0.57, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+text = "反 弹 伤 害"
+
+[node name="反弹伤害" type="ProgressBar" parent="阵法面板/数值，阶段名称切换区/第八阶段" unique_id=1928670767]
+layout_mode = 0
+offset_left = 279.0
+offset_top = 71.0
+offset_right = 401.0
+offset_bottom = 82.0
+theme_override_styles/background = SubResource("StyleProgressBg")
+theme_override_styles/fill = SubResource("StyleProgressFill")
+show_percentage = false
+
+[node name="反弹伤害值" type="Label" parent="阵法面板/数值，阶段名称切换区/第八阶段" unique_id=185445656]
+layout_mode = 0
+offset_left = 281.0
+offset_top = 66.0
+offset_right = 403.0
+offset_bottom = 87.0
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0/10"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="伤害减免标题" type="Label" parent="阵法面板/数值，阶段名称切换区/第八阶段" unique_id=216152916]
+layout_mode = 0
+offset_left = 191.0
+offset_top = 84.0
+offset_right = 281.0
+offset_bottom = 102.0
+theme_override_colors/font_color = Color(1, 0.57, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+text = "伤 害 减 免"
+
+[node name="伤害减免" type="ProgressBar" parent="阵法面板/数值，阶段名称切换区/第八阶段" unique_id=32620737]
+layout_mode = 0
+offset_left = 279.0
+offset_top = 86.0
+offset_right = 401.0
+offset_bottom = 97.0
+theme_override_styles/background = SubResource("StyleProgressBg")
+theme_override_styles/fill = SubResource("StyleProgressFill")
+show_percentage = false
+
+[node name="伤害减免值" type="Label" parent="阵法面板/数值，阶段名称切换区/第八阶段" unique_id=1240750231]
+layout_mode = 0
+offset_left = 281.0
+offset_top = 81.0
+offset_right = 403.0
+offset_bottom = 102.0
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0/10"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="手里剑触发几率标题" type="Label" parent="阵法面板/数值，阶段名称切换区/第八阶段" unique_id=1003047223]
+layout_mode = 0
+offset_left = 191.0
+offset_top = 54.0
+offset_right = 281.0
+offset_bottom = 72.0
+theme_override_colors/font_color = Color(1, 0.57, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+text = "手里剑触发几率"
+
+[node name="手里剑触发几率" type="ProgressBar" parent="阵法面板/数值，阶段名称切换区/第八阶段" unique_id=2060448922]
+layout_mode = 0
+offset_left = 279.0
+offset_top = 55.0
+offset_right = 401.0
+offset_bottom = 66.0
+theme_override_styles/background = SubResource("StyleProgressBg")
+theme_override_styles/fill = SubResource("StyleProgressFill")
+show_percentage = false
+
+[node name="手里剑触发几率值" type="Label" parent="阵法面板/数值，阶段名称切换区/第八阶段" unique_id=1803667663]
+layout_mode = 0
+offset_left = 281.0
+offset_top = 50.0
+offset_right = 403.0
+offset_bottom = 71.0
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "0/20"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="说明" type="RichTextLabel" parent="阵法面板/数值，阶段名称切换区/第八阶段" unique_id=553296019]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 106.0
+offset_right = 316.0
+offset_bottom = 152.0
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/normal_font_size = 12
+bbcode_enabled = true
+text = "当前境界下，您可以通过使用[color=#00ff00]【空天秘笈】[/color]来增加属性。可通过击杀[color=#00ff00]90-100级[/color]的怪物获得[color=#00ff00]【空天秘笈】[/color]。"
+
+[node name="分隔线" type="TextureRect" parent="." unique_id=1366288703]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 312.0
+offset_right = 419.0
+offset_bottom = 314.0
+mouse_filter = 2
+texture = ExtResource("16_line")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="提升柔拳阶数" type="Button" parent="." unique_id=2091111952]
+layout_mode = 0
+offset_left = 321.0
+offset_top = 316.0
+offset_right = 403.0
+offset_bottom = 338.0
+focus_mode = 0
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleButton")
+theme_override_styles/pressed = SubResource("StyleButtonDown")
+theme_override_styles/hover = SubResource("StyleButton")
+text = "提升柔拳阶数"
+
+[node name="上一页" type="TextureButton" parent="." unique_id=1782672892]
+layout_mode = 0
+offset_left = 337.0
+offset_top = 344.0
+offset_right = 351.0
+offset_bottom = 355.0
+focus_mode = 0
+texture_normal = ExtResource("17_prev")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("27_w0ft4")
+
+[node name="页码" type="Label" parent="." unique_id=748085956]
+layout_mode = 0
+offset_left = 351.0
+offset_top = 339.0
+offset_right = 384.0
+offset_bottom = 360.0
+theme_override_colors/font_color = Color(0.95, 0.92, 0.86, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "1/8"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="下一页" type="TextureButton" parent="." unique_id=477268769]
+layout_mode = 0
+offset_left = 386.0
+offset_top = 344.0
+offset_right = 400.0
+offset_bottom = 355.0
+focus_mode = 0
+texture_normal = ExtResource("18_next")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("27_w0ft4")
+
+[node name="提升柔拳阶数弹窗" type="Control" parent="." unique_id=1432484827]
+visible = false
+clip_contents = true
+anchors_preset = 0
+offset_left = 5.0
+offset_top = 228.0
+offset_right = 419.0
+offset_bottom = 356.9992
+theme = ExtResource("19_0mrxj")
+script = ExtResource("20_mjs4s")
+
+[node name="ColorRect" type="ColorRect" parent="提升柔拳阶数弹窗" unique_id=123949868]
+layout_mode = 0
+offset_left = 4.0
+offset_right = 412.0
+offset_bottom = 127.0
+mouse_filter = 2
+color = Color(0.21176471, 0.15294118, 0.12941177, 1)
+
+[node name="底图" type="TextureRect" parent="提升柔拳阶数弹窗" unique_id=664068755]
+layout_mode = 0
+offset_left = 1.0
+offset_top = -1.0
+offset_right = 415.0
+offset_bottom = 128.0
+texture = ExtResource("11_panel")
+expand_mode = 1
+
+[node name="柔拳灵符" type="Label" parent="提升柔拳阶数弹窗" unique_id=946959364]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 3.0
+offset_right = 51.0
+offset_bottom = 33.0
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "柔拳灵符
+"
+
+[node name="道具框" type="Panel" parent="提升柔拳阶数弹窗" unique_id=1027124757]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 17.0
+offset_right = 48.0
+offset_bottom = 57.0
+
+[node name="柔拳灵符" type="TextureRect" parent="提升柔拳阶数弹窗/道具框" unique_id=1040614857]
+texture_filter = 1
+layout_mode = 0
+offset_left = 2.0
+offset_top = 1.0
+offset_right = 38.0
+offset_bottom = 38.0
+texture = ExtResource("20_dvj0y")
+
+[node name="数量数值" type="Label" parent="提升柔拳阶数弹窗/道具框/柔拳灵符" unique_id=1486627797]
+layout_mode = 0
+offset_top = 24.0
+offset_right = 35.0
+offset_bottom = 37.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "0"
+horizontal_alignment = 2
+
+[node name="提升祝福值" type="Label" parent="提升柔拳阶数弹窗" unique_id=223243242]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 17.0
+offset_right = 125.0
+offset_bottom = 34.0
+theme_override_colors/font_color = Color(0.9098039, 0.5137255, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+text = "提升祝福值"
+
+[node name="说明文字1" type="RichTextLabel" parent="提升柔拳阶数弹窗" unique_id=2254166]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 37.0
+offset_right = 291.0
+offset_bottom = 77.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 2
+bbcode_enabled = true
+text = "失败增加1-3点祝福值，本次升阶成功祝福
+值为0-6，[color=#ff0000]超过6必成！[/color]"
+scroll_active = false
+
+[node name="说明文字2" type="RichTextLabel" parent="提升柔拳阶数弹窗" unique_id=446697334]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 70.0
+offset_right = 318.0
+offset_bottom = 151.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 2
+bbcode_enabled = true
+text = "[color=#ff0000]每提升次，祝福值保留时问重置为12小时[/color]
+[color=#33ff00]提升阶段需要（柔拳灵符）为副本通关奖
+励或从商城购买[/color]"
+scroll_active = false
+
+[node name="消耗说明文字" type="RichTextLabel" parent="提升柔拳阶数弹窗" unique_id=1061892781]
+layout_mode = 0
+offset_left = 296.0
+offset_top = 17.0
+offset_right = 394.0
+offset_bottom = 52.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 2
+bbcode_enabled = true
+text = "本次提升需要：
+[color=#ff0000]柔拳灵符1张[/color]"
+scroll_active = false
+
+[node name="成功率说明文字" type="Label" parent="提升柔拳阶数弹窗" unique_id=1678057252]
+layout_mode = 0
+offset_left = 296.0
+offset_top = 46.0
+offset_right = 410.0
+offset_bottom = 61.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "本次提升成功率：50%"
+
+[node name="祝福值进度条" type="ProgressBar" parent="提升柔拳阶数弹窗" unique_id=1615982698]
+layout_mode = 0
+offset_left = 127.0
+offset_top = 17.0
+offset_right = 287.0
+offset_bottom = 30.0
+show_percentage = false
+
+[node name="祝福值数值" type="Label" parent="提升柔拳阶数弹窗/祝福值进度条" unique_id=1573535236]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 2.0
+offset_right = 105.0
+offset_bottom = 15.0
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "0/1000"
+
+[node name="购买按钮" type="Button" parent="提升柔拳阶数弹窗" unique_id=1623066958]
+custom_minimum_size = Vector2(37, 22)
+layout_mode = 0
+offset_left = 8.0
+offset_top = 60.0
+offset_right = 49.0
+offset_bottom = 82.0
+focus_mode = 0
+text = "购买"
+
+[node name="开始提升按钮" type="Button" parent="提升柔拳阶数弹窗" unique_id=106125919]
+layout_mode = 0
+offset_left = 291.0
+offset_top = 76.0
+offset_right = 346.0
+offset_bottom = 96.0
+text = "开始提升"
+
+[node name="自动提升按钮" type="Button" parent="提升柔拳阶数弹窗" unique_id=2000664774]
+layout_mode = 0
+offset_left = 353.0
+offset_top = 76.0
+offset_right = 408.0
+offset_bottom = 96.0
+text = "自动提升"
+
+[node name="关闭按钮" type="Button" parent="提升柔拳阶数弹窗" unique_id=193450399]
+custom_minimum_size = Vector2(25, 24)
+layout_mode = 0
+offset_left = 386.0
+offset_top = 1.0
+offset_right = 411.0
+offset_bottom = 25.0
+tooltip_text = "关闭"
+focus_mode = 0
+theme_override_colors/icon_normal_color = Color(0.82, 0.82, 0.82, 1)
+theme_override_colors/icon_pressed_color = Color(1, 0.85, 0.6, 1)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0mrxj")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_0mrxj")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_0mrxj")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0mrxj")
+icon = ExtResource("22_mjs4s")
+flat = true
+
+[node name="滑出动画" type="AnimationPlayer" parent="提升柔拳阶数弹窗" unique_id=284026831]
+libraries/ = SubResource("AnimationLibrary_cbavl")
+
+[connection signal="pressed" from="提升柔拳阶数" to="提升柔拳阶数弹窗" method="open_popup"]
+[connection signal="pressed" from="提升柔拳阶数弹窗/关闭按钮" to="提升柔拳阶数弹窗" method="_on_close_button_pressed"]

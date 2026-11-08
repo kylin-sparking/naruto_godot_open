@@ -1,0 +1,51 @@
+{
+ "说明": "首领（原版 WangBossWindow/WangBossCell）文案。唯一出处 = `game-client/原版源码/反编译脚本/MainLib/scripts/en_US$message_properties.as`。由 `开发工具/出首领原文数据.py` 生成，量具与场景生成器共读，别手改。",
+ "表": "message（LangUtil.get）；ui 表（LangUtilUI）无本页键",
+ "文案": {
+  "WANG_BOSS_TITLE": {
+   "值": "BOSS刷新信息",
+   "行": 2088,
+   "用途": "WangBossWindow.as:36 窗口标题"
+  },
+  "WANG_BOSS_CELL_LEVEL": {
+   "值": "等　　级：",
+   "行": 274,
+   "用途": "WangBossCell.as:190/327 等级标签"
+  },
+  "WANG_BOSS_REFURBISH_MAP": {
+   "值": "刷新地图：",
+   "行": 848,
+   "用途": "WangBossCell.as:205/328 地图标签"
+  },
+  "WANG_BOSS_REFURBISH_TIMER": {
+   "值": "刷新时间：",
+   "行": 1274,
+   "用途": "WangBossCell.as:223/329 时间标签"
+  },
+  "WANG_BOSS_INSTRUCTION": {
+   "值": "爆率说明：",
+   "行": 2431,
+   "用途": "WangBossCell.as:238/330 爆率标签"
+  },
+  "WANG_BOSS_CELL_JI": {
+   "值": "%1级",
+   "行": 1832,
+   "用途": "WangBossCell.as:101 等级数值模板（LangUtil.get，非 CN 常量）"
+  },
+  "WANG_BOSS_NOT_DIED": {
+   "值": "未死亡",
+   "行": 3047,
+   "用途": "WangBossCell.as:105 时间数值（alive=true）"
+  },
+  "WANG_BOSS_KILL": {
+   "值": "前往挑战",
+   "行": 1725,
+   "用途": "WangBossCell.as:108/112 地图数值与挑战钮的 tooltip"
+  },
+  "WANG_BOSS_TIP": {
+   "值": "<font color=\"#ff9100\">简介</font><br/>　　%1<br/><font color=\"#ff9100\">掉落</font><br/>　　%2",
+   "行": 2464,
+   "用途": "WangBossCell.as:133 头像 tooltip（%1=简介 %2=掉落）"
+  }
+ }
+}

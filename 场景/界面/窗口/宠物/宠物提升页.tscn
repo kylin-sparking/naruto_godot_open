@@ -1,0 +1,310 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/横向分隔线.png" id="1_line"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/宠物/宠物装备面板.png" id="2_petbg"]
+[ext_resource type="Texture2D" path="res://素材/界面/原版窗口/通用控件/物品格.png" id="3_grid"]
+
+[node name="宠物提升页" type="Control"]
+custom_minimum_size = Vector2(390, 340)
+
+[node name="待提升" type="Label" parent="."]
+offset_left = 8.0
+offset_right = 153.0
+offset_bottom = 20.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 0.569, 0, 1)
+text = "请选择需要提升的属性"
+horizontal_alignment = 2
+
+[node name="模式下拉" type="OptionButton" parent="."]
+offset_left = 153.0
+offset_right = 313.0
+offset_bottom = 20.0
+focus_mode = 0
+
+[node name="顶分隔线" type="TextureRect" parent="."]
+offset_left = -2.0
+offset_top = 24.0
+offset_right = 388.0
+offset_bottom = 26.0
+mouse_filter = 2
+texture = ExtResource("1_line")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="上底" type="Panel" parent="."]
+offset_left = 4.0
+offset_top = 30.0
+offset_right = 386.0
+offset_bottom = 110.0
+
+[node name="上文字" type="RichTextLabel" parent="."]
+offset_left = 16.0
+offset_top = 35.0
+offset_right = 376.0
+offset_bottom = 113.0
+mouse_filter = 2
+bbcode_enabled = true
+scroll_active = false
+
+[node name="中底" type="Panel" parent="."]
+offset_left = 4.0
+offset_top = 116.0
+offset_right = 386.0
+offset_bottom = 212.0
+
+[node name="中效果标题" type="Label" parent="."]
+offset_left = 16.0
+offset_top = 121.0
+offset_right = 370.0
+offset_bottom = 143.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 0.569, 0, 1)
+text = "提升效果预览"
+
+[node name="中效果内容" type="RichTextLabel" parent="."]
+offset_left = 16.0
+offset_top = 143.0
+offset_right = 370.0
+offset_bottom = 213.0
+mouse_filter = 2
+bbcode_enabled = true
+scroll_active = false
+
+[node name="中尾注" type="Label" parent="."]
+offset_left = 16.0
+offset_top = 189.0
+offset_right = 370.0
+offset_bottom = 209.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 0.569, 0, 1)
+text = "通灵兽等级越高，为主人提升的能力效果越明显"
+
+[node name="技能框" type="Control" parent="."]
+visible = false
+offset_right = 390.0
+offset_bottom = 216.0
+mouse_filter = 1
+
+[node name="当前标题" type="Label" parent="技能框"]
+offset_top = 90.0
+offset_right = 160.0
+offset_bottom = 110.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 0.569, 0, 1)
+text = "当前通灵兽技能"
+
+[node name="当前行" type="Control" parent="技能框"]
+offset_top = 110.0
+offset_right = 390.0
+offset_bottom = 150.0
+mouse_filter = 1
+
+[node name="未学标题" type="Label" parent="技能框"]
+offset_top = 150.0
+offset_right = 160.0
+offset_bottom = 170.0
+mouse_filter = 2
+text = "尚未领悟的技能"
+
+[node name="未学行" type="Control" parent="技能框"]
+offset_top = 172.0
+offset_right = 390.0
+offset_bottom = 212.0
+mouse_filter = 1
+
+[node name="下底" type="Panel" parent="."]
+offset_left = 4.0
+offset_top = 220.0
+offset_right = 386.0
+offset_bottom = 311.0
+
+[node name="资质符格" type="Control" parent="."]
+offset_left = 15.0
+offset_top = 221.0
+offset_right = 60.0
+offset_bottom = 309.0
+[node name="名" type="Label" parent="资质符格"]
+offset_right = 45.0
+offset_bottom = 20.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 0.569, 0, 1)
+text = "资质符"
+horizontal_alignment = 1
+[node name="底" type="TextureRect" parent="资质符格"]
+offset_left = 2.5
+offset_top = 20.0
+offset_right = 42.5
+offset_bottom = 60.0
+mouse_filter = 2
+texture = ExtResource("3_grid")
+expand_mode = 1
+stretch_mode = 0
+[node name="图标" type="TextureRect" parent="资质符格"]
+offset_left = 5.5
+offset_top = 23.0
+offset_right = 39.5
+offset_bottom = 57.0
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+[node name="数量" type="Label" parent="资质符格"]
+offset_left = 2.5
+offset_top = 40.0
+offset_right = 42.5
+offset_bottom = 60.0
+mouse_filter = 2
+horizontal_alignment = 2
+[node name="购买" type="Button" parent="资质符格"]
+offset_left = 4.0
+offset_top = 63.0
+offset_right = 41.0
+offset_bottom = 85.0
+focus_mode = 0
+text = "购买"
+
+[node name="幸运符格" type="Control" parent="."]
+offset_left = 90.0
+offset_top = 222.0
+offset_right = 135.0
+offset_bottom = 310.0
+[node name="名" type="Label" parent="幸运符格"]
+offset_right = 45.0
+offset_bottom = 20.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 0.569, 0, 1)
+text = "幸运符"
+horizontal_alignment = 1
+[node name="底" type="TextureRect" parent="幸运符格"]
+offset_left = 2.5
+offset_top = 20.0
+offset_right = 42.5
+offset_bottom = 60.0
+mouse_filter = 2
+texture = ExtResource("3_grid")
+expand_mode = 1
+stretch_mode = 0
+[node name="图标" type="TextureRect" parent="幸运符格"]
+offset_left = 5.5
+offset_top = 23.0
+offset_right = 39.5
+offset_bottom = 57.0
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+[node name="数量" type="Label" parent="幸运符格"]
+offset_left = 2.5
+offset_top = 40.0
+offset_right = 42.5
+offset_bottom = 60.0
+mouse_filter = 2
+horizontal_alignment = 2
+[node name="购买" type="Button" parent="幸运符格"]
+offset_left = 4.0
+offset_top = 63.0
+offset_right = 41.0
+offset_bottom = 85.0
+focus_mode = 0
+text = "购买"
+
+[node name="消耗" type="RichTextLabel" parent="."]
+offset_left = 200.0
+offset_top = 223.0
+offset_right = 386.0
+offset_bottom = 260.0
+mouse_filter = 2
+bbcode_enabled = true
+scroll_active = false
+
+[node name="使用幸运符" type="CheckBox" parent="."]
+offset_left = 180.0
+offset_top = 266
+offset_right = 282.0
+offset_bottom = 285
+focus_mode = 0
+text = "本次操作使用"
+
+[node name="幸运符数量" type="OptionButton" parent="."]
+offset_left = 280.0
+offset_top = 266.0
+offset_right = 320.0
+offset_bottom = 286.0
+focus_mode = 0
+
+[node name="幸运符标签" type="Label" parent="."]
+offset_left = 320.0
+offset_top = 266.0
+offset_right = 380.0
+offset_bottom = 286.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 0.569, 0, 1)
+text = "个幸运符"
+
+[node name="待提升2" type="Label" parent="."]
+offset_left = 20.0
+offset_top = 170.0
+offset_right = 165.0
+offset_bottom = 188.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 0.569, 0, 1)
+text = "你将要提升的通灵兽是 :"
+
+[node name="模型底" type="TextureRect" parent="."]
+offset_left = 2.0
+offset_top = 192.0
+offset_right = 202.0
+offset_bottom = 302.0
+mouse_filter = 2
+texture = ExtResource("2_petbg")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="名称等级" type="RichTextLabel" parent="."]
+offset_left = 212.0
+offset_top = 194.0
+offset_right = 392.0
+offset_bottom = 230.0
+mouse_filter = 2
+bbcode_enabled = true
+scroll_active = false
+
+[node name="中分隔线" type="TextureRect" parent="."]
+offset_left = 210.0
+offset_top = 232.0
+offset_right = 390.0
+offset_bottom = 234.0
+mouse_filter = 2
+texture = ExtResource("1_line")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="提升提示" type="Label" parent="."]
+offset_left = 212.0
+offset_top = 237.0
+offset_right = 387.0
+offset_bottom = 307.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 0.569, 0, 1)
+autowrap_mode = 2
+
+[node name="底分隔线" type="TextureRect" parent="."]
+offset_top = 312.0
+offset_right = 388.0
+offset_bottom = 314.0
+mouse_filter = 2
+texture = ExtResource("1_line")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="宠物形象" type="Control" parent="."]
+offset_left = 100.0
+offset_top = 290.0
+mouse_filter = 2
+
+[node name="提升按钮" type="Button" parent="."]
+offset_left = 320.0
+offset_top = 318.0
+offset_right = 374.0
+offset_bottom = 340.0
+focus_mode = 0
+text = "开始提升"
