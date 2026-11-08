@@ -88,7 +88,8 @@ else
     else
         # 1) 素材、二进制、生成物
         forbidden_path='^(\.godot/|运行时/|素材_2x/|素材_4x/|\.fixture|测试/截图/)'
-        hits=$(grep -E "$forbidden_path" "$changed" || true)
+        # 运行时/python 是随仓库分发的固定二进制，单独放行
+        hits=$(grep -E "$forbidden_path" "$changed" | grep -v '^运行时/python/' || true)
         if [ -n "$hits" ]; then
             echo "!! 这些文件不应该进公开仓："
             echo "$hits" | sed 's/^/     /'
@@ -96,7 +97,7 @@ else
         fi
 
         forbidden_ext='\.(png|jpe?g|webp|bmp|ttf|ttc|otf|wav|mp3|ogg|ogv|swf|dat|dll|exe|pdb|zip|7z|rar)$'
-        hits=$(grep -Ei "$forbidden_ext" "$changed" || true)
+        hits=$(grep -Ei "$forbidden_ext" "$changed" | grep -v '^运行时/python/' || true)
         if [ -n "$hits" ]; then
             echo "!! 改动里含素材/二进制文件（素材不随公开仓分发）："
             echo "$hits" | sed 's/^/     /'
@@ -106,6 +107,7 @@ else
         # 2) 大文件
         while IFS= read -r f; do
             [ -z "$f" ] && continue
+            case "$f" in 运行时/python/*) continue ;; esac
             [ -f "$root/$f" ] || continue
             bytes=$(wc -c < "$root/$f" | tr -d ' ')
             if [ "$bytes" -gt 5242880 ]; then
@@ -157,6 +159,8 @@ for line in open(listfile, encoding="utf-8"):
     rel = line.strip()
     if not rel:
         continue
+    if rel.startswith("运行时/python/"):
+        continue  # 随仓库分发的 Windows Python 运行时（二进制）
     path = os.path.join(root, rel)
     if not os.path.isfile(path) or os.path.getsize(path) > 5_000_000:
         continue

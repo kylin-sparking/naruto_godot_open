@@ -1,0 +1,10 @@
+python313.zip
+.
+
+# Uncomment to run site.main() automatically
+#import site
+
+# 2026-10-03：从 2.2.3/runtime/python 拷进来时这里原本有一行 `..\..\tools`
+# —— 那是 2.2.3 让它自己的脚本能 import 服务端用的。删掉它：
+# 本项目的服务端寻径由 开发工具/服务端目录.py 在运行时统一 sys.path.insert，
+# 解释器不该再把任何目录（尤其 2.2.3）自动挂进 sys.path。

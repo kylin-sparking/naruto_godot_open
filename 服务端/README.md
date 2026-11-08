@@ -42,10 +42,10 @@ diff "<上游 2.2.3>/tools/fake_flash_server.py" "服务端/runtime/tools/fake_f
 - 寻径统一走 `开发工具/服务端目录.py`（唯一真源；它会 `sys.path.insert(0, 本目录)` 并断言加载文件在项目内，
   防止误 import 到 2.2.3）。
 
-## 解释器（不进仓）
+## 解释器（随仓库分发）
 `运行时/python`（官方 embeddable 3.13，纯 stdlib —— 服务端不依赖第三方包）。
-`.gitignore` 掉了（21MB，不随开源仓库分发）。新机器/干净克隆：从上游 2.2.3 包的 `runtime/python` 拷一份到
-`运行时/python`，**并删掉 `运行时/python/python313._pth` 里的 `..\..\tools` 一行**（否则会把上游 `tools`
+Windows x64 版已随仓库提供（约 21MB），干净克隆后可直接使用。其他平台请自行安装 Python 3.13。
+`运行时/python/python313._pth` 里的 `..\..\tools` 一行已删除（否则会把上游 `tools`
 自动挂进 sys.path，正是要杜绝的隐式依赖）。`启动游戏.bat` 用的就是这个项目内解释器。
 
 ## 行号会漂
